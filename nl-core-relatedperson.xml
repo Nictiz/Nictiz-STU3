@@ -1,0 +1,188 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="003f809e-8e85-4953-aabb-c2f53ec1ac3f"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2016-11-12T15:56:01.865+00:00"/>
+    </meta>
+    <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+    <version value="1.0"/>
+    <name value="nl-core-relatedperson"/>
+    <status value="draft"/>
+    <publisher value="HL7 Netherlands"/>
+    <description
+        value="A RelatedPerson resource as defined by the Dutch Clinical Building Block or CBB (Dutch: Zorginformatiebouwsteen or ZIB) ContactPersoon version 1.2 (Release 2015)"/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <mapping>
+        <identity value="zib-contactpersoon"/>
+        <uri value="https://zibs.nl/wiki/Contactpersoon(NL)"/>
+        <name value="Zorginformatiebouwsteen Contactpersoon"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="RelatedPerson"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="RelatedPerson">
+            <path value="RelatedPerson"/>
+            <mapping>
+                <identity value="zib-contactpersoon"/>
+                <map value="NL-CM:3.1.1"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.extension">
+            <path value="RelatedPerson.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="openAtEnd"/>
+            </slicing>
+        </element>
+        <element id="RelatedPerson.extension">
+            <path value="RelatedPerson.extension"/>
+            <short value="role"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role"/>
+            </type>
+            <mapping>
+                <identity value="zib-contactpersoon"/>
+                <map value="NL-CM:3.1.2"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.identifier">
+            <path value="RelatedPerson.identifier"/>
+            <short value="Identifier"/>
+        </element>
+        <element id="RelatedPerson.patient">
+            <path value="RelatedPerson.patient"/>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+        </element>
+        <element id="RelatedPerson.relationship">
+            <path value="RelatedPerson.relationship"/>
+            <short value="Relationship"/>
+            <mapping>
+                <identity value="zib-contactpersoon"/>
+                <map value="NL-CM:3.1.3"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.name">
+            <path value="RelatedPerson.name"/>
+            <short value="NameInformation"/>
+            <alias value="Naamgegevens"/>
+            <type>
+                <code value="HumanName"/>
+                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
+            </type>
+            <mapping>
+                <identity value="zib-contactpersoon"/>
+                <map value="NL-CM:3.1.4"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.telecom">
+            <path value="RelatedPerson.telecom"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="openAtEnd"/>
+            </slicing>
+            <short value="ContactDetails"/>
+            <alias value="Contactgegevens"/>
+            <mapping>
+                <identity value="zib-contactpersoon"/>
+                <map value="NL-CM:3.1.6"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.telecom.TelephoneNumbers">
+            <path value="RelatedPerson.telecom"/>
+            <short value="TelephoneNumbers"/>
+            <alias value="Telefoonnummers"/>
+            <mapping>
+                <identity value="zib-patient"/>
+                <map value="NL-CM:0.1.21"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.telecom.system.1">
+            <path value="RelatedPerson.telecom.system"/>
+            <type>
+                <code value="code"/>
+            </type>
+            <fixedCode value="phone"/>
+        </element>
+        <element id="RelatedPerson.telecom.value.TelephoneNumber">
+            <path value="RelatedPerson.telecom.value"/>
+            <short value="TelephoneNumber"/>
+            <alias value="Telefoonnummer"/>
+            <mapping>
+                <identity value="zib-patient"/>
+                <map value="NL-CM:0.1.23"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.telecom.use.NumberType.1">
+            <path value="RelatedPerson.telecom.use"/>
+            <short value="NumberType"/>
+            <alias value="NummerSoort"/>
+            <mapping>
+                <identity value="zib-patient"/>
+                <map value="NL-CM:0.1.22"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.telecom.EmailAddresses">
+            <path value="RelatedPerson.telecom"/>
+            <short value="EmailAddresses"/>
+            <alias value="E-mailadressen"/>
+            <mapping>
+                <identity value="zib-patient"/>
+                <map value="NL-CM:0.1.18"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.telecom.system.2">
+            <path value="RelatedPerson.telecom.system"/>
+            <type>
+                <code value="code"/>
+            </type>
+            <fixedCode value="email"/>
+        </element>
+        <element id="RelatedPerson.telecom.value.EmailAddress">
+            <path value="RelatedPerson.telecom.value"/>
+            <short value="EmailAddress"/>
+            <alias value="E-mailadres"/>
+            <mapping>
+                <identity value="zib-patient"/>
+                <map value="NL-CM:0.1.20"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.telecom.use.NumberType.2">
+            <path value="RelatedPerson.telecom.use"/>
+            <short value="EmailType"/>
+            <alias value="Emailsoort"/>
+            <mapping>
+                <identity value="zib-patient"/>
+                <map value="NL-CM:0.1.19"/>
+            </mapping>
+        </element>
+        <element id="RelatedPerson.address">
+            <path value="RelatedPerson.address"/>
+            <short value="AddressInformation"/>
+            <alias value="Adresgegevens"/>
+            <type>
+                <code value="Address"/>
+                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
+            </type>
+            <mapping>
+                <identity value="zib-contactpersoon"/>
+                <map value="NL-CM:3.1.5"/>
+            </mapping>
+        </element>
+    </differential>
+</StructureDefinition>
