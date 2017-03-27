@@ -1,0 +1,93 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="725c81ea-21bb-41b8-bcfb-f3df26cc330d" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2016-12-08T13:27:30.728+00:00" />
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition" />
+  </meta>
+  <url value="http://hl7.org/fhir/ValueSet/name-assembly-order" />
+  <identifier>
+    <system value="urn:ietf:rfc:3986" />
+    <value value="urn:oid:2.16.840.1.113883.4.642.2.0" />
+  </identifier>
+  <version value="1.0.2" />
+  <name value="HumanNameAssemblyOrder" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="HL7 (FHIR Project)" />
+  <contact>
+    <telecom>
+      <system value="other" />
+      <value value="http://hl7.org/fhir" />
+    </telecom>
+    <telecom>
+      <system value="email" />
+      <value value="fhir@lists.hl7.org" />
+    </telecom>
+  </contact>
+  <date value="2016-12-08T05:51:23+00:00" />
+  <description value="A code that represents the preferred display order of the components of a human name" />
+  <immutable value="true" />
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/name-assembly-order" />
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/v2/0444" />
+      <concept>
+        <code value="F" />
+        <display value="Prefix Family Given Suffix" />
+      </concept>
+      <concept>
+        <code value="G" />
+        <display value="Prefix Given Family Suffix" />
+      </concept>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/v3/NullFlavor" />
+      <concept>
+        <code value="UNK" />
+        <display value="Unknown" />
+      </concept>
+    </include>
+  </compose>
+  <expansion>
+    <identifier value="1" />
+    <timestamp value="2016-08-21" />
+    <contains>
+      <system value="http://hl7.org/fhir/name-assembly-order" />
+      <code value="NL1" />
+      <display value="Own Name" />
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/name-assembly-order" />
+      <code value="NL2" />
+      <display value="Partner Name" />
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/name-assembly-order" />
+      <code value="NL3" />
+      <display value="Partner Name followed by Maiden Name" />
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/name-assembly-order" />
+      <code value="NL4" />
+      <display value="Own Name followed by Partner Name" />
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/v2/0444" />
+      <code value="F" />
+      <display value="Prefix Family Given Suffix" />
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/v2/0444" />
+      <code value="G" />
+      <display value="Prefix Given Family Suffix" />
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/v3/NullFlavor" />
+      <code value="UNK" />
+      <display value="Unknown" />
+    </contains>
+  </expansion>
+</ValueSet>
