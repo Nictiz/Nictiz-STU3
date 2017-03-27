@@ -12,9 +12,7 @@
     <description
         value="A Patient resource as defined by the Dutch Clinical Building Block or CBB (Dutch: Zorginformatiebouwsteen or ZIB) 
         Patient version 1.0, with additions from the CBB Contactpersoon, Zorgverlener and Zorgaanbieder"/>
-    <purpose
-        value="Patient. Tracking a patient is the center of the healthcare process. Functional requirements taken from Clinical Building Block (Zorginformatiebouwsteen) 
-        Patient v2.0.1 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
+    <purpose value="Patient. Tracking a patient is the center of the healthcare process. Functional requirements taken from Clinical Building Block (Zorginformatiebouwsteen) Patient v2.0.1 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
@@ -41,10 +39,10 @@
     <abstract value="false"/>
     <type value="Patient"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-    <derivation value="constraint"/>
     <differential>
         <element id="Patient">
             <path value="Patient"/>
+            <short value="Patient" />
             <alias value="Patiënt"/>
             <mapping>
                 <identity value="zib-patient"/>
@@ -58,10 +56,10 @@
                     <type value="value"/>
                     <path value="system"/>
                 </discriminator>
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
-            <definition
-                value="The Burgerservicenummer, as one of the possible patient identification numbers, should at least be sent unless there is a reason not to. Reasons for not sending include but are not limited to, research and apps without a contract for data processing (Dutch: bewerkingsovereenkomst)."/>
+            <short value="PatientIdentificationNumber" />
+            <definition value="The Burgerservicenummer, as one of the possible patient identification numbers, should at least be sent unless there is a reason not to. Reasons for not sending include but are not limited to, research and apps without a contract for data processing (Dutch: bewerkingsovereenkomst)."/>
             <alias value="PatientIdentificatienummer"/>
             <mapping>
                 <identity value="zib-patient"/>
@@ -93,6 +91,7 @@
         </element>
         <element id="Patient.name">
             <path value="Patient.name"/>
+            <short value="NameInformation" />
             <alias value="Naamgegevens"/>
             <type>
                 <code value="HumanName"/>
@@ -110,62 +109,68 @@
                     <type value="value"/>
                     <path value="system"/>
                 </discriminator>
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
+            <short value="ContactDetails" />
             <alias value="Contactgegevens"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.5"/>
             </mapping>
         </element>
-        <element id="Patient.telecom.TelephoneNumbers">
+        <element id="Patient.telecom.Phone">
             <path value="Patient.telecom"/>
+            <short value="TelephoneNumbers" />
             <alias value="Telefoonnummers"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.21"/>
             </mapping>
         </element>
-        <element id="Patient.telecom.system.1">
+        <element id="Patient.telecom.Phone.system">
             <path value="Patient.telecom.system"/>
             <type>
                 <code value="code"/>
             </type>
             <fixedCode value="phone"/>
         </element>
-        <element id="Patient.telecom.value.TelephoneNumber">
+        <element id="Patient.telecom.Phone.value">
             <path value="Patient.telecom.value"/>
+            <short value="TelephoneNumber" />
             <alias value="Telefoonnummer"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.23"/>
             </mapping>
         </element>
-        <element id="Patient.telecom.use.NumberType.1">
+        <element id="Patient.telecom.Phone.use">
             <path value="Patient.telecom.use"/>
+            <short value="NumberType" />
             <alias value="Nummersoort"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.22"/>
             </mapping>
         </element>
-        <element id="Patient.telecom.EmailAddresses">
+        <element id="Patient.telecom.Email">
             <path value="Patient.telecom"/>
+            <short value="EmailAddresses" />
             <alias value="E-mailadressen"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.18"/>
             </mapping>
         </element>
-        <element id="Patient.telecom.system.2">
+        <element id="Patient.telecom.Email.system">
             <path value="Patient.telecom.system"/>
             <type>
                 <code value="code"/>
             </type>
             <fixedCode value="email"/>
         </element>
-        <element id="Patient.telecom.value.EmailAddress">
+        <element id="Patient.telecom.Email.value">
             <path value="Patient.telecom.value"/>
+            <short value="EmailAddress" />
             <definition value="The actual email address of the patient"/>
             <alias value="E-mailadres"/>
             <mapping>
@@ -173,8 +178,9 @@
                 <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
-        <element id="Patient.telecom.use.NumberType.2">
+        <element id="Patient.telecom.Email.use">
             <path value="Patient.telecom.use"/>
+            <short value="EmailType" />
             <alias value="E-mailSoort"/>
             <mapping>
                 <identity value="zib-patient"/>
@@ -183,6 +189,7 @@
         </element>
         <element id="Patient.gender.Gender">
             <path value="Patient.gender"/>
+            <short value="Gender" />
             <alias value="Geslacht"/>
             <mapping>
                 <identity value="zib-patient"/>
@@ -191,6 +198,7 @@
         </element>
         <element id="Patient.birthDate.DateOfBirth">
             <path value="Patient.birthDate"/>
+            <short value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
             <alias value="Geboortedatum"/>
             <mapping>
                 <identity value="zib-patient"/>
@@ -199,6 +207,7 @@
         </element>
         <element id="Patient.deceased">
             <path value="Patient.deceased[x]"/>
+            <short value="DeathIndicator/DateOfDeath" />
             <alias value="Overlijdensindicator/DatumOverlijden"/>
             <mapping>
                 <identity value="zib-patient"/>
@@ -211,6 +220,7 @@
         </element>
         <element id="Patient.address.AddressInformation">
             <path value="Patient.address"/>
+            <short value="AddressInformation" />
             <alias value="Adresgegevens"/>
             <type>
                 <code value="Address"/>
@@ -223,6 +233,7 @@
         </element>
         <element id="Patient.maritalStatus">
             <path value="Patient.maritalStatus"/>
+            <short value="MaritalStatus" />
             <alias value="BurgerlijkeStaat"/>
             <binding>
                 <strength value="required"/>
@@ -238,6 +249,7 @@
         </element>
         <element id="Patient.multipleBirth">
             <path value="Patient.multipleBirth[x]"/>
+            <short value="MultipleBirthIndicator" />
             <alias value="Meerlingindicator"/>
             <mapping>
                 <identity value="zib-patient"/>
@@ -249,6 +261,7 @@
                 <valueString value="Contact"/>
             </extension>
             <path value="Patient.contact"/>
+            <short value="ContactPerson" />
             <alias value="Contactpersoon"/>
             <mapping>
                 <identity value="zib-contactpersoon"/>
@@ -262,12 +275,14 @@
                     <type value="value"/>
                     <path value="coding.system"/>
                 </discriminator>
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
+            <short value="Role or Relationship" />
             <alias value="Rol of relatie"/>
         </element>
         <element id="Patient.contact.relationship.Relationship">
             <path value="Patient.contact.relationship"/>
+            <short value="Relationship" />
             <alias value="Relatie"/>
             <binding>
                 <strength value="extensible"/>
@@ -283,6 +298,7 @@
         </element>
         <element id="Patient.contact.relationship.Role">
             <path value="Patient.contact.relationship"/>
+            <short value="Role" />
             <alias value="Rol"/>
             <binding>
                 <strength value="extensible"/>
@@ -298,6 +314,7 @@
         </element>
         <element id="Patient.contact.name">
             <path value="Patient.contact.name"/>
+            <short value="NameInformation" />
             <alias value="Naamgegevens"/>
             <type>
                 <code value="HumanName"/>
@@ -315,70 +332,77 @@
                     <type value="value"/>
                     <path value="system"/>
                 </discriminator>
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
+            <short value="ContactDetails" />
             <alias value="Contactgegevens"/>
             <mapping>
                 <identity value="zib-contactpersoon"/>
                 <map value="NL-CM:3.1.6"/>
             </mapping>
         </element>
-        <element id="Patient.contact.telecom.TelephoneNumbers">
+        <element id="Patient.contact.telecom.Phone">
             <path value="Patient.contact.telecom"/>
+            <short value="TelephoneNumbers" />
             <alias value="Telefoonnummers"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.21"/>
             </mapping>
         </element>
-        <element id="Patient.contact.telecom.system.1">
+        <element id="Patient.contact.telecom.Phone.system">
             <path value="Patient.contact.telecom.system"/>
             <type>
                 <code value="code"/>
             </type>
             <fixedCode value="phone"/>
         </element>
-        <element id="Patient.contact.telecom.value.TelephoneNumber">
+        <element id="Patient.contact.telecom.Phone.value">
             <path value="Patient.contact.telecom.value"/>
+            <short value="TelephoneNumber" />
             <alias value="Telefoonnummer"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.23"/>
             </mapping>
         </element>
-        <element id="Patient.contact.telecom.use.NumberType.1">
+        <element id="Patient.contact.telecom.Phone.use">
             <path value="Patient.contact.telecom.use"/>
+            <short value="NumberType" />
             <alias value="NummerSoort"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.22"/>
             </mapping>
         </element>
-        <element id="Patient.contact.telecom.EmailAddresses">
+        <element id="Patient.contact.telecom.Email">
             <path value="Patient.contact.telecom"/>
+            <short value="EmailAddresses" />
             <alias value="E-mailadressen"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.18"/>
             </mapping>
         </element>
-        <element id="Patient.contact.telecom.system.2">
+        <element id="Patient.contact.telecom.Email.system">
             <path value="Patient.contact.telecom.system"/>
             <type>
                 <code value="code"/>
             </type>
             <fixedCode value="email"/>
         </element>
-        <element id="Patient.contact.telecom.value.EmailAddress">
+        <element id="Patient.contact.telecom.Email.value">
             <path value="Patient.contact.telecom.value"/>
+            <short value="EmailAddress" />
             <alias value="E-mailadres"/>
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
-        <element id="Patient.contact.telecom.use.NumberType.2">
+        <element id="Patient.contact.telecom.Email.use">
             <path value="Patient.contact.telecom.use"/>
+            <short value="EmailType" />
             <alias value="Emailsoort"/>
             <mapping>
                 <identity value="zib-patient"/>
@@ -387,6 +411,7 @@
         </element>
         <element id="Patient.contact.address">
             <path value="Patient.contact.address"/>
+            <short value="AddressInformation" />
             <alias value="Adresgegevens"/>
             <type>
                 <code value="Address"/>
@@ -397,8 +422,9 @@
                 <map value="NL-CM:3.1.5"/>
             </mapping>
         </element>
-        <element id="Patient.careProvider.GeneralPractitioner">
-            <path value="Patient.careProvider"/>
+        <element id="Patient.generalPractitioner">
+            <path value="Patient.generalPractitioner"/>
+            <short value="GeneralPractitioner" />
             <alias value="Huisarts"/>
             <max value="1"/>
             <type>

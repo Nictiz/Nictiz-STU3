@@ -25,7 +25,6 @@
     <abstract value="false"/>
     <type value="Organization"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-    <derivation value="constraint"></derivation>
     <differential>
         <element id="Organization">
             <path value="Organization"/>
@@ -46,7 +45,7 @@
                 <rules value="open"/>
             </slicing>
         </element>
-        <element id="Organization.extension">
+        <element id="Organization.extension.OrganizationAlias">
             <path value="Organization.extension"/>
             <short value="Other names that this Organization is known as."/>
             <definition value="Other names that this Organization is known as."/>
@@ -63,10 +62,10 @@
                     <type value="value"/>
                     <path value="system"/>
                 </discriminator>
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
         </element>
-        <element id="Organization.identifier">
+        <element id="Organization.identifier.URA">
             <path value="Organization.identifier"/>
             <alias value="URA"/>
             <mapping>
@@ -88,7 +87,7 @@
                 <valueString value="12345678"/>
             </example>
         </element>
-        <element id="Organization.identifier">
+        <element id="Organization.identifier.AGB">
             <path value="Organization.identifier"/>
             <alias value="AGB"/>
             <mapping>
@@ -113,10 +112,10 @@
                     <type value="value"/>
                     <path value="coding.system"/>
                 </discriminator>
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
         </element>
-        <element id="Organization.type">
+        <element id="Organization.type.Type">
             <path value="Organization.type"/>
             <short value="OrganizationType"/>
             <alias value="OrganisatieType"/>
@@ -132,7 +131,7 @@
                 <map value="NL-CM:17.2.4"/>
             </mapping>
         </element>
-        <element id="Organization.type">
+        <element id="Organization.type.DepartmentSpecialism">
             <path value="Organization.type"/>
             <short value="DepartmentSpecialty"/>
             <definition value="Department type, e.g. Cardiology"/>
@@ -148,8 +147,8 @@
                 <map value="NL-CM:17.2.7"/>
             </mapping>
         </element>
-        <element id="Organization.telecom.value">
-            <path value="Organization.telecom.value"/>
+        <element id="Organization.name">
+            <path value="Organization.name" />
             <short value="OrganizationName or DepartmentName"/>
         </element>
         <element id="Organization.telecom">
@@ -159,11 +158,11 @@
                     <type value="value"/>
                     <path value="system"/>
                 </discriminator>
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
             <short value="A contact detail for the organization"/>
         </element>
-        <element id="Organization.telecom">
+        <element id="Organization.telecom.Phone">
             <path value="Organization.telecom"/>
             <short value="TelephoneNumbers"/>
             <alias value="Contactgegevens"/>
@@ -177,11 +176,11 @@
                 <map value="NL-CM:0.1.21"/>
             </mapping>
         </element>
-        <element id="Organization.telecom.value">
-            <path value="Organization.telecom.value"/>
+        <element id="Organization.telecom.Phone.system">
+            <path value="Organization.telecom.system"/>
             <fixedCode value="phone"/>
         </element>
-        <element id="Organization.telecom.value">
+        <element id="Organization.telecom.Phone.value">
             <path value="Organization.telecom.value"/>
             <short value="TelephoneNumber"/>
             <alias value="Telefoonnummer"/>
@@ -190,7 +189,7 @@
                 <map value="NL-CM:0.1.23"/>
             </mapping>
         </element>
-        <element id="Organization.telecom.use">
+        <element id="Organization.telecom.Phone.use">
             <path value="Organization.telecom.use"/>
             <short value="NumberType"/>
             <alias value="NummerSoort"/>
@@ -199,7 +198,7 @@
                 <map value="NL-CM:0.1.22"/>
             </mapping>
         </element>
-        <element id="Organization.telecom">
+        <element id="Organization.telecom.Email">
             <path value="Organization.telecom"/>
             <short value="EmailAddresses"/>
             <alias value="Contactgegevens"/>
@@ -213,11 +212,11 @@
                 <map value="NL-CM:0.1.18"/>
             </mapping>
         </element>
-        <element id="Organization.telecom.system">
+        <element id="Organization.telecom.Email.system">
             <path value="Organization.telecom.system"/>
             <fixedCode value="email"/>
         </element>
-        <element id="Organization.telecom.use">
+        <element id="Organization.telecom.Email.use">
             <path value="Organization.telecom.use"/>
             <short value="EmailAddress"/>
             <alias value="E-mailadres"/>
@@ -226,7 +225,7 @@
                 <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
-        <element id="Organization.telecom.use">
+        <element id="Organization.telecom.Email.use">
             <path value="Organization.telecom.use"/>
             <short value="EmailType"/>
             <alias value="Emailsoort"/>

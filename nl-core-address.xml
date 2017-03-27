@@ -28,7 +28,6 @@
     <abstract value="false"/>
     <type value="Address"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Address"/>
-    <derivation value="constraint"/>
     <differential>
         <element id="Address">
             <path value="Address"/>
@@ -64,22 +63,14 @@
             </example>
             <condition value="nl-streetname-if-official-and-other-line-parts"/>
             <constraint>
-                <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-                    <valueString
-                        value="extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').valueBoolean.where(true).empty() or line.where(                             extension.url in ('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber' | 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix' | 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')                             and extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty).empty"
-                    />
-                </extension>
                 <key value="nl-streetname-if-official-and-other-line-parts"/>
                 <requirements
                     value="This constraint checks conformance against the Dutch BRP constraints on address parts. However: when you only send postalCode + houseNumber which is enough for certain cases this may still be a valid address"/>
                 <severity value="error"/>
                 <human
                     value="Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value"/>
-                <!-- TODO: FHIRpath -->
-                <expression value="TODO - FHIRpath"/>
-                <xpath
-                    value="not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])"
-                />
+                <expression value="extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').valueBoolean.where(true).empty() or line.where(                             extension.url in ('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber' | 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix' | 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')                             and extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty).empty"/>
+                <xpath value="not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])" />
             </constraint>
             <mapping>
                 <identity value="zib-address"/>
@@ -93,7 +84,7 @@
                     <type value="value"/>
                     <path value="url"/>
                 </discriminator>
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
         </element>
         <element id="Address.extension.official">
@@ -122,8 +113,7 @@
                     <type value="value"/>
                     <path value="url"/>
                 </discriminator>
-                <!-- openAtEnd is discouraged in 3.0.0; shouldn't we use 'open'? -->
-                <rules value="openAtEnd"/>
+                <rules value="open"/>
             </slicing>
         </element>
         <element id="Address.line.extension.streetName">
@@ -231,7 +221,7 @@
             <alias value="Municipality"/>
             <alias value="woonplaats"/>
             <example>
-                <label value="Example city"> </label>
+                <label value="Example city"/>
                 <valueString value="Den Haag"/>
             </example>
             <mapping>
@@ -247,8 +237,7 @@
             <path value="Address.district"/>
             <short value="District name (aka county)"/>
             <definition value="The name of the administrative area (county)."/>
-            <comment
-                value="District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead. In a Dutch address this element is used for the population of a &quot;gemeente&quot;"/>
+            <comment value="District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead. In a Dutch address this element is used for the population of a &quot;gemeente&quot;"/>
             <requirements value="Basisregistratie Persoonsgegevens 09.10 Gemeente van inschrijving"/>
             <alias value="County"/>
             <alias value="gemeente"/>
@@ -277,15 +266,14 @@
             <alias value="provincie"/>
             <example>
                 <label value="Example province"/>
-                <valueString value="Wateringen"/>
+                <valueString value="ZH"/>
             </example>
         </element>
         <element id="Address.postalCode">
             <path value="Address.postalCode"/>
             <short value="Postal code for area"/>
             <definition value="A postal code designating a region defined by the postal service."/>
-            <comment
-                value="Dutch postal codes have pattern '\d{4}[A-Z]{2}' so they do not have spaces. Systems can easily render postal codes with a space if necessary."/>
+            <comment value="Dutch postal codes have pattern '\d{4}[A-Z]{2}' so they do not have spaces. Systems can easily render postal codes with a space if necessary."/>
             <alias value="Zip"/>
             <alias value="postcode"/>
             <example>
@@ -294,14 +282,10 @@
             </example>
             <condition value="nl-postal-code-pattern"/>
             <constraint>
-                <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-                    <valueString value="(country in 'nl' | 'nld' | 'nederland').not() or matches('^\\d{4}[A-Z]{2}$')"/>
-                </extension>
                 <key value="nl-postal-code-pattern"/>
                 <severity value="error"/>
                 <human value="Dutch postal code pattern 'nnnnAA'"/>
-                <!-- TODO FHIRpath -->
-                <expression value="TODO"/>
+                <expression value="(country in 'nl' | 'nld' | 'nederland').not() or matches('^\\d{4}[A-Z]{2}$')"/>
                 <xpath value="not(../f:country[lower-case(@value)=('nl','nld','nederland')]) or matches(@value,'^\d{4}[A-Z]{2}$')"/>
             </constraint>
             <mapping>
