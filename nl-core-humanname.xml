@@ -64,14 +64,14 @@
                 <key value="nl-core-humanname-1"/>
                 <severity value="error"/>
                 <human value="if you specify a prefix for an own name then an own name is also expected"/>
-                <expression value="TODO"/>
+                <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()"/>
                 <xpath value="not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-name']"/>
             </constraint>
             <constraint>
                 <key value="nl-core-humanname-2"/>
                 <severity value="error"/>
                 <human value="if you specify a voorvoegsel for a partner name then a partner name is also expected"/>
-                <expression value="TODO"/>
+                <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partners-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partners-name').empty().not()"/>
                 <xpath
                     value="not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partners-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partners-name']"
                 />
