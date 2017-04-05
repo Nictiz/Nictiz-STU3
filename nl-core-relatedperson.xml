@@ -44,11 +44,17 @@
             <path value="RelatedPerson.extension"/>
             <short value="role"/>
             <min value="0"/>
-            <max value="1"/>
             <type>
                 <code value="Extension"/>
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role"/>
             </type>
+            <binding>
+                <strength value="extensible" />
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20150401000000" />
+                    <display value="RolCodelijst" />
+                </valueSetReference>
+            </binding>
             <mapping>
                 <identity value="zib-contactpersoon"/>
                 <map value="NL-CM:3.1.2"/>
