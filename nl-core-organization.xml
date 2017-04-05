@@ -21,6 +21,11 @@
         <uri value="https://zibs.nl/wiki/Patient(NL)"/>
         <name value="Zorginformatiebouwsteen Patient"/>
     </mapping>
+    <mapping>
+        <identity value="zib-betaler"/>
+        <uri value="https://zibs.nl/wiki/Betaler(NL)"/>
+        <name value="Zorginformatiebouwsteen Betaler"/>
+    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Organization"/>
@@ -107,6 +112,26 @@
             <path value="Organization.identifier.value"/>
             <short value="AGB-Z (Vektis AGB-Z zorgverlenertabel)"/>
             <min value="1"/>
+        </element>
+        <element id="Organization.identifier">
+            <path value="Organization.identifier" />
+            <sliceName value="UZOVI" />
+            <definition value="Unique healthcare insurance company identification (the UZOVI number)." />
+            <alias value="UZOVI"/>
+            <mapping>
+                <identity value="zib-betaler"/>
+                <map value="NL-CM:1.1.7"/>
+            </mapping>
+        </element>
+        <element id="Organization.identifier.system">
+            <path value="Organization.identifier.system" />
+            <min value="1" />
+            <fixedUri value="http://fhir.nl/fhir/NamingSystem/uzovi" />
+        </element>
+        <element id="Organization.identifier.value">
+            <path value="Organization.identifier.value" />
+            <short value="Unique healthcare insurance company identification (the UZOVI number)" />
+            <min value="1" />
         </element>
         <element id="Organization.type">
             <path value="Organization.type"/>
