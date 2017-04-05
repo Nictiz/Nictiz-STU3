@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="nl-core-patient"/>
     <meta>
         <versionId value="15"/>
@@ -36,6 +36,11 @@
         <uri value="https://zibs.nl/wiki/Zorgverlener(NL)"/>
         <name value="Zorginformatiebouwsteen Zorgverlener"/>
     </mapping>
+    <mapping>
+        <identity value="zib-nationaliteit"/>
+        <uri value="https://zibs.nl/wiki/Nationaliteit(NL)"/>
+        <name value="Zorginformatiebouwsteen Nationaliteit"/>
+    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Patient"/>
@@ -70,6 +75,30 @@
                 <code value="Extension"/>
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-preferred-pharmacy"/>
             </type>
+        </element>
+        <element id="Patient:nl-core-patient.extension:nationality">
+            <path value="Patient.extension"/>
+            <sliceName value="nationality"/>
+            <short value="Nationality"/>
+            <definition value="The nationality of the patient."/>
+            <min value="0"/>
+            <max value="*"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="Indicates the country of citizenship." />
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20150401000000"/>
+                    <display value="NationaliteitCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="zib-nationaliteit"/>
+                <map value="NL-CM:7.6.3"/>
+            </mapping>
         </element>
         <element id="Patient.identifier">
             <path value="Patient.identifier"/>
