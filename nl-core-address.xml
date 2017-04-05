@@ -1,4 +1,4 @@
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="nl-core-address"/>
     <meta>
         <versionId value="6"/>
@@ -89,6 +89,7 @@
         </element>
         <element id="Address.extension.official">
             <path value="Address.extension"/>
+            <sliceName value="official"/>
             <short value="Mark an address as an 'officially registered' address."/>
             <definition
                 value="Mark an address as an 'officially registered' address. In Dutch context that means it is registered in the Basisregistratie persoonsgegevens (BRP)"/>
@@ -118,6 +119,7 @@
         </element>
         <element id="Address.line.extension.streetName">
             <path value="Address.line.extension"/>
+            <sliceName value="streetName"/>
             <requirements value="Basisregistratie Persoonsgegevens 11.10 Straatnaam"/>
             <min value="0"/>
             <max value="1"/>
@@ -136,6 +138,7 @@
         </element>
         <element id="Address.line.extension.houseNumber">
             <path value="Address.line.extension"/>
+            <sliceName value="houseNumber"/>
             <requirements value="Basisregistratie Persoonsgegevens 11.20 Huisnummer"/>
             <min value="0"/>
             <max value="1"/>
@@ -154,6 +157,7 @@
         </element>
         <element id="Address.line.extension.buildingNumbersuffix">
             <path value="Address.line.extension"/>
+            <sliceName value="buildingNumbersuffix"/>
             <definition
                 value="HouseNumberLetter - A letter following the house number as assigned by the municipal authorities.&#xD;&#xA;HouseNumberAddition - The letters or signs needed to locate the mailbox, in addition to the house number and letter."/>
             <requirements value="Basisregistratie Persoonsgegevens 11.30 Huisletter&#xD;&#xA;11.40 Huisnummertoevoeging&#xD;&#xA;12.10 Locatieomschrijving"/>
@@ -182,6 +186,7 @@
         </element>
         <element id="Address.line.extension.unitID">
             <path value="Address.line.extension"/>
+            <sliceName value="unitID"/>
             <definition value="Extra information such as the building name, building number, entrance, route number."/>
             <min value="0"/>
             <max value="1"/>
@@ -196,6 +201,7 @@
         </element>
         <element id="Address.line.extension.additionalLocator">
             <path value="Address.line.extension"/>
+            <sliceName value="additionalLocator"/>
             <definition value="HouseNumberIndication - The indication used for addresses which do not consist of the usual street name and house number."/>
             <requirements value="Basisregistratie Persoonsgegevens 11.50 Aanduiding bij huisnummer"/>
             <min value="0"/>

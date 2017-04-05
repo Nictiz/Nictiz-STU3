@@ -1,4 +1,4 @@
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="d23890c7-3184-4f59-b83e-3bc7cf27fce0"/>
     <meta>
         <versionId value="9"/>
@@ -54,6 +54,7 @@
         </element>
         <element id="Practitioner.identifier.UZI">
             <path value="Practitioner.identifier"/>
+            <sliceName value="UZI"/>
             <short value="UZI"/>
             <definition value="Unieke Zorgverlener Identificatie (Dutch physician identification number)"/>
             <alias value="UZI"/>
@@ -77,6 +78,7 @@
         </element>
         <element id="Practitioner.identifier.AGB">
             <path value="Practitioner.identifier"/>
+            <sliceName value="AGB"/>
             <short value="AGB"/>
             <alias value="AGB"/>
             <max value="1"/>
@@ -99,6 +101,7 @@
         </element>
         <element id="Practitioner.identifier.BIG">
             <path value="Practitioner.identifier"/>
+            <sliceName value="BIG"/>
             <short value="BIG"/>
             <alias value="BIG"/>
             <max value="1"/>
@@ -132,88 +135,47 @@
             </mapping>
         </element>
         <element id="Practitioner.telecom">
-            <path value="Practitioner.telecom"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <short value="ContactDetails"/>
+            <path value="Practitioner.telecom" />
+            <short value="ContactInformation"/>
             <alias value="Contactgegevens"/>
             <mapping>
-                <identity value="zib-zorgaanbieder"/>
-                <map value="NL-CM:17.1.8"/>
+                <identity value="zib-zorgaanbieder" />
+                <map value="NL-CM:17.1.8" />
+            </mapping>
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.5" />
             </mapping>
         </element>
         <element id="Practitioner.telecom.Phone">
-            <path value="Practitioner.telecom"/>
-            <short value="TelephoneNumbers"/>
-            <alias value="Telefoonnummers"/>
+            <path value="Practitioner.telecom.system" />
+            <min value="1" />
+        </element>
+        <element id="Practitioner.telecom.value">
+            <path value="Practitioner.telecom.value" />
+            <alias value="Telefoonnummer" />
+            <alias value="EmailAdres" />
+            <min value="1" />
             <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.21"/>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.23" />
+            </mapping>
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.20" />
             </mapping>
         </element>
-        <element id="Practitioner.telecom.Phone.system">
-            <path value="Practitioner.telecom.system"/>
-            <type>
-                <code value="code"/>
-            </type>
-            <fixedCode value="phone"/>
-        </element>
-        <element id="Practitioner.telecom.Phone.value">
-            <path value="Practitioner.telecom.value"/>
-            <short value="TelephoneNumber"/>
-            <alias value="Telefoonnummer"/>
+        <element id="Practitioner.telecom.use">
+            <path value="Practitioner.telecom.use" />
+            <alias value="NummerSoort" />
+            <alias value="EmailSoort" />
             <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.23"/>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.22" />
             </mapping>
-        </element>
-        <element id="Practitioner.telecom.Phone.use">
-            <path value="Practitioner.telecom.use"/>
-            <short value="NumberType"/>
-            <alias value="Nummersoort"/>
             <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.22"/>
-            </mapping>
-        </element>
-        <element id="Practitioner.telecom.Email">
-            <path value="Practitioner.telecom"/>
-            <short value="EmailAddresses"/>
-            <alias value="E-mailadressen"/>
-            <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.18"/>
-            </mapping>
-        </element>
-        <element id="Practitioner.telecom.Email.system">
-            <path value="Practitioner.telecom.system"/>
-            <type>
-                <code value="code"/>
-            </type>
-            <fixedCode value="email"/>
-        </element>
-        <element id="Practitioner.telecom.Email.value">
-            <path value="Practitioner.telecom.value"/>
-            <short value="EmailAddress"/>
-            <definition value="The actual email address of the patient"/>
-            <alias value="E-mailadres"/>
-            <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.20"/>
-            </mapping>
-        </element>
-        <element id="Practitioner.telecom.Email.use">
-            <path value="Practitioner.telecom.use"/>
-            <short value="EmailType"/>
-            <alias value="E-mailSoort"/>
-            <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.19"/>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.19" />
             </mapping>
         </element>
         <element id="Practitioner.address">
