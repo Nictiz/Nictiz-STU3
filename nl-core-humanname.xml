@@ -1,4 +1,4 @@
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="nl-core-humanname"/>
     <meta>
         <versionId value="17"/>
@@ -97,6 +97,7 @@
         </element>
         <element id="HumanName.extension.NameAssemblyOrder">
             <path value="HumanName.extension"/>
+            <sliceName value="humanname-assembly-order"/>
             <short value="Preferred display order of name parts"/>
             <definition value="A code that represents the preferred display order of the components of this human name."/>
             <min value="0"/>
@@ -123,6 +124,7 @@
         </element>
         <element id="HumanName.family.extension.PrefixOwnSurname">
             <path value="HumanName.family.extension"/>
+            <sliceName value="humanname-own-prefix"/>
             <short value="Voorvoegsel derived from person's own surname"/>
             <definition
                 value="The prefix portion (e.g. voorvoegsel) of the family name that is derived from the person&amp;#39;s own surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s partner or spouse."/>
@@ -135,6 +137,7 @@
         </element>
         <element id="HumanName.family.extension.OwnSurName">
             <path value="HumanName.family.extension"/>
+            <sliceName value="humanname-own-name"/>
             <short value="Portion derived from person's own surname"/>
             <definition
                 value="The portion of the family name that is derived from the person&amp;#39;s own surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s partner or spouse."/>
@@ -147,6 +150,7 @@
         </element>
         <element id="HumanName.family.extension.PrefixPartnerName">
             <path value="HumanName.family.extension"/>
+            <sliceName value="humanname-partner-prefix"/>
             <short value="Voorvoegsel derived from person's partner's surname"/>
             <definition value="Voorvoegsel derived from person's partner's surname"/>
             <comment value="An example of a voorvoegsel is the &amp;quot;van&amp;quot; in &amp;quot;Ludwig van Beethoven&amp;quot;. Since the voorvoegsel doesn&amp;#39;t sort completely alphabetically, it is reasonable to identify it as a separate sub-component."/>
@@ -158,6 +162,7 @@
         </element>
         <element id="HumanName.family.extension.PartnerName">
             <path value="HumanName.family.extension"/>
+            <sliceName value="humanname-partner-name"/>
             <short value="Portion derived from person's partner's surname"/>
             <definition
                 value="The portion of the family name that is derived from the person&amp;#39;s partner&amp;#39;s surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s own name."/>
@@ -195,6 +200,7 @@
         </element>
         <element id="HumanName.given.Qualifier">
             <path value="HumanName.given.extension"/>
+            <sliceName value="iso21090-EN-qualifier"/>
             <short value="LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV"/>
             <definition value="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type."/>
             <min value="0"/>

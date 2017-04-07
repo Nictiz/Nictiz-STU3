@@ -1,4 +1,4 @@
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="3241a0b7-a2fc-4ec9-bb8c-5db8ec074abb"/>
     <meta>
         <versionId value="10"/>
@@ -20,6 +20,11 @@
         <identity value="zib-patient"/>
         <uri value="https://zibs.nl/wiki/Patient(NL)"/>
         <name value="Zorginformatiebouwsteen Patient"/>
+    </mapping>
+    <mapping>
+        <identity value="zib-betaler"/>
+        <uri value="https://zibs.nl/wiki/Betaler(NL)"/>
+        <name value="Zorginformatiebouwsteen Betaler"/>
     </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -47,6 +52,7 @@
         </element>
         <element id="Organization.extension.OrganizationAlias">
             <path value="Organization.extension"/>
+            <sliceName value="organization-alias"/>
             <short value="Other names that this Organization is known as."/>
             <definition value="Other names that this Organization is known as."/>
             <min value="0"/>
@@ -67,6 +73,7 @@
         </element>
         <element id="Organization.identifier.URA">
             <path value="Organization.identifier"/>
+            <sliceName value="URA"/>
             <alias value="URA"/>
             <mapping>
                 <identity value="zib-zorgaanbieder"/>
@@ -89,6 +96,7 @@
         </element>
         <element id="Organization.identifier.AGB">
             <path value="Organization.identifier"/>
+            <sliceName value="AGB"/>
             <alias value="AGB"/>
             <mapping>
                 <identity value="zib-zorgaanbieder"/>
@@ -105,6 +113,26 @@
             <short value="AGB-Z (Vektis AGB-Z zorgverlenertabel)"/>
             <min value="1"/>
         </element>
+        <element id="Organization.identifier">
+            <path value="Organization.identifier" />
+            <sliceName value="UZOVI" />
+            <definition value="Unique healthcare insurance company identification (the UZOVI number)." />
+            <alias value="UZOVI"/>
+            <mapping>
+                <identity value="zib-betaler"/>
+                <map value="NL-CM:1.1.7"/>
+            </mapping>
+        </element>
+        <element id="Organization.identifier.system">
+            <path value="Organization.identifier.system" />
+            <min value="1" />
+            <fixedUri value="http://fhir.nl/fhir/NamingSystem/uzovi" />
+        </element>
+        <element id="Organization.identifier.value">
+            <path value="Organization.identifier.value" />
+            <short value="Unique healthcare insurance company identification (the UZOVI number)" />
+            <min value="1" />
+        </element>
         <element id="Organization.type">
             <path value="Organization.type"/>
             <slicing>
@@ -117,6 +145,7 @@
         </element>
         <element id="Organization.type.Type">
             <path value="Organization.type"/>
+            <sliceName value="organizationType"/>
             <short value="OrganizationType"/>
             <alias value="OrganisatieType"/>
             <binding>
@@ -133,6 +162,7 @@
         </element>
         <element id="Organization.type.DepartmentSpecialism">
             <path value="Organization.type"/>
+            <sliceName value="departmentSpecialty"/>
             <short value="DepartmentSpecialty"/>
             <definition value="Department type, e.g. Cardiology"/>
             <binding>
@@ -152,86 +182,47 @@
             <short value="OrganizationName or DepartmentName"/>
         </element>
         <element id="Organization.telecom">
-            <path value="Organization.telecom"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <short value="A contact detail for the organization"/>
+            <path value="Organization.telecom" />
+            <short value="ContactInformation"/>
+            <alias value="Contactgegevens"/>
+            <mapping>
+                <identity value="zib-zorgaanbieder" />
+                <map value="NL-CM:17.2.6" />
+            </mapping>     
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.5" />
+            </mapping>
         </element>
         <element id="Organization.telecom.Phone">
-            <path value="Organization.telecom"/>
-            <short value="TelephoneNumbers"/>
-            <alias value="Contactgegevens"/>
-            <alias value="Telefoonnummers"/>
+            <path value="Organization.telecom.system" />
+            <min value="1" />
+        </element>
+        <element id="Organization.telecom.value">
+            <path value="Organization.telecom.value" />
+            <alias value="Telefoonnummer" />
+            <alias value="EmailAdres" />
+            <min value="1" />
             <mapping>
-                <identity value="zib-zorgaanbieder"/>
-                <map value="NL-CM:17.2.6"/>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.23" />
             </mapping>
             <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.21"/>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.20" />
             </mapping>
         </element>
-        <element id="Organization.telecom.Phone.system">
-            <path value="Organization.telecom.system"/>
-            <fixedCode value="phone"/>
-        </element>
-        <element id="Organization.telecom.Phone.value">
-            <path value="Organization.telecom.value"/>
-            <short value="TelephoneNumber"/>
-            <alias value="Telefoonnummer"/>
+        <element id="Organization.telecom.use">
+            <path value="Organization.telecom.use" />
+            <alias value="NummerSoort" />
+            <alias value="EmailSoort" />
             <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.23"/>
-            </mapping>
-        </element>
-        <element id="Organization.telecom.Phone.use">
-            <path value="Organization.telecom.use"/>
-            <short value="NumberType"/>
-            <alias value="NummerSoort"/>
-            <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.22"/>
-            </mapping>
-        </element>
-        <element id="Organization.telecom.Email">
-            <path value="Organization.telecom"/>
-            <short value="EmailAddresses"/>
-            <alias value="Contactgegevens"/>
-            <alias value="E-mailadressen"/>
-            <mapping>
-                <identity value="zib-zorgaanbieder"/>
-                <map value="NL-CM:17.2.6"/>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.22" />
             </mapping>
             <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.18"/>
-            </mapping>
-        </element>
-        <element id="Organization.telecom.Email.system">
-            <path value="Organization.telecom.system"/>
-            <fixedCode value="email"/>
-        </element>
-        <element id="Organization.telecom.Email.use">
-            <path value="Organization.telecom.use"/>
-            <short value="EmailAddress"/>
-            <alias value="E-mailadres"/>
-            <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.20"/>
-            </mapping>
-        </element>
-        <element id="Organization.telecom.Email.use">
-            <path value="Organization.telecom.use"/>
-            <short value="EmailType"/>
-            <alias value="Emailsoort"/>
-            <mapping>
-                <identity value="zib-patient"/>
-                <map value="NL-CM:0.1.19"/>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.19" />
             </mapping>
         </element>
         <element id="Organization.address">
