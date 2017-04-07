@@ -451,11 +451,11 @@
             <max value="1"/>
             <type>
                 <code value="Reference"/>
-                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
             </type>
             <type>
                 <code value="Reference"/>
-                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
             </type>
             <mapping>
                 <identity value="zib-zorgverlener"/>
