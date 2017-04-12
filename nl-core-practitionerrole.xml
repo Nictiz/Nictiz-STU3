@@ -107,5 +107,45 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <short value="ContactInformation"/>
+      <alias value="Contactgegevens"/>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.5" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.telecom.Phone">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.telecom.value">
+      <path value="PractitionerRole.telecom.value" />
+      <alias value="Telefoonnummer" />
+      <alias value="EmailAdres" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.23" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.20" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.telecom.use">
+      <path value="PractitionerRole.telecom.use" />
+      <alias value="NummerSoort" />
+      <alias value="EmailSoort" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.22" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.19" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>
