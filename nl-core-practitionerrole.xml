@@ -29,11 +29,7 @@
       <path value="PractitionerRole.practitioner" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
     </element>
     <element id="Element">
@@ -42,11 +38,7 @@
       <alias value="Zorgaanbieder" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
       <mapping>
         <identity value="zib-zorgverlener" />
@@ -64,8 +56,8 @@
         </extension>
         <strength value="extensible" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20150401000000" />
-          <display value="RolCodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5--20150401000000" />
+          <display value="ZorgverlenerRolCodelijst" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -114,6 +106,46 @@
           <display value="SpecialismeUZICodelijst" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <short value="ContactInformation"/>
+      <alias value="Contactgegevens"/>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.5" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.telecom.Phone">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.telecom.value">
+      <path value="PractitionerRole.telecom.value" />
+      <alias value="Telefoonnummer" />
+      <alias value="EmailAdres" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.23" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.20" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.telecom.use">
+      <path value="PractitionerRole.telecom.use" />
+      <alias value="NummerSoort" />
+      <alias value="EmailSoort" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.22" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.19" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
