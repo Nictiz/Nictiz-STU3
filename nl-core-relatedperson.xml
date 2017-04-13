@@ -43,7 +43,7 @@
         <element id="RelatedPerson.extension:role">
             <path value="RelatedPerson.extension"/>
             <sliceName value="role"/>
-            <short value="role"/>
+            <short value="Defines the role of the contact in relation to the patient." />
             <min value="0"/>
             <type>
                 <code value="Extension"/>
@@ -51,6 +51,7 @@
             </type>
             <binding>
                 <strength value="extensible" />
+                <description value="Defines the role of the contact in relation to the patient." />
                 <valueSetReference>
                     <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20150401000000" />
                     <display value="RolCodelijst" />
