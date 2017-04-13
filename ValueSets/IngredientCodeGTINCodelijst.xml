@@ -1,0 +1,36 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+  <id value="799191ca-f427-4dfc-be78-e9aa28385248" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2016-10-31T17:06:48.495+00:00" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.21--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.9.5.21" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="IngredientCodeGTINCodelijst" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Global Trade Item Number (GTIN) (1.3.160): Alle waarden" />
+  <copyright value="CC0" />
+  <expansion>
+    <identifier value="urn:uuid:2b55e560-d61b-429e-88cd-59987b58b0c2" />
+    <timestamp value="2016-10-31T18:06:48.721+01:00" />
+    <total value="0" />
+    <contains>
+      <system value="urn:oid:1.3.160" />
+    </contains>
+  </expansion>
+</ValueSet>

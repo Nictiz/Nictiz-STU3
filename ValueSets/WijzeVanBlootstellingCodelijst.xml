@@ -1,0 +1,36 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+  <id value="978f11b1-0878-4ea1-9c5f-3d5e132d3ba2" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2016-11-15T12:44:22.957+00:00" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="WijzeVanBlootstellingCodelijst" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="SNOMED CT (2.16.840.1.113883.6.96): SNOMED CT: &amp;lt;284009009 | route of administration value|" />
+  <copyright value="CC0" />
+  <expansion>
+    <identifier value="urn:uuid:42ab00a7-1f96-48fa-b4b4-cb1c6ad4d5f5" />
+    <timestamp value="2016-11-15T13:44:22.892+01:00" />
+    <total value="0" />
+    <contains>
+      <system value="http://snomed.info/sct" />
+    </contains>
+  </expansion>
+</ValueSet>

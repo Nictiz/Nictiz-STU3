@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/DSTU2/condition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/condition.xsd">
+    <id value="example-overdrachtconcern2"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>ProbleemType</th>
+                        <th>ProbleemNaam</th>
+                        <th>Probleem BeginDatum</th>
+                        <th>ProbleemStatus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diagnosis</td>
+                        <td>Diabetes mellitus type 2</td>
+                        <td>1996</td>
+                        <td>Resolved (2012-11-15)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-ProblemStatusDate">
+        <valueDateTime value="2012-09-10"/>
+    </extension>    
+    <patient>
+        <reference value="Patient/example"/>
+        <display value="Jongeneel-de Haas"/>
+    </patient>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44054006"/>
+            <display value="Diabetes mellitus type 2"/>
+        </coding>
+    </code>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="282291009"/>
+            <display value="Diagnosis"/>
+        </coding>
+    </category>
+    <clinicalStatus value="413322009">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-ProblemStatusDate">
+            <valueDateTime value="2012-09-10"/>
+        </extension>
+    </clinicalStatus>
+    <verificationStatus value="confirmed"/>
+    <onsetDateTime value="1996"/>
+</Condition>
+
+
+

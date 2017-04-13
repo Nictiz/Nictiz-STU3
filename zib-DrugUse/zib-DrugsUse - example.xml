@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/DSTU2/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/observation.xsd">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>TypeOfDrugOrMedication</th>
+                        <th>DrugUseStatus</th>
+                        <th>StartDate</th>
+                        <th>StopDate</th>
+                        <th>RouteOfAdministration</th>
+                        <th>Amount</th>
+                        <th>Explanation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ketamine</td>
+                        <td>Misused drugs in past</td>
+                        <td>2005-04-08</td>
+                        <td>2006-02-01</td>
+                        <td>NASAAL, ORAAL</td>
+                        <td>50mg per week</td>
+                        <td>Used drugs only during parties and nightlife.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="228366006"/>
+            <display value="Finding related to drug misuse behaviour"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example"/>
+    </subject>
+    <effectivePeriod>
+        <start value="2005-04-08"/>
+        <end value="2006-02-01"/>
+    </effectivePeriod>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44870007"/>
+            <display value="Misused drugs in past (finding)"/>
+        </coding>
+    </valueCodeableConcept>
+    <comments value="Used drugs only during parties and nightlife."/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="410942007"/>
+                <display value="Drug or medicament"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="373464007"/>
+                <display value="Ketamine (substance)"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="410675002"/>
+                <display value="Route of administration"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="2.16.840.1.113883.2.4.4.9"/>
+                <code value="6"/>
+                <display value="NASAAL"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="410675002"/>
+                <display value="Route of administration"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="2.16.840.1.113883.2.4.4.9"/>
+                <code value="9"/>
+                <display value="ORAAL"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="228390007"/>
+                <display value="Frequency of drug misuse"/>
+            </coding>
+        </code>
+        <valueRatio>
+            <numerator>
+                <value value="50"/>
+                <unit value="mg"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mg"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="week"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="WK"/>
+            </denominator>
+        </valueRatio>
+    </component>
+</Observation>
+

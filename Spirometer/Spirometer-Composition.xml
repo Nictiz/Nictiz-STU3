@@ -1,0 +1,172 @@
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+  <id value="e5afe7db-ddd1-4385-9045-325da7a7be12" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2017-01-31T15:49:54.002+00:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Composition" />
+  <name value="Spirometer Composition" />
+  <status value="draft" />
+  <date value="2017-01-20T14:12:43.7698667+01:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <copyright value="CC0" />
+  <fhirVersion value="1.0.2" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Composition" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-composition" />
+  <differential>
+    <element id="Composition">
+      <path value="Composition" />
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <short value="type" />
+    </element>
+    <element id="Composition.type.coding">
+      <path value="Composition.type.coding" />
+      <short value="coding" />
+    </element>
+    <element id="Composition.type.coding.system">
+      <path value="Composition.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Composition.type.coding.code">
+      <path value="Composition.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="18759-1" />
+    </element>
+    <element id="Composition.type.coding.display">
+      <path value="Composition.type.coding.display" />
+      <fixedString value="Spirometry study" />
+    </element>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <fixedString value="Spirometry study" />
+    </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <aggregation value="bundled" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <aggregation value="bundled" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+        <aggregation value="bundled" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element id="Composition.attester">
+      <path value="Composition.attester" />
+      <short value="attester" />
+    </element>
+    <element id="Composition.attester.party">
+      <path value="Composition.attester.party" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <aggregation value="bundled" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <aggregation value="bundled" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element id="Composition.custodian">
+      <path value="Composition.custodian" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element id="Composition.section">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
+      <path value="Composition.section" />
+      <slicing>
+        <discriminator>
+            <type value="profile"/>
+            <path value="profile"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="section" />
+    </element>
+    <element id="Composition.section.SpirometerObservationPanel">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
+      <path value="Composition.section" />
+      <sliceName value="SpirometerObservationPanel" />
+    </element>
+    <element id="Composition.section.code">
+      <path value="Composition.section.code" />
+      <short value="code" />
+    </element>
+    <element id="Composition.section.code.coding">
+      <path value="Composition.section.code.coding" />
+      <short value="coding" />
+    </element>
+    <element id="Composition.section.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Composition.section.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="81459-0" />
+    </element>
+    <element id="Composition.section.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Spirometry panel" />
+    </element>
+    <element id="Composition.section.entry">
+      <path value="Composition.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-Panel" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

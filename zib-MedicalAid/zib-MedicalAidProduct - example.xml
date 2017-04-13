@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/DSTU2/device.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>ProductID</th>
+                        <th>ProductType</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345678</td>
+                        <td>Cardiac pacemakers and related products</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <!-- Random value for now -->
+    <identifier>
+        <system value="oid:urn:	1.3.160"/>
+        <value value="12345678"/>
+    </identifier>
+    <type>
+        <coding>
+            <system value="oid:urn:2.16.840.1.113883.6.302"/>
+            <code value="42203500"/>
+            <display value="Cardiac pacemakers and related products"/>
+        </coding>
+    </type>
+    <patient>
+        <reference value="Patient/example"/>
+    </patient>
+</Device>

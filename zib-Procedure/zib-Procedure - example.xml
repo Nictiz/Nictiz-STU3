@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/DSTU2/procedure.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Procedure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/procedure.xsd" xmlns="http://hl7.org/fhir">
+    <id value="example-overdracthverrichting"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>VerrichtingType</th>
+                        <th>Verrichting Anatomische Locatie</th>
+                        <th>Verrichting Start Datum</th>
+                        <th>ProductType</th>
+                        <th>ProductID</th>
+                        <th>ProbleemNaam</th>
+                        <th>Specialisme</th>
+                        <th>OrganisatieNaam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Knie - prothese implantatie gewricht - links</td>
+                        <td>Left knee</td>
+                        <td>2012-06-05</td>
+                        <td>Device/example</td>
+                        <td>Device/example</td>
+                        <td>Artrose</td>
+                        <td>Orthopedie</td>
+                        <td>UMCG</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-Requester">
+        <valueReference>
+            <reference value="Practitioner/example"/>
+        </valueReference>
+    </extension>
+    <subject>
+            <reference value="Patient/example"/>
+            <display value="Jongeneel-de Haas"/>
+    </subject>
+    <status value="completed"/>
+    <code>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.120.5.2"/>
+            <code value="338663L"/>
+            <display value="KNIE - PROTHESE IMPLANTATIE GEWRICHT - LINKS"/>
+        </coding>
+    </code>
+    <bodySite>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="210659002"/>
+            <display value="Left knee"/>
+        </coding>
+    </bodySite>
+    <reasonReference>
+        <reference value="Condition/example"/>
+        <display value="Artrose"/>
+    </reasonReference>
+    <performer>
+        <actor>
+            <reference value="Practitioner/example"/>
+        </actor>
+    </performer>
+    <performer>
+        <actor>
+            <reference value="Organization/example"/>
+            <display value="UMCG"/>
+        </actor>
+    </performer>
+    <performedPeriod>
+        <start value="2012-06-05"/>
+    </performedPeriod>
+    <focalDevice>
+        <manipulated>
+            <reference value="Device/example"/>
+            <display value="Implantant, Gen 2 Tibia Insert 5/6-9mm"/>
+        </manipulated>
+    </focalDevice>
+</Procedure>
+
+
+
+
+

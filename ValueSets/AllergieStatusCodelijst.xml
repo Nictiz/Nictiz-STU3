@@ -1,0 +1,84 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+  <id value="Nictiz-21684011138832431160402823--2015-04-01T000000" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2016-10-31T17:04:35.44+00:00" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.3--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.3" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="AllergieStatusCodelijst" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <copyright value="CC0" />
+  <expansion>
+    <identifier value="urn:uuid:3ce9cc3c-eee4-473a-9a7d-73bb98e82a63" />
+    <timestamp value="2016-10-31T18:04:35.663+01:00" />
+    <total value="4" />
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Actief" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/ActStatus" />
+      <code value="active" />
+      <display value="Active" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Niet meer aanwezig" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/ActStatus" />
+      <code value="completed" />
+      <display value="Completed" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Achterhaald" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/ActStatus" />
+      <code value="obsolete" />
+      <display value="Obsolete" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Foutief" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/ActStatus" />
+      <code value="nullified" />
+      <display value="Nullified" />
+    </contains>
+  </expansion>
+</ValueSet>

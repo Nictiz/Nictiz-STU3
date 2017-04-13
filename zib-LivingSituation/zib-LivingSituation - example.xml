@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/DSTU2/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/observation.xsd">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation"/>
+    </meta>
+    <text>
+        <status value="generated"></status>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>TypeOfHome</th>
+                        <th>Explanation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Appartement of flatwoning</td>
+                        <td>The appartment is a problem because there is no elevator. Patient is looking for a new living place.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="365508006"/>
+            <display value="Finding of residence and accommodation circumstances"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example"/>
+    </subject>
+    <valueCodeableConcept>
+        <coding>
+            <system value="2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="FLATW"/>
+            <display value="Appartement of flatwoning"/>
+        </coding>
+    </valueCodeableConcept>
+    <comments value="The appartment is a problem because there is no elevator. Patient is looking for a new living place."/>
+ </Observation>

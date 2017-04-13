@@ -1,0 +1,435 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+  <id value="fd246c8e-47e4-433d-99f9-716596e6119f" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2016-10-31T13:26:01.319+00:00" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="RelatieCodelijst" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <copyright value="CC0" />
+  <expansion>
+    <identifier value="urn:uuid:563403a9-2c86-40d3-8b39-99b81f9c849a" />
+    <timestamp value="2016-10-31T14:26:01.308+01:00" />
+    <total value="31" />
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Tante" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="AUNT" />
+      <display value="Aunt" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Broer" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="BRO" />
+      <display value="Brother" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Zwager" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="BROINLAW" />
+      <display value="Brother-in-law" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Neef/nicht" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="COUSN" />
+      <display value="Cousin" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Dochter" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="DAUC" />
+      <display value="Daughter" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Schoondochter" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="DAUINLAW" />
+      <display value="Daughter in-law" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Partner" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="DOMPART" />
+      <display value="Domestic partner" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Vader" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="FTH" />
+      <display value="Father" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Schoonvader" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="FTHINLAW" />
+      <display value="Father-in-law" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Pleegdochter" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="DAUFOST" />
+      <display value="Foster daughter" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Pleegvader" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="FTHFOST" />
+      <display value="Foster father" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Pleegmoeder" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="MTHFOST" />
+      <display value="Foster mother" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Pleegzoon" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="SONFOST" />
+      <display value="Foster son" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Kleindochter" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="GRNDDAU" />
+      <display value="Granddaughter" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Opa" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="GRFTH" />
+      <display value="Grandfather" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Oma" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="GRMTH" />
+      <display value="Grandmother" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Kleinzoon" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="GRNDSON" />
+      <display value="Grandson" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Overgrootvader" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="GGRFTH" />
+      <display value="Great grandfather" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Overgrootmoeder" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="GGRMTH" />
+      <display value="Great grandmother" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Echtgenoot" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="HUSB" />
+      <display value="Husband" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Moeder" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="MTH" />
+      <display value="Mother" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Schoonmoeder" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="MTHINLAW" />
+      <display value="Mother-in-law" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Neef, zoon van oom/tante" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="NEPHEW" />
+      <display value="Nephew" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Nicht, dochter van oom/tante" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="NIECE" />
+      <display value="Niece" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Zuster" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="SIS" />
+      <display value="Sister" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Schoonzuster" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="SISINLAW" />
+      <display value="Sister-in-law" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Zoon" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="SONC" />
+      <display value="Son" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Schoonzoon" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="SONINLAW" />
+      <display value="Son in-law" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Oom" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="UNCLE" />
+      <display value="Uncle" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Echtgenote" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/RoleCode" />
+      <code value="WIFE" />
+      <display value="Wife" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Anders" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/NullFlavor" />
+      <code value="OTH" />
+      <display value="Other" />
+    </contains>
+  </expansion>
+</ValueSet>

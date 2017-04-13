@@ -1,0 +1,36 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+  <id value="242b8d16-5a9a-4645-b878-735de542706e" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2016-10-31T17:05:35.144+00:00" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.7--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.9.5.7" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="FarmaceutischeVormCodelijst" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="G-Standaard Farmaceutische vormen (2.16.840.1.113883.2.4.4.11): Alle waarden" />
+  <copyright value="CC0" />
+  <expansion>
+    <identifier value="urn:uuid:a61dfd20-d203-41b2-985b-5dc47eaeb43b" />
+    <timestamp value="2016-10-31T18:05:35.361+01:00" />
+    <total value="0" />
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.11" />
+    </contains>
+  </expansion>
+</ValueSet>

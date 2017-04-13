@@ -1,0 +1,58 @@
+<?xml-model href="http://hl7.org/fhir/DSTU2/organization.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Organization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/organization.xsd">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-PayerInsuranceCompany"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Insurance Company with id example</caption>
+                <thead>
+                    <tr>
+                        <th>IdentificationNumber</th>
+                        <th>OrganizationName</th>
+                        <th>Street</th>
+                        <td>Postcode</td>
+                        <td>Place of residence</td>
+                        <td>Country</td>
+                        <td>TelephoneNumber</td>
+                        <td>NumberType</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>3332</th>
+                        <th>Menzis Zorgverzekeraar N.V.</th>
+                        <th>Postbus 34000</th>
+                        <td>7500 KC</td>
+                        <td>Enschede</td>
+                        <td>Neterlands</td>
+                        <td>+31505233333</td>
+                        <td>Work</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <identifier>
+        <!-- Uzovi nummer -->
+        <system value="urn:oid:2.16.840.1.113883.2.4.6.4"/>
+        <value value="3332"/>
+    </identifier>
+    <active value="true"/>
+    <name value="Menzis Zorgverzekeraar N.V."/>
+    <telecom>
+        <system value="phone"/>
+        <value value="+31505233333"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <use value="work"/>
+        <line value="Postbus 34000"/>
+        <city value="Enschede"/>
+        <postalCode value="7500 KC"/>
+        <country value="Netherlands"/>
+    </address>
+</Organization>

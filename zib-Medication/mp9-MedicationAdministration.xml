@@ -1,0 +1,95 @@
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+  <id value="8c6e8ba5-9637-477a-8bd7-340a3a99b342" />
+  <meta>
+    <versionId value="4" />
+    <lastUpdated value="2016-12-12T16:52:03.83+00:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAdministration" />
+  <name value="MP9 Medication Administration" />
+  <status value="draft" />
+  <date value="2016-12-12T16:52:03.83+00:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <copyright value="CC0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationAdministration" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
+  <differential>
+    <element id="MedicationAdministration">
+      <path value="MedicationAdministration" />
+      <short value="Medicatietoediening"/>
+    </element>
+    <element id="MedicationAdministration.status">
+      <path value="MedicationAdministration.status" />
+      <short value="MedicatieToedieningStatus" />
+    </element>
+    <element id="MedicationAdministration.patient">
+      <path value="MedicationAdministration.patient" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element id="MedicationAdministration.practitioner">
+      <path value="MedicationAdministration.practitioner" />
+      <short value="Toediener" />
+    </element>
+    <element id="MedicationAdministration.reasonNotGiven">
+      <path value="MedicationAdministration.reasonNotGiven" />
+      <short value="MedicatieToedieningRedenVanNietToedienen" />
+      <binding>
+        <strength value="required" />
+        <description value="RedenMedicatieafspraak" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.21--20160617112039" />
+          <display value="RedenMedicatieafspraak" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="MedicationAdministration.effectiveTime">
+      <path value="MedicationAdministration.effectiveTime[x]" />
+      <short value="ToedieningsDatumTijd" />
+    </element>
+    <element id="MedicationAdministration.medicationReference">
+      <path value="MedicationAdministration.medicationReference" />
+      <short value="ToedieningsProduct" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+      </type>
+    </element>
+    <element id="MedicationAdministration.note">
+      <path value="MedicationAdministration.note" />
+      <short value="Toelichting" />
+    </element>
+    <element id="MedicationAdministration.dosage">
+      <path value="MedicationAdministration.dosage" />
+      <short value="Dosering" />
+    </element>
+    <element id="MedicationAdministration.dosage.route">
+      <path value="MedicationAdministration.dosage.route" />
+      <short value="Toedieningsweg" />
+      <binding>
+        <strength value="required" />
+        <description value="VoorschriftToedieningswegCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4--20150401000000" />
+          <display value="VoorschriftToedieningswegCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="MedicationAdministration.dosage.quantity">
+      <path value="MedicationAdministration.dosage.quantity" />
+      <short value="ToegediendeHoeveelheid" />
+    </element>
+  </differential>
+</StructureDefinition>

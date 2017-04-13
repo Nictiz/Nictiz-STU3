@@ -1,0 +1,264 @@
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+  <id value="c0c53668-b4eb-46da-95bc-43cfaadd8fda"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2017-02-22T10:32:08.517+00:00"/>
+  </meta>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>DrugsGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. Drugs (or: narcotics, amphetamines, intoxicants, highs, hallucinogenics, illegal substances or dope) is a collective term for drugs and chemical substances with a more or less ‘drugging' (anesthetic, boosting and/or hallucinogenic) effect and which can lead to addiction. Drug [Online] Available at: nl.Wikipedia.org/wiki/drug [Accessed: 11 February 2015]. This information model describes the information asked of the patient about their drug use.</p>
+    </div>
+  </text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse"/>
+  <name value="ZIB DrugUse"/>
+  <status value="draft"/>
+  <date value="2017-01-06T14:29:34.8735644+01:00"/>
+  <publisher value="Nictiz"/>
+  <contact>
+    <name value="Nictiz"/>
+    <telecom>
+      <system value="email"/>
+      <value value="info@nictiz.nl"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description
+    value="DrugsGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;&#13;&#10;Drugs (or: narcotics, amphetamines, intoxicants, highs, hallucinogenics, illegal substances or dope) is a collective term for drugs and chemical substances with a more or less ‘drugging' (anesthetic, boosting and/or hallucinogenic) effect and which can lead to addiction. Drug [Online] Available at: nl.Wikipedia.org/wiki/drug [Accessed: 11 February 2015].&#13;&#10;&#13;&#10;This information model describes the information asked of the patient about their drug use."/>
+  <copyright value="CC0"/>
+  <mapping>
+    <identity value="zib-drugsgebruik"/>
+    <uri value="https://zibs.nl/wiki/DrugsGebruik(NL)"/>
+    <name value="Zorginformatiebouwsteen DrugsGebruik"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation"/>
+  <differential>
+    <element id="Observation">
+      <path value="Observation"/>
+      <short value="DrugUse"/>
+      <definition value="Root concept of the DrugUse information model. This concept contains all data elements of the DrugUse information model."/>
+      <alias value="DrugsGebruik"/>
+      <mapping>
+        <identity value="zib-drugsgebruik"/>
+        <map value="NL-CM:7.4.1"/>
+      </mapping>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code"/>
+      <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;."/>
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="228366006"/>
+          <display value="Finding related to drug misuse behaviour"/>
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <min value="1"/>
+    </element>
+    <element id="Observation.effectivePeriod">
+      <path value="Observation.effectivePeriod"/>
+      <type>
+        <code value="Period"/>
+      </type>
+    </element>
+    <element id="Observation.effectivePeriod.start">
+      <path value="Observation.effectivePeriod.start"/>
+      <short value="StartDate"/>
+      <definition value="The date on which the patient started using."/>
+      <alias value="StartDatum"/>
+      <mapping>
+        <identity value="zib-drugsgebruik"/>
+        <map value="NL-CM:7.4.6"/>
+      </mapping>
+    </element>
+    <element id="Observation.effectivePeriod.end">
+      <path value="Observation.effectivePeriod.end"/>
+      <short value="StopDate"/>
+      <definition value="The date on which the patient quit using&#13;&#10;If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time."/>
+      <alias value="StopDatum"/>
+      <mapping>
+        <identity value="zib-drugsgebruik"/>
+        <map value="NL-CM:7.4.7"/>
+      </mapping>
+    </element>
+    <element id="Observation.valueCodeableConcept">
+      <path value="Observation.valueCodeableConcept"/>
+      <short value="DrugUseStatus"/>
+      <definition value="Indication stating whether there was any drug use in the past or present."/>
+      <alias value="DrugGebruikStatus"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <description value="Indication stating whether there was any drug use in the past or present."/>
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.2--20150401000000"/>
+      </binding>
+      <mapping>
+        <identity value="zib-drugsgebruik"/>
+        <map value="NL-CM:7.4.3"/>
+      </mapping>
+    </element>
+    <element id="Observation.comments">
+      <path value="Observation.comments"/>
+      <short value="Explanation"/>
+      <definition value="Relevant comments on the drug use."/>
+      <alias value="Toelichting"/>
+      <mapping>
+        <identity value="zib-drugsgebruik"/>
+        <map value="NL-CM:7.4.9"/>
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="code.coding.code"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Observation.component.TypeOfDrugOrMedication">
+      <path value="Observation.component"/>
+      <sliceName value="TypeOfDrugOrMedication"/>
+      <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations."/>
+      <max value="1"/>
+    </element>
+    <element id="Observation.component.TypeOfDrugOrMedication.code">
+      <path value="Observation.component.code"/>
+      <definition value="Describes what was observed. Sometimes this is called the observation &quot;code&quot;."/>
+    </element>
+    <element id="Observation.component.TypeOfDrugOrMedication.code.coding">
+      <path value="Observation.component.code.coding"/>
+      <definition value="A reference to a code defined by a terminology system."/>
+    </element>
+    <element id="Observation.component.TypeOfDrugOrMedication.code.coding.system">
+      <path value="Observation.component.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://snomed.info/sct"/>
+    </element>
+    <element id="Observation.component.TypeOfDrugOrMedication.code.coding.code">
+      <path value="Observation.component.code.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="410942007"/>
+    </element>
+    <element id="Observation.component.TypeOfDrugOrMedication.code.coding.display">
+      <path value="Observation.component.code.coding.display"/>
+      <fixedString value="Drug or medicament"/>
+    </element>
+    <element id="Observation.component.TypeOfDrugOrMedication.valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept"/>
+      <short value="TypeOfDrugOrMedication"/>
+      <definition value="Type of drug used by the patient."/>
+      <alias value="DrugsOfGeneesmiddelSoort"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <description value="Type of drug used by the patient."/>
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.1--20150401000000"/>
+      </binding>
+      <mapping>
+        <identity value="zib-drugsgebruik"/>
+        <map value="NL-CM:7.4.2"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.RouteOfAdministration">
+      <path value="Observation.component"/>
+      <sliceName value="RouteOfAdministration"/>
+    </element>
+    <element id="Observation.component.RouteOfAdministration.code">
+      <path value="Observation.component.code"/>
+      <definition value="Describes what was observed. Sometimes this is called the observation &quot;code&quot;."/>
+    </element>
+    <element id="Observation.component.RouteOfAdministration.code.coding">
+      <path value="Observation.component.code.coding"/>
+      <definition value="A reference to a code defined by a terminology system."/>
+    </element>
+    <element id="Observation.component.RouteOfAdministration.code.coding.system">
+      <path value="Observation.component.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://snomed.info/sct"/>
+    </element>
+    <element id="Observation.component.RouteOfAdministration.code.coding.code">
+      <path value="Observation.component.code.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="410675002"/>
+    </element>
+    <element id="Observation.component.RouteOfAdministration.code.coding.display">
+      <path value="Observation.component.code.coding.display"/>
+      <fixedString value="Route of administration"/>
+    </element>
+    <element id="Observation.component.RouteOfAdministration.valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept"/>
+      <short value="RouteOfAdministration"/>
+      <definition value="The way the drugs are used."/>
+      <alias value="Toedieningsweg"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <description value="The way the drugs are used."/>
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3--20150401000000"/>
+      </binding>
+      <mapping>
+        <identity value="zib-drugsgebruik"/>
+        <map value="NL-CM:7.4.4"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.Amount">
+      <path value="Observation.component"/>
+      <sliceName value="Amount"/>
+    </element>
+    <element id="Observation.component.Amount.code">
+      <path value="Observation.component.code"/>
+      <definition value="Describes what was observed. Sometimes this is called the observation &quot;code&quot;."/>
+    </element>
+    <element id="Observation.component.Amount.code.coding">
+      <path value="Observation.component.code.coding"/>
+      <definition value="A reference to a code defined by a terminology system."/>
+    </element>
+    <element id="Observation.component.Amount.code.coding.system">
+      <path value="Observation.component.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://snomed.info/sct"/>
+    </element>
+    <element id="Observation.component.Amount.code.coding.code">
+      <path value="Observation.component.code.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="228390007"/>
+    </element>
+    <element id="Observation.component.Amount.code.coding.display">
+      <path value="Observation.component.code.coding.display"/>
+      <fixedString value="Frequency of drug misuse"/>
+    </element>
+    <element id="Observation.component.Amount.valueRatio">
+      <path value="Observation.component.valueRatio"/>
+      <short value="Amount"/>
+      <definition value="The number of units (pills, joints, shots etc.) per day, week, month or year or the frequency of use."/>
+      <alias value="Hoeveelheid"/>
+      <type>
+        <code value="Ratio"/>
+      </type>
+      <mapping>
+        <identity value="zib-drugsgebruik"/>
+        <map value="NL-CM:7.4.8"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.Amount.valueRatio.denominator">
+      <path value="Observation.component.valueRatio.denominator"/>
+      <short value="UnitOfTime"/>
+    </element>
+  </differential>
+</StructureDefinition>

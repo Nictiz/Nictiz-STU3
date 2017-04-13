@@ -1,0 +1,36 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+  <id value="224acf5c-a535-4292-9028-100ad287ad8b" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2016-10-31T17:16:20.396+00:00" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.6--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.9.5.6" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="VoorschriftToedieningswegCodelijst" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="G-Standaard Toedieningswegen (2.16.840.1.113883.2.4.4.9): Alle waarden" />
+  <copyright value="CC0" />
+  <expansion>
+    <identifier value="urn:uuid:a533cd15-55fb-48bb-a76f-34651d78c027" />
+    <timestamp value="2016-10-31T18:16:20.623+01:00" />
+    <total value="0" />
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.9" />
+    </contains>
+  </expansion>
+</ValueSet>

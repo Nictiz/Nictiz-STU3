@@ -1,0 +1,153 @@
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+  <id value="77dc0559-023b-4c4d-92e1-781f16acd33e" />
+  <meta>
+    <versionId value="4" />
+    <lastUpdated value="2016-12-12T16:58:13.365+00:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-AdministrationSchedule" />
+  <name value="MP9 Administration Schedule" />
+  <status value="draft" />
+  <date value="2016-12-12T16:58:13.365+00:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Timing datatype as defined by the Dutch Medication v9 project." />
+  <copyright value="CC0" />
+  <fhirVersion value="1.0.2" />
+  <kind value="primitive-type" />
+  <abstract value="false" />
+  <type value="Timing" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Timing" />
+  <differential>
+    <element id="Timing">
+      <path value="Timing" />
+    </element>
+    <element id="Timing.extension">
+      <path value="Timing.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Timing.extension.sequenceNumber">
+      <path value="Timing.extension" />
+      <sliceName value="sequenceNumber" />
+      <short value="dosage sequence number" />
+      <definition value="Optional Extensions Element - found in all resources." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dosage-sequence-number" />
+      </type>
+    </element>
+    <element id="Timing.event">
+      <path value="Timing.event" />
+      <short value="Toedientijd" />
+    </element>
+    <element id="Timing.repeat">
+      <path value="Timing.repeat" />
+      <short value="Herhaling" />
+    </element>
+    <element id="Timing.repeat.extension">
+      <path value="Timing.repeat.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Timing.repeat.extension.daysOfWeek">
+      <path value="Timing.repeat.extension" />
+      <sliceName value="daysOfWeek" />
+      <definition value="Optional Extensions Element - found in all resources." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-day-of-week" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="WeekdagenCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4--20150401000000" />
+          <display value="WeekdagenCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Timing.repeat.boundsQuantity">
+      <path value="Timing.repeat.boundsQuantity" />
+      <sliceName value="Doseerduur" />
+      <short value="Doseerduur" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Duration" />
+      </type>
+    </element>
+    <element id="Timing.repeat.frequency">
+      <path value="Timing.repeat.frequency" />
+      <sliceName value="FrequencyMinFixedValue" />
+      <short value="min / vaste waarde" />
+      <defaultValueInteger value="1" />
+    </element>
+    <element id="Timing.repeat.frequencyMax">
+      <path value="Timing.repeat.frequencyMax" />
+      <sliceName value="FrequencyMax" />
+    </element>
+    <element id="Timing.repeat.period">
+      <path value="Timing.repeat.period" />
+      <sliceName value="Interval" />
+    </element>
+    <element id="Timing.repeat.periodUnits">
+      <path value="Timing.repeat.periodUnits" />
+      <sliceName value="FrequencyTijdeenheid" />
+    </element>
+    <element id="Timing.repeat.when">
+      <path value="Timing.repeat.when" />
+      <sliceName value="Wanneer" />
+    </element>
+    <element id="Timing.repeat.when.extension">
+      <path value="Timing.repeat.when.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Timing.repeat.when.extension.whenSpecification">
+      <path value="Timing.repeat.when.extension" />
+      <sliceName value="when_specification" />
+      <short value="Defines a more specific value to a code. Especially use ful for FHIR's required ValueSets." />
+      <definition value="Defines a more specific value to a code. Especially useful for FHIR's required ValueSets. These extensions are primarily used on codes bound to a required value set, where you would like to use a more specific code than the codes in the bounded value set." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="DagdeelCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.5--20150401000000" />
+          <display value="DagdeelCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

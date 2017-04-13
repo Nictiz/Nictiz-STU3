@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../FHIR/Schemas/encounter.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Encounter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir">
+    <id value="example-contact2"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>ContactType</th>
+                        <th>StartDateTime</th>
+                        <th>EndDateTime</th>
+                        <th>Procedure</th>
+                        <th>HealthProfessional</th>
+                        <th>OrganizationType</th>
+                        <th>OrganizationName</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Inpatient</td>
+                        <td>16-08-2012</td>
+                        <td>19-08-2012</td>
+                        <td>Broken leg operation</td>
+                        <td>G.Z.M. de Wit</td>
+                        <td>Hospital</td>
+                        <td>St. Lucas Andreas Ziekenhuis</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <status value="finished"/>
+    <class value="inpatient"/>
+    <patient>
+        <reference value="Patient/example"/>
+        <display value="Jongeneel-de Haas"/>
+    </patient>
+    <participant>
+        <individual>
+            <reference value="Practitioner/example"/>
+            <display value="G.Z.M. de Wit"/>
+        </individual>
+    </participant>
+    <period>
+        <start value="2012-08-16"/>
+        <end value="2012-08-19"/>
+    </period>
+    <indication>
+        <reference value="Procedure/example"/>
+        <display value="Operatie been"/>
+    </indication>
+    <serviceProvider>
+        <reference value="Organization/example"/>
+        <display value="St. Lucas Andreas Ziekenhuis"/>
+    </serviceProvider>    
+</Encounter>

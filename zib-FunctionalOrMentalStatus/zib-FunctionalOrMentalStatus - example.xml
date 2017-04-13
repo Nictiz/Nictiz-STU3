@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/DSTU2/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/observation.xsd">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>StatusName</th>
+                        <th>StatusValue</th>
+                        <th>StatusDate</th>
+                        <th>MedicalAid</th>
+                        <th>Explanation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Shaving</td>
+                        <td>Difficulty shaving</td>
+                        <td>2015-02-23</td>
+                        <td>Medical Shaving Machine</td>
+                        <td>Everyday living activities are increasingly being affected by the patient's Rheumatoid arthritis</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus">
+        <valueReference>
+            <reference value="DeviceUseStatement/example"/>
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="29923002"/>
+            <display value="Shaving (procedure)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example"/>
+    </subject>
+    <effectivePeriod>
+        <start value="2015-02-23"/>
+    </effectivePeriod>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="284892005"/>
+            <display value="Difficulty shaving (finding)"/>
+        </coding>
+    </valueCodeableConcept>
+    <comments value="Everyday living activities are increasingly being affected by the patient's Rheumatoid arthritis"/>
+</Observation>

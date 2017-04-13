@@ -1,0 +1,102 @@
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+  <id value="3ccd3af5-98cd-4e9d-806e-7dde33f64cbb" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2017-02-22T10:32:09.079+00:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-PayerInsurance" />
+  <name value="ZIB PayerInsurance" />
+  <status value="draft" />
+  <date value="2017-01-16T17:02:59.6109232+01:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Base StructureDefinition for Coverage Resource&#13;&#10;" />
+  <copyright value="CC0" />
+  <fhirVersion value="1.0.2" />
+  <mapping>
+    <identity value="zib-betaler" />
+    <uri value="https://zibs.nl/wiki/Betaler(NL)" />
+    <name value="Zorginformatiebouwsteen Betaler" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Coverage" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Coverage" />
+  <differential>
+    <element id="Coverage">
+      <path value="Coverage" />
+    </element>
+    <element id="Coverage.issuer">
+      <path value="Coverage.issuer" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BetalerVerzekeraar" />
+      </type>
+    </element>
+    <element id="Coverage.period">
+      <path value="Coverage.period" />
+      <definition value="Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in force." />
+    </element>
+    <element id="Coverage.period.start">
+      <path value="Coverage.period.start" />
+      <short value="StartDateTime" />
+      <definition value="Date from which the insurance policy coverage applies." />
+      <alias value="BeginDatumTijd" />
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.13" />
+      </mapping>
+    </element>
+    <element id="Coverage.period.end">
+      <path value="Coverage.period.end" />
+      <short value="EndDateTime" />
+      <definition value="Date until which the insurance policy coverage applies.&#13;&#10;This item maps the ‘Expiry date’ on EHIC field 9." />
+      <alias value="EindDatumTijd" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.14" />
+      </mapping>
+    </element>
+    <element id="Coverage.type">
+      <path value="Coverage.type" />
+      <short value="InsuranceType" />
+      <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance" />
+      <alias value="VerzekeringsSoort" />
+      <min value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Type of insurance policy. Codes as returned in the Check for Right to Insurance." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.1.1.1--20150401000000" />
+          <display value="VerzekeringssoortCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.15" />
+      </mapping>
+    </element>
+    <element id="Coverage.identifier">
+      <path value="Coverage.identifier" />
+      <short value="InsurantNumber" />
+      <definition value="Number under which the insured person is registered at the insurance company&#13;&#10;This item maps the ‘Identification number of the card’ on EHIC field 8" />
+      <alias value="VerzekerdeNummer" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.6" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

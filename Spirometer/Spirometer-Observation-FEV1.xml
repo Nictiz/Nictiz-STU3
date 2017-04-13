@@ -1,0 +1,75 @@
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+  <id value="53f15c0a-a60f-49b8-a8e5-dc59aebce9dd" />
+  <meta>
+    <versionId value="4" />
+    <lastUpdated value="2017-01-31T15:59:06.31+00:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FEV1" />
+  <name value="Spirometer Observation FEV1" />
+  <status value="draft" />
+  <date value="2017-01-20T15:54:54.5764447+01:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <copyright value="CC0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <short value="code" />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <short value="coding" />
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="20150-9" />
+    </element>
+    <element id="Observation.code.coding.display">
+      <path value="Observation.code.coding.display" />
+      <fixedString value="FEV1 (forced expiratory volume in 1 second)" />
+    </element>
+    <element id="Observation.effectiveDateTime">
+      <path value="Observation.effectiveDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.valueQuantity">
+      <path value="Observation.valueQuantity" />
+      <min value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Observation.valueQuantity.value">
+      <path value="Observation.valueQuantity.value" />
+      <min value="1" />
+    </element>
+    <element id="Observation.valueQuantity.unit">
+      <path value="Observation.valueQuantity.unit" />
+      <min value="1" />
+      <fixedString value="L" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/Immunization.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Immunization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/immunization.xsd">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>ProductCode</th>
+                        <th>VaccinationDate</th>
+                        <th>DesiredDateForRevaccination</th>
+                        <th>Explanation</th>
+                        <th>Administrator</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>J07BC20 - Combinations</td>
+                        <td>2013-06-03</td>
+                        <td>2012-06-03</td>
+                        <td>Visit to Guetemala.</td>
+                        <td>H. de Vries</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination-DesiredDateForRevaccination">
+        <valueDateTime value="2014-06-03"/>
+    </extension>
+    <status value="completed"/>
+    <date value="2013-06-03"/>
+    <vaccineCode>
+        <coding>
+            <system value="oid:urn:2.16.840.1.113883.6.73"/>
+            <code value="J07BC20"/>
+            <display value="J07BC20 - Combinations"/>
+        </coding>
+    </vaccineCode>
+    <patient>
+        <reference value="Patient/example"/>
+    </patient>
+    <wasNotGiven value="false"/>
+    <reported value="true"/>
+    <performer>
+        <reference value="Practitioner/example"/>
+        <display value="H. de Vries"/>
+    </performer>
+    <note>
+        <text value="Visit to Guetemala."/>        
+    </note>
+</Immunization>

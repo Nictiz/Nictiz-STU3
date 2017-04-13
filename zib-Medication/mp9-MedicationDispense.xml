@@ -1,0 +1,126 @@
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+  <id value="3dace244-e5bf-4dd9-8ee4-12df8dd69a58" />
+  <meta>
+    <versionId value="7" />
+    <lastUpdated value="2016-12-12T16:50:34.796+00:00" />
+  </meta>
+  <url value="http://nictiz.nl/StructureDefinition/mp9-MedicationDispense" />
+  <name value="MP9 Medication Dispense" />
+  <status value="draft" />
+  <date value="2016-12-12T16:50:34.796+00:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value=" A MedicationDispense as defined by the Dutch Medication v9 project." />
+  <copyright value=" CC0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationDispense" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
+  <differential>
+    <element id="MedicationDispense">
+      <path value="MedicationDispense" />
+      <short value="Medicatieverstrekking"/>
+    </element>
+    <element id="MedicationDispense.extension">
+      <path value="MedicationDispense.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.extension.dispensingOrganization">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="dispensingOrganization" />
+      <short value="Verstrekker" />
+      <definition value="Optional Extensions Element - found in all resources." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dispensing-organization" />
+      </type>
+    </element>
+    <element id="MedicationDispense.extension.distributionForm">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="distributionForm" />
+      <short value="Distributievorm" />
+      <definition value="Optional Extensions Element - found in all resources." />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-distribution-form" />
+      </type>
+    </element>
+    <element id="MedicationDispense.extension.registrationDate">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="registrationDate" />
+      <short value="Aanschrijfdatum" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-dispense-registration-date" />
+      </type>
+    </element>
+    <element id="MedicationDispense.identifier">
+      <path value="MedicationDispense.identifier" />
+      <short value="Identificatie" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.authorizingPrescription">
+      <path value="MedicationDispense.authorizingPrescription" />
+      <short value="Relatie naar verstrekkingsverzoek" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispenseRequest" />
+      </type>
+    </element>
+    <element id="MedicationDispense.quantity">
+      <path value="MedicationDispense.quantity" />
+      <short value="verstrekte hoeveelheid" />
+    </element>
+    <element id="MedicationDispense.daysSupply">
+      <path value="MedicationDispense.daysSupply" />
+      <short value="VerbruiksDuur" />
+    </element>
+    <element id="MedicationDispense.medicationReference">
+      <path value="MedicationDispense.medicationReference" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+      </type>
+    </element>
+    <element id="MedicationDispense.whenHandedOver">
+      <path value="MedicationDispense.whenHandedOver" />
+      <short value="datum" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.destination">
+      <path value="MedicationDispense.destination" />
+      <short value="Afleverlocatie" />
+    </element>
+    <element id="MedicationDispense.note">
+      <path value="MedicationDispense.note" />
+      <short value="toelichting" />
+    </element>
+    <element id="MedicationDispense.dosageInstruction.route">
+      <path value="MedicationDispense.dosageInstruction.route" />
+      <binding>
+        <strength value="required" />
+        <description value="VoorschriftToedieningswegCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4--20150401000000" />
+          <display value="VoorschriftToedieningswegCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

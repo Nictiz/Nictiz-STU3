@@ -1,0 +1,240 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+  <id value="Nictiz-21684011138832431160402825--2015-04-01T000000" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2016-10-31T17:12:21.184+00:00" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.5--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.5" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="SymptoomCodelijst" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <copyright value="CC0" />
+  <expansion>
+    <identifier value="urn:uuid:9bae63cf-d493-41e5-9464-e2bdcba8c5fd" />
+    <timestamp value="2016-10-31T18:12:21.402+01:00" />
+    <total value="16" />
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Anafylaxie" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="39579001" />
+      <display value="Anaphylaxis" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Angio-oedeem" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="41291007" />
+      <display value="Angioedema" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Overgevoeligheidsreactie van de bovenste luchtwegen" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="490008" />
+      <display value="Upper respiratory tract hypersensitivity reaction" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Kortademigheid" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="267036007" />
+      <display value="Dyspnea" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Bronchospasme" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="4386001" />
+      <display value="Bronchospasm" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Urticaria" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="126485001" />
+      <display value="Urticaria (hives)" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Contactdermatitis" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="40275004" />
+      <display value="Contact dermatitis" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Jeuk" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="418363000" />
+      <display value="Itching of skin" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Exantheem" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="271807003" />
+      <display value="Eruption of skin" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Allergische conjunctivitis" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="47346002" />
+      <display value="Allergic conjunctivitis" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Toxische epidermale necrolyse" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="23067006" />
+      <display value="TEN - Toxic epidermal necrolysis" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Misselijk en braken" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="16932000" />
+      <display value="Nausea and vomiting" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Diarree" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="62315008" />
+      <display value="Diarrhoea" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Door medicatie veroorzaakte erythema multiforme" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="297942002" />
+      <display value="Drug-induced erythema multiforme" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Koorts" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="386661006" />
+      <display value="Fever" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Overig" />
+        </extension>
+      </extension>
+      <system value="http://hl7.org/fhir/v3/NullFlavor" />
+      <code value="OTH" />
+      <display value="Overig" />
+    </contains>
+  </expansion>
+</ValueSet>

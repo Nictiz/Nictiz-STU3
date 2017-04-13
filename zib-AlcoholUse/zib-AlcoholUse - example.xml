@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/DSTU2/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/observation.xsd">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>AlcholIntakeStatus</th>
+                        <th>Explanation</th>
+                        <th>StartDate</th>
+                        <th>StopDate</th>
+                        <th>AlcoholIntakeQuantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ex-drinker (finding)</td>
+                        <td>Patient was a binge drinker</td>
+                        <td>2002-04-08</td>
+                        <td>2004-02-01</td>
+                        <td>32 units per week</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="228273003"/>
+            <display value="Finding related to alcohol drinking behavior"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example"/>
+    </subject>
+    <effectivePeriod>
+        <start value="2002-04-08"/>
+        <end value="2004-02-01"/>
+    </effectivePeriod>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="82581004"/>
+            <display value="Ex-drinker (finding)"/>
+        </coding>
+    </valueCodeableConcept>
+    <comments value="Patient was a binge drinker"/>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="160573003"/>
+                <display value="Alcohol intake"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="32"/>
+            <unit value="glasses/week"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="{glasses}/wk"/>
+        </valueQuantity>
+    </component>
+</Observation>

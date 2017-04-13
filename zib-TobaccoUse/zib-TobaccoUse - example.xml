@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/DSTU2/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/observation.xsd">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>TypeOfTobaccoUsed</th>
+                        <th>TobaccoUseStatus</th>
+                        <th>StartDate</th>
+                        <th>StopDate</th>
+                        <th>Amount</th>
+                        <th>PackYears</th>
+                        <th>Explanation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cigarette smoker</td>
+                        <td>Occasional cigarette smoker</td>
+                        <td>2002-04-08</td>
+                        <td>2004-02-01</td>
+                        <td>5 packs per week</td>
+                        <td>3</td>
+                        <td>Tries to stop. Partner smokes as well.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="365980008"/>
+            <display value="Finding of tobacco use and exposure"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example"/>
+    </subject>
+    <effectivePeriod>
+        <start value="2002-04-08"/>
+        <end value="2004-02-01"/>
+    </effectivePeriod>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="230059006"/>
+            <display value="Occasional cigarette smoker (finding)"/>
+        </coding>
+    </valueCodeableConcept>
+    <comments value="Tries to stop. Partner smokes as well."/>
+    <!-- Dutch: SoortTabakGebruik  -->
+    <!-- Terminologie issue: Snowmed 266918002 contains both amount and type.  In the ZIB this is devided into 2 components. -->
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="266918002"/>
+                <display value="Amount and type of tobacco smoked"/>
+            </coding>   
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="65568007"/>
+                <display value="Cigarette smoker (finding)"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <!-- Dutch: Hoeveelheid -->
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="266918002"/>
+                <display value="Tobacco smoking consumption"/>
+            </coding>
+        </code>
+        <valueRatio>
+            <numerator>
+                <value value="5"/>
+                <!-- For review: is this unit allowed? -->
+                <unit value="cigarette packs"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="week"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="WK"/>
+            </denominator>
+        </valueRatio>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="315609007"/>
+                <display value="Pack years"/>
+            </coding>
+        </code>
+       <valueQuantity>
+           <value value="3"/>
+           <unit value="year"/>
+       </valueQuantity>
+    </component>
+</Observation>

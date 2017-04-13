@@ -1,0 +1,166 @@
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+  <id value="6000e494-955a-4ac8-8729-a80b7bfcfa1e" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2017-02-22T10:32:08.093+00:00" />
+  </meta>
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Alert as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. An alert describes a clinical or administrative fact brought to the attention of the users of the clinical systems to be taken into account when shaping diagnostic and therapeutic policy or in dealing with the patient, usually because of a safety risk. Disorders that describe the body’s sensitivity to a substance which results in a specific physiological reaction after being exposed to that substance are referred to as allergies. These are described in a separate information
+        model. Warnings for non-allergic disorders can concern: - A disorder (condition or diagnosis which can be considered as a contraindication for the use of groups of medication or undergoing a certain type of therapy), such as pregnancy or long QT syndrome - Impaired functioning of an organ system (heart failure, impaired liver or kidney function, weakened immune system) - Risk of spreading certain microorganisms (multi-resistant bacteria, tubercle bacilli, HIV, HBV, Ebola virus) - Other risks</p>
+    </div>
+  </text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Alert" />
+  <name value="ZIB Alert" />
+  <status value="draft" />
+  <date value="2017-01-13T14:12:08.6186301+01:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description
+    value="Alert as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;&#13;&#10;An alert describes a clinical or administrative fact brought to the attention of the users of the clinical systems to be taken into account when shaping diagnostic and therapeutic policy or in dealing with the patient, usually because of a safety risk. &#13;&#10;Disorders that describe the body’s sensitivity to a substance which results in a specific physiological reaction after being exposed to that substance are referred to as allergies. These are described in a separate information model. &#13;&#10;Warnings for non-allergic disorders can concern:&#13;&#10;- A disorder (condition or diagnosis which can be considered as a contraindication for the use of groups of medication or undergoing a certain type of therapy), such as pregnancy or long QT syndrome&#13;&#10;- Impaired functioning of an organ system (heart failure, impaired liver or kidney function, weakened immune system) &#13;&#10;- Risk of spreading certain microorganisms (multi-resistant bacteria, tubercle bacilli, HIV, HBV, Ebola virus)&#13;&#10;- Other risks" />
+  <copyright value="CC0" />
+  <mapping>
+    <identity value="zib-alert" />
+    <uri value="https://zibs.nl/wiki/Alert(NL)" />
+    <name value="Zorginformatiebouwsteen Alert" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Flag" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Flag" />
+  <differential>
+    <element id="Flag">
+      <path value="Flag" />
+      <short value="Alert" />
+      <mapping>
+        <identity value="zib-alert" />
+        <map value="NL-CM:8.3.1" />
+      </mapping>
+    </element>
+    <element id="Flag.extension">
+      <path value="Flag.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Flag.extension.ConcernReference">
+      <path value="Flag.extension" />
+      <sliceName value="ConcernReference" />
+      <short value="Condition" />
+      <definition
+        value="The patient’s health problem or condition that is the subject of the alert. This could involve a patient’s problem, condition or diagnosis that is seen as a contraindication in prescribing medication or which has to be taken into account when shaping diagnostic and therapeutic policy. This can be in the patient’s own interest, or it can involve a problem or disorder that can make the patient a risk to their surroundings, such as an infection hazard. These are references to conditions included on the patient’s problem list.&#13;&#10;If there is a contraindication, the code system G-Standard Contraindications (Table 40) from the ProblemNameCodeList of the ConcernTransfer information model should be used." />
+      <alias value="Conditie" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/flag-detail" />
+      </type>
+      <mapping>
+        <identity value="zib-alert" />
+        <map value="NL-CM:8.3.3" />
+      </mapping>
+    </element>
+    <element id="Flag.category">
+      <path value="Flag.category" />
+      <short value="AlertType" />
+      <definition value="Indicates the type of alert, meaning a rough description of the cause or origin of the warning." />
+      <alias value="AlertType" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Indicates the type of alert, meaning a rough description of the cause or origin of the warning." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.1--20150401000000" />
+          <display value="AlertTypeCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-alert" />
+        <map value="NL-CM:8.3.6" />
+      </mapping>
+    </element>
+    <element id="Flag.period">
+      <path value="Flag.period" />
+      <short value="Time period when flag is active" />
+    </element>
+    <element id="Flag.period.start">
+      <path value="Flag.period.start" />
+      <short value="StartDateTime" />
+      <definition value="The date and time at which the described condition was entered as a warning.&#13;&#10;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year)." />
+      <alias value="BeginDatumTijd" />
+      <mapping>
+        <identity value="zib-alert" />
+        <map value="NL-CM:8.3.5" />
+      </mapping>
+    </element>
+    <element id="Flag.subject">
+      <path value="Flag.subject" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+    <element id="Flag.encounter">
+      <path value="Flag.encounter" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+      </type>
+    </element>
+    <element id="Flag.author">
+      <path value="Flag.author" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+    <element id="Flag.code">
+      <path value="Flag.code" />
+      <short value="AlertName" />
+      <definition value="A warning, other than a condition or problem. For example, a patient can be given an ‘Aggressive patient' alert.&#13;&#10;The warning can be entered in code (there are codes for frequently used alerts), but seeing the dynamic nature of the warnings cf. SARS and Ebola, these alerts will often be entered as free text." />
+      <alias value="AlertNaam" />
+      <binding>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.2--20150401000000" />
+          <display value="AlertNaamCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-alert" />
+        <map value=" NL-CM:8.3.4" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

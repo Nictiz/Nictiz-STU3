@@ -1,0 +1,110 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+  <id value="1083c0fa-ab8b-4b59-a554-c4ddb57e7947" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2017-01-26T14:28:49.102+00:00" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.1--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.13.1.1" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="ResultaatTypeCodelijst" />
+  <status value="active" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <copyright value="CC0" />
+  <expansion>
+    <identifier value="urn:uuid:91ac5a84-f566-4d7c-a476-971a5208d047" />
+    <timestamp value="2017-01-26T15:28:49.299+01:00" />
+    <total value="6" />
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Hematologie" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="252275004" />
+      <display value="Hematology" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Klinische chemie" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="275711006" />
+      <display value="Chemistry" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Serologie/ immunologie" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="68793005" />
+      <display value="Serology" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Virologie" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="395124008" />
+      <display value="Virology" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Toxicologie" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="69200006" />
+      <display value="Toxicology" />
+    </contains>
+    <contains>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/concept-designation-extension">
+        <extension url="language">
+          <valueCode value="nl-NL" />
+        </extension>
+        <extension url="value">
+          <valueString value="Microbiologie" />
+        </extension>
+      </extension>
+      <system value="http://snomed.info/sct" />
+      <code value="19851009" />
+      <display value="Microbiology" />
+    </contains>
+  </expansion>
+</ValueSet>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Coverage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/Coverage.xsd">
+    <id value="example"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-PayerInsurance"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>IdentificationNumber</th>
+                        <th>OrganizationName</th>
+                        <th>InsurantNumber</th>
+                        <td>StartDateTime</td>
+                        <td>EndDateTime</td>
+                        <td>InsuranceType</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3332</td>
+                        <td>Menzis Zorgverzekeraar N.V.</td>
+                        <td>12345678</td>
+                        <td>01-01-2012</td>
+                        <td>31-01-2013</td>
+                        <td>Basis verzekerd</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <issuer>
+        <!-- Reference to http://nictiz.nl/fhir/StructureDefinition/zib-PayerInsuranceCompany -->
+        <reference value="Organization/example"/>
+        <display value="Menzis Zorgverzekeraar N.V"/>
+    </issuer>
+    <period>
+        <start value="2012-01-01"/>
+        <end value="2013-01-31"/>
+    </period>
+    <type>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1"/>
+        <code value="B"/>
+        <display value="Basis"/>
+    </type>
+    <!-- System needed? -->
+    <identifier>
+        <value value="12345678"/>
+    </identifier>
+</Coverage>
