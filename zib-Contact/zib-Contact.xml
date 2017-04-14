@@ -66,6 +66,7 @@
       <type>
         <code value="Reference"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
     </element>
     <element id="Encounter.participant">
@@ -80,10 +81,12 @@
       <type>
         <code value="Reference"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <type>
         <code value="Reference"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <mapping>
         <identity value="zib-contact"/>
@@ -139,10 +142,12 @@
       <type>
         <code value="Reference"/>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
       </type>
       <type>
         <code value="Reference"/>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
       </type>
       <mapping>
         <identity value="zib-contact"/>
@@ -157,6 +162,17 @@
       <type>
         <code value="Reference"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
       </type>
       <mapping>
         <identity value="zib-contact"/>
