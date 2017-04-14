@@ -193,6 +193,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <mapping>
         <identity value="zib-vaccinatie" />
@@ -204,6 +205,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
     </element>
     <element id="Immunization.encounter">
@@ -211,6 +213,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
       </type>
     </element>
     <element id="Immunization.manufacturer">
@@ -218,6 +221,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
     <element id="Immunization.doseQuantity">
