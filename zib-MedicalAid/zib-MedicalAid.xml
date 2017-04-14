@@ -163,8 +163,15 @@
         <map value="NL-CM:10.1.7" />
       </mapping>
     </element>
-    <element id="DeviceUseStatement.notes">
-      <path value="DeviceUseStatement.notes" />
+    <element id="DeviceUseStatement.subject">
+      <path value="DeviceUseStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element id="DeviceUseStatement.note">
+      <path value="DeviceUseStatement.note" />
       <short value="Explanation" />
       <definition value="Comment about use or information on the medical aid used." />
       <alias value="Toelichting" />
@@ -172,13 +179,6 @@
         <identity value="zib-medischhulpmiddel" />
         <map value="NL-CM:10.1.10" />
       </mapping>
-    </element>
-    <element id="DeviceUseStatement.subject">
-      <path value="DeviceUseStatement.subject" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
     </element>
   </differential>
 </StructureDefinition>
