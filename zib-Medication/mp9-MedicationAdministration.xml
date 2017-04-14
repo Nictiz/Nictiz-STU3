@@ -33,15 +33,19 @@
       <path value="MedicationAdministration.status" />
       <short value="MedicatieToedieningStatus" />
     </element>
-    <element id="MedicationAdministration.patient">
-      <path value="MedicationAdministration.patient" />
+    <element id="MedicationAdministration.subject">
+      <path value="MedicationAdministration.subject" />
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
-    <element id="MedicationAdministration.practitioner">
-      <path value="MedicationAdministration.practitioner" />
+    <element id="MedicationAdministration.effective">
+      <path value="MedicationAdministration.effective[x]" />
+      <short value="ToedieningsDatumTijd" />
+    </element>
+    <element id="MedicationAdministration.performer">
+      <path value="MedicationAdministration.performer" />
       <short value="Toediener" />
     </element>
     <element id="MedicationAdministration.reasonNotGiven">
@@ -55,10 +59,6 @@
           <display value="RedenMedicatieafspraak" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="MedicationAdministration.effectiveTime">
-      <path value="MedicationAdministration.effectiveTime[x]" />
-      <short value="ToedieningsDatumTijd" />
     </element>
     <element id="MedicationAdministration.medicationReference">
       <path value="MedicationAdministration.medicationReference" />
@@ -88,8 +88,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="MedicationAdministration.dosage.quantity">
-      <path value="MedicationAdministration.dosage.quantity" />
+    <element id="MedicationAdministration.dosage.dose">
+      <path value="MedicationAdministration.dosage.dose" />
       <short value="ToegediendeHoeveelheid" />
     </element>
   </differential>

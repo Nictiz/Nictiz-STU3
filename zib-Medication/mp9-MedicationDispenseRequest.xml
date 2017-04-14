@@ -23,40 +23,75 @@
   <fhirVersion value="3.0.0" />
   <kind value="resource" />
   <abstract value="false" />
-  <type value="MedicationOrder" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationOrder" />
+  <type value="MedicationRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
   <differential>
-    <element id="MedicationOrder">
-      <path value="MedicationOrder" />
+    <element id="MedicationRequest">
+      <path value="MedicationRequest" />
       <short value="Medicatieverstrekkingsverzoek"/>
     </element>
-    <element id="MedicationOrder.identifier">
-      <path value="MedicationOrder.identifier" />
+    <element id="MedicationRequest.identifier">
+      <path value="MedicationRequest.identifier" />
       <short value="Identificatie" />
     </element>
-    <element id="MedicationOrder.dateWritten">
-      <path value="MedicationOrder.dateWritten" />
+    <element id="MedicationRequest.medication">
+      <path value="MedicationRequest.medication[x]" />
+      <short value="Te verstrekken geneesmiddel" />
+    </element>
+    <element id="MedicationRequest.subject">
+      <path value="MedicationRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="MedicationRequest.authoredOn">
+      <path value="MedicationRequest.authoredOn" />
       <short value="Datum" />
     </element>
-    <element id="MedicationOrder.prescriber">
-      <path value="MedicationOrder.prescriber" />
-      <short value=" Auteur" />
+    <element id="MedicationRequest.requester">
+      <path value="MedicationRequest.requester" />
+      <short value="auteur" />
     </element>
-    <element id="MedicationOrder.note">
-      <path value="MedicationOrder.note" />
+    <element id="MedicationRequest.requester.agent">
+      <path value="MedicationRequest.requester.agent" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+    </element>
+    <element id="MedicationRequest.note">
+      <path value="MedicationRequest.note" />
       <short value="Toelichting" />
       <fixedString value="Toelichting" />
     </element>
-    <element id="MedicationOrder.medication">
-      <path value="MedicationOrder.medication[x]" />
-      <short value="Te verstrekken geneesmiddel" />
-    </element>
-    <element id="MedicationOrder.dispenseRequest">
-      <path value="MedicationOrder.dispenseRequest" />
+    <element id="MedicationRequest.dispenseRequest">
+      <path value="MedicationRequest.dispenseRequest" />
       <short value="verstrekking" />
     </element>
-    <element id="MedicationOrder.dispenseRequest.extension">
-      <path value="MedicationOrder.dispenseRequest.extension" />
+    <element id="MedicationRequest.dispenseRequest.extension">
+      <path value="MedicationRequest.dispenseRequest.extension" />
       <slicing>
         <discriminator>
           <type value="value"/>
@@ -65,8 +100,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationOrder.dispenseRequest.extension.dispenseLocation">
-      <path value="MedicationOrder.dispenseRequest.extension" />
+    <element id="MedicationRequest.dispenseRequest.extension.dispenseLocation">
+      <path value="MedicationRequest.dispenseRequest.extension" />
       <sliceName value="dispenseLocation" />
       <short value="Afleverlocatie" />
       <definition value="Optional Extensions Element - found in all resources." />
@@ -76,8 +111,8 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dispense-location" />
       </type>
     </element>
-    <element id="MedicationOrder.dispenseRequest.extension.intendedDispenser">
-      <path value="MedicationOrder.dispenseRequest.extension" />
+    <element id="MedicationRequest.dispenseRequest.extension.intendedDispenser">
+      <path value="MedicationRequest.dispenseRequest.extension" />
       <sliceName value="intendedDispenser" />
       <short value="Beoogdverstrekker" />
       <definition value="Optional Extensions Element - found in all resources." />
@@ -87,24 +122,24 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dispensing-organization" />
       </type>
     </element>
-    <element id="MedicationOrder.dispenseRequest.validityPeriod.start">
-      <path value="MedicationOrder.dispenseRequest.validityPeriod.start" />
+    <element id="MedicationRequest.dispenseRequest.validityPeriod.start">
+      <path value="MedicationRequest.dispenseRequest.validityPeriod.start" />
       <short value="Ingangsdatum" />
     </element>
-    <element id="MedicationOrder.dispenseRequest.validityPeriod.end">
-      <path value="MedicationOrder.dispenseRequest.validityPeriod.end" />
+    <element id="MedicationRequest.dispenseRequest.validityPeriod.end">
+      <path value="MedicationRequest.dispenseRequest.validityPeriod.end" />
       <short value="Einddatum" />
     </element>
-    <element id="MedicationOrder.dispenseRequest.numberOfRepeatsAllowed">
-      <path value="MedicationOrder.dispenseRequest.numberOfRepeatsAllowed" />
+    <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
+      <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" />
       <short value="Aantal herhalingen" />
     </element>
-    <element id="MedicationOrder.dispenseRequest.quantity">
-      <path value="MedicationOrder.dispenseRequest.quantity" />
+    <element id="MedicationRequest.dispenseRequest.quantity">
+      <path value="MedicationRequest.dispenseRequest.quantity" />
       <short value="Te verstrekken hoeveelheid" />
     </element>
-    <element id="MedicationOrder.dispenseRequest.expectedSupplyDuration">
-      <path value="MedicationOrder.dispenseRequest.expectedSupplyDuration" />
+    <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">
+      <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration" />
       <short value="Duur" />
     </element>
   </differential>

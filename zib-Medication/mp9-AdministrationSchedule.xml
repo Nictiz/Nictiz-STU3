@@ -88,13 +88,11 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Timing.repeat.boundsQuantity">
-      <path value="Timing.repeat.boundsQuantity" />
-      <sliceName value="Doseerduur" />
+    <element id="Timing.repeat.bounds">
+      <path value="Timing.repeat.bounds[x]" />
       <short value="Doseerduur" />
       <type>
-        <code value="Quantity" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Duration" />
+        <code value="Duration" />
       </type>
     </element>
     <element id="Timing.repeat.frequency">
@@ -111,8 +109,8 @@
       <path value="Timing.repeat.period" />
       <sliceName value="Interval" />
     </element>
-    <element id="Timing.repeat.periodUnits">
-      <path value="Timing.repeat.periodUnits" />
+    <element id="Timing.repeat.periodUnit">
+      <path value="Timing.repeat.periodUnit" />
       <sliceName value="FrequencyTijdeenheid" />
     </element>
     <element id="Timing.repeat.when">

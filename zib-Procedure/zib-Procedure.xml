@@ -144,7 +144,7 @@
       <slicing>
         <discriminator>
           <type value="profile"/>
-          <path value="url"/>
+          <path value="reference"/>
         </discriminator>
         <rules value="open" />
       </slicing>

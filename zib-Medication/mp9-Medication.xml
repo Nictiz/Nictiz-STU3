@@ -147,12 +147,8 @@
       <path value="Medication.code.text" />
       <short value="ProductNaam" />
     </element>
-    <element id="Medication.product">
-      <path value="Medication.product" />
-      <short value="Product" />
-    </element>
-    <element id="Medication.product.form">
-      <path value="Medication.product.form" />
+    <element id="Medication.form">
+      <path value="Medication.form" />
       <short value="FarmaceutischeVorm" />
       <binding>
         <strength value="required" />
@@ -163,22 +159,21 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.product.ingredient">
-      <path value="Medication.product.ingredient" />
-      <name value="Ingredient" />
+    <element id="Medication.ingredient">
+      <path value="Medication.ingredient" />
+      <short value="Ingredient" />
       <min value="1" />
     </element>
-    <element id="Medication.product.ingredient.item">
-      <path value="Medication.product.ingredient.item" />
+    <element id="Medication.ingredient.item">
+      <path value="Medication.ingredient.item" />
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-ingredient" />
       </type>
     </element>
-    <element id="Medication.product.ingredient.amount">
-      <path value="Medication.product.ingredient.amount" />
-      <name value="Sterkte" />
-      <short value=" Hoeveelheid ingrediënt" />
+    <element id="Medication.ingredient.amount">
+      <path value="Medication.ingredient.amount" />
+      <short value="Hoeveelheid ingrediënt" />
       <min value="1" />
     </element>
   </differential>

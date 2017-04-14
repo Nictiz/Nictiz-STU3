@@ -125,7 +125,7 @@
     </element>
     <element id="Substance.code.coding.ATC">
       <path value="Substance.code.coding" />
-      <name value="ATC" />
+      <sliceName value="IngredientCodeATCCodelijst" />
       <max value="1" />
       <binding>
         <strength value="required" />
@@ -138,7 +138,7 @@
     </element>
     <element id="Substance.code.coding.ZI">
       <path value="Substance.code.coding" />
-      <name value="ZI" />
+      <sliceName value="IngredientCodeZICodelijst" />
       <max value="1" />
       <binding>
         <strength value="required" />

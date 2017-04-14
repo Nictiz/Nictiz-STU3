@@ -106,15 +106,15 @@
       <path value="MedicationDispense.status" />
       <short value="StopType (on-hold | stopped)" />
     </element>
-    <element id="MedicationDispense.patient">
-      <path value="MedicationDispense.patient" />
+    <element id="MedicationDispense.subject">
+      <path value="MedicationDispense.subject" />
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
-    <element id="MedicationDispense.dispenser">
-      <path value="MedicationDispense.dispenser" />
+    <element id="MedicationDispense.performer">
+      <path value="MedicationDispense.performer" />
       <short value="Verstrekker" />
     </element>
     <element id="MedicationDispense.medicationReference">
@@ -137,8 +137,8 @@
       <path value="MedicationDispense.dosageInstruction.text" />
       <short value="Omschrijving" />
     </element>
-    <element id="MedicationDispense.dosageInstruction.additionalInstructions">
-      <path value="MedicationDispense.dosageInstruction.additionalInstructions" />
+    <element id="MedicationDispense.dosageInstruction.additionalInstruction">
+      <path value="MedicationDispense.dosageInstruction.additionalInstruction" />
       <short value="Aanvullende Informatie" />
     </element>
     <element id="MedicationDispense.dosageInstruction.timing">
