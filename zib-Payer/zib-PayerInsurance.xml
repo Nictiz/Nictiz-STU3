@@ -20,7 +20,7 @@
   </contact>
   <description value="Base StructureDefinition for Coverage Resource&#13;&#10;" />
   <copyright value="CC0" />
-  <fhirVersion value="1.0.2" />
+  <fhirVersion value="3.0.0" />
   <mapping>
     <identity value="zib-betaler" />
     <uri value="https://zibs.nl/wiki/Betaler(NL)" />

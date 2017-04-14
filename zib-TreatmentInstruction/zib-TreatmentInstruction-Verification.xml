@@ -27,7 +27,7 @@
   <description value="Extenstion to the CarePlan, which is used for the 'TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0,  to provide information on the verification of the treatment instruction.&#13;&#10;" />
   <purpose value="Need to provide infromation on the possible verification of the treatment instruction given by the patient." />
   <copyright value="CC0" />
-  <fhirVersion value="1.0.2" />
+  <fhirVersion value="3.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />

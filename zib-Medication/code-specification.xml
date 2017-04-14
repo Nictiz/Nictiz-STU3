@@ -20,7 +20,7 @@
   </contact>
   <description value="Provides the specific CBB code for a FHIR element that has a required binding to a FHIR ValueSet." />
   <copyright value="CC0" />
-  <fhirVersion value="1.0.2" />
+  <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="resource" />

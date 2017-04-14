@@ -20,7 +20,7 @@
   </contact>
   <description value="A LaboratoryTestResult as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.2" />
   <copyright value="CC0" />
-  <fhirVersion value="1.0.2" />
+  <fhirVersion value="3.0.0" />
   <mapping>
     <identity value="zib-overdrachtlaboratoriumuitslag" />
     <uri value="https://zibs.nl/wiki/OverdrachtLaboratoriumUitslag(NL)" />

@@ -26,7 +26,7 @@
   </contact>
   <description value="FunctioneleOfMentaleStatus as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;The functional or mental status provides insight into the patient’s functional and mental limitations." />
   <copyright value="CC0" />
-  <fhirVersion value="1.0.2" />
+  <fhirVersion value="3.0.0" />
   <mapping>
     <identity value="zib-functioneleofmentalestatus" />
     <uri value="https://zibs.nl/wiki/FunctioneleOfMentaleStatus(NL)" />

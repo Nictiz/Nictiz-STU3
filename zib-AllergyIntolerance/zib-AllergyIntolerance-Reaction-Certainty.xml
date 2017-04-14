@@ -20,7 +20,7 @@
   </contact>
   <description value="Indication of the probability that the substance described in the ‘SpecificSubstance' concept caused the reaction." />
   <copyright value="CC0" />
-  <fhirVersion value="1.0.2" />
+  <fhirVersion value="3.0.0" />
   <mapping>
     <identity value="zib-allergieintolerantie" />
     <uri value="https://zibs.nl/wiki/AllergieIntolerantie(NL)" />
