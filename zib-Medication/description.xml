@@ -25,7 +25,7 @@
   <abstract value="false" />
   <contextType value="resource" />
   <context value="Medication" />
-  <context value="MedicationOrder" />
+  <context value="MedicationRequest" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <differential>
