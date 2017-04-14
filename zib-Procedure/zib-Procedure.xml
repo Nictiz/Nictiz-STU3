@@ -71,17 +71,6 @@
         <map value="NL-CM:14.1.10" />
       </mapping>
     </element>
-    <element id="Procedure.subject">
-      <path value="Procedure.subject" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Group" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
-    </element>
     <element id="Procedure.code">
       <path value="Procedure.code" />
       <short value="ProcedureType" />
@@ -112,50 +101,41 @@
       <path value="Procedure.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="Procedure.bodySite">
-      <path value="Procedure.bodySite" />
-      <short value="AnatomicalLocationOfTheProcedure" />
-      <definition value="Anatomical location which is the focus of the procedure." />
-      <binding>
-        <strength value="extensible" />
-        <description value="Anatomical location which is the focus of the procedure." />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.1.1--20150401000000" />
-          <display value="VerrichtingAnatomischeLocatieCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtverrichting" />
-        <map value="NL-CM:14.1.8" />
-      </mapping>
-    </element>
-    <element id="Procedure.bodySite.coding">
-      <path value="Procedure.bodySite.coding" />
-      <definition value="A reference to a code defined by a terminology system." />
-    </element>
-    <element id="Procedure.bodySite.coding.system">
-      <path value="Procedure.bodySite.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Procedure.bodySite.coding.code">
-      <path value="Procedure.bodySite.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="Procedure.reason">
-      <path value="Procedure.reason[x]" />
-      <short value="Indication::Problem" />
-      <alias value="Problem" />
-      <alias value="Indication" />
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
+    </element>
+    <element id="Procedure.performedPeriod">
+      <path value="Procedure.performedPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Procedure.performedPeriod.start">
+      <path value="Procedure.performedPeriod.start" />
+      <short value="ProcedureStartDate" />
+      <definition value="The start date (and if possible start time) of the procedure. A ‘vague’ date, such as only the year, is permitted.&#13;&#10;The element offers the option to indicate the start of the period of a series of related procedures." />
+      <alias value="VerrichtingStartDatum" />
       <mapping>
         <identity value="zib-overdrachtverrichting" />
-        <map value="CM:14.1.9" />
+        <map value=" NL-CM:14.1.2" />
+      </mapping>
+    </element>
+    <element id="Procedure.performedPeriod.end">
+      <path value="Procedure.performedPeriod.end" />
+      <short value="ProcedureEndDate" />
+      <definition value="The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.&#13;&#10;The element offers the option to indicate the end of the period of a series of related procedures." />
+      <alias value="VerrichtingEindDatum" />
+      <mapping>
+        <identity value="zib-overdrachtverrichting" />
+        <map value="NL-CM:14.1.3" />
       </mapping>
     </element>
     <element id="Procedure.performer">
@@ -211,30 +191,50 @@
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
     </element>
-    <element id="Procedure.performedPeriod">
-      <path value="Procedure.performedPeriod" />
-      <type>
-        <code value="Period" />
-      </type>
-    </element>
-    <element id="Procedure.performedPeriod.start">
-      <path value="Procedure.performedPeriod.start" />
-      <short value="ProcedureStartDate" />
-      <definition value="The start date (and if possible start time) of the procedure. A ‘vague’ date, such as only the year, is permitted.&#13;&#10;The element offers the option to indicate the start of the period of a series of related procedures." />
-      <alias value="VerrichtingStartDatum" />
+    <element id="Procedure.bodySite">
+      <path value="Procedure.bodySite" />
+      <short value="AnatomicalLocationOfTheProcedure" />
+      <definition value="Anatomical location which is the focus of the procedure." />
+      <binding>
+        <strength value="extensible" />
+        <description value="Anatomical location which is the focus of the procedure." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.1.1--20150401000000" />
+          <display value="VerrichtingAnatomischeLocatieCodelijst" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="zib-overdrachtverrichting" />
-        <map value=" NL-CM:14.1.2" />
+        <map value="NL-CM:14.1.8" />
       </mapping>
     </element>
-    <element id="Procedure.performedPeriod.end">
-      <path value="Procedure.performedPeriod.end" />
-      <short value="ProcedureEndDate" />
-      <definition value="The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.&#13;&#10;The element offers the option to indicate the end of the period of a series of related procedures." />
-      <alias value="VerrichtingEindDatum" />
+    <element id="Procedure.bodySite.coding">
+      <path value="Procedure.bodySite.coding" />
+      <definition value="A reference to a code defined by a terminology system." />
+    </element>
+    <element id="Procedure.bodySite.coding.system">
+      <path value="Procedure.bodySite.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.bodySite.coding.code">
+      <path value="Procedure.bodySite.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reason">
+      <path value="Procedure.reason[x]" />
+      <short value="Indication::Problem" />
+      <alias value="Problem" />
+      <alias value="Indication" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
+      </type>
       <mapping>
         <identity value="zib-overdrachtverrichting" />
-        <map value="NL-CM:14.1.3" />
+        <map value="CM:14.1.9" />
       </mapping>
     </element>
     <element id="Procedure.focalDevice">

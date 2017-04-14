@@ -108,7 +108,7 @@
     </element>
     <element id="Patient.extension.extension.BankCode">
       <path value="Patient.extension.extension" />
-      <name value="BankCode" />
+      <sliceName value="BankCode" />
       <short value="BankCode" />
       <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code." />
       <alias value="Bankcode" />

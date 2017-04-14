@@ -34,13 +34,36 @@
     <element id="Coverage">
       <path value="Coverage" />
     </element>
-    <element id="Coverage.issuer">
-      <path value="Coverage.issuer" />
+    <element id="Coverage.identifier">
+      <path value="Coverage.identifier" />
+      <short value="InsurantNumber" />
+      <definition value="Number under which the insured person is registered at the insurance company&#13;&#10;This item maps the ‘Identification number of the card’ on EHIC field 8" />
+      <alias value="VerzekerdeNummer" />
       <min value="1" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BetalerVerzekeraar" />
-      </type>
+      <max value="1" />
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.6" />
+      </mapping>
+    </element>
+    <element id="Coverage.type">
+      <path value="Coverage.type" />
+      <short value="InsuranceType" />
+      <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance" />
+      <alias value="VerzekeringsSoort" />
+      <min value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Type of insurance policy. Codes as returned in the Check for Right to Insurance." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.1.1.1--20150401000000" />
+          <display value="VerzekeringssoortCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.15" />
+      </mapping>
     </element>
     <element id="Coverage.period">
       <path value="Coverage.period" />
@@ -67,36 +90,13 @@
         <map value="NL-CM:1.1.14" />
       </mapping>
     </element>
-    <element id="Coverage.type">
-      <path value="Coverage.type" />
-      <short value="InsuranceType" />
-      <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance" />
-      <alias value="VerzekeringsSoort" />
+    <element id="Coverage.payor">
+      <path value="Coverage.payor" />
       <min value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="Type of insurance policy. Codes as returned in the Check for Right to Insurance." />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.1.1.1--20150401000000" />
-          <display value="VerzekeringssoortCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-betaler" />
-        <map value="NL-CM:1.1.15" />
-      </mapping>
-    </element>
-    <element id="Coverage.identifier">
-      <path value="Coverage.identifier" />
-      <short value="InsurantNumber" />
-      <definition value="Number under which the insured person is registered at the insurance company&#13;&#10;This item maps the ‘Identification number of the card’ on EHIC field 8" />
-      <alias value="VerzekerdeNummer" />
-      <min value="1" />
-      <max value="1" />
-      <mapping>
-        <identity value="zib-betaler" />
-        <map value="NL-CM:1.1.6" />
-      </mapping>
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BetalerVerzekeraar" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
