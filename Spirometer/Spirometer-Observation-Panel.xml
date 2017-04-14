@@ -98,7 +98,7 @@
       <slicing>
           <discriminator>
               <type value="profile"/>
-              <path value="profile"/>
+              <path value="reference"/>
           </discriminator>
         <rules value="open" />
       </slicing>
