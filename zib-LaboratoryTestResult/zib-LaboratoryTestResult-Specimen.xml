@@ -87,15 +87,6 @@
     <element id="Specimen.collection">
       <path value="Specimen.collection" />
     </element>
-    <element id="Specimen.collection.comment">
-      <path value="Specimen.collection.comment" />
-      <short value="Explanation" />
-      <alias value="Toelichting" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.19" />
-      </mapping>
-    </element>
     <element id="Specimen.collection.collected">
       <path value="Specimen.collection.collected[x]" />
       <short value="DrawingDateTime" />
@@ -133,6 +124,15 @@
       <mapping>
         <identity value="zib-overdrachtlaboratoriumuitslag" />
         <map value="NL-CM:13.1.15" />
+      </mapping>
+    </element>
+    <element id="Specimen.note">
+      <path value="Specimen.note" />
+      <short value="Explanation" />
+      <alias value="Toelichting" />
+      <mapping>
+        <identity value="zib-overdrachtlaboratoriumuitslag" />
+        <map value="NL-CM:13.1.19" />
       </mapping>
     </element>
   </differential>

@@ -167,8 +167,8 @@
         <map value="NL-CM:13.1.14" />
       </mapping>
     </element>
-    <element id="Observation.comments">
-      <path value="Observation.comments" />
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
       <short value="Explanation" />
       <alias value="Toelichting" />
       <mapping>
