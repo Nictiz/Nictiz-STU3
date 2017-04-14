@@ -136,6 +136,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
     </element>
     <element id="CarePlan.context">
@@ -147,6 +148,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
       </type>
     </element>
     <element id="CarePlan.period.start">
@@ -174,18 +176,22 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
     <element id="CarePlan.addresses">
@@ -193,6 +199,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
       </type>
     </element>
     <element id="CarePlan.participant.member">
@@ -200,18 +207,22 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
     <element id="CarePlan.activity">
@@ -231,14 +242,17 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
     </element>
     <element id="CarePlan.activity.detail">
@@ -268,6 +282,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
       </type>
     </element>
     <element id="CarePlan.activity.detail.prohibited">
@@ -318,18 +333,22 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
     </element>
     <element id="CarePlan.activity.detail.description">
@@ -360,14 +379,17 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
     </element>
   </differential>

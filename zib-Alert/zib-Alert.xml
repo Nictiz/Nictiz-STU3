@@ -110,14 +110,17 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
     <element id="Flag.encounter">
@@ -125,6 +128,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
       </type>
     </element>
     <element id="Flag.author">
@@ -132,18 +136,22 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
     <element id="Flag.code">

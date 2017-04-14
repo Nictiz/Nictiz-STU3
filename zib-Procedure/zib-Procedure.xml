@@ -111,6 +111,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
     </element>
     <element id="Procedure.performedPeriod">
@@ -168,6 +169,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
     </element>
     <element id="Procedure.performer.HealthcareProvider">
@@ -190,6 +192,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
     <element id="Procedure.bodySite">
@@ -232,6 +235,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
       </type>
       <mapping>
         <identity value="zib-overdrachtverrichting" />
@@ -250,6 +254,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
       </type>
       <mapping>
         <identity value="zib-overdrachtverrichting" />

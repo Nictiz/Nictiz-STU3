@@ -38,6 +38,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
     </element>
     <element id="MedicationAdministration.effective">
@@ -66,6 +67,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
       </type>
     </element>
     <element id="MedicationAdministration.note">

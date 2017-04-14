@@ -147,6 +147,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
     </element>
     <element id="Condition.context">
@@ -154,6 +155,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
       </type>
     </element>
     <element id="Condition.onset">
@@ -172,10 +174,12 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
     </element>
     <element id="Condition.note">

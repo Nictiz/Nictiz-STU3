@@ -95,7 +95,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BetalerVerzekeraar" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-PayerInsuranceCompany" />
       </type>
     </element>
   </differential>

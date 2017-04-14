@@ -111,6 +111,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
       </type>
     </element>
     <element id="MedicationStatement.partOf">
@@ -131,6 +132,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispense" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
       </type>
     </element>
     <element id="MedicationStatement.medicationReference">
@@ -139,6 +141,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
       </type>
     </element>
     <element id="MedicationStatement.effective">

@@ -54,6 +54,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
       </type>
     </element>
   </differential>

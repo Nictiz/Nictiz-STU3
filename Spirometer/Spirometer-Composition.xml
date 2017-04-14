@@ -59,6 +59,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <aggregation value="bundled" />
       </type>
     </element>
@@ -67,21 +68,25 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
         <aggregation value="bundled" />
       </type>
     </element>
@@ -94,16 +99,19 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <aggregation value="bundled" />
       </type>
     </element>
@@ -112,6 +120,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <aggregation value="bundled" />
       </type>
     </element>

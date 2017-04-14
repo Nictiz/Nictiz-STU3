@@ -133,6 +133,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
       </type>
     </element>
     <element id="DeviceUseStatement.indication">
@@ -169,6 +170,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
     </element>
     <element id="DeviceUseStatement.note">
