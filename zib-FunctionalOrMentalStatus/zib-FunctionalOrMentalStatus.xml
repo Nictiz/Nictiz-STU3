@@ -39,6 +39,10 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
+      <mapping>
+        <identity value="zib-functioneleofmentalestatus" />
+        <map value="NL-CM:4.26.1" />
+      </mapping>    
     </element>
     <element id="Observation.extension">
       <path value="Observation.extension" />
@@ -72,7 +76,7 @@
       <alias value="StatusNaam" />
       <mapping>
         <identity value="zib-functioneleofmentalestatus" />
-        <map value=" NL-CM:4.26.2" />
+        <map value="NL-CM:4.26.2" />
       </mapping>
     </element>
     <element id="Observation.code.coding">

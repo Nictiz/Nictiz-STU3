@@ -44,7 +44,7 @@
       <alias value="AlcoholGebruik" />
       <mapping>
         <identity value="zib-alcoholgebruik" />
-        <map value=" NL-CM:7.3.1" />
+        <map value="NL-CM:7.3.1" />
       </mapping>
     </element>
     <element id="Observation.code">

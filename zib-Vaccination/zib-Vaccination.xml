@@ -231,7 +231,7 @@
       <alias value="Dosis" />
       <mapping>
         <identity value="zib-vaccinatie" />
-        <map value=" NL-CM:11.1.4" />
+        <map value="NL-CM:11.1.4" />
       </mapping>
     </element>
     <element id="Immunization.note">
