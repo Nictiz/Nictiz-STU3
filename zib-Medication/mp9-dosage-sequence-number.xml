@@ -20,6 +20,7 @@
   </contact>
   <description value="The order of the dosage instructions" />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="datatype" />

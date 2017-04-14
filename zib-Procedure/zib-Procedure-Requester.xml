@@ -26,6 +26,7 @@
   <description value="The healthcare provider who requested the procedure." />
   <purpose value="The Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) Procedure version 3.0 models a direct reference to the healthcare provider who requested the procedure. The Procedure resource does not include a reference to a Practitioner resource." />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="resource" />

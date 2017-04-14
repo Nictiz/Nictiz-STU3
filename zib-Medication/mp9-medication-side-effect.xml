@@ -20,6 +20,7 @@
   </contact>
   <description value="A side effect that is experienced during medication usage." />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="resource" />

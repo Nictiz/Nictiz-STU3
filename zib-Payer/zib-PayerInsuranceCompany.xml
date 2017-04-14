@@ -19,6 +19,7 @@
     </telecom>
   </contact>
   <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
   <mapping>
     <identity value="zib-Betaler" />
     <uri value="https://zibs.nl/wiki/Betaler(NL)" />

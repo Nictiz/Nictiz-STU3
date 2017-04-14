@@ -20,6 +20,7 @@
   </contact>
   <description value="Additional instructions such as &quot;Swallow with plenty of water&quot; which may or may not be coded." />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="resource" />

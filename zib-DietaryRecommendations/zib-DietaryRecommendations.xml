@@ -26,6 +26,7 @@
   </contact>
   <description value="Voedingsadvies as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie.  &#13;&#10;" />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
   <mapping>
     <identity value="zib-voedingsadvies" />
     <uri value="https://zibs.nl/wiki/Voedingsadvies(NL)" />

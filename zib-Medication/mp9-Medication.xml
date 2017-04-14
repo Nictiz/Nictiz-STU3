@@ -20,6 +20,7 @@
   </contact>
   <description value="An Medication as defined by the Dutch Medication v9 project." />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Medication" />

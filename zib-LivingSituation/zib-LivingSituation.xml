@@ -26,6 +26,7 @@
   </contact>
   <description value="Woonsituatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;&#13;&#10;The living situation is the physical environment in which the patient normally lives, sleeps, keeps their clothing, etc." />
   <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
   <mapping>
     <identity value="zib-woonsituatie" />
     <uri value="https://zibs.nl/wiki/Woonsituatie(NL)" />
