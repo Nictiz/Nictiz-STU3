@@ -50,7 +50,7 @@
       <mapping>
         <identity value="zib-contact" />
         <map value="NL-CM:15.1.1" />
-      </mapping>      
+      </mapping>
     </element>
     <!-- Had mapping problems between ambulatory vs outpatient, solved in STU3 -->
     <element id="Encounter.class">

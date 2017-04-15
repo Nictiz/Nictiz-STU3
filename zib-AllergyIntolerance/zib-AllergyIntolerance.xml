@@ -199,7 +199,7 @@
       <short value="Explanation" />
       <alias value="Toelichting" />
     </element>
-    <element id="AllergyIntolerance.note.author[x]">
+    <element id="AllergyIntolerance.note.author">
       <path value="AllergyIntolerance.note.author[x]" />
       <short value="Auteur" />
       <type>
