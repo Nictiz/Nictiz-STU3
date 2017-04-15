@@ -129,7 +129,7 @@
       <alias value="Toelichting" />
       <mapping>
         <identity value="zib-tabakgebruik" />
-        <map value="NL-CM:7.2.1" />
+        <map value="NL-CM:7.2.3" />
       </mapping>
     </element>
     <element id="Observation.component">

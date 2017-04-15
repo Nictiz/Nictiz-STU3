@@ -50,6 +50,10 @@
   <differential>
     <element id="Condition">
       <path value="Condition" />
+      <mapping>
+        <identity value="zib-overdrachtconcern" />
+        <map value="NL-CM:5.1.1" />
+      </mapping>      
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />

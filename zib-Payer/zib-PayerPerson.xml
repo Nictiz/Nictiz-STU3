@@ -136,10 +136,6 @@
         <code value="uri" />
       </type>
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-BetalerBankgegevens" />
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
     </element>
     <element id="Patient.extension.value">
       <path value="Patient.extension.value[x]" />
@@ -147,10 +143,6 @@
       <type>
         <code value="boolean" />
       </type>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />

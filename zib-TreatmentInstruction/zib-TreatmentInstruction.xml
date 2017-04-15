@@ -68,7 +68,7 @@
       </type>
       <mapping>
         <identity value="zib-behandelaanwijzing" />
-        <map value="https://zibs.nl/wiki/BehandelAanwijzing(NL)" />
+        <map value="NL-CM:2.1.8" />
       </mapping>
     </element>
     <element id="CarePlan.extension.Verification.extension">
