@@ -127,6 +127,10 @@
       <short value="StartDate" />
       <definition value="The start date of the first use or implant of the medical aid. A ‘vague’ date, such as only the year, is permitted." />
       <alias value="BeginDatum" />
+      <mapping>
+        <identity value="zib-medischhulpmiddel" />
+        <map value="NL-CM:10.1.11" />
+      </mapping>
     </element>
     <element id="DeviceUseStatement.device">
       <path value="DeviceUseStatement.device" />
