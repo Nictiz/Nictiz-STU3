@@ -227,11 +227,11 @@
     <element id="Immunization.doseQuantity">
       <path value="Immunization.doseQuantity" />
       <short value="Dose" />
-      <definition value=" The amount of product administered shown in milliliters. In most cases, the entire product is administered; in some cases, a described part of the product is administered." />
+      <definition value="The amount of product administered shown in milliliters. In most cases, the entire product is administered; in some cases, a described part of the product is administered." />
       <alias value="Dosis" />
       <mapping>
         <identity value="zib-vaccinatie" />
-        <map value=" NL-CM:11.1.4" />
+        <map value="NL-CM:11.1.4" />
       </mapping>
     </element>
     <element id="Immunization.note">

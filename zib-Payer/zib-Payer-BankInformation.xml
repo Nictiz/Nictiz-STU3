@@ -89,7 +89,7 @@
       </type>
       <mapping>
         <identity value="zib-betaler" />
-        <map value=" NL-CM:1.1.11" />
+        <map value="NL-CM:1.1.11" />
       </mapping>
     </element>
     <element id="Extension.extension.BankCode">
@@ -110,7 +110,7 @@
       </type>
       <mapping>
         <identity value="zib-betaler" />
-        <map value=" NL-CM:1.1.10" />
+        <map value="NL-CM:1.1.10" />
       </mapping>
     </element>
     <element id="Extension.BankInformation.url">

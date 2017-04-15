@@ -168,7 +168,7 @@
       </binding>
       <mapping>
         <identity value="zib-alert" />
-        <map value=" NL-CM:8.3.4" />
+        <map value="NL-CM:8.3.4" />
       </mapping>
     </element>
   </differential>

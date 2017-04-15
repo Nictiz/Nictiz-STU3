@@ -56,7 +56,7 @@
       </binding>
       <mapping>
         <identity value="zib-allergieintolerantie" />
-        <map value="NL-CM-8.2.18" />
+        <map value="NL-CM:8.2.18" />
       </mapping>
     </element>
   </differential>

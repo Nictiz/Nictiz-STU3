@@ -100,12 +100,12 @@
     <element id="Encounter.period.start">
       <path value="Encounter.period.start"/>
       <short value="StartDateTime"/>
-      <definition value=" The date and time at which the contact took place."/>
+      <definition value="The date and time at which the contact took place."/>
       <alias value="BeginDatumTijd"/>
       <min value="1"/>
       <mapping>
         <identity value="zib-contact"/>
-        <map value=" NL-CM:15.1.3"/>
+        <map value="NL-CM:15.1.3"/>
       </mapping>
     </element>
     <element id="Encounter.period.end">

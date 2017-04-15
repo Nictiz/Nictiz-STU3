@@ -72,7 +72,7 @@
       <alias value="StatusNaam" />
       <mapping>
         <identity value="zib-functioneleofmentalestatus" />
-        <map value=" NL-CM:4.26.2" />
+        <map value="NL-CM:4.26.2" />
       </mapping>
     </element>
     <element id="Observation.code.coding">
