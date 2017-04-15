@@ -44,6 +44,10 @@
   <differential>
     <element id="NutritionOrder">
       <path value="NutritionOrder" />
+      <mapping>
+        <identity value="zib-voedingsadvies" />
+        <map value="NL-CM:7.11.1" />
+      </mapping>
     </element>
     <element id="NutritionOrder.extension">
       <path value="NutritionOrder.extension" />
@@ -68,7 +72,7 @@
       </type>
       <mapping>
         <identity value="zib-voedingsadvies" />
-        <map value=" NL-CM:7.11.4" />
+        <map value="NL-CM:7.11.4" />
       </mapping>
     </element>
     <element id="NutritionOrder.patient">
@@ -202,7 +206,7 @@
       <alias value="Activiteit" />
       <mapping>
         <identity value="zib-verpleegkundigeinterventie" />
-        <map value=" NL-CM:14.2.10" />
+        <map value="NL-CM:14.2.10" />
       </mapping>
     </element>
   </differential>
