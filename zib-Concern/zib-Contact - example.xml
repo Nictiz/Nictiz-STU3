@@ -35,7 +35,7 @@
     </text>
     <status value="finished"/>
     <class>
-        <system value="	http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"/>
+        <system value="http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"/>
         <code value="EMER"/>
         <display value="emergency"/>
     </class>

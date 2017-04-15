@@ -18,7 +18,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value=" A MedicationDispense as defined by the Dutch Medication v9 project." />
+  <description value="A MedicationDispense as defined by the Dutch Medication v9 project." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="resource" />
