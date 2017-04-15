@@ -251,7 +251,7 @@
             </binding>
             <mapping>
                 <identity value="zib-burgerlijkestaat"/>
-                <map value="NL-CM-7.9.2"/>
+                <map value="NL-CM:7.9.2"/>
             </mapping>
         </element>
         <element id="Patient.multipleBirth">
