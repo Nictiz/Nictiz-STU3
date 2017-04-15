@@ -102,75 +102,75 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <description value="VoorschriftProductGPKCodelijst" />
+        <description value="ProductCodeGPKCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.8--20150401000000" />
-          <display value="VoorschriftProductGPKCodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.3--20150401000000" />
+          <display value="ProductCodeGPKCodelijst" />
         </valueSetReference>
       </binding>
     </element>
     <element id="Immunization.vaccineCode.coding.HPK">
       <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="VoorschriftProductHPKCodelijst" />
+      <sliceName value="ProductCodeHPKCodelijst" />
       <max value="1" />
       <binding>
         <strength value="required" />
-        <description value="VoorschriftProductHPKCodelijst" />
+        <description value="ProductCodeHPKCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.9--20150401000000" />
-          <display value="VoorschriftProductHPKCodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.2--20150401000000" />
+          <display value="ProductCodeHPKCodelijst" />
         </valueSetReference>
       </binding>
     </element>
     <element id="Immunization.vaccineCode.coding.ZI">
       <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="VoorschriftProductZICodelijst" />
+      <sliceName value="ProductCodeZICodelijst" />
       <max value="1" />
       <binding>
         <strength value="required" />
-        <description value="VoorschriftProductZICodelijst" />
+        <description value="ProductCodeZICodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.13--20150401000000" />
-          <display value="VoorschriftProductZICodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.6--20150401000000" />
+          <display value="ProductCodeZICodelijst" />
         </valueSetReference>
       </binding>
     </element>
     <element id="Immunization.vaccineCode.coding.ATC">
       <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="VoorschriftProductATCCodelijst" />
+      <sliceName value="ProductCodeATCCodelijst" />
       <max value="1" />
       <binding>
         <strength value="required" />
-        <description value="VoorschriftProductATCCodelijst" />
+        <description value="ProductCodeATCCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.20--20150401000000" />
-          <display value="VoorschriftProductATCCodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.4--20150401000000" />
+          <display value="ProductCodeATCCodelijst" />
         </valueSetReference>
       </binding>
     </element>
     <element id="Immunization.vaccineCode.coding.PRK">
       <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="VoorschriftProductPRKCodelijst" />
+      <sliceName value="ProductCodePRKCodelijst" />
       <max value="1" />
       <binding>
         <strength value="required" />
-        <description value="VoorschriftProductPRKCodelijst" />
+        <description value="ProductCodePRKCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.10--20150401000000" />
-          <display value="VoorschriftProductPRKCodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.1--20150401000000" />
+          <display value="ProductCodePRKCodelijst" />
         </valueSetReference>
       </binding>
     </element>
     <element id="Immunization.vaccineCode.coding.GTIN">
       <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="VoorschriftProductGTINCodelijst" />
+      <sliceName value="ProductCodeGTINCodelijst" />
       <max value="1" />
       <binding>
         <strength value="required" />
-        <description value="VoorschriftProductGTINCodelijst" />
+        <description value="ProductCodeGTINCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.11--20150401000000" />
-          <display value="VoorschriftProductGTINCodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.5--20150401000000" />
+          <display value="ProductCodeGTINCodelijst" />
         </valueSetReference>
       </binding>
     </element>
