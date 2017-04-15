@@ -1,0 +1,21 @@
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.6--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.11.1.6"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="ProductCodeZICodelijst"/>
+    <status value="active"/>
+    <description value="G-Standaard Artikelen (ook KNMP-nummer, ATKODE) (2.16.840.1.113883.2.4.4.8): Alle waarden"/>
+    <expansion>
+        <identifier value="urn:uuid:ee4d1a64-8de8-4ef2-bfc9-2c60a9dbdc7b"/>
+        <timestamp value="2017-04-12T16:36:05.202+02:00"/>
+        <total value="0"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.8"/>
+        </contains>
+    </expansion>
+</ValueSet>
