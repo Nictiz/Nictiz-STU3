@@ -40,15 +40,13 @@
   </identifier>
   <active value="true" />
   <type>
-    <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-organization-department-type">
-      <valueCodeableConcept>
-        <coding>
-          <system value="urn:oid:2.16.840.1.113883.2.4.6.7" />
-          <code value="0329" />
-          <display value="Psychiatrie" />
-        </coding>
-      </valueCodeableConcept>
-    </extension>
+     <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.6.7" />
+        <code value="0329" />
+        <display value="Psychiatrie" />
+     </coding>
+  </type>  
+  <type>
     <coding>
       <system value="http://nictiz.nl/fhir/NamingSystem/organization-type" />
       <code value="V4" />
