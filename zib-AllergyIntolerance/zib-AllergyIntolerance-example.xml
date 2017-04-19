@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://hl7.org/fhir/DSTU2/AllergyIntolerance.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<AllergyIntolerance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir">
+<?xml-model href="http://hl7.org/fhir/STU3/allergyintolerance.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<AllergyIntolerance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/allergyintolerance.xsd">
   <id value="b24e2aa6-c395-4d4e-9ad9-dee8cb91eb89" />
   <meta>
     <versionId value="4" />
@@ -8,72 +8,79 @@
     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
   </meta>
   <text>
-    <status value="generated" />
+    <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Patient with id example</caption>
         <thead>
           <tr>
             <th>Description</th>
+            <th>AllergyStatus</th>
+            <th>VerificationStatus</th>
             <th>Date onset</th>
-            <th>Date end</th>
-            <th>Type</th>
             <th>Notes</th>
             <th>Informant</th>
+            <th>Substance</th>
+            <th>ExposureRoute</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Amoxicillin (substance)</td>
+            <td>Active</td>
+            <td>Confirmed</td>
             <td>April 8, 1996</td>
-            <td></td>
-            <td></td>
             <td>Highly allergic to Amoxicillin, please use other type of antibiotics. Patient had a 5min Dyspnea reaction directly following oral consumption on April 8, 1996</td>
             <td>Practitioner with id example</td>
+            <td>Amoxicillin</td>
+            <td>Oral route</td>
           </tr>
         </tbody>
       </table>
     </div>
   </text>
-  <onset value="1996-04-08" />
+  <clinicalStatus value="active"/>
+  <verificationStatus value="confirmed"/>
+  <category value="medication" />
+  <criticality value="high">
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="399166001" />
+        <display value="Fatal" />
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  </criticality>
   <patient>
     <reference value="Patient/example" />
   </patient>
-  <reporter>
+  <onsetDateTime value="1996-04-08"/>
+  <recorder>
     <reference value="Practitioner/example" />
-  </reporter>
-  <substance>
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="372687004" />
-      <display value="Amoxicillin (substance)" />
-    </coding>
-  </substance>
-  <status value="confirmed" />
-  <criticality value="CRITH">
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
-      <valueCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="399166001" />
-          <display value="Fatal" />
-        </coding>
-      </valueCodeableConcept>
-    </extension>
-  </criticality>
-  <category value="medication" />
-  <lastOccurence value="1996-04-08" />
+  </recorder>
+  <lastOccurrence value="1996-04-08"/>
   <note>
     <text value="Highly allergic to Amoxicillin, please use other type of antibiotics" />
   </note>
   <reaction>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance-Reaction-Duration">
-      <valueQuantity>
+    <extension url="http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration">
+      <valueDuration>
         <value value="5" />
         <unit value="min" />
         <system value="http://unitsofmeasure.org/" />
         <code value="min" />
-      </valueQuantity>
+      </valueDuration>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance-Reaction-Certainty">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="17162000"/>
+          <display value="Certain"/>
+        </coding>
+      </valueCodeableConcept>
     </extension>
     <substance>
       <coding>
@@ -82,7 +89,6 @@
         <display value="Amoxicillin (substance)" />
       </coding>
     </substance>
-    <certainty value="likely" />
     <manifestation>
       <coding>
         <system value="http://snomed.info/sct" />

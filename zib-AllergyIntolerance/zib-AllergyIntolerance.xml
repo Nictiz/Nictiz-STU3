@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
   <id value="0f01e7ed-99b5-4781-8e06-0b92fef40c71" />
   <meta>
     <versionId value="1" />
@@ -78,7 +79,10 @@
       <binding>
         <strength value="extensible" />
         <description value="AllergieStatusCodelijst" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.3--20150401000000" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.3--20150401000000"/>
+          <display value="AllergieStatusCodelijst"/>
+        </valueSetReference>
       </binding>
     </element>
     <element id="AllergyIntolerance.category">
@@ -114,7 +118,10 @@
       <binding>
         <strength value="extensible" />
         <description value="AllergieCategorieCodelijst" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.2--20150401000000" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.2--20150401000000"/>
+          <display value="AllergieCategorieCodelijst"/>
+        </valueSetReference>
       </binding>
     </element>
     <element id="AllergyIntolerance.criticality">
@@ -253,13 +260,12 @@
       <path value="AllergyIntolerance.reaction.extension" />
       <sliceName value="Duration" />
       <short value="Duration" />
+      <definition value="The amount of time that the Adverse Reaction persisted." />
       <alias value="Duur" />
-      <definition value="Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event." />
-      <comment value="When certainty is missing, it means no information exists (although it could be in narrative).  By contrast, the unknown code is used when there is an explicit assertion that certainty is not known, such as when a patient eats a meal and it is unknown which food caused the reaction." />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration"/>
       </type>
       <mapping>
         <identity value="zib-allergieintolerantie" />
@@ -277,6 +283,14 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance-Reaction-Certainty" />
       </type>
+      <binding>
+        <strength value="extensible"/>
+        <description value="WaarschijnlijkheidCodelijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8--20150401000000"/>
+          <display value="WaarschijnlijkheidCodelijst"/>
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="zib-allergieintolerantie" />
         <map value="NL-CM:8.2.18" />
@@ -336,13 +350,6 @@
       <path value="AllergyIntolerance.reaction.severity" />
       <short value="Severity" />
       <alias value="Ernst" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.6--20150401000000" />
-          <display value="ErnstCodelijst" />
-        </valueSetReference>
-      </binding>
       <mapping>
         <identity value="zib-allergieintolerantie" />
         <map value="NL-CM:8.2.14" />
