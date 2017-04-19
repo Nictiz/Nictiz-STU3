@@ -108,10 +108,10 @@
         <map value="NL-CM:7.4.3"/>
       </mapping>
     </element>
-    <element id="Observation.comments">
-      <path value="Observation.comments"/>
+    <element id="Observation.comment">
+      <path value="Observation.comment"/>
       <short value="Explanation"/>
-      <definition value="Relevant comments on the drug use."/>
+      <definition value="Relevant comment on the drug use."/>
       <alias value="Toelichting"/>
       <mapping>
         <identity value="zib-drugsgebruik"/>

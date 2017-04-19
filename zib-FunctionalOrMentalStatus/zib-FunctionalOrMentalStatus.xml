@@ -141,14 +141,18 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.effectiveDateTime">
-      <path value="Observation.effectiveDateTime" />
+    <element id="Observation.effectivePeriod">
+      <path value="Observation.effectivePeriod" />
+      <comment value="ZIB FuncntioneleOfMentaleStatus does not include an end StatusDate. The effectivePeriod.start can be used as StatusDate. This profile allows to use an end date as well. "/>
+      <type>
+        <code value="Period" />
+      </type>   
+    </element>
+    <element id="Observation.effectivePeriod.start">
+      <path value="Observation.effectivePeriod.start"/>
       <short value="StatusDate" />
       <definition value="Date on which the status was determined. A ‘vague’ date, such as only the year, is permitted." />
       <alias value="StatusDatum" />
-      <type>
-        <code value="dateTime" />
-      </type>
       <mapping>
         <identity value="zib-functioneleofmentalestatus" />
         <map value="NL-CM:4.26.6" />
@@ -229,10 +233,10 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.comments">
-      <path value="Observation.comments" />
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
       <short value="Explanation" />
-      <definition value="Explanatory comments as a description of the functional or mental status." />
+      <definition value="Explanatory comment as a description of the functional or mental status." />
       <alias value="Toelichting" />
       <mapping>
         <identity value="zib-functioneleofmentalestatus" />

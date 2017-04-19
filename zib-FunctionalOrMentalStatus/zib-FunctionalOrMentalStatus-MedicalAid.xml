@@ -53,8 +53,7 @@
       <definition value="Medical aid the patient has to reduce the impact of the disability or disorder." />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid" />
       </type>
     </element>
   </differential>

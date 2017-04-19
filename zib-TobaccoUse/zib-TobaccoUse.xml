@@ -122,10 +122,10 @@
         <map value="NL-CM:7.2.10" />
       </mapping>
     </element>
-    <element id="Observation.comments">
-      <path value="Observation.comments" />
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
       <short value="Explanation" />
-      <definition value="Relevant comments on the patient’s use of tobacco." />
+      <definition value="Relevant comment on the patient’s use of tobacco." />
       <alias value="Toelichting" />
       <mapping>
         <identity value="zib-tabakgebruik" />
@@ -157,6 +157,7 @@
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
+    <!-- Correcct terminology needed. Code is now used for TypeOfTobaccoUsed and Amount -->
     <element id="Observation.component.TypeOfTobaccoUsed.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
@@ -199,6 +200,7 @@
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
+    <!-- Correcct terminology needed. Code is now used for TypeOfTobaccoUsed and Amount -->
     <element id="Observation.component.Amount.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />

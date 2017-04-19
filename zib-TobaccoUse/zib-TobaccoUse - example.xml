@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://hl7.org/fhir/DSTU2/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/observation.xsd">
+<?xml-model href="http://hl7.org/fhir/STU3/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
     <id value="example"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse"/>
@@ -64,7 +64,7 @@
             <display value="Occasional cigarette smoker (finding)"/>
         </coding>
     </valueCodeableConcept>
-    <comments value="Tries to stop. Partner smokes as well."/>
+    <comment value="Tries to stop. Partner smokes as well."/>
     <!-- Dutch: SoortTabakGebruik  -->
     <!-- Terminologie issue: Snowmed 266918002 contains both amount and type.  In the ZIB this is devided into 2 components. -->
     <component>

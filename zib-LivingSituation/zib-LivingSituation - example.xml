@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://hl7.org/fhir/DSTU2/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/observation.xsd">
+<?xml-model href="http://hl7.org/fhir/STU3/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
     <id value="example"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation"/>
@@ -50,5 +50,5 @@
             <display value="Appartement of flatwoning"/>
         </coding>
     </valueCodeableConcept>
-    <comments value="The appartment is a problem because there is no elevator. Patient is looking for a new living place."/>
+    <comment value="The appartment is a problem because there is no elevator. Patient is looking for a new living place."/>
  </Observation>

@@ -114,10 +114,10 @@
         <map value="NL-CM:7.3.2" />
       </mapping>
     </element>
-    <element id="Observation.comments">
-      <path value="Observation.comments" />
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
       <short value="Explanation" />
-      <definition value="Relevant comments on the alcohol consumption." />
+      <definition value="Relevant comment on the alcohol consumption." />
       <alias value="Toelichting" />
       <mapping>
         <identity value="zib-alcoholgebruik" />

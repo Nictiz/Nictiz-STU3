@@ -89,8 +89,8 @@
         <map value="NL-CM:7.8.3" />
       </mapping>
     </element>
-    <element id="Observation.comments">
-      <path value="Observation.comments" />
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
       <short value="Explanation" />
       <alias value="Toelichting" />
       <mapping>
