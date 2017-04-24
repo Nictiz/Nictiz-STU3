@@ -1,3 +1,4 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="nl-core-address"/>
     <meta>
@@ -28,6 +29,7 @@
     <abstract value="false"/>
     <type value="Address"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Address"/>
+    <derivation value="constraint"/>
     <differential>
         <element id="Address">
             <path value="Address"/>
@@ -118,7 +120,7 @@
         <rules value="open"/>
             </slicing>
         </element>
-        <element id="Address.line.extension:streetname">
+        <element id="Address.line.extension:streetName">
             <path value="Address.line.extension"/>
             <sliceName value="streetName"/>
             <requirements value="Basisregistratie Persoonsgegevens 11.10 Straatnaam"/>
@@ -137,7 +139,7 @@
                 <map value="11.10 Straatnaam"/>
             </mapping>
         </element>
-        <element id="Address.line.extension:housenumber">
+        <element id="Address.line.extension:houseNumber">
             <path value="Address.line.extension"/>
             <sliceName value="houseNumber"/>
             <requirements value="Basisregistratie Persoonsgegevens 11.20 Huisnummer"/>
@@ -185,7 +187,7 @@
                 <map value="11.40 Huisnummertoevoeging"/>
             </mapping>
         </element>
-        <element id="Address.line.extension:unitid">
+        <element id="Address.line.extension:unitID">
             <path value="Address.line.extension"/>
             <sliceName value="unitID"/>
             <definition value="Extra information such as the building name, building number, entrance, route number."/>
@@ -200,7 +202,7 @@
                 <map value="NL-CM:0.1.28"/>
             </mapping>
         </element>
-        <element id="Address.line.extension:additionallocator">
+        <element id="Address.line.extension:additionalLocator">
             <path value="Address.line.extension"/>
             <sliceName value="additionalLocator"/>
             <definition value="HouseNumberIndication - The indication used for addresses which do not consist of the usual street name and house number."/>

@@ -1,3 +1,4 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="nl-core-humanname"/>
     <meta>
@@ -27,6 +28,7 @@
     <abstract value="false"/>
     <type value="HumanName"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName"/>
+    <derivation value="constraint"/>
     <differential>
         <element id="HumanName">
             <path value="HumanName"/>
@@ -94,9 +96,9 @@
                 <rules value="open"/>
             </slicing>
         </element>
-        <element id="HumanName.extension:humanname-assembly-order">
+        <element id="HumanName.extension:humannameAssemblyOrder">
             <path value="HumanName.extension"/>
-            <sliceName value="humanname-assembly-order"/>
+            <sliceName value="humannameAssemblyOrder"/>
             <short value="Preferred display order of name parts"/>
             <definition value="A code that represents the preferred display order of the components of this human name."/>
             <min value="0"/>
@@ -122,9 +124,9 @@
                 <rules value="open"/>
             </slicing>
         </element>
-        <element id="HumanName.family.extension:humanname-own-prefix">
+        <element id="HumanName.family.extension:humannameOwnPrefix">
             <path value="HumanName.family.extension"/>
-            <sliceName value="humanname-own-prefix"/>
+            <sliceName value="humannameOwnPrefix"/>
             <short value="Voorvoegsel derived from person's own surname"/>
             <definition value="The prefix portion (e.g. voorvoegsel) of the family name that is derived from the person&amp;#39;s own surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s partner or spouse."/>
             <comment value="An example of a voorvoegsel is the &amp;quot;van&amp;quot; in &amp;quot;Ludwig van Beethoven&amp;quot;. Since the voorvoegsel doesn&amp;#39;t sort completely alphabetically, it is reasonable to specify it as a separate sub-component."/>
@@ -134,9 +136,9 @@
                 <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix"/>
             </type>
         </element>
-        <element id="HumanName.family.extension:humanname-own-name">
+        <element id="HumanName.family.extension:humannameOwnName">
             <path value="HumanName.family.extension"/>
-            <sliceName value="humanname-own-name"/>
+            <sliceName value="humannameOwnName"/>
             <short value="Portion derived from person's own surname"/>
             <definition value="The portion of the family name that is derived from the person&amp;#39;s own surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s partner or spouse."/>
             <comment value="If the person&amp;#39;s surname has legally changed to become (or incorporate) the surname of the person&amp;#39;s partner or spouse, this is the person&amp;#39;s surname immediately prior to such change. Often this is the person&amp;#39;s &amp;quot;maiden name&amp;quot;."/>
@@ -146,9 +148,9 @@
                 <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name"/>
             </type>
         </element>
-        <element id="HumanName.family.extension:humanname-partner-prefix">
+        <element id="HumanName.family.extension:humannamePartnerPrefix">
             <path value="HumanName.family.extension"/>
-            <sliceName value="humanname-partner-prefix"/>
+            <sliceName value="humannamePartnerPrefix"/>
             <short value="Voorvoegsel derived from person's partner's surname"/>
             <definition value="Voorvoegsel derived from person's partner's surname"/>
             <comment value="An example of a voorvoegsel is the &amp;quot;van&amp;quot; in &amp;quot;Ludwig van Beethoven&amp;quot;. Since the voorvoegsel doesn&amp;#39;t sort completely alphabetically, it is reasonable to identify it as a separate sub-component."/>
@@ -158,9 +160,9 @@
                 <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"/>
             </type>
         </element>
-        <element id="HumanName.family.extension:humanname-partner-name">
+        <element id="HumanName.family.extension:humannamePartnerName">
             <path value="HumanName.family.extension"/>
-            <sliceName value="humanname-partner-name"/>
+            <sliceName value="humannamePartnerName"/>
             <short value="Portion derived from person's partner's surname"/>
             <definition value="The portion of the family name that is derived from the person&amp;#39;s partner&amp;#39;s surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s own name."/>
             <comment value="If the person&amp;#39;s surname has legally changed to become (or incorporate) the surname of the person&amp;#39;s partner or spouse, this is the person&amp;#39;s surname immediately prior to such change. Often this is the person&amp;#39;s &amp;quot;maiden name&amp;quot;."/>
@@ -195,9 +197,9 @@
                 <rules value="open"/>
             </slicing>
         </element>
-        <element id="HumanName.given.extension:iso21090-en-qualifier">
+        <element id="HumanName.given.extension:iso21090EnQualifier">
             <path value="HumanName.given.extension"/>
-            <sliceName value="iso21090-EN-qualifier"/>
+            <sliceName value="iso21090EnQualifier"/>
             <short value="LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV"/>
             <definition value="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type."/>
             <min value="0"/>
