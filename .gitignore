@@ -11,11 +11,12 @@
 ###########################################################
 # Ignore Microsoft Excel/Word/Powerpoint/Visio temp files #
 ############################################################
-**/~$*.xsl*
-**/*.xlk
-**/~$*.doc*
-**/~$*.ppt*
-**/*.~vsdx
+*.tmp
+~$*.doc*
+~$*.xls*
+*.xlk
+~$*.ppt*
+*.~vsd*
 
 ###############################
 # Misc Operating System Files #
