@@ -3,9 +3,6 @@
   <meta>
     <lastUpdated value="2017-04-24T15:44:57.286+02:00" />
   </meta>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="pa" />
-  </extension>
   <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-healthcareservive" />
   <name value="nl-core-healthcareservive" />
   <status value="draft" />

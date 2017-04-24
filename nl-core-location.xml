@@ -3,9 +3,6 @@
   <meta>
     <lastUpdated value="2017-04-24T16:03:41.969+02:00" />
   </meta>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="pa" />
-  </extension>
   <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-location" />
   <name value="nl-core-location" />
   <status value="draft" />
@@ -92,6 +89,5 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-location" />
       </type>
     </element>
-
   </differential>
 </StructureDefinition>
