@@ -69,8 +69,7 @@
       <min value="1"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
     <element id="Encounter.participant">
@@ -84,13 +83,11 @@
       <alias value="ContactMet::Zorgverlener"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
       </type>
       <type>
         <code value="Reference"/>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <mapping>
         <identity value="zib-contact"/>
@@ -145,13 +142,11 @@
       <alias value="Probleem::ProbleemNaam"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
       </type>
       <type>
         <code value="Reference"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
       </type>
       <mapping>
         <identity value="zib-contact"/>
@@ -165,18 +160,15 @@
       <alias value="Locatie::Zorgaanbieder"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
       <type>
         <code value="Reference"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
       </type>
       <type>
         <code value="Reference"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
       </type>
       <mapping>
         <identity value="zib-contact"/>

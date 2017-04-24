@@ -168,8 +168,7 @@
       <path value="Medication.ingredient.item" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-ingredient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-ingredient" />
       </type>
     </element>
     <element id="Medication.ingredient.amount">

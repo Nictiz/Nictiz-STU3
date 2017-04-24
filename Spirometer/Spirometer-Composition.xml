@@ -58,8 +58,7 @@
       <path value="Composition.subject" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
         <aggregation value="bundled" />
       </type>
     </element>
@@ -67,26 +66,22 @@
       <path value="Composition.author" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
         <aggregation value="bundled" />
       </type>
     </element>
@@ -98,20 +93,17 @@
       <path value="Composition.attester.party" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
         <aggregation value="bundled" />
       </type>
     </element>
@@ -119,8 +111,7 @@
       <path value="Composition.custodian" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
         <aggregation value="bundled" />
       </type>
     </element>

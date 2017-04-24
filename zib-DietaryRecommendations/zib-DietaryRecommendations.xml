@@ -79,32 +79,28 @@
       <path value="NutritionOrder.patient" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
     <element id="NutritionOrder.orderer">
       <path value="NutritionOrder.orderer" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
     </element>
     <element id="NutritionOrder.encounter">
       <path value="NutritionOrder.encounter" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
       </type>
     </element>
     <element id="NutritionOrder.allergyIntolerance">
       <path value="NutritionOrder.allergyIntolerance" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
       </type>
     </element>
     <element id="NutritionOrder.oralDiet">

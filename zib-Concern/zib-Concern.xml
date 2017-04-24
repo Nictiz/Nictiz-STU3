@@ -150,16 +150,14 @@
       <path value="Condition.subject" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
     <element id="Condition.context">
       <path value="Condition.context" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
       </type>
     </element>
     <element id="Condition.onset">
@@ -177,13 +175,11 @@
       <path value="Condition.asserter" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
     </element>
     <element id="Condition.note">

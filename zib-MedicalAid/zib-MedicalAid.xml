@@ -176,8 +176,7 @@
       <path value="DeviceUseStatement.device" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
       </type>
     </element>
     <element id="DeviceUseStatement.note">

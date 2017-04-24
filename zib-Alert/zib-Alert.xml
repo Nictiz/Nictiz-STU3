@@ -109,49 +109,41 @@
       <path value="Flag.subject" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
     </element>
     <element id="Flag.encounter">
       <path value="Flag.encounter" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
       </type>
     </element>
     <element id="Flag.author">
       <path value="Flag.author" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
     </element>
     <element id="Flag.code">

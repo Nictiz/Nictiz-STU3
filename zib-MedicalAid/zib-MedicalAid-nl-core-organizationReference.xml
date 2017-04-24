@@ -54,8 +54,7 @@
       <alias value="Zorgaanbieder" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
     </element>
   </differential>

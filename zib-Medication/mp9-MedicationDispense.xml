@@ -81,8 +81,7 @@
       <short value="Relatie naar verstrekkingsverzoek" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispenseRequest" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispenseRequest" />
       </type>
     </element>
     <element id="MedicationDispense.quantity">
@@ -97,8 +96,7 @@
       <path value="MedicationDispense.medicationReference" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
       </type>
     </element>
     <element id="MedicationDispense.whenHandedOver">

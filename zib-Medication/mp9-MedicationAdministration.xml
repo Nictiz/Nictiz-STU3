@@ -37,8 +37,7 @@
       <path value="MedicationAdministration.subject" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
     <element id="MedicationAdministration.effective">
@@ -66,8 +65,7 @@
       <short value="ToedieningsProduct" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
       </type>
     </element>
     <element id="MedicationAdministration.note">
