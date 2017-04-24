@@ -1,3 +1,4 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="nl-address-official"/>
     <meta>
@@ -25,6 +26,7 @@
     <context value="Address"/>
     <type value="Extension"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
     <differential>
         <element id="Extension">
             <path value="Extension"/>

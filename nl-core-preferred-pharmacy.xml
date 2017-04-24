@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="nl-core-preferred-pharmacy"/>
     <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-preferred-pharmacy"/>
@@ -16,7 +16,7 @@
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
     <derivation value="constraint"/>
     <differential>
-        <element id="Extension:nl-core-preferred-pharmacy">
+        <element id="Extension">
             <path value="Extension"/>
             <min value="0"/>
             <max value="*"/>
@@ -26,7 +26,7 @@
                 <max value="*"/>
             </base>
         </element>
-        <element id="Extension:nl-core-preferred-pharmacy.url">
+        <element id="Extension.url">
             <path value="Extension.url"/>
             <representation value="xmlAttr"/>
             <min value="1"/>
@@ -41,7 +41,7 @@
             </type>
             <fixedUri value="http://fhir.nl/fhir/StructureDefinition/nl-core-preferred-pharmacy"/>
         </element>
-        <element id="Extension:nl-core-preferred-pharmacy.valueReference">
+        <element id="Extension.valueReference">
             <path value="Extension.valueReference"/>
             <min value="1"/>
             <max value="1"/>

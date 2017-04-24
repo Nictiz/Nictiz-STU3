@@ -1,3 +1,4 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="003f809e-8e85-4953-aabb-c2f53ec1ac3f"/>
     <meta>
@@ -22,6 +23,7 @@
     <abstract value="false"/>
     <type value="RelatedPerson"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+    <derivation value="constraint"/>
     <differential>
         <element id="RelatedPerson">
             <path value="RelatedPerson"/>
@@ -107,7 +109,7 @@
                 <map value="NL-CM:0.1.5" />
             </mapping>
         </element>
-        <element id="RelatedPerson.telecom.Phone">
+        <element id="RelatedPerson.telecom.system">
             <path value="RelatedPerson.telecom.system" />
             <min value="1" />
         </element>

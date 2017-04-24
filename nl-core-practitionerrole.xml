@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2017-03-29T18:10:18.766+02:00" />
@@ -20,19 +20,20 @@
   <abstract value="false" />
   <type value="PractitionerRole" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+  <derivation value="constraint"/>
   <differential>
-    <element id="Resource">
+    <element id="PractitionerRole">
       <path value="PractitionerRole" />
       <short value="HealthcareProviderRole" />
     </element>
-    <element id="Element">
+    <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
     </element>
-    <element id="Element">
+    <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
       <short value="HealthcareProvider" />
       <alias value="Zorgaanbieder" />
@@ -45,7 +46,7 @@
         <map value="NL-CM:17.1.6" />
       </mapping>
     </element>
-    <element id="Element">
+    <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
       <short value="HealthcareProviderRole" />
       <definition value="The role the healthcare provider fulfils in the healthcare process. For healthcare providers, this could be for example main practitioner, referrer or general practitioner." />
@@ -65,17 +66,17 @@
         <map value="NL-CM:17.1.5" />
       </mapping>
     </element>
-    <element id="Element">
+    <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
       <slicing>
         <discriminator>
           <type value="value"/>
-          <path value="system"/>
+          <path value="coding.system"/>
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Element">
+    <element id="PractitionerRole.specialty:SpecialtyAGB">
       <path value="PractitionerRole.specialty" />
       <sliceName value="SpecialtyAGB" />
       <short value="SpecialtyAGB" />
@@ -91,7 +92,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Element">
+    <element id="PractitionerRole.specialty:SpecialtyUZI">
       <path value="PractitionerRole.specialty" />
       <sliceName value="SpecialtyUZI" />
       <short value="SpecialtyUZI" />
@@ -116,7 +117,7 @@
         <map value="NL-CM:0.1.5" />
       </mapping>
     </element>
-    <element id="PractitionerRole.telecom.Phone">
+    <element id="PractitionerRole.telecom.system">
       <path value="PractitionerRole.telecom.system" />
       <min value="1" />
     </element>

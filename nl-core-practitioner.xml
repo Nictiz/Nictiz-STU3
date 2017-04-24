@@ -1,3 +1,4 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="d23890c7-3184-4f59-b83e-3bc7cf27fce0"/>
     <meta>
@@ -26,6 +27,7 @@
     <abstract value="false"/>
     <type value="Practitioner"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+    <derivation value="constraint"/>
     <differential>
         <element id="Practitioner">
             <path value="Practitioner"/>
@@ -36,7 +38,7 @@
                 <map value="NL-CM:17.1.1"/>
             </mapping>
         </element>
-        <element id="Practitioner.identifier.HealthcareProviderIdentificationNumber">
+        <element id="Practitioner.identifier">
             <path value="Practitioner.identifier"/>
             <slicing>
                 <discriminator>
@@ -52,7 +54,7 @@
                 <map value="NL-CM:17.1.2"/>
             </mapping>
         </element>
-        <element id="Practitioner.identifier.UZI">
+        <element id="Practitioner.identifier:UZI">
             <path value="Practitioner.identifier"/>
             <sliceName value="UZI"/>
             <short value="UZI"/>
@@ -60,7 +62,7 @@
             <alias value="UZI"/>
             <max value="1"/>
         </element>
-        <element id="Practitioner.identifier.UZI.system">
+        <element id="Practitioner.identifier:UZI.system">
             <path value="Practitioner.identifier.system"/>
             <min value="1"/>
             <type>
@@ -76,14 +78,14 @@
                 <valueString value="01011234"/>
             </example>
         </element>
-        <element id="Practitioner.identifier.AGB">
+        <element id="Practitioner.identifier:AGB">
             <path value="Practitioner.identifier"/>
             <sliceName value="AGB"/>
             <short value="AGB"/>
             <alias value="AGB"/>
             <max value="1"/>
         </element>
-        <element id="Practitioner.identifier.AGB.system">
+        <element id="Practitioner.identifier:AGB.system">
             <path value="Practitioner.identifier.system"/>
             <min value="1"/>
             <type>
@@ -91,7 +93,7 @@
             </type>
             <fixedUri value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
         </element>
-        <element id="Practitioner.identifier.AGB.value">
+        <element id="Practitioner.identifier:AGB.value">
             <path value="Practitioner.identifier.value"/>
             <min value="1"/>
             <example>
@@ -99,14 +101,14 @@
                 <valueString value="123456"/>
             </example>
         </element>
-        <element id="Practitioner.identifier.BIG">
+        <element id="Practitioner.identifier:BIG">
             <path value="Practitioner.identifier"/>
             <sliceName value="BIG"/>
             <short value="BIG"/>
             <alias value="BIG"/>
             <max value="1"/>
         </element>
-        <element id="Practitioner.identifier.BIG.system">
+        <element id="Practitioner.identifier:BIG.system">
             <path value="Practitioner.identifier.system"/>
             <min value="1"/>
             <type>
@@ -114,7 +116,7 @@
             </type>
             <fixedUri value="http://fhir.nl/fhir/NamingSystem/big"/>
         </element>
-        <element id="Practitioner.identifier.BIG.value">
+        <element id="Practitioner.identifier:BIG.value">
             <path value="Practitioner.identifier.value"/>
             <min value="1"/>
             <example>
@@ -147,7 +149,7 @@
                 <map value="NL-CM:0.1.5" />
             </mapping>
         </element>
-        <element id="Practitioner.telecom.Phone">
+        <element id="Practitioner.telecom.system">
             <path value="Practitioner.telecom.system" />
             <min value="1" />
         </element>
