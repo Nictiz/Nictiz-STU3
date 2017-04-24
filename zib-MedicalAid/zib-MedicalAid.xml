@@ -88,35 +88,16 @@
         <map value="NL-CM:10.1.9" />
       </mapping>
     </element>
-    <element id="DeviceUseStatement.bodySiteCodeableConcept">
-      <path value="DeviceUseStatement.bodySiteCodeableConcept" />
-      <short value="AidAnatomicalLocation" />
-      <definition value="Patient’s anatomical location of the medical aid used." />
-      <alias value="HulpmiddelAnatomischeLocatie" />
+    <element id="DeviceUseStatement.subject">
+      <path value="DeviceUseStatement.subject" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="Patient’s anatomical location of the medical aid used." />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.2--20150401000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-medischhulpmiddel" />
-        <map value="NL-CM:10.1.6" />
-      </mapping>
-    </element>
-    <element id="DeviceUseStatement.bodySiteCodeableConcept.coding">
-      <path value="DeviceUseStatement.bodySiteCodeableConcept.coding" />
-      <definition value="A reference to a code defined by a terminology system." />
-    </element>
-    <element id="DeviceUseStatement.bodySiteCodeableConcept.coding.system">
-      <path value="DeviceUseStatement.bodySiteCodeableConcept.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="DeviceUseStatement.bodySiteCodeableConcept.coding.code">
-      <path value="DeviceUseStatement.bodySiteCodeableConcept.coding.code" />
-      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
     </element>
     <element id="DeviceUseStatement.whenUsed">
       <path value="DeviceUseStatement.whenUsed" />
@@ -131,14 +112,6 @@
         <identity value="zib-medischhulpmiddel" />
         <map value="NL-CM:10.1.11" />
       </mapping>
-    </element>
-    <element id="DeviceUseStatement.device">
-      <path value="DeviceUseStatement.device" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-      </type>
     </element>
     <element id="DeviceUseStatement.indication">
       <path value="DeviceUseStatement.indication" />
@@ -162,19 +135,49 @@
       <alias value="Indicatie-Probleem" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference" />
       </type>
       <mapping>
         <identity value="zib-medischhulpmiddel" />
         <map value="NL-CM:10.1.7" />
       </mapping>
     </element>
-    <element id="DeviceUseStatement.subject">
-      <path value="DeviceUseStatement.subject" />
+    <element id="DeviceUseStatement.bodySite">
+      <path value="DeviceUseStatement.bodySite" />
+      <short value="AidAnatomicalLocation" />
+      <definition value="Patient’s anatomical location of the medical aid used." />
+      <alias value="HulpmiddelAnatomischeLocatie" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Patient’s anatomical location of the medical aid used." />
+        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.2--20150401000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-medischhulpmiddel" />
+        <map value="NL-CM:10.1.6" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.bodySite.coding">
+      <path value="DeviceUseStatement.bodySite.coding" />
+      <definition value="A reference to a code defined by a terminology system." />
+    </element>
+    <element id="DeviceUseStatement.bodySite.coding.system">
+      <path value="DeviceUseStatement.bodySite.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="DeviceUseStatement.bodySite.coding.code">
+      <path value="DeviceUseStatement.bodySite.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="DeviceUseStatement.device">
+      <path value="DeviceUseStatement.device" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
       </type>
     </element>
     <element id="DeviceUseStatement.note">
