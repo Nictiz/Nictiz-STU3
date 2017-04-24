@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-04-24T16:27:24.45+02:00" />
+  </meta>
+  <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare" />
+  <name value="nl-core-episodeofcare" />
+  <status value="draft" />
+  <date value="2017-04-24T16:22:23.5828179+02:00" />
+  <publisher value="HL7 Netherlands" />
+  <description value="An EpisdeOfCare resource as defined for the Dutch realm" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="EpisodeOfCare" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="EpisodeOfCare.patient">
+      <path value="EpisodeOfCare.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element id="EpisodeOfCare.managingOrganization">
+      <path value="EpisodeOfCare.managingOrganization" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+    <element id="EpisodeOfCare.careManager">
+      <path value="EpisodeOfCare.careManager" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
