@@ -36,6 +36,7 @@
   <abstract value="false" />
   <type value="DeviceUseStatement" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceUseStatement" />
+  <derivation value="constraint"/>
   <differential>
     <element id="DeviceUseStatement">
       <path value="DeviceUseStatement" />

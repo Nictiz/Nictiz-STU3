@@ -36,6 +36,7 @@
   <abstract value="false" />
   <type value="Device" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device" />
+  <derivation value="constraint"/>
   <differential>
     <element id="Device">
       <path value="Device" />
