@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-?xml-model href="http://hl7.org/fhir/STU3/condition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<Condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/condition.xsd">
+<?xml-model href="http://hl7.org/fhir/STU3/condition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/condition.xsd">
     <id value="example-overdrachtconcern2"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
@@ -29,20 +29,12 @@
             </table>
         </div>
     </text>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-ProblemStatusDate">
-        <valueDateTime value="2012-09-10"/>
-    </extension>    
-    <patient>
-        <reference value="Patient/example"/>
-        <display value="Jongeneel-de Haas"/>
-    </patient>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="44054006"/>
-            <display value="Diabetes mellitus type 2"/>
-        </coding>
-    </code>
+    <clinicalStatus value="active">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate">
+            <valueDateTime value="2012-11-15"/>
+        </extension>
+    </clinicalStatus>
+    <verificationStatus value="confirmed"/>
     <category>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -50,11 +42,16 @@
             <display value="Diagnosis"/>
         </coding>
     </category>
-    <clinicalStatus value="413322009">
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-ProblemStatusDate">
-            <valueDateTime value="2012-09-10"/>
-        </extension>
-    </clinicalStatus>
-    <verificationStatus value="confirmed"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44054006"/>
+            <display value="Diabetes mellitus type 2"/>
+        </coding>
+    </code>    
+    <subject>
+        <reference value="Patient/example"/>
+        <display value="Jongeneel-de Haas"/>
+    </subject>
     <onsetDateTime value="1996"/>
 </Condition>

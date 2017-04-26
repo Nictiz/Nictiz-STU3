@@ -47,6 +47,7 @@
   <abstract value="false" />
   <type value="Condition" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint"/>
   <differential>
     <element id="Condition">
       <path value="Condition" />
@@ -76,23 +77,24 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.clinicalStatus.extension.ProblemStatusDate">
+    <element id="Condition.clinicalStatus.extension.clinicalStatusDate">
       <path value="Condition.clinicalStatus.extension" />
-      <sliceName value="ProblemStatusDate" />
+      <sliceName value="ClinicalStatusDate" />
       <short value="ProblemStatusDate" />
       <definition value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current." />
       <alias value="ProbleemStatusDatum" />
       <min value="1" />
+      <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-ProblemStatusDate" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate" />
       </type>
       <mapping>
         <identity value="zib-overdrachtconcern" />
         <map value="NL-CM:5.1.7" />
       </mapping>
     </element>
-    <element id="Condition.clinicalStatus.extension.ProblemStatusDate.valueDateTime">
+    <element id="Condition.clinicalStatus.extension.clinicalStatusDate.valueDateTime">
       <path value="Condition.clinicalStatus.extension.valueDateTime" />
       <min value="1" />
     </element>
