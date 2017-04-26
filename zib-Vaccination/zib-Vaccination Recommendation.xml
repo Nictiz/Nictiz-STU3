@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-04-26T15:18:37.756+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pher" />
+  </extension>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-VaccinationRecommendation" />
+  <name value="ZIB VaccinationRecommendation" />
+  <status value="draft" />
+  <date value="2017-04-26T14:46:25.6166784+02:00" />
+  <publisher value="Nictiz" />
+  <description value="This profile is one of two profile based on Vaccinatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0." />
+  <purpose value="The ZIB vaccinatie defines the concept DesiredDateForRevaccination. FHIR has a dedicated resources for this. To cover DesiredDateForRevaccination and to exand on the ZIB vaccination, the ImmunizationRecommendation Resource is used and profiled. " />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-vaccinatie" />
+    <uri value="https://zibs.nl/wiki/Vaccinatie(NL)" />
+    <name value="Zorginformatiebouwsteen Vaccinatie" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ImmunizationRecommendation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="ImmunizationRecommendation.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element>
+      <path value="ImmunizationRecommendation.recommendation.date" />
+      <short value="DesiredDateForRevaccination" />
+      <definition value="Date on which this vaccination will have to be repeated according to the author’s information." />
+      <alias value="GewensteDatumHervaccinatie" />
+      <mapping>
+        <identity value="zib-vaccinatie" />
+        <map value="NL-CM:11.1.5" />
+      </mapping>
+    </element>
+    <element>
+      <path value="ImmunizationRecommendation.recommendation.vaccineCode" />
+      <short value="ProductCode" />
+      <definition value="The product code of the vaccine administered.&#xD;&#xA;There are several possible code systems for documenting the product code. If the vaccination data is registered based on an anamnesis, coding with the ATC code is preferred. In all cases it concerns those products that fall under ATC group J07 (vaccines)." />
+      <alias value="ProductCode" />
+      <mapping>
+        <identity value="zib-vaccinatie" />
+        <map value="NL-CM:11.1.2" />
+      </mapping>
+    </element>
+    <element>
+      <path value="ImmunizationRecommendation.recommendation.vaccineCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ImmunizationRecommendation.recommendation.vaccineCode.coding.GPK">
+      <path value="ImmunizationRecommendation.recommendation.vaccineCode.coding" />
+      <sliceName value="ProductCodeGPKCodelijst" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProductCodeGPKCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.3--20150401000000" />
+          <display value="ProductCodeGPKCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="ImmunizationRecommendation.recommendation.vaccineCode.coding.HPK">
+      <path value="ImmunizationRecommendation.recommendation.vaccineCode.coding" />
+      <sliceName value="ProductCodeHPKCodelijst" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProductCodeHPKCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.2--20150401000000" />
+          <display value="ProductCodeHPKCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="ImmunizationRecommendation.recommendation.vaccineCode.coding.ZI">
+      <path value="ImmunizationRecommendation.recommendation.vaccineCode.coding" />
+      <sliceName value="ProductCodeZICodelijst" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProductCodeZICodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.6--20150401000000" />
+          <display value="ProductCodeZICodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="ImmunizationRecommendation.recommendation.vaccineCode.coding.ATC">
+      <path value="ImmunizationRecommendation.recommendation.vaccineCode.coding" />
+      <sliceName value="ProductCodeATCCodelijst" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProductCodeATCCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.4--20150401000000" />
+          <display value="ProductCodeATCCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="ImmunizationRecommendation.recommendation.vaccineCode.coding.PRK">
+      <path value="ImmunizationRecommendation.recommendation.vaccineCode.coding" />
+      <sliceName value="ProductCodePRKCodelijst" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProductCodePRKCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.1--20150401000000" />
+          <display value="ProductCodePRKCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="ImmunizationRecommendation.recommendation.vaccineCode.coding.GTIN">
+      <path value="ImmunizationRecommendation.recommendation.vaccineCode.coding" />
+      <sliceName value="ProductCodeGTINCodelijst" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ProductCodeGTINCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.5--20150401000000" />
+          <display value="ProductCodeGTINCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="ImmunizationRecommendation.recommendation.protocol.authority" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+    <element>
+      <path value="ImmunizationRecommendation.recommendation.supportingImmunization" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+      </type>
+    </element>
+    <element>
+      <path value="ImmunizationRecommendation.recommendation.supportingPatientInformation" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
