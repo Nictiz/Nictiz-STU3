@@ -1,0 +1,21 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.14.1.2--20150401000000"/>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.1.2--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.14.1.2"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="VerrichtingTypeCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <description value="CBV verrichtingen (99): Alle waarden"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:99"/>
+        </include>
+    </compose>
+</ValueSet>

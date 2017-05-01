@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-?xml-model href="http://hl7.org/fhir/STU3/procedure.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<Procedure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/DSTU2/procedure.xsd" xmlns="http://hl7.org/fhir">
+<?xml-model href="http://hl7.org/fhir/STU3/procedure.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Procedure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/procedure.xsd" xmlns="http://hl7.org/fhir">
     <id value="example-overdracthverrichting"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
@@ -42,32 +42,25 @@
             <reference value="Practitioner/example"/>
         </valueReference>
     </extension>
-    <subject>
-            <reference value="Patient/example"/>
-            <display value="Jongeneel-de Haas"/>
-    </subject>
-    <status value="completed"/>
+       <status value="completed"/>
     <code>
         <coding>
             <system value="urn:oid:2.16.840.1.113883.2.4.3.120.5.2"/>
             <code value="338663L"/>
             <display value="KNIE - PROTHESE IMPLANTATIE GEWRICHT - LINKS"/>
         </coding>
-    </code>
-    <bodySite>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="210659002"/>
-            <display value="Left knee"/>
-        </coding>
-    </bodySite>
-    <reasonReference>
-        <reference value="Condition/example"/>
-        <display value="Artrose"/>
-    </reasonReference>
+    </code> 
+    <subject>
+        <reference value="Patient/example"/>
+        <display value="Jongeneel-de Haas"/>
+    </subject>
+     <performedPeriod>
+        <start value="2012-06-05"/>
+    </performedPeriod>   
     <performer>
         <actor>
             <reference value="Practitioner/example"/>
+            <display value="H. de Vries"/>
         </actor>
     </performer>
     <performer>
@@ -76,9 +69,17 @@
             <display value="UMCG"/>
         </actor>
     </performer>
-    <performedPeriod>
-        <start value="2012-06-05"/>
-    </performedPeriod>
+    <reasonReference>
+        <reference value="Condition/example"/>
+        <display value="Artrose"/>
+    </reasonReference>
+    <bodySite>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="210659002"/>
+            <display value="Left knee"/>
+        </coding>
+    </bodySite>
     <focalDevice>
         <manipulated>
             <reference value="Device/example"/>
