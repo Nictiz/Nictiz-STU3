@@ -36,6 +36,7 @@
   <abstract value="false" />
   <type value="Procedure" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <derivation value="constraint"/>
   <differential>
     <element id="Procedure">
       <path value="Procedure" />
@@ -77,6 +78,7 @@
       <short value="ProcedureType" />
       <definition value="The name of the procedure.&#13;&#10;&#13;&#10;As of 1 January 2013, all procedures in the primary process have to be documented with CBV codes. To meet this requirement, the DHD procedure thesaurus (CBV procedures set) is used to code procedures. It is possible that in addition to the CBV procedures set, the NIC will be used for nurse procedures and that a “coded value set” will be introduced for paramedic procedures." />
       <alias value="VerrichtingType" />
+      <min value="1"/>
       <binding>
         <strength value="extensible" />
         <description value="The name of the procedure using the Verrichtingenthesaurus DHD." />
@@ -106,7 +108,7 @@
       <path value="Procedure.subject" />
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
       <type>
         <code value="Reference" />
@@ -144,7 +146,7 @@
       <slicing>
         <discriminator>
           <type value="profile"/>
-          <path value="reference"/>
+          <path value="actor.reference"/>
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -192,6 +194,21 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
     </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <short value="Indication::Problem" />
+      <definition value="The indication is the reason for the procedure."/>
+      <alias value="Problem" />
+      <alias value="Indication" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
+      </type>
+      <mapping>
+        <identity value="zib-overdrachtverrichting" />
+        <map value="NL-CM:14.1.9" />
+      </mapping>
+    </element>
     <element id="Procedure.bodySite">
       <path value="Procedure.bodySite" />
       <short value="AnatomicalLocationOfTheProcedure" />
@@ -220,23 +237,6 @@
     <element id="Procedure.bodySite.coding.code">
       <path value="Procedure.bodySite.coding.code" />
       <min value="1" />
-    </element>
-    <element id="Procedure.reason">
-      <path value="Procedure.reason[x]" />
-      <short value="Indication::Problem" />
-      <alias value="Problem" />
-      <alias value="Indication" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
-      </type>
-      <mapping>
-        <identity value="zib-overdrachtverrichting" />
-        <map value="NL-CM:14.1.9" />
-      </mapping>
     </element>
     <element id="Procedure.focalDevice">
       <path value="Procedure.focalDevice" />
