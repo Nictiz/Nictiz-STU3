@@ -41,6 +41,7 @@
   <abstract value="false" />
   <type value="NutritionOrder" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+  <derivation value="constraint" />
   <differential>
     <element id="NutritionOrder">
       <path value="NutritionOrder" />
@@ -82,18 +83,18 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
-    <element id="NutritionOrder.orderer">
-      <path value="NutritionOrder.orderer" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-    </element>
     <element id="NutritionOrder.encounter">
       <path value="NutritionOrder.encounter" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+      </type>
+    </element>
+    <element id="NutritionOrder.orderer">
+      <path value="NutritionOrder.orderer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
     </element>
     <element id="NutritionOrder.allergyIntolerance">

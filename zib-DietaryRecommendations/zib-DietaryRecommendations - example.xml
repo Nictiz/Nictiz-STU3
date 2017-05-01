@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/nutritionorder.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<NutritionOrder xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/nutritionorder.xsd">
+  <id value="example"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations"/>
+  </meta>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Patient with id example</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>k</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations-Explanation">
+    <valueString value="Since last week the dieet changed to a more protein rich dieet"/>
+  </extension>
+  <status value="completed"/>
+  <patient>
+    <reference value="Patient/example"/>
+  </patient>
+  <encounter>
+    <reference value="Encounter/example"/>
+  </encounter>
+  <dateTime value="2014-06-01"/>
+  <orderer>
+    <reference value="Practitioner/example"/>
+  </orderer>
+  <oralDiet>
+    <type>
+      <text value="protein rich"/>
+    </type>
+    <fluidConsistencyType>
+      <text value="syrupy"/>
+    </fluidConsistencyType>
+    <instruction value="Prepare warm"/>
+  </oralDiet>
+</NutritionOrder>
