@@ -1,17 +1,15 @@
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
   <id value="632d5a10-f1f5-492a-ad09-2a3470302de0" />
   <meta>
     <versionId value="3" />
-    <lastUpdated value="2017-02-23T09:38:14.398+00:00" />
+    <lastUpdated value="2017-04-26T14:45:08.702+02:00" />
   </meta>
   <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Vaccinatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”. Only vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance. Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program).
+    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Vaccinatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”. Only vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance. Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program).
         RVP information is especially important for children. Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk.</p>
-    </div>
-  </text>
+</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination" />
   <name value="ZIB Vaccination" />
   <status value="draft" />
@@ -25,8 +23,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description
-    value="Vaccinatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;&#13;&#10;Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”.&#13;&#10;&#13;&#10;Only vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance.&#13;&#10;&#13;&#10;Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program). RVP information is especially important for children. &#13;&#10;&#13;&#10;Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk." />
+  <description value="Vaccinatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#xD;&#xA;&#xD;&#xA;Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”.&#xD;&#xA;&#xD;&#xA;Only vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance.&#xD;&#xA;&#xD;&#xA;Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program). RVP information is especially important for children. &#xD;&#xA;&#xD;&#xA;Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
@@ -38,6 +35,7 @@
   <abstract value="false" />
   <type value="Immunization" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Immunization" />
+  <derivation value="constraint" />
   <differential>
     <element id="Immunization">
       <path value="Immunization" />
@@ -49,36 +47,10 @@
         <map value="NL-CM:11.1.1" />
       </mapping>
     </element>
-    <element id="Immunization.extension">
-      <path value="Immunization.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Immunization.extension.DesiredDateForRevaccination">
-      <path value="Immunization.extension" />
-      <sliceName value="DesiredDateForRevaccination" />
-      <short value="DesiredDateForRevaccination" />
-      <definition value="Date on which this vaccination will have to be repeated according to the author’s information." />
-      <alias value="GewensteDatumHervaccinatie" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination-DesiredDateForRevaccination" />
-      </type>
-      <mapping>
-        <identity value="zib-vaccinatie" />
-        <map value="NL-CM:11.1.5" />
-      </mapping>
-    </element>
     <element id="Immunization.vaccineCode">
       <path value="Immunization.vaccineCode" />
       <short value="ProductCode" />
-      <definition value="The product code of the vaccine administered.&#13;&#10;There are several possible code systems for documenting the product code. If the vaccination data is registered based on an anamnesis, coding with the ATC code is preferred. In all cases it concerns those products that fall under ATC group J07 (vaccines)." />
+      <definition value="The product code of the vaccine administered.&#xD;&#xA;There are several possible code systems for documenting the product code. If the vaccination data is registered based on an anamnesis, coding with the ATC code is preferred. In all cases it concerns those products that fall under ATC group J07 (vaccines)." />
       <alias value="ProductCode" />
       <mapping>
         <identity value="zib-vaccinatie" />
@@ -89,8 +61,8 @@
       <path value="Immunization.vaccineCode.coding" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="system"/>
+          <type value="value" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -98,10 +70,10 @@
     </element>
     <element id="Immunization.vaccineCode.coding.GPK">
       <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="VoorschriftProductGPKCodelijst" />
+      <sliceName value="ProductCodeGPKCodelijst" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="ProductCodeGPKCodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.3--20150401000000" />
@@ -114,7 +86,7 @@
       <sliceName value="ProductCodeHPKCodelijst" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="ProductCodeHPKCodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.2--20150401000000" />
@@ -127,7 +99,7 @@
       <sliceName value="ProductCodeZICodelijst" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="ProductCodeZICodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.6--20150401000000" />
@@ -140,7 +112,7 @@
       <sliceName value="ProductCodeATCCodelijst" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="ProductCodeATCCodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.4--20150401000000" />
@@ -153,7 +125,7 @@
       <sliceName value="ProductCodePRKCodelijst" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="ProductCodePRKCodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.1--20150401000000" />
@@ -166,7 +138,7 @@
       <sliceName value="ProductCodeGTINCodelijst" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="ProductCodeGTINCodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.5--20150401000000" />
@@ -185,47 +157,16 @@
         <map value="NL-CM:11.1.3" />
       </mapping>
     </element>
-    <element id="Immunization.performer">
-      <path value="Immunization.performer" />
-      <short value="Administrator" />
-      <definition value="The healthcare provider and/or organization where or by whom the immunization was done." />
-      <alias value="Toediener" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-      </type>
-      <mapping>
-        <identity value="zib-vaccinatie" />
-        <map value="NL-CM:11.1.6" />
-      </mapping>
-    </element>
-    <element id="Immunization.requester">
-      <path value="Immunization.requester" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-      </type>
-    </element>
-    <element id="Immunization.encounter">
-      <path value="Immunization.encounter" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
-      </type>
-    </element>
     <element id="Immunization.manufacturer">
       <path value="Immunization.manufacturer" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
     </element>
     <element id="Immunization.doseQuantity">
       <path value="Immunization.doseQuantity" />
+      <sliceName value="SimpleQuantity" />
       <short value="Dose" />
       <definition value="The amount of product administered shown in milliliters. In most cases, the entire product is administered; in some cases, a described part of the product is administered." />
       <alias value="Dosis" />
@@ -237,12 +178,40 @@
     <element id="Immunization.note">
       <path value="Immunization.note" />
       <short value="Explanation" />
-      <definition value="Free text explanation.&#13;&#10;Examples of commonly used explanations are: - &quot;Vaccination according to the National Immunisation Program&quot;. - &quot;Not according to the National Immunisation Program&quot;, followed by further explanation. - &quot;Unknown&quot;" />
+      <definition value="Free text explanation.&#xD;&#xA;Examples of commonly used explanations are: - &quot;Vaccination according to the National Immunisation Program&quot;. - &quot;Not according to the National Immunisation Program&quot;, followed by further explanation. - &quot;Unknown&quot;" />
       <alias value="Toelichting" />
       <mapping>
         <identity value="zib-vaccinatie" />
         <map value="NL-CM:11.1.7" />
       </mapping>
+    </element>
+    <element id="Immunization.performer">
+      <path value="Immunization.performer" />
+      <short value="Administrator" />
+      <definition value="The healthcare provider and/or organization where or by whom the immunization was done." />
+      <alias value="Toediener" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <mapping>
+        <identity value="zib-vaccinatie" />
+        <map value="NL-CM:11.1.6" />
+      </mapping>
+    </element>
+    <element id="Immunization.requester">
+      <path value="Immunization.requester" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+    </element>
+    <element id="Immunization.encounter">
+      <path value="Immunization.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

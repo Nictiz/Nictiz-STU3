@@ -53,8 +53,7 @@
       <definition value="The medical reason for use of the medical aid." />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
       </type>
     </element>
   </differential>

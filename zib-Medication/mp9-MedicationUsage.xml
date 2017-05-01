@@ -110,8 +110,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
       </type>
     </element>
     <element id="MedicationStatement.partOf">
@@ -131,8 +130,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispense" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispense" />
       </type>
     </element>
     <element id="MedicationStatement.medicationReference">
@@ -140,8 +138,7 @@
       <short value="GebruiksProduct" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
       </type>
     </element>
     <element id="MedicationStatement.effective">
@@ -161,8 +158,7 @@
       <path value="MedicationStatement.subject" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
     <element id="MedicationStatement.taken">

@@ -1,0 +1,44 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.2--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.3.2"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="AlertNaamCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:4bc9e0c9-e948-4342-b226-943fdaa755ee"/>
+        <timestamp value="2017-04-24T11:07:11.471+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="66598005"/>
+            <display value="Infectious disease carrier"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="432415000"/>
+            <display value="Methicillin resistant staphylococcus aureus carrier"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="431109006"/>
+            <display value="Carrier of vancomycin resistant enterococcus"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="699433000"/>
+            <display value="Human immunodeficiency virus (HIV) carrier"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Other"/>
+        </contains>
+    </expansion>
+</ValueSet>
