@@ -50,7 +50,7 @@
         <end value="2013-01-31"/>
     </period>
     <payor>
-        <!-- Reference to http://nictiz.nl/fhir/StructureDefinition/zib-PayerInsuranceCompany -->
+        <!-- http://fhir.nl/fhir/StructureDefinition/nl-core-organization -->
         <reference value="Organization/example"/>
         <display value="Menzis Zorgverzekeraar N.V"/>
     </payor>

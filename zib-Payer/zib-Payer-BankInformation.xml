@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
   <id value="4e7fdcca-4c2d-4aec-8f3b-94d0bd9bfab1" />
@@ -32,6 +33,7 @@
   <context value="Patient" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint"/>
   <differential>
     <element id="Extension">
       <path value="Extension" />
@@ -112,14 +114,6 @@
         <identity value="zib-betaler" />
         <map value="NL-CM:1.1.10" />
       </mapping>
-    </element>
-    <element id="Extension.BankInformation.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-BetalerBankgegevens" />
-    </element>
-    <element id="Extension.value">
-      <path value="Extension.value[x]" />
-      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
   <meta>
@@ -28,6 +29,7 @@
   <abstract value="false" />
   <type value="Patient" />
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+  <derivation value="constraint"/>
   <differential>
     <element id="Patient">
       <path value="Patient" />
@@ -135,7 +137,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-BetalerBankgegevens" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />
     </element>
     <element id="Patient.extension.value">
       <path value="Patient.extension.value[x]" />
