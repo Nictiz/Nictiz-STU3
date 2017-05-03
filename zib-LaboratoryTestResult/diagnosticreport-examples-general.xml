@@ -2,10 +2,6 @@
 <?xml-model href="http://hl7.org/fhir/bundle.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/bundle.xsd" xmlns="http://hl7.org/fhir">
   <id value="72ac8493-52ac-41bd-8d5d-7258c289b5ea"/>
-  <meta>
-    <lastUpdated value="2012-04-14T10:35:23Z"/>
-    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
-  </meta>
   <type value="collection"/>
   <entry>
     <fullUrl value="http://hl7.org/fhir/DiagnosticReport/3"/>
@@ -14,6 +10,7 @@
         <id value="3"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <text>
           <status value="generated"/>
@@ -1308,6 +1305,7 @@
         <id value="4"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -2405,6 +2403,7 @@
         <id value="5"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -3491,7 +3490,7 @@
         <id value="6"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
-        </meta>
+                  <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/></meta>
         <contained>
           <Observation>
             <id value="o1"/>
@@ -4571,6 +4570,7 @@
         <id value="7"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -5627,6 +5627,7 @@
         <id value="8"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -6689,6 +6690,7 @@
         <id value="9"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -7751,6 +7753,7 @@
         <id value="15"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -8823,7 +8826,7 @@
         <id value="16"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
-        </meta>
+                  <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/></meta>
         <contained>
           <Observation>
             <id value="o1"/>
@@ -9920,7 +9923,7 @@
         <id value="17"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
-        </meta>
+                  <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/></meta>
         <contained>
           <Observation>
             <id value="o1"/>
@@ -11006,7 +11009,7 @@
         <id value="18"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
-        </meta>
+                  <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/></meta>
         <contained>
           <Observation>
             <id value="o1"/>
@@ -12086,7 +12089,7 @@
         <id value="19"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
-        </meta>
+                  <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/></meta>
         <contained>
           <Observation>
             <id value="o1"/>
@@ -13142,7 +13145,7 @@
         <id value="20"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
-        </meta>
+                  <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/></meta>
         <contained>
           <Observation>
             <id value="o1"/>
@@ -14204,6 +14207,7 @@
         <id value="21"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -15266,6 +15270,7 @@
         <id value="25"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -15897,6 +15902,7 @@
         <id value="26"/>
         <meta>
           <lastUpdated value="2012-04-14T10:35:23Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <contained>
           <Observation>
@@ -15956,6 +15962,7 @@
         <id value="27"/>
         <meta>
           <lastUpdated value="2012-05-23T14:27:01Z"/>
+          <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
         </meta>
         <text>
           <status value="generated"/>

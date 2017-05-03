@@ -126,109 +126,109 @@
         <display value="Acme Laboratory, Inc"/>
       </performer>
       <specimen>
-        <reference value="#ltt"/>
+        <reference value="ltt"/>
         <display value="Lavender Top Tube"/>
       </specimen>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r1"/>
+          <reference value="r1"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r2"/>
+          <reference value="r2"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r3"/>
+          <reference value="r3"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r4"/>
+          <reference value="r4"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r5"/>
+          <reference value="r5"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r6"/>
+          <reference value="r6"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r7"/>
+          <reference value="r7"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r8"/>
+          <reference value="r8"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r9"/>
+          <reference value="r9"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r10"/>
+          <reference value="r10"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r11"/>
+          <reference value="r11"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r12"/>
+          <reference value="r12"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r13"/>
+          <reference value="r13"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r14"/>
+          <reference value="r14"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r15"/>
+          <reference value="r15"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r16"/>
+          <reference value="r16"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#r17"/>
+          <reference value="r17"/>
         </target>
       </related>
     </Observation>
@@ -902,139 +902,139 @@
         <display value="Acme Laboratory, Inc"/>
       </performer>
       <specimen>
-        <reference value="#rtt"/>
+        <reference value="rtt"/>
         <display value="Red Top Tube"/>
       </specimen>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o1"/>
+          <reference value="o1"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o2"/>
+          <reference value="o2"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o3"/>
+          <reference value="o3"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o4"/>
+          <reference value="o4"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o5"/>
+          <reference value="o5"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o6"/>
+          <reference value="o6"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o7"/>
+          <reference value="o7"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o8"/>
+          <reference value="o8"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o9"/>
+          <reference value="o9"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o10"/>
+          <reference value="o10"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o11"/>
+          <reference value="o11"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o12"/>
+          <reference value="o12"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o13"/>
+          <reference value="o13"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o14"/>
+          <reference value="o14"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o15"/>
+          <reference value="o15"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o16"/>
+          <reference value="o16"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o17"/>
+          <reference value="o17"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o18"/>
+          <reference value="o18"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o19"/>
+          <reference value="o19"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o20"/>
+          <reference value="o20"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o21"/>
+          <reference value="o21"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#o22"/>
+          <reference value="o22"/>
         </target>
       </related>
     </Observation>
@@ -1905,61 +1905,61 @@
         <display value="Acme Laboratory, Inc"/>
       </performer>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u1"/>
+          <reference value="u1"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u2"/>
+          <reference value="u2"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u3"/>
+          <reference value="u3"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u4"/>
+          <reference value="u4"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u5"/>
+          <reference value="u5"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u6"/>
+          <reference value="u6"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u7"/>
+          <reference value="u7"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u8"/>
+          <reference value="u8"/>
         </target>
       </related>
       <related>
         <type value="has-member"/>
         <target>
-          <reference value="#u9"/>
+          <reference value="u9"/>
         </target>
       </related>
     </Observation>
@@ -1989,7 +1989,7 @@
         <unit value="pH"/>
       </valueQuantity>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2022,7 +2022,7 @@
         </coding>
       </valueCodeableConcept>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2051,7 +2051,7 @@
         <value value="1.009"/>
       </valueQuantity>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2084,7 +2084,7 @@
         </coding>
       </valueCodeableConcept>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2117,7 +2117,7 @@
         </coding>
       </valueCodeableConcept>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2150,7 +2150,7 @@
         </coding>
       </valueCodeableConcept>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2180,7 +2180,7 @@
         <unit value="/uL"/>
       </valueQuantity>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2211,7 +2211,7 @@
         <unit value="/uL"/>
       </valueQuantity>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2242,7 +2242,7 @@
         <unit value="/mL"/>
       </valueQuantity>
       <specimen>
-        <reference value="#urine"/>
+        <reference value="urine"/>
         <display value="Urine Sample"/>
       </specimen>
     </Observation>
@@ -2271,27 +2271,27 @@
     </actor>
   </performer>
   <specimen>
-    <reference value="#rtt"/>
+    <reference value="rtt"/>
     <display value="Red Top Tube"/>
   </specimen>
   <specimen>
-    <reference value="#ltt"/>
+    <reference value="ltt"/>
     <display value="Lavender Top Tube"/>
   </specimen>
   <specimen>
-    <reference value="#urine"/>
+    <reference value="urine"/>
     <display value="Urine Sample"/>
   </specimen>
   <result>
-    <reference value="#p1"/>
+    <reference value="p1"/>
     <display value="Chemistry Panel"/>
   </result>
   <result>
-    <reference value="#p2"/>
+    <reference value="p2"/>
     <display value="CBC"/>
   </result>
   <result>
-    <reference value="#p3"/>
+    <reference value="p3"/>
     <display value="Urinalysis"/>
   </result>
 </DiagnosticReport>

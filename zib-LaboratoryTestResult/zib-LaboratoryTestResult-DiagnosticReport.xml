@@ -35,6 +35,7 @@
   <abstract value="false" />
   <type value="DiagnosticReport" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+  <derivation value="constraint"/>
   <differential>
     <element id="DiagnosticReport">
       <path value="DiagnosticReport" />
@@ -153,7 +154,7 @@
       <path value="DiagnosticReport.result" />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
       </type>
       <mapping>
         <identity value="zib-overdrachtlaboratoriumuitslag" />
