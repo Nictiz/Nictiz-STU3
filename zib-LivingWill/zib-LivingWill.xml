@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-05-03T15:49:03.381+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cbcc" />
+  </extension>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill" />
+  <name value="ZIB LivingWill" />
+  <status value="draft" />
+  <date value="2017-05-03T12:18:39.6788994+02:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="LivingWill as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#xD;&#xA;A living will is a verbal or written description of the patient’s wishes with regard to future medical action or end of their life. A living will is mainly used for situations in which the patient is no longer able to speak about these decisions with their healthcare provider." />
+  <purpose value="A good overview of the patient’s wishes is important. A healthcare provider can use the living will to discuss the existing wishes with the persons involved and to incorporate these wishes in their own policy. A concise, orderly list is of particular importance in acute care situations." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-wilsverklaring" />
+    <uri value="https://zibs.nl/wiki/Wilsverklaring(NL)" />
+    <name value="Zorginformatiebouwsteen Wilsverklaring" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Consent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Consent ">
+      <path value="Consent" />
+      <short value="LivingWill" />
+      <mapping>
+        <identity value="zib-wilsverklaring" />
+        <map value="NL-CM:7.15.1" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Consent.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Consent.extension.disorder">
+      <path value="Consent.extension" />
+      <sliceName value="disorder" />
+      <short value="Disorder" />
+      <definition value="The problem or disorder to which the living will applies." />
+      <alias value="Aandoening" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill-Disorder" />
+      </type>
+      <mapping>
+        <identity value="zib-wilsverklaring" />
+        <map value="NL-CM:7.15.4" />
+      </mapping>
+    </element>
+    <element id="Consent.extension.explanation ">
+      <path value="Consent.extension" />
+      <sliceName value="explanation" />
+      <short value="Explanation" />
+      <alias value="Toelichting" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill-Explanation" />
+      </type>
+      <mapping>
+        <identity value="zib-wilsverklaring" />
+        <map value="NL-CM:7.15.6" />
+      </mapping>
+    </element>
+    <element id="Consent.category ">
+      <path value="Consent.category" />
+      <short value="TypeOfLivingWill" />
+      <definition value="List of the different types of living wills." />
+      <alias value="WilsverklaringType" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ConsentCategory" />
+        </extension>
+        <strength value="extensible" />
+        <description value="List of the different types of living wills." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.15.1--20150401000000" />
+          <display value="WilsverklaringTypeCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-wilsverklaring" />
+        <map value="NL-CM:7.15.2" />
+      </mapping>
+    </element>
+    <element id="Consent.category.coding.system ">
+      <path value="Consent.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Consent.category.coding.code ">
+      <path value="Consent.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Consent.patient ">
+      <path value="Consent.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element id="Consent.dateTime ">
+      <path value="Consent.dateTime" />
+      <short value="LivingWillDate" />
+      <definition value="The date on which the living will was recorded." />
+      <alias value="WilsverklaringDatum" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-wilsverklaring" />
+        <map value="NL-CM:7.15.7" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Consent.consentingParty" />
+      <short value="Representative::Contact" />
+      <definition value="The person who is the legal representative or is appointed as the authorized representative in the signed authorization." />
+      <alias value="Vertegenwoordiger::Contactpersoon" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+      </type>
+      <mapping>
+        <identity value="zib-wilsverklaring" />
+        <map value="NL-CM:7.15.3" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Consent.source[x]" />
+      <alias value="WilsverklaringDocument" />
+      <mapping>
+        <identity value="zib-wilsverklaring" />
+        <map value="NL-CM:7.15.5" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
