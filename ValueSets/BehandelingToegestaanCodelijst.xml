@@ -1,0 +1,34 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.2--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.2.2"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="BehandelingToegestaanCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:3fcb22f6-969a-40bd-8dfd-0d0b99175ebf"/>
+        <timestamp value="2017-05-03T18:25:23.388+02:00"/>
+        <total value="3"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+            <code value="JA"/>
+            <display value="Ja"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+            <code value="JA_MAAR"/>
+            <display value="Ja, maar met beperkingen"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+            <code value="NEE"/>
+            <display value="Nee"/>
+        </contains>
+    </expansion>
+</ValueSet>

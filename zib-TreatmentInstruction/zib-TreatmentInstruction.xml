@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-05-03T18:31:31.668+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cbcc" />
+  </extension>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction" />
+  <name value="ZIB TreatmentInstruction" />
+  <status value="draft" />
+  <date value="2017-05-03T12:18:39.6788994+02:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. A treatment instruction includes an agreed constraint in the treatment based on the oral or written living will of the patient." />
+  <purpose value="A good overview of the patient’s wishes is important. A healthcare provider can use the living will to discuss the existing wishes with the persons involved and to incorporate these wishes in their own policy. A concise, orderly list is of particular importance in acute care situations." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-treatmentinstruction" />
+    <uri value="https://zibs.nl/wiki/BehandelAanwijzing(Nl)" />
+    <name value="Zorginformatiebouwsteen BehandelAanwijzing" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Consent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Consent ">
+      <path value="Consent" />
+      <short value="TreatmentInstruction" />
+      <mapping>
+        <identity value="zib-treatmentinstruction" />
+        <map value="NL-CM:2.1.1" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Consent.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Consent.extension:verification">
+      <path value="Consent.extension" />
+      <sliceName value="verification" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
+      </type>
+    </element>
+    <element id="Consent.extension:verification.extension:Verified">
+      <path value="Consent.extension.extension" />
+      <sliceName value="Verified" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="zib-treatmentinstruction" />
+        <map value="NL-CM:2.1.9" />
+      </mapping>
+    </element>
+    <element id="Consent.extension:verification.extension:VerifiedWith">
+      <path value="Consent.extension.extension" />
+      <sliceName value="VerifiedWith" />
+      <binding>
+        <strength value="extensible" />
+        <description value="The person with whom the treatment instruction was discussed and verified." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.4--20150401000000" />
+          <display value="GeverifieerdBijCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-treatmentinstruction" />
+        <map value=" NL-CM:2.1.11" />
+      </mapping>
+    </element>
+    <element id="Consent.extension:verification.extension:VerificationDate">
+      <path value="Consent.extension.extension" />
+      <sliceName value="VerificationDate" />
+      <max value="1" />
+      <mapping>
+        <identity value="zib-treatmentinstruction" />
+        <map value="NL-CM:2.1.10" />
+      </mapping>
+    </element>
+    <element id="Consent.extension:verification.url">
+      <path value="Consent.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
+    </element>
+    <element id="Consent.action ">
+      <path value="Consent.action" />
+      <short value="TreatmentPermitted" />
+      <definition value="Indication of permission for the treatment, no permission for the treatment, or permission for the treatment with constraints." />
+      <alias value="BehandelingToegestaan" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ConsentAction" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.2--20150401000000" />
+          <display value="BehandelingToegestaanCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-treatmentinstruction" />
+        <map value="NL-CM:2.1.4" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Consent.action.coding.system" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Consent.action.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Consent.purpose ">
+      <path value="Consent.purpose" />
+      <short value="Treatment" />
+      <definition value="The medical treatment to which the treatment instruction applies." />
+      <alias value="Behandeling" />
+      <max value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PurposeOfUse" />
+        </extension>
+        <strength value="extensible" />
+        <description value="The medical treatment to which the treatment instruction applies." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.1--20150401000000" />
+          <display value="BehandelingCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-treatmentinstruction" />
+        <map value="NL-CM:2.1.3" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Consent.purpose.system" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Consent.purpose.code" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Consent.except.code" />
+      <short value="Constraints" />
+      <definition value="The constraints or specific circumstances that apply to a certain treatment." />
+      <alias value="Beperkingen" />
+      <max value="1" />
+      <mapping>
+        <identity value="zib-treatmentinstruction" />
+        <map value="NL-CM:2.1.5" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

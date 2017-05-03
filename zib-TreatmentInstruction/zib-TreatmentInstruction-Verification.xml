@@ -1,16 +1,14 @@
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ffa1ef65-c2f2-40af-851e-49ba417c6a73" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2017-02-22T10:32:08.923+00:00" />
+    <lastUpdated value="2017-05-03T18:10:49.287+02:00" />
   </meta>
   <text>
-    <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Extenstion to the CarePlan, which is used for the 'TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0, to provide information on the verification of the treatment instruction.</p>
-    </div>
-  </text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Extenstion to the CarePlan, which is used for the 'TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0, to provide information on the verification of the treatment instruction.</p>
+</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
   <name value="ZIB TreatmentInstruction Verification" />
   <status value="draft" />
@@ -24,35 +22,25 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Extenstion to the CarePlan, which is used for the 'TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0,  to provide information on the verification of the treatment instruction.&#13;&#10;" />
+  <description value="Extenstion to the CarePlan, which is used for the 'TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0,  to provide information on the verification of the treatment instruction.&#xD;&#xA;" />
   <purpose value="Need to provide infromation on the possible verification of the treatment instruction given by the patient." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="CarePlan" />
+  <context value="Consent" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <differential>
-    <element id="Extension">
+    <element>
       <path value="Extension" />
       <short value="Verification" />
       <definition value="Container of the Verification concept. This container contains all data elements of the Verification concept." />
       <alias value="Verificatie" />
       <isModifier value="false" />
     </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Extension.extension.Verified">
+    <element>
       <path value="Extension.extension" />
       <sliceName value="Verified" />
     </element>
@@ -69,7 +57,7 @@
         <code value="boolean" />
       </type>
     </element>
-    <element id="Extension.extension.VerifiedWith">
+    <element>
       <path value="Extension.extension" />
       <sliceName value="VerifiedWith" />
     </element>
@@ -77,16 +65,13 @@
       <path value="Extension.extension.url" />
       <fixedUri value="VerifiedWith" />
     </element>
-    <element id="Extension.extension.VerifiedWith.valueCodeableConcept">
+    <element>
       <path value="Extension.extension.valueCodeableConcept" />
-      <short value="VerifiedWith" />
-      <definition value="The person with whom the treatment instruction was discussed and verified." />
-      <alias value="GeverifieerdBij" />
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Extension.extension.VerifiedDate">
+    <element>
       <path value="Extension.extension" />
       <sliceName value="VerificationDate" />
     </element>
@@ -103,11 +88,7 @@
         <code value="dateTime" />
       </type>
     </element>
-    <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
-    </element>
-    <element id="Extension.value">
+    <element>
       <path value="Extension.value[x]" />
       <max value="0" />
     </element>
