@@ -1,0 +1,259 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+    <id value="3241a0b7-a2fc-4ec9-bb8c-5db8ec074abb"/>
+    <meta>
+        <versionId value="10"/>
+        <lastUpdated value="2017-02-13T14:38:08.291+00:00"/>
+    </meta>
+    <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+    <name value="nl-core-organization"/>
+    <status value="draft"/>
+    <publisher value="HL7 NL"/>
+    <description
+        value="Zorgaanbieder. Functional requirements taken from Clinical Building Block (Zorginformatiebouwsteen) Zorgaanbieder v1.2 (release 2015) via the Basic Care Data Set (Basisgegevensset Zorg 1.0). Names and addresses are also in compliance with HL7 V3 Basic Components. Every instantiation of an Organization is a top level organization or a part of an (top level) organization, e.g. Department of Radiology."/>
+    <copyright value="CC0"/>
+    <mapping>
+        <identity value="zib-zorgaanbieder"/>
+        <uri value="https://zibs.nl/wiki/Zorgaanbieder(NL)"/>
+        <name value="Zorginformatiebouwsteen Zorgaanbieder"/>
+    </mapping>
+    <mapping>
+        <identity value="zib-patient"/>
+        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
+        <name value="Zorginformatiebouwsteen Patient"/>
+    </mapping>
+    <mapping>
+        <identity value="zib-betaler"/>
+        <uri value="https://zibs.nl/wiki/Betaler(NL)"/>
+        <name value="Zorginformatiebouwsteen Betaler"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Organization"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Organization">
+            <path value="Organization"/>
+            <short value="HealthcareProvider"/>
+            <alias value="Zorgaanbieder"/>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.2.1"/>
+            </mapping>
+        </element>
+        <element id="Organization.extension">
+            <path value="Organization.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Organization.extension.organizationAlias">
+            <path value="Organization.extension"/>
+            <sliceName value="organizationAlias"/>
+            <short value="Other names that this Organization is known as."/>
+            <definition value="Other names that this Organization is known as."/>
+            <min value="0"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/organization-alias"/>
+            </type>
+        </element>
+        <element id="Organization.identifier">
+            <path value="Organization.identifier"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Organization.identifier.URA">
+            <path value="Organization.identifier"/>
+            <sliceName value="URA"/>
+            <alias value="URA"/>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.2.2"/>
+            </mapping>
+        </element>
+        <element id="Organization.identifier.system">
+            <path value="Organization.identifier.system"/>
+            <min value="1"/>
+            <fixedUri value="http://fhir.nl/fhir/NamingSystem/ura"/>
+        </element>
+        <element id="Organization.identifier.value">
+            <path value="Organization.identifier.value"/>
+            <short value="URA (UZI-register abonneenummer)"/>
+            <min value="1"/>
+            <example>
+                <label value="Example URA"/>
+                <valueString value="12345678"/>
+            </example>
+        </element>
+        <element id="Organization.identifier.AGB">
+            <path value="Organization.identifier"/>
+            <sliceName value="AGB"/>
+            <alias value="AGB"/>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.2.2"/>
+            </mapping>
+        </element>
+        <element id="Organization.identifier.system">
+            <path value="Organization.identifier.system"/>
+            <min value="1"/>
+            <fixedUri value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+        </element>
+        <element id="Organization.identifier.value">
+            <path value="Organization.identifier.value"/>
+            <short value="AGB-Z (Vektis AGB-Z zorgverlenertabel)"/>
+            <min value="1"/>
+        </element>
+        <element id="Organization.identifier">
+            <path value="Organization.identifier" />
+            <sliceName value="UZOVI" />
+            <definition value="Unique healthcare insurance company identification (the UZOVI number)." />
+            <alias value="UZOVI"/>
+            <mapping>
+                <identity value="zib-betaler"/>
+                <map value="NL-CM:1.1.7"/>
+            </mapping>
+        </element>
+        <element id="Organization.identifier.system">
+            <path value="Organization.identifier.system" />
+            <min value="1" />
+            <fixedUri value="http://fhir.nl/fhir/NamingSystem/uzovi" />
+        </element>
+        <element id="Organization.identifier.value">
+            <path value="Organization.identifier.value" />
+            <short value="Unique healthcare insurance company identification (the UZOVI number)" />
+            <min value="1" />
+        </element>
+        <element id="Organization.type">
+            <path value="Organization.type"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="coding.system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Organization.type:organizationType">
+            <path value="Organization.type"/>
+            <sliceName value="organizationType"/>
+            <short value="OrganizationType"/>
+            <alias value="OrganisatieType"/>
+            <binding>
+                <strength value="extensible"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20150401000000"/>
+                    <display value="OrganisatieTypeCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.2.4"/>
+            </mapping>
+        </element>
+        <element id="Organization.type:departmentSpecialty">
+            <path value="Organization.type"/>
+            <sliceName value="departmentSpecialty"/>
+            <short value="DepartmentSpecialty"/>
+            <definition value="Department type, e.g. Cardiology"/>
+            <binding>
+                <strength value="extensible"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20150401000000"/>
+                    <display value="AfdelingSpecialismeCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.2.7"/>
+            </mapping>
+        </element>
+        <element id="Organization.name">
+            <path value="Organization.name" />
+            <short value="OrganizationName or DepartmentName"/>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.2.3"/>
+            </mapping>
+            <mapping>
+                <identity value="zib-betaler"/>
+                <map value="NL-CM:1.1.16"/>
+            </mapping>            
+        </element>
+        <element id="Organization.telecom">
+            <path value="Organization.telecom" />
+            <short value="ContactInformation"/>
+            <alias value="Contactgegevens"/>
+            <mapping>
+                <identity value="zib-zorgaanbieder" />
+                <map value="NL-CM:17.2.6" />
+            </mapping>     
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.5" />
+            </mapping>
+        </element>
+        <element id="Organization.telecom.system">
+            <path value="Organization.telecom.system" />
+            <min value="1" />
+        </element>
+        <element id="Organization.telecom.value">
+            <path value="Organization.telecom.value" />
+            <alias value="Telefoonnummer" />
+            <alias value="EmailAdres" />
+            <min value="1" />
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.23" />
+            </mapping>
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.20" />
+            </mapping>
+        </element>
+        <element id="Organization.telecom.use">
+            <path value="Organization.telecom.use" />
+            <alias value="NummerSoort" />
+            <alias value="EmailSoort" />
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.22" />
+            </mapping>
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.19" />
+            </mapping>
+        </element>
+        <element id="Organization.address">
+            <path value="Organization.address"/>
+            <short value="AddressInformation"/>
+            <alias value="Adresgegevens"/>
+            <type>
+                <code value="Address"/>
+                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
+            </type>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.2.5"/>
+            </mapping>
+        </element>
+        <element id="Organization.partOf">
+            <path value="Organization.partOf"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

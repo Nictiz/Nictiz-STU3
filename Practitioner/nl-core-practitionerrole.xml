@@ -1,0 +1,152 @@
+﻿<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-03-29T18:10:18.766+02:00" />
+  </meta>
+  <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
+  <name value="nl-core-practitionerrole" />
+  <status value="draft" />
+  <date value="2017-03-29T17:34:12.7816784+02:00" />
+  <publisher value="HL7 NL" />
+  <description value="Zorgverlener. Functional requirements taken from Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-zorgverlener" />
+    <uri value="https://zibs.nl/wiki/Zorgverlener(NL)" />
+    <name value="Zorginformatiebouwsteen Zorgverlener" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+  <derivation value="constraint"/>
+  <differential>
+    <element id="PractitionerRole">
+      <path value="PractitionerRole" />
+      <short value="HealthcareProviderRole" />
+    </element>
+    <element id="PractitionerRole.practitioner">
+      <path value="PractitionerRole.practitioner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+    </element>
+    <element id="PractitionerRole.organization">
+      <path value="PractitionerRole.organization" />
+      <short value="HealthcareProvider" />
+      <alias value="Zorgaanbieder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <mapping>
+        <identity value="zib-zorgverlener" />
+        <map value="NL-CM:17.1.6" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <short value="HealthcareProviderRole" />
+      <definition value="The role the healthcare provider fulfils in the healthcare process. For healthcare providers, this could be for example main practitioner, referrer or general practitioner." />
+      <alias value="ZorgverlenerRol" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PractitionerRole" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5--20150401000000" />
+          <display value="ZorgverlenerRolCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-zorgverlener" />
+        <map value="NL-CM:17.1.5" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.specialty">
+      <path value="PractitionerRole.specialty" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="coding.system"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="PractitionerRole.specialty:SpecialtyAGB">
+      <path value="PractitionerRole.specialty" />
+      <sliceName value="SpecialtyAGB" />
+      <short value="SpecialtyAGB" />
+      <alias value="SpecialismeAGB" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PractitionerSpecialty" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.7--20150401000000" />
+          <display value="SpecialismeAGBCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="PractitionerRole.specialty:SpecialtyUZI">
+      <path value="PractitionerRole.specialty" />
+      <sliceName value="SpecialtyUZI" />
+      <short value="SpecialtyUZI" />
+      <alias value="SpecialismeUZI" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PractitionerSpecialty" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.6--20150401000000" />
+          <display value="SpecialismeUZICodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <short value="ContactInformation"/>
+      <alias value="Contactgegevens"/>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.5" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.telecom.system">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.telecom.value">
+      <path value="PractitionerRole.telecom.value" />
+      <alias value="Telefoonnummer" />
+      <alias value="EmailAdres" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.23" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.20" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.telecom.use">
+      <path value="PractitionerRole.telecom.use" />
+      <alias value="NummerSoort" />
+      <alias value="EmailSoort" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.22" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.19" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,88 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="nl-core-organization-example-1" />
+  <meta>
+    <versionId value="5" />
+    <lastUpdated value="2016-11-09T17:27:51.255+00:00" />
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+  </meta>
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Voorbeeld van een 'Organisatie' zoals samengesteld tijdens de HL7 WGM NL 15-04-2016 jl. Tijdens deze discussie is dankbaar gebruik gemaakt van een <a href="https://www.dropbox.com/sh/2xjp7iipwpkahgu/AABIhMis8ITpvbnL41BkHrHUa?dl=0&amp;preview=Health+Service+Relation+Diagrams.png">overzichtsplaat</a> gemaakt in de Patient Administration groep die de diverse kernresources overziet. Deze discussie heeft diverse uitzoekpunten opgeleverd zoals hier gedocumenteerd.</p>
+      <p style="font-weight: bold;">Bron-materialen</p>
+      <ol>
+        <li>
+          <a href="http://www.hl7.nl/wiki/index.php?title=Implementatiehandleiding_HL7v3_basiscomponenten_v2.2_Part3#E_Organization_.28organisatie.29">Implementatiehandleiding Basiscomponenten</a> (v3) versie 2.3</li>
+        <li>Zorginformatie Bouwsteen (ZIB) <a href="https://www.nictiz.nl/Paginas/zorginformatiebouwstenen-downloads.aspx">Zorgaanbieder</a> versie 1.2</li>
+      </ol>
+      <p style="font-weight: bold;">Open punten</p>
+      <ol>
+        <li>Wat ís een organisatie. Is dat een instelling of kan dat ook een afdeling zijn? De meeste resources wijzen naar Organization. Ook Location. <br /> Organziation is conceptueel en Location is fysiek, maar verwarring blijft in praktijk. Punt is geagendeerd binnen PA.</li>
+        <li>Organization.identifier. Relatie met AGB-code uitdiepen? AGB-code is een facturatiecode. Kunnen afdelingen zelf factureren?</li>
+        <li>Organization.active. Het is niet erg duidelijk wat een Organization.active doet, wat je niet ook met een HTTP DELETE kunt doen. Na een HTTP DELETE kun je in de versies ook zien dat een record bestaan heeft maar nu niet meer actief is. De vlag <span style="font-style: italic;">active</span> lijkt dit te dupliceren.<br /><a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=9824&amp;start=0">GForge ticket #9824</a> aangemaakt.</li>
+        <li>Organization.partOf heeft geen dekking in de ZIB. Michel Rutten (Furore) geeft aan dat hij het veel heeft gebruikt. Ook e-Lab heeft een implementatie in gebruik (informatie Pascal Looijé van VANAD).<br /><a href="https://bits.nictiz.nl/browse/ZIB-451">BITS issue ZIB-451</a> aangemaakt in de ZIB tracker van Nictiz.</li>
+        <li>ZIB Zorgaanbieder heeft nog extra concept AfdelingSpecialisme. Consensus bij de HL7 WGM NL dat deze deze niet op organisatieniveau thuishoort maar bij een afdeling/locatie. Er is echter nog geen ZIB afdeling.<br /><a href="https://bits.nictiz.nl/browse/ZIB-452">BITS issue ZIB-452</a> aangemaakt in de ZIB tracker van Nictiz.</li>
+        <li>2016-11-03 Er is een HL7 International <a href="http://hl7.org/fhir/StructureDefinition/organization-alias">core extension</a> voor aliassen. Dit maakt organsiaties beter vindbaar onder diverse termen. Voorbeeld Academisch Medisch Centrum en AMC, Onze Lieve Vrouwe Gasthuis of OLVG. Toegevoegd</li>
+        <li>2016-11-03 Er is geen dekking in de ZIB voor de verschillende redenen om contact op te nemen langs een bepaald kanaal Organization.contact.purpose</li>
+      </ol>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/organization-alias">
+    <valueString value="ZGO" />
+  </extension>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/agb-z" />
+    <value value="12341234" />
+  </identifier>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/ura" />
+    <value value="12341234" />
+  </identifier>
+  <active value="true" />
+  <type>
+     <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.6.7" />
+        <code value="0329" />
+        <display value="Psychiatrie" />
+     </coding>
+  </type>  
+  <type>
+    <coding>
+      <system value="http://nictiz.nl/fhir/NamingSystem/organization-type" />
+      <code value="V4" />
+      <display value="Ziekenhuis" />
+    </coding>
+  </type>
+  <name value="Ziekenhuis Gooi en Overvecht" />
+  <telecom>
+    <system value="phone" />
+    <value value="030-1234567" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <use value="work" />
+    <line value="Ventweg 12" />
+    <city value="Utrecht" />
+    <postalCode value="1000 AA" />
+  </address>
+  <partOf>
+    <reference value="http://example.org/fhir/Organization/1123442" />
+  </partOf>
+  <contact>
+    <purpose>
+      <coding>
+        <system value="http://hl7.org/fhir/contactentity-type" />
+        <code value="ADMIN" />
+        <display value="Administrative" />
+      </coding>
+    </purpose>
+    <name>
+      <text value="Mevrouw Pietersen" />
+    </name>
+    <telecom>
+      <system value="phone" />
+      <value value="030-1234567" />
+      <use value="work" />
+    </telecom>
+  </contact>
+</Organization>

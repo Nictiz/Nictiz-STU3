@@ -1,0 +1,87 @@
+﻿<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-04-24T15:44:57.286+02:00" />
+  </meta>
+  <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-healthcareservice" />
+  <name value="nl-core-healthcareservice" />
+  <status value="draft" />
+  <date value="2017-04-24T15:11:16.7995284+02:00" />
+  <publisher value="HL7 Netherlands" />
+  <description value="A HealthcareService resource as defined for the Dutch realm" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-patient"/>
+    <uri value="https://zibs.nl/wiki/Patient(NL)"/>
+    <name value="Zorginformatiebouwsteen Patient"/>
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="HealthcareService" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HealthcareService.providedBy">
+      <path value="HealthcareService.providedBy" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+    <element id="HealthcareService.location">
+      <path value="HealthcareService.location" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-location" />
+      </type>
+    </element>
+    <element id="HealthcareService.telecom">
+      <path value="HealthcareService.telecom" />
+      <short value="ContactInformation" />
+      <alias value="Contactgegevens" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.5" />
+      </mapping>
+    </element>
+    <element id="HealthcareService.telecom.system">
+      <path value="HealthcareService.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.telecom.value">
+      <path value="HealthcareService.telecom.value" />
+      <alias value="Telefoonnummer" />
+      <alias value="EmailAdres" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.23" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.20" />
+      </mapping>
+    </element>
+    <element id="HealthcareService.telecom.use">
+      <path value="HealthcareService.telecom.use" />
+      <alias value="NummerSoort" />
+      <alias value="EmailSoort" />
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.22" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient" />
+        <map value="NL-CM:0.1.19" />
+      </mapping>
+    </element>
+    <element id="HealthcareService.coverageArea">
+      <path value="HealthcareService.coverageArea" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-location" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

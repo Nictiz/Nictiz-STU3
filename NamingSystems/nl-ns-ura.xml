@@ -1,0 +1,23 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="00f55a90-f7c6-4534-9739-af10932e1187"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2016-10-31T18:23:07.447+00:00"/>
+    </meta>
+    <name value="UZI register abonneenummer (URA); zorgaanbieder die UZI passen aanvraagt"/>
+    <status value="draft"/>
+    <kind value="root"/>
+    <date value="2016-10-31T19:14:57.478+01:00"/>
+    <publisher value="HL7 NL"/>
+    <description value="UZI registry member number (URA) for health care provider (person or organization) that requests UZI cards"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="http://fhir.nl/fhir/NamingSystem/ura"/>
+        <preferred value="true"/>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"/>
+        <value value="2.16.528.1.1007.3.3"/>
+        <preferred value="false"/>
+    </uniqueId>
+</NamingSystem>
