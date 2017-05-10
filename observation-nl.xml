@@ -5,8 +5,8 @@
     <versionId value="2" />
     <lastUpdated value="2017-02-20T14:57:12.35+00:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-observation" />
-  <name value="nl-core-observation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/observation-nl" />
+  <name value="observation-nl" />
   <status value="draft" />
   <date value="2017-01-20T15:32:11.6469951+01:00" />
   <publisher value="Nictiz" />
@@ -24,6 +24,7 @@
   <abstract value="false" />
   <type value="Observation" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint"/>
   <differential>
     <element id="Observation">
       <path value="Observation" />
