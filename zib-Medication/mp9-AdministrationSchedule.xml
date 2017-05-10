@@ -25,6 +25,7 @@
   <abstract value="false" />
   <type value="Timing" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Timing" />
+  <derivation value="constraint"/>
   <differential>
     <element id="Timing">
       <path value="Timing" />

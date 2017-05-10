@@ -23,7 +23,8 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-composition" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/composition-nl" />
+  <derivation value="constraint"/>
   <differential>
     <element id="Composition">
       <path value="Composition" />

@@ -31,6 +31,7 @@
   <abstract value="false" />
   <type value="MedicationRequest" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+  <derivation value="constraint"/>
   <differential>
     <element id="MedicationRequest">
       <path value="MedicationRequest" />

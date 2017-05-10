@@ -24,6 +24,7 @@
   <abstract value="false" />
   <type value="MedicationAdministration" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
+  <derivation value="constraint"/>
   <differential>
     <element id="MedicationAdministration">
       <path value="MedicationAdministration" />
