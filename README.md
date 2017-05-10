@@ -1,4 +1,4 @@
-## NLFHIR-STU3
+## Nictiz-STU3
 
 This repository contains HL7 FHIR STU3 compliant profiles. The FHIR profiles in this repository are based on the Dutch Clinical Building Blocks / Healthcare Information models (Dutch: [Zorginformatiebouwsteen or ZIB](https://zibs.nl/wiki/Zorginformatiebouwstenen "Zorginformatiebouwstenen")). 
 
