@@ -196,7 +196,7 @@
     </element>
     <element id="Procedure.reasonReference">
       <path value="Procedure.reasonReference" />
-      <short value="Indication::Problem" />
+      <short value="Indication" />
       <definition value="The indication is the reason for the procedure."/>
       <alias value="Problem" />
       <alias value="Indication" />
