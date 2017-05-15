@@ -157,7 +157,7 @@
       <sliceName value="HealthProfessional" />
       <short value="HealthProfessional" />
       <definition value="The healthcare professional that carried ut the procedure." />
-      <alias value="Zorgverlener" />
+      <alias value="UitgevoerdDoor" />
       <min value="1" />
       <mapping>
         <identity value="zib-overdrachtverrichting" />
@@ -177,7 +177,7 @@
       <sliceName value="HealthcareProvider" />
       <short value="HealthcareProvider" />
       <definition value="The healthcare center where the procedure was or is carried out." />
-      <alias value="Zorgaanbieder" />
+      <alias value="Locatie" />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -187,7 +187,6 @@
     </element>
     <element id="Procedure.performer.HealthcareProvider.actor">
       <path value="Procedure.performer.actor" />
-      <alias value="Zorgaanbieder" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -196,10 +195,9 @@
     </element>
     <element id="Procedure.reasonReference">
       <path value="Procedure.reasonReference" />
-      <short value="Indication::Problem" />
+      <short value="Indication" />
       <definition value="The indication is the reason for the procedure."/>
-      <alias value="Problem" />
-      <alias value="Indication" />
+      <alias value="Indicatie" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
@@ -213,6 +211,7 @@
       <path value="Procedure.bodySite" />
       <short value="AnatomicalLocationOfTheProcedure" />
       <definition value="Anatomical location which is the focus of the procedure." />
+      <alias value="VerrichtingAnatomischeLocatie" />
       <binding>
         <strength value="extensible" />
         <description value="Anatomical location which is the focus of the procedure." />

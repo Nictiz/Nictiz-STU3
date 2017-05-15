@@ -48,8 +48,8 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
       </type>
     </element>
-    <element id="Observation.encounter">
-      <path value="Observation.encounter" />
+    <element id="Observation.context">
+      <path value="Observation.context" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />

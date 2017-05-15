@@ -45,6 +45,7 @@
   <differential>
     <element id="NutritionOrder">
       <path value="NutritionOrder" />
+      <alias value="Voedingsadvies" />
       <mapping>
         <identity value="zib-voedingsadvies" />
         <map value="NL-CM:7.11.1" />

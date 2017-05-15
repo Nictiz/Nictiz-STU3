@@ -76,6 +76,7 @@
       <sliceName value="ResultStatus"/>
       <short value="Provides the specific CBB code for ResultStatus" />
       <definition value="Defines a more specific value to a code. Especially useful for FHIRs required ValueSets." />
+      <alias value="ResultaatStatus" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -128,6 +129,7 @@
     </element>
     <element id="DiagnosticReport.subject">
       <path value="DiagnosticReport.subject" />
+      <alias value="Patient"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
@@ -156,10 +158,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
       </type>
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.1" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

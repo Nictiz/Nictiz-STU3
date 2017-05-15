@@ -76,6 +76,7 @@
       <sliceName value="ResultStatus"/>
       <short value="Provides the specific CBB code for ResultStatus" />
       <definition value="Defines a more specific value to a code. Especially useful for FHIRs required ValueSets." />
+      <alias value="ResultaatStatus"/>
       <min value="0" />
       <max value="1" />
       <type>
@@ -132,6 +133,7 @@
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <alias value="Patient" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
@@ -180,7 +182,7 @@
     <element id="Observation.method">
       <path value="Observation.method" />
       <short value="TestMethod" />
-      <alias value="TestMethod" />
+      <alias value="Testmethode" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
@@ -231,20 +233,28 @@
     </element>
     <element id="Observation.related">
       <path value="Observation.related" />
+      <short value="LaboratoryTest" />
       <requirements value="Normally, an observation will have either a value or a set of related observations. A few observations (e.g. Apgar score) may have both a value and a set of related observations or sometimes QuestionnaireResponse from which the measure is derived." />
+      <alias value="LaboratoriumTest" />
       <mapping>
         <identity value="zib-overdrachtlaboratoriumuitslag" />
         <map value="NL-CM:13.1.3" />
       </mapping>
     </element>
     <element id="Observation.related.target">
-      <path value="Observation.related.target" />
-      <short value="LaboratoryTest" />
-      <alias value="LaboratoriumTest" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.3" />
-      </mapping>
+      <path value="Observation.related.target"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Sequence"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
+      </type>
     </element>
   </differential>
 </StructureDefinition>

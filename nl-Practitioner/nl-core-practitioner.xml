@@ -1,0 +1,197 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+    <id value="d23890c7-3184-4f59-b83e-3bc7cf27fce0"/>
+    <meta>
+        <versionId value="9"/>
+        <lastUpdated value="2016-11-12T16:02:45.802+00:00"/>
+    </meta>
+    <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+    <name value="nl-core-practitioner"/>
+    <status value="draft"/>
+    <publisher value="HL7 NL"/>
+    <description
+        value="Zorgverlener. Functional requirements taken from Clinical Building Block (Zorginformatiebouwsteen) Zorgverlener v1.2 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <mapping>
+        <identity value="zib-zorgverlener"/>
+        <uri value="https://zibs.nl/wiki/Zorgverlener(NL)"/>
+        <name value="Zorginformatiebouwsteen Zorgverlener"/>
+    </mapping>
+    <mapping>
+        <identity value="zib-patient"/>
+        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
+        <name value="Zorginformatiebouwsteen Patient"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Practitioner"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Practitioner">
+            <path value="Practitioner"/>
+            <short value="HealthcareProvider"/>
+            <alias value="Zorgverlener"/>
+            <mapping>
+                <identity value="zib-zorgverlener"/>
+                <map value="NL-CM:17.1.1"/>
+            </mapping>
+        </element>
+        <element id="Practitioner.identifier">
+            <path value="Practitioner.identifier"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="HealthcareProviderIdentificationNumber"/>
+            <alias value="ZorgverlenerIdentificatieNummer"/>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.1.2"/>
+            </mapping>
+        </element>
+        <element id="Practitioner.identifier:UZI">
+            <path value="Practitioner.identifier"/>
+            <sliceName value="UZI"/>
+            <short value="UZI"/>
+            <definition value="Unieke Zorgverlener Identificatie (Dutch physician identification number)"/>
+            <alias value="UZI"/>
+            <max value="1"/>
+        </element>
+        <element id="Practitioner.identifier:UZI.system">
+            <path value="Practitioner.identifier.system"/>
+            <min value="1"/>
+            <type>
+                <code value="uri"/>
+            </type>
+            <fixedUri value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers"/>
+        </element>
+        <element id="Practitioner.identifier.UZI.value">
+            <path value="Practitioner.identifier.value"/>
+            <min value="1"/>
+            <example>
+                <label value="Example"/>
+                <valueString value="01011234"/>
+            </example>
+        </element>
+        <element id="Practitioner.identifier:AGB">
+            <path value="Practitioner.identifier"/>
+            <sliceName value="AGB"/>
+            <short value="AGB"/>
+            <alias value="AGB"/>
+            <max value="1"/>
+        </element>
+        <element id="Practitioner.identifier:AGB.system">
+            <path value="Practitioner.identifier.system"/>
+            <min value="1"/>
+            <type>
+                <code value="uri"/>
+            </type>
+            <fixedUri value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+        </element>
+        <element id="Practitioner.identifier:AGB.value">
+            <path value="Practitioner.identifier.value"/>
+            <min value="1"/>
+            <example>
+                <label value="Example"/>
+                <valueString value="123456"/>
+            </example>
+        </element>
+        <element id="Practitioner.identifier:BIG">
+            <path value="Practitioner.identifier"/>
+            <sliceName value="BIG"/>
+            <short value="BIG"/>
+            <alias value="BIG"/>
+            <max value="1"/>
+        </element>
+        <element id="Practitioner.identifier:BIG.system">
+            <path value="Practitioner.identifier.system"/>
+            <min value="1"/>
+            <type>
+                <code value="uri"/>
+            </type>
+            <fixedUri value="http://fhir.nl/fhir/NamingSystem/big"/>
+        </element>
+        <element id="Practitioner.identifier:BIG.value">
+            <path value="Practitioner.identifier.value"/>
+            <min value="1"/>
+            <example>
+                <label value="Example"/>
+                <valueString value="12345678"/>
+            </example>
+        </element>
+        <element id="Practitioner.name">
+            <path value="Practitioner.name"/>
+            <short value="HealthcareProviderName"/>
+            <type>
+                <code value="HumanName"/>
+                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
+            </type>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.1.3"/>
+            </mapping>
+        </element>
+        <element id="Practitioner.telecom">
+            <path value="Practitioner.telecom" />
+            <short value="ContactInformation"/>
+            <alias value="Contactgegevens"/>
+            <mapping>
+                <identity value="zib-zorgaanbieder" />
+                <map value="NL-CM:17.1.8" />
+            </mapping>
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.5" />
+            </mapping>
+        </element>
+        <element id="Practitioner.telecom.system">
+            <path value="Practitioner.telecom.system" />
+            <min value="1" />
+        </element>
+        <element id="Practitioner.telecom.value">
+            <path value="Practitioner.telecom.value" />
+            <alias value="Telefoonnummer" />
+            <alias value="EmailAdres" />
+            <min value="1" />
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.23" />
+            </mapping>
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.20" />
+            </mapping>
+        </element>
+        <element id="Practitioner.telecom.use">
+            <path value="Practitioner.telecom.use" />
+            <alias value="NummerSoort" />
+            <alias value="EmailSoort" />
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.22" />
+            </mapping>
+            <mapping>
+                <identity value="zib-patient" />
+                <map value="NL-CM:0.1.19" />
+            </mapping>
+        </element>
+        <element id="Practitioner.address">
+            <path value="Practitioner.address"/>
+            <short value="AddressInformation"/>
+            <alias value="Adresgegevens"/>
+            <type>
+                <code value="Address"/>
+                <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
+            </type>
+            <mapping>
+                <identity value="zib-zorgaanbieder"/>
+                <map value="NL-CM:17.1.7"/>
+            </mapping>
+        </element>
+    </differential>
+</StructureDefinition>

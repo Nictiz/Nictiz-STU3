@@ -62,7 +62,7 @@
       <sliceName value="HealthcareProvider" />
       <short value="HealthcareProvider" />
       <definition value="The healthcare provider at which use of the medical aid was initiated or where the aid was implanted." />
-      <alias value="Zorgaanbieder" />
+      <alias value="Locatie" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -133,7 +133,7 @@
       <sliceName value="Indication_Problem" />
       <short value="Indication-Probleem" />
       <definition value="The medical reason for use of the medical aid." />
-      <alias value="Indicatie-Probleem" />
+      <alias value="Indicatie" />
       <type>
         <code value="Extension" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference" />

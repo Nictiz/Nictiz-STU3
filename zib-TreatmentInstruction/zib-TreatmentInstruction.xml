@@ -55,14 +55,20 @@
     <element id="Consent.extension:verification">
       <path value="Consent.extension" />
       <sliceName value="verification" />
+      <alias value="Verificatie"/>
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
       </type>
+      <mapping>
+        <identity value="zib-treatmentinstruction" />
+        <map value="NL-CM:2.1.8" />
+      </mapping>
     </element>
     <element id="Consent.extension:verification.extension:Verified">
       <path value="Consent.extension.extension" />
       <sliceName value="Verified" />
+      <alias value="Geverifieerd" />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -73,6 +79,7 @@
     <element id="Consent.extension:verification.extension:VerifiedWith">
       <path value="Consent.extension.extension" />
       <sliceName value="VerifiedWith" />
+      <alias value="GeverifieerdBij"/>
       <binding>
         <strength value="extensible" />
         <description value="The person with whom the treatment instruction was discussed and verified." />
@@ -89,6 +96,7 @@
     <element id="Consent.extension:verification.extension:VerificationDate">
       <path value="Consent.extension.extension" />
       <sliceName value="VerificationDate" />
+      <alias value="VerificatieDatum"/>
       <max value="1" />
       <mapping>
         <identity value="zib-treatmentinstruction" />

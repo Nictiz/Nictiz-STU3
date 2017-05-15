@@ -133,9 +133,9 @@
     </element>
     <element>
       <path value="Consent.consentingParty" />
-      <short value="Representative::Contact" />
+      <short value="Representative" />
       <definition value="The person who is the legal representative or is appointed as the authorized representative in the signed authorization." />
-      <alias value="Vertegenwoordiger::Contactpersoon" />
+      <alias value="Vertegenwoordiger" />
       <max value="1" />
       <type>
         <code value="Reference" />

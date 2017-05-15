@@ -41,6 +41,7 @@
   <differential>
     <element id="Encounter">
       <path value="Encounter"/>
+      <alias value="Contact"/>
       <constraint>
         <key value="cbb-contact-1"/>
         <severity value="warning"/>
@@ -79,9 +80,9 @@
     </element>
     <element id="Encounter.participant.individual">
       <path value="Encounter.participant.individual"/>
-      <short value="ContactWith::HealthcareProvider"/>
+      <short value="ContactWith"/>
       <definition value="The healthcare provider with whom the contact took place. The specialty and role of the healthcare provider can be entered in the HealthcareProvider information model as well."/>
-      <alias value="ContactMet::Zorgverlener"/>
+      <alias value="ContactMet"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
@@ -140,7 +141,7 @@
       <short value="ContactReason"/>
       <definition value="The problem that led to the contact or the procedure carried out during the contact.&#xD;&#xA;&#xD;&#xA;Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure."/>
       <alias value="Verrichting"/>
-      <alias value="Probleem::ProbleemNaam"/>
+      <alias value="Probleem"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
@@ -155,10 +156,11 @@
       </mapping>
     </element>
     <element id="Encounter.serviceProvider">
+      <!-- The ZIB definetion Location is not right. Notion made: ZIB-598  -->
       <path value="Encounter.serviceProvider"/>
-      <short value="Location::HealthcareProvider"/>
+      <short value="Location"/>
       <definition value="The physical location at which the contact took place."/>
-      <alias value="Locatie::Zorgaanbieder"/>
+      <alias value="Locatie"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
