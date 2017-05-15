@@ -41,6 +41,7 @@
   <differential>
     <element id="Encounter">
       <path value="Encounter"/>
+      <alias value="Contact"/>
       <constraint>
         <key value="cbb-contact-1"/>
         <severity value="warning"/>

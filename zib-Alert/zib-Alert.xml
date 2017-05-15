@@ -43,6 +43,7 @@
     <element id="Flag">
       <path value="Flag" />
       <short value="Alert" />
+      <alias value="Alert"/>
       <mapping>
         <identity value="zib-alert" />
         <map value="NL-CM:8.3.1" />
