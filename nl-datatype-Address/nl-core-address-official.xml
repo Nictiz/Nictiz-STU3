@@ -1,0 +1,63 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="nl-address-official"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2016-11-09T17:40:10.287+00:00"/>
+    </meta>
+    <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official"/>
+    <version value="1.0"/>
+    <name value="nl-core-address-official"/>
+    <status value="draft"/>
+    <date value="2015-09-22T12:02:49+02:00"/>
+    <publisher value="HL7 Netherlands"/>
+    <description
+        value="Mark an address as an 'officially registered' address. In Dutch context that means it is registered in the Basisregistratie persoonsgegevens (BRP)"/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <mapping>
+        <identity value="zib-address"/>
+        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
+        <name value="Address as part of Zorginformatiebouwsteen Patient"/>
+    </mapping>
+    <kind value="complex-type"/>
+    <abstract value="false"/>
+    <contextType value="resource"/>
+    <context value="Address"/>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+            <short value="Mark an address as an 'officially registered' address."/>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url"/>
+            <representation value="xmlAttr"/>
+            <type>
+                <code value="uri"/>
+            </type>
+            <fixedUri value="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official"/>
+        </element>
+        <element id="Extension.valueBoolean">
+            <path value="Extension.valueBoolean"/>
+            <short value="true if part of an official registry. false if it is not"/>
+            <definition
+                value="When the value is true, this address is marked to be part of an official registry (Dutch realm: BRP). When the value is false, this address is explicitly marked as not part of an official registry."/>
+            <min value="1"/>
+            <type>
+                <code value="boolean"/>
+            </type>
+            <meaningWhenMissing value="When an address is not marked explicitly as official=true|false then no information can be inferred from that."/>
+            <mapping>
+                <identity value="rim"/>
+                <map value="AD/@use[.='OR']"/>
+            </mapping>
+            <mapping>
+                <identity value="zib-address"/>
+                <map value="NL-CM:0.1.11"/>
+            </mapping>
+        </element>
+    </differential>
+</StructureDefinition>

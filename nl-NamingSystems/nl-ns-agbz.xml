@@ -1,0 +1,24 @@
+<?xml-model href="http://hl7.org/fhir/namingsystem.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="10562d06-2f08-4bff-8a0f-659a53e8a663"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2016-10-31T18:23:07.509+00:00"/>
+    </meta>
+    <name value="Vektis AGB-z zorgverlener tabel"/>
+    <status value="draft"/>
+    <kind value="root"/>
+    <date value="2016-10-31T19:16:30.012+01:00"/>
+    <publisher value="HL7 NL"/>
+    <description value="Vektis AGB-z care provider table"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+        <preferred value="true"/>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"/>
+        <value value="2.16.840.1.113883.2.4.6.1"/>
+        <preferred value="false"/>
+    </uniqueId>
+</NamingSystem>

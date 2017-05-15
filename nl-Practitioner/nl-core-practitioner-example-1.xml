@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/practitioner.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Practitioner  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/practitioner.xsd">
+    <id value="1fbda920-9035-49a0-b9e2-20f133460277"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2016-12-08T14:05:42.283+00:00"/>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <ol>
+                <li>2016-11-03 Discussie over Personen versus Rollen. ZIB kent 1 rol op Zorgverlener. Internationaal is in DSTU2 ruimte voor meerdere rollen en
+                    dat is in STU3 nog verder verfijnd. Verder loopt op dit moment nog internationaal de discussie of PractitionerRole zelf helemaal
+                    losgetrokken moet worden. Zorgdomein heeft het concept van PRS Persoon/Rol/Samenwerkingsverband. Personen die waarnemer zijn in 2
+                    huisartsengroepen bijvoorbeeld. FHIR zou dat ondersteunen, lijkt het, maar zou dat nog beter kunnen via een losse PractitionerRole resource.
+                    De Zorginformatiebouwsteen Zorgverlener 2015 en 2016 zou dat nu niet kunnen. Er is een ticket <a
+                        href="https://bits.nictiz.nl/browse/ZIB-501">ZIB-501</a> aangemaakt om de ZIB aan te passen.</li>
+                <li>2016-11-03 Identificatie type hangt samen met juiste locatie voor doorgifte. Een BIG-nummer hoort thuis bij Practitioner.Qualification. Een
+                    UZI-nummer/AGB-nummer hoort thuis bij Practitioner.Role (vanaf STU3)</li>
+                <li>2016-11-03 ZorgverlenerRol in de ZIB Zorgverlener 1.2.1 is niet juist. Een "Consultant/Performer/Attender" is geen intrinsieke eigenschap
+                    van een Zorgverlener. Het is een eigenschap van een Zorgverlener in de context van bijvoorbeeld een behandeling. Ticket <a
+                        href="https://bits.nictiz.nl/browse/ZIB-502">ZIB-502</a> aangemaakt om dat in de ZIB te wijzigen.</li>
+            </ol>
+        </div>
+    </text>
+    <identifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers"/>
+        <value value="129854656"/>
+    </identifier>
+    <identifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+        <value value="01069857"/>
+    </identifier>
+    <identifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/big"/>
+        <value value="12345678912"/>
+    </identifier>
+    <name>
+        <family value="de Vries">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                <valueString value="de "/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="Vries"/>
+            </extension>
+        </family>
+        <given value="Henk"/>
+    </name>
+    <telecom>
+        <system value="phone"/>
+        <value value="0612345990"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="devries@work.com"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official">
+            <valueBoolean value="true"/>
+        </extension>
+        <use value="home"/>
+        <type value="both"/>
+        <line value="Straatweg 12bII">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Straatweg"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="12"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                <valueString value="bII"/>
+            </extension>
+        </line>
+        <city value="Woonplaats"/>
+        <district value="Amsterdam"/>
+        <postalCode value="1200 AA"/>
+        <country value="NLD"/>
+        <period>
+            <start value="2015-04"/>
+        </period>
+    </address>
+</Practitioner>
