@@ -64,6 +64,7 @@
     </element>
     <element id="Specimen.subject">
       <path value="Specimen.subject" />
+      <alias value="Patient"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />

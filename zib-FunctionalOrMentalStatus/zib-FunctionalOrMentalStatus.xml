@@ -40,6 +40,7 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
+      <alias value="FunctioneleOfMentaleStatus" />
       <mapping>
         <identity value="zib-functioneleofmentalestatus" />
         <map value="NL-CM:4.26.1" />
@@ -60,7 +61,7 @@
       <sliceName value="MedicalAid" />
       <short value="MedicalAid" />
       <definition value="Medical aid the patient has to reduce the impact of the disability or disorder." />
-      <alias value="MedischHulpmiddel" />
+      <alias value="Hulpmiddel" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus-MedicalAid" />

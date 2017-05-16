@@ -262,7 +262,7 @@
       <sliceName value="Duration" />
       <short value="Duration" />
       <definition value="The amount of time that the Adverse Reaction persisted." />
-      <alias value="Duur" />
+      <alias value="ReactieDuur" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -279,6 +279,7 @@
       <short value="Certainty that the substance was the cause of the manifestation" />
       <definition value="Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event." />
       <comment value="When certainty is missing, it means no information exists (although it could be in narrative).  By contrast, the unknown code is used when there is an explicit assertion that certainty is not known, such as when a patient eats a meal and it is unknown which food caused the reaction." />
+      <alias value="Waarschijnlijkheid"/>
       <max value="1" />
       <type>
         <code value="Extension" />

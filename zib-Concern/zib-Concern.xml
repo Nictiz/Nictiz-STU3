@@ -51,6 +51,7 @@
   <differential>
     <element id="Condition">
       <path value="Condition" />
+      <alias value="Concern" />
       <mapping>
         <identity value="zib-overdrachtconcern" />
         <map value="NL-CM:5.1.1" />
@@ -120,7 +121,7 @@
       <path value="Condition.code" />
       <short value="ProblemName" />
       <definition value="The problem name defines the problem.&#xD;&#xA;Depending on the setting, one or more of the code systems below can be used:&#xD;&#xA;&#xD;&#xA;Structured terms: SNOMED CT&#xD;&#xA;Medical diagnoses: national DHD list&#xD;&#xA;Nurse diagnoses: NANDA&#xD;&#xA;Paramedic diagnoses: DHD and NANDA (partially offer solutions for this)&#xD;&#xA;For functional constraints: ICF&#xD;&#xA;For first-line care: ICPC-1 NL" />
-      <alias value="ProbleemName" />
+      <alias value="ProbleemNaam" />
       <binding>
         <strength value="extensible" />
         <description value="The problem name defines the problem." />
