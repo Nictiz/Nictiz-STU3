@@ -110,7 +110,7 @@
       <mapping>
         <identity value="zib-betaler" />
         <map value="NL-CM:1.1.2" />
-        <comment value="PayerPerson" />
+        <comment value="PayerPerson is Patient or RelatedPerson" />
       </mapping>
       <mapping>
         <identity value="zib-betaler" />
