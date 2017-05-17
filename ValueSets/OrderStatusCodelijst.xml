@@ -1,0 +1,57 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.16.1.2--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.16.1.2"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="OrderStatusCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:81dc0ff1-c28d-4765-b4cc-69f4bc34d937"/>
+        <timestamp value="2017-05-17T17:05:20.14+02:00"/>
+        <total value="7"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <code value="new"/>
+            <display value="Ordered"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="385644000"/>
+            <display value="Requested"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <code value="active"/>
+            <display value="Pending"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <code value="385651009"/>
+            <display value="In progress"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <code value="held"/>
+            <display value="On hold"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <code value="cancelled"/>
+            <display value="Cancelled"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <code value="aborted"/>
+            <display value="Noshow"/>
+        </contains>
+    </expansion>
+</ValueSet>
