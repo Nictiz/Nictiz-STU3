@@ -1,1 +1,57 @@
-<ValueSet xmlns="http://hl7.org/fhir"><meta><profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" /></meta><url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4--20150401000000" /><identifier><use value="official" /><system value="http://art-decor.org/ns/oids/vs" /><value value="2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4" /></identifier><version value="2015-04-01T00:00:00" /><name value="WeekdagenCodelijst" /><status value="active" /><experimental value="false" /><publisher value="ART-DECOR Expert Group" /><immutable value="false" /><expansion><identifier value="urn:uuid:9c529d02-c90d-40b7-b1cd-46fc029e5ca9" /><timestamp value="2017-05-16T15:23:58.175+02:00" /><total value="7" /><contains><system value="http://snomed.info/sct" /><code value="307145004" /><display value="Monday" /></contains><contains><system value="http://snomed.info/sct" /><code value="307147007" /><display value="Tuesday" /></contains><contains><system value="http://snomed.info/sct" /><code value="307148002" /><display value="Wednesday" /></contains><contains><system value="http://snomed.info/sct" /><code value="307149005" /><display value="Thursday" /></contains><contains><system value="http://snomed.info/sct" /><code value="307150005" /><display value="Friday" /></contains><contains><system value="http://snomed.info/sct" /><code value="307151009" /><display value="Saturday" /></contains><contains><system value="http://snomed.info/sct" /><code value="307146003" /><display value="Sunday" /></contains></expansion></ValueSet>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
+  </meta>
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4--20150401000000" />
+  <identifier>
+    <use value="official" />
+    <system value="http://art-decor.org/ns/oids/vs" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4" />
+  </identifier>
+  <version value="2015-04-01T00:00:00" />
+  <name value="WeekdagenCodelijst" />
+  <status value="active" />
+  <experimental value="false" />
+  <publisher value="ART-DECOR Expert Group" />
+  <immutable value="false" />
+  <expansion>
+    <identifier value="urn:uuid:11357030-1c89-4611-8b45-3fcc4cd4675d" />
+    <timestamp value="2017-05-18T10:48:16.473+02:00" />
+    <total value="7" />
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.96" />
+      <code value="307145004" />
+      <display value="Monday" />
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.96" />
+      <code value="307147007" />
+      <display value="Tuesday" />
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.96" />
+      <code value="307148002" />
+      <display value="Wednesday" />
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.96" />
+      <code value="307149005" />
+      <display value="Thursday" />
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.96" />
+      <code value="307150005" />
+      <display value="Friday" />
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.96" />
+      <code value="307151009" />
+      <display value="Saturday" />
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.96" />
+      <code value="307146003" />
+      <display value="Sunday" />
+    </contains>
+  </expansion>
+</ValueSet>
