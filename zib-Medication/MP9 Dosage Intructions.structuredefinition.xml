@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-05-18T11:38:54.652+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
+  <name value="MP9 Dosage Intructions" />
+  <status value="draft" />
+  <date value="2017-05-18T11:36:21.9737868+02:00" />
+  <publisher value="Nictiz" />
+  <description value="Dosage Intructions a defined by the Dutch MP9 Medication Process project." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Dosage" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Dosage" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Dosage" />
+      <alias value="Gebruiksinstructie" />
+    </element>
+    <element>
+      <path value="Dosage.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Dosage.extension.description">
+      <path value="Dosage.extension" />
+      <sliceName value="usageDescription" />
+      <definition value="Optional Extensions Element - found in all resources." />
+      <alias value="Omschrijving" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-description" />
+      </type>
+    </element>
+    <element>
+      <path value="Dosage.additionalInstruction" />
+      <alias value="Aanvullende instructie" />
+    </element>
+    <element id="Dosage.timing">
+      <path value="Dosage.timing" />
+      <alias value="Toedieningsschema" />
+      <type>
+        <code value="Timing" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-AdministrationSchedule" />
+      </type>
+    </element>
+    <element>
+      <path value="Dosage.route" />
+      <alias value="Toedieningsweg" />
+      <binding>
+        <strength value="required" />
+        <description value="VoorschriftToedieningswegCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.6--20150401000000" />
+          <display value="VoorschriftToedieningswegCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Dosage.dose">
+      <path value="Dosage.dose[x]" />
+      <alias value="Keerdosis" />
+    </element>
+    <element id="Dosage.rate">
+      <path value="Dosage.rate[x]" />
+      <alias value="Toedieningssnelheid " />
+      <alias value="Inloopsnelheid" />
+    </element>
+  </differential>
+</StructureDefinition>
