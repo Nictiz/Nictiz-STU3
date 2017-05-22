@@ -75,7 +75,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill-Explanation" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation" />
       </type>
       <mapping>
         <identity value="zib-wilsverklaring" />
@@ -150,7 +150,7 @@
       <path value="Consent.actor.reference"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
       </type>
       <type>
         <code value="Reference"/>
@@ -196,7 +196,7 @@
       <path value="Consent.except.actor.reference"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
       </type>
       <type>
         <code value="Reference"/>

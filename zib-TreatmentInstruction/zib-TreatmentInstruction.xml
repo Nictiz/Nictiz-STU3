@@ -107,6 +107,100 @@
       <path value="Consent.extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
     </element>
+    <element>
+      <path value="Consent.extension"/>
+      <sliceName value="Explanation"/>
+      <short value="explanation"/>
+      <definition value="Comments on the treatment instruction such as a written description of an end date which can be indicated as a date (“until discharge from hospital”)."/>
+      <alias value="Toelichting"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation"/>
+      </type>
+      <mapping>
+        <identity value="zib-treatmentinstruction"/>
+        <map value="NL-CM:2.1.15"/>
+      </mapping>
+    </element>
+    <element id="Consent.patient ">
+      <path value="Consent.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element>
+      <path value="Consent.period.start"/>
+      <short value="StartDate"/>
+      <definition value="Date on which the treatment instruction went into effect. A ‘vague’ date, such as only the year, is permitted."/>
+      <alias value="BeginDatum"/>
+      <mapping>
+        <identity value="zib-treatmentinstruction"/>
+        <map value="NL-CM:2.1.6"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Consent.period.end"/>
+      <short value="EndDate"/>
+      <definition value="Date on which the treatment instruction ends. A ‘vague’ date, such as only the year, is permitted."/>
+      <alias value="EindDatum"/>
+      <mapping>
+        <identity value="zib-treatmentinstruction"/>
+        <map value="NL-CM:2.1.7"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Consent.consentingParty" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+      </type>
+    </element>
+    <element>
+      <path value="Consent.actor.reference"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+      </type>
+    </element>
     <element id="Consent.action ">
       <path value="Consent.action" />
       <short value="TreatmentPermitted" />
@@ -134,6 +228,45 @@
     <element>
       <path value="Consent.action.coding.code" />
       <min value="1" />
+    </element>
+    <element>
+      <path value="Consent.organization"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+      </type>
+    </element>
+    <element>
+      <path value="Consent.source[x]"/>
+      <short value="LivingWill"/>
+      <definition value="A (written) statement in which a person indicates wishes concerning future medical action, in the event that this person is at that point no longer (deemed) capable of taking decisions on the matter."/>
+      <alias value="Wilsverklaring"/>
+      <type>
+        <code value="Attachment"/>
+      </type>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Contract"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
+      </type>
+      <mapping>
+        <identity value="zib-treatmentinstruction"/>
+        <map value="NL-CM:2.1.14"/>
+      </mapping>
     </element>
     <element id="Consent.purpose ">
       <path value="Consent.purpose" />
@@ -166,14 +299,61 @@
       <min value="1" />
     </element>
     <element>
-      <path value="Consent.except.code" />
-      <short value="Constraints" />
-      <definition value="The constraints or specific circumstances that apply to a certain treatment." />
-      <alias value="Beperkingen" />
-      <max value="1" />
+      <path value="Consent.except.actor.reference"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+      </type>
+    </element>
+    <element>
+      <path value="Consent.except.code.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="Consent.except.code.extension"/>
+      <sliceName value="constraints"/>
+      <short value="constraints"/>
+      <definition value="The constraints or specific circumstances that apply to a certain treatment."/>
+      <alias value="Beperkingen"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints"/>
+      </type>
       <mapping>
-        <identity value="zib-treatmentinstruction" />
-        <map value="NL-CM:2.1.5" />
+        <identity value="zib-treatmentinstruction"/>
+        <map value="NL-CM:2.1.5"/>
       </mapping>
     </element>
   </differential>

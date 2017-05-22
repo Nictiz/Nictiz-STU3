@@ -17,7 +17,7 @@
       <display value="ALS"/>
     </valueReference>
   </extension>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill-Explanation">
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation">
     <valueString value="Patient has a non-resuscitate batch"/>
   </extension>
   <status value="active"/>
@@ -3170,4 +3170,6 @@ b3QgNTQgMCBSCi9JbmZvIDEgMCBSPj4Kc3RhcnR4cmVmCjE3Njk4MQolJUVPRg=="/>
     <title value="Voorbeeld voorpagina wilsverklaringen - PDF.pdf"/>
     <creation value="2011-08-14"/>
   </sourceAttachment>
+  <!-- Example of a policyRule -->
+  <policyRule value="http://wetten.overheid.nl/BWBR0012410/2014-02-15"/>
 </Consent>
