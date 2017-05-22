@@ -248,7 +248,7 @@
       <alias value="Product" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
       </type>
       <mapping>
         <identity value="zib-overdrachtverrichting" />
