@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-05-22T13:33:48.542+02:00" />
+    <lastUpdated value="2017-05-22T14:47:50.767+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus" />
   <name value="ZIB OrderStatus" />
@@ -25,6 +25,15 @@
     <element>
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus" />
+    </element>
+    <element>
+      <path value="Extension.valueCodeableConcept" />
+      <short value="OrderStatus" />
+      <definition value="The status of the order." />
+      <alias value="OrderStatus" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

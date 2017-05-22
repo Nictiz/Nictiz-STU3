@@ -154,6 +154,10 @@
         <identity value="zib-contact"/>
         <map value="NL-CM:15.1.6"/>
       </mapping>
+      <mapping>
+        <identity value="zib-contact"/>
+        <map value="NL-CM:15.1.11"/>
+      </mapping>
     </element>
     <element id="Encounter.serviceProvider">
       <!-- The ZIB definetion Location is not right. Notion made: ZIB-598  -->
