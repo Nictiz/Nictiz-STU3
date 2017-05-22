@@ -1,0 +1,218 @@
+﻿<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+   <meta>
+    <lastUpdated value="2017-05-22T13:45:41.53+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="oo" />
+  </extension>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidRequest" />
+  <name value="ZIB MedicalAid Request" />
+  <status value="draft" />
+  <date value="2017-05-22T13:24:34.1255241+02:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="MedicalAid Request as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0 OverdrachtGeplandeZorgActiviteit. " />
+  <purpose value="Recording planned appointments, referrals, treatments, diagnostic procedures, open orders and orders of which the results are not yet known gives every recipient, user or healthcare facility insight in the planned healthcare for this patient. This can prevent situations in which diagnostics and treatment can conflict with each other.&#xD;&#xA;This will give the recipient the option to place an order, cancel the order or act in any other way in accordance with their own policy.&#xD;&#xA;For orders that do not yet have results, the recipient is informed of the fact that potentially relevant results will be made available (which have to be requested)." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-overdrachtgeplandezorgactiviteit" />
+    <uri value="https://zibs.nl/wiki/OverdrachtVerrichting(NL)" />
+    <name value="Zorginformatiebouwsteen OverdrachtVerrichting" />
+  </mapping>
+  <mapping>
+    <identity value="zib-medischhulpmiddel" />
+    <uri value="https://zibs.nl/wiki/MedischHulpmiddel(NL)" />
+    <name value="Zorginformatiebouwsteen MedischHulpmiddel" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DeviceRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="DeviceRequest.status.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DeviceRequest.status.extension:orderStatus">
+      <path value="DeviceRequest.status.extension" />
+      <sliceName value="orderStatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus" />
+      </type>
+    </element>
+    <element>
+      <path value="DeviceRequest.code[x]"/>
+      <definition value="The code of the type of product." />
+      <alias value="ProductType" />
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
+      </type>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="The code of the type of product." />
+         <valueSetReference>
+           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.1--20150401000000" />
+           <display value="ProductTypeCodelijst" />
+         </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-medischhulpmiddel" />
+        <map value="NL-CM:10.1.3" />
+      </mapping>
+    </element>
+    <element>
+      <path value="DeviceRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-location" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+      </type>
+    </element>
+    <element>
+      <path value="DeviceRequest.occurrence[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="start" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="DeviceRequest.occurrence[x]" />
+      <sliceName value="occurrencePeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element>
+      <path value="DeviceRequest.occurrence[x].start" />
+      <short value="StartDate" />
+      <definition value="Planned or requested date. Clinical reminders can be used to indicate from when the procedure can take place. A vague date (such as only the month and year) is permitted." />
+      <alias value="BeginDatum" />
+      <mapping>
+        <identity value="zib-overdrachtgeplandezorgactiviteit" />
+        <map value="NL-CM:16.1.10" />
+      </mapping>
+    </element>
+    <element>
+      <path value="DeviceRequest.occurrence[x].end" />
+      <short value="EndDate" />
+      <definition value="The planned end date of the procedure can be included as well if needed. Depending on the type of procedure, this can also be used to indicate before which time it has to have been completed." />
+      <alias value="EindDatum" />
+      <mapping>
+        <identity value="zib-overdrachtgeplandezorgactiviteit" />
+        <map value="NL-CM:16.1.11" />
+      </mapping>
+    </element>
+    <element>
+      <path value="DeviceRequest.occurrence[x]" />
+      <sliceName value="Occurrence" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Timing" />
+      </type>
+    </element>
+    <element>
+      <path value="DeviceRequest.requester.agent" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+    <element>
+      <path value="DeviceRequest.requester.onBehalfOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+    <element>
+      <path value="DeviceRequest.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-healthcareservice" />
+      </type>
+    </element>
+    <element>
+      <path value="DeviceRequest.note.author[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+      </type>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
