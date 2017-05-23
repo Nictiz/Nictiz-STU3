@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-05-18T11:52:25.301+02:00" />
+    <lastUpdated value="2017-05-23T14:24:44.664+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
   <name value="MP9 Dosage Intructions" />
@@ -76,6 +76,10 @@
     <element id="Dosage.dose">
       <path value="Dosage.dose[x]" />
       <alias value="Keerdosis" />
+    </element>
+    <element>
+      <path value="Dosage.maxDosePerPeriod" />
+      <alias value=" Maximale dosering " />
     </element>
     <element id="Dosage.rate">
       <path value="Dosage.rate[x]" />

@@ -3,7 +3,7 @@
   <id value="77dc0559-023b-4c4d-92e1-781f16acd33e" />
   <meta>
     <versionId value="4" />
-    <lastUpdated value="2017-05-18T12:01:22.454+02:00" />
+    <lastUpdated value="2017-05-23T14:14:46.773+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-AdministrationSchedule" />
   <name value="MP9 Administration Schedule" />
@@ -32,20 +32,24 @@
       <alias value="Toedientijd" />
     </element>
     <element>
+      <path value="Timing.repeat.bounds[x]" />
+      <alias value="Doseerduur" />
+    </element>
+    <element id="Timing.repeat.frequency:FrequencyMinFixedValue">
       <path value="Timing.repeat.frequency" />
       <sliceName value="FrequencyMinFixedValue" />
       <alias value="frequentie vaste waarde" />
       <alias value="frequentie min" />
     </element>
-    <element>
+    <element id="Timing.repeat.frequencyMax:FrequencyMax">
       <path value="Timing.repeat.frequencyMax" />
       <sliceName value="FrequencyMax" />
     </element>
-    <element>
+    <element id="Timing.repeat.period:Interval">
       <path value="Timing.repeat.period" />
       <sliceName value="Interval" />
     </element>
-    <element>
+    <element id="Timing.repeat.periodUnit:FrequencyTijdeenheid">
       <path value="Timing.repeat.periodUnit" />
       <sliceName value="FrequencyTijdeenheid" />
     </element>
@@ -56,33 +60,6 @@
     <element>
       <path value="Timing.repeat.timeOfDay" />
       <alias value="Dagdeel" />
-    </element>
-    <element>
-      <path value="Timing.repeat.when.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Timing.repeat.when.extension.whenSpecification">
-      <path value="Timing.repeat.when.extension" />
-      <sliceName value="when_specification" />
-      <short value="Defines a more specific value to a code. Especially use ful for FHIR's required ValueSets." />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="DagdeelCodelijst" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.5--20150401000000" />
-          <display value="DagdeelCodelijst" />
-        </valueSetReference>
-      </binding>
     </element>
   </differential>
 </StructureDefinition>
