@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-05-18T11:38:54.652+02:00" />
+    <lastUpdated value="2017-05-18T11:52:25.301+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
   <name value="MP9 Dosage Intructions" />
   <status value="draft" />
   <date value="2017-05-18T11:36:21.9737868+02:00" />
   <publisher value="Nictiz" />
-  <description value="Dosage Intructions a defined by the Dutch MP9 Medication Process project." />
+  <description value="Dosage Intructions a defined by the Dutch Medication Process (MP9) project." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="complex-type" />
@@ -42,6 +42,10 @@
       </type>
     </element>
     <element>
+      <path value="Dosage.sequence" />
+      <alias value="Volgnummer" />
+    </element>
+    <element>
       <path value="Dosage.additionalInstruction" />
       <alias value="Aanvullende instructie" />
     </element>
@@ -52,6 +56,10 @@
         <code value="Timing" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-AdministrationSchedule" />
       </type>
+    </element>
+    <element>
+      <path value="Dosage.asNeeded[x]" />
+      <alias value=" Zo nodig" />
     </element>
     <element>
       <path value="Dosage.route" />

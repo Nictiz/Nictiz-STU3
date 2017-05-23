@@ -1,9 +1,9 @@
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="77dc0559-023b-4c4d-92e1-781f16acd33e" />
   <meta>
     <versionId value="4" />
-    <lastUpdated value="2016-12-12T16:58:13.365+00:00" />
+    <lastUpdated value="2017-05-18T12:01:22.454+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-AdministrationSchedule" />
   <name value="MP9 Administration Schedule" />
@@ -25,105 +25,44 @@
   <abstract value="false" />
   <type value="Timing" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Timing" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
-    <element id="Timing">
-      <path value="Timing" />
-    </element>
-    <element id="Timing.extension">
-      <path value="Timing.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Timing.extension.sequenceNumber">
-      <path value="Timing.extension" />
-      <sliceName value="sequenceNumber" />
-      <short value="dosage sequence number" />
-      <definition value="Optional Extensions Element - found in all resources." />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dosage-sequence-number" />
-      </type>
-    </element>
-    <element id="Timing.event">
+    <element>
       <path value="Timing.event" />
-      <short value="Toedientijd" />
+      <alias value="Toedientijd" />
     </element>
-    <element id="Timing.repeat">
-      <path value="Timing.repeat" />
-      <short value="Herhaling" />
-    </element>
-    <element id="Timing.repeat.extension">
-      <path value="Timing.repeat.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Timing.repeat.extension.daysOfWeek">
-      <path value="Timing.repeat.extension" />
-      <sliceName value="daysOfWeek" />
-      <definition value="Optional Extensions Element - found in all resources." />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-day-of-week" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="WeekdagenCodelijst" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4--20150401000000" />
-          <display value="WeekdagenCodelijst" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="Timing.repeat.bounds">
-      <path value="Timing.repeat.bounds[x]" />
-      <short value="Doseerduur" />
-      <type>
-        <code value="Duration" />
-      </type>
-    </element>
-    <element id="Timing.repeat.frequency">
+    <element>
       <path value="Timing.repeat.frequency" />
       <sliceName value="FrequencyMinFixedValue" />
-      <short value="min / vaste waarde" />
-      <defaultValueInteger value="1" />
+      <alias value="frequentie vaste waarde" />
+      <alias value="frequentie min" />
     </element>
-    <element id="Timing.repeat.frequencyMax">
+    <element>
       <path value="Timing.repeat.frequencyMax" />
       <sliceName value="FrequencyMax" />
     </element>
-    <element id="Timing.repeat.period">
+    <element>
       <path value="Timing.repeat.period" />
       <sliceName value="Interval" />
     </element>
-    <element id="Timing.repeat.periodUnit">
+    <element>
       <path value="Timing.repeat.periodUnit" />
       <sliceName value="FrequencyTijdeenheid" />
     </element>
-    <element id="Timing.repeat.when">
-      <path value="Timing.repeat.when" />
-      <sliceName value="Wanneer" />
+    <element>
+      <path value="Timing.repeat.dayOfWeek" />
+      <alias value="Weekdagen" />
     </element>
-    <element id="Timing.repeat.when.extension">
+    <element>
+      <path value="Timing.repeat.timeOfDay" />
+      <alias value="Dagdeel" />
+    </element>
+    <element>
       <path value="Timing.repeat.when.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -132,9 +71,6 @@
       <path value="Timing.repeat.when.extension" />
       <sliceName value="when_specification" />
       <short value="Defines a more specific value to a code. Especially use ful for FHIR's required ValueSets." />
-      <definition value="Defines a more specific value to a code. Especially useful for FHIR's required ValueSets. These extensions are primarily used on codes bound to a required value set, where you would like to use a more specific code than the codes in the bounded value set." />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
