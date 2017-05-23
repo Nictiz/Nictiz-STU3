@@ -20,6 +20,11 @@
     <uri value="https://zibs.nl/wiki/Vaccinatie(NL)" />
     <name value="Zorginformatiebouwsteen Vaccinatie" />
   </mapping>
+  <mapping>
+    <identity value="zib-overdrachtgeplandezorgactiviteit" />
+    <uri value="https://zibs.nl/wiki/OverdrachtGeplandeZorgActiviteit(NL)" />
+    <name value="Zorginformatiebouwsteen OverdrachtGeplandeZorgActiviteit" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="ImmunizationRecommendation" />
@@ -145,6 +150,22 @@
           <display value="ProductCodeGTINCodelijst" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="ImmunizationRecommendation.recommendation.dateCriterion">
+      <path value="ImmunizationRecommendation.recommendation.dateCriterion"/>
+      <comment value="This element can be used to capture the StartDate and EndDate concepts of the ZIB OverdrachtGeplandeZorgActiviteit."/>
+      <alias value="StartDate"/>
+      <alias value="EndDate"/>
+      <mapping>
+        <identity value="zib-overdrachtgeplandezorgactiviteit" />
+        <map value="NL-CM:16.1.10" />
+        <comment value="StartDate"/>
+      </mapping>
+      <mapping>
+        <identity value="zib-overdrachtgeplandezorgactiviteit" />
+        <map value="NL-CM:16.1.11" />
+        <comment value="EndDate"/>
+      </mapping>
     </element>
     <element>
       <path value="ImmunizationRecommendation.recommendation.protocol.authority" />

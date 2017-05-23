@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-05-22T15:53:25.492+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints" />
+  <name value="ZIB TreatmentInstruction Constraints" />
+  <status value="draft" />
+  <date value="2017-05-22T15:44:24.235801+02:00" />
+  <publisher value="Nictiz" />
+  <description value="An extension to add the constraints or specific circumstances that apply to a certain treatment to the Concent Resourse. This concept is defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) TreatmentInstruction version 3.0. " />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Consent.except.code" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints" />
+    </element>
+    <element>
+      <path value="Extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

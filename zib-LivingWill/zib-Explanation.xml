@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-05-03T14:34:28.851+02:00" />
+    <lastUpdated value="2017-05-22T15:23:35.595+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill-Explanation" />
-  <name value="ZIB LivingWill Explanation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation" />
+  <name value="ZIB Explanation " />
   <status value="draft" />
   <date value="2017-05-03T14:29:29.7864578+02:00" />
   <publisher value="Nictiz" />
@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An extension to add a explanation information element to the Concent Resourse as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) LivingWilll version 3.0." />
+  <description value="An extension to add a explanation information element to the Concent Resourse as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) LivingWilll and TreatmentInstruction version 3.0." />
   <fhirVersion value="3.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -26,17 +26,9 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension">
-      <path value="Extension" />
-    </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <min value="0" />
-      <max value="0" />
-    </element>
-    <element id="Extension.url">
+    <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill-Explanation" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation" />
     </element>
     <element id="Extension.valueString">
       <path value="Extension.valueString" />
