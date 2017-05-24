@@ -214,21 +214,5 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Coverage.payor.extension.BankInformation.url">
-      <path value="Coverage.payor.extension.url" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="uri" />
-      </type>
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />
-    </element>
-    <element id="Coverage.payor.extension.value">
-      <path value="Coverage.payor.extension.value[x]" />
-      <max value="0" />
-      <type>
-        <code value="boolean" />
-      </type>
-    </element>
   </differential>
 </StructureDefinition>
