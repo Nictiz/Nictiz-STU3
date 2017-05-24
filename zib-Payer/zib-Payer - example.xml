@@ -4,7 +4,7 @@
 <Coverage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/coverage.xsd">
     <id value="example"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-PayerInsurance"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -34,8 +34,8 @@
             </table>
         </div>
     </text>
-    <!-- System needed? -->
     <identifier>
+        <system value="http://menzis.com/polisnummer"/>
         <value value="12345678"/>
     </identifier>
     <type>
@@ -50,7 +50,6 @@
         <end value="2013-01-31"/>
     </period>
     <payor>
-        <!-- http://fhir.nl/fhir/StructureDefinition/nl-core-organization -->
         <reference value="Organization/example"/>
         <display value="Menzis Zorgverzekeraar N.V"/>
     </payor>

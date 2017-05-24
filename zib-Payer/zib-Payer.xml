@@ -6,8 +6,8 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:09.079+00:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-PayerInsurance" />
-  <name value="ZIB PayerInsurance" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer" />
+  <name value="ZIB Payer" />
   <status value="draft" />
   <date value="2017-01-16T17:02:59.6109232+01:00" />
   <publisher value="Nictiz" />
@@ -41,7 +41,7 @@
       <short value="InsurantNumber" />
       <definition value="Number under which the insured person is registered at the insurance company&#13;&#10;This item maps the ‘Identification number of the card’ on EHIC field 8" />
       <alias value="VerzekerdeNummer" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <mapping>
         <identity value="zib-betaler" />
@@ -117,6 +117,118 @@
         <map value="NL-CM:1.1.3" />
         <comment value="InsuranceCompany" />
       </mapping>
+    </element>
+    <element id="Coverage.payor.extension">
+      <path value="Coverage.payor.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Coverage.payor.extension.BankInformation">
+      <path value="Coverage.payor.extension" />
+      <sliceName value="BankInformation" />
+      <short value="BankInformation" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />
+      </type>
+    </element>
+    <element id="Coverage.payor.extension.extension">
+      <path value="Coverage.payor.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Coverage.payor.extension.extension.BankName">
+      <path value="Coverage.payor.extension.extension" />
+      <sliceName value="BankName" />
+      <short value="BankName" />
+      <definition value="Name of the financial organization." />
+      <alias value="BankNaam" />
+      <min value="0" />
+      <max value="1" />
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.9" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor.extension.extension.BankName.url">
+      <path value="Coverage.payor.extension.extension.url" />
+      <fixedUri value="BankName" />
+    </element>
+    <element id="Coverage.payor.extension.extension.BankName.valueString">
+      <path value="Coverage.payor.extension.extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Coverage.payor.extension.extension.AccountNumber">
+      <path value="Coverage.payor.extension.extension" />
+      <sliceName value="AccountNumber" />
+      <short value="AccountNumber" />
+      <definition value="The payer’s bank account number at the listed organization. For European countries, this is the IBAN." />
+      <alias value="Rekeningnummer" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.11" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor.extension.extension.AccountNumber.url">
+      <path value="Coverage.payor.extension.extension.url" />
+      <fixedUri value="AccountNumber" />
+    </element>
+    <element id="Coverage.payor.extension.extension.AccountNumber.valueString">
+      <path value="Coverage.payor.extension.extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Coverage.payor.extension.extension.BankCode">
+      <path value="Coverage.payor.extension.extension" />
+      <sliceName value="BankCode" />
+      <short value="BankCode" />
+      <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code." />
+      <alias value="Bankcode" />
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.10" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor.extension.extension.BankCode.url">
+      <path value="Coverage.payor.extension.extension.url" />
+      <fixedUri value="BankCode" />
+    </element>
+    <element id="Coverage.payor.extension.extension.BankCode.valueString">
+      <path value="Coverage.payor.extension.extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Coverage.payor.extension.BankInformation.url">
+      <path value="Coverage.payor.extension.url" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />
+    </element>
+    <element id="Coverage.payor.extension.value">
+      <path value="Coverage.payor.extension.value[x]" />
+      <max value="0" />
+      <type>
+        <code value="boolean" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
