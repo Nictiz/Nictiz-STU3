@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/procedurerequest.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ProcedureRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/procedurerequest.xsd">
+<id value="procedureRequest-example"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest"/>
+  </meta>
+  <status value="active">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus">
+     <valueCodeableConcept>
+        <coding>
+         <system value="urn:oid:2.16.840.1.113883.5.14"/>
+          <code value="active"/>
+          <display value="Pending"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </status>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.3.120.5.2"/>
+      <code value="338663L"/>
+      <display value="KNIE - PROTHESE IMPLANTATIE GEWRICHT - LINKS"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Jongeneel-de Haas"/>
+  </subject>
+  <context>
+    <reference value="Encounter/example"/>
+  </context>
+  <occurrenceDateTime value="2012-06-05"/>
+  <authoredOn value="2012-05-09"/>
+  <requester>
+    <agent>
+      <reference value="Practitioner/example"/>
+      <display value="J. Willemse"/>
+    </agent>
+    <onBehalfOf>
+      <reference value="Organization/example"/>
+      <display value="UMCG"/>
+    </onBehalfOf>
+  </requester>
+  <performer>
+      <reference value="Practitioner/example"/>
+      <display value="H. de Vries"/>
+  </performer>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="210659002"/>
+      <display value="Left knee"/>
+    </coding>
+  </bodySite>
+</ProcedureRequest>

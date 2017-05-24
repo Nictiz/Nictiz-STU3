@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/appointment.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Appointment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/appointment.xsd">
+  <id value="Appointment-example"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Appointment"/>
+  </meta>
+  <status value="booked">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus">
+      <valueCodeableConcept>
+        <coding>
+          <system value="urn:oid:2.16.840.1.113883.5.14"/>
+          <code value="active"/>
+          <display value="Pending"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </status>
+  <!-- ZIB: A deviating result which serves as the reason for the contact. -->
+  <reason>
+    <text value="Unexpected LabResults"/>
+  </reason>
+  <indication>
+    <reference value="Condition/example"/>
+  </indication>
+  <start value="2013-12-10T09:00:00Z"/> 
+  <end value="2013-12-10T11:00:00Z"/> 
+  <participant> 
+    <actor> 
+      <reference value="Patient/example"/> 
+      <display value="Jongeneel-de Haas"/>
+    </actor> 
+    <required value="required"/> 
+    <status value="accepted"/> 
+  </participant> 
+  <participant> 
+    <type> 
+      <coding> 
+        <system value="http://hl7.org/fhir/v3/ParticipationType"/> 
+        <code value="PPRF"/>
+        <display value="primary performer"/>
+      </coding> 
+    </type> 
+    <actor> 
+      <reference value="Practitioner/example"/> 
+      <display value="H. de Vries"/>
+    </actor> 
+    <required value="required"/> 
+    <status value="accepted"/> 
+  </participant> 
+  <participant> 
+    <actor> 
+      <reference value="Location/1"/> 
+      <display value="South Wing, second floor"/> 
+    </actor> 
+    <required value="required"/> 
+    <status value="accepted"/> 
+  </participant> 
+</Appointment>
