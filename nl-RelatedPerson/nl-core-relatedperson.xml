@@ -19,6 +19,16 @@
         <uri value="https://zibs.nl/wiki/Contactpersoon(NL)"/>
         <name value="Zorginformatiebouwsteen Contactpersoon"/>
     </mapping>
+    <mapping>
+        <identity value="zib-patient"/>
+        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
+        <name value="Zorginformatiebouwsteen Patient"/>
+    </mapping>
+    <mapping>
+        <identity value="zib-betaler" />
+        <uri value="https://zibs.nl/wiki/Betaler(NL)" />
+        <name value="Zorginformatiebouwsteen Betaler" />
+    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="RelatedPerson"/>
@@ -95,6 +105,10 @@
                 <identity value="zib-contactpersoon"/>
                 <map value="NL-CM:3.1.4"/>
             </mapping>
+            <mapping>
+                <identity value="zib-betaler" />
+                <map value="NL-CM:1.1.5" />
+            </mapping>
         </element>
         <element id="RelatedPerson.telecom">
             <path value="RelatedPerson.telecom" />
@@ -107,6 +121,10 @@
             <mapping>
                 <identity value="zib-patient" />
                 <map value="NL-CM:0.1.5" />
+            </mapping>
+            <mapping>
+                <identity value="zib-betaler" />
+                <map value="NL-CM:1.1.12" />
             </mapping>
         </element>
         <element id="RelatedPerson.telecom.system">
@@ -151,6 +169,10 @@
             <mapping>
                 <identity value="zib-contactpersoon"/>
                 <map value="NL-CM:3.1.5"/>
+            </mapping>
+            <mapping>
+                <identity value="zib-betaler" />
+                <map value="NL-CM:1.1.17" />
             </mapping>
         </element>
     </differential>

@@ -41,6 +41,11 @@
         <uri value="https://zibs.nl/wiki/Nationaliteit(NL)"/>
         <name value="Zorginformatiebouwsteen Nationaliteit"/>
     </mapping>
+    <mapping>
+        <identity value="zib-betaler" />
+        <uri value="https://zibs.nl/wiki/Betaler(NL)" />
+        <name value="Zorginformatiebouwsteen Betaler" />
+    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Patient"/>
@@ -154,6 +159,10 @@
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.6"/>
             </mapping>
+            <mapping>
+                <identity value="zib-betaler" />
+                <map value="NL-CM:1.1.5" />
+            </mapping>
         </element>
         <element id="Patient.telecom">
             <path value="Patient.telecom" />
@@ -162,6 +171,10 @@
             <mapping>
                 <identity value="zib-patient" />
                 <map value="NL-CM:0.1.5" />
+            </mapping>
+            <mapping>
+                <identity value="zib-betaler" />
+                <map value="NL-CM:1.1.12" />
             </mapping>
         </element>
         <element id="Patient.telecom.system">
@@ -189,10 +202,6 @@
             <mapping>
                 <identity value="zib-patient" />
                 <map value="NL-CM:0.1.22" />
-            </mapping>
-            <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.19" />
             </mapping>
         </element>
         <element id="Patient.gender">
@@ -237,6 +246,10 @@
             <mapping>
                 <identity value="zib-patient"/>
                 <map value="NL-CM:0.1.4"/>
+            </mapping>
+            <mapping>
+                <identity value="zib-betaler" />
+                <map value="NL-CM:1.1.17" />
             </mapping>
         </element>
         <element id="Patient.maritalStatus">
