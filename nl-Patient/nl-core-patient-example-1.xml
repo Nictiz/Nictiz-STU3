@@ -114,7 +114,7 @@
     </address>
     <maritalStatus>
         <coding>
-            <system value="urn:oid:2.16.840.1.113883.5.2"/>
+            <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
             <code value="M"/>
             <display value="Married"/>
         </coding>

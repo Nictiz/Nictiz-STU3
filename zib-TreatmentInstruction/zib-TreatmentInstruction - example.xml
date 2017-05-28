@@ -18,7 +18,7 @@
     <extension url="VerifiedWith">
       <valueCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.96"/>
+          <system value="http://snomed.info/sct"/>
           <code value="116154003"/>
           <display value="Patient"/>
         </coding>
@@ -71,7 +71,7 @@
   <!-- Example of a policyRule -->
   <policyRule value="http://wetten.overheid.nl/BWBR0012410/2014-02-15"/>
   <purpose>
-    <system value="urn:oid:2.16.840.1.113883.6.96"/>
+    <system value="http://snomed.info/sct"/>
     <code value="89666000"/>
     <display value="Cardiopulmonary resuscitation (procedure)"/>
   </purpose>
@@ -90,7 +90,7 @@
       </reference>
     </actor>
     <purpose>
-      <system value="urn:oid:2.16.840.1.113883.6.96"/>
+      <system value="http://snomed.info/sct"/>
       <code value="89666000"/>
       <display value="Cardiopulmonary resuscitation (procedure)"/>
     </purpose>

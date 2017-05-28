@@ -8,45 +8,25 @@
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      
-      <table>
-        
-        <caption>Patient with id example</caption>
-        
-        <thead>
-          
-          <tr>
-            
-            <th>Recommendation date</th>
-            
-            <th>ProductCode</th>
-            
-            <th>forecastStatus</th>
-            
-            <th>dateCriterion</th>
-            
-          </tr>
-          
-        </thead>
-        
-        <tbody>
-          
-          <tr>
-                        
-            <td>2013-06-03</td>
-            
-            <td>J07BC20 - Combinations</td>
-            
-            <td>Due</td>
-            
-            <td>Earliest Date: 2013-01-01</td>
-            
-          </tr>
-          
-        </tbody>
-        
-      </table>
-      
+        <table>
+            <caption>Patient with id example</caption>
+            <thead>
+                <tr>
+                    <th>Recommendation date</th>
+                    <th>ProductCode</th>
+                    <th>forecastStatus</th>
+                    <th>dateCriterion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2013-06-03</td>
+                    <td>J07BC20 - Combinations</td>
+                    <td>Due</td>
+                    <td>Earliest Date: 2013-01-01</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
   </text>
   <patient>
@@ -56,7 +36,7 @@
     <date value="2013-06-03"/>
     <vaccineCode>
       <coding>
-        <system value="urn:oid:2.16.840.1.113883.6.73"/>
+        <system value="http://www.whocc.no/atc"/>
         <code value="J07BC20"/>
         <display value="J07BC20 - Combinations"/>
       </coding>

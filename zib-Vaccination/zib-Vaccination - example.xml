@@ -8,52 +8,32 @@
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-            
-      <table>
-                
-        <caption>Patient with id example</caption>
-                
-        <thead>
-                    
-          <tr>
-                        
-            <th>ProductCode</th>
-                        
-            <th>VaccinationDate</th>
-                        
-            <th>Explanation</th>
-                        
-            <th>Administrator</th>
-                    
-          </tr>
-                
-        </thead>
-                
-        <tbody>
-                    
-          <tr>
-                        
-            <td>J07BC20 - Combinations</td>
-                        
-            <td>2012-06-03</td>
-                        
-            <td>Visit to Guetemala.</td>
-                        
-            <td>H. de Vries</td>
-                    
-          </tr>
-                
-        </tbody>
-            
-      </table>
-        
+        <table>
+            <caption>Patient with id example</caption>
+            <thead>
+                <tr>
+                    <th>ProductCode</th>
+                    <th>VaccinationDate</th>
+                    <th>Explanation</th>
+                    <th>Administrator</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>J07BC20 - Combinations</td>
+                    <td>2012-06-03</td>
+                    <td>Visit to Guetemala.</td>
+                    <td>H. de Vries</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
   </text>
   <status value="completed"/>
   <notGiven value="false"/>
   <vaccineCode>
     <coding>
-      <system value="urn:oid:2.16.840.1.113883.6.73"/>
+      <system value="http://www.whocc.no/atc"/>
       <code value="J07BC20"/>
       <display value="J07BC20 - Combinations"/>
     </coding>
