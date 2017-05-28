@@ -1,177 +1,177 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <meta>
-    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
-  </meta>
-  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20150401000000" />
-  <identifier>
-    <use value="official" />
-    <system value="http://art-decor.org/ns/oids/vs" />
-    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1" />
-  </identifier>
-  <version value="2015-04-01T00:00:00" />
-  <name value="RelatieCodelijst" />
-  <status value="active" />
-  <experimental value="false" />
-  <publisher value="ART-DECOR Expert Group" />
-  <immutable value="false" />
-  <expansion>
-    <identifier value="urn:uuid:a6a0887b-e291-4304-b207-272e966e7ed3" />
-    <timestamp value="2017-05-18T10:48:09.071+02:00" />
-    <total value="31" />
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="AUNT" />
-      <display value="Aunt" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="BRO" />
-      <display value="Brother" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="BROINLAW" />
-      <display value="Brother-in-law" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="COUSN" />
-      <display value="Cousin" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="DAUC" />
-      <display value="Daughter" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="DAUINLAW" />
-      <display value="Daughter in-law" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="DOMPART" />
-      <display value="Domestic partner" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="FTH" />
-      <display value="Father" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="FTHINLAW" />
-      <display value="Father-in-law" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="DAUFOST" />
-      <display value="Foster daughter" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="FTHFOST" />
-      <display value="Foster father" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="MTHFOST" />
-      <display value="Foster mother" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="SONFOST" />
-      <display value="Foster son" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="GRNDDAU" />
-      <display value="Granddaughter" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="GRFTH" />
-      <display value="Grandfather" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="GRMTH" />
-      <display value="Grandmother" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="GRNDSON" />
-      <display value="Grandson" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="GGRFTH" />
-      <display value="Great grandfather" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="GGRMTH" />
-      <display value="Great grandmother" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="HUSB" />
-      <display value="Husband" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="MTH" />
-      <display value="Mother" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="MTHINLAW" />
-      <display value="Mother-in-law" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="NEPHEW" />
-      <display value="Nephew" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="NIECE" />
-      <display value="Niece" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="SIS" />
-      <display value="Sister" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="SISINLAW" />
-      <display value="Sister-in-law" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="SONC" />
-      <display value="Son" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="SONINLAW" />
-      <display value="Son in-law" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="UNCLE" />
-      <display value="Uncle" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.111" />
-      <code value="WIFE" />
-      <display value="Wife" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.1008" />
-      <code value="OTH" />
-      <display value="Other" />
-    </contains>
-  </expansion>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="RelatieCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:f901c896-9fdf-4215-8d3a-11c6b117cefe"/>
+        <timestamp value="2017-05-28T23:35:21.167+02:00"/>
+        <total value="31"/>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="AUNT"/>
+            <display value="Aunt"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="BRO"/>
+            <display value="Brother"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="BROINLAW"/>
+            <display value="Brother-in-law"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="COUSN"/>
+            <display value="Cousin"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="DAUC"/>
+            <display value="Daughter"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="DAUINLAW"/>
+            <display value="Daughter in-law"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="DOMPART"/>
+            <display value="Domestic partner"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="FTH"/>
+            <display value="Father"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="FTHINLAW"/>
+            <display value="Father-in-law"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="DAUFOST"/>
+            <display value="Foster daughter"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="FTHFOST"/>
+            <display value="Foster father"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="MTHFOST"/>
+            <display value="Foster mother"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="SONFOST"/>
+            <display value="Foster son"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="GRNDDAU"/>
+            <display value="Granddaughter"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="GRFTH"/>
+            <display value="Grandfather"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="GRMTH"/>
+            <display value="Grandmother"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="GRNDSON"/>
+            <display value="Grandson"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="GGRFTH"/>
+            <display value="Great grandfather"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="GGRMTH"/>
+            <display value="Great grandmother"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="HUSB"/>
+            <display value="Husband"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="MTH"/>
+            <display value="Mother"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="MTHINLAW"/>
+            <display value="Mother-in-law"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="NEPHEW"/>
+            <display value="Nephew"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="NIECE"/>
+            <display value="Niece"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="SIS"/>
+            <display value="Sister"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="SISINLAW"/>
+            <display value="Sister-in-law"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="SONC"/>
+            <display value="Son"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="SONINLAW"/>
+            <display value="Son in-law"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="UNCLE"/>
+            <display value="Uncle"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="WIFE"/>
+            <display value="Wife"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Other"/>
+        </contains>
+    </expansion>
 </ValueSet>

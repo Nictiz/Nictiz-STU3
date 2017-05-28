@@ -2,41 +2,41 @@
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
     </meta>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.2--20150401000000"/>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.2.3--20150401000000"/>
     <identifier>
         <use value="official"/>
         <system value="http://art-decor.org/ns/oids/vs"/>
-        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.3.2"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.7.2.3"/>
     </identifier>
     <version value="2015-04-01T00:00:00"/>
-    <name value="AlertNaamCodelijst"/>
+    <name value="SoortTabakGebruikCodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="ART-DECOR Expert Group"/>
     <immutable value="false"/>
     <expansion>
-        <identifier value="urn:uuid:d3fd1715-ce0e-4701-9927-f1d684b8cfa2"/>
-        <timestamp value="2017-05-28T23:35:22.081+02:00"/>
+        <identifier value="urn:uuid:1865d165-a6cd-40ba-98e4-a3633c19a7da"/>
+        <timestamp value="2017-05-28T23:35:29.48+02:00"/>
         <total value="5"/>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="66598005"/>
-            <display value="Infectious disease carrier"/>
+            <code value="65568007"/>
+            <display value="Cigarette smoker (finding)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="432415000"/>
-            <display value="Methicillin resistant staphylococcus aureus carrier"/>
+            <code value="59978006"/>
+            <display value="Cigar smoker (finding)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="431109006"/>
-            <display value="Carrier of vancomycin resistant enterococcus"/>
+            <code value="82302008"/>
+            <display value="Pipe smoker (finding)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <code value="699433000"/>
-            <display value="Human immunodeficiency virus (HIV) carrier"/>
+            <code value="160619003"/>
+            <display value="Rolls own cigarettes (finding)"/>
         </contains>
         <contains>
             <system value="http://hl7.org/fhir/v3/NullFlavor"/>

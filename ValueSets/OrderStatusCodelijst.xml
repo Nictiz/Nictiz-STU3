@@ -15,41 +15,41 @@
     <publisher value="ART-DECOR Expert Group"/>
     <immutable value="false"/>
     <expansion>
-        <identifier value="urn:uuid:81dc0ff1-c28d-4765-b4cc-69f4bc34d937"/>
-        <timestamp value="2017-05-17T17:05:20.14+02:00"/>
+        <identifier value="urn:uuid:0e68092e-1b87-497e-98e3-be374f888818"/>
+        <timestamp value="2017-05-28T23:35:28.942+02:00"/>
         <total value="7"/>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <system value="http://hl7.org/fhir/v3/ActStatus"/>
             <code value="new"/>
             <display value="Ordered"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <system value="http://snomed.info/sct"/>
             <code value="385644000"/>
             <display value="Requested"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <system value="http://hl7.org/fhir/v3/ActStatus"/>
             <code value="active"/>
             <display value="Pending"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <system value="http://snomed.info/sct"/>
             <code value="385651009"/>
             <display value="In progress"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <system value="http://hl7.org/fhir/v3/ActStatus"/>
             <code value="held"/>
             <display value="On hold"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <system value="http://hl7.org/fhir/v3/ActStatus"/>
             <code value="cancelled"/>
             <display value="Cancelled"/>
         </contains>
         <contains>
-            <system value="urn:oid:2.16.840.1.113883.5.14"/>
+            <system value="http://hl7.org/fhir/v3/ActStatus"/>
             <code value="aborted"/>
             <display value="Noshow"/>
         </contains>

@@ -1,47 +1,47 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <meta>
-    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
-  </meta>
-  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.8--20150401000000" />
-  <identifier>
-    <use value="official" />
-    <system value="http://art-decor.org/ns/oids/vs" />
-    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.13.1.8" />
-  </identifier>
-  <version value="2015-04-01T00:00:00" />
-  <name value="ResultaatStatusCodelijst" />
-  <status value="active" />
-  <experimental value="false" />
-  <publisher value="ART-DECOR Expert Group" />
-  <immutable value="false" />
-  <expansion>
-    <identifier value="urn:uuid:185a7130-aa4d-4cda-8d64-2e5e7fe70f82" />
-    <timestamp value="2017-05-18T10:48:12.805+02:00" />
-    <total value="5" />
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1" />
-      <code value="pending" />
-      <display value="Pending" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1" />
-      <code value="preliminary" />
-      <display value="Preliminary" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1" />
-      <code value="final" />
-      <display value="Final" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1" />
-      <code value="appended" />
-      <display value="Appended" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1" />
-      <code value="corrected" />
-      <display value="Corrected" />
-    </contains>
-  </expansion>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.8--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.13.1.8"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="ResultaatStatusCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:429a1f03-1420-40d3-97a9-992a5096f3c3"/>
+        <timestamp value="2017-05-28T23:35:24.853+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
+            <code value="pending"/>
+            <display value="Pending"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
+            <code value="preliminary"/>
+            <display value="Preliminary"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
+            <code value="final"/>
+            <display value="Final"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
+            <code value="appended"/>
+            <display value="Appended"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
+            <code value="corrected"/>
+            <display value="Corrected"/>
+        </contains>
+    </expansion>
 </ValueSet>

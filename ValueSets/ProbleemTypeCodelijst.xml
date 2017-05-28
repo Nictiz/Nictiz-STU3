@@ -1,62 +1,62 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <meta>
-    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
-  </meta>
-  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20150401000000" />
-  <identifier>
-    <use value="official" />
-    <system value="http://art-decor.org/ns/oids/vs" />
-    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1" />
-  </identifier>
-  <version value="2015-04-01T00:00:00" />
-  <name value="ProbleemTypeCodelijst" />
-  <status value="active" />
-  <experimental value="false" />
-  <publisher value="ART-DECOR Expert Group" />
-  <immutable value="false" />
-  <expansion>
-    <identifier value="urn:uuid:33c800e4-5f1b-4895-b1ab-76cbd01dd26a" />
-    <timestamp value="2017-05-18T10:48:11.199+02:00" />
-    <total value="8" />
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="55607006" />
-      <display value="Problem" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="64572001" />
-      <display value="Condition" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="282291009" />
-      <display value="Diagnosis" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="418799008" />
-      <display value="Symptom" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="404684003" />
-      <display value="Finding" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="409586006" />
-      <display value="Complaint" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="248536006" />
-      <display value="Functional Limitation" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="116223007" />
-      <display value="Complication" />
-    </contains>
-  </expansion>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="ProbleemTypeCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:d28171a2-f8ae-4a1d-b208-f52d2f61efc5"/>
+        <timestamp value="2017-05-28T23:35:23.166+02:00"/>
+        <total value="8"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="55607006"/>
+            <display value="Problem"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="64572001"/>
+            <display value="Condition"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="282291009"/>
+            <display value="Diagnosis"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="418799008"/>
+            <display value="Symptom"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="404684003"/>
+            <display value="Finding"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="409586006"/>
+            <display value="Complaint"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="248536006"/>
+            <display value="Functional Limitation"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="116223007"/>
+            <display value="Complication"/>
+        </contains>
+    </expansion>
 </ValueSet>

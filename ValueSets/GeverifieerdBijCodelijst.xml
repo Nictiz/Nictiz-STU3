@@ -1,47 +1,47 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <meta>
-    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
-  </meta>
-  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.4--20150401000000" />
-  <identifier>
-    <use value="official" />
-    <system value="http://art-decor.org/ns/oids/vs" />
-    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.2.4" />
-  </identifier>
-  <version value="2015-04-01T00:00:00" />
-  <name value="GeverifieerdBijCodelijst" />
-  <status value="active" />
-  <experimental value="false" />
-  <publisher value="ART-DECOR Expert Group" />
-  <immutable value="false" />
-  <expansion>
-    <identifier value="urn:uuid:fc130ad8-4b20-43e3-bb22-ea387749f9e6" />
-    <timestamp value="2017-05-18T10:48:17.223+02:00" />
-    <total value="5" />
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="116154003" />
-      <display value="Patient" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="40683002" />
-      <display value="Parent" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="394619001" />
-      <display value="Guardian" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="8601000146109" />
-      <display value="Holder of enduring power of attorney" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.5.1008" />
-      <code value="OTH" />
-      <display value="Other" />
-    </contains>
-  </expansion>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.4--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.2.4"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="GeverifieerdBijCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:38a0330b-c96b-4794-b819-22a01f48202e"/>
+        <timestamp value="2017-05-28T23:35:29.621+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="116154003"/>
+            <display value="Patient"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="40683002"/>
+            <display value="Parent"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="394619001"/>
+            <display value="Guardian"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="8601000146109"/>
+            <display value="Holder of enduring power of attorney"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Other"/>
+        </contains>
+    </expansion>
 </ValueSet>

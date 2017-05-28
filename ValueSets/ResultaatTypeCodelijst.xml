@@ -1,52 +1,52 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <meta>
-    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
-  </meta>
-  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.1--20150401000000" />
-  <identifier>
-    <use value="official" />
-    <system value="http://art-decor.org/ns/oids/vs" />
-    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.13.1.1" />
-  </identifier>
-  <version value="2015-04-01T00:00:00" />
-  <name value="ResultaatTypeCodelijst" />
-  <status value="active" />
-  <experimental value="false" />
-  <publisher value="ART-DECOR Expert Group" />
-  <immutable value="false" />
-  <expansion>
-    <identifier value="urn:uuid:c9115fcc-78bc-4ffe-825a-1ef4dafcd103" />
-    <timestamp value="2017-05-18T10:48:12.918+02:00" />
-    <total value="6" />
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="252275004" />
-      <display value="Hematology" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="275711006" />
-      <display value="Chemistry" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="68793005" />
-      <display value="Serology" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="395124008" />
-      <display value="Virology" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="69200006" />
-      <display value="Toxicology" />
-    </contains>
-    <contains>
-      <system value="urn:oid:2.16.840.1.113883.6.96" />
-      <code value="19851009" />
-      <display value="Microbiology" />
-    </contains>
-  </expansion>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.13.1.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="ResultaatTypeCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:e8d446a5-a26b-4058-b028-456a92a1c8e6"/>
+        <timestamp value="2017-05-28T23:35:24.981+02:00"/>
+        <total value="6"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="252275004"/>
+            <display value="Hematology"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="275711006"/>
+            <display value="Chemistry"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="68793005"/>
+            <display value="Serology"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="395124008"/>
+            <display value="Virology"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="69200006"/>
+            <display value="Toxicology"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="19851009"/>
+            <display value="Microbiology"/>
+        </contains>
+    </expansion>
 </ValueSet>

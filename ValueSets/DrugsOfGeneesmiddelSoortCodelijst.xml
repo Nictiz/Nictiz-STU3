@@ -1,0 +1,107 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.7.4.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="DrugsOfGeneesmiddelSoortCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:c573b4b0-4cea-4054-8aa2-261e64c6d97f"/>
+        <timestamp value="2017-05-28T23:35:23.586+02:00"/>
+        <total value="17"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="387341002"/>
+            <display value="Heroin (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="372664007"/>
+            <display value="Benzodiazepine (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="387286002"/>
+            <display value="Methadone (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="62821004"/>
+            <display value="Hydroxybutyric acid (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="387085005"/>
+            <display value="Cocaine (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="229003004"/>
+            <display value="Cocaine freebase (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="288459003"/>
+            <display value="Methylenedioxymethamphetamine (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="373338002"/>
+            <display value="Amphetamine (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="398705004"/>
+            <display value="Cannabis (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="229006007"/>
+            <display value="Hallucinogenic mushrooms (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="15698006"/>
+            <display value="Lysergic acid diethylamide (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="373464007"/>
+            <display value="Ketamine (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="9721008"/>
+            <display value="Phencyclidine (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="387499002"/>
+            <display value="Methamphetamine (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="111151007"/>
+            <display value="Anabolic steroid (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="372800002"/>
+            <display value="Laxative (substance)"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Other"/>
+        </contains>
+    </expansion>
+</ValueSet>

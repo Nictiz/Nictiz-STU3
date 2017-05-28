@@ -1,0 +1,72 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.8.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.7.8.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="WoningTypeCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:d100c70f-9888-41db-9e13-d6f68801d323"/>
+        <timestamp value="2017-05-28T23:35:25.614+02:00"/>
+        <total value="10"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="BOVENW"/>
+            <display value="Bovenwoning"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="BENEDENW"/>
+            <display value="Benedenwoning"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="EENGEZW"/>
+            <display value="Eengezinswoning"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="FLATW"/>
+            <display value="Appartement of flatwoning"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="AANLW"/>
+            <display value="Aanleunwoning"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="WOONB"/>
+            <display value="Woonboot"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="WOONW"/>
+            <display value="Woonwagen"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="AWBZIN"/>
+            <display value="Instelling AWBZ"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="DAKLOO"/>
+            <display value="Dakloos"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Anders"/>
+        </contains>
+    </expansion>
+</ValueSet>
