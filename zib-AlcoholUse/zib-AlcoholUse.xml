@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse" />
-  <name value="ZIB AlcoholUse" />
+  <name value="ZIB-AlcoholUse" />
+  <title value="ZIB AlcoholUse" />
   <status value="draft" />
   <date value="2017-01-04T10:27:28.0292377+01:00" />
   <publisher value="Nictiz" />

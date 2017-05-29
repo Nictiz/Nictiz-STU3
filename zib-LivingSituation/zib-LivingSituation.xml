@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation" />
-  <name value="ZIB LivingSituation" />
+  <name value="ZIB-LivingSituation" />
+  <title value="ZIB LivingSituation" />
   <status value="draft" />
   <date value="2017-01-09T14:12:14.1341407+01:00" />
   <publisher value="Nictiz" />

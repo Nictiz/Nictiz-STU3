@@ -9,7 +9,8 @@
       <p>ProcedureRequest as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0 OverdrachtGeplandeZorgActiviteit</p>
     </div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest" />
-  <name value="ZIB ProcedureRequest" />
+  <name value="ZIB-ProcedureRequest" />
+  <title value="ZIB ProcedureRequest" />
   <status value="draft" />
   <date value="2017-05-17T13:30:03.2275207+01:00" />
   <publisher value="Nictiz" />

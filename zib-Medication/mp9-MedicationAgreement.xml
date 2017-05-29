@@ -10,7 +10,8 @@
   <p class="issue">For discussion: ZIB dateEnded/eindDatum cannot be represented with a direct attribute. It could match the meta.lastUpdated when status='deleted'. Otherwise an extension is in order</p>
 </div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
-  <name value="MP9 Medication Agreement" />
+  <name value="MP9-Medication-Agreement" />
+  <title value="MP9 Medication Agreement" />
   <status value="draft" />
   <date value="2016-12-12T16:41:08.39+00:00" />
   <publisher value="Nictiz" />

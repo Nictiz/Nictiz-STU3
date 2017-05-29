@@ -4,7 +4,8 @@
     <lastUpdated value="2017-05-23T14:24:44.664+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
-  <name value="MP9 Dosage Intructions" />
+  <name value="MP9-Dosage-Intructions" />
+  <title value="MP9 Dosage Intructions" />
   <status value="draft" />
   <date value="2017-05-18T11:36:21.9737868+02:00" />
   <publisher value="Nictiz" />

@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations" />
-  <name value="ZIB DietaryRecommendations" />
+  <name value="ZIB-DietaryRecommendations" />
+  <title value="ZIB DietaryRecommendations" />
   <status value="draft" />
   <date value="2017-02-13T15:20:12.6745603+01:00" />
   <publisher value="Nictiz" />

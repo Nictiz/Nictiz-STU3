@@ -6,7 +6,8 @@
     <lastUpdated value="2017-04-13T17:08:52.748+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance-Reaction-Certainty" />
-  <name value="ZIB AllergyIntolerance Reaction Probability" />
+  <name value="ZIB-AllergyIntolerance-Reaction-Probability" />
+  <title value="ZIB AllergyIntolerance Reaction Probability" />
   <status value="draft" />
   <date value="2017-04-13T17:08:52.748+02:00" />
   <publisher value="Nictiz" />

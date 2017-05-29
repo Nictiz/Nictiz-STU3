@@ -7,7 +7,8 @@
     <valueCode value="cbcc" />
   </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill" />
-  <name value="ZIB LivingWill" />
+  <name value="ZIB-LivingWill" />
+  <title value="ZIB LivingWill" />
   <status value="draft" />
   <date value="2017-05-03T12:18:39.6788994+02:00" />
   <publisher value="Nictiz" />

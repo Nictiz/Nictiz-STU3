@@ -5,7 +5,8 @@
     <lastUpdated value="2017-02-20T14:32:19.216+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-description" />
-  <name value="MP9 Medication Description" />
+  <name value="MP9-Medication-Description" />
+  <title value="MP9 Medication Description" />
   <status value="draft" />
   <date value="2017-02-20T14:32:19.216+00:00" />
   <publisher value="Nictiz" />

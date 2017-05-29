@@ -7,7 +7,8 @@
     <lastUpdated value="2017-02-22T10:56:13.364+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />
-  <name value="ZIB Payer BankInformation" />
+  <name value="ZIB-Payer-BankInformation" />
+  <title value="ZIB Payer BankInformation" />
   <status value="draft" />
   <date value="2017-01-16T16:23:21.4994187+01:00" />
   <publisher value="Nictiz" />

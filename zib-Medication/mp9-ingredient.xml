@@ -6,7 +6,8 @@
     <lastUpdated value="2016-09-30T11:19:08.191+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-ingredient" />
-  <name value="MP9 Ingredient" />
+  <name value="MP9-Ingredient" />
+  <title value="MP9 Ingredient" />
   <status value="draft" />
   <date value="2016-09-30T11:19:08.191+00:00" />
   <publisher value="Nictiz" />

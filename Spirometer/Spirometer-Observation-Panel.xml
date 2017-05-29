@@ -6,7 +6,8 @@
     <lastUpdated value="2017-02-01T12:50:59.171+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-Panel" />
-  <name value="Spirometer Observation Panel" />
+  <name value="Spirometer-Observation-Panel" />
+  <title value="Spirometer Observation Panel" />
   <status value="draft" />
   <date value="2017-01-20T15:08:40.2001106+01:00" />
   <publisher value="Nictiz" />

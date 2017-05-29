@@ -6,7 +6,8 @@
     <lastUpdated value="2016-12-12T16:39:05.96+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAdministrationAgreement" />
-  <name value="MP9 Medication Administration Agreement" />
+  <name value="MP9-Medication-Administration-Agreement" />
+  <title value="MP9 Medication Administration Agreement" />
   <status value="draft" />
   <date value="2016-12-12T16:39:05.96+00:00" />
   <publisher value="Nictiz" />

@@ -6,7 +6,8 @@
     <lastUpdated value="2017-02-20T08:42:17.716+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-authored-on" />
-  <name value="MP9 Authored On" />
+  <name value="MP9-Authored-On" />
+  <title value="MP9 Authored On" />
   <status value="draft" />
   <date value="2017-02-20T08:42:17.716+00:00" />
   <publisher value="Nictiz" />

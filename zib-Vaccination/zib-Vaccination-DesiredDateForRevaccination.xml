@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination-DesiredDateForRevaccination" />
-  <name value="ZIB Vaccination DesiredDateForRevaccination" />
+  <name value="ZIB-Vaccination-DesiredDateForRevaccination" />
+  <title value="ZIB Vaccination DesiredDateForRevaccination" />
   <status value="draft" />
   <date value="2017-02-10T10:20:09.8814306+01:00" />
   <publisher value="Nictiz" />

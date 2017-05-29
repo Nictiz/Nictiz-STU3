@@ -6,7 +6,8 @@
     <lastUpdated value="2016-11-11T12:24:01.174+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen" />
-  <name value="ZIB LaboratoryTestResult Specimen" />
+  <name value="ZIB-LaboratoryTestResult-Specimen" />
+  <title value="ZIB LaboratoryTestResult Specimen" />
   <status value="draft" />
   <date value="2016-11-11T12:24:01.174+00:00" />
   <publisher value="Nictiz" />

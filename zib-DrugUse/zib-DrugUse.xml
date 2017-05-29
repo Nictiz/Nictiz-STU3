@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse"/>
-  <name value="ZIB DrugUse"/>
+  <name value="ZIB-DrugUse"/>
+  <title value="ZIB DrugUse"/>
   <status value="draft"/>
   <date value="2017-01-06T14:29:34.8735644+01:00"/>
   <publisher value="Nictiz"/>

@@ -3,6 +3,7 @@
     <id value="nl-core-preferred-pharmacy"/>
     <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-preferred-pharmacy"/>
     <name value="nl-core-preferred-pharmacy"/>
+    <title value="nl-core-preferred-pharmacy"/>
     <status value="draft"/>
     <date value="2017-03-31T12:00:00+01:00"/>
     <publisher value="HL7 Netherlands"/>

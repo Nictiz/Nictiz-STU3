@@ -7,7 +7,8 @@
     <lastUpdated value="2017-04-13T17:10:45.215+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
-  <name value="ZIB AllergyIntolerance" />
+  <name value="ZIB-AllergyIntolerance" />
+  <title value="ZIB AllergyIntolerance" />
   <status value="draft" />
   <date value="2016-12-09T08:27:09.849+00:00" />
   <publisher value="Nictiz" />

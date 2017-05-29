@@ -6,7 +6,8 @@
     <lastUpdated value="2017-01-31T15:49:31.542+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Bundle" />
-  <name value="Spirometer Bundle" />
+  <name value="Spirometer-Bundle" />
+  <title value="Spirometer Bundle" />
   <status value="draft" />
   <date value="2017-01-20T11:24:21.1492075+01:00" />
   <publisher value="Nictiz" />

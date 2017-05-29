@@ -7,6 +7,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/observation-nl" />
   <name value="observation-nl" />
+  <title value="observation-nl" />
   <status value="draft" />
   <date value="2017-01-20T15:32:11.6469951+01:00" />
   <publisher value="Nictiz" />

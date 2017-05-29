@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
-  <name value="ZIB Procedure" />
+  <name value="ZIB-Procedure" />
+  <title value="ZIB Procedure" />
   <status value="draft" />
   <date value="2017-01-11T13:30:03.2275207+01:00" />
   <publisher value="Nictiz" />

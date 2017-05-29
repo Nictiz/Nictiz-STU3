@@ -6,7 +6,8 @@
     <lastUpdated value="2016-12-01T14:33:13.794+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-additional-dosage-instructions" />
-  <name value="MP9 Additional Dosage Instructions" />
+  <name value="MP9-Additional-Dosage-Instructions" />
+  <title value="MP9 Additional Dosage Instructions" />
   <status value="draft" />
   <date value="2016-12-01T14:33:13.794+00:00" />
   <publisher value="Nictiz" />

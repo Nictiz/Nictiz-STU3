@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse" />
-  <name value="ZIB TobaccoUse" />
+  <name value="ZIB-TobaccoUse" />
+  <title value="ZIB TobaccoUse" />
   <status value="draft" />
   <date value="2017-01-06T10:06:48.2524311+01:00" />
   <publisher value="Nictiz" />

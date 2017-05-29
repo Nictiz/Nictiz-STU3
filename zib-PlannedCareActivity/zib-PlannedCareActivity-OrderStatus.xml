@@ -4,7 +4,8 @@
     <lastUpdated value="2017-05-22T14:47:50.767+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus" />
-  <name value="ZIB OrderStatus" />
+  <name value="ZIB-OrderStatus" />
+  <title value="ZIB OrderStatus" />
   <status value="draft" />
   <date value="2017-05-17T16:33:21.6198582+02:00" />
   <publisher value="Nictiz" />

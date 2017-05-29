@@ -11,7 +11,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-Requester" />
-  <name value="ZIB Procedure Requester" />
+  <name value="ZIB-Procedure-Requester" />
+  <title value="ZIB Procedure Requester" />
   <status value="draft" />
   <date value="2017-02-06T17:00:22.0909822+01:00" />
   <publisher value="Nictiz" />

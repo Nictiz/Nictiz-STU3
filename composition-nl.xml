@@ -6,6 +6,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/composition-nl" />
   <name value="nl-core-composition" />
+  <title value="nl-core-composition" />
   <status value="draft" />
   <date value="2017-01-20T11:24:38.3562944+01:00" />
   <publisher value="Nictiz" />

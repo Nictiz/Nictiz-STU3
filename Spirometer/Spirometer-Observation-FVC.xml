@@ -6,7 +6,8 @@
     <lastUpdated value="2017-01-31T16:00:10.595+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FVC" />
-  <name value="Spirometer Observation FVC (L)" />
+  <name value="Spirometer-Observation-FVC-(L)" />
+  <title value="Spirometer Observation FVC (L)" />
   <status value="draft" />
   <date value="2017-01-20T15:54:38.2660833+01:00" />
   <publisher value="Nictiz" />

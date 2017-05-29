@@ -6,7 +6,8 @@
     <lastUpdated value="2016-12-12T16:22:27.396+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-as-agreed" />
-  <name value="MP9 As Agreed" />
+  <name value="MP9-As-Agreed" />
+  <title value="MP9 As Agreed" />
   <status value="draft" />
   <date value="2016-12-12T16:22:27.396+00:00" />
   <publisher value="Nictiz" />

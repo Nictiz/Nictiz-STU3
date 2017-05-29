@@ -5,7 +5,8 @@
     <lastUpdated value="2017-02-01T12:50:18.492+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FEV1-VC" />
-  <name value="Spirometer Observation FEV1%M" />
+  <name value="Spirometer-Observation-FEV1%M" />
+  <title value="Spirometer Observation FEV1%M" />
   <status value="draft" />
   <date value="2017-01-20T15:55:00.6065673+01:00" />
   <publisher value="Nictiz" />

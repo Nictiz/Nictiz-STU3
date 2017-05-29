@@ -11,7 +11,8 @@
         RVP information is especially important for children. Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk.</p>
 </div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination" />
-  <name value="ZIB Vaccination" />
+  <name value="ZIB-Vaccination" />
+  <title value="ZIB Vaccination" />
   <status value="draft" />
   <date value="2017-01-16T11:38:25.218701+01:00" />
   <publisher value="Nictiz" />

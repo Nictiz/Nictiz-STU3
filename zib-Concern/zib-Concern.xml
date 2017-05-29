@@ -23,7 +23,8 @@
   <p>In first-line care the Episode concept fills the role of Concern.</p>
 </div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
-  <name value="ZIB Concern" />
+  <name value="ZIB-Concern" />
+  <title value="ZIB Concern" />
   <status value="draft" />
   <date value="2017-01-11T13:30:21.5094956+01:00" />
   <publisher value="Nictiz" />

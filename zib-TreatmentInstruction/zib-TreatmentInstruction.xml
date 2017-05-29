@@ -7,7 +7,8 @@
     <valueCode value="cbcc" />
   </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction" />
-  <name value="ZIB TreatmentInstruction" />
+  <name value="ZIB-TreatmentInstruction" />
+  <title value="ZIB TreatmentInstruction" />
   <status value="draft" />
   <date value="2017-05-03T12:18:39.6788994+02:00" />
   <publisher value="Nictiz" />

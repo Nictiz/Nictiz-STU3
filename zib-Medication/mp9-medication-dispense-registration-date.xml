@@ -6,7 +6,8 @@
     <lastUpdated value="2016-12-12T16:24:56.205+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-dispense-registration-date" />
-  <name value="MP9 Dispense Registration Date" />
+  <name value="MP9-Dispense-Registration-Date" />
+  <title value="MP9 Dispense Registration Date" />
   <status value="draft" />
   <date value="2016-12-12T16:24:56.205+00:00" />
   <publisher value="Nictiz" />

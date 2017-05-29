@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid" />
-  <name value="ZIB MedicalAid" />
+  <name value="ZIB-MedicalAid" />
+  <title value="ZIB MedicalAid" />
   <status value="draft" />
   <date value="2017-01-16T14:46:58.7900353+01:00" />
   <publisher value="Nictiz" />

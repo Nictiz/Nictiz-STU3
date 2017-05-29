@@ -5,6 +5,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation" />
   <name value="ZIB Explanation " />
+  <title value="ZIB Explanation " />
   <status value="draft" />
   <date value="2017-05-03T14:29:29.7864578+02:00" />
   <publisher value="Nictiz" />

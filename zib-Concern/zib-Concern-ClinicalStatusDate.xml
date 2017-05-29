@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate" />
-  <name value="ZIB Concern ClinicalStatusDate" />
+  <name value="ZIB-Concern-ClinicalStatusDate" />
+  <title value="ZIB Concern ClinicalStatusDate" />
   <status value="draft" />
   <date value="2017-01-27T16:32:59.0479165+01:00" />
   <publisher value="Nictiz" />

@@ -5,6 +5,7 @@
   </meta>
   <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-healthcareservice" />
   <name value="nl-core-healthcareservice" />
+  <title value="nl-core-healthcareservice" />
   <status value="draft" />
   <date value="2017-04-24T15:11:16.7995284+02:00" />
   <publisher value="HL7 Netherlands" />

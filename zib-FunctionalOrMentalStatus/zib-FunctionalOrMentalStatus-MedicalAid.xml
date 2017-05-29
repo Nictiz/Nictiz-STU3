@@ -12,7 +12,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus-MedicalAid" />
-  <name value="ZIB FunctionalOrMentalStatus MedicalAid" />
+  <name value="ZIB-FunctionalOrMentalStatus-MedicalAid" />
+  <title value="ZIB FunctionalOrMentalStatus MedicalAid" />
   <status value="draft" />
   <date value="2017-02-15T16:11:30.4915051+01:00" />
   <publisher value="Nictiz" />

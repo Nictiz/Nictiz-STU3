@@ -13,7 +13,8 @@
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Alert" />
-  <name value="ZIB Alert" />
+  <name value="ZIB-Alert" />
+  <title value="ZIB Alert" />
   <status value="draft" />
   <date value="2017-01-13T14:12:08.6186301+01:00" />
   <publisher value="Nictiz" />
