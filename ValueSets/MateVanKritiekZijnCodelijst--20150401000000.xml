@@ -1,0 +1,42 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.4--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.4"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="MateVanKritiekZijnCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:d78d5c9f-f1b3-45e3-b0eb-8d14117b4255"/>
+        <timestamp value="2017-05-29T21:30:12.29+02:00"/>
+        <total value="4"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="62482003"/>
+            <display value="Low"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="255508009"/>
+            <display value="Medium"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="75540009"/>
+            <display value="High"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="399166001"/>
+            <display value="Fatal"/>
+        </contains>
+    </expansion>
+</ValueSet>
