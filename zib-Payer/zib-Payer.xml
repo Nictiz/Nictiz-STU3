@@ -36,6 +36,10 @@
   <differential>
     <element id="Coverage">
       <path value="Coverage" />
+      <mapping>
+        <identity value="zib-betaler"/>
+        <map value="NL-CM:1.1.8"/>
+      </mapping>
     </element>
     <element id="Coverage.identifier">
       <path value="Coverage.identifier" />
@@ -137,6 +141,10 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />
       </type>
+      <mapping>
+        <identity value="zib-betaler" />
+        <map value="NL-CM:1.1.4" />
+      </mapping>
     </element>
     <element id="Coverage.payor.extension.extension">
       <path value="Coverage.payor.extension.extension" />

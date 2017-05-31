@@ -98,6 +98,8 @@
     <element id="Extension.extension.BankCode">
       <path value="Extension.extension" />
       <sliceName value="BankCode" />
+      <min value="0" />
+      <max value="1" />
     </element>
     <element id="Extension.extension.BankCode.url">
       <path value="Extension.extension.url" />
