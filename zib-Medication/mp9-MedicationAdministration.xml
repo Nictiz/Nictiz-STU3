@@ -3,7 +3,7 @@
   <id value="8c6e8ba5-9637-477a-8bd7-340a3a99b342" />
   <meta>
     <versionId value="4" />
-    <lastUpdated value="2017-06-08T17:21:48.786+02:00" />
+    <lastUpdated value="2017-06-08T17:35:29.723+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAdministration" />
   <name value="MP9-Medication-Administration" />
@@ -92,14 +92,9 @@
       <alias value="Toediener" />
     </element>
     <element>
-      <path value="MedicationAdministration.note" />
-      <short value="Comment" />
-      <definition value="Comments on the dispense." />
-      <alias value="Toelichting" />
-    </element>
-    <element>
       <path value="MedicationAdministration.dosage" />
-      <short value="Dosering" />
+      <short value="DosageInstructions" />
+      <alias value="Dosering" />
     </element>
   </differential>
 </StructureDefinition>

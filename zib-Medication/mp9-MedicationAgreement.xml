@@ -3,7 +3,7 @@
   <id value="e445eae5-56dd-4b2f-85c1-39fc585f0d35" />
   <meta>
     <versionId value="5" />
-    <lastUpdated value="2017-06-08T17:26:40.18+02:00" />
+    <lastUpdated value="2017-06-08T17:39:42.922+02:00" />
   </meta>
   <text>
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -44,13 +44,13 @@
     </element>
     <element id="MedicationRequest.extension.usagePeriod">
       <path value="MedicationRequest.extension" />
-      <sliceName value="usagePeriod" />
+      <sliceName value="periodOfUse" />
       <short value="IngangsDatum/ UitgangsDatum" />
       <definition value="Optional Extensions Element - found in all resources." />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-period" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-period-of-use" />
       </type>
     </element>
     <element id="MedicationRequest.extension.usageDuration">
@@ -141,6 +141,7 @@
     </element>
     <element id="MedicationRequest.dosageInstruction">
       <path value="MedicationRequest.dosageInstruction" />
+      <short value="DosageInstructions" />
       <type>
         <code value="Dosage" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />

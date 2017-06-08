@@ -3,10 +3,10 @@
   <id value="1f3ce9bd-8ee1-41c9-8391-4fce6db1d96b" />
   <meta>
     <versionId value="2" />
-    <lastUpdated value="2017-06-08T17:16:32.567+02:00" />
+    <lastUpdated value="2017-06-08T17:38:46.573+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-period" />
-  <name value="MP9-Medication-Usage-Period" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-period-of-use" />
+  <name value="MP9-Medication-Period-Of-Use" />
   <title value="MP9 Medication Usage Period" />
   <status value="draft" />
   <date value="2016-12-12T16:31:32.569+00:00" />
@@ -26,6 +26,8 @@
   <abstract value="false" />
   <contextType value="resource" />
   <context value="MedicationStatement" />
+  <context value="MedicationRequest" />
+  <context value="MedicationDispense" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -36,7 +38,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-period" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-period-of-use" />
     </element>
   </differential>
 </StructureDefinition>

@@ -3,7 +3,7 @@
   <id value="656c06d5-9bb8-4948-9988-dc6c47fea22e" />
   <meta>
     <versionId value="3" />
-    <lastUpdated value="2017-06-08T17:27:29.018+02:00" />
+    <lastUpdated value="2017-06-08T17:43:35.676+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAdministrationAgreement" />
   <name value="MP9-Medication-Administration-Agreement" />
@@ -46,8 +46,8 @@
     <element id="MedicationDispense.extension.usageDuration">
       <path value="MedicationDispense.extension" />
       <sliceName value="usageDuration" />
-      <short value="Gebruiksduur" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="The intended duration of use.  &#xD;&#xA;" />
+      <alias value="Gebruiksduur" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -57,8 +57,9 @@
     <element id="MedicationDispense.extension.authoredOn">
       <path value="MedicationDispense.extension" />
       <sliceName value="authoredOn" />
-      <short value="Afspraakdatum" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <short value="AdministrationAgreementDateTime" />
+      <definition value="The time at which the agreement was made." />
+      <alias value="Afspraakdatum" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -79,12 +80,13 @@
     </element>
     <element id="MedicationDispense.extension.usagePeriod">
       <path value="MedicationDispense.extension" />
-      <sliceName value="usagePeriod" />
-      <short value="Gebruiksperiode" />
+      <sliceName value="periodOfUse" />
+      <short value="PeriodOfUse" />
       <definition value="Optional Extensions Element - found in all resources." />
+      <alias value="Gebruiksperiode" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-period" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-period-of-use" />
       </type>
     </element>
     <element id="MedicationDispense.extension:additionalWishes">
@@ -125,29 +127,9 @@
       <definition value="The supplier (pharmacist) that entered the administration agreement." />
       <alias value="verstrekker" />
     </element>
-    <element>
-      <path value="MedicationDispense.authorizingPrescription" />
-      <short value=" MedicationAgreement" />
-      <definition value="Relationship to the medication agreement on which the administration agreement is based" />
-      <alias value="Medicatieafspraak" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
-      </type>
-    </element>
-    <element>
-      <path value="MedicationDispense.note" />
-      <short value="Comments" />
-      <definition value="Comments on the administration agreement." />
-      <alias value="Toelichting" />
-    </element>
     <element id="MedicationDispense.dosageInstruction">
       <path value="MedicationDispense.dosageInstruction" />
-      <short value="Gebruiksinstructie" />
+      <short value="DosageInstructions" />
       <type>
         <code value="Dosage" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
