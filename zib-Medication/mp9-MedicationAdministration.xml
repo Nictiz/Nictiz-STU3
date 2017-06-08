@@ -1,9 +1,9 @@
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="8c6e8ba5-9637-477a-8bd7-340a3a99b342" />
   <meta>
     <versionId value="4" />
-    <lastUpdated value="2016-12-12T16:52:03.83+00:00" />
+    <lastUpdated value="2017-06-08T17:21:48.786+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAdministration" />
   <name value="MP9-Medication-Administration" />
@@ -25,74 +25,81 @@
   <abstract value="false" />
   <type value="MedicationAdministration" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
-    <element id="MedicationAdministration">
+    <element>
       <path value="MedicationAdministration" />
-      <short value="Medicatietoediening"/>
+      <short value="MedicationAdministration" />
+      <alias value="Medicatietoediening" />
     </element>
-    <element id="MedicationAdministration.status">
-      <path value="MedicationAdministration.status" />
-      <short value="MedicatieToedieningStatus" />
+    <element>
+      <path value="MedicationAdministration.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
-    <element id="MedicationAdministration.subject">
-      <path value="MedicationAdministration.subject" />
+    <element id="MedicationAdministration.extension:deviatingAdministration">
+      <path value="MedicationAdministration.extension" />
+      <sliceName value="deviatingAdministration" />
+      <short value="DeviatingAdministration" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <alias value="AfwijkendeToediening" />
+      <max value="1" />
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-deviating-administration" />
       </type>
+    </element>
+    <element id="MedicationAdministration.extension:doubleCheckPerformed">
+      <path value="MedicationAdministration.extension" />
+      <sliceName value="doubleCheckPerformed" />
+      <short value="DoubleCheckPerformed" />
+      <definition value="Was a double check performed prior to the administration? This is only legally required for certain medication" />
+      <comment value=" " />
+      <alias value="DubbeleControleUitgevoerd" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-double-check-performed" />
+      </type>
+    </element>
+    <element>
+      <path value="MedicationAdministration.status" />
+      <short value="MedicationAdministrationStatus" />
+      <alias value="MedicatieToedieningStatus" />
+    </element>
+    <element>
+      <path value="MedicationAdministration.medication[x]" />
+      <short value="AdministrationProduct" />
+      <alias value="Product" />
+      <alias value="Geneesmiddel" />
+      <alias value="Toedieningsproduct" />
     </element>
     <element id="MedicationAdministration.effective">
       <path value="MedicationAdministration.effective[x]" />
-      <short value="ToedieningsDatumTijd" />
+      <short value="AdministrationDateTime" />
+      <definition value="The date and time at which the medication was administered" />
+      <alias value="ToedieningsDatumTijd" />
     </element>
-    <element id="MedicationAdministration.performer">
+    <element>
       <path value="MedicationAdministration.performer" />
-      <short value="Toediener" />
+      <label value=" Administrator" />
+      <definition value="Container of the Administrator concept. This container contains all data elements of the Administrator concept. The concept describes the person who administered the product. This is a professional authorised administrator, the patient themselves or the caregiver, for example." />
+      <alias value="Toediener" />
     </element>
-    <element id="MedicationAdministration.reasonNotGiven">
-      <path value="MedicationAdministration.reasonNotGiven" />
-      <short value="MedicatieToedieningRedenVanNietToedienen" />
-      <binding>
-        <strength value="required" />
-        <description value="RedenMedicatieafspraak" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.21--20160617112039" />
-          <display value="RedenMedicatieafspraak" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="MedicationAdministration.medicationReference">
-      <path value="MedicationAdministration.medicationReference" />
-      <short value="ToedieningsProduct" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
-      </type>
-    </element>
-    <element id="MedicationAdministration.note">
+    <element>
       <path value="MedicationAdministration.note" />
-      <short value="Toelichting" />
+      <short value="Comment" />
+      <definition value="Comments on the dispense." />
+      <alias value="Toelichting" />
     </element>
-    <element id="MedicationAdministration.dosage">
+    <element>
       <path value="MedicationAdministration.dosage" />
       <short value="Dosering" />
-    </element>
-    <element id="MedicationAdministration.dosage.route">
-      <path value="MedicationAdministration.dosage.route" />
-      <short value="Toedieningsweg" />
-      <binding>
-        <strength value="required" />
-        <description value="VoorschriftToedieningswegCodelijst" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4--20150401000000" />
-          <display value="VoorschriftToedieningswegCodelijst" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="MedicationAdministration.dosage.dose">
-      <path value="MedicationAdministration.dosage.dose" />
-      <short value="ToegediendeHoeveelheid" />
     </element>
   </differential>
 </StructureDefinition>

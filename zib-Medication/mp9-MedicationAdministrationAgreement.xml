@@ -1,9 +1,9 @@
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="656c06d5-9bb8-4948-9988-dc6c47fea22e" />
   <meta>
     <versionId value="3" />
-    <lastUpdated value="2016-12-12T16:39:05.96+00:00" />
+    <lastUpdated value="2017-06-08T17:27:29.018+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAdministrationAgreement" />
   <name value="MP9-Medication-Administration-Agreement" />
@@ -25,17 +25,20 @@
   <abstract value="false" />
   <type value="MedicationDispense" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
-    <element id="MedicationDispense">
+    <element>
       <path value="MedicationDispense" />
+      <short value="AdministrationAgreement" />
+      <definition value="Administration agreement that was the reference for entering the administration" />
+      <alias value="Toedieningsafspraak" />
     </element>
-    <element id="MedicationDispense.extension">
+    <element>
       <path value="MedicationDispense.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -45,23 +48,10 @@
       <sliceName value="usageDuration" />
       <short value="Gebruiksduur" />
       <definition value="Optional Extensions Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-duration" />
-      </type>
-    </element>
-    <element id="MedicationDispense.extension.dispensingOrganization">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="dispensingOrganization" />
-      <short value="Verstrekker" />
-      <definition value="Optional Extensions Element - found in all resources." />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dispensing-organization" />
       </type>
     </element>
     <element id="MedicationDispense.extension.authoredOn">
@@ -69,7 +59,6 @@
       <sliceName value="authoredOn" />
       <short value="Afspraakdatum" />
       <definition value="Optional Extensions Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -79,9 +68,9 @@
     <element id="MedicationDispense.extension.reasonForDispense">
       <path value="MedicationDispense.extension" />
       <sliceName value="reasonForDispense" />
-      <short value="Reden afspraak" />
-      <definition value="Optional Extensions Element - found in all resources." />
-      <min value="0" />
+      <short value=" AgreementReason" />
+      <definition value="Reason for this agreement. This will often be the same reason as the one for the medication agreement. &#xD;&#xA;This field has the option to - if applicable - enter a specific reason for the administration agreement. Examples include: substitution, transfer to GDS, patient request for different product, etc" />
+      <alias value="RedenAfspraak" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -93,78 +82,76 @@
       <sliceName value="usagePeriod" />
       <short value="Gebruiksperiode" />
       <definition value="Optional Extensions Element - found in all resources." />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-period" />
       </type>
     </element>
-    <element id="MedicationDispense.identifier">
-      <path value="MedicationDispense.identifier" />
-      <short value="Identificatie" />
+    <element id="MedicationDispense.extension:additionalWishes">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="additionalWishes" />
+      <short value="AdditionalWishes" />
+      <definition value="Logistics and other instructions such as: do not enter in GDS, urgent, purposeful deviation, etc" />
+      <alias value="AanvullendeWensen" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-additional-wishes" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Aanvullende wensen voor VV" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.32--20170505130346" />
+        </valueSetReference>
+      </binding>
     </element>
-    <element id="MedicationDispense.status">
+    <element>
       <path value="MedicationDispense.status" />
-      <short value="StopType (on-hold | stopped)" />
+      <short value="AdministrationAgreementStopType" />
+      <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive)" />
+      <alias value="ToediengingsafspraakStopType" />
     </element>
-    <element id="MedicationDispense.subject">
-      <path value="MedicationDispense.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
+    <element>
+      <path value="MedicationDispense.medication[x]" />
+      <short value="MedicineForAdministrationAgreement" />
+      <definition value="Medicine in the AdministrationAgreement" />
+      <alias value="GeneesmiddelBijToedieningsAfspraak" />
+      <alias value="Product" />
     </element>
-    <element id="MedicationDispense.performer">
+    <element>
       <path value="MedicationDispense.performer" />
-      <short value="Verstrekker" />
+      <short value="Supplier" />
+      <definition value="The supplier (pharmacist) that entered the administration agreement." />
+      <alias value="verstrekker" />
     </element>
-    <element id="MedicationDispense.medicationReference">
-      <path value="MedicationDispense.medicationReference" />
-      <short value="Product" />
+    <element>
+      <path value="MedicationDispense.authorizingPrescription" />
+      <short value=" MedicationAgreement" />
+      <definition value="Relationship to the medication agreement on which the administration agreement is based" />
+      <alias value="Medicatieafspraak" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
       </type>
     </element>
-    <element id="MedicationDispense.note">
+    <element>
       <path value="MedicationDispense.note" />
-      <short value="Toelichting" />
+      <short value="Comments" />
+      <definition value="Comments on the administration agreement." />
+      <alias value="Toelichting" />
     </element>
     <element id="MedicationDispense.dosageInstruction">
       <path value="MedicationDispense.dosageInstruction" />
       <short value="Gebruiksinstructie" />
-    </element>
-    <element id="MedicationDispense.dosageInstruction.text">
-      <path value="MedicationDispense.dosageInstruction.text" />
-      <short value="Omschrijving" />
-    </element>
-    <element id="MedicationDispense.dosageInstruction.additionalInstruction">
-      <path value="MedicationDispense.dosageInstruction.additionalInstruction" />
-      <short value="Aanvullende Informatie" />
-    </element>
-    <element id="MedicationDispense.dosageInstruction.timing">
-      <path value="MedicationDispense.dosageInstruction.timing" />
       <type>
-        <code value="Timing" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-AdministrationSchedule" />
+        <code value="Dosage" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
       </type>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.asNeeded">
-      <path value="MedicationDispense.dosageInstruction.asNeeded[x]" />
-      <short value="Zo nodig" />
-    </element>
-    <element id="MedicationDispense.dosageInstruction.route">
-      <path value="MedicationDispense.dosageInstruction.route" />
-      <short value="Toedieningsweg" />
-    </element>
-    <element id="MedicationDispense.dosageInstruction.dose">
-      <path value="MedicationDispense.dosageInstruction.dose[x]" />
-      <short value="Aantal" />
-    </element>
-    <element id="MedicationDispense.dosageInstruction.rate">
-      <path value="MedicationDispense.dosageInstruction.rate[x]" />
-      <short value="Toedieningssnelheid" />
     </element>
   </differential>
 </StructureDefinition>

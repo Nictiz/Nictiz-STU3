@@ -3,7 +3,7 @@
   <id value="e445eae5-56dd-4b2f-85c1-39fc585f0d35" />
   <meta>
     <versionId value="5" />
-    <lastUpdated value="2017-05-18T11:43:30.347+02:00" />
+    <lastUpdated value="2017-06-08T17:26:40.18+02:00" />
   </meta>
   <text>
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -139,13 +139,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element>
-      <path value="MedicationRequest.note" />
-      <alias value="Toelichting" />
-    </element>
-    <element>
+    <element id="MedicationRequest.dosageInstruction">
       <path value="MedicationRequest.dosageInstruction" />
-      <alias value="Gebruiksinstructie" />
       <type>
         <code value="Dosage" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />

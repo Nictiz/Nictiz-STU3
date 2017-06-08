@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-08T17:19:04.007+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-double-check-performed" />
+  <name value="MP9-Double-Check-Performed" />
+  <status value="draft" />
+  <date value="2017-06-08T15:28:47.0782827+02:00" />
+  <publisher value="Nictiz" />
+  <description value="Was a double check performed prior to the administration? This is only legally required for certain medication" />
+  <purpose value="Indicates if a double check was performed prior to the administration." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="MedicationAdministration" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Extension" />
+      <comment value=" " />
+    </element>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-double-check-performed" />
+    </element>
+    <element>
+      <path value="Extension.valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

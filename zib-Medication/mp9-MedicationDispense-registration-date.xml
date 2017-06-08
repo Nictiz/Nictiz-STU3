@@ -1,9 +1,9 @@
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="32ef301d-d4ee-4b6b-b976-fab63e40d78b" />
   <meta>
     <versionId value="2" />
-    <lastUpdated value="2016-12-12T16:24:56.205+00:00" />
+    <lastUpdated value="2017-06-08T17:16:59.802+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-dispense-registration-date" />
   <name value="MP9-Dispense-Registration-Date" />
@@ -28,19 +28,10 @@
   <context value="MedicationDispense" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
-    <element id="Extension">
-      <path value="Extension" />
-    </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <min value="0" />
-      <max value="0" />
-    </element>
-    <element id="Extension.url">
+    <element>
       <path value="Extension.url" />
-      <representation value="xmlAttr" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-dispense-registration-date" />
     </element>
     <element id="Extension.valueDateTime">

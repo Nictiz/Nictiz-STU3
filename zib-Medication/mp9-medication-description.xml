@@ -1,8 +1,8 @@
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2017-02-20T14:32:19.216+00:00" />
+    <lastUpdated value="2017-06-08T17:17:10.434+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-description" />
   <name value="MP9-Medication-Description" />
@@ -27,19 +27,10 @@
   <context value="Medication" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
-    <element id="Extension">
-      <path value="Extension" />
-    </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <min value="0" />
-      <max value="0" />
-    </element>
-    <element id="Extension.url">
+    <element>
       <path value="Extension.url" />
-      <representation value="xmlAttr" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-description" />
     </element>
     <element id="Extension.valueString">

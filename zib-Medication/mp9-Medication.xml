@@ -1,9 +1,9 @@
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="aa2695f2-1ea9-4be7-b1b6-a5112a503006" />
   <meta>
     <versionId value="4" />
-    <lastUpdated value="2017-02-20T14:33:07.309+00:00" />
+    <lastUpdated value="2017-06-08T17:17:29.72+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
   <name value="MP9-Medication" />
@@ -26,17 +26,14 @@
   <abstract value="false" />
   <type value="Medication" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Medication" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
-    <element id="Medication">
-      <path value="Medication" />
-    </element>
-    <element id="Medication.extension">
+    <element>
       <path value="Medication.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -52,16 +49,16 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-description" />
       </type>
     </element>
-    <element id="Medication.code">
+    <element>
       <path value="Medication.code" />
       <min value="1" />
     </element>
-    <element id="Medication.code.coding">
+    <element>
       <path value="Medication.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="system"/>
+          <type value="value" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -145,11 +142,14 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code.text">
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Medication.code.text" />
       <short value="ProductNaam" />
     </element>
-    <element id="Medication.form">
+    <element>
       <path value="Medication.form" />
       <short value="FarmaceutischeVorm" />
       <binding>
@@ -161,19 +161,12 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.ingredient">
+    <element>
       <path value="Medication.ingredient" />
       <short value="Ingredient" />
       <min value="1" />
     </element>
-    <element id="Medication.ingredient.item">
-      <path value="Medication.ingredient.item" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-ingredient" />
-      </type>
-    </element>
-    <element id="Medication.ingredient.amount">
+    <element>
       <path value="Medication.ingredient.amount" />
       <short value="Hoeveelheid ingrediënt" />
       <min value="1" />

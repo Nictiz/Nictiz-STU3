@@ -3,7 +3,7 @@
   <id value="afbab416-6564-471c-92c0-7baeb20e2dd6" />
   <meta>
     <versionId value="8" />
-    <lastUpdated value="2017-05-23T16:47:06.137+02:00" />
+    <lastUpdated value="2017-06-08T17:16:48.766+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationUsage" />
   <name value="MP9-Medication-Usage" />
@@ -69,7 +69,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
       </type>
     </element>
-    <element>
+    <element id="MedicationStatement.basedOn:RelatedAgreement">
       <path value="MedicationStatement.basedOn" />
       <sliceName value="RelatedAgreement" />
       <alias value="RelatedAgreement" />
@@ -79,7 +79,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
       </type>
     </element>
-    <element>
+    <element id="MedicationStatement.basedOn:RelatedDispense">
       <path value="MedicationStatement.basedOn" />
       <sliceName value="RelatedDispense" />
       <type>
@@ -158,9 +158,8 @@
       <path value="MedicationStatement.note" />
       <alias value="Toelichting" />
     </element>
-    <element>
+    <element id="MedicationStatement.dosage">
       <path value="MedicationStatement.dosage" />
-      <alias value="Gebruiksinstructie" />
       <type>
         <code value="Dosage" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
