@@ -39,7 +39,7 @@
   <method>
     <!--  Method was MDRD  -->
     <coding>
-      <system value="http://snomed.info/id"/>
+      <system value="http://snomed.info/sct"/>
       <code value="702668005"/>
       <display value="MDRD"/>
     </coding>
