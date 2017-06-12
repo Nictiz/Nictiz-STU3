@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+﻿<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
   <id value="aa2695f2-1ea9-4be7-b1b6-a5112a503006" />
   <meta>
     <versionId value="4" />
-    <lastUpdated value="2017-06-12T16:14:24.885+02:00" />
+    <lastUpdated value="2017-06-12T16:28:12.752+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
   <name value="MP9-Medication" />
@@ -217,26 +217,165 @@
         <map value="19932" />
       </mapping>
     </element>
-    <element id="Medication.ingredient.item[x]">
-      <path value="Medication.ingredient.item[x]" />
-      <short value="Substance" />
-      <definition value="Active substance or excipient.  &#xD;&#xD;&#xA;Here, the same codes can be used as for the ProductCode (for dilutions and compounds in particular), but now, the ATC, SSK and SNK codes can also be used to indicate a substance (to list ingredients of local products prepared by the pharmacy). &#xD;&#xD;- GTIN International Article Number  &#xD;&#xA;- KNMP article number  &#xD;&#xA;- Trade product code (HPK)  &#xD;&#xA;- Prescription code (PRK)   &#xD;&#xA;- Generic product code (GPK)  &#xD;&#xA;- ATC (anatomic therapeutic classification)  &#xD;&#xA;- SSK (substance name code with route of administration)  &#xD;&#xA;- SNK (substance name code)  &#xD;&#xD;&#xA;The ATC is an international classification of pharmaceutical substances without a reference to specific products on the market. Therefore, the ATC code of a generic product will not contain a reference to a certain dose, pharmaceutical form or route of administration; it will only contain a reference to the ingredients (not the amount/concentration/strength).&#xD;" />
-      <alias value="IngredientCode" />
+    <element>
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="coding.system"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Substance"/>
+      <definition value="Active substance or excipient.  
+        Here, the same codes can be used as for the ProductCode (for dilutions and compounds in particular), but now, the ATC, SSK and SNK codes can also be used to indicate a substance (to list ingredients of local products prepared by the pharmacy). 
+        
+        - GTIN International Article Number  
+        - KNMP article number  
+        - Trade product code (HPK)  
+        - Prescription code (PRK)   
+        - Generic product code (GPK)  
+        - ATC (anatomic therapeutic classification)  
+        - SSK (substance name code with route of administration)  
+        - SNK (substance name code)  
+        The ATC is an international classification of pharmaceutical substances without a reference to specific products on the market. Therefore, the ATC code of a generic product will not contain a reference to a certain dose, pharmaceutical form or route of administration; it will only contain a reference to the ingredients (not the amount/concentration/strength).
+        "/>
+      <alias value="IngredientCode"/>
       <type>
-        <code value="CodeableConcept" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-ingredient" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <code value="CodeableConcept"/>
       </type>
       <mapping>
-        <identity value="mp9-Product" />
-        <map value="19934" />
+        <identity value="mp9-Product"/>
+        <map value="19934"/>
       </mapping>
+    </element>
+    <element id="Medication.ingredient.itemCodeableConcept">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <sliceName value="IngredientCodeGTINCodeLijst"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="IngredientCodeGTINCodeLijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.21--20150401000000"/>
+          <display value="IngredientCodeGTINCodeLijst"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Medication.ingredient.itemCodeableConcept2">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <sliceName value="IngredientCodeSSKLijst"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="IngredientCodeSSKLijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.19--20150401000000"/>
+          <display value="IngredientCodeSSKLijst"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Medication.ingredient.itemCodeableConcept3">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <sliceName value="IngredientCodePRKLijst"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="IngredientCodePRKLijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.18--20150401000000"/>
+          <display value="IngredientCodePRKLijst"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Medication.ingredient.itemCodeableConcept4">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <sliceName value="IngredientCodeHPKLijst"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="IngredientCodeHPKLijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.17--20150401000000"/>
+          <display value="IngredientCodeHPKLijst"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Medication.ingredient.itemCodeableConcept5">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <sliceName value="IngredientCodeGPKLijst"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="IngredientCodeGPKLijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.16--20150401000000"/>
+          <display value="IngredientCodeGPKLijst"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Medication.ingredient.itemCodeableConcept6">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <sliceName value="IngredientCodeSNKLijst"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="IngredientCodeSNKLijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.15--20150401000000"/>
+          <display value="IngredientCodeSNKLijst"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Medication.ingredient.itemCodeableConcept7">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <sliceName value="IngredientCodeATCCodelijst"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="IngredientCodeATCCodelijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.14--20150401000000"/>
+          <display value="IngredientCodeATCCodelijst"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Medication.ingredient.itemCodeableConcept8">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
+      <sliceName value="IngredientCodeZICodelijst"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="IngredientCodeZICodelijst"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.12--20150401000000"/>
+          <display value="IngredientCodeZICodelijst"/>
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Medication.ingredient.amount">
       <path value="Medication.ingredient.amount" />
