@@ -55,7 +55,7 @@
         
     </div>
   </text>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-nl-core-organizationReference">
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Organization">
     <valueReference>
       <reference value="Organization/example"/>
       <display value="Academic Medical Center"/>
@@ -73,7 +73,7 @@
     <display value="VVI Pacemaker"/>
   </device>
   <indication>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern">
       <valueReference>
         <reference value="Condition/example"/>
         <display value="Atrial fibrillation"/>

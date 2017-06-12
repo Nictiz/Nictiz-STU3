@@ -67,7 +67,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-nl-core-organizationReference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Organization" />
       </type>
       <mapping>
         <identity value="zib-medischhulpmiddel" />
@@ -83,7 +83,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-nl-core-practitionerReference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Practitioner" />
       </type>
       <mapping>
         <identity value="zib-medischhulpmiddel" />
@@ -137,7 +137,7 @@
       <alias value="Indicatie" />
       <type>
         <code value="Extension" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern" />
       </type>
       <mapping>
         <identity value="zib-medischhulpmiddel" />
