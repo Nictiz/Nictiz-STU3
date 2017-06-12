@@ -5,9 +5,9 @@
     <versionId value="2" />
     <lastUpdated value="2017-06-08T17:16:42.187+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-reason-for-dispense" />
-  <name value="MP9-Reason-For-Dispense" />
-  <title value="MP9 Reason For Dispense" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-reason-for-dispense" />
+  <name value="ZIB-Reason-For-Dispense" />
+  <title value="ZIB Reason For Dispense" />
   <status value="draft" />
   <date value="2016-12-12T16:26:52.019+00:00" />
   <publisher value="Nictiz" />
@@ -32,7 +32,7 @@
   <differential>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-reason-for-dispense" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-reason-for-dispense" />
     </element>
     <element id="Extension.valueString">
       <path value="Extension.valueString" />

@@ -5,9 +5,9 @@
     <versionId value="7" />
     <lastUpdated value="2017-06-12T15:09:01.908+02:00" />
   </meta>
-  <url value="http://nictiz.nl/StructureDefinition/mp9-MedicationDispense" />
-  <name value="MP9-Medication-Dispense" />
-  <title value="MP9 Medication Dispense" />
+  <url value="http://nictiz.nl/StructureDefinition/fhir/zib-MedicationDispense" />
+  <name value="ZIB-Medication-Dispense" />
+  <title value="ZIB Medication Dispense" />
   <status value="draft" />
   <date value="2016-12-12T16:50:34.796+00:00" />
   <publisher value="Nictiz" />
@@ -24,7 +24,7 @@
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
-    <identity value="mp9-verstrekking" />
+    <identity value="zib-verstrekking" />
     <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3" />
     <name value="Zorginformatiebouwsteen Verstrekking" />
   </mapping>
@@ -39,7 +39,7 @@
       <short value="MedicationDispense" />
       <alias value="Verstrekking" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="20270" />
       </mapping>
     </element>
@@ -63,10 +63,10 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-distribution-form" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-distribution-form" />
       </type>
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="20927" />
       </mapping>
     </element>
@@ -78,10 +78,10 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-dispense-registration-date" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medication-dispense-registration-date" />
       </type>
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="22500" />
       </mapping>
     </element>
@@ -91,7 +91,7 @@
       <alias value="Identificatie" />
       <min value="1" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="20271" />
       </mapping>
     </element>
@@ -111,10 +111,10 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
       </type>
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="22259" />
       </mapping>
     </element>
@@ -147,7 +147,7 @@
       <alias value="Verstrekker" />
       <min value="1" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="20858" />
       </mapping>
     </element>
@@ -181,10 +181,10 @@
       <alias value="Relatie naar verstrekkingsverzoek" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispenseRequest" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest" />
       </type>
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="22396" />
       </mapping>
     </element>
@@ -195,7 +195,7 @@
       <definition value="Number of units of the product (measured based on the relevant product code) supplied" />
       <alias value="Verstrekte hoeveelheid" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="20923" />
       </mapping>
     </element>
@@ -203,7 +203,7 @@
       <path value="MedicationDispense.quantity.value" />
       <alias value="Aantal" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="22601" />
       </mapping>
     </element>
@@ -211,7 +211,7 @@
       <path value="MedicationDispense.quantity.code" />
       <alias value="Eenheid" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="22602" />
       </mapping>
     </element>
@@ -222,7 +222,7 @@
       <definition value="The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount." />
       <alias value="VerbruiksDuur" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="20924" />
       </mapping>
     </element>
@@ -233,7 +233,7 @@
       <alias value="Datum" />
       <min value="1" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="20272" />
       </mapping>
     </element>
@@ -247,7 +247,7 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-location" />
       </type>
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="20925" />
       </mapping>
     </element>
@@ -269,11 +269,11 @@
       <alias value="Toelichting" />
       <alias value="Aanvullende informatie" />
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="23285" />
       </mapping>
       <mapping>
-        <identity value="mp9-verstrekking" />
+        <identity value="zib-verstrekking" />
         <map value="22276" />
       </mapping>
     </element>

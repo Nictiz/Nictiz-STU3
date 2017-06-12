@@ -5,9 +5,9 @@
     <versionId value="5" />
     <lastUpdated value="2017-02-20T08:42:17.716+00:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-authored-on" />
-  <name value="MP9-Authored-On" />
-  <title value="MP9 Authored On" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-authored-on" />
+  <name value="ZIB-Authored-On" />
+  <title value="ZIB Authored On" />
   <status value="draft" />
   <date value="2017-02-20T08:42:17.716+00:00" />
   <publisher value="Nictiz" />
@@ -41,7 +41,7 @@
     <element id="Extension.url">
       <path value="Extension.url" />
       <representation value="xmlAttr" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-authored-on" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-authored-on" />
     </element>
     <element id="Extension.valueDateTime">
       <path value="Extension.valueDateTime" />

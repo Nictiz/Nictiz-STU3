@@ -3,8 +3,8 @@
   <meta>
     <lastUpdated value="2017-06-12T14:19:39.578+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-additional-wishes" />
-  <name value="MP9-Additional-Wishes" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-additional-wishes" />
+  <name value="ZIB-Additional-Wishes" />
   <status value="draft" />
   <date value="2017-06-08T17:04:06.8260228+02:00" />
   <publisher value="Nictiz" />
@@ -22,7 +22,7 @@
   <differential>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-additional-wishes" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-additional-wishes" />
     </element>
     <element>
       <path value="Extension.valueCodeableConcept" />

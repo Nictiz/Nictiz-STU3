@@ -9,9 +9,9 @@
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
   <p class="issue">For discussion: ZIB dateEnded/eindDatum cannot be represented with a direct attribute. It could match the meta.lastUpdated when status='deleted'. Otherwise an extension is in order</p>
 </div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
-  <name value="MP9-Medication-Agreement" />
-  <title value="MP9 Medication Agreement" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
+  <name value="ZIB-Medication-Agreement" />
+  <title value="ZIB Medication Agreement" />
   <status value="draft" />
   <date value="2016-12-12T16:41:08.39+00:00" />
   <publisher value="Nictiz" />
@@ -50,7 +50,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-period-of-use" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-period-of-use" />
       </type>
     </element>
     <element id="MedicationRequest.extension.usageDuration">
@@ -61,7 +61,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-duration" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-usage-duration" />
       </type>
     </element>
     <element id="MedicationRequest.identifier">
@@ -140,7 +140,7 @@
       <short value="DosageInstructions" />
       <type>
         <code value="Dosage" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageIntructions" />
       </type>
     </element>
   </differential>

@@ -5,9 +5,9 @@
     <versionId value="4" />
     <lastUpdated value="2017-06-12T16:28:12.752+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
-  <name value="MP9-Medication" />
-  <title value="MP9 Medication" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
+  <name value="ZIB-Medication" />
+  <title value="ZIB Medication" />
   <status value="draft" />
   <date value="2017-02-20T14:33:07.309+00:00" />
   <publisher value="Nictiz" />
@@ -23,7 +23,7 @@
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
-    <identity value="mp9-Product" />
+    <identity value="zib-Product" />
     <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3" />
     <name value="Zorginformatiebouwsteen Product" />
   </mapping>
@@ -39,7 +39,7 @@
       <definition value="Root concept of the Product partial information model. This root concept contains all data elements of the  Product partial information model.&#xD;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xD;&#xA;A type of medication can be indicated with a single codeThat code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xD;&#xA;In addition to a primary code, alternative codes from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example).  &#xD;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. If one of the composite parts is liquid, the dosage will be given in milliliters; otherwise it will be given in ‘units’. &#xD;&#xD;&#xA;In that case, the composition of the medicationcan be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication.  &#xD;&#xD;&#xA;Prescriptions to be prepared by the pharmacy can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.&#xD;" />
       <alias value="Geneesmiddel" />
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="19926" />
       </mapping>
     </element>
@@ -62,10 +62,10 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-description" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medication-description" />
       </type>
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="19784" />
       </mapping>
     </element>
@@ -88,7 +88,7 @@
       <alias value="Geneesmiddel code" />
       <min value="1" />
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="19927" />
       </mapping>
     </element>
@@ -184,7 +184,7 @@
         <valueString value="PARACETAMOL 500MG TABLET" />
       </example>
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="19929" />
       </mapping>
     </element>
@@ -202,7 +202,7 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="19931" />
       </mapping>
     </element>
@@ -213,7 +213,7 @@
       <alias value="Ingredient" />
       <min value="1" />
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="19932" />
       </mapping>
     </element>
@@ -245,7 +245,7 @@
         <code value="CodeableConcept"/>
       </type>
       <mapping>
-        <identity value="mp9-Product"/>
+        <identity value="zib-Product"/>
         <map value="19934"/>
       </mapping>
     </element>
@@ -386,7 +386,7 @@
       <alias value="Hoeveelheid" />
       <min value="1" />
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="19933" />
       </mapping>
     </element>
@@ -396,7 +396,7 @@
       <definition value="The amount of this ingredient. This is the numerator for the calculation of the concentration." />
       <alias value="Hoeveelheid ingrediënt" />
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="22277" />
       </mapping>
     </element>
@@ -406,7 +406,7 @@
       <definition value="Amount of the product. This is the denominator for the calculation of the concentration" />
       <alias value="Hoeveelheid product" />
       <mapping>
-        <identity value="mp9-Product" />
+        <identity value="zib-Product" />
         <map value="22278" />
       </mapping>
     </element>
@@ -417,7 +417,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
       </type>
     </element>
   </differential>

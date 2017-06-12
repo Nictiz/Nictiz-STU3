@@ -4,9 +4,9 @@
     <versionId value="1" />
     <lastUpdated value="2017-06-12T15:35:54.023+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-description" />
-  <name value="MP9-Medication-Description" />
-  <title value="MP9 Medication Description" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medication-description" />
+  <name value="ZIB-Medication-Description" />
+  <title value="ZIB Medication Description" />
   <status value="draft" />
   <date value="2017-02-20T14:32:19.216+00:00" />
   <publisher value="Nictiz" />
@@ -31,7 +31,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-description" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-usage-description" />
     </element>
     <element id="Extension.valueString">
       <path value="Extension.valueString" />

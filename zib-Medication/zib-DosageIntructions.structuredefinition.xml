@@ -3,13 +3,13 @@
   <meta>
     <lastUpdated value="2017-06-12T15:46:22.486+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
-  <name value="MP9-Dosage-Intructions" />
-  <title value="MP9 Dosage Intructions" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageIntructions" />
+  <name value="ZIB-Dosage-Intructions" />
+  <title value="ZIB Dosage Intructions" />
   <status value="draft" />
   <date value="2017-05-18T11:36:21.9737868+02:00" />
   <publisher value="Nictiz" />
-  <description value="Dosage Intructions a defined by the Dutch Medication Process (MP9) project." />
+  <description value="Dosage Intructions a defined by the Dutch Medication Process (http://nictiz.nl/StructureDefinition/fhir/zib-) project." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
@@ -45,7 +45,7 @@
       <alias value="Omschrijving" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-description" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-usage-description" />
       </type>
       <mapping>
         <identity value="zib-dosage" />
@@ -79,7 +79,7 @@
       <alias value="Toedieningsschema" />
       <type>
         <code value="Timing" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-AdministrationSchedule" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule" />
       </type>
       <mapping>
         <identity value="zib-dosage" />

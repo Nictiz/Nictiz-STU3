@@ -5,9 +5,9 @@
     <versionId value="2" />
     <lastUpdated value="2017-06-08T17:16:37.243+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-duration" />
-  <name value="MP9-Medication-Usage-Duration" />
-  <title value="MP9 Medication Usage Duration" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-usage-duration" />
+  <name value="ZIB-Medication-Usage-Duration" />
+  <title value="ZIB Medication Usage Duration" />
   <status value="draft" />
   <date value="2016-12-12T16:29:39.343+00:00" />
   <publisher value="Nictiz" />
@@ -36,7 +36,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-duration" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-usage-duration" />
     </element>
   </differential>
 </StructureDefinition>

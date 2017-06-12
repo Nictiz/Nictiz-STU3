@@ -5,9 +5,9 @@
     <versionId value="8" />
     <lastUpdated value="2017-06-12T17:15:57.189+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationUsage" />
-  <name value="MP9-Medication-Usage" />
-  <title value="MP9 Medication Usage" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage" />
+  <name value="ZIB-Medication-Usage" />
+  <title value="ZIB Medication Usage" />
   <status value="draft" />
   <date value="2016-12-12T16:43:00.948+00:00" />
   <publisher value="Nictiz" />
@@ -45,7 +45,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-as-agreed" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-as-agreed" />
       </type>
     </element>
     <element id="MedicationStatement.identifier">
@@ -65,7 +65,7 @@
       </slicing>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
       </type>
     </element>
     <element id="MedicationStatement.basedOn:RelatedAgreement">
@@ -75,7 +75,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
       </type>
     </element>
     <element id="MedicationStatement.basedOn:RelatedDispense">
@@ -83,7 +83,7 @@
       <sliceName value="RelatedDispense" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/StructureDefinition/mp9-MedicationDispense" />
+        <targetProfile value="http://nictiz.nl/StructureDefinition/fhir/zib-MedicationDispense" />
       </type>
     </element>
     <element id="MedicationStatement.medication[x]">
@@ -93,7 +93,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
       </type>
     </element>
     <element id="MedicationStatement.effective">
@@ -161,7 +161,7 @@
       <path value="MedicationStatement.dosage" />
       <type>
         <code value="Dosage" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageIntructions" />
       </type>
     </element>
   </differential>

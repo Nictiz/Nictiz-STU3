@@ -5,9 +5,9 @@
     <versionId value="3" />
     <lastUpdated value="2017-06-12T14:45:21.15+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispenseRequest" />
-  <name value="MP9-Medication-Dispense-Request" />
-  <title value="MP9 Medication Dispense Request" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest" />
+  <name value="ZIB-Medication-Dispense-Request" />
+  <title value="ZIB Medication Dispense Request" />
   <status value="draft" />
   <date value="2016-12-12T16:41:50.247+00:00" />
   <publisher value="Nictiz" />
@@ -52,7 +52,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-additional-wishes" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-additional-wishes" />
       </type>
       <binding>
         <strength value="extensible" />
@@ -72,7 +72,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-related-medication-agreement" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-related-medication-agreement" />
       </type>
     </element>
     <element>
@@ -92,7 +92,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
       </type>
     </element>
     <element>
@@ -168,7 +168,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dispense-location" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-dispense-location" />
       </type>
     </element>
     <element>
