@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2017-06-08T17:17:10.434+02:00" />
+    <lastUpdated value="2017-06-12T15:35:54.023+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-medication-description" />
   <name value="MP9-Medication-Description" />
@@ -18,7 +18,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Textual description of the medication." />
+  <description value="A textual description of the type of medication (including relevant properties of the composition and preparation method if possible), which is only used if no coded indication from the G Standard is available (magistral preparation)." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />
@@ -29,7 +29,7 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element>
+    <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-description" />
     </element>
