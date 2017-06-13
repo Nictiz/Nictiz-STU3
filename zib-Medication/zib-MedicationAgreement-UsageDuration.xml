@@ -5,7 +5,7 @@
     <versionId value="2" />
     <lastUpdated value="2017-06-08T17:16:37.243+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-usage-duration" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationagreement-usageduration" />
   <name value="ZIB-Medication-Usage-Duration" />
   <title value="ZIB Medication Usage Duration" />
   <status value="draft" />
@@ -36,7 +36,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-usage-duration" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationagreement-usageduration" />
     </element>
   </differential>
 </StructureDefinition>

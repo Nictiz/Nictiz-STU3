@@ -31,7 +31,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-usage-description" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationusage-description" />
     </element>
     <element id="Extension.valueString">
       <path value="Extension.valueString" />
