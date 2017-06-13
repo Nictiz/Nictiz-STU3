@@ -5,6 +5,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationadministration-deviatingadministration" />
   <name value="ZIB-Deviating-Administration" />
+  <title value="ZIB Deviating Administration" />
   <status value="draft" />
   <date value="2017-06-08T14:49:41.0568655+02:00" />
   <publisher value="Nictiz" />

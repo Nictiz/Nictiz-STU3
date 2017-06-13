@@ -5,6 +5,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-additionalwishes" />
   <name value="ZIB-Additional-Wishes" />
+  <title value="ZIB Additional Wishes" />
   <status value="draft" />
   <date value="2017-06-08T17:04:06.8260228+02:00" />
   <publisher value="Nictiz" />

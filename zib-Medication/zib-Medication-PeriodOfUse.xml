@@ -7,7 +7,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medication-periodofuse" />
   <name value="ZIB-Medication-Period-Of-Use" />
-  <title value="ZIB Medication Usage Period" />
+  <title value="ZIB Medication Period Of Use" />
   <status value="draft" />
   <date value="2016-12-12T16:31:32.569+00:00" />
   <publisher value="Nictiz" />

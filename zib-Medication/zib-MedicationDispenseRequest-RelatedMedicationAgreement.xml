@@ -5,6 +5,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-relatedmedicationagreement" />
   <name value="ZIB-Related-Medication-Agreement" />
+  <name value="ZIB Related Medication Agreement" />
   <status value="draft" />
   <date value="2017-06-12T14:35:24.878917+02:00" />
   <publisher value="Nictiz" />
