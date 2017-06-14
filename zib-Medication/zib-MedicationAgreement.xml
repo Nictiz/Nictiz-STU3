@@ -5,10 +5,6 @@
     <versionId value="5" />
     <lastUpdated value="2017-06-12T17:31:49.001+02:00" />
   </meta>
-  <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p class="issue">For discussion: ZIB dateEnded/eindDatum cannot be represented with a direct attribute. It could match the meta.lastUpdated when status='deleted'. Otherwise an extension is in order</p>
-</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
   <name value="ZIB-Medication-Agreement" />
   <title value="ZIB Medication Agreement" />

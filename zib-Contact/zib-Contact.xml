@@ -5,13 +5,6 @@
     <versionId value="4"/>
     <lastUpdated value="2017-03-29T11:47:30.832+02:00"/>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p> A profile on Encounter named Contact as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. A contact is any interaction, regardless of the situation, between a patient and the healthcare provider, in which the healthcare provider has primary responsibility for diagnosing, evaluating and treating the patient’s condition and informing the patient. These can be visits, appointments or non face-to-face interactions. Contacts can be visits to the general practitioner or other practices, home visits, admissions (in hospitals, nursing homes or
-        care homes, psychiatric institutions or convalescent homes) or other relevant contacts. This only includes past contacts. Future contacts can be documented in the PlannedCareActivity information model.</p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
   <name value="ZIB-Contact"/>
   <title value="ZIB Contact"/>

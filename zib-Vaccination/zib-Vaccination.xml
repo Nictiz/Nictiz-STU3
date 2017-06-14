@@ -5,11 +5,6 @@
     <versionId value="3" />
     <lastUpdated value="2017-04-26T14:45:08.702+02:00" />
   </meta>
-  <text>
-    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p>Vaccinatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”. Only vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance. Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program).
-        RVP information is especially important for children. Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk.</p>
-</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination" />
   <name value="ZIB-Vaccination" />
   <title value="ZIB Vaccination" />

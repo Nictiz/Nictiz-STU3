@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.157+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide the medical reason for use of the medical aid based on a Condition resource as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0. </p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern" />
   <name value="ZIB-MedicalAid-Concern" />
   <title value="ZIB MedicalAid Concern" />

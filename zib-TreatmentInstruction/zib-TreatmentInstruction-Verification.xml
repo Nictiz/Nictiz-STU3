@@ -5,10 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-05-03T18:10:49.287+02:00" />
   </meta>
-  <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p>Extenstion to the CarePlan, which is used for the 'TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. to provide information on the verification of the treatment instruction.</p>
-</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
   <name value="ZIB-TreatmentInstruction-Verification" />
   <title value="ZIB TreatmentInstruction Verification" />

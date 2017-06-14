@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.751+00:00" />
   </meta>
-  <text>
-    <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>FunctioneleOfMentaleStatus as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. The functional or mental status provides insight into the patient’s functional and mental limitations. </p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus" />
   <name value="ZIB-FunctionalOrMentalStatus" />
   <title value="ZIB FunctionalOrMentalStatus" />

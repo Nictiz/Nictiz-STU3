@@ -229,7 +229,6 @@
       <short value="Substance"/>
       <definition value="Active substance or excipient.  
         Here, the same codes can be used as for the ProductCode (for dilutions and compounds in particular), but now, the ATC, SSK and SNK codes can also be used to indicate a substance (to list ingredients of local products prepared by the pharmacy). 
-        
         - GTIN International Article Number  
         - KNMP article number  
         - Trade product code (HPK)  

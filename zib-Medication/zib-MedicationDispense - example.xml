@@ -5,5 +5,4 @@
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"/>
   </meta> 
-  
 </MedicationDispense>

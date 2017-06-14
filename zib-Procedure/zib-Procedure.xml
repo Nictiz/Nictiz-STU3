@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.046+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p> A profile on Procedure. The concept Procedure indicates a therapeutic procedure undergone by the patient. If relevant, diagnostic procedures can be listed as well. A procedure can be a simple blood pressure measurement, but also a complex heart surgery.</p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
   <name value="ZIB-Procedure" />
   <title value="ZIB Procedure" />

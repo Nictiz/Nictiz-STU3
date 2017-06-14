@@ -4,24 +4,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-06-14T11:01:17.702+02:00" />
   </meta>
-  <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p>A profile on Condition as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) OverdrachtConcern version 1.0. </p>
-  <p>Determining relevant health issues of the patient involves two important aspects: observing the problem itself on the one hand (complaints, symptoms, diagnosis, etc.) and evaluation of whether or not an active policy is required on the other. This evaluation by the healthcare provider is documented in the ‘Concern’, the point of attention. Multiple, linked Problems can be subsumed under a single Concern.</p>
-  <p>The difference between recorded problems and the attention they require enables an indication of which issues medical or nursing policy applies to, or in which issues policy is necessary. An example is well-managed diabetes; this requires no active policy of the healthcare provider.</p>
-  <p>A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy.<br />A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems:</p>
-  <ul>
-    <li>A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia</li>
-    <li>A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;</li>
-    <li>A finding: a healthcare provider’s observation of a patient’s health. Examples: enlarged liver, pathological plantar reflex, deviating Minimal Mental State, missing teeth.</li>
-    <li>A condition: a description of a (deviating) bodily state, which may or may not be seen as a disease. Examples: pregnancy, circulatory disorder, poisoning.</li>
-    <li>A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.</li>
-    <li>A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.</li>
-    <li>A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.</li>
-    <li>A problem: any circumstance that is relevant to the medical treatment, but does not fit into one of the categories listed. Examples: Patient resides in the Netherlands without a legal status and is not insured; patient is not able to check their own blood sugar levels.</li>
-  </ul>
-  <p>In first-line care the Episode concept fills the role of Concern.</p>
-</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
   <name value="ZIB-Concern" />
   <title value="ZIB Concern" />

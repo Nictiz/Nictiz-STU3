@@ -8,37 +8,21 @@
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-            
       <table>
-                
         <caption>Patient with id example</caption>
-                
         <thead>
-                    
           <tr>
-                        
             <th>ProductID</th>
-                        
             <th>ProductType</th>
-                    
           </tr>
-                
         </thead>
-                
         <tbody>
-                    
           <tr>
-                        
             <td>12345678</td>
-                        
             <td>Cardiac pacemakers and related products</td>
-                    
           </tr>
-                
         </tbody>
-            
       </table>
-        
     </div>
   </text>
   <identifier>

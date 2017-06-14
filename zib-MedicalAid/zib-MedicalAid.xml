@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.314+00:00" />
   </meta>
-  <text>
-    <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>MedischHulpmiddel as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. Medical aids are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease.</p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid" />
   <name value="ZIB-MedicalAid" />
   <title value="ZIB MedicalAid" />

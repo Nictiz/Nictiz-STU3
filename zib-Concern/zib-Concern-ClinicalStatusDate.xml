@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:07.359+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide a date from when the current value of the ClinicalStatus applies: since when is the problem current, under control or non-current as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 1.0. </p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate" />
   <name value="ZIB-Concern-ClinicalStatusDate" />
   <title value="ZIB Concern ClinicalStatusDate" />

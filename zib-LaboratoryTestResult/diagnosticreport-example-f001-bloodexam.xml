@@ -11,7 +11,6 @@
     <ProcedureRequest>
       <id value="req"/>
       <!--  Invalid extension at the moment.
-        
       <extension url="http://example.org/bodysitecode">
         <valueCodeableConcept>
           <coding>
@@ -22,7 +21,6 @@
         </valueCodeableConcept>
       </extension>
       -->
-      
       <identifier>
         <system value="http://www.bmc.nl/zorgportal/identifiers/labresults"/>
         <value value="L2381"/>
