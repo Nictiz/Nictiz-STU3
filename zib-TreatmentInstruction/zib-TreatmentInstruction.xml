@@ -38,6 +38,7 @@
     <element id="Consent ">
       <path value="Consent" />
       <short value="TreatmentInstruction" />
+      <alias value="BehandelAanwijzing"/>
       <mapping>
         <identity value="zib-treatmentinstruction" />
         <map value="NL-CM:2.1.1" />

@@ -141,7 +141,6 @@
       <path value="Encounter.diagnosis.condition"/>
       <short value="ContactReason"/>
       <definition value="The problem that led to the contact or the procedure carried out during the contact.&#xD;&#xA;&#xD;&#xA;Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure."/>
-      <alias value="Verrichting"/>
       <alias value="Probleem"/>
       <type>
         <code value="Reference"/>

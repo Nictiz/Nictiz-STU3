@@ -36,6 +36,7 @@
   <differential>
     <element id="Coverage">
       <path value="Coverage" />
+      <alias value="Verzekering"/>
       <mapping>
         <identity value="zib-betaler"/>
         <map value="NL-CM:1.1.8"/>
@@ -99,6 +100,8 @@
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
+      <alias value="Verzekeraar"/>
+      <alias value="BetalerPersoon"/>
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -137,6 +140,7 @@
       <path value="Coverage.payor.extension" />
       <sliceName value="BankInformation" />
       <short value="BankInformation" />
+      <alias value="Bankgegevens"/>
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />

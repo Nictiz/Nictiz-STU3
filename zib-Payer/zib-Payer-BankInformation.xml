@@ -38,6 +38,7 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
+      <alias value="Bankgegevens"/>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
