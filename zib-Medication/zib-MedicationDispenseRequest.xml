@@ -52,7 +52,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-additionalwishes" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
       </type>
       <binding>
         <strength value="extensible" />
@@ -72,7 +72,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-relatedmedicationagreement" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-RelatedMedicationAgreement" />
       </type>
     </element>
     <element>
@@ -168,7 +168,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-dispense-location" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-Location" />
       </type>
     </element>
     <element>

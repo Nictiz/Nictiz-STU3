@@ -3,7 +3,7 @@
   <meta>
     <lastUpdated value="2017-06-08T17:19:04.007+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationadministration-doublecheckperformed" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DoubleCheckPerformed" />
   <name value="ZIB-Double-Check-Performed" />
   <title value="ZIB Double Check Performed" />
   <status value="draft" />
@@ -27,7 +27,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationadministration-doublecheckperformed" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DoubleCheckPerformed" />
     </element>
     <element>
       <path value="Extension.valueBoolean" />

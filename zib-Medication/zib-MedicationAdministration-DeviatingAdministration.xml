@@ -3,7 +3,7 @@
   <meta>
     <lastUpdated value="2017-06-08T17:16:26.473+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationadministration-deviatingadministration" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DeviatingAdministration" />
   <name value="ZIB-Deviating-Administration" />
   <title value="ZIB Deviating Administration" />
   <status value="draft" />
@@ -74,7 +74,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationadministration-deviatingadministration" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DeviatingAdministration" />
     </element>
     <element>
       <path value="Extension.value[x]" />

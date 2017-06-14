@@ -3,7 +3,7 @@
   <meta>
     <lastUpdated value="2017-06-12T14:19:39.578+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-additionalwishes" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
   <name value="ZIB-Additional-Wishes" />
   <title value="ZIB Additional Wishes" />
   <status value="draft" />
@@ -23,7 +23,7 @@
   <differential>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-additionalwishes" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
     </element>
     <element>
       <path value="Extension.valueCodeableConcept" />

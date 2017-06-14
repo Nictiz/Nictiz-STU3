@@ -3,7 +3,7 @@
   <meta>
     <lastUpdated value="2017-06-12T14:43:57.829+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-relatedmedicationagreement" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-RelatedMedicationAgreement" />
   <name value="ZIB-Related-Medication-Agreement" />
   <title value="ZIB Related Medication Agreement" />
   <status value="draft" />
@@ -23,7 +23,7 @@
   <differential>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-relatedmedicationagreement" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-RelatedMedicationAgreement" />
     </element>
     <element>
       <path value="Extension.valueReference" />

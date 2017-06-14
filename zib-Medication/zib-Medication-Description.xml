@@ -4,7 +4,7 @@
     <versionId value="1" />
     <lastUpdated value="2017-06-12T15:35:54.023+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medication-description" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-Description" />
   <name value="ZIB-Medication-Description" />
   <title value="ZIB Medication Description" />
   <status value="draft" />
@@ -31,7 +31,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationusage-description" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Description" />
     </element>
     <element id="Extension.valueString">
       <path value="Extension.valueString" />

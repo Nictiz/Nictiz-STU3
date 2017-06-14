@@ -63,7 +63,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispense-distributionform" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispense-DistributionForm" />
       </type>
       <mapping>
         <identity value="zib-verstrekking" />
@@ -78,7 +78,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispense-registrationdate" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispense-RegistrationDate" />
       </type>
       <mapping>
         <identity value="zib-verstrekking" />

@@ -45,7 +45,7 @@
       <alias value="Omschrijving" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationusage-description" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Description" />
       </type>
       <mapping>
         <identity value="zib-dosage" />

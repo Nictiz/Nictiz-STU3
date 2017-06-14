@@ -5,7 +5,7 @@
     <versionId value="2" />
     <lastUpdated value="2017-06-08T17:16:42.187+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationagreement-reasonfordispense" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense" />
   <name value="ZIB-Reason-For-Dispense" />
   <title value="ZIB Reason For Dispense" />
   <status value="draft" />
@@ -32,7 +32,7 @@
   <differential>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationagreement-reasonfordispense" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense" />
     </element>
     <element id="Extension.valueString">
       <path value="Extension.valueString" />

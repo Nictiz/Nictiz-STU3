@@ -51,7 +51,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationusage-duration" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration" />
       </type>
     </element>
     <element id="MedicationDispense.extension.authoredOn">
@@ -63,7 +63,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationagreement-authored-on" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-AuthoredOn" />
       </type>
     </element>
     <element id="MedicationDispense.extension.reasonForDispense">
@@ -75,7 +75,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationagreement-reasonfordispense" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense" />
       </type>
     </element>
     <element id="MedicationDispense.extension.usagePeriod">
@@ -86,7 +86,7 @@
       <alias value="Gebruiksperiode" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medication-periodofuse" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse" />
       </type>
     </element>
     <element id="MedicationDispense.extension:additionalWishes">
@@ -98,7 +98,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationdispenserequest-additionalwishes" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
       </type>
       <binding>
         <strength value="extensible" />

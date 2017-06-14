@@ -51,7 +51,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationadministration-deviatingadministration" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DeviatingAdministration" />
       </type>
     </element>
     <element id="MedicationAdministration.extension:doubleCheckPerformed">
@@ -64,7 +64,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationadministration-doublecheckperformed" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DoubleCheckPerformed" />
       </type>
     </element>
     <element>

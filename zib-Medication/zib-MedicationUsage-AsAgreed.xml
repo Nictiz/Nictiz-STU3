@@ -5,7 +5,7 @@
     <versionId value="3" />
     <lastUpdated value="2016-12-12T16:22:27.396+00:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationusage-asagreed" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed" />
   <name value="ZIB-As-Agreed" />
   <title value="ZIB As Agreed" />
   <status value="draft" />
@@ -41,7 +41,7 @@
     <element id="Extension.url">
       <path value="Extension.url" />
       <representation value="xmlAttr" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationusage-asagreed" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed" />
     </element>
     <element id="Extension.valueBoolean">
       <path value="Extension.valueBoolean" />

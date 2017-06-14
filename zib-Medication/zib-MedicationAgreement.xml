@@ -46,7 +46,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medication-periodofuse" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse" />
       </type>
     </element>
     <element id="MedicationRequest.extension.usageDuration">
@@ -57,7 +57,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-medicationusage-duration" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration" />
       </type>
     </element>
     <element id="MedicationRequest.identifier">
