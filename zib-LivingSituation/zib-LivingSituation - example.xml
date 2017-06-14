@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
-    <id value="example"/>
+    <id value="livingsituation-example"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation"/>
     </meta>
     <text>
-        <status value="generated"></status>
+        <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
             <table>
                 <caption>Patient with id example</caption>
