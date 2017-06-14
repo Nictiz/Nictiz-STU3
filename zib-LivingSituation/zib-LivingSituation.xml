@@ -85,7 +85,10 @@
       <binding>
         <strength value="extensible" />
         <description value="Type of home the patient lives in." />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.8.1--20150401000000" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.8.1--20150401000000"/>
+          <display value="WoningTypeCodelijst"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="zib-woonsituatie" />

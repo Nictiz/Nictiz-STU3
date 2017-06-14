@@ -153,9 +153,12 @@
         <code value="CodeableConcept" />
       </type>
       <binding>
-        <strength value="extensible" />
-        <description value="Patient’s anatomical location of the medical aid used." />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.2--20150401000000" />
+        <strength value="extensible"/>
+        <description value="Patient’s anatomical location of the medical aid used."/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.2--20150401000000"/>
+          <display value="HulpmiddelAnatomischeLocatieCodelijst"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="zib-medischhulpmiddel" />

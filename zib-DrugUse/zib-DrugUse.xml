@@ -103,8 +103,11 @@
       <binding>
         <strength value="extensible"/>
         <description value="Indication stating whether there was any drug use in the past or present."/>
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.2--20150401000000"/>
-      </binding>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.2--20150401000000"/>
+          <display value="DrugGebruikStatusCodelijst"/>
+        </valueSetReference>
+        </binding>
       <mapping>
         <identity value="zib-drugsgebruik"/>
         <map value="NL-CM:7.4.3"/>
@@ -169,7 +172,10 @@
       <binding>
         <strength value="extensible"/>
         <description value="Type of drug used by the patient."/>
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.1--20150401000000"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.1--20150401000000"/>
+          <display value="DrugsOfGeneesmiddelSoortCodelijst"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="zib-drugsgebruik"/>
@@ -213,7 +219,10 @@
       <binding>
         <strength value="extensible"/>
         <description value="The way the drugs are used."/>
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3--20150401000000"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3--20150401000000"/>
+          <display value="ToedieningswegCodelijst"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="zib-drugsgebruik"/>
