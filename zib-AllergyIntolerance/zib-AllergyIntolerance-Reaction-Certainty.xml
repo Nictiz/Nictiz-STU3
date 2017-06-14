@@ -22,11 +22,6 @@
   <description value="Indication of the probability that the substance described in the ‘SpecificSubstance' concept caused the reaction." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
-  <mapping>
-    <identity value="zib-allergieintolerantie" />
-    <uri value="https://zibs.nl/wiki/AllergieIntolerantie(NL)" />
-    <name value="Zorginformatiebouwsteen AllergieIntolerantie" />
-  </mapping>
   <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="resource" />
@@ -51,15 +46,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="WaarschijnlijkheidCodelijst" />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8--20150401000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-allergieintolerantie" />
-        <map value="NL-CM:8.2.18" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>
