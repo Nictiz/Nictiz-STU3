@@ -9,7 +9,7 @@
   <status value="draft" />
   <date value="2017-03-29T17:34:12.7816784+02:00" />
   <publisher value="HL7 NL" />
-  <description value="Zorgverlener. Functional requirements taken from Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0." />
+  <description value="Zorgverlener. Functional requirements taken from Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>

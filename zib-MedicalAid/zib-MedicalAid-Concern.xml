@@ -8,7 +8,7 @@
   <text>
     <status value="generated" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide the medical reason for use of the medical aid based on a Condition resource as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 3.0. </p>
+      <p>An extension to provide the medical reason for use of the medical aid based on a Condition resource as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0. </p>
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern" />
@@ -25,7 +25,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The medical reason for use of the medical aid based on a Condition resource as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 3.0.." />
+  <description value="The medical reason for use of the medical aid based on a Condition resource as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0.." />
   <purpose value="To provide supporting information on the reason why the medical device is used. Currently, there is no reference avaiblable to a Condition resource for this support information, hence the reason for this extension." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />

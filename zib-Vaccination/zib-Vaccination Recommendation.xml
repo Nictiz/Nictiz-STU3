@@ -12,7 +12,7 @@
   <status value="draft" />
   <date value="2017-04-26T14:46:25.6166784+02:00" />
   <publisher value="Nictiz" />
-  <description value="This profile is one of two profile based on Vaccinatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0." />
+  <description value="This profile is one of two profile based on Vaccinatie as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0." />
   <purpose value="The ZIB vaccinatie defines the concept DesiredDateForRevaccination. FHIR has a dedicated resources for this. To cover DesiredDateForRevaccination and to exand on the ZIB vaccination, the ImmunizationRecommendation Resource is used and profiled. " />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />

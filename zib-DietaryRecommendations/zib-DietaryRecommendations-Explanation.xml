@@ -8,7 +8,7 @@
   <text>
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide additional explanation of the dietary recommendations as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'Voedingadvies' version 3.0. </p>
+      <p>An extension to provide additional explanation of the dietary recommendations as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'Voedingadvies' version 1.0. </p>
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations-Explanation" />
@@ -25,7 +25,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An extension to provide additional explanation of the dietary recommendations as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'Voedingadvies' version 3.0." />
+  <description value="An extension to provide additional explanation of the dietary recommendations as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'Voedingadvies' version 1.0." />
   <purpose value="The NutritionOrder.oralDiet.instruction will be used to define the actual diet intruction and not the optional explanation. There is no element available to provide an additional explanatation of the dietary recommendation. Therefore this extenstion can used." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />

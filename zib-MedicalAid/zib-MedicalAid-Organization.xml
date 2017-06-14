@@ -8,7 +8,7 @@
   <text>
     <status value="generated" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide information on the healthcare provider at which use of the medical aid was initiated or where the aid was implanted as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 3.0.</p>
+      <p>An extension to provide information on the healthcare provider at which use of the medical aid was initiated or where the aid was implanted as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0.</p>
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Organization" />
@@ -25,7 +25,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The healthcare provider at which use of the medical aid was initiated or where the aid was implanted as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 3.0." />
+  <description value="The healthcare provider at which use of the medical aid was initiated or where the aid was implanted as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0." />
   <purpose value="To provide additional information on the Healthcare provider where the medical device was initiated or the aid was implanted. This extension is used because currently there is no reference to an Organization resource for this supporting information." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />

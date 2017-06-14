@@ -8,7 +8,7 @@
   <text>
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>AlcoholGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. In the context of this information model, alcohol is the collective term for alcoholic beverages consumed as a leisure product. This information model describes the information asked of the patient about their alcohol use.</p>
+      <p>AlcoholGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. In the context of this information model, alcohol is the collective term for alcoholic beverages consumed as a leisure product. This information model describes the information asked of the patient about their alcohol use.</p>
     </div>
   </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse" />
@@ -25,7 +25,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="AlcoholGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;&#13;&#10;In the context of this information model, alcohol is the collective term for alcoholic beverages consumed as a leisure product. This information model describes the information asked of the patient about their alcohol use.&#13;&#10;" />
+  <description value="AlcoholGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#13;&#10;&#13;&#10;In the context of this information model, alcohol is the collective term for alcoholic beverages consumed as a leisure product. This information model describes the information asked of the patient about their alcohol use.&#13;&#10;" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>

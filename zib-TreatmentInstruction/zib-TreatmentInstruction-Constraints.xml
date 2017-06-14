@@ -9,7 +9,7 @@
   <status value="draft" />
   <date value="2017-05-22T15:44:24.235801+02:00" />
   <publisher value="Nictiz" />
-  <description value="An extension to add the constraints or specific circumstances that apply to a certain treatment to the Concent Resourse. This concept is defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) TreatmentInstruction version 3.0. " />
+  <description value="An extension to add the constraints or specific circumstances that apply to a certain treatment to the Concent Resourse. This concept is defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) TreatmentInstruction version 1.0. " />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="complex-type" />
