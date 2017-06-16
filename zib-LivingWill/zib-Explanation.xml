@@ -17,7 +17,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An extension to add a explanation information element to the Concent Resourse as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) LivingWilll and TreatmentInstruction version 3.0." />
+  <description value="An extension to add a explanation information element to the Concent Resourse as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) LivingWilll and TreatmentInstruction version 1.0." />
   <fhirVersion value="3.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />

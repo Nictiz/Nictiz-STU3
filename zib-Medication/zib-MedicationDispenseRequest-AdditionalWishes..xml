@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-08T17:16:14.764+02:00" />
+    <lastUpdated value="2017-06-12T14:19:39.578+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-additional-wishes" />
-  <name value="MP9-Additional-Wishes" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
+  <name value="ZIB-Additional-Wishes" />
+  <title value="ZIB Additional Wishes" />
   <status value="draft" />
   <date value="2017-06-08T17:04:06.8260228+02:00" />
   <publisher value="Nictiz" />
@@ -14,6 +15,7 @@
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
+  <context value="MedicationRequest" />
   <context value="MedicationDispense" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -21,7 +23,7 @@
   <differential>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-additional-wishes" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
     </element>
     <element>
       <path value="Extension.valueCodeableConcept" />

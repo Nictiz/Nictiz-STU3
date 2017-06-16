@@ -5,10 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-05-31T16:09:30.195+02:00" />
   </meta>
-  <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p>Voedingsadvies as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie.</p>
-</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations" />
   <name value="ZIB-DietaryRecommendations" />
   <title value="ZIB DietaryRecommendations" />
@@ -23,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Voedingsadvies as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#xD;&#xA;The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie.  &#xD;&#xA;" />
+  <description value="Voedingsadvies as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie.  &#xD;&#xA;" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>

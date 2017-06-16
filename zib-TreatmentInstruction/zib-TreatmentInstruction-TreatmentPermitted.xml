@@ -4,12 +4,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.985+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension for the indication of permission for the treatment, no permission for the treatment, or permission for the treatment with constraints.</p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-TreatmentPermitted" />
   <name value="ZIB-TreatmentInstruction-TreatmentPermitted" />
   <title value="ZIB TreatmentInstruction TreatmentPermitted" />

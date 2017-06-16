@@ -5,12 +5,6 @@
     <versionId value="1"/>
     <lastUpdated value="2017-02-22T10:32:08.517+00:00"/>
   </meta>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>DrugsGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. Drugs (or: narcotics, amphetamines, intoxicants, highs, hallucinogenics, illegal substances or dope) is a collective term for drugs and chemical substances with a more or less ‘drugging' (anesthetic, boosting and/or hallucinogenic) effect and which can lead to addiction. Drug [Online] Available at: nl.Wikipedia.org/wiki/drug [Accessed: 11 February 2015]. This information model describes the information asked of the patient about their drug use.</p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse"/>
   <name value="ZIB-DrugUse"/>
   <title value="ZIB DrugUse"/>
@@ -26,7 +20,7 @@
     </telecom>
   </contact>
   <description
-    value="DrugsGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;&#13;&#10;Drugs (or: narcotics, amphetamines, intoxicants, highs, hallucinogenics, illegal substances or dope) is a collective term for drugs and chemical substances with a more or less ‘drugging' (anesthetic, boosting and/or hallucinogenic) effect and which can lead to addiction. Drug [Online] Available at: nl.Wikipedia.org/wiki/drug [Accessed: 11 February 2015].&#13;&#10;&#13;&#10;This information model describes the information asked of the patient about their drug use."/>
+    value="DrugsGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#13;&#10;&#13;&#10;Drugs (or: narcotics, amphetamines, intoxicants, highs, hallucinogenics, illegal substances or dope) is a collective term for drugs and chemical substances with a more or less ‘drugging' (anesthetic, boosting and/or hallucinogenic) effect and which can lead to addiction. Drug [Online] Available at: nl.Wikipedia.org/wiki/drug [Accessed: 11 February 2015].&#13;&#10;&#13;&#10;This information model describes the information asked of the patient about their drug use."/>
   <copyright value="CC0"/>
   <fhirVersion value="3.0.0" />
   <mapping>
@@ -103,8 +97,11 @@
       <binding>
         <strength value="extensible"/>
         <description value="Indication stating whether there was any drug use in the past or present."/>
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.2--20150401000000"/>
-      </binding>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.2--20150401000000"/>
+          <display value="DrugGebruikStatusCodelijst"/>
+        </valueSetReference>
+        </binding>
       <mapping>
         <identity value="zib-drugsgebruik"/>
         <map value="NL-CM:7.4.3"/>
@@ -169,7 +166,10 @@
       <binding>
         <strength value="extensible"/>
         <description value="Type of drug used by the patient."/>
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.1--20150401000000"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.1--20150401000000"/>
+          <display value="DrugsOfGeneesmiddelSoortCodelijst"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="zib-drugsgebruik"/>
@@ -213,7 +213,10 @@
       <binding>
         <strength value="extensible"/>
         <description value="The way the drugs are used."/>
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3--20150401000000"/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3--20150401000000"/>
+          <display value="ToedieningswegCodelijst"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="zib-drugsgebruik"/>

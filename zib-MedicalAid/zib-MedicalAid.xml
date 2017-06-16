@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.314+00:00" />
   </meta>
-  <text>
-    <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>MedischHulpmiddel as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. Medical aids are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease.</p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid" />
   <name value="ZIB-MedicalAid" />
   <title value="ZIB MedicalAid" />
@@ -25,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="MedischHulpmiddel as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#13;&#10;&#13;&#10;Medical aids are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease." />
+  <description value="MedischHulpmiddel as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#13;&#10;&#13;&#10;Medical aids are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
@@ -67,7 +61,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-nl-core-organizationReference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Organization" />
       </type>
       <mapping>
         <identity value="zib-medischhulpmiddel" />
@@ -83,7 +77,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-nl-core-practitionerReference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Practitioner" />
       </type>
       <mapping>
         <identity value="zib-medischhulpmiddel" />
@@ -137,7 +131,7 @@
       <alias value="Indicatie" />
       <type>
         <code value="Extension" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern" />
       </type>
       <mapping>
         <identity value="zib-medischhulpmiddel" />
@@ -153,9 +147,12 @@
         <code value="CodeableConcept" />
       </type>
       <binding>
-        <strength value="extensible" />
-        <description value="Patient’s anatomical location of the medical aid used." />
-        <valueSetUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.2--20150401000000" />
+        <strength value="extensible"/>
+        <description value="Patient’s anatomical location of the medical aid used."/>
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.2--20150401000000"/>
+          <display value="HulpmiddelAnatomischeLocatieCodelijst"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="zib-medischhulpmiddel" />

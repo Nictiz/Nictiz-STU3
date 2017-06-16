@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="3dace244-e5bf-4dd9-8ee4-12df8dd69a58" />
+  <meta>
+    <versionId value="7" />
+    <lastUpdated value="2017-06-12T15:09:01.908+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/StructureDefinition/fhir/zib-MedicationDispense" />
+  <name value="ZIB-Medication-Dispense" />
+  <title value="ZIB Medication Dispense" />
+  <status value="draft" />
+  <date value="2016-12-12T16:50:34.796+00:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A MedicationDispense as defined by the Dutch Medication v9 project. A dispense is the delivery of an amount of medicine to the patient, their administrator or their representative." />
+  <purpose value="The goal of the dispense is to provide insight into which products are delivered by the pharmacist to the patient (or their representative)" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-verstrekking" />
+    <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3" />
+    <name value="Zorginformatiebouwsteen Verstrekking" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationDispense" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationDispense">
+      <path value="MedicationDispense" />
+      <short value="MedicationDispense" />
+      <alias value="Verstrekking" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="20270" />
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationDispense.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.extension.distributionForm">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="distributionForm" />
+      <short value="DistributionForm" />
+      <definition value="Distribution form" />
+      <comment value="For example through Baxter or seperate box." />
+      <alias value="Distributievorm" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispense-DistributionForm" />
+      </type>
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="20927" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.extension.registrationDate">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="registrationDate" />
+      <short value="Aanschrijfdatum" />
+      <definition value="The time at which the dispense request is entered in the pharmacy information system" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispense-RegistrationDate" />
+      </type>
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="22500" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.identifier">
+      <path value="MedicationDispense.identifier" />
+      <short value="Identificatie" />
+      <alias value="Identificatie" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="20271" />
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationDispense.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
+      </type>
+    </element>
+    <element id="MedicationDispense.medication[x]">
+      <path value="MedicationDispense.medication[x]" />
+      <short value="DispensedMedicine" />
+      <definition value="The dispensed medicine" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
+      </type>
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="22259" />
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationDispense.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
+    </element>
+    <element>
+      <path value="MedicationDispense.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-encounter" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare" />
+      </type>
+    </element>
+    <element id="MedicationDispense.performer">
+      <path value="MedicationDispense.performer" />
+      <short value="Supplier" />
+      <definition value="In almost all cases, the supplier will be a pharmacist. It could also be supplied by a webshop (in case of an online order), a drug store or a foreign pharmacist." />
+      <alias value="Verstrekker" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="20858" />
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationDispense.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+      </type>
+    </element>
+    <element id="MedicationDispense.authorizingPrescription">
+      <path value="MedicationDispense.authorizingPrescription" />
+      <short value="DispenseRequest" />
+      <definition value="Relationship to the dispense request." />
+      <alias value="Relatie naar verstrekkingsverzoek" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest" />
+      </type>
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="22396" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.quantity">
+      <path value="MedicationDispense.quantity" />
+      <sliceName value="SimpleQuantity" />
+      <short value="DispensedAmount" />
+      <definition value="Number of units of the product (measured based on the relevant product code) supplied" />
+      <alias value="Verstrekte hoeveelheid" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="20923" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.quantity:SimpleQuantity.value">
+      <path value="MedicationDispense.quantity.value" />
+      <alias value="Aantal" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="22601" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.quantity:SimpleQuantity.code">
+      <path value="MedicationDispense.quantity.code" />
+      <alias value="Eenheid" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="22602" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.daysSupply">
+      <path value="MedicationDispense.daysSupply" />
+      <sliceName value="SimpleQuantity" />
+      <short value="DurationOfUse" />
+      <definition value="The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount." />
+      <alias value="VerbruiksDuur" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="20924" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.whenHandedOver">
+      <path value="MedicationDispense.whenHandedOver" />
+      <short value="DispenseDateTime" />
+      <definition value="he time at which the medicine was supplied. The date and time at which the medicine is delivered.  &#xD;&#xA;Note: this is the time at which the medicine was delivered to the patient (or their administrator/representative) and not the request date." />
+      <alias value="Datum" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="20272" />
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationDispense.destination" />
+      <short value="DispenseLocation" />
+      <definition value="Dispense location" />
+      <alias value="Afleverlocatie" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-location" />
+      </type>
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="20925" />
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationDispense.receiver" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+    </element>
+    <element id="MedicationDispense.note">
+      <path value="MedicationDispense.note" />
+      <short value="Comment" />
+      <definition value="Comments or additional information on the dispense.&#xD;&#xA;Additional information includes details on the structure of the dispense. This can be e.g. a reason for deviating from the dispense request. " />
+      <alias value="Toelichting" />
+      <alias value="Aanvullende informatie" />
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="23285" />
+      </mapping>
+      <mapping>
+        <identity value="zib-verstrekking" />
+        <map value="22276" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.dosageInstruction.route">
+      <path value="MedicationDispense.dosageInstruction.route" />
+      <binding>
+        <strength value="required" />
+        <description value="VoorschriftToedieningswegCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.4--20150401000000" />
+          <display value="VoorschriftToedieningswegCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

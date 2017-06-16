@@ -5,15 +5,9 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.189+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide information on the healthcare provider at which use of the medical aid was initiated or where the aid was implanted as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 3.0.</p>
-    </div>
-  </text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-nl-core-organizationReference" />
-  <name value="ZIB-MedicalAid-nl-core-organizationReference" />
-  <title value="ZIB MedicalAid nl-core-organizationReference" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Organization" />
+  <name value="ZIB-MedicalAid-Organization" />
+  <title value="ZIB MedicalAid Organization" />
   <status value="draft" />
   <date value="2017-02-01T17:54:32.4726597+01:00" />
   <publisher value="Nictiz" />
@@ -25,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The healthcare provider at which use of the medical aid was initiated or where the aid was implanted as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 3.0." />
+  <description value="The healthcare provider at which use of the medical aid was initiated or where the aid was implanted as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0." />
   <purpose value="To provide additional information on the Healthcare provider where the medical device was initiated or the aid was implanted. This extension is used because currently there is no reference to an Organization resource for this supporting information." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
@@ -47,7 +41,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-nl-core-organizationReference" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Organization" />
     </element>
     <element id="Extension.valueReference">
       <path value="Extension.valueReference" />

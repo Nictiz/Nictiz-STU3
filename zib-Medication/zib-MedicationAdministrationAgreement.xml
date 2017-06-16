@@ -3,11 +3,11 @@
   <id value="656c06d5-9bb8-4948-9988-dc6c47fea22e" />
   <meta>
     <versionId value="3" />
-    <lastUpdated value="2017-06-08T17:43:35.676+02:00" />
+    <lastUpdated value="2017-06-12T14:26:24.658+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAdministrationAgreement" />
-  <name value="MP9-Medication-Administration-Agreement" />
-  <title value="MP9 Medication Administration Agreement" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministrationAgreement" />
+  <name value="ZIB-Medication-Administration-Agreement" />
+  <title value="ZIB Medication Administration Agreement" />
   <status value="draft" />
   <date value="2016-12-12T16:39:05.96+00:00" />
   <publisher value="Nictiz" />
@@ -51,7 +51,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-usage-duration" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration" />
       </type>
     </element>
     <element id="MedicationDispense.extension.authoredOn">
@@ -63,7 +63,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-authored-on" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-AuthoredOn" />
       </type>
     </element>
     <element id="MedicationDispense.extension.reasonForDispense">
@@ -75,7 +75,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-reason-for-dispense" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense" />
       </type>
     </element>
     <element id="MedicationDispense.extension.usagePeriod">
@@ -86,25 +86,25 @@
       <alias value="Gebruiksperiode" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-period-of-use" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse" />
       </type>
     </element>
     <element id="MedicationDispense.extension:additionalWishes">
       <path value="MedicationDispense.extension" />
-      <sliceName value="additionalWishes" />
-      <short value="AdditionalWishes" />
-      <definition value="Logistics and other instructions such as: do not enter in GDS, urgent, purposeful deviation, etc" />
+      <sliceName value="additionalInformation" />
+      <short value="AdministrationAgreementAdditionalInformation" />
+      <definition value="Additional information includes details on the structure of the agreement made.  &#xD;&#xA; &#xD;&#xA;This element mainly contains information that until now has been structured with ZZ rules. The medication-related topics that are now supported by the ZZ rules are best supported with a system functionality. A process has been started for this by Z-index/KNMP. For now, the following list will be used. This list will be replaced by a thesaurus in the G standard at a later stage." />
       <alias value="AanvullendeWensen" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-additional-wishes" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="Aanvullende wensen voor VV" />
+        <description value="AdministrationAgreementAdditionalInformation" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.32--20170505130346" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/22.16.840.1.113883.2.4.3.11.60.20.77.1.3--20170505130346" />
         </valueSetReference>
       </binding>
     </element>
@@ -132,7 +132,7 @@
       <short value="DosageInstructions" />
       <type>
         <code value="Dosage" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageIntructions" />
       </type>
     </element>
   </differential>

@@ -20,7 +20,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. A treatment instruction includes an agreed constraint in the treatment based on the oral or written living will of the patient." />
+  <description value="TreatmentInstruction as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. A treatment instruction includes an agreed constraint in the treatment based on the oral or written living will of the patient." />
   <purpose value="A good overview of the patient’s wishes is important. A healthcare provider can use the living will to discuss the existing wishes with the persons involved and to incorporate these wishes in their own policy. A concise, orderly list is of particular importance in acute care situations." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
@@ -38,6 +38,7 @@
     <element id="Consent ">
       <path value="Consent" />
       <short value="TreatmentInstruction" />
+      <alias value="BehandelAanwijzing"/>
       <mapping>
         <identity value="zib-treatmentinstruction" />
         <map value="NL-CM:2.1.1" />

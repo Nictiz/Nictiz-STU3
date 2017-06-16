@@ -36,6 +36,7 @@
   <differential>
     <element id="Coverage">
       <path value="Coverage" />
+      <alias value="Verzekering"/>
       <mapping>
         <identity value="zib-betaler"/>
         <map value="NL-CM:1.1.8"/>
@@ -99,6 +100,8 @@
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
+      <alias value="Verzekeraar"/>
+      <alias value="BetalerPersoon"/>
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -137,6 +140,7 @@
       <path value="Coverage.payor.extension" />
       <sliceName value="BankInformation" />
       <short value="BankInformation" />
+      <alias value="Bankgegevens"/>
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />
@@ -202,10 +206,10 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Coverage.payor.extension.extension.BankCode">
+    <element id="Coverage.payor.extension.extension.Bankcode">
       <path value="Coverage.payor.extension.extension" />
-      <sliceName value="BankCode" />
-      <short value="BankCode" />
+      <sliceName value="Bankcode" />
+      <short value="Bankcode" />
       <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code." />
       <alias value="Bankcode" />
       <mapping>
@@ -213,11 +217,11 @@
         <map value="NL-CM:1.1.10" />
       </mapping>
     </element>
-    <element id="Coverage.payor.extension.extension.BankCode.url">
+    <element id="Coverage.payor.extension.extension.Bankcode.url">
       <path value="Coverage.payor.extension.extension.url" />
-      <fixedUri value="BankCode" />
+      <fixedUri value="Bankcode" />
     </element>
-    <element id="Coverage.payor.extension.extension.BankCode.valueString">
+    <element id="Coverage.payor.extension.extension.Bankcode.valueString">
       <path value="Coverage.payor.extension.extension.valueString" />
       <type>
         <code value="string" />

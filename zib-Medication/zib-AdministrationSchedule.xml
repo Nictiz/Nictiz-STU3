@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="77dc0559-023b-4c4d-92e1-781f16acd33e" />
+  <meta>
+    <versionId value="4" />
+    <lastUpdated value="2017-06-12T16:17:12.69+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule" />
+  <name value="ZIB-Administration-Schedule" />
+  <title value="ZIB Administration Schedule" />
+  <status value="draft" />
+  <date value="2016-12-12T16:58:13.365+00:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Timing datatype as defined by the Dutch Medication v9 project." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-dosage" />
+    <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3" />
+    <name value="ZIB Dosage Instructions" />
+  </mapping>
+  <kind value="primitive-type" />
+  <abstract value="false" />
+  <type value="Timing" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Timing" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Timing.event" />
+      <short value="AdministrationTime" />
+      <definition value="The time of administration is a specific time of day (on the clock). This time usually isn’t (intended to be) exact. There can be multiple administering times in one day. &#xD;&#xA; &#xD;&#xA;The ideal time of administration can also be entered as a time of day (morning, afternoon, evening, night-time). The administration time is then to be left empty, and the time of day can be entered in the TimeOfDay concept" />
+      <alias value="Toedientijd" />
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="19951" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Timing.repeat.bounds[x]" />
+      <short value="DoseDuration" />
+      <definition value="The intended time duration for these dosing instructions." />
+      <alias value="Doseerduur" />
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="22506" />
+      </mapping>
+    </element>
+    <element id="Timing.repeat.frequency:FrequencyMinFixedValue">
+      <path value="Timing.repeat.frequency" />
+      <short value="Frequency" />
+      <definition value="The frequency indicates the number of dose moments per time unit, usually per day. If this frequency is included, then the Interval will not have been included. Usually, frequency comprises both amount and time unit (3 times a day), but it can occur without the time unit (single use). &#xD;&#xA; &#xD;&#xA;In that case, a reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics). &#xD;&#xA; &#xD;&#xA;The time unit of the frequency must be the same as how it is indicated in the textual description of the dose.  &#xD;&#xA; &#xD;&#xA;Example:  &#xD;&#xA;&lt;ul&gt; &#xD;&#xA; &lt;li&gt;for a '2x a day...' dose:&lt;ul&gt; &#xD;&#xA; &lt;li&gt;amount = 2&lt;/li&gt; &#xD;&#xA; &lt;li&gt;time unit = 'day'.&lt;/li&gt; &#xD;&#xA;&lt;/ul&gt; &#xD;&#xA;&lt;/li&gt; &#xD;&#xA;&lt;/ul&gt; &#xD;&#xA;&lt;ul&gt; &#xD;&#xA; &lt;li&gt;&lt;ul&gt; &#xD;&#xA; &lt;li&gt;&lt;/li&gt; &#xD;&#xA;&lt;/ul&gt; &#xD;&#xA;&lt;/li&gt; &#xD;&#xA;&lt;/ul&gt; &#xD;&#xA;&lt;ul&gt; &#xD;&#xA; &lt;li&gt;for a '3x a week...' dose:&lt;ul&gt; &#xD;&#xA; &lt;li&gt;amount = 3&lt;/li&gt; &#xD;&#xA;&lt;/ul&gt; &#xD;&#xA;&lt;/li&gt; &#xD;&#xA;&lt;/ul&gt; &#xD;&#xA;&lt;ul&gt; &#xD;&#xA; &lt;li&gt;&lt;ul&gt; &#xD;&#xA; &lt;li&gt;&lt;/li&gt; &#xD;&#xA;&lt;/ul&gt; &#xD;&#xA;&lt;/li&gt; &#xD;&#xA;&lt;/ul&gt; &#xD;&#xA;time unit = 'week'." />
+      <alias value="frequentie vaste waarde" />
+      <alias value="frequentie min" />
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="22692" />
+        <comment value="Min" />
+      </mapping>
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="22693" />
+        <comment value="fixed" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Timing.repeat.frequencyMax" />
+      <short value="max frequency" />
+      <definition value="If present, indicates that the frequency is a range - so to repeat between [frequency (min)] and [frequencyMax] times within the period or period range." />
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="22694" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Timing.repeat.period" />
+      <short value="Interval" />
+      <definition value="Interval indicates the time between dose times. If this is included, then the &lt;i&gt;Frequency &lt;/i&gt;will not have been included. &#xD;&#xA; &#xD;&#xA;Examples: every 4 hours, every 3 weeks. &#xD;&#xA;&#xD;&#xA;The times can now be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics) &#xD;&#xA;In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)" />
+      <alias value="Interval" />
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="19950" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Timing.repeat.periodUnit" />
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="19950" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Timing.repeat.dayOfWeek" />
+      <short value="WeekDay" />
+      <alias value="Weekdagen" />
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="19952" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Timing.repeat.timeOfDay" />
+      <short value="TimeOfDay" />
+      <alias value="Dagdeel" />
+      <mapping>
+        <identity value="zib-dosage" />
+        <map value="19953" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

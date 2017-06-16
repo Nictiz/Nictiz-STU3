@@ -3,11 +3,11 @@
   <id value="d15249e8-b757-4f78-9026-b9b117b35587" />
   <meta>
     <versionId value="3" />
-    <lastUpdated value="2017-06-08T17:16:53.888+02:00" />
+    <lastUpdated value="2017-06-12T14:45:21.15+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationDispenseRequest" />
-  <name value="MP9-Medication-Dispense-Request" />
-  <title value="MP9 Medication Dispense Request" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest" />
+  <name value="ZIB-Medication-Dispense-Request" />
+  <title value="ZIB Medication Dispense Request" />
   <status value="draft" />
   <date value="2016-12-12T16:41:50.247+00:00" />
   <publisher value="Nictiz" />
@@ -33,12 +33,67 @@
       <short value="Medicatieverstrekkingsverzoek" />
     </element>
     <element>
+      <path value="MedicationRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="MedicationRequest.extension" />
+      <sliceName value="additionalWishes" />
+      <short value="AdditionalWishes" />
+      <definition value="Logistics and other instructions such as: do not enter in GDS, urgent, purposeful deviation, etc" />
+      <alias value="AanvullendeWensen" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Aanvullende wensen voor VV" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.32--20170505130346" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="MedicationRequest.extension" />
+      <sliceName value="relatedMedicationAgreement" />
+      <short value="RelatedMedicationAgreement" />
+      <definition value="Medication agreement related to this dispense request" />
+      <alias value="GerelateerdeMedicatieAfspraak" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-RelatedMedicationAgreement" />
+      </type>
+    </element>
+    <element>
       <path value="MedicationRequest.identifier" />
-      <short value="Identificatie" />
+      <alias value="Identificatie" />
     </element>
     <element id="MedicationRequest.medication">
       <path value="MedicationRequest.medication[x]" />
-      <short value="Te verstrekken geneesmiddel" />
+      <short value="MedicineToBeDispensed" />
+      <definition value="The medicine to be dispensed." />
+      <alias value="Geneesmiddel" />
+      <alias value="Product" />
+      <alias value="Medicatie" />
+      <alias value="TeVerstrekkenGeneesmiddel" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
+      </type>
     </element>
     <element>
       <path value="MedicationRequest.subject" />
@@ -46,14 +101,21 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
     </element>
     <element>
       <path value="MedicationRequest.authoredOn" />
-      <short value="Datum" />
+      <short value="DispenseRequestDate" />
+      <definition value="Time at which the dispense request is entered." />
+      <alias value="VerstrekkingsverzoekDatum" />
     </element>
     <element>
       <path value="MedicationRequest.requester" />
-      <short value="auteur" />
+      <short value="Author" />
+      <alias value="Auteur" />
     </element>
     <element>
       <path value="MedicationRequest.requester.agent" />
@@ -80,7 +142,9 @@
     </element>
     <element>
       <path value="MedicationRequest.note" />
-      <short value="Toelichting" />
+      <short value="Comment" />
+      <definition value="Explanation for the dispense request. This explanation can contain e.g. information on why a prescriber submits a dispense request that deviates from the norm, e.g. an extra dispense request needed because the patient has lost the medication" />
+      <alias value="Toelichting" />
     </element>
     <element>
       <path value="MedicationRequest.dispenseRequest" />
@@ -104,19 +168,13 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dispense-location" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-Location" />
       </type>
     </element>
-    <element id="MedicationRequest.dispenseRequest.extension.intendedDispenser">
-      <path value="MedicationRequest.dispenseRequest.extension" />
-      <sliceName value="intendedDispenser" />
-      <short value="Beoogdverstrekker" />
-      <definition value="Optional Extensions Element - found in all resources." />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-dispensing-organization" />
-      </type>
+    <element>
+      <path value="MedicationRequest.dispenseRequest.validityPeriod" />
+      <short value="PeriodOfUse" />
+      <alias value="Verbruiksperiode" />
     </element>
     <element>
       <path value="MedicationRequest.dispenseRequest.validityPeriod.start" />
@@ -128,16 +186,25 @@
     </element>
     <element>
       <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" />
-      <short value="Aantal herhalingen" />
+      <short value=" NumberOfRefills" />
+      <comment value="The number of additional times the medication may be dispensed after the first time.  The total amount that may be dispensed is: (Number of refills + 1) x amount to be dispensed" />
+      <alias value="AantalHerhalingen" />
     </element>
     <element id="MedicationRequest.dispenseRequest.quantity">
       <path value="MedicationRequest.dispenseRequest.quantity" />
       <sliceName value="SimpleQuantity" />
-      <short value="Te verstrekken hoeveelheid" />
+      <short value="Amount" />
+      <alias value="TeVerstrekkenHoeveelheid" />
     </element>
     <element>
       <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration" />
       <short value="Duur" />
+    </element>
+    <element>
+      <path value="MedicationRequest.dispenseRequest.performer" />
+      <short value="IntendedSupplier" />
+      <definition value="The intended supplier is a pharmacist." />
+      <alias value="BeoogdVerstrekker" />
     </element>
   </differential>
 </StructureDefinition>

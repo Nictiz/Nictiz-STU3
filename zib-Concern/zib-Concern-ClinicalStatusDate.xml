@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:07.359+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide a date from when the current value of the ClinicalStatus applies: since when is the problem current, under control or non-current as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 3.0. </p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate" />
   <name value="ZIB-Concern-ClinicalStatusDate" />
   <title value="ZIB Concern ClinicalStatusDate" />
@@ -25,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 3.0." />
+  <description value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 1.0." />
   <purpose value="There is a need to provide a date from when the current value of ProblemStatus (ZIB) or ClinicalStatus (FHIR) applies. Currently, this date field is not provided in the Condition base Resource." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />

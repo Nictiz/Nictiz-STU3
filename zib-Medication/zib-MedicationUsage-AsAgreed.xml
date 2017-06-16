@@ -1,15 +1,15 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-  <id value="c441e13d-acd5-4895-86df-c0c3729d3d2c" />
+  <id value="8a22f2dc-6957-490b-8d6c-44ee06eb0ccc" />
   <meta>
-    <versionId value="5" />
-    <lastUpdated value="2017-02-20T08:42:17.716+00:00" />
+    <versionId value="3" />
+    <lastUpdated value="2016-12-12T16:22:27.396+00:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-authored-on" />
-  <name value="MP9-Authored-On" />
-  <title value="MP9 Authored On" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed" />
+  <name value="ZIB-As-Agreed" />
+  <title value="ZIB As Agreed" />
   <status value="draft" />
-  <date value="2017-02-20T08:42:17.716+00:00" />
+  <date value="2016-12-12T16:22:27.396+00:00" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -19,13 +19,12 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The date/time when the Medication Dispense or Statement was authored." />
+  <description value="Is the drug being taken as agreed in the medication agreement?" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="MedicationDispense" />
   <context value="MedicationStatement" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -42,12 +41,12 @@
     <element id="Extension.url">
       <path value="Extension.url" />
       <representation value="xmlAttr" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-authored-on" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed" />
     </element>
-    <element id="Extension.valueDateTime">
-      <path value="Extension.valueDateTime" />
+    <element id="Extension.valueBoolean">
+      <path value="Extension.valueBoolean" />
       <type>
-        <code value="dateTime" />
+        <code value="boolean" />
       </type>
     </element>
   </differential>

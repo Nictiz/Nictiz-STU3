@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Flag xmlns="http://hl7.org/fhir">
   <id value="example"/>
   <meta>
@@ -8,41 +7,23 @@
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-            
       <table>
-                
         <caption>Patient with id example</caption>
-                
         <thead>
-                    
           <tr>
-                        
             <th>AlertType</th>
-                        
             <th>StartDateTime</th>
-                        
             <th>AlertName</th>
-                    
           </tr>
-                
         </thead>
-                
         <tbody>
-                    
           <tr>
-                        
             <td>Alert</td>
-                        
             <td>2010-06-01</td>
-                        
             <td>Methicillin resistant staphylococcus aureus carrier</td>
-                    
           </tr>
-                
         </tbody>
-            
       </table>
-        
     </div>
   </text>
   <status value="active"/>

@@ -17,7 +17,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The problem or disorder to which the living will applies as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 3.0." />
+  <description value="The problem or disorder to which the living will applies as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 1.0." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="complex-type" />

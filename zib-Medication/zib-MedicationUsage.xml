@@ -3,11 +3,11 @@
   <id value="afbab416-6564-471c-92c0-7baeb20e2dd6" />
   <meta>
     <versionId value="8" />
-    <lastUpdated value="2017-06-08T17:16:48.766+02:00" />
+    <lastUpdated value="2017-06-12T17:15:57.189+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationUsage" />
-  <name value="MP9-Medication-Usage" />
-  <title value="MP9 Medication Usage" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage" />
+  <name value="ZIB-Medication-Usage" />
+  <title value="ZIB Medication Usage" />
   <status value="draft" />
   <date value="2016-12-12T16:43:00.948+00:00" />
   <publisher value="Nictiz" />
@@ -45,10 +45,10 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-as-agreed" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed" />
       </type>
     </element>
-    <element>
+    <element id="MedicationStatement.identifier">
       <path value="MedicationStatement.identifier" />
       <short value="Identifier" />
       <min value="1" />
@@ -65,8 +65,7 @@
       </slicing>
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
       </type>
     </element>
     <element id="MedicationStatement.basedOn:RelatedAgreement">
@@ -76,7 +75,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAgreement" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
       </type>
     </element>
     <element id="MedicationStatement.basedOn:RelatedDispense">
@@ -84,29 +83,29 @@
       <sliceName value="RelatedDispense" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/StructureDefinition/mp9-MedicationDispense" />
+        <targetProfile value="http://nictiz.nl/StructureDefinition/fhir/zib-MedicationDispense" />
       </type>
     </element>
-    <element>
+    <element id="MedicationStatement.medication[x]">
       <path value="MedicationStatement.medication[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
       </type>
     </element>
     <element id="MedicationStatement.effective">
       <path value="MedicationStatement.effective[x]" />
       <alias value="GebruiksPeriode" />
     </element>
-    <element>
+    <element id="MedicationStatement.dateAsserted">
       <path value="MedicationStatement.dateAsserted" />
       <alias value="Registratiedatum" />
       <min value="1" />
     </element>
-    <element>
+    <element id="MedicationStatement.informationSource">
       <path value="MedicationStatement.informationSource" />
       <alias value="Informant" />
       <type>
@@ -126,18 +125,18 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
-    <element>
+    <element id="MedicationStatement.subject">
       <path value="MedicationStatement.subject" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
-    <element>
+    <element id="MedicationStatement.taken">
       <path value="MedicationStatement.taken" />
       <alias value="GebruikIndicator" />
     </element>
-    <element>
+    <element id="MedicationStatement.reasonNotTaken">
       <path value="MedicationStatement.reasonNotTaken" />
       <alias value="Reden wijzigen gebruik" />
       <alias value="Reden stoppen gebruik" />
@@ -150,11 +149,11 @@
         </valueSetReference>
       </binding>
     </element>
-    <element>
+    <element id="MedicationStatement.reasonCode">
       <path value="MedicationStatement.reasonCode" />
       <alias value="Reden gebruik" />
     </element>
-    <element>
+    <element id="MedicationStatement.note">
       <path value="MedicationStatement.note" />
       <alias value="Toelichting" />
     </element>
@@ -162,7 +161,7 @@
       <path value="MedicationStatement.dosage" />
       <type>
         <code value="Dosage" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-DosageIntructions" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageIntructions" />
       </type>
     </element>
   </differential>

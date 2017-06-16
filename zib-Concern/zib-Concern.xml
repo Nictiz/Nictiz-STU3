@@ -1,27 +1,9 @@
-﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2017-03-29T14:34:10.831+02:00" />
+    <lastUpdated value="2017-06-14T11:01:17.702+02:00" />
   </meta>
-  <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p>A profile on Condition as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) OverdrachtConcern version 3.0. </p>
-  <p>Determining relevant health issues of the patient involves two important aspects: observing the problem itself on the one hand (complaints, symptoms, diagnosis, etc.) and evaluation of whether or not an active policy is required on the other. This evaluation by the healthcare provider is documented in the ‘Concern’, the point of attention. Multiple, linked Problems can be subsumed under a single Concern.</p>
-  <p>The difference between recorded problems and the attention they require enables an indication of which issues medical or nursing policy applies to, or in which issues policy is necessary. An example is well-managed diabetes; this requires no active policy of the healthcare provider.</p>
-  <p>A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy.<br />A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems:</p>
-  <ul>
-    <li>A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia</li>
-    <li>A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;</li>
-    <li>A finding: a healthcare provider’s observation of a patient’s health. Examples: enlarged liver, pathological plantar reflex, deviating Minimal Mental State, missing teeth.</li>
-    <li>A condition: a description of a (deviating) bodily state, which may or may not be seen as a disease. Examples: pregnancy, circulatory disorder, poisoning.</li>
-    <li>A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.</li>
-    <li>A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.</li>
-    <li>A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.</li>
-    <li>A problem: any circumstance that is relevant to the medical treatment, but does not fit into one of the categories listed. Examples: Patient resides in the Netherlands without a legal status and is not insured; patient is not able to check their own blood sugar levels.</li>
-  </ul>
-  <p>In first-line care the Episode concept fills the role of Concern.</p>
-</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
   <name value="ZIB-Concern" />
   <title value="ZIB Concern" />
@@ -36,7 +18,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="OverdrachtConcern as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0.&#xD;&#xA;&#xD;&#xA;Determining relevant health issues of the patient involves two important aspects: observing the problem itself on the one hand (complaints, symptoms, diagnosis, etc.) and evaluation of whether or not an active policy is required on the other. This evaluation by the healthcare provider is documented in the ‘Concern’, the point of attention. Multiple, linked Problems can be subsumed under a single Concern.&#xD;&#xA;The difference between recorded problems and the attention they require enables an indication of which issues medical or nursing policy applies to, or in which issues policy is necessary. An example is well-managed diabetes; this requires no active policy of the healthcare provider.&#xD;&#xA;&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy.&#xD;&#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems:&#xD;&#xA;&#xD;&#xA;A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia&#xD;&#xA;A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;&#xD;&#xA;A finding: a healthcare provider’s observation of a patient’s health. Examples: enlarged liver, pathological plantar reflex, deviating Minimal Mental State, missing teeth.&#xD;&#xA;A condition: a description of a (deviating) bodily state, which may or may not be seen as a disease. Examples: pregnancy, circulatory disorder, poisoning.&#xD;&#xA;A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.&#xD;&#xA;A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.&#xD;&#xA;A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.&#xD;&#xA;A problem: any circumstance that is relevant to the medical treatment, but does not fit into one of the categories listed. Examples: Patient resides in the Netherlands without a legal status and is not insured; patient is not able to check their own blood sugar levels.&#xD;&#xA;&#xD;&#xA;In first-line care the Episode concept fills the role of Concern." />
+  <description value="OverdrachtConcern as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;&#xD;&#xA;Determining relevant health issues of the patient involves two important aspects: observing the problem itself on the one hand (complaints, symptoms, diagnosis, etc.) and evaluation of whether or not an active policy is required on the other. This evaluation by the healthcare provider is documented in the ‘Concern’, the point of attention. Multiple, linked Problems can be subsumed under a single Concern.&#xD;&#xA;The difference between recorded problems and the attention they require enables an indication of which issues medical or nursing policy applies to, or in which issues policy is necessary. An example is well-managed diabetes; this requires no active policy of the healthcare provider.&#xD;&#xA;&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy.&#xD;&#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems:&#xD;&#xA;&#xD;&#xA;A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia&#xD;&#xA;A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;&#xD;&#xA;A finding: a healthcare provider’s observation of a patient’s health. Examples: enlarged liver, pathological plantar reflex, deviating Minimal Mental State, missing teeth.&#xD;&#xA;A condition: a description of a (deviating) bodily state, which may or may not be seen as a disease. Examples: pregnancy, circulatory disorder, poisoning.&#xD;&#xA;A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.&#xD;&#xA;A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.&#xD;&#xA;A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.&#xD;&#xA;A problem: any circumstance that is relevant to the medical treatment, but does not fit into one of the categories listed. Examples: Patient resides in the Netherlands without a legal status and is not insured; patient is not able to check their own blood sugar levels.&#xD;&#xA;&#xD;&#xA;In first-line care the Episode concept fills the role of Concern." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
@@ -48,33 +30,39 @@
   <abstract value="false" />
   <type value="Condition" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="Condition">
       <path value="Condition" />
+      <short value="Problem" />
+      <definition value="A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint) or by their healthcare provider (in the form of a diagnosis, for example)." />
       <alias value="Concern" />
+      <alias value="Probleem" />
       <mapping>
         <identity value="zib-overdrachtconcern" />
         <map value="NL-CM:5.1.1" />
-      </mapping>      
+      </mapping>
+      <mapping>
+        <identity value="zib-overdrachtconcern" />
+        <map value="NL-CM:5.1.2" />
+      </mapping>
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />
-      <short value="ProblemStatus" />
-      <definition value="The problem status describes the condition of the problem:&#xD;&#xA;1. Current problems are the focus of the current medical policy.&#xD;&#xA;2. Non-current (historic) problems are part of the case history.&#xD;&#xA;3. Problems with the status 'Under control' refer to problems that still exist, but which currently do not require specific medical policy (such as well-managed diabetes)." />
+      <short value="ProblemStatus " />
+      <definition value="The problem status describes the condition of the problem:&#xD;&#xA;1. Current problems are the focus of the current medical policy.&#xD;&#xA;2. Non-current (historic) problems are part of the case history.&#xD;&#xA;3. Problems with the status 'Under control' refer to problems that still exist, but which currently do not require specific medical policy (such as well-managed diabetes). " />
       <alias value="ProbleemStatus" />
-      <min value="1" />
       <mapping>
         <identity value="zib-overdrachtconcern" />
         <map value="NL-CM:5.1.4" />
       </mapping>
     </element>
-    <element id="Condition.clinicalStatus.extension">
+    <element>
       <path value="Condition.clinicalStatus.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -141,6 +129,9 @@
       <max value="1" />
     </element>
     <element id="Condition.code.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Condition.code.text" />
       <short value="ConcernLabel" />
       <definition value="If needed, a short, written description of the concern. Mainly in first-line care this will be used for the episode name." />

@@ -1,7 +1,7 @@
-﻿<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-03-29T18:10:18.766+02:00" />
+    <lastUpdated value="2017-06-14T10:46:05.397+02:00" />
   </meta>
   <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
   <name value="nl-core-practitionerrole" />
@@ -9,7 +9,7 @@
   <status value="draft" />
   <date value="2017-03-29T17:34:12.7816784+02:00" />
   <publisher value="HL7 NL" />
-  <description value="Zorgverlener. Functional requirements taken from Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0." />
+  <description value="Zorgverlener. Functional requirements taken from Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
@@ -21,7 +21,7 @@
   <abstract value="false" />
   <type value="PractitionerRole" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole">
       <path value="PractitionerRole" />
@@ -71,11 +71,18 @@
       <path value="PractitionerRole.specialty" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="coding.system"/>
+          <type value="value" />
+          <path value="coding.system" />
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="Specialty" />
+      <definition value="Healthcare provider’s medical specialty. This refers to the recognized medical specialties as stated in the BIG Act." />
+      <alias value="Specialisme" />
+      <mapping>
+        <identity value="zib-zorgverlener" />
+        <map value="NL-CM:17.1.4" />
+      </mapping>
     </element>
     <element id="PractitionerRole.specialty:SpecialtyAGB">
       <path value="PractitionerRole.specialty" />
@@ -111,8 +118,8 @@
     </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
-      <short value="ContactInformation"/>
-      <alias value="Contactgegevens"/>
+      <short value="ContactInformation" />
+      <alias value="Contactgegevens" />
       <mapping>
         <identity value="zib-patient" />
         <map value="NL-CM:0.1.5" />

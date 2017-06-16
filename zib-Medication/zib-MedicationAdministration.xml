@@ -5,9 +5,9 @@
     <versionId value="4" />
     <lastUpdated value="2017-06-08T17:35:29.723+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-MedicationAdministration" />
-  <name value="MP9-Medication-Administration" />
-  <title value="MP9 Medication Administration" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration" />
+  <name value="ZIB-Medication-Administration" />
+  <title value="ZIB Medication Administration" />
   <status value="draft" />
   <date value="2016-12-12T16:52:03.83+00:00" />
   <publisher value="Nictiz" />
@@ -51,7 +51,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-deviating-administration" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DeviatingAdministration" />
       </type>
     </element>
     <element id="MedicationAdministration.extension:doubleCheckPerformed">
@@ -64,7 +64,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/mp9-double-check-performed" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DoubleCheckPerformed" />
       </type>
     </element>
     <element>

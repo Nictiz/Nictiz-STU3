@@ -5,15 +5,9 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.157+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide the medical reason for use of the medical aid based on a Condition resource as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 3.0. </p>
-    </div>
-  </text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference" />
-  <name value="ZIB-MedicalAid-ConcernReference" />
-  <title value="ZIB MedicalAid ConcernReference" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern" />
+  <name value="ZIB-MedicalAid-Concern" />
+  <title value="ZIB MedicalAid Concern" />
   <status value="draft" />
   <date value="2017-02-01T17:54:28.5193301+01:00" />
   <publisher value="Nictiz" />
@@ -25,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The medical reason for use of the medical aid based on a Condition resource as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 3.0.." />
+  <description value="The medical reason for use of the medical aid based on a Condition resource as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0.." />
   <purpose value="To provide supporting information on the reason why the medical device is used. Currently, there is no reference avaiblable to a Condition resource for this support information, hence the reason for this extension." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
@@ -47,7 +41,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern" />
     </element>
     <element id="Extension.valueReference">
       <path value="Extension.valueReference" />

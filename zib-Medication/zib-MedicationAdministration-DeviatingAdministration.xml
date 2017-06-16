@@ -3,8 +3,9 @@
   <meta>
     <lastUpdated value="2017-06-08T17:16:26.473+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/mp9-deviating-administration" />
-  <name value="MP9-Deviating-Administration" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DeviatingAdministration" />
+  <name value="ZIB-Deviating-Administration" />
+  <title value="ZIB Deviating Administration" />
   <status value="draft" />
   <date value="2017-06-08T14:49:41.0568655+02:00" />
   <publisher value="Nictiz" />
@@ -73,7 +74,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/mp9-deviating-administration" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DeviatingAdministration" />
     </element>
     <element>
       <path value="Extension.value[x]" />

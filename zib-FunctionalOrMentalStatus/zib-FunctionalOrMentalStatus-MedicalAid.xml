@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.814+00:00" />
   </meta>
-  <text>
-    <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide supporting information on the Medical aid the patient has to reduce the impact of the disability or disorder. The disability or disorder is determined in 'FunctioneleOfMentaleStatus' as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. </p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus-MedicalAid" />
   <name value="ZIB-FunctionalOrMentalStatus-MedicalAid" />
   <title value="ZIB FunctionalOrMentalStatus MedicalAid" />
@@ -25,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An extenion to provide supporting information on the Medical aid the patient has to reduce the impact of the disability or disorder. The disability or disorder is determined in 'FunctioneleOfMentaleStatus' as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 3.0. &#13;&#10;&#13;&#10;" />
+  <description value="An extenion to provide supporting information on the Medical aid the patient has to reduce the impact of the disability or disorder. The disability or disorder is determined in 'FunctioneleOfMentaleStatus' as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. &#13;&#10;&#13;&#10;" />
   <purpose value="Reference to the Dutch Clinical Building Block MedicalAid to provide supporting information on the Medical aid the patient uses to reduce the impact of the disability or disorder." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />

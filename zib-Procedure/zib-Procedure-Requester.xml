@@ -4,12 +4,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:07.999+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension on Procedure to included the healthcare provider who requested the procedure. </p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-Requester" />
   <name value="ZIB-Procedure-Requester" />
   <title value="ZIB Procedure Requester" />
@@ -25,7 +19,7 @@
     </telecom>
   </contact>
   <description value="The healthcare provider who requested the procedure." />
-  <purpose value="The Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) Procedure version 3.0 models a direct reference to the healthcare provider who requested the procedure. The Procedure resource does not include a reference to a Practitioner resource to indicate who requested the procedure." />
+  <purpose value="The Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) Procedure version 1.0.models a direct reference to the healthcare provider who requested the procedure. The Procedure resource does not include a reference to a Practitioner resource to indicate who requested the procedure." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />

@@ -5,12 +5,6 @@
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.392+00:00" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>An extension to provide the date on which the vaccination will have to be repeated according to the author’s information as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'Vaccinatie' version 3.0. </p>
-    </div>
-  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination-DesiredDateForRevaccination" />
   <name value="ZIB-Vaccination-DesiredDateForRevaccination" />
   <title value="ZIB Vaccination DesiredDateForRevaccination" />
@@ -25,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An extension to provide the date on which the vaccination will have to be repeated according to the author’s information as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'Vaccinatie' version 3.0." />
+  <description value="An extension to provide the date on which the vaccination will have to be repeated according to the author’s information as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'Vaccinatie' version 1.0." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />

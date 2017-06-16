@@ -8,54 +8,31 @@
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-            
       <table>
-                
         <caption>Patient with id example</caption>
-                
         <thead>
-                    
           <tr>
-                        
             <th>StartDate</th>
-                        
             <th>AidAnatomicalLocation</th>
-                        
             <td>Product</td>
-                        
             <th>Indication</th>
-                        
             <th>Organization</th>
-                        
             <th>Explanation</th>
-                    
           </tr>
-                
         </thead>
-                
         <tbody>
-                    
           <tr>
-                        
             <td>2004-02-10</td>
-                        
             <td>Left subclavian artery</td>
-                        
             <td>VVI Pacemaker</td>
-                        
             <td>Academic Medical Center</td>
-                        
             <td>Last checked in 2011</td>
-                    
           </tr>
-                
         </tbody>
-            
       </table>
-        
     </div>
   </text>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-nl-core-organizationReference">
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Organization">
     <valueReference>
       <reference value="Organization/example"/>
       <display value="Academic Medical Center"/>
@@ -73,7 +50,7 @@
     <display value="VVI Pacemaker"/>
   </device>
   <indication>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-ConcernReference">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern">
       <valueReference>
         <reference value="Condition/example"/>
         <display value="Atrial fibrillation"/>
