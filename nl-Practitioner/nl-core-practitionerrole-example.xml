@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://hl7.org/fhir/practitionerrole.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <PractitionerRole xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/practitionerrole.xsd" xmlns="http://hl7.org/fhir">
-    <id value="example"/>
+    <id value="nl-core-practitionerrole-example-1"/>
     <meta>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"/>
     </meta>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Performer / General Practitioner</th>
+                    </tr>
+                    <tr>
+                        <td>Practitioner: Henk de Vries</td>
+                    </tr>
+                    <tr>
+                        <td>Organization: Ziekenhuis Gooi en Overvecht</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
     <practitioner>
-        <reference value="Practitioner/example"/>
+        <reference value="Practitioner/nl-core-practitioner-example-1"/>
         <display value="Henk de Vries"/>
     </practitioner>
     <organization>
-        <reference value="Organization/example"/>
+        <reference value="Organization/Organization-example26"/>
         <display value="Ziekenhuis Gooi en Overvecht"/>
     </organization>
     <code>

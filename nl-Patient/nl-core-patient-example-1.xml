@@ -8,8 +8,6 @@
     <text>
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>Voorbeeld van een 'Patient' zoals verder samengesteld tijdens de HL7 WGM NL 15-04-2016 jl. Deze discussie heeft diverse uitzoekpunten opgeleverd
-                zoals hier gedocumenteerd.</p>
             <div>
                 <p>BSN: 123456782</p>
                 <p>Naam: Irma Jongeneel-de Haas</p>
@@ -22,26 +20,6 @@
                 <p>Eerste relatie/contactpersoon is haar man Gerard Eckdom via telefoonnummer 015-23456789</p>
                 <p>Huisarts: Huisartsenpraktijk Van Eijk</p>
             </div>
-            <p style="font-weight: bold;">Bron-materialen</p>
-            <ol>
-                <li>
-                    <a href="http://www.hl7.nl/wiki/index.php?title=Implementatiehandleiding_HL7v3_basiscomponenten_v2.2_Part3#R_PatientNL_.28pati.C3.ABnt.29"
-                        >Implementatiehandleiding Basiscomponenten</a> (v3) versie 2.3</li>
-                <li>Zorginformatie Bouwsteen (ZIB) <a href="https://www.nictiz.nl/Paginas/zorginformatiebouwstenen-downloads.aspx">Patient</a> versie 2.0</li>
-            </ol>
-            <p style="font-weight: bold;">Open punten</p>
-            <ol>
-                <li>Patient.extension.patientImportance is een internationaal gedefinieerde extensie voor het doorgeven van een VIP-status van iemand (bron:
-                    HL7v3 Basiscomponenten). FHIR kent echter ook nog security-tags voor bepaalde privacy vlaggetjes. Het lijkt goed in de uitwerking van het
-                    profiel hier wat extra duiding aan te besteden zodat die twee mogelijkheden goed kunnen worden gebruikt.<br/>NB: de in de versiegegevens van
-                    ZIB Patient v2.0 is te lezen dat de VIP-indicator hier bewust is weggehaald. <a href="https://bits.nictiz.nl/browse/ZIB-349">BITS issue
-                        #349</a> zegt echter niet waarom. Die vraag is uitgezet.</li>
-                <li>Patient.active. Dit veld geeft aan of het record van de patiënt nog actief is in de context van de betreffende organisatie.
-                    Patient.active='false' kun je gebruiken om aan te geven dat het record beter niet kan worden gebruikt, maar het record kan paraat worden
-                    gehouden omdat er allerlei gerelateerde gegevens aan hangen. Een andere use case is een patiënt die van huisarts is veranderd.
-                    Patient.active staat dan naar verwachting op 'false' in de registratie van de oude huisarts.</li>
-                <li>Patient.photo</li>
-            </ol>
         </div>
     </text>
     <identifier>
