@@ -159,8 +159,8 @@
     <!-- Correcct terminology needed. Code is now used for TypeOfTobaccoUsed and Amount -->
     <element id="Observation.component.TypeOfTobaccoUsed.code.coding.code">
       <path value="Observation.component.code.coding.code" />
+      <comment value="The exact snomed code for this concept is not yet determined. More information on the status of this terminology binding, please check the public issue https://bits.nictiz.nl/browse/ZIB-562 . "/>
       <min value="1" />
-      <fixedCode value="266918002" />
     </element>
     <element id="Observation.component.TypeOfTobaccoUsedcode.coding.display">
       <path value="Observation.component.code.coding.display" />
