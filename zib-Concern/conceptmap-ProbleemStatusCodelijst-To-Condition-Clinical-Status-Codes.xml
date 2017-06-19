@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/conceptmap.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/conceptmap.xsd">
-  <url value="http://nictiz.nl/fhir/ConceptMap/WaarschijnlijkheidCodelijst-to-reaction-event-certainty"/>
+  <url value="http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes"/>
   <version value="1.0"/>
   <name value="ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes"/>
   <title value="ZIB ProbleemStatusCodelijst to Condition Clinical Status Codes"/>

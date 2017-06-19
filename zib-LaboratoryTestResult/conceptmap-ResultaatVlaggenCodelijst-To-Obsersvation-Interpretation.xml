@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConceptMap>
-  <url value="http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-observation-interpretation" />
+  <url value="http://nictiz.nl/fhir/ConceptMap/ResultaatVlaggenCodelijst-to-observation-interpretation" />
   <version value="1.0" />
   <name value="ResultaatVlaggenCodelijst-to-observation-interpretation" />
   <title value="ZIB ResultaatVlaggenCodelijst to Observation Interpretation Codes" />
