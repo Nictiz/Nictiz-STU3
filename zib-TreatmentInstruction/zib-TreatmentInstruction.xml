@@ -139,6 +139,7 @@
         <description value="The medical treatment to which the treatment instruction applies." />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.1--20150401000000" />
+          <display value="BehandelingCodelijst"/>
         </valueSetReference>
       </binding>
       <mapping>
@@ -170,9 +171,10 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="Detailed codes for the consent action." />
+        <description value="Indication of permission for the treatment, no permission for the treatment, or permission for the treatment with constraints." />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.2--20150401000000" />
+          <display value="BehandelingToegestaanCodelijst"/>
         </valueSetReference>
       </binding>
       <mapping>

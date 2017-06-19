@@ -6,9 +6,9 @@
     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction"/>
   </meta>
   <text>
-    <status value="additional"></status>
+    <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      Example of a Treatment instruction of a patient.
+      Example of a patient's treatment instruction.
     </div>
   </text>
   <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification">
@@ -27,6 +27,24 @@
     <extension url="VerificationDate">
       <valueDateTime value="2015-01-05"/>
     </extension>
+  </extension>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Treatment">
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="89666000" />
+      <display value="Cardiopulmonary resuscitation (procedure)" />
+    </coding>
+  </valueCodeableConcept>
+  </extension>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-TreatmentPermitted">
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4" />
+        <code value="JA_MAAR" />
+        <display value="Ja, maar met beperkingen" />
+      </coding>
+    </valueCodeableConcept>
   </extension>
   <status value="active"/>
   <patient>
@@ -54,13 +72,6 @@
       <reference value="Practitioner/example"/>
     </reference>
   </actor>
-  <action>
-    <coding>
-      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
-      <code value="JA_MAAR"/>
-      <display value="Ja, maar met beperkingen"/>
-    </coding>
-  </action>
   <organization>
     <reference value="Organization/example"/>
   </organization>
@@ -70,12 +81,10 @@
   </sourceReference>
   <!-- Example of a policyRule -->
   <policyRule value="http://wetten.overheid.nl/BWBR0012410/2014-02-15"/>
-  <purpose>
-    <system value="http://snomed.info/sct"/>
-    <code value="89666000"/>
-    <display value="Cardiopulmonary resuscitation (procedure)"/>
-  </purpose>
   <except>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints">
+      <valueString value="First consult the partner of the patient"/>
+    </extension>
     <type value="deny"/>
     <actor>
       <role>
@@ -94,10 +103,5 @@
       <code value="89666000"/>
       <display value="Cardiopulmonary resuscitation (procedure)"/>
     </purpose>
-    <code>
-      <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints">
-      <valueString value="First consult the partner of the patient"/>
-      </extension>
-    </code>
   </except>
 </Consent>
