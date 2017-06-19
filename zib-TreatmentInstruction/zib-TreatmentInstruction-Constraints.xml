@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-05-22T15:53:25.492+02:00" />
+    <lastUpdated value="2017-06-19T14:05:41.935+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints" />
   <name value="ZIB-TreatmentInstruction-Constraints" />
@@ -15,16 +15,16 @@
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="Consent.except.code" />
+  <context value="Consent.except" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element>
+    <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints" />
     </element>
-    <element>
+    <element id="Extension.value[x]">
       <path value="Extension.valueString" />
       <type>
         <code value="string" />
