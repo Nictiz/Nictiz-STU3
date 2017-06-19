@@ -15,8 +15,8 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="Maps the ZIB AllergyIntolerance release 2015 terminology for Certainty to the FHIR STU3 terminology "/>
-    <purpose value="To aid in mapping from ZIB AllergyIntolerance value set WaarschijnlijkheidCodelijst to FHIR STU3 AllergyIntolerance extension for certainty"/>
+    <description value="Maps the ZIB AllergyIntolerance release 2015 terminology for Certainty to the FHIR STU3 terminology."/>
+    <purpose value="To aid in mapping from ZIB AllergyIntolerance value set WaarschijnlijkheidCodelijst to FHIR STU3 AllergyIntolerance extension for certainty."/>
     <copyright value="CC0"/>
     <sourceUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8--20150401000000"/>
     <!--<targetUri value="http://hl7.org/fhir/ValueSet/reaction-event-certainty"/>-->
