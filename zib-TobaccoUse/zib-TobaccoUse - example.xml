@@ -88,7 +88,7 @@
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="266918002"/>
+                <code value="Code-to-be-determined"/>
                 <display value="Tobacco smoking consumption"/>
             </coding>
         </code>
