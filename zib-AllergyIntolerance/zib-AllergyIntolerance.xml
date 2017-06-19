@@ -157,8 +157,7 @@
       <alias value="Patiënt" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
     <element id="AllergyIntolerance.onset[x]">
@@ -180,18 +179,15 @@
       <short value="Informant" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
     </element>
     <element id="AllergyIntolerance.lastOccurrence">
@@ -216,18 +212,15 @@
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
       </type>
     </element>
     <element id="AllergyIntolerance.note.text">
