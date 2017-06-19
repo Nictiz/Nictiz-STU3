@@ -11,6 +11,14 @@
     <title value="nl-core-relatedperson"/>
     <status value="draft"/>
     <publisher value="HL7 Netherlands"/>
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="email" />
+            <value value="info@nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
     <description
         value="A RelatedPerson resource as defined by the Dutch Clinical Building Block or CBB (Dutch: Zorginformatiebouwsteen or ZIB) ContactPersoon version 1.2 (Release 2015)"/>
     <copyright value="CC0"/>

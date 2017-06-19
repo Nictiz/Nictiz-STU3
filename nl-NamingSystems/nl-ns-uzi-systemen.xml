@@ -8,7 +8,15 @@
     <status value="active"/>
     <kind value="root"/>
     <date value="2016-10-31T19:12:38.137+01:00"/>
-    <publisher value="HL7 NL"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
     <description value="Systems UZI number, combined with a UZI services certificate"/>
     <uniqueId>
         <type value="uri"/>

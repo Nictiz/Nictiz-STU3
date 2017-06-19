@@ -11,6 +11,14 @@
     <status value="draft"/>
     <date value="2015-09-22T12:02:49+02:00"/>
     <publisher value="HL7 Netherlands"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
     <description value="Base datatype for HumanName Type with additions for Dutch realm names. Dutch names break down the family into maximum of 4 parts that are important to know separately in some if not most use cases."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>

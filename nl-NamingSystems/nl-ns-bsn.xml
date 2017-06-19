@@ -8,7 +8,15 @@
     <status value="active"/>
     <kind value="root"/>
     <date value="2016-10-31T19:05:06.568+01:00"/>
-    <publisher value="HL7 NL"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
     <description value="Citizen service number (BSN)"/>
     <uniqueId>
         <type value="uri"/>
