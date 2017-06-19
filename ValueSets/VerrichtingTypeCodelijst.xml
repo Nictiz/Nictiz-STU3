@@ -9,16 +9,16 @@
         <system value="http://art-decor.org/ns/oids/vs"/>
         <value value="2.16.840.1.113883.2.4.3.11.60.40.2.14.1.2"/>
     </identifier>
-    <version value="2015-04-01T00:00:00"/>
+    <version value="nl.zorg.OverdrachtVerrichting versie 3.0"/>
     <name value="VerrichtingTypeCodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="ART-DECOR Expert Group"/>
-    <description value="CBV verrichtingen (99): Alle waarden"/>
+    <description value="Verrichtingenthesaurus DHD: Alle waarden"/>
     <immutable value="false"/>
     <compose>
         <include>
-            <system value="urn:oid:99"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.120.5.2"/>
         </include>
     </compose>
 </ValueSet>
