@@ -3,7 +3,7 @@
   <id value="e445eae5-56dd-4b2f-85c1-39fc585f0d35" />
   <meta>
     <versionId value="5" />
-    <lastUpdated value="2017-06-12T17:31:49.001+02:00" />
+    <lastUpdated value="2017-06-22T16:57:51.777+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
   <name value="ZIB-Medication-Agreement" />
@@ -22,6 +22,11 @@
   <description value="Medication Agreement (Medicatie afspraak) as defined by the Dutch Medication v9 project." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
+  <mapping>
+    <identity value="zib-medicationagreement" />
+    <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3" />
+    <name value="ZIB Medication Agreement" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="MedicationRequest" />
@@ -48,28 +53,58 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse" />
       </type>
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="19936" />
+      </mapping>
     </element>
     <element id="MedicationRequest.extension.usageDuration">
       <path value="MedicationRequest.extension" />
       <sliceName value="usageDuration" />
-      <short value="Gebruikduur" />
+      <short value="Gebruiksduur" />
       <definition value="Optional Extensions Element - found in all resources." />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration" />
       </type>
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="19936" />
+      </mapping>
     </element>
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier" />
       <alias value="Identificatie" />
       <min value="1" />
       <max value="1" />
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="19758" />
+      </mapping>
     </element>
     <element id="MedicationRequest.status">
       <path value="MedicationRequest.status" />
       <alias value="Geannuleerd Indicator" />
       <alias value="StopType" />
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="23033" />
+      </mapping>
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="19954" />
+      </mapping>
+    </element>
+    <element id="MedicationRequest.medication[x]">
+      <path value="MedicationRequest.medication[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
+      </type>
     </element>
     <element id="MedicationRequest.subject">
       <path value="MedicationRequest.subject" />
@@ -77,18 +112,48 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
     </element>
     <element id="MedicationRequest.supportingInformation">
       <path value="MedicationRequest.supportingInformation" />
+      <short value="MedicationAgreementAdditionalInformation" />
+      <definition value="Additional information includes details on the structure of the agreement made. This can be used e.g. to indicate that there was a conscious decision to deviate from the norm or that the agreement is to be structured in a certain way. &#xD;&#xA;" />
       <alias value="Lichaamslengte" />
       <alias value="Lichaamsgewicht" />
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="23283" />
+      </mapping>
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="23023" />
+      </mapping>
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="23028" />
+      </mapping>
     </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn" />
+      <short value="MedicationAgreementDateTime" />
+      <definition value="The time at which the agreement was made. &#xD;&#xA; &#xD;&#xA;Appointment date + time are required (order of the appointments must be clear in cases with multiple appointments on one day)" />
       <alias value="Afspraakdatum" />
       <min value="1" />
     </element>
-    <element>
+    <element id="MedicationRequest.requester">
+      <path value="MedicationRequest.requester" />
+      <short value="Prescriber" />
+      <definition value="The health professional that entered the medication agreement with the patient" />
+      <alias value="Voorschrijver" />
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="1030" />
+      </mapping>
+    </element>
+    <element id="MedicationRequest.requester.agent">
       <path value="MedicationRequest.requester.agent" />
       <type>
         <code value="Reference" />
@@ -113,7 +178,6 @@
     </element>
     <element id="MedicationRequest.recorder">
       <path value="MedicationRequest.recorder" />
-      <short value="Voorschrijver" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
@@ -121,6 +185,8 @@
     </element>
     <element id="MedicationRequest.reasonCode">
       <path value="MedicationRequest.reasonCode" />
+      <short value="MedicationAgreementReason" />
+      <definition value="Reason for this agreement" />
       <alias value="Reden afspraak" />
       <binding>
         <strength value="required" />
@@ -130,14 +196,43 @@
           <display value="RedenMedicatieafspraak" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="22094" />
+      </mapping>
+    </element>
+    <element id="MedicationRequest.note">
+      <path value="MedicationRequest.note" />
+      <short value="Comment" />
+      <definition value="Explanation for the medication agreement. &#xD;&#xA; &#xD;&#xA;This explanation can contain e.g. information on why a prescriber makes a medication agreement that deviates from the norm." />
+      <alias value="Toelichting" />
     </element>
     <element id="MedicationRequest.dosageInstruction">
       <path value="MedicationRequest.dosageInstruction" />
-      <short value="DosageInstructions" />
+      <short value=" Instructions for use" />
+      <definition value="Instructions for the use of the medication, e.g. dose and route of administration" />
       <type>
         <code value="Dosage" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageIntructions" />
       </type>
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="23240" />
+      </mapping>
+    </element>
+    <element id="MedicationRequest.priorPrescription">
+      <path value="MedicationRequest.priorPrescription" />
+      <short value="RelatedMedicationAgreement" />
+      <definition value="Relationship to the MedicationAgreement that is changed or discontinued" />
+      <alias value="GerelateerdeMedicatieafspraakl" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
+      </type>
+      <mapping>
+        <identity value="zib-medicationagreement" />
+        <map value="23238" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
