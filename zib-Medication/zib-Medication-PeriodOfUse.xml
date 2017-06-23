@@ -3,7 +3,7 @@
   <id value="1f3ce9bd-8ee1-41c9-8391-4fce6db1d96b" />
   <meta>
     <versionId value="2" />
-    <lastUpdated value="2017-06-08T17:38:46.573+02:00" />
+    <lastUpdated value="2017-06-23T11:20:31.593+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse" />
   <name value="ZIB-Medication-Period-Of-Use" />
@@ -31,13 +31,20 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element>
+    <element id="Extension">
       <path value="Extension" />
       <short value="usage period" />
     </element>
-    <element>
+    <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse" />
+    </element>
+    <element id="Extension.value[x]:valuePeriod">
+      <path value="Extension.valuePeriod" />
+      <sliceName value="valuePeriod" />
+      <type>
+        <code value="Period" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
