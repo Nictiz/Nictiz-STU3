@@ -31,6 +31,9 @@
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location"/>
     <derivation value="constraint"/>
     <differential>
+        <element id="Location">
+            <path value="Location"/>
+        </element>
         <element id="Location.telecom">
             <path value="Location.telecom"/>
             <short value="ContactInformation"/>
