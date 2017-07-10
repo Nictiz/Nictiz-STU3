@@ -36,6 +36,19 @@
   </reasonCode>
   <dosage>
     <text value="4x per dag 1 tablet"/>
+    <timing>
+      <repeat>
+        <boundsDuration>
+          <value value="3"/>
+          <unit value="day"/>
+          <system value="http://unitsofmeasure.org" />
+          <code value="d"/>
+        </boundsDuration>
+        <frequency value="4"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
     <route>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
@@ -43,17 +56,9 @@
         <display value="Oraal"/>
       </coding>
     </route>
-    <rateRatio>
-      <numerator>
-        <value value="4"/>
-        <unit value="tablet"/>
-      </numerator>
-      <denominator>
-        <value value="1"/>
-        <unit value="day"/>
-        <system value="http://unitsofmeasure.org" />
-        <code value="d"/>
-      </denominator>
-    </rateRatio>
+    <doseQuantity>
+      <value value="1"/>
+      <unit value="tablet"/>
+    </doseQuantity>
   </dosage>
 </MedicationStatement>
