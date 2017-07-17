@@ -5,6 +5,14 @@
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministrationAgreement"/>
   </meta>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration">
+    <valueDuration>
+      <value value="3"/>
+      <unit value="week"/>
+      <system value="http://unitsofmeasure.org" />
+      <code value="wk"/>
+    </valueDuration>
+  </extension>
   <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse">
     <valuePeriod>
       <start value="2016-06-17"/>
@@ -36,6 +44,19 @@
   <dosageInstruction>
     <sequence value="1"/>
     <text value="2 maal per dag zalf gedurende 7 dagen"/>
+    <timing>
+      <repeat>
+        <boundsDuration>
+            <value value="1"/>
+            <unit value="week"/>
+            <system value="http://unitsofmeasure.org" />
+            <code value="wk"/>
+        </boundsDuration>
+        <frequency value="2"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
     <route>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
@@ -43,22 +64,27 @@
         <display value="Cutaan"/>
       </coding>
     </route>
-    <rateRatio>
-      <numerator>
-        <value value="2"/>
-        <unit value="zalf"/>
-      </numerator>
-      <denominator>
-        <value value="1"/>
-        <unit value="day"/>
-        <system value="http://unitsofmeasure.org" />
-        <code value="d"/>
-      </denominator>
-    </rateRatio>
+    <doseQuantity>
+      <value value="1"/>
+      <unit value="zalf"/>
+    </doseQuantity>
   </dosageInstruction>
   <dosageInstruction>
     <sequence value="2"/>
     <text value="1 maal per dag zalf gedurende 7 dagen"/>
+    <timing>
+      <repeat>
+        <boundsDuration>
+          <value value="1"/>
+          <unit value="wk"/>
+          <system value="http://unitsofmeasure.org" />
+          <code value="wk"/>
+        </boundsDuration>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
     <route>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
@@ -66,22 +92,27 @@
         <display value="Cutaan"/>
       </coding>
     </route>
-    <rateRatio>
-      <numerator>
-        <value value="1"/>
-        <unit value="zalf"/>
-      </numerator>
-      <denominator>
-        <value value="1"/>
-        <unit value="day"/>
-        <system value="http://unitsofmeasure.org" />
-        <code value="d"/>
-      </denominator>
-    </rateRatio>
+    <doseQuantity>
+      <value value="1"/>
+      <unit value="zalf"/>
+    </doseQuantity>
   </dosageInstruction>
   <dosageInstruction>
     <sequence value="3"/>
     <text value="3 maal per week zalf gedurende 7 dagen"/>
+    <timing>
+      <repeat>
+        <boundsDuration>
+          <value value="1"/>
+          <unit value="wk"/>
+          <system value="http://unitsofmeasure.org" />
+          <code value="wk"/>
+        </boundsDuration>
+        <frequency value="3"/>
+        <period value="1"/>
+        <periodUnit value="wk"/>
+      </repeat>
+    </timing>
     <route>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
@@ -89,17 +120,9 @@
         <display value="Cutaan"/>
       </coding>
     </route>
-    <rateRatio>
-      <numerator>
-        <value value="3"/>
-        <unit value="zalf"/>
-      </numerator>
-      <denominator>
-        <value value="1"/>
-        <unit value="week"/>
-        <system value="http://unitsofmeasure.org" />
-        <code value="w"/>
-      </denominator>
-    </rateRatio>
+    <doseQuantity>
+      <value value="1"/>
+      <unit value="zalf"/>
+    </doseQuantity>
   </dosageInstruction>
 </MedicationDispense>
