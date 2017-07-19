@@ -16,7 +16,7 @@
   <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse">
     <valuePeriod>
       <start value="2016-06-17"/>
-      <end value="2016-08-07"/>
+      <end value="2016-07-08"/>
     </valuePeriod>
   </extension>
   <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense">
