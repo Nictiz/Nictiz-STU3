@@ -20,9 +20,9 @@
     <code value="whendispensed"/>
     <base value="MedicationDispense"/>
     <type value="date"/>
-    <description value="The information in whenhandedover is not always available. In this case you want to be able to select based on the next best thing which is whenprepared. The existing parameters whenhandedover and whenprepared would not let you query that way."/>
-    <expression value="iif (MedicationDispense.whenhandedover.empty(), MedicationDispense.whenprepared, MedicationDispense.whenhandedover)"/>
-    <xpath value="if (f:MedicationDispense/f:whenhandedover[@value]) then f:MedicationDispense/f:whenhandedover/@value else f:MedicationDispense/f:whenprepared/@value"/>
+    <description value="The information in whenHandedOver is not always available. In this case you want to be able to select based on the next best thing which is whenPrepared. The existing parameters whenHandedOver and whenPrepared would not let you query that way."/>
+    <expression value="iif (MedicationDispense.whenHandedOver.empty(), MedicationDispense.whenPrepared, MedicationDispense.whenHandedOver)"/>
+    <xpath value="if (f:MedicationDispense/f:whenHandedOver[@value]) then f:MedicationDispense/f:whenHandedOver/@value else f:MedicationDispense/f:whenPrepared/@value"/>
     <comparator value="le"/>
     <comparator value="ge"/>
 </SearchParameter>
