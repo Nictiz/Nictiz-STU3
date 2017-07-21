@@ -68,10 +68,6 @@
       <type>
         <code value="string" />
       </type>
-      <mapping>
-        <identity value="zib-betaler" />
-        <map value="NL-CM:1.1.9" />
-      </mapping>
     </element>
     <element id="Extension.extension.AccountNumber">
       <path value="Extension.extension" />
@@ -91,10 +87,6 @@
       <type>
         <code value="string" />
       </type>
-      <mapping>
-        <identity value="zib-betaler" />
-        <map value="NL-CM:1.1.11" />
-      </mapping>
     </element>
     <element id="Extension.extension.Bankcode">
       <path value="Extension.extension" />
@@ -114,10 +106,6 @@
       <type>
         <code value="string" />
       </type>
-      <mapping>
-        <identity value="zib-betaler" />
-        <map value="NL-CM:1.1.10" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>
