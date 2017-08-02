@@ -133,7 +133,7 @@
       <path value="MedicationDispense.context" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-encounter" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
       </type>
       <type>
         <code value="Reference" />
