@@ -22,7 +22,7 @@
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-medicationadminitstrationagreement"/>
+        <identity value="zib-medicationadministrationagreement"/>
         <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3"/>
         <name value="ZIB Medication Administration Agreement"/>
     </mapping>
@@ -59,7 +59,7 @@
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration"/>
             </type>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="22660"/>
             </mapping>
         </element>
@@ -75,7 +75,7 @@
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-AuthoredOn"/>
             </type>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="20133"/>
             </mapping>
         </element>
@@ -91,7 +91,7 @@
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense"/>
             </type>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="22499"/>
             </mapping>
         </element>
@@ -106,7 +106,7 @@
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"/>
             </type>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="22660"/>
             </mapping>
         </element>
@@ -135,11 +135,11 @@
             <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive)"/>
             <alias value="ToediengingsafspraakStopType"/>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="23034"/>
             </mapping>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="22498"/>
             </mapping>
         </element>
@@ -157,7 +157,7 @@
                 <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication"/>
             </type>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="20237"/>
             </mapping>
         </element>
@@ -175,7 +175,7 @@
         <element id="MedicationDispense.supportingInformation">
             <path value="MedicationDispense.supportingInformation"/>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="23284"/>
             </mapping>
         </element>
@@ -185,7 +185,7 @@
             <definition value="The supplier (pharmacist) that entered the administration agreement."/>
             <alias value="verstrekker"/>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="22097"/>
             </mapping>
         </element>
@@ -225,7 +225,7 @@
             <definition value="Comments on the administration agreement."/>
             <alias value="Toelichting"/>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="22275"/>
             </mapping>
         </element>
@@ -237,7 +237,7 @@
                 <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
             </type>
             <mapping>
-                <identity value="zib-medicationadminitstrationagreement"/>
+                <identity value="zib-medicationadministrationagreement"/>
                 <map value="22098"/>
             </mapping>
         </element>
