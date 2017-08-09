@@ -1,267 +1,267 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="d15249e8-b757-4f78-9026-b9b117b35587" />
-  <meta>
-    <versionId value="3" />
-    <lastUpdated value="2017-06-22T16:31:21.241+02:00" />
-  </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest" />
-  <name value="ZIB-Medication-Dispense-Request" />
-  <title value="ZIB Medication Dispense Request" />
-  <status value="draft" />
-  <date value="2016-12-12T16:41:50.247+00:00" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="A medication dispense request as defined by the Dutch Medication v9 project." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.0" />
-  <mapping>
-    <identity value="zib-medicationdispenserequest" />
-    <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3" />
-    <name value="ZIB Medication Dispense Request" />
-  </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="MedicationRequest" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="MedicationRequest">
-      <path value="MedicationRequest" />
-      <short value="Medicatieverstrekkingsverzoek" />
-    </element>
-    <element>
-      <path value="MedicationRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationRequest.extension:additionalWishes">
-      <path value="MedicationRequest.extension" />
-      <sliceName value="additionalWishes" />
-      <short value="AdditionalWishes" />
-      <definition value="Logistics and other instructions such as: do not enter in GDS, urgent, purposeful deviation, etc" />
-      <alias value="AanvullendeWensen" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes" />
-      </type>
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="22759" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.extension:additionalWishes.value[x]">
-      <path value="MedicationRequest.extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <binding>
-        <strength value="extensible" />
-        <description value="Aanvullende wensen voor VV" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.32--20170505130346" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="MedicationRequest.extension:relatedMedicationAgreement">
-      <path value="MedicationRequest.extension" />
-      <sliceName value="relatedMedicationAgreement" />
-      <short value="RelatedMedicationAgreement" />
-      <definition value="Medication agreement related to this dispense request" />
-      <alias value="GerelateerdeMedicatieAfspraak" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-RelatedMedicationAgreement" />
-      </type>
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="23286" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.identifier">
-      <path value="MedicationRequest.identifier" />
-      <alias value="Identificatie" />
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="22003" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.medication">
-      <path value="MedicationRequest.medication[x]" />
-      <short value="MedicineToBeDispensed" />
-      <definition value="The medicine to be dispensed." />
-      <alias value="Geneesmiddel" />
-      <alias value="Product" />
-      <alias value="Medicatie" />
-      <alias value="TeVerstrekkenGeneesmiddel" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication" />
-      </type>
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="22249" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.subject">
-      <path value="MedicationRequest.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-      </type>
-    </element>
-    <element id="MedicationRequest.authoredOn">
-      <path value="MedicationRequest.authoredOn" />
-      <short value="DispenseRequestDate" />
-      <definition value="Time at which the dispense request is entered." />
-      <alias value="VerstrekkingsverzoekDatum" />
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="20060" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.requester">
-      <path value="MedicationRequest.requester" />
-      <short value="Author" />
-      <alias value="Auteur" />
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="22121" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.requester.agent">
-      <path value="MedicationRequest.requester.agent" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-      </type>
-    </element>
-    <element id="MedicationRequest.requester.onBehalfOf">
-      <path value="MedicationRequest.requester.onBehalfOf" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-      </type>
-    </element>
-    <element id="MedicationRequest.note">
-      <path value="MedicationRequest.note" />
-      <short value="Comment" />
-      <definition value="Explanation for the dispense request. This explanation can contain e.g. information on why a prescriber submits a dispense request that deviates from the norm, e.g. an extra dispense request needed because the patient has lost the medication" />
-      <alias value="Toelichting" />
-    </element>
-    <element id="MedicationRequest.dispenseRequest">
-      <path value="MedicationRequest.dispenseRequest" />
-      <short value="verstrekking" />
-    </element>
-    <element>
-      <path value="MedicationRequest.dispenseRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.extension.dispenseLocation">
-      <path value="MedicationRequest.dispenseRequest.extension" />
-      <sliceName value="dispenseLocation" />
-      <short value="Afleverlocatie" />
-      <definition value="Optional Extensions Element - found in all resources." />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-Location" />
-      </type>
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="20068" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.validityPeriod">
-      <path value="MedicationRequest.dispenseRequest.validityPeriod" />
-      <short value="PeriodOfUse" />
-      <alias value="Verbruiksperiode" />
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="20062" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.validityPeriod.start">
-      <path value="MedicationRequest.dispenseRequest.validityPeriod.start" />
-      <short value="Ingangsdatum" />
-    </element>
-    <element id="MedicationRequest.dispenseRequest.validityPeriod.end">
-      <path value="MedicationRequest.dispenseRequest.validityPeriod.end" />
-      <short value="Einddatum" />
-    </element>
-    <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
-      <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" />
-      <short value=" NumberOfRefills" />
-      <comment value="The number of additional times the medication may be dispensed after the first time.  The total amount that may be dispensed is: (Number of refills + 1) x amount to be dispensed" />
-      <alias value="AantalHerhalingen" />
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="22120" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.quantity">
-      <path value="MedicationRequest.dispenseRequest.quantity" />
-      <sliceName value="SimpleQuantity" />
-      <short value="Amount" />
-      <alias value="TeVerstrekkenHoeveelheid" />
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="19964" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">
-      <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration" />
-      <short value="Duur" />
-    </element>
-    <element id="MedicationRequest.dispenseRequest.performer">
-      <path value="MedicationRequest.dispenseRequest.performer" />
-      <short value="IntendedSupplier" />
-      <definition value="The intended supplier is a pharmacist." />
-      <alias value="BeoogdVerstrekker" />
-      <mapping>
-        <identity value="zib-medicationdispenserequest" />
-        <map value="19966" />
-      </mapping>
-    </element>
-  </differential>
+﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+    <id value="d15249e8-b757-4f78-9026-b9b117b35587"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2017-06-22T16:31:21.241+02:00"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest"/>
+    <name value="ZIB-Medication-Dispense-Request"/>
+    <title value="ZIB Medication Dispense Request"/>
+    <status value="draft"/>
+    <date value="2016-12-12T16:41:50.247+00:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="A medication dispense request as defined by the Dutch Medication v9 project."/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <mapping>
+        <identity value="zib-medicationdispenserequest"/>
+        <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3"/>
+        <name value="ZIB Medication Dispense Request"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MedicationRequest"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MedicationRequest">
+            <path value="MedicationRequest"/>
+            <short value="Medicatieverstrekkingsverzoek"/>
+        </element>
+        <element id="MedicationRequest.extension">
+            <path value="MedicationRequest.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="MedicationRequest.extension:additionalWishes">
+            <path value="MedicationRequest.extension"/>
+            <sliceName value="additionalWishes"/>
+            <short value="AdditionalWishes"/>
+            <definition value="Logistics and other instructions such as: do not enter in GDS, urgent, purposeful deviation, etc"/>
+            <alias value="AanvullendeWensen"/>
+            <type>
+                <code value="Extension"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes"/>
+            </type>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="22759"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.extension:additionalWishes.value[x]">
+            <path value="MedicationRequest.extension.valueCodeableConcept"/>
+            <sliceName value="valueCodeableConcept"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="Aanvullende wensen voor VV"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.32--20170505130346"/>
+                </valueSetReference>
+            </binding>
+        </element>
+        <element id="MedicationRequest.extension:relatedMedicationAgreement">
+            <path value="MedicationRequest.extension"/>
+            <sliceName value="relatedMedicationAgreement"/>
+            <short value="RelatedMedicationAgreement"/>
+            <definition value="Medication agreement related to this dispense request"/>
+            <alias value="GerelateerdeMedicatieAfspraak"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-RelatedMedicationAgreement"/>
+            </type>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="23286"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.identifier">
+            <path value="MedicationRequest.identifier"/>
+            <alias value="Identificatie"/>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="22003"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.medication">
+            <path value="MedicationRequest.medication[x]"/>
+            <short value="MedicineToBeDispensed"/>
+            <definition value="The medicine to be dispensed."/>
+            <alias value="Geneesmiddel"/>
+            <alias value="Product"/>
+            <alias value="Medicatie"/>
+            <alias value="TeVerstrekkenGeneesmiddel"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication"/>
+            </type>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="22249"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.subject">
+            <path value="MedicationRequest.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+            </type>
+        </element>
+        <element id="MedicationRequest.authoredOn">
+            <path value="MedicationRequest.authoredOn"/>
+            <short value="DispenseRequestDate"/>
+            <definition value="Time at which the dispense request is entered."/>
+            <alias value="VerstrekkingsverzoekDatum"/>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="20060"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.requester">
+            <path value="MedicationRequest.requester"/>
+            <short value="Author"/>
+            <alias value="Auteur"/>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="22121"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.requester.agent">
+            <path value="MedicationRequest.requester.agent"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+            </type>
+        </element>
+        <element id="MedicationRequest.requester.onBehalfOf">
+            <path value="MedicationRequest.requester.onBehalfOf"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+            </type>
+        </element>
+        <element id="MedicationRequest.note">
+            <path value="MedicationRequest.note"/>
+            <short value="Comment"/>
+            <definition value="Explanation for the dispense request. This explanation can contain e.g. information on why a prescriber submits a dispense request that deviates from the norm, e.g. an extra dispense request needed because the patient has lost the medication"/>
+            <alias value="Toelichting"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest">
+            <path value="MedicationRequest.dispenseRequest"/>
+            <short value="verstrekking"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.extension">
+            <path value="MedicationRequest.dispenseRequest.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.extension:dispenseLocation">
+            <path value="MedicationRequest.dispenseRequest.extension"/>
+            <sliceName value="dispenseLocation"/>
+            <short value="Afleverlocatie"/>
+            <definition value="Optional Extensions Element - found in all resources."/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-Location"/>
+            </type>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="20068"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.validityPeriod">
+            <path value="MedicationRequest.dispenseRequest.validityPeriod"/>
+            <short value="PeriodOfUse"/>
+            <alias value="Verbruiksperiode"/>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="20062"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.validityPeriod.start">
+            <path value="MedicationRequest.dispenseRequest.validityPeriod.start"/>
+            <short value="Ingangsdatum"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.validityPeriod.end">
+            <path value="MedicationRequest.dispenseRequest.validityPeriod.end"/>
+            <short value="Einddatum"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
+            <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
+            <short value=" NumberOfRefills"/>
+            <comment value="The number of additional times the medication may be dispensed after the first time.  The total amount that may be dispensed is: (Number of refills + 1) x amount to be dispensed"/>
+            <alias value="AantalHerhalingen"/>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="22120"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.quantity">
+            <path value="MedicationRequest.dispenseRequest.quantity"/>
+            <sliceName value="SimpleQuantity"/>
+            <short value="Amount"/>
+            <alias value="TeVerstrekkenHoeveelheid"/>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="19964"/>
+            </mapping>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">
+            <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration"/>
+            <short value="Duur"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.performer">
+            <path value="MedicationRequest.dispenseRequest.performer"/>
+            <short value="IntendedSupplier"/>
+            <definition value="The intended supplier is a pharmacist."/>
+            <alias value="BeoogdVerstrekker"/>
+            <mapping>
+                <identity value="zib-medicationdispenserequest"/>
+                <map value="19966"/>
+            </mapping>
+        </element>
+    </differential>
 </StructureDefinition>

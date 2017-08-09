@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<List xmlns="http://hl7.org/fhir">
+<?xml-model href="http://hl7.org/fhir/STU3/list.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<List xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/list.xsd">
     <contained>
         <MedicationRequest xmlns="http://hl7.org/fhir">
             <id value="medicationAgreement-example"/>
@@ -142,7 +142,7 @@
     </contained>
     <contained>
         <MedicationDispense xmlns="http://hl7.org/fhir">
-            <id value="medicationadministartionagreement-example"/>
+            <id value="medicationadministrationagreement-example"/>
             <meta>
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministrationAgreement"/>
             </meta>
@@ -260,17 +260,17 @@
     </subject>
     <entry>
         <item>
-            <reference value="#MedicationRequest/medicationAgreement-example"/>
+            <reference value="#medicationAgreement-example"/>
         </item>
     </entry>
     <entry>
         <item>
-            <reference value="#MedicationDispense/medicationadministartionagreement-example"/>
+            <reference value="#medicationadministrationagreement-example"/>
         </item>
     </entry>
     <entry>
         <item>
-            <reference value="#MedicationStatement/medicationusage-example"/>
+            <reference value="#medicationusage-example"/>
         </item>
     </entry>
 </List>
