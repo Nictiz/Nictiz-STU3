@@ -216,7 +216,7 @@
             <definition value="Instructions for the use of the medication, e.g. dose and route of administration"/>
             <type>
                 <code value="Dosage"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageIntructions"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
             </type>
             <mapping>
                 <identity value="zib-medicationagreement"/>

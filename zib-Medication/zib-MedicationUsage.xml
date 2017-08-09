@@ -262,7 +262,7 @@
             <path value="MedicationStatement.dosage"/>
             <type>
                 <code value="Dosage"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageIntructions"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
             </type>
         </element>
     </differential>
