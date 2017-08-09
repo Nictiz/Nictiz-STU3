@@ -54,7 +54,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"/>
             </type>
             <mapping>
                 <identity value="zib-medicationagreement"/>
@@ -69,7 +69,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration"/>
             </type>
             <mapping>
                 <identity value="zib-medicationagreement"/>
@@ -216,7 +216,7 @@
             <definition value="Instructions for the use of the medication, e.g. dose and route of administration"/>
             <type>
                 <code value="Dosage"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
             </type>
             <mapping>
                 <identity value="zib-medicationagreement"/>

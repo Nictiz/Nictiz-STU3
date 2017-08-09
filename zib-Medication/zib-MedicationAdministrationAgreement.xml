@@ -56,7 +56,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration"/>
             </type>
             <mapping>
                 <identity value="zib-medicationadminitstrationagreement"/>
@@ -72,7 +72,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-AuthoredOn"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-AuthoredOn"/>
             </type>
             <mapping>
                 <identity value="zib-medicationadminitstrationagreement"/>
@@ -88,7 +88,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense"/>
             </type>
             <mapping>
                 <identity value="zib-medicationadminitstrationagreement"/>
@@ -103,7 +103,7 @@
             <alias value="Gebruiksperiode"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"/>
             </type>
             <mapping>
                 <identity value="zib-medicationadminitstrationagreement"/>
@@ -119,7 +119,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes"/>
             </type>
             <binding>
                 <strength value="extensible"/>
@@ -234,7 +234,7 @@
             <short value="DosageInstructions"/>
             <type>
                 <code value="Dosage"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
             </type>
             <mapping>
                 <identity value="zib-medicationadminitstrationagreement"/>

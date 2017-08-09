@@ -61,7 +61,7 @@
             <alias value="Omschrijving"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Description"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Description"/>
             </type>
             <mapping>
                 <identity value="zib-dosage"/>
@@ -97,7 +97,7 @@
             <alias value="Toedieningsschema"/>
             <type>
                 <code value="Timing"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule"/>
             </type>
             <mapping>
                 <identity value="zib-dosage"/>

@@ -55,7 +55,7 @@
             <alias value="AanvullendeWensen"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes"/>
             </type>
             <mapping>
                 <identity value="zib-medicationdispenserequest"/>
@@ -82,7 +82,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-RelatedMedicationAgreement"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-RelatedMedicationAgreement"/>
             </type>
             <mapping>
                 <identity value="zib-medicationdispenserequest"/>

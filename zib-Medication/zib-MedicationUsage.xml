@@ -62,7 +62,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed"/>
             </type>
             <mapping>
                 <identity value="zib-Medicatiegebruik"/>
@@ -262,7 +262,7 @@
             <path value="MedicationStatement.dosage"/>
             <type>
                 <code value="Dosage"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
             </type>
         </element>
     </differential>

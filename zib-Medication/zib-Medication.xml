@@ -63,7 +63,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-Description"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-Description"/>
             </type>
             <mapping>
                 <identity value="zib-Product"/>
