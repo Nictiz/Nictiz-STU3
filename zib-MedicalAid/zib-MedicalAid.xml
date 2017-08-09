@@ -131,7 +131,7 @@
       <alias value="Indicatie" />
       <type>
         <code value="Extension" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Concern" />
       </type>
       <mapping>
         <identity value="zib-medischhulpmiddel" />

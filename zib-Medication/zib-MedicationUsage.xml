@@ -118,7 +118,7 @@
       <alias value="Gerelateerde verstrekking" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/StructureDefinition/fhir/zib-MedicationDispense" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispense" />
       </type>
       <mapping>
         <identity value="zib-Medicatiegebruik" />
@@ -184,7 +184,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practittioner" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <type>
         <code value="Reference" />
