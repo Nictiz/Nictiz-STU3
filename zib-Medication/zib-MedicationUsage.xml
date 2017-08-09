@@ -1,0 +1,269 @@
+﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+    <id value="afbab416-6564-471c-92c0-7baeb20e2dd6"/>
+    <meta>
+        <versionId value="8"/>
+        <lastUpdated value="2017-06-28T16:25:01.939+02:00"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage"/>
+    <name value="ZIB-Medication-Usage"/>
+    <title value="ZIB Medication Usage"/>
+    <status value="draft"/>
+    <date value="2016-12-12T16:43:00.948+00:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="Medication usage as defined by the Dutch Medication v9 project."/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <mapping>
+        <identity value="zib-Medicatiegebruik"/>
+        <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3"/>
+        <name value="Zorginformatiebouwsteen Medicatiegebruik"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MedicationStatement"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MedicationStatement">
+            <path value="MedicationStatement"/>
+            <short value="MedicationUse"/>
+            <definition value="MedicationUse is a statement on the historic, current or intended use of a certain medicine."/>
+            <alias value="Medicatiegebruik"/>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="21338"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.extension">
+            <path value="MedicationStatement.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="MedicationStatement.extension:asAgreed">
+            <path value="MedicationStatement.extension"/>
+            <sliceName value="asAgreed"/>
+            <short value="AsAgreedIndicator"/>
+            <definition value="Is the medicine used as outlined in the medication agreement?"/>
+            <alias value="volgens afspraak indicator"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed"/>
+            </type>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22492"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.identifier">
+            <path value="MedicationStatement.identifier"/>
+            <short value="Identifier"/>
+            <alias value="Identificatie"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22760"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.basedOn">
+            <path value="MedicationStatement.basedOn"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="reference"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"/>
+            </type>
+        </element>
+        <element id="MedicationStatement.basedOn:RelatedAgreement">
+            <path value="MedicationStatement.basedOn"/>
+            <sliceName value="RelatedAgreement"/>
+            <short value="RelatedAgreement"/>
+            <definition value="Medication or administration agreement that was the reference for this administration"/>
+            <alias value="Gerelateerde afspraak"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"/>
+            </type>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22402"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.basedOn:RelatedDispense">
+            <path value="MedicationStatement.basedOn"/>
+            <sliceName value="RelatedDispense"/>
+            <short value="RelatedDispense"/>
+            <definition value="Dispense that was the reference for entering this use"/>
+            <alias value="Gerelateerde verstrekking"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispense"/>
+            </type>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22404"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.status">
+            <path value="MedicationStatement.status"/>
+            <comment
+                value="MedicationStatement is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for MedicationStatement.status contains codes that assert the status of the use of the medication by the patient (for example, stopped or on hold) as well as codes that assert the status of the medication statement itself (for example, entered in error).&#xA;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.&#xD;&#xA;&#xD;&#xA;This element is also used for the concept 'Stop type'; the manner in which this medication is discontinued (temporary or definitive). "/>
+            <alias value="Stoptype"/>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="23132"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.medication[x]">
+            <path value="MedicationStatement.medication[x]"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication"/>
+            </type>
+        </element>
+        <element id="MedicationStatement.effective[x]:effectivePeriod">
+            <path value="MedicationStatement.effectivePeriod"/>
+            <sliceName value="effectivePeriod"/>
+            <short value="PeriodOfUse"/>
+            <definition
+                value="Start date: This is the time at which the agreement was to take effect (or took effect or will take effect). This is the time at which the instructions for use in this agreement start. In the case of an agreement to discontinue use, this is the start date of the original medication agreement. The end date indicates from when the medication is to be discontinued. &#xD;&#xA; &#xD;&#xA;End date: The time at which the period of use ends (or ended or will end). In the case of an agreement to discontinue use, this is the time at which the medication is to be discontinued.&#xD;&#xA;&#xD;&#xA;Duration: The intended duration of use. E.g. 5 days or 8 weeks.  This can be derived from the start and end date."/>
+            <alias value="Gebruiksoperiode"/>
+            <type>
+                <code value="Period"/>
+            </type>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22663"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.effectivePeriod.start">
+            <path value="MedicationStatement.effectivePeriod.start"/>
+            <alias value="Ingangsdatum"/>
+        </element>
+        <element id="MedicationStatement.effectivePeriod.end">
+            <path value="MedicationStatement.effectivePeriod.end"/>
+            <alias value="Einddatum"/>
+        </element>
+        <element id="MedicationStatement.dateAsserted">
+            <path value="MedicationStatement.dateAsserted"/>
+            <alias value="Registratiedatum"/>
+            <min value="1"/>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22398"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.informationSource">
+            <path value="MedicationStatement.informationSource"/>
+            <alias value="Informant"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+            </type>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22424"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.subject">
+            <path value="MedicationStatement.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+        </element>
+        <element id="MedicationStatement.taken">
+            <path value="MedicationStatement.taken"/>
+            <short value="UseIndicator"/>
+            <definition value="Is this medicine used or not?"/>
+            <alias value="GebruikIndicator"/>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22492"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.reasonNotTaken">
+            <path value="MedicationStatement.reasonNotTaken"/>
+            <short value="ReasonForChangeOrDiscontinuationOfUse "/>
+            <definition value="Reason for changing or discontinuing use of medication."/>
+            <alias value="Reden wijzigen gebruik"/>
+            <alias value="Reden stoppen gebruik"/>
+            <alias value="RedenWijzigenOfStoppenGebruik"/>
+            <binding>
+                <strength value="required"/>
+                <description value="RedenMedicatieafspraak"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.21--20160617112039"/>
+                    <display value="RedenMedicatieafspraak"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22493"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.reasonCode">
+            <path value="MedicationStatement.reasonCode"/>
+            <short value="ReasonForUse"/>
+            <definition value="The reason for using the medication, particularly in self-care medicine purchased by the patient themselves"/>
+            <alias value="Reden gebruik"/>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="22491"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.note">
+            <path value="MedicationStatement.note"/>
+            <short value="Comment"/>
+            <definition value="Comments on the medication use."/>
+            <alias value="Toelichting"/>
+            <mapping>
+                <identity value="zib-Medicatiegebruik"/>
+                <map value="21624"/>
+            </mapping>
+        </element>
+        <element id="MedicationStatement.dosage">
+            <path value="MedicationStatement.dosage"/>
+            <type>
+                <code value="Dosage"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>
