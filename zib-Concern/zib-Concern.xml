@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2017-06-14T11:01:17.702+02:00" />
+    <lastUpdated value="2017-08-11T11:01:17.702+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
   <name value="ZIB-Concern" />
