@@ -3,7 +3,7 @@
   <id value="32233286-e536-479d-8d8e-91d508cd2c77"/>
   <meta>
     <versionId value="4"/>
-    <lastUpdated value="2017-03-29T11:47:30.832+02:00"/>
+    <lastUpdated value="2017-08-29T11:47:30.832+02:00"/>
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
   <name value="ZIB-Contact"/>
