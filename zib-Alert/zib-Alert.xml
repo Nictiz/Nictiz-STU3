@@ -64,6 +64,13 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/flag-detail" />
       </type>
+      <example>
+        <label value="Example of a condition reference"/>
+        <valueReference>
+          <reference value="Condition/example"/>
+          <display value="MRSA infection"/>
+        </valueReference>
+      </example>
       <mapping>
         <identity value="zib-alert" />
         <map value="NL-CM:8.3.3" />
@@ -74,6 +81,17 @@
       <short value="AlertType" />
       <definition value="Indicates the type of alert, meaning a rough description of the cause or origin of the warning." />
       <alias value="AlertType" />
+      <example>
+        <label value="Example of AlertType"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="75323-6"/>
+            <display value="condition"/>
+            <userSelected value="false"/>
+          </coding>
+        </valueCodeableConcept>
+      </example>
       <binding>
         <strength value="extensible" />
         <description value="Indicates the type of alert, meaning a rough description of the cause or origin of the warning." />
@@ -92,6 +110,16 @@
       <short value="AlertName" />
       <definition value="A warning, other than a condition or problem. For example, a patient can be given an ‘Aggressive patient' alert.&#13;&#10;The warning can be entered in code (there are codes for frequently used alerts), but seeing the dynamic nature of the warnings cf. SARS and Ebola, these alerts will often be entered as free text." />
       <alias value="AlertNaam" />
+      <example>
+        <label value="Example of AlertName"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="432415000"/>
+            <display value="Methicillin resistant staphylococcus aureus carrier"/>
+          </coding>
+        </valueCodeableConcept>
+      </example>
       <binding>
         <strength value="extensible" />
         <valueSetReference>
@@ -132,7 +160,7 @@
       </type>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/mp9-Medication"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication"/>
       </type>
       <type>
         <code value="Reference"/>
@@ -148,6 +176,12 @@
       <short value="StartDateTime" />
       <definition value="The date and time at which the described condition was entered as a warning.&#13;&#10;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year)." />
       <alias value="BeginDatumTijd" />
+      <example>
+        <label value="Example of StartDateTime"/>
+        <valuePeriod>
+          <start value="2011-10-09"/>
+        </valuePeriod>
+      </example>
       <mapping>
         <identity value="zib-alert" />
         <map value="NL-CM:8.3.5" />
