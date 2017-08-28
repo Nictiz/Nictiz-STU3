@@ -65,13 +65,16 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <fixedCodeableConcept>
-        <coding>
-          <system value="2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
-          <code value="FLATW"/>
-          <display value="Appartement of flatwoning"/>
-        </coding>
-      </fixedCodeableConcept>
+      <example>
+        <label value=" Example of TypeofHome"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <code value="FLATW"/>
+            <display value="Appartement of flatwoning"/>
+          </coding>
+        </valueCodeableConcept>
+      </example>
       <binding>
         <strength value="extensible" />
         <description value="Type of home the patient lives in." />
