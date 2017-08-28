@@ -46,20 +46,13 @@
     <element id="Observation.code">
       <path value="Observation.code" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;." />
-    </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="228273003" />
-    </element>
-    <element id="Observation.code.coding.display">
-      <path value="Observation.code.coding.display" />
-      <fixedString value="Finding related to alcohol drinking behavior" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="228273003"/>
+          <display value="Finding related to alcohol drinking behavior (finding)"/>
+        </coding>
+      </fixedCodeableConcept>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -76,6 +69,12 @@
       <short value="Startdate" />
       <definition value="The date on which the patient started using alcohol." />
       <alias value="StartDatum" />
+      <example>
+        <label value="Example of StartDate"/>
+        <valuePeriod>
+          <start value="1975"/>
+        </valuePeriod>
+      </example>
       <mapping>
         <identity value="zib-alcoholgebruik" />
         <map value="NL-CM:7.3.4" />
@@ -86,6 +85,12 @@
       <short value="StopDate" />
       <definition value="The date on which the patient stopped consuming alcohol.&#13;&#10;If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
       <alias value="StopDatum" />
+      <example>
+        <label value="Example of StopDate"/>
+        <valuePeriod>
+          <end value="2012-02-28"/>
+        </valuePeriod>
+      </example>
       <mapping>
         <identity value="zib-alcoholgebruik" />
         <map value="NL-CM:7.3.5" />
@@ -100,6 +105,16 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <example>
+        <label value="Dutch example of instance"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="219006"/>
+            <display value="Current drinker of alcohol (finding)"/>
+          </coding>
+        </valueCodeableConcept>
+      </example>
       <binding>
         <strength value="extensible" />
         <description value="Codes defining the alcohol intake status." />
@@ -118,6 +133,10 @@
       <short value="Explanation" />
       <definition value="Relevant comment on the alcohol consumption." />
       <alias value="Toelichting" />
+      <example>
+        <label value="Dutch example instance of element"/>
+        <valueString value="consumptie alcohol alleen in het weekend"/>
+      </example>
       <mapping>
         <identity value="zib-alcoholgebruik" />
         <map value="NL-CM:7.3.7" />

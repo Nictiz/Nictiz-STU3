@@ -51,7 +51,7 @@
         <coding>
           <system value="http://snomed.info/sct"/>
           <code value="228366006"/>
-          <display value="Finding related to drug misuse behaviour"/>
+          <display value="Finding related to drug misuse behaviour (finding)"/>
         </coding>
       </fixedCodeableConcept>
     </element>

@@ -47,7 +47,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="365980008"/>
-            <display value="Finding of tobacco use and exposure"/>
+            <display value="Finding of tobacco use and exposure (finding)"/>
         </coding>
     </code>
     <subject>
