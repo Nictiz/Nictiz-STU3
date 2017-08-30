@@ -9,13 +9,16 @@
     <status value="draft"/>
     <date value="2017-05-18T11:36:21.9737868+02:00"/>
     <publisher value="Nictiz"/>
-    <description value="Dosage Instructions a defined by the Dutch Medication Process (http://nictiz.nl/StructureDefinition/fhir/zib-) project."/>
+    <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.part.GebruiksInstructie version 1.0, year 2017.
+        Instructions for the use or administration of the medication, e.g. dose and route of administration. In the event of medication use, this is the pattern of use established by the patient or which the patient followed. 
+        This is a partial information model"/>
+    <purpose value="InstructionsForUse gives an insight into the manner a drug is to be used."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
         <identity value="zib-InstructionsForUse"/>
         <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3"/>
-        <name value="ZIB Dosage Instructions"/>
+        <name value="ZIB GebruiksInstructie"/>
     </mapping>
     <kind value="complex-type"/>
     <abstract value="false"/>
@@ -30,17 +33,17 @@
             <alias value="Gebruiksinstructie"/>
             <mapping>
                 <identity value="zib-InstructionsForUse"/>
-                <map value="22504"/>
+                <map value="NL-CM:9.12.22504"/>
             </mapping>
         </element>
         <element id="Dosage.text">
             <path value="Dosage.text"/>
             <short value="Description"/>
-            <definition value="Textual description of the complete instructions for use including the period of use"/>
+            <definition value="Textual description of the complete instructions for use including the period of use."/>
             <alias value="Omschrijving"/>
             <mapping>
                 <identity value="zib-InstructionsForUse"/>
-                <map value="9581"/>
+                <map value="NL-CM:9.12.9581"/>
             </mapping>
         </element>
         <element id="Dosage.extension">
@@ -75,18 +78,22 @@
             <alias value="Volgnummer"/>
             <mapping>
                 <identity value="zib-InstructionsForUse"/>
-                <map value="22503"/>
+                <map value="NL-CM:9.12.22503"/>
             </mapping>
         </element>
         <element id="Dosage.additionalInstruction">
             <path value="Dosage.additionalInstruction"/>
             <short value="AdditionalInstructions"/>
             <definition
-                value="The additional instructions contain extra information on the use of or considerations for the current prescription. &#xD;&#xA; &#xD;&#xA;This can also include all instructions for use. The text can come from the original “paper&quot; medication prescription, but can also be generated from the coded information.  &#xD;&#xA; &#xD;&#xA;This concept may contain more information than what is structurally coded in the information below, but may not conflict with it. &#xD;&#xA;The instructions may not conflict with other components of the request for administration. &#xD;&#xA; &#xD;&#xA;The instructions can also refer to an existing protocol. &#xD;&#xA; &#xD;&#xA;The G standard contains many texts that can support this attribute, in for example G standard table 362, which contains texts from the general practitioners’ standard WCIA table 25. If desired, these texts can be used to structure this concept.&#xD;&#xA;"/>
-            <alias value="Aanvullende instructie"/>
+                value="The additional instructions contain extra information on the use of or considerations for the current prescription.                
+                This can also include all instructions for use. The text can come from the original 'paper' medication prescription, but can also be generated from the coded information. 
+                This concept may contain more information than what is structurally coded in the information below, but may not conflict with it. 
+                The instructions may not conflict with other components of the request for administration. 
+                The instructions can also refer to an existing protocol.                 
+                The G standard contains many texts that can support this attribute, in for example G standard table 362, which contains texts from the general practitioners’ standard WCIA table 25. If desired, these texts can be used to structure this concept."/><alias value="AanvullendeInstructie"/>
             <mapping>
                 <identity value="zib-InstructionsForUse"/>
-                <map value="19944"/>
+                <map value="NL-CM:9.12.19944"/>
             </mapping>
         </element>
         <element id="Dosage.timing">
@@ -151,28 +158,37 @@
             <short value="RouteOfAdministration"/>
             <definition value="The route through which the medication is administered (oral, nasal, intravenous, etc.)"/>
             <alias value="Toedieningsweg"/>
+            <example>
+                <label value="Example of RouteOfAdministration"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
+                        <code value="oraal"/>
+                        <display value="Oraal"/>
+                    </coding>
+                </valueCodeableConcept>
+            </example>
             <binding>
-                <strength value="required"/>
-                <description value="VoorschriftToedieningswegCodelijst"/>
+                <strength value="extensible"/>
+                <description value="ToedieningswegCodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.5.6--20150401000000"/>
-                    <display value="VoorschriftToedieningswegCodelijst"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.1--20170824000000"/>
+                    <display value="ToedieningswegCodelijst"/>
                 </valueSetReference>
             </binding>
             <mapping>
                 <identity value="zib-InstructionsForUse"/>
-                <map value="19941"/>
+                <map value="NL-CM:9.12.19941"/>
             </mapping>
         </element>
         <element id="Dosage.dose">
             <path value="Dosage.dose[x]"/>
             <short value="Dose"/>
-            <definition
-                value="The dose indicates the dose amount per administration. &#xA; &#xA;The dosage is described in the unit accompanying the product; usually, this is just a number of units or doses. Liquids and other divisible products will usually include a unit of volume (preferably &quot;&quot;ml&quot;&quot;). &#xA; &#xA;In many cases, the prescriber will want to indicate the dose in units of weight of the active ingredient.  &#xA; &#xA;If only the ingredient is included and not the product, then the amount of that ingredient will be given. Paracetamol 1000mg is equivalent to 2 Paracetamol 500mg tablets or units. &#xA; &#xA;The dosage is sometimes given as a calculation, in which the patient’s body weight or body surface area is used as a parameter. The calculation is however no more than an aid in reaching a decision. &#xA; &#xA;In the event of constant administration, sometimes the dose is given in addition to the administration speed (infusion rate) (e.g. 20ml in a syringe or 500ml in a bag), but it is often also omitted. &#xA; &#xA;A general dosage recommendation such as ‘Use according to protocol’ or ‘See instructions’ can be sufficient. In that case, no dose is given."/>
+            <definition value="The dose indicates the dose amount per administration. &#xA; &#xA;The dosage is described in the unit accompanying the product; usually, this is just a number of units or doses. Liquids and other divisible products will usually include a unit of volume (preferably &quot;&quot;ml&quot;&quot;). &#xA; &#xA;In many cases, the prescriber will want to indicate the dose in units of weight of the active ingredient.  &#xA; &#xA;If only the ingredient is included and not the product, then the amount of that ingredient will be given. Paracetamol 1000mg is equivalent to 2 Paracetamol 500mg tablets or units. &#xA; &#xA;The dosage is sometimes given as a calculation, in which the patient’s body weight or body surface area is used as a parameter. The calculation is however no more than an aid in reaching a decision. &#xA; &#xA;In the event of constant administration, sometimes the dose is given in addition to the administration speed (infusion rate) (e.g. 20ml in a syringe or 500ml in a bag), but it is often also omitted. &#xA; &#xA;A general dosage recommendation such as ‘Use according to protocol’ or ‘See instructions’ can be sufficient. In that case, no dose is given."/>
             <alias value="Keerdosis"/>
             <mapping>
                 <identity value="zib-InstructionsForUse"/>
-                <map value="19940"/>
+                <map value="NL-CM:9.12.19940"/>
             </mapping>
         </element>
         <element id="Dosage.maxDosePerPeriod">
