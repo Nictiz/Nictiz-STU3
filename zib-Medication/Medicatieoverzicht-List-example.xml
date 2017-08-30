@@ -82,7 +82,7 @@
             <meta>
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse"/>
             </meta>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-AsAgreed">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-AsAgreedIndicator">
                 <valueBoolean value="true"/>
             </extension>
             <identifier>
