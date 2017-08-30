@@ -234,7 +234,7 @@
             <short value="DosageInstructions"/>
             <type>
                 <code value="Dosage"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DosageInstructions"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse"/>
             </type>
             <mapping>
                 <identity value="zib-medicationadministrationagreement"/>
