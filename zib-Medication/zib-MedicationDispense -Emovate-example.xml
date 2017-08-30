@@ -5,7 +5,7 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministrationAgreement"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration">
         <valueDuration>
             <value value="3"/>
             <unit value="week"/>

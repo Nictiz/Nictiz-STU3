@@ -6,7 +6,7 @@
             <meta>
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"/>
             </meta>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-Duration">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration">
                 <valueDuration>
                     <value value="4"/>
                     <unit value="week"/>
@@ -78,15 +78,15 @@
     </contained>
     <contained>
         <MedicationStatement xmlns="http://hl7.org/fhir">
-            <id value="medicationusage-example"/>
+            <id value="medicationuse-example"/>
             <meta>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse"/>
             </meta>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-AsAgreed">
                 <valueBoolean value="true"/>
             </extension>
             <identifier>
-                <system value="http://example-implementer.com/fhir/MedicationUsageID"/>
+                <system value="http://example-implementer.com/fhir/MedicationUseID"/>
                 <value value="123456654321"/>
             </identifier>
             <status value="active"/>
@@ -270,7 +270,7 @@
     </entry>
     <entry>
         <item>
-            <reference value="#medicationusage-example"/>
+            <reference value="#medicationuse-example"/>
         </item>
     </entry>
 </List>

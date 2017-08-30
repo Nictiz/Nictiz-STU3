@@ -5,9 +5,9 @@
         <versionId value="8"/>
         <lastUpdated value="2017-06-28T16:25:01.939+02:00"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage"/>
-    <name value="ZIB-Medication-Usage"/>
-    <title value="ZIB Medication Usage"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse"/>
+    <name value="ZIB-Medication-Use"/>
+    <title value="ZIB Medication Use"/>
     <status value="draft"/>
     <date value="2016-12-12T16:43:00.948+00:00"/>
     <publisher value="Nictiz"/>
@@ -19,7 +19,7 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="Medication usage as defined by the Dutch Medication v9 project."/>
+    <description value="Medication use as defined by the Dutch Medication v9 project."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
@@ -62,7 +62,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUsage-AsAgreed"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-AsAgreed"/>
             </type>
             <mapping>
                 <identity value="zib-Medicatiegebruik"/>
