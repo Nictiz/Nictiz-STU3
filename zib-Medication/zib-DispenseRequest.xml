@@ -3,7 +3,7 @@
   <id value="d15249e8-b757-4f78-9026-b9b117b35587" />
   <meta>
     <versionId value="3" />
-    <lastUpdated value="2017-09-01T22:16:54.261+02:00" />
+    <lastUpdated value="2017-09-01T22:30:28.397+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DispenseRequest" />
   <name value="ZIB-DispenseRequest" />
@@ -19,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A medication dispense request as defined by the Dutch Medication v9 project." />
+  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.VerstrekkingVerzoek version 1.0, year 2017." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>

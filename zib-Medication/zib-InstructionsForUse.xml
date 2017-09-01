@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-31T11:28:13.39+02:00" />
+    <lastUpdated value="2017-09-01T22:30:30.733+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse" />
   <name value="ZIB-InstructionsForUse" />
@@ -9,7 +9,7 @@
   <status value="draft" />
   <date value="2017-05-18T11:36:21.9737868+02:00" />
   <publisher value="Nictiz" />
-  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.part.GebruiksInstructie version 1.0, year 2017.         Instructions for the use or administration of the medication, e.g. dose and route of administration. In the event of medication use, this is the pattern of use established by the patient or which the patient followed.          This is a partial information model" />
+  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.part.GebruiksInstructie version 1.0, year 2017.         Instructions for the use or administration of the medication, e.g. dose and route of administration. In the event of medication use, this is the pattern of use established by the patient or which the patient followed" />
   <purpose value="InstructionsForUse gives an insight into the manner a drug is to be used." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
@@ -98,10 +98,6 @@
         <code value="Timing" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule" />
       </type>
-      <mapping>
-        <identity value="zib-InstructionsForUse" />
-        <map value="NL-CM:9.12.19948" />
-      </mapping>
     </element>
     <element id="Dosage.asNeededCodeableConcept:asNeededCodeableConcept">
       <path value="Dosage.asNeededCodeableConcept" />
@@ -120,7 +116,7 @@
         <description value="ZonodigCriteriumCodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20170824000000" />
-          <display value="ZonodigCriteriumCodelijst"/>
+          <display value="ZonodigCriteriumCodelijst" />
         </valueSetReference>
       </binding>
       <mapping>

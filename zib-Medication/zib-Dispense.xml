@@ -3,7 +3,7 @@
   <id value="3dace244-e5bf-4dd9-8ee4-12df8dd69a58" />
   <meta>
     <versionId value="7" />
-    <lastUpdated value="2017-09-01T22:02:33.021+02:00" />
+    <lastUpdated value="2017-09-01T22:29:21.362+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense" />
   <name value="ZIB-Dispense" />
@@ -19,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.part.Product version 1.0, year 2017.&#xD;&#xA;A dispense is the delivery of an amount of medicine to the patient, their administrator or their representative." />
+  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.Verstrekking version 1.0, year 2017.&#xD;&#xA;A dispense is the delivery of an amount of medicine to the patient, their administrator or their representative." />
   <purpose value="The goal of the dispense is to provide insight into which products are delivered by the pharmacist to the patient (or their representative)" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
@@ -199,6 +199,22 @@
       <mapping>
         <identity value="zib-dispense" />
         <map value="NL-CM:9.9.20923" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.quantity:SimpleQuantity.value">
+      <path value="MedicationDispense.quantity.value" />
+      <alias value="Aantal" />
+      <mapping>
+        <identity value="zib-dispense" />
+        <map value="22601" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.quantity:SimpleQuantity.code">
+      <path value="MedicationDispense.quantity.code" />
+      <alias value="Eenheid" />
+      <mapping>
+        <identity value="zib-dispense" />
+        <map value="22602" />
       </mapping>
     </element>
     <element id="MedicationDispense.daysSupply:SimpleQuantity">
