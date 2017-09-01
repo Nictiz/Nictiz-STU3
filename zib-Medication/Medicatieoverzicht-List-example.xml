@@ -144,7 +144,7 @@
         <MedicationDispense xmlns="http://hl7.org/fhir">
             <id value="medicationadministrationagreement-example"/>
             <meta>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministrationAgreement"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement"/>
             </meta>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse">
                 <valuePeriod>
@@ -152,7 +152,7 @@
                     <end value="2016-08-07"/>
                 </valuePeriod>
             </extension>
-            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement-ReasonForDispense">
                 <valueString value="Eczeem oogleden"/>
             </extension>
             <identifier>

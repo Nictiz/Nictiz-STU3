@@ -3,7 +3,7 @@
 <MedicationDispense xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/medicationdispense.xsd">
     <id value="medicationdispense-example"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministrationAgreement"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement"/>
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration">
         <valueDuration>
@@ -19,7 +19,7 @@
             <end value="2016-07-08"/>
         </valuePeriod>
     </extension>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-ReasonForDispense">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement-ReasonForDispense">
         <valueString value="Eczeem oogleden"/>
     </extension>
     <identifier>

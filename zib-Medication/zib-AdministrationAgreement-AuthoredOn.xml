@@ -5,7 +5,7 @@
         <versionId value="5"/>
         <lastUpdated value="2017-02-20T08:42:17.716+00:00"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-AuthoredOn"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement-AuthoredOn"/>
     <name value="ZIB-Authored-On"/>
     <title value="ZIB Authored On"/>
     <status value="draft"/>
@@ -41,7 +41,7 @@
         <element id="Extension.url">
             <path value="Extension.url"/>
             <representation value="xmlAttr"/>
-            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement-AuthoredOn"/>
+            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement-AuthoredOn"/>
         </element>
         <element id="Extension.valueDateTime">
             <path value="Extension.valueDateTime"/>
