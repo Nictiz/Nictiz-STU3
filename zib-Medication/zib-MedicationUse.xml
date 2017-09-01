@@ -111,8 +111,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product />
-      </type>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product" /> </type>
       <mapping>
         <identity value="zib-Medicatiegebruik" />
         <map value="NL-CM:9.11.21339" />

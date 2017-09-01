@@ -160,8 +160,7 @@
       </type>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product/>
-      </type>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product" /> </type>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>

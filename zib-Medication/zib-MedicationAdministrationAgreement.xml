@@ -154,8 +154,7 @@
             </type>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product/>
-            </type>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product" /> </type>
             <mapping>
                 <identity value="zib-medicationadministrationagreement"/>
                 <map value="20237"/>
