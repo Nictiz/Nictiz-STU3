@@ -119,7 +119,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispenseRequest-AdditionalWishes"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DispenseRequest-AdditionalWishes"/>
             </type>
             <binding>
                 <strength value="extensible"/>
@@ -154,7 +154,7 @@
             </type>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product/>
             </type>
             <mapping>
                 <identity value="zib-medicationadministrationagreement"/>

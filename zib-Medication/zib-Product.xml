@@ -3,7 +3,7 @@
   <id value="aa2695f2-1ea9-4be7-b1b6-a5112a503006" />
   <meta>
     <versionId value="4" />
-    <lastUpdated value="2017-08-30T11:51:53.677+02:00" />
+    <lastUpdated value="2017-09-01T21:18:08.319+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Product" />
   <name value="ZIB-Product" />
@@ -19,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.part.Product version 1.0, year 2017.&#xD;&#xA;&#xD;&#xA;The prescribed substance is usually medication. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Food and blood products do not strictly belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with a single code. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, alternative codes from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. If one of the composite parts is liquid, the dosage will be given in milliliters; otherwise it will be given in ‘units’. &#xD;&#xA;&#xD;&#xA;In that case, the composition of the medication can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) ingredient(s) of the medication. &#xD;&#xA;&#xD;&#xA;Magistral prescriptions can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text. &#xD;&#xA;This is a partial information model" />
+  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.part.Product version 1.0, year 2017." />
   <purpose value="The purpose of Product is to unambiguously describe the medication to be used." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
@@ -76,7 +76,7 @@
         <label value="Example of Medication code" />
         <valueCodeableConcept>
           <coding>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.8"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.8" />
             <code value="13610554" />
             <display value="Carbasalaatcalcium Sandoz 600 30 sac" />
           </coding>
@@ -206,7 +206,7 @@
         <label value="Example of Pharmaceutical form" />
         <valueCodeableConcept>
           <coding>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.11" />
             <code value="230" />
             <display value="TABLET" />
           </coding>
@@ -247,7 +247,7 @@
         <label value="Example of Ingredient substance" />
         <valueCodeableConcept>
           <coding>
-            <system value="http://www.whocc.no/atc"/>
+            <system value="http://www.whocc.no/atc" />
             <code value="B01AC08" />
             <display value="carbasalate calcium" />
           </coding>
@@ -267,16 +267,10 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <type>
-        <code value="Coding" />
-      </type>
     </element>
     <element id="Medication.ingredient.itemCodeableConcept.coding:IngredientCodeZICodelijst">
       <path value="Medication.ingredient.itemCodeableConcept.coding" />
       <sliceName value="IngredientCodeZICodelijst" />
-      <type>
-        <code value="Coding" />
-      </type>
       <binding>
         <strength value="required" />
         <description value="IngredientCodeZICodelijst" />
@@ -289,9 +283,6 @@
     <element id="Medication.ingredient.itemCodeableConcept.coding:IngredientCodeGTINCodeLijst">
       <path value="Medication.ingredient.itemCodeableConcept.coding" />
       <sliceName value="IngredientCodeGTINCodeLijst" />
-      <type>
-        <code value="Coding" />
-      </type>
       <binding>
         <strength value="required" />
         <description value="IngredientCodeGTINCodeLijst" />
@@ -304,9 +295,6 @@
     <element id="Medication.ingredient.itemCodeableConcept.coding:IngredientCodeATCCodelijst">
       <path value="Medication.ingredient.itemCodeableConcept.coding" />
       <sliceName value="IngredientCodeATCCodelijst" />
-      <type>
-        <code value="Coding" />
-      </type>
       <binding>
         <strength value="required" />
         <description value="IngredientCodeATCCodelijst" />
@@ -319,9 +307,6 @@
     <element id="Medication.ingredient.itemCodeableConcept.coding:IngredientCodeHPKLijst">
       <path value="Medication.ingredient.itemCodeableConcept.coding" />
       <sliceName value="IngredientCodeHPKLijst" />
-      <type>
-        <code value="Coding" />
-      </type>
       <binding>
         <strength value="required" />
         <description value="IngredientCodeHPKLijst" />
@@ -334,9 +319,6 @@
     <element id="Medication.ingredient.itemCodeableConcept.coding:IngredientCodeGPKLijst">
       <path value="Medication.ingredient.itemCodeableConcept.coding" />
       <sliceName value="IngredientCodeGPKLijst" />
-      <type>
-        <code value="Coding" />
-      </type>
       <binding>
         <strength value="required" />
         <description value="IngredientCodeGPKLijst" />
@@ -349,9 +331,6 @@
     <element id="Medication.ingredient.itemCodeableConcept.coding:IngredientCodeSNKLijst">
       <path value="Medication.ingredient.itemCodeableConcept.coding" />
       <sliceName value="IngredientCodeSNKLijst" />
-      <type>
-        <code value="Coding" />
-      </type>
       <binding>
         <strength value="required" />
         <description value="IngredientCodeSNKLijst" />
@@ -364,9 +343,6 @@
     <element id="Medication.ingredient.itemCodeableConcept.coding:IngredientCodePRKLijst">
       <path value="Medication.ingredient.itemCodeableConcept.coding" />
       <sliceName value="IngredientCodePRKLijst" />
-      <type>
-        <code value="Coding" />
-      </type>
       <binding>
         <strength value="required" />
         <description value="IngredientCodePRKLijst" />
@@ -379,9 +355,6 @@
     <element id="Medication.ingredient.itemCodeableConcept.coding:IngredientCodeSSKLijst">
       <path value="Medication.ingredient.itemCodeableConcept.coding" />
       <sliceName value="IngredientCodeSSKLijst" />
-      <type>
-        <code value="Coding" />
-      </type>
       <binding>
         <strength value="required" />
         <description value="IngredientCodeSSKLijst" />
@@ -399,19 +372,19 @@
       <alias value="Concentratie" />
       <alias value="Hoeveelheid" />
       <example>
-        <label value="Example of Concentration"/>
-         <valueRatio>
+        <label value="Example of Concentration" />
+        <valueRatio>
           <numerator>
-            <value value="5"/>
-            <unit value="ml"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <value value="5" />
+            <unit value="ml" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="ml" />
           </numerator>
           <denominator>
-            <value value="200"/>
-            <unit value="ml"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <value value="200" />
+            <unit value="ml" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="ml" />
           </denominator>
         </valueRatio>
       </example>
