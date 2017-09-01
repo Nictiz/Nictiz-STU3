@@ -5,9 +5,9 @@
         <versionId value="2"/>
         <lastUpdated value="2017-06-08T17:16:59.802+02:00"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispense-RegistrationDate"/>
-    <name value="ZIB-Dispense-Registration-Date"/>
-    <title value="ZIB Dispense Registration Date"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-RequestDate"/>
+    <name value="ZIB-Dispense-RequestDate"/>
+    <title value="ZIB Dispense RequestDate"/>
     <status value="draft"/>
     <date value="2016-12-12T16:24:56.205+00:00"/>
     <publisher value="Nictiz"/>
@@ -32,7 +32,7 @@
     <differential>
         <element id="Extension.url">
             <path value="Extension.url"/>
-            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationDispense-RegistrationDate"/>
+            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-RequestDate"/>
         </element>
         <element id="Extension.valueDateTime">
             <path value="Extension.valueDateTime"/>
