@@ -3,13 +3,13 @@
     <meta>
         <lastUpdated value="2017-06-12T14:19:39.578+02:00"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DispenseRequest-AdditionalWishes"/>
-    <name value="ZIB-Additional-Wishes"/>
-    <title value="ZIB Additional Wishes"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation"/>
+    <name value="ZIB-AdditionalInformation"/>
+    <title value="ZIB AdditionalInformation"/>
     <status value="draft"/>
     <date value="2017-06-08T17:04:06.8260228+02:00"/>
     <publisher value="Nictiz"/>
-    <description value="Logistics and other instructions such as: do not enter in GDS, urgent, purposeful deviation, etc."/>
+    <description value="Logistics and other instructions such as: do not enter in GDS, urgent, purposeful deviation, etc. This is a broad CodeableConcept extension in scope of the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) for Medication. "/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <kind value="complex-type"/>
@@ -23,7 +23,7 @@
     <differential>
         <element id="Extension.url">
             <path value="Extension.url"/>
-            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-DispenseRequest-AdditionalWishes"/>
+            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation"/>
         </element>
         <element id="Extension.valueCodeableConcept">
             <path value="Extension.valueCodeableConcept"/>
