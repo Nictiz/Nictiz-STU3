@@ -19,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.MedicatieGebruik version 1.0, year 2017." />
+  <description value="This profile is based the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.MedicatieAfspraak version 1.0, year 2017." />
   <purpose value="The goal of the medication agreement is to provide insight into the agreements reached between the prescriber and the patient on the use of medication." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
