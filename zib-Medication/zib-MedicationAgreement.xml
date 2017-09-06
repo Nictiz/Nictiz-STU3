@@ -261,7 +261,7 @@
       </binding>
       <mapping>
         <identity value="zib-medicationagreement" />
-        <map value="NL-CM-9.6.22094" />
+        <map value="NL-CM:9.6.22094" />
       </mapping>
     </element>
     <element id="MedicationRequest.reasonReference">

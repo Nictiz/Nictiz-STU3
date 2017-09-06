@@ -269,7 +269,7 @@
       <alias value="RedenGebruik" />
       <mapping>
         <identity value="zib-Medicatiegebruik" />
-        <map value="NL-CM-9.11.22491" />
+        <map value="NL-CM:9.11.22491" />
       </mapping>
     </element>
     <element id="MedicationStatement.note">
