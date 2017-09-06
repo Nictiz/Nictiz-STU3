@@ -232,7 +232,7 @@
           <value value="100" />
           <unit value="ml" />
           <system value="http://unitsofmeasure.org" />
-          <code value="ml" />
+          <code value="mL" />
         </valueQuantity>
       </example>
       <mapping>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-01T22:30:30.733+02:00" />
+    <lastUpdated value="2017-09-06T10:20:12.214+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse" />
   <name value="ZIB-InstructionsForUse" />
@@ -32,31 +32,6 @@
       <mapping>
         <identity value="zib-InstructionsForUse" />
         <map value="NL-CM:9.12.22504" />
-      </mapping>
-    </element>
-    <element id="Dosage.extension">
-      <path value="Dosage.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Dosage.extension:usageDescription">
-      <path value="Dosage.extension" />
-      <sliceName value="usageDescription" />
-      <short value="Description" />
-      <definition value="Textual description of the complete instructions for use including the period of use." />
-      <alias value="Omschrijving" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Description" />
-      </type>
-      <mapping>
-        <identity value="zib-InstructionsForUse" />
-        <map value="NL-CM:9.12.9581" />
       </mapping>
     </element>
     <element id="Dosage.sequence">
@@ -99,7 +74,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule" />
       </type>
     </element>
-    <element id="Dosage.asNeededCodeableConcept:asNeededCodeableConcept">
+    <element id="Dosage.asNeeded[x]:asNeededCodeableConcept">
       <path value="Dosage.asNeededCodeableConcept" />
       <sliceName value="asNeededCodeableConcept" />
       <short value="AsNeeded" />
@@ -185,7 +160,7 @@
             <value value="200" />
             <unit value="ml" />
             <system value="http://unitsofmeasure.org" />
-            <code value="ml" />
+            <code value="mL" />
           </numerator>
           <denominator>
             <value value="1" />
