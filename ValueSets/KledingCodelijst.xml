@@ -1,0 +1,39 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="KledingCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:8ef9eefa-d396-48e8-afa2-a2862eb73c95"/>
+        <timestamp value="2017-09-06T13:52:03.394+02:00"/>
+        <total value="4"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.8.1"/>
+            <code value="UNDRESSED"/>
+            <display value="Undressed"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.8.1"/>
+            <code value="MINIMAL"/>
+            <display value="Minimal dressed"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.8.1"/>
+            <code value="FULL"/>
+            <display value="Fully dressed"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.8.1"/>
+            <code value="DIAPER"/>
+            <display value="Diaper"/>
+        </contains>
+    </expansion>
+</ValueSet>

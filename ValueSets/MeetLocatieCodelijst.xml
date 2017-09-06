@@ -1,0 +1,84 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="MeetLocatieCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:f330ddbb-02fb-4d66-a192-e6f4a1000a6b"/>
+        <timestamp value="2017-09-06T14:42:52.175+02:00"/>
+        <total value="13"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="40983000"/>
+            <display value="Upper arm structure"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="368209003"/>
+            <display value="Right upper arm structure"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="368208006"/>
+            <display value="Left upper arm structure"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="68367000"/>
+            <display value="Thigh structure"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="11207009"/>
+            <display value="Structure of right thigh"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="61396006"/>
+            <display value="Structure of left thigh"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="8205005"/>
+            <display value="Wrist region structure"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="9736006"/>
+            <display value="Structure of right wrist"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="5951000"/>
+            <display value="Structure of left wrist"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="7569003"/>
+            <display value="Finger structure"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="344001"/>
+            <display value="Ankle region structure"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="6685009"/>
+            <display value="Structure of right ankle"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="51636004"/>
+            <display value="Structure of left ankle"/>
+        </contains>
+    </expansion>
+</ValueSet>
