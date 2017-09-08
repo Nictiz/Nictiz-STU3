@@ -29,7 +29,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/zib-bp" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/bp" />
   <derivation value="constraint" />
   <differential>
     <element id="Observation">
@@ -210,6 +210,10 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Observation.component:averageBloodPressure.code.coding:DiastolicEndpointCode">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="DiastolicEndpointCode" />
+    </element>
     <element id="Observation.component:diastolicEndpoint.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
@@ -262,6 +266,10 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Observation.component:averageBloodPressure.code.coding:CuffTypeCode">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="CuffTypeCode" />
+    </element>
     <element id="Observation.component:cuffType.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://loinc.org" />
@@ -312,9 +320,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:position.code.coding:bodyPositionCode">
+    <element id="Observation.component:position.code.coding:BodyPositionCode">
       <path value="Observation.component.code.coding" />
-      <sliceName value="bodyPositionCode" />
+      <sliceName value="BodyPositionCode" />
       <short value="Body position " />
       <definition value="Body position for blood pressure measurement" />
     </element>
