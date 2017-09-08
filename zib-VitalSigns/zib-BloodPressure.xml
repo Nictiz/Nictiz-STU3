@@ -296,7 +296,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <isModifier value="true"/>
       <binding>
         <strength value="extensible" />
         <description value="ManchetTypeCodelijst" />
@@ -351,7 +350,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <isModifier value="true"/>
       <binding>
         <strength value="extensible" />
         <description value="HoudingCodelijst" />

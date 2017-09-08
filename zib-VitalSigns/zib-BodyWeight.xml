@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-07T12:47:21.018+02:00" />
+    <lastUpdated value="2017-09-08T12:47:03.193+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight" />
   <name value="ZIB-BodyWeight" />
@@ -86,11 +86,25 @@
       <path value="Observation.component" />
       <sliceName value="clothing" />
     </element>
-    <element id="Observation.component:clothing.code.coding.system">
+    <element id="Observation.component:clothing.code.coding">
+      <path value="Observation.component.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:clothing.code.coding:ClothingCode">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="ClothingCode" />
+    </element>
+    <element id="Observation.component:clothing.code.coding:ClothingCode.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://loinc.org" />
     </element>
-    <element id="Observation.component:clothing.code.coding.code">
+    <element id="Observation.component:clothing.code.coding:ClothingCode.code">
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="8352-7" />
     </element>
@@ -103,7 +117,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <isModifier value="true"/>
       <binding>
         <strength value="extensible" />
         <description value="KledingCodelijst" />

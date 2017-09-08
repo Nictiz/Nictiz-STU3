@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-06T18:39:48.604+02:00" />
+    <lastUpdated value="2017-09-08T12:45:07.386+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-HeartFrequency" />
   <name value="ZIB-HeartFrequency" />
@@ -109,11 +109,25 @@
       <path value="Observation.component" />
       <sliceName value="heartbeatRegularity" />
     </element>
-    <element id="Observation.component:heartbeatRegularity.code.coding.system">
+    <element id="Observation.component:heartbeatRegularity.code.coding">
+      <path value="Observation.component.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:heartbeatRegularity.code.coding:sliceCoding">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="sliceCoding" />
+    </element>
+    <element id="Observation.component:heartbeatRegularity.code.coding:sliceCoding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:heartbeatRegularity.code.coding.code">
+    <element id="Observation.component:heartbeatRegularity.code.coding:sliceCoding.code">
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="364074009" />
     </element>
@@ -126,13 +140,12 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <isModifier value="true"/>
       <binding>
         <strength value="extensible" />
         <description value="HartslagRegelmatigheidCodelijst" />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.3.1--20150401000000" />
-          <display value="HartslagRegelmatigheidCodelijst"/>
+          <display value="HartslagRegelmatigheidCodelijst" />
         </valueSetReference>
       </binding>
       <mapping>
