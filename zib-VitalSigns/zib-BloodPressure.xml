@@ -101,6 +101,17 @@
         <map value="NL-CM:12.4.7" />
       </mapping>
     </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="Observation.component.value.coding.code" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Observation.component:SystolicBP">
       <path value="Observation.component" />
       <sliceName value="SystolicBP" />
