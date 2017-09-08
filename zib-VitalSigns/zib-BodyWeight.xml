@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-06T17:15:33.655+02:00" />
+    <lastUpdated value="2017-09-07T12:47:21.018+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight" />
   <name value="ZIB-BodyWeight" />
@@ -40,45 +40,6 @@
         <map value="NL-CM:12.1.1" />
       </mapping>
     </element>
-    <element id="Observation.modifierExtension">
-      <path value="Observation.modifierExtension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.extension:Clothing">
-      <path value="Observation.modifierExtension" />
-      <sliceName value="Clothing" />
-      <short value="Clothing" />
-      <definition value="The clothes the patient was wearing at the time of the measurement." />
-      <alias value="Kleding" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight-Clothing" />
-      </type>
-      <isModifier value="true" />
-      <mapping>
-        <identity value="zib-vitalsigns-bodyweight" />
-        <map value="NL-CM:12.1.5" />
-      </mapping>
-    </element>
-    <element id="Observation.extension:Clothing.value[x]:valueCodeableConcept">
-      <path value="Observation.modifierExtension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <binding>
-        <strength value="extensible" />
-        <description value="KledingCodelijst" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1--20150401000000" />
-          <display value="KledingCodelijst" />
-        </valueSetReference>
-      </binding>
-    </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <short value="WeightDateTime" />
@@ -109,6 +70,50 @@
       <mapping>
         <identity value="zib-vitalsigns-bodyweight" />
         <map value="NL-CM:12.1.3" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:clothing">
+      <path value="Observation.component" />
+      <sliceName value="clothing" />
+    </element>
+    <element id="Observation.component:clothing.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:clothing.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="8352-7" />
+    </element>
+    <element id="Observation.component:clothing.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="Clothing" />
+      <definition value="The clothes the patient was wearing at the time of the measurement." />
+      <alias value="Kleding" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <isModifier value="true"/>
+      <binding>
+        <strength value="extensible" />
+        <description value="KledingCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1--20150401000000" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-vitalsigns-bodyweight" />
+        <map value="NL-CM:12.1.5" />
       </mapping>
     </element>
   </differential>

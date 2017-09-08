@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://hl7.org/fhir ../../../FHIR/Schemas%20STU3/structuredefinition.xsd"
+ xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-06T17:26:52.36+02:00" />
+    <lastUpdated value="2017-09-07T13:36:13.869+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-OxygenSaturation" />
   <name value="ZIB-OxygenSaturation" />
@@ -71,6 +73,50 @@
       <mapping>
         <identity value="zib-vitalsigns-oxygensaturation" />
         <map value="NL-CM:12.10.4" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:extraOxygenAdministration">
+      <path value="Observation.component" />
+      <sliceName value="extraOxygenAdministration" />
+    </element>
+    <element id="Observation.component:extraOxygenAdministration.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:extraOxygenAdministration.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="74206-4" />
+    </element>
+    <element id="Observation.component:extraOxygenAdministration.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="ExtraOxygenAdministration" />
+      <definition value="Indication stating whether the measurement was done in a situation in which extra oxygen was administered." />
+      <alias value="ExtraZuurstofToediening" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <isModifier value="true"/>
+      <binding>
+        <strength value="required" />
+        <description value="Yes/no Indicator" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/v2-0136" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-vitalsigns-oxygensaturation" />
+        <map value="NL-CM:12.10.5" />
       </mapping>
     </element>
   </differential>

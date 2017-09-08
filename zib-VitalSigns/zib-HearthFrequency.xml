@@ -95,5 +95,50 @@
         <map value="NL-CM:12.3.6" />
       </mapping>
     </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:clothing">
+      <path value="Observation.component" />
+      <sliceName value="heartbeatRegularity" />
+    </element>
+    <element id="Observation.component:heartbeatRegularity.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:heartbeatRegularity.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="364074009" />
+    </element>
+    <element id="Observation.component:heartbeatRegularity.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="HeartbeatRegularity" />
+      <definition value="Regularity of the heartbeat." />
+      <alias value="HartslagRegelmatigheid" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <isModifier value="true"/>
+      <binding>
+        <strength value="extensible" />
+        <description value="HartslagRegelmatigheidCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.3.1--20150401000000" />
+          <display value="HartslagRegelmatigheidCodelijst"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-vitalsigns-bodyweight" />
+        <map value="NL-CM:12.3.5" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>
