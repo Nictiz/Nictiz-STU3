@@ -23,9 +23,9 @@
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
-    <identity value="zib-medicationdispenserequest" />
+    <identity value="zib-dispenserequest" />
     <uri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.2.3" />
-    <name value="ZIB Medication Dispense Request" />
+    <name value="ZIB DispenseRequest" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -58,7 +58,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation" />
       </type>
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.22759" />
       </mapping>
     </element>
@@ -86,7 +86,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DispenseRequest-RelatedMedicationAgreement" />
       </type>
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="23286" />
       </mapping>
     </element>
@@ -106,7 +106,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product" />
       </type>
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.22249" />
       </mapping>
     </element>
@@ -138,7 +138,7 @@
       <definition value="Time at which the dispense request is entered." />
       <alias value="VerstrekkingsverzoekDatum" />
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.20060" />
       </mapping>
     </element>
@@ -218,7 +218,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-Location" />
       </type>
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.20068" />
       </mapping>
     </element>
@@ -228,7 +228,7 @@
       <definition value=" During the approved period of use, the pharmacist has permission to dispense medicine so that the patient has a sufficient amount of medication. &#xD;&#xA;In many cases, the approved period of use can be described by only an end date: the approved end date of use." />
       <alias value="Verbruiksperiode" />
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.20062" />
       </mapping>
     </element>
@@ -246,7 +246,7 @@
       <definition value="The number of additional times the medication may be dispensed after the first time.  The total amount that may be dispensed is: (Number of refills + 1) x amount to be dispensed" />
       <alias value="AantalHerhalingen" />
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.22120" />
       </mapping>
     </element>
@@ -257,7 +257,7 @@
       <definition value="This is the number of units of the ordered product per dispense. &#xD;&#xA;The number of refills indicates how often this amount is allowed to be dispensed." />
       <alias value="TeVerstrekkenHoeveelheid" />
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.19964" />
       </mapping>
     </element>
@@ -266,7 +266,7 @@
       <short value="Duration" />
       <alias value="Duur" />
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.20062" />
       </mapping>
     </element>
@@ -276,7 +276,7 @@
       <definition value="The intended supplier is a pharmacist." />
       <alias value="BeoogdVerstrekker" />
       <mapping>
-        <identity value="zib-medicationdispenserequest" />
+        <identity value="zib-dispenserequest" />
         <map value="NL-CM:9.10.19966" />
       </mapping>
     </element>
