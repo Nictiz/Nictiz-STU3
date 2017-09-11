@@ -328,19 +328,31 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:position.code.coding:BodyPositionCode">
+    <element id="Observation.component:position.code.coding:BodyPositionSNOMEDCode">
       <path value="Observation.component.code.coding" />
-      <sliceName value="BodyPositionCode" />
+      <sliceName value="BodyPositionSNOMEDCode" />
       <short value="Body position " />
       <definition value="Body position for blood pressure measurement" />
     </element>
-    <element id="Observation.component:position.code.coding:bodyPositionCode.system">
+    <element id="Observation.component:position.code.coding:bodyPositionSNOMEDCode.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:position.code.coding:bodyPositionCode.code">
+    <element id="Observation.component:position.code.coding:bodyPositionSNOMEDCode.code">
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="424724000" />
+    </element>
+    <element id="Observation.component:position.code.coding:BodyPositionLOINCCode">
+      <path value="Observation.component.code.coding"/>
+      <sliceName value="BodyPositionLOINCCode"/>
+    </element>
+    <element id="Observation.component:position.code.coding:BodyPositionLOINCCode.system">
+      <path value="Observation.component.code.coding.system"/>
+      <fixedUri value="http://loinc.org"/>
+    </element>
+    <element id="Observation.component:position.code.coding:BodyPositionLOINCCode.code">
+      <path value="Observation.component.code.coding.code"/>
+      <fixedCode value="8361-8"/>
     </element>
     <element id="Observation.component:position.valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
