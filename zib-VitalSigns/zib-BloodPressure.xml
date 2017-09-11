@@ -29,7 +29,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/bp" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/bp" />
   <derivation value="constraint" />
   <differential>
     <element id="Observation">
