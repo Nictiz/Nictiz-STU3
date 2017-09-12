@@ -57,13 +57,6 @@
             <short value="MedicationAdministrationReasonForDeviation"/>
             <definition value="Reason why the medication was not taken or administered or was taken or administered differently. Here, you can choose to enter text or one of the codes."/>
             <alias value="MedicatieToedieningRedenVanAfwijken"/>
-            <binding>
-                <strength value="preferred"/>
-                <description value="MedicatieToedieningRedenVanAfwijkenCodelijst"/>
-                <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.29--20161110112705"/>
-                </valueSetReference>
-            </binding>
         </element>
         <element id="Extension.extension:reasonForDeviation.url">
             <path value="Extension.extension.url"/>
