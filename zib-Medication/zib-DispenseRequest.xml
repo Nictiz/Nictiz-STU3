@@ -216,7 +216,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-Location" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-Location" />
       </type>
       <mapping>
         <identity value="zib-dispenserequest" />
