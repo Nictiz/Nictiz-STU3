@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
   <id value="77dc0559-023b-4c4d-92e1-781f16acd33e" />
   <meta>
     <versionId value="5" />
@@ -120,8 +121,8 @@
     </element>
     <element id="Timing.repeat.dayOfWeek">
       <path value="Timing.repeat.dayOfWeek" />
-      <definition value="WeekDay indicates a pattern of doses on fixed week days."/>
       <short value="WeekDay" />
+      <definition value="WeekDay indicates a pattern of doses on fixed week days."/>
       <alias value="Weekdagen" />
       <mapping>
         <identity value="zib-InstructionsForUse" />
@@ -130,8 +131,8 @@
     </element>
     <element id="Timing.repeat.timeOfDay">
       <path value="Timing.repeat.timeOfDay" />
-      <definition value="Time of day: morning, afternoon, evening, night."/>
       <short value="TimeOfDay" />
+      <definition value="Time of day: morning, afternoon, evening, night."/>
       <alias value="Dagdeel" />
       <mapping>
         <identity value="zib-InstructionsForUse" />
