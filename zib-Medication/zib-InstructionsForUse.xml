@@ -2,7 +2,7 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
   <meta>
-    <lastUpdated value="2017-09-06T10:20:12.214+02:00" />
+    <lastUpdated value="2017-09-12T17:19:49.655+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse" />
   <name value="ZIB-InstructionsForUse" />
@@ -79,8 +79,9 @@
       <path value="Dosage.asNeededCodeableConcept" />
       <sliceName value="asNeededCodeableConcept" />
       <short value="AsNeeded" />
-      <definition value="As needed means that the dose is only to be administered under certain conditions." />
+      <definition value="As needed means that the dose is only to be administered under certain conditions.&#xD;&#xA;&#xD;&#xA;The condition for administering medication can be: &#xD;&#xA;- a physiological measurement value (plasma glucose concentration, body temperature, blood pressure);&#xD;&#xA;- a symptom or other circumstance (in the event of a headache, or itch).&#xD;&#xA;&#xD;&#xA;Relevant B codes in Table 25 make up the list of values for coded entering of this concept. Also always include the textual description of that code. &#xD;&#xA;Physiological measurement values or other conditions that do not occur in the B codes in Tabel25 do not need to be coded. These can be expressed in free text in the Description concept." />
       <alias value="Zo nodig" />
+      <alias value="Criterium" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -99,15 +100,9 @@
         <identity value="zib-InstructionsForUse" />
         <map value="NL-CM:9.12.22512" />
       </mapping>
-    </element>
-    <element id="Dosage.asNeededCodeableConcept:asNeededCodeableConcept.coding">
-      <path value="Dosage.asNeededCodeableConcept.coding" />
-      <short value="Condition" />
-      <definition value="The condition for administering medication can be: &#xD;&#xA;&#xD;&#xA; - a physiological measurement value (plasma glucose concentration, body temperature, blood pressure);&#xD;&#xA; - a symptom or other circumstance (in the event of a headache, or itch).&#xD;&#xA; &#xD;&#xA;Relevant B codes in Table 25 make up the list of values for coded entering of this concept. Also always include the textual description of that code. &#xD;&#xA;Physiological measurement values or other conditions that do not occur in the B codes in Tabel25 do not need to be coded. These can be expressed in free text in the Dosage.asNeededCodeableConcept.text" />
-      <alias value="Criterium" />
       <mapping>
         <identity value="zib-InstructionsForUse" />
-        <map value="NL-CM:9.12.19945" />
+        <map value="NL-CM-9.12.19945" />
       </mapping>
     </element>
     <element id="Dosage.route">
