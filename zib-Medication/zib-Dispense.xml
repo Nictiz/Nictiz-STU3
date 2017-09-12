@@ -71,6 +71,18 @@
         <map value="NL-CM:9.9.20927" />
       </mapping>
     </element>
+    <element id="MedicationDispense.extension:distributionForm:valueCodeableConcept">
+      <path value="MedicationDispense.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="VerstrekkingDistributievormCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.9.1--20170824000000" />
+          <display value="VerstrekkingDistributievormCodelijst" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="MedicationDispense.extension:requestDate">
       <path value="MedicationDispense.extension" />
       <sliceName value="requestDate" />

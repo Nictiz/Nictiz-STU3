@@ -3,13 +3,13 @@
     <id value="ece50de1-7e99-454f-b1e7-c3889dd28633"/>
     <meta>
         <versionId value="2"/>
-        <lastUpdated value="2016-12-12T16:25:17.365+00:00"/>
+        <lastUpdated value="2017-09-12T15:25:17.365+00:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-DistributionForm"/>
-    <name value="ZIB-Distribution-Form"/>
-    <title value="ZIB Distribution Form"/>
+    <name value="ZIB-Dispense-DistributionForm"/>
+    <title value="ZIB Dispense Distribution Form"/>
     <status value="draft"/>
-    <date value="2016-12-12T16:25:17.365+00:00"/>
+    <date value="2017-09-12T15:25:17.365+00:00"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
