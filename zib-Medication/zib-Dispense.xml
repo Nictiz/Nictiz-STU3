@@ -189,7 +189,6 @@
       <short value="Supplier" />
       <definition value="In almost all cases, the supplier will be a pharmacist. It could also be supplied by a webshop (in case of an online order), a drug store or a foreign pharmacist." />
       <alias value="Verstrekker" />
-      <min value="1" />
       <mapping>
         <identity value="zib-dispense" />
         <map value="NL-CM:9.9.20858" />
@@ -294,7 +293,6 @@
       <short value="DispenseDateTime" />
       <definition value="he time at which the medicine was supplied. The date and time at which the medicine is delivered.  &#xD;&#xA;Note: this is the time at which the medicine was delivered to the patient (or their administrator/representative) and not the request date." />
       <alias value="VerstrekkingsDatumTijd" />
-      <min value="1" />
       <example>
         <label value="Example of DispenseDateTime" />
         <valueDateTime value="2017-05-17" />
