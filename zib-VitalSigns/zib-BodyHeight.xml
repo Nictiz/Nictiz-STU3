@@ -58,7 +58,7 @@
     </element>
     <element id="Observation.code.coding:BodyHeightCode--standing.code">
       <path value="Observation.code.coding.code" />
-      <patternCode value="8308-9" />
+      <fixedCode value="8308-9" />
     </element>
     <element id="Observation.code.coding:BodyHeightCode--lying">
       <path value="Observation.code.coding" />
