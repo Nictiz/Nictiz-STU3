@@ -19,7 +19,7 @@
   <base value="RelatedPerson" />
   <type value="token" />
   <description value="Searches the RelatedPerson endpoint on the the value of the 'http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role' extension, which describes the role of the related person." />
-  <expression value="Patient.extension('http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role').value" />
+  <expression value="Patient.extension('http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role')" />
   <xpath value="f:RelatedPerson/f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role']" />
   <xpathUsage value="normal" />  
 </SearchParameter>
