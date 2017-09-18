@@ -1,4 +1,5 @@
-<ValueSet xmlns="http://hl7.org/fhir">
+<?xml-model href="http://hl7.org/fhir/STU3/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/valueset.xsd">
   <id value="725c81ea-21bb-41b8-bcfb-f3df26cc330d" />
   <meta>
     <versionId value="1" />
@@ -14,6 +15,7 @@
   <name value="HumanNameAssemblyOrder" />
   <status value="draft" />
   <experimental value="false" />
+  <date value="2016-12-08T05:51:23+00:00" />
   <publisher value="HL7 (FHIR Project)" />
   <contact>
     <telecom>
@@ -25,7 +27,6 @@
       <value value="fhir@lists.hl7.org" />
     </telecom>
   </contact>
-  <date value="2016-12-08T05:51:23+00:00" />
   <description value="A code that represents the preferred display order of the components of a human name" />
   <immutable value="true" />
   <compose>

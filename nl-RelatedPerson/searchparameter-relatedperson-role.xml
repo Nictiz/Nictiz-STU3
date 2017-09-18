@@ -1,25 +1,25 @@
 <?xml-model href="http://hl7.org/fhir/STU3/searchparameter.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <SearchParameter xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/searchparameter.xsd">
-  <url value="http://nictiz.nl/fhir/SearchParameter/RelatedPerson-role" />
-  <version value="1.0" />
-  <name value="RelatedPerson-Role" />
-  <status value="draft" />
-  <date value="2017-09-14T14:26:13.365+00:00" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <purpose value="To select the RelatedPerson instances based on the on the role of that related person, for example: primary contact" />
-  <code value="role" />
-  <base value="RelatedPerson" />
-  <type value="token" />
-  <description value="Searches the RelatedPerson endpoint on the the value of the 'http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role' extension, which describes the role of the related person." />
-  <expression value="Patient.extension('http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role')" />
-  <xpath value="f:RelatedPerson/f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role']" />
-  <xpathUsage value="normal" />  
+    <url value="http://nictiz.nl/fhir/SearchParameter/RelatedPerson-role"/>
+    <version value="1.0"/>
+    <name value="RelatedPerson-Role"/>
+    <status value="draft"/>
+    <date value="2017-09-14T14:26:13.365+00:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <purpose value="To select the RelatedPerson instances based on the on the role of that related person, for example: primary contact"/>
+    <code value="role"/>
+    <base value="RelatedPerson"/>
+    <type value="token"/>
+    <description value="Searches the RelatedPerson endpoint on the the value of the 'http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role' extension, which describes the role of the related person."/>
+    <expression value="Patient.extension('http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role')"/>
+    <xpath value="f:RelatedPerson/f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role']"/>
+    <xpathUsage value="normal"/>
 </SearchParameter>
