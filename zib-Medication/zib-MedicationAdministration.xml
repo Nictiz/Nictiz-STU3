@@ -4,7 +4,7 @@
   <id value="8c6e8ba5-9637-477a-8bd7-340a3a99b342" />
   <meta>
     <versionId value="4" />
-    <lastUpdated value="2017-09-06T11:22:49.795+02:00" />
+    <lastUpdated value="2017-09-20T15:58:19.745+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration" />
   <name value="ZIB-Medication-Administration" />
@@ -60,10 +60,7 @@
       <sliceName value="agreedDateTime" />
       <short value="AgreedDateTime" />
       <definition value="Date and time in the medication or administration agreement to which this administration pertains. Since multiple times can be indicated in one medication/administration agreement, this can be used to identify the agreed time in the event of e.g. early administration or a late administration." />
-      <comment value=" " />
       <alias value="AfgesprokenDatumTijd" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-AgreedDateTime" />
@@ -147,6 +144,30 @@
         <identity value="zib-medicationadministration" />
         <map value="NL-CM:9.13.21191" />
       </mapping>
+    </element>
+    <element id="MedicationAdministration.category">
+      <path value="MedicationAdministration.category" />
+      <min value="1" />
+    </element>
+    <element id="MedicationAdministration.category.coding">
+      <path value="MedicationAdministration.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationAdministration.category.coding:MedicationAdministrationCode">
+      <path value="MedicationAdministration.category.coding" />
+      <sliceName value="MedicationAdministrationCode" />
+      <short value="MedicationAdministrationCode" />
+      <definition value="Category snomed code used for indexing/retrieval of the ZIB MedicationAdministration . The snomed code 422037009 for this resource is stated in the Medication Process v09." />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="18629005" />
+      </fixedCoding>
     </element>
     <element id="MedicationAdministration.medication[x]">
       <path value="MedicationAdministration.medication[x]" />

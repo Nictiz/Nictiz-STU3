@@ -4,7 +4,7 @@
   <id value="afbab416-6564-471c-92c0-7baeb20e2dd6" />
   <meta>
     <versionId value="8" />
-    <lastUpdated value="2017-08-30T16:11:16.442+02:00" />
+    <lastUpdated value="2017-09-20T16:17:37.017+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse" />
   <name value="ZIB-Medication-Use" />
@@ -104,6 +104,30 @@
         <map value="NL-CM:9.11.23132" />
       </mapping>
     </element>
+    <element id="MedicationStatement.category">
+      <path value="MedicationStatement.category" />
+      <min value="1" />
+    </element>
+    <element id="MedicationStatement.category.coding">
+      <path value="MedicationStatement.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationStatement.category.coding:MedicationUseCode">
+      <path value="MedicationStatement.category.coding" />
+      <sliceName value="MedicationUseCode" />
+      <short value="MedicationUseCode" />
+      <definition value="Category code used for indexing/retrieval of the ZIB MedicationUse. The system and code are stated in the Medication Process v09." />
+      <fixedCoding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3" />
+        <code value="6" />
+      </fixedCoding>
+    </element>
     <element id="MedicationStatement.medication[x]">
       <path value="MedicationStatement.medication[x]" />
       <short value="ProductUsed" />
@@ -112,13 +136,14 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product" /> </type>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product" />
+      </type>
       <mapping>
         <identity value="zib-Medicatiegebruik" />
         <map value="NL-CM:9.11.21339" />
       </mapping>
     </element>
-    <element id="MedicationStatement.effectivePeriod:effectivePeriod">
+    <element id="MedicationStatement.effective[x]:effectivePeriod">
       <path value="MedicationStatement.effectivePeriod" />
       <sliceName value="effectivePeriod" />
       <short value="PeriodOfUse" />
@@ -241,7 +266,7 @@
         <label value="Example of ReasonForChangeOrDiscontinuationOfUse" />
         <valueCodeableConcept>
           <coding>
-            <system value="urn:oid:2.16.840.1.113883.6.96"/>
+            <system value="urn:oid:2.16.840.1.113883.6.96" />
             <code value="79899007" />
             <display value="Drug interaction (disorder)" />
           </coding>

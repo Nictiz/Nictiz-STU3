@@ -3,7 +3,7 @@
   <id value="656c06d5-9bb8-4948-9988-dc6c47fea22e" />
   <meta>
     <versionId value="3" />
-    <lastUpdated value="2017-09-01T22:50:17.213+02:00" />
+    <lastUpdated value="2017-09-20T15:57:55.386+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement" />
   <name value="ZIB-AdministrationAgreement" />
@@ -166,6 +166,31 @@
         <identity value="zib-administrationagreement" />
         <map value="NL-CM:9.8.22498" />
       </mapping>
+    </element>
+    <element id="MedicationDispense.category">
+      <path value="MedicationDispense.category" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.category.coding">
+      <path value="MedicationDispense.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.category.coding:AdministrationAgreementCode">
+      <path value="MedicationDispense.category.coding" />
+      <sliceName value="AdministrationAgreementCode" />
+      <short value="AdministrationAgreementCode" />
+      <definition value="Category snomed code used for indexing/retrieval of the ZIB AdministrationAgremeent. The snomed code 422037009 for this resource is stated in the Medication Process v09." />
+      <max value="1" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="422037009" />
+      </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]">
       <path value="MedicationDispense.medication[x]" />

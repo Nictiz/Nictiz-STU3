@@ -4,7 +4,7 @@
   <id value="3dace244-e5bf-4dd9-8ee4-12df8dd69a58" />
   <meta>
     <versionId value="7" />
-    <lastUpdated value="2017-09-01T22:29:21.362+02:00" />
+    <lastUpdated value="2017-09-20T16:22:32.69+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense" />
   <name value="ZIB-Dispense" />
@@ -100,41 +100,40 @@
       </mapping>
     </element>
     <element id="MedicationDispense.extension:additionalInformation">
-      <path value="MedicationDispense.extension"/>
-      <sliceName value="additionalInformation"/>
-      <short value="DispenseAdditionalInformation"/>
-      <definition value="Additional information includes details on the structure of the dispense. This can be e.g. a reason for deviating from the dispense request. 
-        For now, this list is used. This list will be replaced by a thesaurus in the G standard at a later stage."/>
-      <alias value="VerstrekkingAanvullendeInformatie"/>
-      <max value="1"/>
+      <path value="MedicationDispense.extension" />
+      <sliceName value="additionalInformation" />
+      <short value="DispenseAdditionalInformation" />
+      <definition value="Additional information includes details on the structure of the dispense. This can be e.g. a reason for deviating from the dispense request.          For now, this list is used. This list will be replaced by a thesaurus in the G standard at a later stage." />
+      <alias value="VerstrekkingAanvullendeInformatie" />
+      <max value="1" />
       <type>
-        <code value="Extension"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation"/>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation" />
       </type>
       <mapping>
-        <identity value="zib-dispense"/>
-        <map value="NL-CM:9.9.23285"/>
+        <identity value="zib-dispense" />
+        <map value="NL-CM:9.9.23285" />
       </mapping>
     </element>
     <element id="MedicationDispense.extension:additionalInformation.valueCodeableConcept">
-      <path value="MedicationDispense.extension.valueCodeableConcept"/>
-      <sliceName value="valueCodeableConcept"/>
+      <path value="MedicationDispense.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <example>
-        <label value="Example of DispenseAdditionalInformation"/>
+        <label value="Example of DispenseAdditionalInformation" />
         <valueCodeableConcept>
           <coding>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2052"/>
-            <code value="1"/>
-            <display value="Aantal bewust gewijzigd"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2052" />
+            <code value="1" />
+            <display value="Aantal bewust gewijzigd" />
           </coding>
         </valueCodeableConcept>
       </example>
       <binding>
-        <strength value="extensible"/>
-        <description value="VerstrekkingAanvullendeInformatieCodelijst"/>
+        <strength value="extensible" />
+        <description value="VerstrekkingAanvullendeInformatieCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.9.2--20170824000000"/>
-          <display value="VerstrekkingAanvullendeInformatieCodelijst"/>        
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.9.2--20170824000000" />
+          <display value="VerstrekkingAanvullendeInformatieCodelijst" />
         </valueSetReference>
       </binding>
     </element>
@@ -144,6 +143,30 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure" />
       </type>
+    </element>
+    <element id="MedicationDispense.category">
+      <path value="MedicationDispense.category" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.category.coding">
+      <path value="MedicationDispense.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.category.coding:DispenseCode">
+      <path value="MedicationDispense.category.coding" />
+      <sliceName value="DispenseCode" />
+      <short value="DispenseCode" />
+      <definition value="Category snomed code used for indexing/retrieval of the ZIB Dispense. The snomed code 373784005 for this resource is stated in the Medication Process v09." />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="373784005" />
+      </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]">
       <path value="MedicationDispense.medication[x]" />
