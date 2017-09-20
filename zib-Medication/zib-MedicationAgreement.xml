@@ -4,7 +4,7 @@
   <id value="e445eae5-56dd-4b2f-85c1-39fc585f0d35" />
   <meta>
     <versionId value="6" />
-    <lastUpdated value="2017-09-04T15:34:39.634+02:00" />
+    <lastUpdated value="2017-09-20T12:55:24.86+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
   <name value="ZIB-Medication-Agreement" />
@@ -106,7 +106,7 @@
       <path value="MedicationRequest.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <example>
-        <label value="Example of MedicationAgreementAdditionalInformation"/>
+        <label value="Example of MedicationAgreementAdditionalInformation" />
         <valueCodeableConcept>
           <coding>
             <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2050" />
@@ -137,6 +137,26 @@
         <identity value="zib-medicationagreement" />
         <map value="NL-CM:9.6.19954" />
       </mapping>
+    </element>
+    <element id="MedicationRequest.category.coding">
+      <path value="MedicationRequest.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationRequest.category.coding:MedicationAgreementCode">
+      <path value="MedicationRequest.category.coding" />
+      <sliceName value="MedicationAgreementCode" />
+      <short value="MedicationAgreementCode" />
+      <definition value="Snomed code for indication of the MedicationAgreement - Prescription, used for indexing/retrieval." />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="16076005" />
+      </fixedCoding>
     </element>
     <element id="MedicationRequest.medication[x]">
       <path value="MedicationRequest.medication[x]" />
