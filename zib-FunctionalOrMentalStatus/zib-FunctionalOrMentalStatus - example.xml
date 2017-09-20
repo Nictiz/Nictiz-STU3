@@ -39,9 +39,9 @@
     <status value="final"/>
     <category>
         <coding>
-            <system value="http://hl7.org/fhir/observation-category"/>
-            <code value="social-history"/>
-            <display value="Social History"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="118228005"/>
+            <display value="Functional finding (finding)"/>
         </coding>
     </category>
     <code>

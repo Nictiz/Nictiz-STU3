@@ -111,6 +111,7 @@
       <short value="DispenseRequestCode" />
       <definition value="Category code used for indexing/retrieval of the ZIB DispenseRequest. The system and code are stated in the Medication Process v09." />
       <fixedCoding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3" />
         <code value="3" />
       </fixedCoding>
     </element>
