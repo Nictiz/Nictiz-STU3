@@ -3,7 +3,7 @@
   <id value="088679af-b106-42d7-a320-052652e800e2" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2017-02-22T10:32:08.751+00:00" />
+    <lastUpdated value="2017-09-20T10:54:03.278+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus" />
   <name value="ZIB-FunctionalOrMentalStatus" />
@@ -19,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="FunctioneleOfMentaleStatus as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#13;&#10;The functional or mental status provides insight into the patient’s functional and mental limitations." />
+  <description value="FunctioneleOfMentaleStatus as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;The functional or mental status provides insight into the patient’s functional and mental limitations." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <mapping>
@@ -31,7 +31,7 @@
   <abstract value="false" />
   <type value="Observation" />
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/observation-nl" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="Observation">
       <path value="Observation" />
@@ -45,8 +45,8 @@
       <path value="Observation.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -66,10 +66,47 @@
         <map value="NL-CM:4.26.5" />
       </mapping>
     </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <comment value="Either a snomed code for functional or mental status is provided for indexing and retrieval of this this concept." />
+      <min value="1" />
+    </element>
+    <element id="Observation.category.coding">
+      <path value="Observation.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.category.coding:FunctionalCode">
+      <path value="Observation.category.coding" />
+      <sliceName value="FunctionalCode" />
+      <short value="Functional Finding" />
+      <definition value="Category snomed code used for indexing/retrieval of observerd functional status." />
+      <max value="1" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="118228005" />
+      </fixedCoding>
+    </element>
+    <element id="Observation.category.coding:MentalCode">
+      <path value="Observation.category.coding" />
+      <sliceName value="MentalCode" />
+      <short value="Mental state, behavior and/or psychosocial function finding" />
+      <definition value="Category snomed code used for indexing/retrieval of observerd mental status." />
+      <max value="1" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="384821006" />
+      </fixedCoding>
+    </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <short value="StatusName" />
-      <definition value="Coded description of the functional or mental status or limitation.&#13;&#10;&#13;&#10;Code systems used include:&#13;&#10;SNOMED CT&#13;&#10;ICF (International Classification of Functioning, Disability and Health)&#13;&#10;NOC (Nursing Outcomes Classification)&#13;&#10;OMAHA" />
+      <definition value="Coded description of the functional or mental status or limitation.&#xD;&#xA;&#xD;&#xA;Code systems used include:&#xD;&#xA;SNOMED CT&#xD;&#xA;ICF (International Classification of Functioning, Disability and Health)&#xD;&#xA;NOC (Nursing Outcomes Classification)&#xD;&#xA;OMAHA" />
       <alias value="StatusNaam" />
       <mapping>
         <identity value="zib-functioneleofmentalestatus" />
@@ -80,8 +117,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="system"/>
+          <type value="value" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -138,15 +175,15 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.effectivePeriod">
+    <element id="Observation.effective[x]">
       <path value="Observation.effectivePeriod" />
-      <comment value="ZIB FuncntioneleOfMentaleStatus does not include an end StatusDate. The effectivePeriod.start can be used as StatusDate. This profile allows to use an end date as well. "/>
+      <comment value="ZIB FuncntioneleOfMentaleStatus does not include an end StatusDate. The effectivePeriod.start can be used as StatusDate. This profile allows to use an end date as well. " />
       <type>
         <code value="Period" />
-      </type>   
+      </type>
     </element>
     <element id="Observation.effectivePeriod.start">
-      <path value="Observation.effectivePeriod.start"/>
+      <path value="Observation.effectivePeriod.start" />
       <short value="StatusDate" />
       <definition value="Date on which the status was determined. A ‘vague’ date, such as only the year, is permitted." />
       <alias value="StatusDatum" />
@@ -155,10 +192,10 @@
         <map value="NL-CM:4.26.6" />
       </mapping>
     </element>
-    <element id="Observation.valueCodeableConcept">
+    <element id="Observation.value[x]">
       <path value="Observation.valueCodeableConcept" />
       <short value="StatusValue" />
-      <definition value="The extent to which the patient is limited by the functional or mental condition.&#13;&#10;If both the status name and the status value are recorded in code, then both values must come from the same code system. If the patient uses a medical aid, the evaluation of the extent of the limitation will take place without this aid." />
+      <definition value="The extent to which the patient is limited by the functional or mental condition.&#xD;&#xA;If both the status name and the status value are recorded in code, then both values must come from the same code system. If the patient uses a medical aid, the evaluation of the extent of the limitation will take place without this aid." />
       <alias value="StatusWaarde" />
       <type>
         <code value="CodeableConcept" />
@@ -172,8 +209,8 @@
       <path value="Observation.valueCodeableConcept.coding" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="system"/>
+          <type value="value" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
