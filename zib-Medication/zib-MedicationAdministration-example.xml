@@ -27,6 +27,13 @@
     <value value="6565265656"/>
   </identifier>
   <status value="stopped" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="18629005"/>
+      <display value="Administration of drug or medicament (procedure)"/>
+    </coding>
+  </category>
   <medicationReference>
     <reference value="Medication/123412"/>
     <display value="Glucose/NaCl 2,5/0,45% infvlst zak 500ml"/>

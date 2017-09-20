@@ -25,6 +25,13 @@
   </identifier>
   <status value="active"/>
   <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="16076005"/>
+      <display value="Prescription (procedure)"/>
+    </coding>
+  </category>
   <medicationReference>
     <reference value="Medication/example"/>
     <display value="Glimepiride tablet 3mg"/>

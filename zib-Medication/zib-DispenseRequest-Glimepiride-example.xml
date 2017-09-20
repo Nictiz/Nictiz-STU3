@@ -11,6 +11,12 @@
     </identifier>
     <status value="active"/>
     <intent value="order"/>
+    <category>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3"/>
+            <code value="3"/>
+        </coding>
+    </category>
     <medicationReference>
         <reference value="Medication/example"/>
         <display value="Glimepiride tablet 3mg"/>

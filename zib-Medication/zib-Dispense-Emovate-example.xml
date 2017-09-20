@@ -27,6 +27,13 @@
         <value value="123456654321"/>
     </identifier>
     <status value="completed"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="373784005"/>
+            <display value="Dispensing medication (procedure)"/>
+        </coding>
+    </category>
     <medicationReference>
         <reference value="Medication/example"/>
         <display value="Emovate zalf 0,5 mg/g"/>
