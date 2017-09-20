@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-19T14:33:20.529+02:00" />
+    <lastUpdated value="2017-09-20T10:21:45.352+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cbcc" />
@@ -44,7 +44,7 @@
         <map value="NL-CM:2.1.1" />
       </mapping>
     </element>
-    <element>
+    <element id="Consent.extension">
       <path value="Consent.extension" />
       <slicing>
         <discriminator>
@@ -139,7 +139,7 @@
         <description value="The medical treatment to which the treatment instruction applies." />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.1--20150401000000" />
-          <display value="BehandelingCodelijst"/>
+          <display value="BehandelingCodelijst" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -147,7 +147,7 @@
         <map value="NL-CM:2.1.3" />
       </mapping>
     </element>
-    <element>
+    <element id="Consent.modifierExtension">
       <path value="Consent.modifierExtension" />
       <slicing>
         <discriminator>
@@ -174,13 +174,38 @@
         <description value="Indication of permission for the treatment, no permission for the treatment, or permission for the treatment with constraints." />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.2--20150401000000" />
-          <display value="BehandelingToegestaanCodelijst"/>
+          <display value="BehandelingToegestaanCodelijst" />
         </valueSetReference>
       </binding>
       <mapping>
         <identity value="zib-treatmentinstruction" />
         <map value="NL-CM:2.1.4" />
       </mapping>
+    </element>
+    <element id="Consent.category">
+      <path value="Consent.category" />
+      <min value="1" />
+    </element>
+    <element id="Consent.category.coding">
+      <path value="Consent.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Consent.category.coding:treatmentInstructions">
+      <path value="Consent.category.coding" />
+      <sliceName value="treatmentInstructions" />
+      <short value="Treatment Instructions" />
+      <definition value="Category snomed code used for indexing/retrieval of TreatmentInstructions. " />
+      <max value="1" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="11291000146105" />
+      </fixedCoding>
     </element>
     <element id="Consent.patient ">
       <path value="Consent.patient" />
@@ -305,7 +330,7 @@
         <valueUri value="http://wetten.overheid.nl/" />
       </example>
     </element>
-    <element>
+    <element id="Consent.except.extension">
       <path value="Consent.except.extension" />
       <slicing>
         <discriminator>
