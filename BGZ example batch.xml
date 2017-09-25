@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="bundle-BGZ-request"/> 
-  <type value="batch"/> 
+  <type value="batch-response"/> 
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/Patient?identifier=[patient-id]"/> 
+      <url value="/Patient?identifier=[patient-id]&amp;_include=Patient:general-practitioner"/> 
     </request> 
   </entry>
   <entry> 
@@ -179,13 +179,7 @@
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/Appointment?patient.identifier=[patient-id]&amp;status=booked,status=pending,status=proposed"/> 
-    </request> 
-  </entry> 
-  <entry> 
-    <request> 
-      <method value="GET"/> 
-      <url value="/Practitioner_has:Patient:general-practitioner:identifier=[patient-id]"/> 
+      <url value="/Appointment?patient.identifier=[patient-id]&amp;status=booked,pending,proposed"/> 
     </request> 
   </entry> 
 </Bundle> 
