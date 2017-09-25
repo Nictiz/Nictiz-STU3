@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="bundle-request-simplesummary"/> 
+  <id value="bundle-BGZ-request"/> 
   <type value="batch"/> 
   <entry> 
     <request> 
