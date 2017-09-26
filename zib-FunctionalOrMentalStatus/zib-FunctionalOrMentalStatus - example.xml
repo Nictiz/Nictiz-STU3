@@ -41,14 +41,14 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="118228005"/>
-            <display value="Functional finding (finding)"/>
+            <display value="Functional finding"/>
         </coding>
     </category>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="29923002"/>
-            <display value="Shaving (procedure)"/>
+            <display value="Shaving"/>
         </coding>
     </code>
     <subject>
@@ -61,7 +61,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="284892005"/>
-            <display value="Difficulty shaving (finding)"/>
+            <display value="Difficulty shaving"/>
         </coding>
     </valueCodeableConcept>
     <comment value="Everyday living activities are increasingly being affected by the patient's Rheumatoid arthritis"/>
