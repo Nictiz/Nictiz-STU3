@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-20T10:21:45.352+02:00" />
+    <lastUpdated value="2017-09-26T16:56:57.79+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cbcc" />
@@ -202,10 +202,21 @@
       <short value="Treatment Instructions" />
       <definition value="Category snomed code used for indexing/retrieval of TreatmentInstructions. " />
       <max value="1" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="11291000146105" />
-      </fixedCoding>
+    </element>
+    <element id="Consent.category.coding:treatmentInstructions.system">
+      <path value="Consent.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Consent.category.coding:treatmentInstructions.code">
+      <path value="Consent.category.coding.code" />
+      <fixedCode value="11291000146105" />
+    </element>
+    <element id="Consent.category.coding:treatmentInstructions.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Consent.category.coding.display" />
+      <fixedString value="Treatment instructions (record artifact)" />
     </element>
     <element id="Consent.patient ">
       <path value="Consent.patient" />
