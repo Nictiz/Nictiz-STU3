@@ -72,6 +72,16 @@
       <path value="Procedure.category" />
       <definition value="A code that classifies the procedure for searching, sorting and display purposes. In the Basisgegevenset Zorg (BGZ) use case, this is use to search and retrieve Surgical Procedures." />
       <min value="1" />
+      <example>
+        <label value="Example of category code"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </valueCodeableConcept>
+      </example>
     </element>
     <element id="Procedure.code">
       <path value="Procedure.code" />
