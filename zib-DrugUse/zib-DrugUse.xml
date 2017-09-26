@@ -50,7 +50,7 @@
         <coding>
           <system value="http://snomed.info/sct"/>
           <code value="228366006"/>
-          <display value="Finding related to drug misuse behaviour (finding)"/>
+          <display value="Finding related to drug misuse behaviour"/>
         </coding>
       </fixedCodeableConcept>
     </element>
@@ -99,7 +99,7 @@
           <coding>
             <system value="http://snomed.info/sct"/>
             <code value="44870007"/>
-            <display value="Misused drugs in past (finding)"/>
+            <display value="Misused drugs in past"/>
           </coding>
         </valueCodeableConcept>
       </example>
@@ -167,7 +167,7 @@
           <coding>
             <system value="http://snomed.info/sct"/>
             <code value="373464007"/>
-            <display value="Ketamine (substance)"/>
+            <display value="Ketamine"/>
           </coding>
         </valueCodeableConcept>
       </example>

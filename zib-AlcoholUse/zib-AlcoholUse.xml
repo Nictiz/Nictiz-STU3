@@ -50,7 +50,7 @@
         <coding>
           <system value="http://snomed.info/sct"/>
           <code value="228273003"/>
-          <display value="Finding related to alcohol drinking behavior (finding)"/>
+          <display value="Finding related to alcohol drinking behavior"/>
         </coding>
       </fixedCodeableConcept>
     </element>
@@ -118,7 +118,7 @@
           <coding>
             <system value="http://snomed.info/sct"/>
             <code value="219006"/>
-            <display value="Current drinker of alcohol (finding)"/>
+            <display value="Current drinker of alcohol"/>
           </coding>
         </valueCodeableConcept>
       </example>

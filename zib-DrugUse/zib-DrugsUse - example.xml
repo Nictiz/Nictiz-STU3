@@ -46,7 +46,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="228366006"/>
-            <display value="Finding related to drug misuse behaviour (finding)"/>
+            <display value="Finding related to drug misuse behaviour"/>
         </coding>
     </code>
     <subject>
@@ -60,7 +60,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="44870007"/>
-            <display value="Misused drugs in past (finding)"/>
+            <display value="Misused drugs in past"/>
         </coding>
     </valueCodeableConcept>
     <comment value="Used drugs only during parties and nightlife."/>
@@ -76,7 +76,7 @@
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="373464007"/>
-                <display value="Ketamine (substance)"/>
+                <display value="Ketamine"/>
             </coding>
         </valueCodeableConcept>
     </component>

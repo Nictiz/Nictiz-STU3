@@ -43,7 +43,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="228273003"/>
-            <display value="Finding related to alcohol drinking behavior (finding)"/>
+            <display value="Finding related to alcohol drinking behavior"/>
         </coding>
     </code>
     <subject>
@@ -57,7 +57,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="82581004"/>
-            <display value="Ex-drinker (finding)"/>
+            <display value="Ex-drinker"/>
         </coding>
     </valueCodeableConcept>
     <comment value="Patient was a binge drinker"/>
