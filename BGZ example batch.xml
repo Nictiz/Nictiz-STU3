@@ -155,7 +155,7 @@
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/ProcedureRequest?subject=[patient-id]&amp;status=active"/> 
+      <url value="/ProcedureRequest?patient.identifier=[patient-id]&amp;status=active"/> 
     </request> 
   </entry>    
   <entry> 
