@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-20T10:37:35.998+02:00" />
+    <lastUpdated value="2017-09-26T16:52:38.168+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cbcc" />
@@ -107,6 +107,7 @@
       <fixedCoding>
         <system value="http://snomed.info/sct" />
         <code value="11341000146107" />
+        <display value="Living will and advance directive record (record artifact)" />
       </fixedCoding>
     </element>
     <element id="Consent.category.coding:typeOfLivingWill">
