@@ -60,7 +60,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="44870007"/>
-            <display value="Misused drugs in past"/>
+            <display value="Misused drugs in past (finding)"/>
         </coding>
     </valueCodeableConcept>
     <comment value="Used drugs only during parties and nightlife."/>
