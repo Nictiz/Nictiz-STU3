@@ -4,7 +4,7 @@
   <id value="d15249e8-b757-4f78-9026-b9b117b35587" />
   <meta>
     <versionId value="3" />
-    <lastUpdated value="2017-09-20T16:14:34.832+02:00" />
+    <lastUpdated value="2017-09-26T17:04:21.354+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DispenseRequest" />
   <name value="ZIB-DispenseRequest" />
@@ -110,10 +110,14 @@
       <sliceName value="DispenseRequestCode" />
       <short value="DispenseRequestCode" />
       <definition value="Category code used for indexing/retrieval of the ZIB DispenseRequest. The system and code are stated in the Medication Process v09." />
-      <fixedCoding>
-        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3" />
-        <code value="3" />
-      </fixedCoding>
+    </element>
+    <element id="MedicationRequest.category.coding:DispenseRequestCode.system">
+      <path value="MedicationRequest.category.coding.system" />
+      <fixedUri value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3" />
+    </element>
+    <element id="MedicationRequest.category.coding:DispenseRequestCode.code">
+      <path value="MedicationRequest.category.coding.code" />
+      <fixedCode value="3" />
     </element>
     <element id="MedicationRequest.medication[x]">
       <path value="MedicationRequest.medication[x]" />

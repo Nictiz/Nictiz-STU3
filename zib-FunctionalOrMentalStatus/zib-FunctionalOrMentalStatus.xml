@@ -3,7 +3,7 @@
   <id value="088679af-b106-42d7-a320-052652e800e2" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2017-09-20T10:54:03.278+02:00" />
+    <lastUpdated value="2017-09-26T17:19:38.623+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus" />
   <name value="ZIB-FunctionalOrMentalStatus" />
@@ -87,10 +87,21 @@
       <short value="Functional Finding" />
       <definition value="Category snomed code used for indexing/retrieval of observerd functional status." />
       <max value="1" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="118228005" />
-      </fixedCoding>
+    </element>
+    <element id="Observation.category.coding:FunctionalCode.system">
+      <path value="Observation.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.category.coding:FunctionalCode.code">
+      <path value="Observation.category.coding.code" />
+      <fixedCode value="118228005" />
+    </element>
+    <element id="Observation.category.coding:FunctionalCode.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.category.coding.display" />
+      <fixedString value="Functional finding (finding)" />
     </element>
     <element id="Observation.category.coding:MentalCode">
       <path value="Observation.category.coding" />
@@ -98,10 +109,21 @@
       <short value="Mental state, behavior and/or psychosocial function finding" />
       <definition value="Category snomed code used for indexing/retrieval of observerd mental status." />
       <max value="1" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="384821006" />
-      </fixedCoding>
+    </element>
+    <element id="Observation.category.coding:MentalCode.system">
+      <path value="Observation.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.category.coding:MentalCode.code">
+      <path value="Observation.category.coding.code" />
+      <fixedCode value="384821006" />
+    </element>
+    <element id="Observation.category.coding:MentalCode.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.category.coding.display" />
+      <fixedString value="Mental state, behavior and/or psychosocial function finding (finding)" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />

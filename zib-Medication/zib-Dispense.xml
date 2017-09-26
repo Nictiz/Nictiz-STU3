@@ -4,7 +4,7 @@
   <id value="3dace244-e5bf-4dd9-8ee4-12df8dd69a58" />
   <meta>
     <versionId value="7" />
-    <lastUpdated value="2017-09-20T16:22:32.69+02:00" />
+    <lastUpdated value="2017-09-26T17:03:37.156+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense" />
   <name value="ZIB-Dispense" />
@@ -163,10 +163,21 @@
       <sliceName value="DispenseCode" />
       <short value="DispenseCode" />
       <definition value="Category snomed code used for indexing/retrieval of the ZIB Dispense. The snomed code 373784005 for this resource is stated in the Medication Process v09." />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="373784005" />
-      </fixedCoding>
+    </element>
+    <element id="MedicationDispense.category.coding:DispenseCode.system">
+      <path value="MedicationDispense.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="MedicationDispense.category.coding:DispenseCode.code">
+      <path value="MedicationDispense.category.coding.code" />
+      <fixedCode value="373784005" />
+    </element>
+    <element id="MedicationDispense.category.coding:DispenseCode.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="MedicationDispense.category.coding.display" />
+      <fixedString value="Dispensing medication (procedure)" />
     </element>
     <element id="MedicationDispense.medication[x]">
       <path value="MedicationDispense.medication[x]" />
