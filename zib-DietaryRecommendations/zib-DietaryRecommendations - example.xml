@@ -5,32 +5,6 @@
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations"/>
   </meta>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <table>
-        <caption>Patient with id example</caption>
-        <thead>
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>k</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </text>
   <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations-Explanation">
     <valueString value="Since last week the dieet changed to a more protein rich dieet"/>
   </extension>
