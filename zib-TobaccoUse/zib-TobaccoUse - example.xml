@@ -47,7 +47,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="365980008"/>
-            <display value="Finding of tobacco use and exposure"/>
+            <display value="Finding of tobacco use and exposure (finding)"/>
         </coding>
     </code>
     <subject>
@@ -72,7 +72,7 @@
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="266918002"/>
-                <display value="Amount and type of tobacco smoked"/>
+                <display value="Tobacco smoking consumption (observable entity)"/>
             </coding>   
         </code>
         <valueCodeableConcept>
@@ -111,7 +111,7 @@
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="315609007"/>
-                <display value="Pack years"/>
+                <display value="Cigarette pack-years (observable entity)"/>
             </coding>
         </code>
        <valueQuantity>
