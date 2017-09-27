@@ -8,7 +8,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration" />
   <name value="ZIB-Medication-Use-Duration" />
-  <title value="ZIB Medication Use Duration" />
+  <title value="HCIM Medication Use Duration" />
   <status value="draft" />
   <date value="2016-12-12T16:29:39.343+00:00" />
   <publisher value="Nictiz" />
@@ -35,7 +35,6 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="usage duration" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
@@ -43,6 +42,8 @@
     </element>
     <element id="Extension.valueDuration">
       <path value="Extension.valueDuration" />
+      <short value="UsageDuration" />
+      <alias value="Gebruiksduur" />
       <type>
         <code value="Duration" />
       </type>

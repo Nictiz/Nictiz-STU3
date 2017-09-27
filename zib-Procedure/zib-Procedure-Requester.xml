@@ -6,7 +6,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-Requester" />
   <name value="ZIB-Procedure-Requester" />
-  <title value="ZIB Procedure Requester" />
+  <title value="HCIM Procedure Requester" />
   <status value="draft" />
   <date value="2017-02-06T17:00:22.0909822+01:00" />
   <publisher value="Nictiz" />
@@ -19,7 +19,7 @@
     </telecom>
   </contact>
   <description value="The healthcare provider who requested the procedure." />
-  <purpose value="The Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) Procedure version 1.0.models a direct reference to the healthcare provider who requested the procedure. The Procedure resource does not include a reference to a Practitioner resource to indicate who requested the procedure." />
+  <purpose value="The Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) Procedure version 1.0.models a direct reference to the healthcare provider who requested the procedure. The Procedure resource does not include a reference to a Practitioner resource to indicate who requested the procedure." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />

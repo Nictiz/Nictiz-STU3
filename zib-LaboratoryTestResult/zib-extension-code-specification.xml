@@ -7,7 +7,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
   <name value="ZIB-extension-code-specification" />
-  <title value="ZIB extension code-specification" />
+  <title value="HCIM extension code-specification" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -18,7 +18,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Provides the specific CBB code for a FHIR element that has a required binding to a FHIR ValueSet." />
+  <description value="Provides the specific HCIM code for a FHIR element that has a required binding to a FHIR ValueSet." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
   <kind value="primitive-type" />
@@ -33,8 +33,9 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Provides the specific CBB code for a FHIR element that has a required binding to a FHIR ValueSet" />
+      <short value="Provides the specific HCIM code for a FHIR element that has a required binding to a FHIR ValueSet" />
       <definition value="Defines a more specific value to a code. Especially useful for FHIR's required ValueSets. These extensions are primarily used on codes bound to a required value set, where you would like to use a more specific code than the codes in the bounded value set." />
+      <alias value="Bevat de specifieke ZIB-code bij een FHIR-element die een verplichte koppeling heeft met een bepaalde FHIR waardelijst" />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />

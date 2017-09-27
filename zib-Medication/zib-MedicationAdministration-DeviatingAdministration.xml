@@ -5,10 +5,18 @@
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DeviatingAdministration"/>
     <name value="ZIB-Deviating-Administration"/>
-    <title value="ZIB Deviating Administration"/>
+    <title value="HCIM Deviating Administration"/>
     <status value="draft"/>
     <date value="2017-06-08T14:49:41.0568655+02:00"/>
     <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
     <description value="In the administration, was there a deviation from the medication or administration agreement? This can be a deviation in product, time, amount, route of administration or administering speed or foregoing administration altogether."/>
     <purpose value="Added to define if the medication adminstration deviates from the medication request is was based on."/>
     <copyright value="CC0"/>

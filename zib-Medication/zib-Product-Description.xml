@@ -7,7 +7,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Product-Description" />
   <name value="ZIB-Product-Description" />
-  <title value="ZIB Product Description" />
+  <title value="HCIM Product Description" />
   <status value="draft" />
   <date value="2017-02-20T14:32:19.216+00:00" />
   <publisher value="Nictiz" />

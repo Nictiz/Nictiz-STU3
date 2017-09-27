@@ -7,7 +7,7 @@
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Practitioner" />
   <name value="ZIB-MedicalAid-Practitioner" />
-  <title value="ZIB MedicalAid Practitioner" />
+  <title value="HCIM MedicalAid Practitioner" />
   <status value="draft" />
   <date value="2017-02-01T17:54:36.1834577+01:00" />
   <publisher value="Nictiz" />
@@ -19,7 +19,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The healthprofessional involved in the indication for use of the medical device as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0." />
+  <description value="The healthprofessional involved in the indication for use of the medical device as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) 'MedischHulpmiddel' version 1.0." />
   <purpose value="To record who is involved in the indication for use of the medical device. This extension is used because currently there is no reference to a Practitioner resource for this supporting information" />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />

@@ -30,6 +30,6 @@
             </extension>
         </extension>
         <reference value="Patient/example"/>
-        <display value="Irma Jongeneel-de Haas "/>
+        <display value="Irma Jongeneel-de Haas"/>
     </payor>
 </Coverage>

@@ -5,10 +5,18 @@
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DispenseRequest-RelatedMedicationAgreement"/>
     <name value="ZIB-Related-Medication-Agreement"/>
-    <title value="ZIB Related Medication Agreement"/>
+    <title value="HCIM Related Medication Agreement"/>
     <status value="draft"/>
     <date value="2017-09-12T14:35:24.878917+02:00"/>
     <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
     <description value="The medication agreement related to the current medication information"/>
     <purpose value="This is extension is needed to describe the context of the current medication information"/>
     <copyright value="CC0"/>
