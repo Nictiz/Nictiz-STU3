@@ -22,9 +22,9 @@
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-contactpersoon"/>
-        <uri value="https://zibs.nl/wiki/Contactpersoon(NL)"/>
-        <name value="Zorginformatiebouwsteen Contactpersoon"/>
+        <identity value="hcim-contactperson-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/ContactPerson-v1.2(2015EN)"/>
+        <name value="HCIM ContactPerson-v1.2(2015EN)"/>
     </mapping>
     <kind value="complex-type"/>
     <abstract value="false"/>
@@ -36,7 +36,6 @@
     <differential>
         <element id="Extension">
             <path value="Extension"/>
-            <short value="RelatedPersonRole"/>
         </element>
         <element id="Extension.url">
             <path value="Extension.url"/>
@@ -45,6 +44,8 @@
         </element>
         <element id="Extension.valueCodeableConcept">
             <path value="Extension.valueCodeableConcept"/>
+            <short value="Role"/>
+            <alias value="Rol"/>
             <min value="1"/>
             <type>
                 <code value="CodeableConcept"/>
@@ -56,6 +57,10 @@
                     <display value="RolCodelijst"/>
                 </valueSetReference>
             </binding>
+            <mapping>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
+                <map value="NL-CM:3.1.2"/>
+            </mapping>
         </element>
     </differential>
 </StructureDefinition>
