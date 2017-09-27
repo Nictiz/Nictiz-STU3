@@ -1,81 +1,81 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-  <meta>
-    <versionId value="1" />
-    <lastUpdated value="2017-01-31T15:18:41.409+00:00" />
-  </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/composition-nl" />
-  <name value="nl-core-composition" />
-  <title value="nl-core-composition" />
-  <status value="draft" />
-  <date value="2017-01-20T11:24:38.3562944+01:00" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.0" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Composition" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
-  <derivation value="constraint"/>
-  <differential>
-    <element id="Composition">
-      <path value="Composition" />
-    </element>
-    <element id="Composition.author">
-      <path value="Composition.author" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedischHulpmiddelProduct" />
-      </type>
-    </element>
-    <element id="Composition.attester.party">
-      <path value="Composition.attester.party" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-      </type>
-    </element>
-    <element id="Composition.custodian">
-      <path value="Composition.custodian" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-      </type>
-    </element>
-    <element id="Composition.encounter">
-      <path value="Composition.encounter" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
-      </type>
-    </element>
-  </differential>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2017-01-31T15:18:41.409+00:00"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/composition-nl"/>
+    <name value="nl-core-composition"/>
+    <title value="nl-core-composition"/>
+    <status value="draft"/>
+    <date value="2017-01-20T11:24:38.3562944+01:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Composition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Composition">
+            <path value="Composition"/>
+        </element>
+        <element id="Composition.author">
+            <path value="Composition.author"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedischHulpmiddelProduct"/>
+            </type>
+        </element>
+        <element id="Composition.attester.party">
+            <path value="Composition.attester.party"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+            </type>
+        </element>
+        <element id="Composition.custodian">
+            <path value="Composition.custodian"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+            </type>
+        </element>
+        <element id="Composition.encounter">
+            <path value="Composition.encounter"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
+            </type>
+        </element>
+    </differential>
 </StructureDefinition>
