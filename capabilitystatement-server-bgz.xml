@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This CapabilityStatement describes the minimal requirements for a server to expose the &amp; Basisgegevensset Zorg &amp; (Dutch Patient Summary)."></description>
+  <description value="This CapabilityStatement describes the minimal requirements for a server to expose the &quot;Basisgegevensset Zorg&quot; (Dutch Patient Summary)."></description>
   <copyright value="CC0"/>
   <kind value="requirements"/>
   <fhirVersion value="3.0.2"/>
