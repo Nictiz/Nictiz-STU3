@@ -1,5 +1,5 @@
-<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
     <id value="nl-address-official"/>
     <meta>
         <versionId value="3"/>
@@ -25,9 +25,10 @@
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-address"/>
-        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
-        <name value="Address as part of Zorginformatiebouwsteen Patient"/>
+        <identity value="hcim-address-v2.0.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)"/>
+        <name value="Address as part of HCIM Patient-v2.0.1(2015EN)"/>
+        <comment value="Address has become an independent information model as of release 2017 of the HCIMs"/>
     </mapping>
     <kind value="complex-type"/>
     <abstract value="false"/>
@@ -39,7 +40,6 @@
     <differential>
         <element id="Extension">
             <path value="Extension"/>
-            <short value="Mark an address as an 'officially registered' address."/>
         </element>
         <element id="Extension.url">
             <path value="Extension.url"/>
@@ -54,6 +54,7 @@
             <short value="true if part of an official registry. false if it is not"/>
             <definition
                 value="When the value is true, this address is marked to be part of an official registry (Dutch realm: BRP). When the value is false, this address is explicitly marked as not part of an official registry."/>
+            <alias value="true als deze deel is van een officieel register. false indien dat niet het geval is"/>
             <min value="1"/>
             <type>
                 <code value="boolean"/>
@@ -64,7 +65,7 @@
                 <map value="AD/@use[.='OR']"/>
             </mapping>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.11"/>
             </mapping>
         </element>

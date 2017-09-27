@@ -24,9 +24,10 @@
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-address"/>
-        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
-        <name value="Address as part of Zorginformatiebouwsteen Patient"/>
+        <identity value="hcim-address-v2.0.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)"/>
+        <name value="Address as part of HCIM Patient-v2.0.1(2015EN)"/>
+        <comment value="Address has become an independent information model as of release 2017 of the HCIMs"/>
     </mapping>
     <mapping>
         <identity value="BRP"/>
@@ -84,7 +85,7 @@
                 <xpath value="not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])" />
             </constraint>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.4"/>
             </mapping>
         </element>
@@ -104,6 +105,7 @@
             <short value="Mark an address as an 'officially registered' address."/>
             <definition
                 value="Mark an address as an 'officially registered' address. In Dutch context that means it is registered in the Basisregistratie persoonsgegevens (BRP)"/>
+            <alias value="Markeer een adres als een 'officieel geregistreerd adres."/>
             <min value="0"/>
             <max value="1"/>
             <type>
@@ -111,7 +113,7 @@
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official"/>
             </type>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.11"/>
             </mapping>
         </element>
@@ -140,7 +142,7 @@
                 <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"/>
             </type>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.12"/>
             </mapping>
             <mapping>
@@ -159,7 +161,7 @@
                 <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"/>
             </type>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.13"/>
             </mapping>
             <mapping>
@@ -180,11 +182,11 @@
                 <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix"/>
             </type>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.40"/>
             </mapping>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.41"/>
             </mapping>
             <mapping>
@@ -207,7 +209,7 @@
                 <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID"/>
             </type>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.28"/>
             </mapping>
         </element>
@@ -223,7 +225,7 @@
                 <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"/>
             </type>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.42"/>
             </mapping>
             <mapping>
@@ -243,7 +245,7 @@
                 <valueString value="Den Haag"/>
             </example>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.14"/>
             </mapping>
             <mapping>
@@ -264,7 +266,7 @@
                 <valueString value="Wateringen"/>
             </example>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.16"/>
             </mapping>
             <mapping>
@@ -307,7 +309,7 @@
                 <xpath value="not(../f:country[lower-case(@value)=('nl','nld','nederland')]) or matches(@value,'^\d{4}[A-Z]{2}$')"/>
             </constraint>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.15"/>
             </mapping>
             <mapping>
@@ -325,7 +327,7 @@
                 <valueString value="NLD"/>
             </example>
             <mapping>
-                <identity value="zib-address"/>
+                <identity value="hcim-address-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.17"/>
             </mapping>
         </element>
