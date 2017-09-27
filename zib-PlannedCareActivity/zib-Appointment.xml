@@ -1,167 +1,174 @@
-﻿<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
-  <meta>
-    <lastUpdated value="2017-05-22T12:55:43.879+02:00" />
-  </meta>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="pa" />
-  </extension>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Appointment" />
-  <name value="ZIB-Appointment" />
-  <title value="ZIB Appointment" />
-  <status value="draft" />
-  <date value="2017-05-22T11:17:54.2109424+02:00" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="Appointment as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.OverdrachtGeplandeZorgActiviteit. " />
-  <purpose value="Recording planned appointments, referrals, treatments, diagnostic procedures, open orders and orders of which the results are not yet known gives every recipient, user or healthcare facility insight in the planned healthcare for this patient. This can prevent situations in which diagnostics and treatment can conflict with each other.&#xD;&#xA;This will give the recipient the option to place an order, cancel the order or act in any other way in accordance with their own policy.&#xD;&#xA;For orders that do not yet have results, the recipient is informed of the fact that potentially relevant results will be made available (which have to be requested)." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.0" />
-  <mapping>
-    <identity value="zib-overdrachtgeplandezorgactiviteit" />
-    <uri value="https://zibs.nl/wiki/OverdrachtGeplandeZorgActiviteit(NL)" />
-    <name value="Zorginformatiebouwsteen OverdrachtGeplandeZorgActiviteit" />
-  </mapping>
-  <mapping>
-    <identity value="zib-contact"/>
-    <uri value="https://zibs.nl/wiki/Contact(NL)"/>
-    <name value="Zorginformatiebouwsteen Contact"/>
-  </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Appointment" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="Appointment.status.extension">
-      <path value="Appointment.status.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Appointment.status.extension:orderStatus">
-      <path value="Appointment.status.extension" />
-      <sliceName value="orderStatus" />
-      <short value="OrderStatus" />
-      <definition value="The status of the order. " />
-      <alias value="OrderStatus" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="The status of the order." />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.16.1.2--20150401000000" />
-          <display value="OrderStatusCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtgeplandezorgactiviteit" />
-        <map value="NL-CM:16.1.9" />
-      </mapping>
-    </element>
-    <element id="Appointment.reason.text">
-      <path value="Appointment.reason.text"/>
-      <short value="Textual representation of the DeviatingResult"/>
-      <definition value="A deviating result which serves as the reason for the contact."/>
-      <alias value="AfwijkendeUitslag"/>
-      <mapping>
-        <identity value="zib-contact"/>
-        <map value="NL-CM:15.1.12"/>
-      </mapping>
-    </element>
-    <element>
-      <path value="Appointment.indication"/>
-      <short value="ContactReason"/>
-      <definition value="The problem that led to the contact or the procedure carried out during the contact.&#xD;&#xA;&#xD;&#xA;Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure."/>
-      <alias value="Verrichting"/>
-      <alias value="Probleem"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
-      </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
-      </type>
-      <mapping>
-        <identity value="zib-contact"/>
-        <map value="NL-CM:15.1.6"/>
-      </mapping>
-      <mapping>
-        <identity value="zib-contact"/>
-        <map value="NL-CM:15.1.11"/>
-      </mapping>
-    </element>
-    <element id="Appointment.start">
-      <path value="Appointment.start" />
-      <short value="StartDate" />
-      <definition value="Date/Time that the appointment is to take place.&#xD;&#xA;" />
-      <alias value="BeginDatum" />
-      <mapping>
-        <identity value="zib-overdrachtgeplandezorgactiviteit" />
-        <map value="NL-CM:16.1.10" />
-      </mapping>
-    </element>
-    <element id="Appointment.end">
-      <path value="Appointment.end" />
-      <short value="EndDate" />
-      <alias value="EindDatum" />
-      <mapping>
-        <identity value="zib-overdrachtgeplandezorgactiviteit" />
-        <map value="NL-CM:16.1.11" />
-      </mapping>
-    </element>
-    <element id="Appointment.participant.actor">
-      <path value="Appointment.participant.actor"/>
-      <short value="ContactWith"/>
-      <alias value="ContactMet"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-      </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-      </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-      </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
-      </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
-      </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-healthcareservice"/>
-      </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-location"/>
-      </type>
-      <mapping>
-        <identity value="zib-contact"/>
-        <map value="NL-CM:15.1.7"/>
-      </mapping>
-    </element>
-  </differential>
+﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+    <meta>
+        <lastUpdated value="2017-05-22T12:55:43.879+02:00"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+        <valueCode value="pa"/>
+    </extension>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Appointment"/>
+    <name value="ZIB-Appointment"/>
+    <title value="HCIM Appointment"/>
+    <status value="draft"/>
+    <date value="2017-05-22T11:17:54.2109424+02:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="Appointment as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.OverdrachtGeplandeZorgActiviteit."/>
+    <purpose
+        value="Recording planned appointments, referrals, treatments, diagnostic procedures, open orders and orders of which the results are not yet known gives every recipient, user or healthcare facility insight in the planned healthcare for this patient. This can prevent situations in which diagnostics and treatment can conflict with each other.&#xD;&#xA;This will give the recipient the option to place an order, cancel the order or act in any other way in accordance with their own policy.&#xD;&#xA;For orders that do not yet have results, the recipient is informed of the fact that potentially relevant results will be made available (which have to be requested)."/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <mapping>
+        <identity value="hcim-plannedcareactivityfortransfer-v1.2.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/PlannedCareActivityForTransfer-v1.2.1(2015EN)"/>
+        <name value="HCIM PlannedCareActivityForTransfer-v1.2.1(2015EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-encounter-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Encounter-v1.2(2015EN)"/>
+        <name value="HCIM Encounter-v1.2(2015EN)"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Appointment"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Appointment">
+            <path value="Appointment"/>
+        </element>
+        <element id="Appointment.status">
+            <path value="Appointment.status"/>
+        </element>
+        <element id="Appointment.status.extension">
+            <path value="Appointment.status.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Appointment.status.extension:orderStatus">
+            <path value="Appointment.status.extension"/>
+            <sliceName value="orderStatus"/>
+            <short value="OrderStatus"/>
+            <definition value="The status of the order."/>
+            <alias value="OrderStatus"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="The status of the order."/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.16.1.2--20150401000000"/>
+                    <display value="OrderStatusCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="hcim-plannedcareactivityfortransfer-v1.2.1-2015EN"/>
+                <map value="NL-CM:16.1.9"/>
+            </mapping>
+        </element>
+        <element id="Appointment.reason.text">
+            <path value="Appointment.reason.text"/>
+            <short value="Textual representation of the DeviatingResult"/>
+            <definition value="A deviating result which serves as the reason for the contact."/>
+            <alias value="AfwijkendeUitslag"/>
+            <mapping>
+                <identity value="hcim-encounter-v1.2-2015EN"/>
+                <map value="NL-CM:15.1.12"/>
+            </mapping>
+        </element>
+        <element id="Appointment.indication">
+            <path value="Appointment.indication"/>
+            <short value="ContactReason"/>
+            <definition value="The problem that led to the contact or the procedure carried out during the contact.&#xD;&#xA;&#xD;&#xA;Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure."/>
+            <alias value="Verrichting"/>
+            <alias value="Probleem"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
+            </type>
+            <mapping>
+                <identity value="hcim-encounter-v1.2-2015EN"/>
+                <map value="NL-CM:15.1.6"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-encounter-v1.2-2015EN"/>
+                <map value="NL-CM:15.1.11"/>
+            </mapping>
+        </element>
+        <element id="Appointment.start">
+            <path value="Appointment.start"/>
+            <short value="StartDate"/>
+            <definition value="Date/Time that the appointment is to take place."/>
+            <alias value="BeginDatum"/>
+            <mapping>
+                <identity value="hcim-plannedcareactivityfortransfer-v1.2.1-2015EN"/>
+                <map value="NL-CM:16.1.10"/>
+            </mapping>
+        </element>
+        <element id="Appointment.end">
+            <path value="Appointment.end"/>
+            <short value="EndDate"/>
+            <alias value="EindDatum"/>
+            <mapping>
+                <identity value="hcim-plannedcareactivityfortransfer-v1.2.1-2015EN"/>
+                <map value="NL-CM:16.1.11"/>
+            </mapping>
+        </element>
+        <element id="Appointment.participant.actor">
+            <path value="Appointment.participant.actor"/>
+            <short value="ContactWith"/>
+            <alias value="ContactMet"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-healthcareservice"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-location"/>
+            </type>
+            <mapping>
+                <identity value="hcim-encounter-v1.2-2015EN"/>
+                <map value="NL-CM:15.1.7"/>
+            </mapping>
+        </element>
+    </differential>
 </StructureDefinition>
