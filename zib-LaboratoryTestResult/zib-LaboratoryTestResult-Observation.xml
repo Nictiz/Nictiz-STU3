@@ -1,319 +1,321 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="a04df0e3-cd49-4cb2-84e8-ac147f692e93" />
-  <meta>
-    <versionId value="7" />
-    <lastUpdated value="2017-08-10T11:53:21.061+02:00" />
-  </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
-  <name value="ZIB-LaboratoryTestResult-Observation" />
-  <title value="ZIB LaboratoryTestResult Observation" />
-  <status value="draft" />
-  <date value="2017-08-11T12:22:55.327+00:00" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="A LaboratoryTestResult as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.2" />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.0" />
-  <mapping>
-    <identity value="zib-overdrachtlaboratoriumuitslag" />
-    <uri value="https://zibs.nl/wiki/OverdrachtLaboratoriumUitslag(NL)" />
-    <name value="Zorginformatiebouwsteen OverdrachtLaboratoriumUitslag" />
-  </mapping>
-  <mapping>
-    <identity value="zib-patient" />
-    <uri value="https://zibs.nl/wiki/Patient(NL)" />
-    <name value="Zorginformatiebouwsteen Patient" />
-  </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Observation" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/observation-nl" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="Observation">
-      <path value="Observation" />
-      <short value="LaboratoryTestResult" />
-      <definition value="Measurements and simple assertions made about a patient, device or other subject. These may be a simple or a complex observations. Simple Observations could consist of just a code and a value, whereas complex observations like panels and batteries could have related Observations and or components.&#xD;&#xA;The CBB LaboratoryResult also supports simple and more complex situations. For a simple result there will be a single LaboratoryTestResult.LaboratoryTest.TestName in Observation.code and no LaboratoryTestresult.Test. For a more complex situation there will be a LaboratoryTestResult.Test and any number of related LaboratoryTestResult.LaboratoryTest, e.g. parts of a panel or battery. Each related LaboratoryTest shall be conveyed in Observation.related or Observation.component. The deciding factor in choosing between related or component is: does the observation have use as independent observation (Observation.related) or is the observation only relevant in the context of its parent (Observation.component).&#xD;&#xA;Note that (textual) reports on individual (panels of) observations, like conclusions, go into a different resource DiagnosticReport. The DiagnosticReport then contains the references to the Observation resources it concerns." />
-      <alias value="LaboratoriumUitslag" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.1" />
-      </mapping>
-    </element>
-    <element id="Observation.identifier">
-      <path value="Observation.identifier" />
-      <short value="Identifier" />
-      <alias value="Identificatie" />
-    </element>
-    <element id="Observation.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
-        <valueString value="default: final" />
-      </extension>
-      <path value="Observation.status" />
-      <short value="ResultStatus" />
-      <alias value="ResultaatStatus" />
-    </element>
-    <element>
-      <path value="Observation.status.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.status.extension.ResultStatus">
-      <path value="Observation.status.extension" />
-      <sliceName value="ResultStatus" />
-      <short value="Provides the specific CBB code for ResultStatus" />
-      <definition value="Defines a more specific value to a code. Especially useful for FHIRs required ValueSets." />
-      <alias value="ResultaatStatus" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.8--20150401000000" />
-          <display value="ResultaatStatusCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.6" />
-      </mapping>
-    </element>
-    <element id="Observation.category">
-      <path value="Observation.category" />
-      <short value="ResultType" />
-      <alias value="ResultaatType" />
-      <binding>
-        <strength value="extensible" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.1--20150401000000" />
-          <display value="ResultaatTypeCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.7" />
-      </mapping>
-    </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <short value="TestOrTestName" />
-      <comment value="This can either be the ZIB concept Test (NL-CM:13.1.4) or TestName (NL-CM:13.1.8) depending on the use of DiagnosticReport resource. This element shall be mapped to TestName if DiagnosticReport is used and .component.code is not used. If component.code is used, the ZIB concept Test shall be mapped to this element." />
-      <alias value="OnderzoekOfTestNaam" />
-      <binding>
-        <strength value="extensible" />
-        <description value="LOINC (2.16.840.1.113883.6.1): All values" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.5--20150401000000" />
-          <display value="OnderzoekCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.4" />
-      </mapping>
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.8" />
-      </mapping>
-    </element>
-    <element id="Observation.subject">
-      <path value="Observation.subject" />
-      <alias value="Patient" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
-      <mapping>
-        <identity value="zib-patient" />
-        <map value="NL-CM:0.1.1" />
-      </mapping>
-    </element>
-    <element id="Observation.effective">
-      <path value="Observation.effective[x]" />
-      <short value="TestDateTime" />
-      <definition value="The date and if possible the time at which the test was carried out." />
-      <alias value="TestDatumTijd" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.13" />
-      </mapping>
-    </element>
-    <element id="Observation.value">
-      <path value="Observation.value[x]" />
-      <short value="Result" />
-      <alias value="Uitslag" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.10" />
-      </mapping>
-    </element>
-    <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <short value="ResultFlags" />
-      <definition value="Attention codes indicating whether the result is above or below certain reference values." />
-      <alias value="ResultaatVlaggen" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.14" />
-      </mapping>
-    </element>
-    <element id="Observation.comment">
-      <path value="Observation.comment" />
-      <short value="Explanation" />
-      <definition value="Comments, such as a textual interpretation or advice accompanying the result, for example." />
-      <alias value="Toelichting" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.5" />
-      </mapping>
-    </element>
-    <element id="Observation.method">
-      <path value="Observation.method" />
-      <short value="TestMethod" />
-      <definition value="The test method used to obtain the result." />
-      <alias value="Testmethode" />
-      <binding>
-        <strength value="extensible" />
-        <description value="SNOMED CT (2.16.840.1.113883.6.96): All values" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.4--20150401000000" />
-          <display value="TestmethodeCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.9" />
-      </mapping>
-    </element>
-    <element id="Observation.specimen">
-      <path value="Observation.specimen" />
-      <short value="Specimen" />
-      <alias value="Monster" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen" />
-      </type>
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.2" />
-      </mapping>
-    </element>
-    <element id="Observation.referenceRange">
-      <path value="Observation.referenceRange" />
-      <short value="Reference" />
-      <alias value="Referentie" />
-    </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity">
-      <path value="Observation.referenceRange.low" />
-      <sliceName value="SimpleQuantity" />
-      <short value="LowerReferenceLimit" />
-      <alias value="ReferentieOndergrens" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.12" />
-      </mapping>
-    </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity">
-      <path value="Observation.referenceRange.high" />
-      <sliceName value="SimpleQuantity" />
-      <short value="UpperReferenceLimit" />
-      <alias value="ReferentieBovengrens" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.11" />
-      </mapping>
-    </element>
-    <element id="Observation.related">
-      <path value="Observation.related" />
-      <short value="LaboratoryTest" />
-      <requirements value="Normally, an observation will have either a value or a set of related observations. A few observations (e.g. Apgar score) may have both a value and a set of related observations or sometimes QuestionnaireResponse from which the measure is derived." />
-      <alias value="LaboratoriumTest" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.3" />
-      </mapping>
-    </element>
-    <element id="Observation.related.target">
-      <path value="Observation.related.target" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Sequence" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
-      </type>
-    </element>
-    <element id="Observation.component">
-      <path value="Observation.component" />
-      <short value="LaboratoryTest" />
-      <definition value="Container of the LaboratoryTest concept. This container contains all data elements of the LaboratoryTest concept." />
-      <alias value="LaboratoriumTest" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.3" />
-      </mapping>
-    </element>
-    <element id="Observation.component.code">
-      <path value="Observation.component.code" />
-      <short value="TestName" />
-      <definition value="The TestName is the name of the executed test." />
-      <alias value="TestNaam" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationCode" />
-        </extension>
-        <strength value="extensible" />
-        <description value="LOINC (2.16.840.1.113883.6.1): All values" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.3--20150401000000" />
-          <display value="TestNaamCodelijst"/>
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value=" NL-CM:13.1.8" />
-      </mapping>
-    </element>
-    <element id="Observation.component.value[x]">
-      <path value="Observation.component.value[x]" />
-      <short value="Result" />
-      <definition value="The test result. Depending on the type of test, the result will consist of a value with a unit or a coded value (ordinal or nominal)." />
-      <alias value="Uitslag" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.10" />
-      </mapping>
-    </element>
-    <element id="Observation.component.interpretation">
-      <path value="Observation.component.interpretation" />
-      <short value="ResultFlags" />
-      <definition value="Attention codes indicating whether the result is above or below certain reference values." />
-      <alias value="ResultaatVlaggen" />
-      <mapping>
-        <identity value="zib-overdrachtlaboratoriumuitslag" />
-        <map value="NL-CM:13.1.14" />
-      </mapping>
-    </element>
-  </differential>
+﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+    <id value="a04df0e3-cd49-4cb2-84e8-ac147f692e93"/>
+    <meta>
+        <versionId value="7"/>
+        <lastUpdated value="2017-08-10T11:53:21.061+02:00"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
+    <name value="ZIB-LaboratoryTestResult-Observation"/>
+    <title value="HCIM LaboratoryTestResult Observation"/>
+    <status value="draft"/>
+    <date value="2017-08-11T12:22:55.327+00:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="A LaboratoryTestResult as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.2"/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <mapping>
+        <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/LaboratoryTestResultForTransfer-v1.2.2(2015EN)"/>
+        <name value="HCIM LaboratoryTestResultForTransfer-v1.2.2(2015EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-patient-v2.0.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)"/>
+        <name value="HCIM Patient-v2.0.1(2015EN)"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Observation"/>
+    <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/observation-nl"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+            <short value="LaboratoryTestResult"/>
+            <definition
+                value="Measurements and simple assertions made about a patient, device or other subject. These may be a simple or a complex observations. Simple Observations could consist of just a code and a value, whereas complex observations like panels and batteries could have related Observations and or components.&#xD;&#xA;The HCIM LaboratoryResult also supports simple and more complex situations. For a simple result there will be a single LaboratoryTestResult.LaboratoryTest.TestName in Observation.code and no LaboratoryTestresult.Test. For a more complex situation there will be a LaboratoryTestResult.Test and any number of related LaboratoryTestResult.LaboratoryTest, e.g. parts of a panel or battery. Each related LaboratoryTest shall be conveyed in Observation.related or Observation.component. The deciding factor in choosing between related or component is: does the observation have use as independent observation (Observation.related) or is the observation only relevant in the context of its parent (Observation.component).&#xD;&#xA;Note that (textual) reports on individual (panels of) observations, like conclusions, go into a different resource DiagnosticReport. The DiagnosticReport then contains the references to the Observation resources it concerns."/>
+            <alias value="LaboratoriumUitslag"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.1"/>
+            </mapping>
+        </element>
+        <element id="Observation.identifier">
+            <path value="Observation.identifier"/>
+            <short value="Identifier"/>
+            <alias value="Identificatie"/>
+        </element>
+        <element id="Observation.status">
+            <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
+                <valueString value="default: final"/>
+            </extension>
+            <path value="Observation.status"/>
+            <short value="ResultStatus"/>
+            <alias value="ResultaatStatus"/>
+        </element>
+        <element id="Observation.status.extension">
+            <path value="Observation.status.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Observation.status.extension:ResultStatus">
+            <path value="Observation.status.extension"/>
+            <sliceName value="ResultStatus"/>
+            <short value="Provides the specific HCIM code for ResultStatus"/>
+            <definition value="Defines a more specific value to a code. Especially useful for FHIRs required ValueSets."/>
+            <alias value="ResultaatStatus"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.8--20150401000000"/>
+                    <display value="ResultaatStatusCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.6"/>
+            </mapping>
+        </element>
+        <element id="Observation.category">
+            <path value="Observation.category"/>
+            <short value="ResultType"/>
+            <alias value="ResultaatType"/>
+            <binding>
+                <strength value="extensible"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.1--20150401000000"/>
+                    <display value="ResultaatTypeCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.7"/>
+            </mapping>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+            <short value="TestOrTestName"/>
+            <comment value="This can either be the ZIB concept Test (NL-CM:13.1.4) or TestName (NL-CM:13.1.8) depending on the use of DiagnosticReport resource. This element shall be mapped to TestName if DiagnosticReport is used and .component.code is not used. If component.code is used, the ZIB concept Test shall be mapped to this element."/>
+            <alias value="OnderzoekOfTestNaam"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="LOINC (2.16.840.1.113883.6.1): All values"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.5--20150401000000"/>
+                    <display value="OnderzoekCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.4"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.8"/>
+            </mapping>
+        </element>
+        <element id="Observation.subject">
+            <path value="Observation.subject"/>
+            <short value="Patient"/>
+            <alias value="Patiënt"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+            <mapping>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.1"/>
+            </mapping>
+        </element>
+        <element id="Observation.effective">
+            <path value="Observation.effective[x]"/>
+            <short value="TestDateTime"/>
+            <definition value="The date and if possible the time at which the test was carried out."/>
+            <alias value="TestDatumTijd"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.13"/>
+            </mapping>
+        </element>
+        <element id="Observation.value">
+            <path value="Observation.value[x]"/>
+            <short value="Result"/>
+            <alias value="Uitslag"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.10"/>
+            </mapping>
+        </element>
+        <element id="Observation.interpretation">
+            <path value="Observation.interpretation"/>
+            <short value="ResultFlags"/>
+            <definition value="Attention codes indicating whether the result is above or below certain reference values."/>
+            <alias value="ResultaatVlaggen"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.14"/>
+            </mapping>
+        </element>
+        <element id="Observation.comment">
+            <path value="Observation.comment"/>
+            <short value="Explanation"/>
+            <definition value="Comments, such as a textual interpretation or advice accompanying the result, for example."/>
+            <alias value="Toelichting"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.5"/>
+            </mapping>
+        </element>
+        <element id="Observation.method">
+            <path value="Observation.method"/>
+            <short value="TestMethod"/>
+            <definition value="The test method used to obtain the result."/>
+            <alias value="Testmethode"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="SNOMED CT (2.16.840.1.113883.6.96): All values"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.4--20150401000000"/>
+                    <display value="TestmethodeCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.9"/>
+            </mapping>
+        </element>
+        <element id="Observation.specimen">
+            <path value="Observation.specimen"/>
+            <short value="Specimen"/>
+            <alias value="Monster"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen"/>
+            </type>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.2"/>
+            </mapping>
+        </element>
+        <element id="Observation.referenceRange">
+            <path value="Observation.referenceRange"/>
+            <short value="Reference"/>
+            <alias value="Referentie"/>
+        </element>
+        <element id="Observation.referenceRange.low:SimpleQuantity">
+            <path value="Observation.referenceRange.low"/>
+            <sliceName value="SimpleQuantity"/>
+            <short value="LowerReferenceLimit"/>
+            <alias value="ReferentieOndergrens"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.12"/>
+            </mapping>
+        </element>
+        <element id="Observation.referenceRange.high:SimpleQuantity">
+            <path value="Observation.referenceRange.high"/>
+            <sliceName value="SimpleQuantity"/>
+            <short value="UpperReferenceLimit"/>
+            <alias value="ReferentieBovengrens"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.11"/>
+            </mapping>
+        </element>
+        <element id="Observation.related">
+            <path value="Observation.related"/>
+            <short value="LaboratoryTest"/>
+            <requirements value="Normally, an observation will have either a value or a set of related observations. A few observations (e.g. Apgar score) may have both a value and a set of related observations or sometimes QuestionnaireResponse from which the measure is derived."/>
+            <alias value="LaboratoriumTest"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.3"/>
+            </mapping>
+        </element>
+        <element id="Observation.related.target">
+            <path value="Observation.related.target"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Sequence"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
+            </type>
+        </element>
+        <element id="Observation.component">
+            <path value="Observation.component"/>
+            <short value="LaboratoryTest"/>
+            <definition value="Container of the LaboratoryTest concept. This container contains all data elements of the LaboratoryTest concept."/>
+            <alias value="LaboratoriumTest"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.3"/>
+            </mapping>
+        </element>
+        <element id="Observation.component.code">
+            <path value="Observation.component.code"/>
+            <short value="TestName"/>
+            <definition value="The TestName is the name of the executed test."/>
+            <alias value="TestNaam"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationCode"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="LOINC (2.16.840.1.113883.6.1): All values"/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.3--20150401000000"/>
+                    <display value="TestNaamCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.8"/>
+            </mapping>
+        </element>
+        <element id="Observation.component.value[x]">
+            <path value="Observation.component.value[x]"/>
+            <short value="Result"/>
+            <definition value="The test result. Depending on the type of test, the result will consist of a value with a unit or a coded value (ordinal or nominal)."/>
+            <alias value="Uitslag"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.10"/>
+            </mapping>
+        </element>
+        <element id="Observation.component.interpretation">
+            <path value="Observation.component.interpretation"/>
+            <short value="ResultFlags"/>
+            <definition value="Attention codes indicating whether the result is above or below certain reference values."/>
+            <alias value="ResultaatVlaggen"/>
+            <mapping>
+                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <map value="NL-CM:13.1.14"/>
+            </mapping>
+        </element>
+    </differential>
 </StructureDefinition>
