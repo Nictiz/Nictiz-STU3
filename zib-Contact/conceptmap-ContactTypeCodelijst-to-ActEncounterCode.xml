@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/ConceptMap/ContactTypeCodelijst-to-ActEncounterCode"/>
   <version value="1.0"/>
   <name value="ContactTypeCodelijst-to-ActEncounterCode"/>
-  <title value="ZIB ContactTypeCodelijst to ActEncounterCode"/>
+  <title value="HCIM ContactTypeCodelijst to ActEncounterCode"/>
   <status value="draft"/>
   <date value="2017-01-04T10:27:28.0292377+01:00"/>
   <publisher value="Nictiz"/>

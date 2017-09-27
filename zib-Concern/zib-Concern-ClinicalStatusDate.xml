@@ -1,56 +1,56 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-  <id value="f8f7a74e-78b0-4bfb-b870-7f9d5e9a7510" />
-  <meta>
-    <versionId value="1" />
-    <lastUpdated value="2017-02-22T10:32:07.359+00:00" />
-  </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate" />
-  <name value="ZIB-Concern-ClinicalStatusDate" />
-  <title value="ZIB Concern ClinicalStatusDate" />
-  <status value="draft" />
-  <date value="2017-01-27T16:32:59.0479165+01:00" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 1.0." />
-  <purpose value="There is a need to provide a date from when the current value of ProblemStatus (ZIB) or ClinicalStatus (FHIR) applies. Currently, this date field is not provided in the Condition base Resource." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.0" />
-  <kind value="primitive-type" />
-  <abstract value="false" />
-  <contextType value="resource" />
-  <context value="Condition" />
-  <type value="Extension" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint"/>
-  <differential>
-    <element id="Extension">
-      <path value="Extension" />
-    </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <min value="0" />
-      <max value="0" />
-    </element>
-    <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate" />
-    </element>
-    <element id="Extension.valueDateTime">
-      <path value="Extension.valueDateTime" />
-      <short value="ProblemStatusDate" />
-      <definition value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current." />
-      <alias value="ProbleemStatusDatum" />
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
-  </differential>
+    <id value="f8f7a74e-78b0-4bfb-b870-7f9d5e9a7510"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2017-02-22T10:32:07.359+00:00"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate"/>
+    <name value="ZIB-Concern-ClinicalStatusDate"/>
+    <title value="HCIM Concern ClinicalStatusDate"/>
+    <status value="draft"/>
+    <date value="2017-01-27T16:32:59.0479165+01:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 1.0."/>
+    <purpose value="There is a need to provide a date from when the current value of ProblemStatus (ZIB) or ClinicalStatus (FHIR) applies. Currently, this date field is not provided in the Condition base Resource."/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <kind value="primitive-type"/>
+    <abstract value="false"/>
+    <contextType value="resource"/>
+    <context value="Condition"/>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+        </element>
+        <element id="Extension.extension">
+            <path value="Extension.extension"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url"/>
+            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate"/>
+        </element>
+        <element id="Extension.valueDateTime">
+            <path value="Extension.valueDateTime"/>
+            <short value="ProblemStatusDate"/>
+            <definition value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current."/>
+            <alias value="ProbleemStatusDatum"/>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+    </differential>
 </StructureDefinition>
