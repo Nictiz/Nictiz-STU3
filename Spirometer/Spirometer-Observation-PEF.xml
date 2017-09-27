@@ -32,11 +32,9 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <short value="code" />
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
-      <short value="coding" />
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />

@@ -1,191 +1,189 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-  <id value="42955261-3c07-454f-ae2a-140bbf85bee3" />
-  <meta>
-    <versionId value="6" />
-    <lastUpdated value="2017-02-01T12:50:59.171+00:00" />
-  </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-Panel" />
-  <name value="Spirometer-Observation-Panel" />
-  <title value="Spirometer Observation Panel" />
-  <status value="draft" />
-  <date value="2017-01-20T15:08:40.2001106+01:00" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.0" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Observation" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/observation-nl" />
-  <derivation value="constraint"/>
-  <differential>
-    <element id="Observation">
-      <path value="Observation" />
-    </element>
-    <element id="Observation.category">
-      <path value="Observation.category" />
-      <short value="category" />
-    </element>
-    <element id="Observation.category.coding">
-      <path value="Observation.category.coding" />
-      <short value="coding" />
-    </element>
-    <element id="Observation.category.coding.system">
-      <path value="Observation.category.coding.system" />
-      <fixedUri value="http://hl7.org/fhir/ValueSet/observation-category" />
-    </element>
-    <element id="Observation.category.coding.code">
-      <path value="Observation.category.coding.code" />
-      <fixedCode value="exam" />
-    </element>
-    <element id="Observation.category.coding.display">
-      <path value="Observation.category.coding.display" />
-      <fixedString value="Exam" />
-    </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <short value="code" />
-    </element>
-    <element id="Observation.code.coding">
-      <path value="Observation.code.coding" />
-      <short value="coding" />
-    </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://loinc.org" />
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="81459-0" />
-    </element>
-    <element id="Observation.code.coding.display">
-      <path value="Observation.code.coding.display" />
-      <fixedString value="Spirometry panel" />
-    </element>
-    <element id="Observation.code.text">
-      <path value="Observation.code.text" />
-      <fixedString value="Spirometry panel" />
-    </element>
-    <element id="Observation.subject">
-      <path value="Observation.subject" />
-      <min value="1" />
-    </element>
-    <element id="Observation.effectiveDateTime">
-      <path value="Observation.effectiveDateTime" />
-      <min value="1" />
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
-    <element id="Observation.valueAttachment">
-      <path value="Observation.valueAttachment" />
-      <short value="Panel result document" />
-      <definition value="Most spirometer devices produce a PDF containing the results. If so, this document should be communicated here." />
-      <type>
-        <code value="Attachment" />
-      </type>
-    </element>
-    <element id="Observation.related">
-      <path value="Observation.related" />
-      <slicing>
-          <discriminator>
-              <type value="profile"/>
-              <path value="reference"/>
-          </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.related.FEV1">
-      <path value="Observation.related" />
-      <sliceName value="FEV1" />
-      <definition value="The FEV 1 value is the primary value from the panel as it is only one that at present has to be obtained in a clinical setting." />
-    </element>
-    <element id="Observation.related.FEV1.type">
-      <path value="Observation.related.type" />
-      <fixedCode value="has-member" />
-    </element>
-    <element id="Observation.related.FEV1.target">
-      <path value="Observation.related.target" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FEV1" />
-        <aggregation value="bundled" />
-      </type>
-    </element>
-    <element id="Observation.related.FVC_L">
-      <path value="Observation.related" />
-      <sliceName value="FVC_L" />
-    </element>
-    <element id="Observation.related.FVC_L.type">
-      <path value="Observation.related.type" />
-      <fixedCode value="has-member" />
-    </element>
-    <element id="Observation.related.FVC_L.target">
-      <path value="Observation.related.target" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FVC" />
-        <aggregation value="bundled" />
-      </type>
-    </element>
-    <element id="Observation.related.FEV1_VC">
-      <path value="Observation.related" />
-      <sliceName value="FEV1_VC" />
-      <alias value="FEV1%M (%)" />
-    </element>
-    <element id="Observation.related.FEV1_VC.type">
-      <path value="Observation.related.type" />
-      <fixedCode value="has-member" />
-    </element>
-    <element id="Observation.related.FEV1_VC.target">
-      <path value="Observation.related.target" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FEV1-VC" />
-        <aggregation value="bundled" />
-      </type>
-    </element>
-    <element id="Observation.related.PEF">
-      <path value="Observation.related" />
-      <sliceName value="PEF" />
-    </element>
-    <element id="Observation.related.PEF.type">
-      <path value="Observation.related.type" />
-      <fixedCode value="has-member" />
-    </element>
-    <element id="Observation.related.PEF.target">
-      <path value="Observation.related.target" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-PEF" />
-        <aggregation value="bundled" />
-      </type>
-    </element>
-    <element id="Observation.related.VC_IN">
-      <path value="Observation.related" />
-      <sliceName value="VC_IN" />
-    </element>
-    <element id="Observation.related.VC_IN.type">
-      <path value="Observation.related.type" />
-      <fixedCode value="has-member" />
-    </element>
-    <element id="Observation.related.VC_IN.target">
-      <path value="Observation.related.target" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-VCIN" />
-        <aggregation value="bundled" />
-      </type>
-    </element>
-  </differential>
+    <id value="42955261-3c07-454f-ae2a-140bbf85bee3"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2017-02-01T12:50:59.171+00:00"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-Panel"/>
+    <name value="Spirometer-Observation-Panel"/>
+    <title value="Spirometer Observation Panel"/>
+    <status value="draft"/>
+    <date value="2017-01-20T15:08:40.2001106+01:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Observation"/>
+    <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/observation-nl"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+        </element>
+        <element id="Observation.category">
+            <path value="Observation.category"/>
+        </element>
+        <element id="Observation.category.coding">
+            <path value="Observation.category.coding"/>
+        </element>
+        <element id="Observation.category.coding.system">
+            <path value="Observation.category.coding.system"/>
+            <fixedUri value="http://hl7.org/fhir/ValueSet/observation-category"/>
+        </element>
+        <element id="Observation.category.coding.code">
+            <path value="Observation.category.coding.code"/>
+            <fixedCode value="exam"/>
+        </element>
+        <element id="Observation.category.coding.display">
+            <path value="Observation.category.coding.display"/>
+            <fixedString value="Exam"/>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+        </element>
+        <element id="Observation.code.coding">
+            <path value="Observation.code.coding"/>
+        </element>
+        <element id="Observation.code.coding.system">
+            <path value="Observation.code.coding.system"/>
+            <min value="1"/>
+            <fixedUri value="http://loinc.org"/>
+        </element>
+        <element id="Observation.code.coding.code">
+            <path value="Observation.code.coding.code"/>
+            <min value="1"/>
+            <fixedCode value="81459-0"/>
+        </element>
+        <element id="Observation.code.coding.display">
+            <path value="Observation.code.coding.display"/>
+            <fixedString value="Spirometry panel"/>
+        </element>
+        <element id="Observation.code.text">
+            <path value="Observation.code.text"/>
+            <fixedString value="Spirometry panel"/>
+        </element>
+        <element id="Observation.subject">
+            <path value="Observation.subject"/>
+            <min value="1"/>
+        </element>
+        <element id="Observation.effectiveDateTime">
+            <path value="Observation.effectiveDateTime"/>
+            <min value="1"/>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="Observation.valueAttachment">
+            <path value="Observation.valueAttachment"/>
+            <short value="Panel result document"/>
+            <definition value="Most spirometer devices produce a PDF containing the results. If so, this document should be communicated here."/>
+            <alias value="Panel resultaatdocument"/>
+            <type>
+                <code value="Attachment"/>
+            </type>
+        </element>
+        <element id="Observation.related">
+            <path value="Observation.related"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="reference"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Observation.related.FEV1">
+            <path value="Observation.related"/>
+            <sliceName value="FEV1"/>
+            <definition value="The FEV 1 value is the primary value from the panel as it is only one that at present has to be obtained in a clinical setting."/>
+        </element>
+        <element id="Observation.related.FEV1.type">
+            <path value="Observation.related.type"/>
+            <fixedCode value="has-member"/>
+        </element>
+        <element id="Observation.related.FEV1.target">
+            <path value="Observation.related.target"/>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FEV1"/>
+                <aggregation value="bundled"/>
+            </type>
+        </element>
+        <element id="Observation.related.FVC_L">
+            <path value="Observation.related"/>
+            <sliceName value="FVC_L"/>
+        </element>
+        <element id="Observation.related.FVC_L.type">
+            <path value="Observation.related.type"/>
+            <fixedCode value="has-member"/>
+        </element>
+        <element id="Observation.related.FVC_L.target">
+            <path value="Observation.related.target"/>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FVC"/>
+                <aggregation value="bundled"/>
+            </type>
+        </element>
+        <element id="Observation.related.FEV1_VC">
+            <path value="Observation.related"/>
+            <sliceName value="FEV1_VC"/>
+            <short value="FEV1%M (%)"/>
+            <alias value="FEV1%M (%)"/>
+        </element>
+        <element id="Observation.related.FEV1_VC.type">
+            <path value="Observation.related.type"/>
+            <fixedCode value="has-member"/>
+        </element>
+        <element id="Observation.related.FEV1_VC.target">
+            <path value="Observation.related.target"/>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-FEV1-VC"/>
+                <aggregation value="bundled"/>
+            </type>
+        </element>
+        <element id="Observation.related.PEF">
+            <path value="Observation.related"/>
+            <sliceName value="PEF"/>
+        </element>
+        <element id="Observation.related.PEF.type">
+            <path value="Observation.related.type"/>
+            <fixedCode value="has-member"/>
+        </element>
+        <element id="Observation.related.PEF.target">
+            <path value="Observation.related.target"/>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-PEF"/>
+                <aggregation value="bundled"/>
+            </type>
+        </element>
+        <element id="Observation.related.VC_IN">
+            <path value="Observation.related"/>
+            <sliceName value="VC_IN"/>
+        </element>
+        <element id="Observation.related.VC_IN.type">
+            <path value="Observation.related.type"/>
+            <fixedCode value="has-member"/>
+        </element>
+        <element id="Observation.related.VC_IN.target">
+            <path value="Observation.related.target"/>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-VCIN"/>
+                <aggregation value="bundled"/>
+            </type>
+        </element>
+    </differential>
 </StructureDefinition>

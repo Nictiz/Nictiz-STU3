@@ -32,11 +32,9 @@
     </element>
     <element id="Composition.type">
       <path value="Composition.type" />
-      <short value="type" />
     </element>
     <element id="Composition.type.coding">
       <path value="Composition.type.coding" />
-      <short value="coding" />
     </element>
     <element id="Composition.type.coding.system">
       <path value="Composition.type.coding.system" />
@@ -89,7 +87,6 @@
     </element>
     <element id="Composition.attester">
       <path value="Composition.attester" />
-      <short value="attester" />
     </element>
     <element id="Composition.attester.party">
       <path value="Composition.attester.party" />
@@ -129,7 +126,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="section" />
     </element>
     <element id="Composition.section.SpirometerObservationPanel">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -140,11 +136,9 @@
     </element>
     <element id="Composition.section.code">
       <path value="Composition.section.code" />
-      <short value="code" />
     </element>
     <element id="Composition.section.code.coding">
       <path value="Composition.section.code.coding" />
-      <short value="coding" />
     </element>
     <element id="Composition.section.code.coding.system">
       <path value="Composition.section.code.coding.system" />
