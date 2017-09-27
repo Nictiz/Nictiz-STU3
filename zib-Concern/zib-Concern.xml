@@ -1,178 +1,179 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-  <meta>
-    <versionId value="1" />
-    <lastUpdated value="2017-08-21T15:37:14.109+02:00" />
-  </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern" />
-  <name value="ZIB-Concern" />
-  <title value="ZIB Concern" />
-  <status value="draft" />
-  <date value="2017-01-11T14:30:21.5094956+01:00" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="OverdrachtConcern as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;&#xD;&#xA;Determining relevant health issues of the patient involves two important aspects: observing the problem itself on the one hand (complaints, symptoms, diagnosis, etc.) and evaluation of whether or not an active policy is required on the other. This evaluation by the healthcare provider is documented in the ‘Concern’, the point of attention. Multiple, linked Problems can be subsumed under a single Concern.&#xD;&#xA;The difference between recorded problems and the attention they require enables an indication of which issues medical or nursing policy applies to, or in which issues policy is necessary. An example is well-managed diabetes; this requires no active policy of the healthcare provider.&#xD;&#xA;&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy.&#xD;&#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems:&#xD;&#xA;&#xD;&#xA;A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia&#xD;&#xA;A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;&#xD;&#xA;A finding: a healthcare provider’s observation of a patient’s health. Examples: enlarged liver, pathological plantar reflex, deviating Minimal Mental State, missing teeth.&#xD;&#xA;A condition: a description of a (deviating) bodily state, which may or may not be seen as a disease. Examples: pregnancy, circulatory disorder, poisoning.&#xD;&#xA;A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.&#xD;&#xA;A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.&#xD;&#xA;A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.&#xD;&#xA;A problem: any circumstance that is relevant to the medical treatment, but does not fit into one of the categories listed. Examples: Patient resides in the Netherlands without a legal status and is not insured; patient is not able to check their own blood sugar levels.&#xD;&#xA;&#xD;&#xA;In first-line care the Episode concept fills the role of Concern." />
-  <copyright value="CC0" />
-  <fhirVersion value="3.0.0" />
-  <mapping>
-    <identity value="zib-overdrachtconcern" />
-    <uri value="https://zibs.nl/wiki/OverdrachtConcern(NL)" />
-    <name value="Zorginformatiebouwsteen OverdrachtConcern" />
-  </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Condition" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="Condition">
-      <path value="Condition" />
-      <short value="Problem" />
-      <definition value="A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint) or by their healthcare provider (in the form of a diagnosis, for example)." />
-      <alias value="Concern" />
-      <alias value="Probleem" />
-      <mapping>
-        <identity value="zib-overdrachtconcern" />
-        <map value="NL-CM:5.1.1" />
-      </mapping>
-      <mapping>
-        <identity value="zib-overdrachtconcern" />
-        <map value="NL-CM:5.1.2" />
-      </mapping>
-    </element>
-    <element id="Condition.clinicalStatus">
-      <path value="Condition.clinicalStatus" />
-      <short value="ProblemStatus " />
-      <definition value="The problem status describes the condition of the problem:&#xD;&#xA;1. Current problems are the focus of the current medical policy.&#xD;&#xA;2. Non-current (historic) problems are part of the case history.&#xD;&#xA;3. Problems with the status 'Under control' refer to problems that still exist, but which currently do not require specific medical policy (such as well-managed diabetes). " />
-      <alias value="ProbleemStatus" />
-      <mapping>
-        <identity value="zib-overdrachtconcern" />
-        <map value="NL-CM:5.1.4" />
-      </mapping>
-    </element>
-    <element>
-      <path value="Condition.clinicalStatus.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.clinicalStatus.extension.clinicalStatusDate">
-      <path value="Condition.clinicalStatus.extension" />
-      <sliceName value="ClinicalStatusDate" />
-      <short value="ProblemStatusDate" />
-      <definition value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current." />
-      <alias value="ProbleemStatusDatum" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate" />
-      </type>
-      <mapping>
-        <identity value="zib-overdrachtconcern" />
-        <map value="NL-CM:5.1.7" />
-      </mapping>
-    </element>
-    <element id="Condition.clinicalStatus.extension.clinicalStatusDate.valueDateTime">
-      <path value="Condition.clinicalStatus.extension.valueDateTime" />
-      <min value="1" />
-    </element>
-    <element id="Condition.category">
-      <path value="Condition.category" />
-      <short value="ProblemType" />
-      <definition value="The type of problem; see the profile description." />
-      <alias value="ProbleemType" />
-      <binding>
-        <strength value="extensible" />
-        <description value="The type of problem." />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20150401000000" />
-          <display value="ProbleemTypeCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtconcern" />
-        <map value="NL-CM:5.1.8" />
-      </mapping>
-    </element>
-    <element id="Condition.code">
-      <path value="Condition.code" />
-      <short value="ProblemName" />
-      <definition value="The problem name defines the problem.&#xD;&#xA;Depending on the setting, one or more of the code systems below can be used:&#xD;&#xA;&#xD;&#xA;Structured terms: SNOMED CT&#xD;&#xA;Medical diagnoses: national DHD list&#xD;&#xA;Nurse diagnoses: NANDA&#xD;&#xA;Paramedic diagnoses: DHD and NANDA (partially offer solutions for this)&#xD;&#xA;For functional constraints: ICF&#xD;&#xA;For first-line care: ICPC-1 NL" />
-      <alias value="ProbleemNaam" />
-      <binding>
-        <strength value="extensible" />
-        <description value="The problem name defines the problem." />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20150401000000" />
-          <display value="ProbleemNaamCodelijst" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="zib-overdrachtconcern" />
-        <map value="NL-CM:5.1.3" />
-      </mapping>
-    </element>
-    <element id="Condition.code.coding">
-      <path value="Condition.code.coding" />
-      <max value="1" />
-    </element>
-    <element id="Condition.subject">
-      <path value="Condition.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
-    </element>
-    <element id="Condition.context">
-      <path value="Condition.context" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
-      </type>
-    </element>
-    <element id="Condition.onset">
-      <path value="Condition.onset[x]" />
-      <short value="ProblemStartDate" />
-      <definition value="Start of the disorder to which the problem applies. Especially in symptoms in which it takes longer for the final diagnosis, it is important to know not only the date of the diagnosis, but also how long the patient has had the disorder. A ‘vague’ date, such as only the year or the month and the year, is permitted." />
-      <comment value="Age is generally used when the patient reports an age at which the Condition began to occur.&#xD;&#xA;Nictiz comment: We prefer the use of onsetDateTime if known." />
-      <alias value="ProbleemBeginDatum" />
-      <mapping>
-        <identity value="zib-overdrachtconcern" />
-        <map value="NL-CM:5.1.6" />
-      </mapping>
-    </element>
-    <element id="Condition.asserter">
-      <path value="Condition.asserter" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-    </element>
-    <element id="Condition.note">
-      <path value="Condition.note" />
-      <short value="Explanation" />
-      <definition value="Explanation by the one who determined or updated the Problem." />
-      <alias value="Toelichting" />
-      <mapping>
-        <identity value="zib-overdrachtconcern" />
-        <map value="NL-CM:5.1.5" />
-      </mapping>
-    </element>
-  </differential>
+﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2017-08-21T15:37:14.109+02:00"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
+    <name value="ZIB-Concern"/>
+    <title value="HCIM Concern"/>
+    <status value="draft"/>
+    <date value="2017-01-11T14:30:21.5094956+01:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description
+        value="OverdrachtConcern as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;&#xD;&#xA;Determining relevant health issues of the patient involves two important aspects: observing the problem itself on the one hand (complaints, symptoms, diagnosis, etc.) and evaluation of whether or not an active policy is required on the other. This evaluation by the healthcare provider is documented in the ‘Concern’, the point of attention. Multiple, linked Problems can be subsumed under a single Concern.&#xD;&#xA;The difference between recorded problems and the attention they require enables an indication of which issues medical or nursing policy applies to, or in which issues policy is necessary. An example is well-managed diabetes; this requires no active policy of the healthcare provider.&#xD;&#xA;&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy.&#xD;&#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems:&#xD;&#xA;&#xD;&#xA;A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia&#xD;&#xA;A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;&#xD;&#xA;A finding: a healthcare provider’s observation of a patient’s health. Examples: enlarged liver, pathological plantar reflex, deviating Minimal Mental State, missing teeth.&#xD;&#xA;A condition: a description of a (deviating) bodily state, which may or may not be seen as a disease. Examples: pregnancy, circulatory disorder, poisoning.&#xD;&#xA;A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.&#xD;&#xA;A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.&#xD;&#xA;A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.&#xD;&#xA;A problem: any circumstance that is relevant to the medical treatment, but does not fit into one of the categories listed. Examples: Patient resides in the Netherlands without a legal status and is not insured; patient is not able to check their own blood sugar levels.&#xD;&#xA;&#xD;&#xA;In first-line care the Episode concept fills the role of Concern."/>
+    <copyright value="CC0"/>
+    <fhirVersion value="3.0.0"/>
+    <mapping>
+        <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/ConcernForTransfer-v1.2(2015EN)"/>
+        <name value="HCIM ConcernForTransfer-v1.2(2015EN)"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Condition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Condition">
+            <path value="Condition"/>
+            <short value="Problem"/>
+            <definition value="A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint) or by their healthcare provider (in the form of a diagnosis, for example)."/>
+            <alias value="Concern"/>
+            <alias value="Probleem"/>
+            <mapping>
+                <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:5.1.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:5.1.2"/>
+            </mapping>
+        </element>
+        <element id="Condition.clinicalStatus">
+            <path value="Condition.clinicalStatus"/>
+            <short value="ProblemStatus"/>
+            <definition value="The problem status describes the condition of the problem:&#xD;&#xA;1. Current problems are the focus of the current medical policy.&#xD;&#xA;2. Non-current (historic) problems are part of the case history.&#xD;&#xA;3. Problems with the status 'Under control' refer to problems that still exist, but which currently do not require specific medical policy (such as well-managed diabetes)."/>
+            <alias value="ProbleemStatus"/>
+            <mapping>
+                <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:5.1.4"/>
+            </mapping>
+        </element>
+        <element id="Condition.clinicalStatus.extension">
+            <path value="Condition.clinicalStatus.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Condition.clinicalStatus.extension:ClinicalStatusDate">
+            <path value="Condition.clinicalStatus.extension"/>
+            <sliceName value="ClinicalStatusDate"/>
+            <short value="ProblemStatusDate"/>
+            <definition value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current."/>
+            <alias value="ProbleemStatusDatum"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern-clinicalStatusDate"/>
+            </type>
+            <mapping>
+                <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:5.1.7"/>
+            </mapping>
+        </element>
+        <element id="Condition.clinicalStatus.extension:ClinicalStatusDate.valueDateTime">
+            <path value="Condition.clinicalStatus.extension.valueDateTime"/>
+            <min value="1"/>
+        </element>
+        <element id="Condition.category">
+            <path value="Condition.category"/>
+            <short value="ProblemType"/>
+            <definition value="The type of problem; see the profile description."/>
+            <alias value="ProbleemType"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="The type of problem."/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20150401000000"/>
+                    <display value="ProbleemTypeCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:5.1.8"/>
+            </mapping>
+        </element>
+        <element id="Condition.code">
+            <path value="Condition.code"/>
+            <short value="ProblemName"/>
+            <definition value="The problem name defines the problem.&#xD;&#xA;Depending on the setting, one or more of the code systems below can be used:&#xD;&#xA;&#xD;&#xA;Structured terms: SNOMED CT&#xD;&#xA;Medical diagnoses: national DHD list&#xD;&#xA;Nurse diagnoses: NANDA&#xD;&#xA;Paramedic diagnoses: DHD and NANDA (partially offer solutions for this)&#xD;&#xA;For functional constraints: ICF&#xD;&#xA;For first-line care: ICPC-1 NL"/>
+            <alias value="ProbleemNaam"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="The problem name defines the problem."/>
+                <valueSetReference>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20150401000000"/>
+                    <display value="ProbleemNaamCodelijst"/>
+                </valueSetReference>
+            </binding>
+            <mapping>
+                <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:5.1.3"/>
+            </mapping>
+        </element>
+        <element id="Condition.code.coding">
+            <path value="Condition.code.coding"/>
+            <max value="1"/>
+        </element>
+        <element id="Condition.subject">
+            <path value="Condition.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+        </element>
+        <element id="Condition.context">
+            <path value="Condition.context"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
+            </type>
+        </element>
+        <element id="Condition.onset">
+            <path value="Condition.onset[x]"/>
+            <short value="ProblemStartDate"/>
+            <definition value="Start of the disorder to which the problem applies. Especially in symptoms in which it takes longer for the final diagnosis, it is important to know not only the date of the diagnosis, but also how long the patient has had the disorder. A ‘vague’ date, such as only the year or the month and the year, is permitted."/>
+            <comment value="Age is generally used when the patient reports an age at which the Condition began to occur.&#xD;&#xA;Nictiz comment: We prefer the use of onsetDateTime if known."/>
+            <alias value="ProbleemBeginDatum"/>
+            <mapping>
+                <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:5.1.6"/>
+            </mapping>
+        </element>
+        <element id="Condition.asserter">
+            <path value="Condition.asserter"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+            </type>
+        </element>
+        <element id="Condition.note">
+            <path value="Condition.note"/>
+            <short value="Explanation"/>
+            <definition value="Explanation by the one who determined or updated the Problem."/>
+            <alias value="Toelichting"/>
+            <mapping>
+                <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:5.1.5"/>
+            </mapping>
+        </element>
+    </differential>
 </StructureDefinition>
