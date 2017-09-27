@@ -17,13 +17,13 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="Zorgverlener. Functional requirements taken from Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0."/>
+    <description value="Zorgverlener. Functional requirements taken from Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-zorgverlener"/>
-        <uri value="https://zibs.nl/wiki/Zorgverlener(NL)"/>
-        <name value="Zorginformatiebouwsteen Zorgverlener"/>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)"/>
+        <name value="HCIM HealthProfessional-v1.2.1(2015EN)"/>
     </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -34,6 +34,7 @@
         <element id="PractitionerRole">
             <path value="PractitionerRole"/>
             <short value="HealthcareProviderRole"/>
+            <alias value="ZorgverlenerRol"/>
         </element>
         <element id="PractitionerRole.practitioner">
             <path value="PractitionerRole.practitioner"/>
@@ -51,7 +52,7 @@
                 <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
             </type>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.6"/>
             </mapping>
         </element>
@@ -71,7 +72,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.5"/>
             </mapping>
         </element>
@@ -88,7 +89,7 @@
             <definition value="Healthcare provider’s medical specialty. This refers to the recognized medical specialties as stated in the BIG Act."/>
             <alias value="Specialisme"/>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.4"/>
             </mapping>
         </element>
@@ -129,7 +130,7 @@
             <short value="ContactInformation"/>
             <alias value="Contactgegevens"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.5"/>
             </mapping>
         </element>
@@ -139,28 +140,30 @@
         </element>
         <element id="PractitionerRole.telecom.value">
             <path value="PractitionerRole.telecom.value"/>
+            <short value="TelephoneNumber / E-mailAddress"/>
             <alias value="Telefoonnummer"/>
             <alias value="EmailAdres"/>
             <min value="1"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.23"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
         <element id="PractitionerRole.telecom.use">
             <path value="PractitionerRole.telecom.use"/>
+            <short value="NumberType / E-mailAddressType"/>
             <alias value="NummerSoort"/>
             <alias value="EmailSoort"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.22"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.19"/>
             </mapping>
         </element>

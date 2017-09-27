@@ -18,18 +18,19 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="Zorgverlener. Functional requirements taken from Clinical Building Block (Zorginformatiebouwsteen) Zorgverlener v1.2 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
+    <description value="Zorgverlener. Functional requirements taken from Health and Care Information models (Zorginformatiebouwsteen) Zorgverlener v1.2 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-zorgverlener"/>
-        <uri value="https://zibs.nl/wiki/Zorgverlener(NL)"/>
-        <name value="Zorginformatiebouwsteen Zorgverlener"/>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)"/>
+        <name value="HCIM HealthProfessional-v1.2.1(2015EN)"/>
     </mapping>
     <mapping>
-        <identity value="zib-patient"/>
-        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
-        <name value="Zorginformatiebouwsteen Patient"/>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)"/>
+        <name value="HCIM Patient-v2.0.1(2015EN)"/>
+        <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs"/>
     </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -42,7 +43,7 @@
             <short value="HealthcareProvider"/>
             <alias value="Zorgverlener"/>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.1"/>
             </mapping>
         </element>
@@ -58,7 +59,7 @@
             <short value="HealthcareProviderIdentificationNumber"/>
             <alias value="ZorgverlenerIdentificatieNummer"/>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.2"/>
             </mapping>
         </element>
@@ -135,12 +136,13 @@
         <element id="Practitioner.name">
             <path value="Practitioner.name"/>
             <short value="HealthcareProviderName"/>
+            <alias value="ZorgverlenerNaam"/>
             <type>
                 <code value="HumanName"/>
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
             </type>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.3"/>
             </mapping>
         </element>
@@ -149,11 +151,11 @@
             <short value="ContactInformation"/>
             <alias value="Contactgegevens"/>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.8"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.5"/>
             </mapping>
         </element>
@@ -163,28 +165,30 @@
         </element>
         <element id="Practitioner.telecom.value">
             <path value="Practitioner.telecom.value"/>
+            <short value="TelephoneNumber / E-mailAddress"/>
             <alias value="Telefoonnummer"/>
             <alias value="EmailAdres"/>
             <min value="1"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.23"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
         <element id="Practitioner.telecom.use">
             <path value="Practitioner.telecom.use"/>
+            <short value="NumberType / E-mailAddressType"/>
             <alias value="NummerSoort"/>
             <alias value="EmailSoort"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.22"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.19"/>
             </mapping>
         </element>
@@ -197,7 +201,7 @@
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
             </type>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.7"/>
             </mapping>
         </element>
