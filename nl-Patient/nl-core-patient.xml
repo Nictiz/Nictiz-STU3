@@ -19,41 +19,40 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description
-        value="A Patient resource as defined by the Dutch Clinical Building Block or CBB (Dutch: Zorginformatiebouwsteen or ZIB) 
-        Patient version 1.0, with additions from the CBB Contactpersoon, Zorgverlener and Zorgaanbieder"/>
-    <purpose value="Patient. Tracking a patient is the center of the healthcare process. Functional requirements taken from Clinical Building Block (Zorginformatiebouwsteen) Patient v2.0.1 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
+    <description value="A Patient resource as defined by the Dutch Health and Care Information models or HCIM (Dutch: Zorginformatiebouwsteen or ZIB) 
+        Patient version 1.0, with additions from the HCIM Contactpersoon, Zorgverlener and Zorgaanbieder"/>
+    <purpose value="Patient. Tracking a patient is the center of the healthcare process. Functional requirements taken from Health and Care Information models (Zorginformatiebouwsteen) Patient v2.0.1 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-patient"/>
-        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
-        <name value="Zorginformatiebouwsteen Patient"/>
+        <identity value="hcim-patient-v2.0.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)"/>
+        <name value="HCIM Patient-v2.0.1(2015EN)"/>
     </mapping>
     <mapping>
-        <identity value="zib-burgerlijkestaat"/>
-        <uri value="https://zibs.nl/wiki/BurgerlijkeStaat(NL)"/>
-        <name value="Zorginformatiebouwsteen BurgerlijkeStaat"/>
+        <identity value="hcim-maritalstatus-v1.2.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/MaritalStatus-v1.2.1(2015EN)"/>
+        <name value="HCIM MaritalStatus-v1.2.1(2015EN)"/>
     </mapping>
     <mapping>
-        <identity value="zib-contactpersoon"/>
-        <uri value="https://zibs.nl/wiki/Contactpersoon(NL)"/>
-        <name value="Zorginformatiebouwsteen Contactpersoon"/>
+        <identity value="hcim-contactperson-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/ContactPerson-v1.2(2015EN)"/>
+        <name value="HCIM ContactPerson-v1.2(2015EN)"/>
     </mapping>
     <mapping>
-        <identity value="zib-zorgverlener"/>
-        <uri value="https://zibs.nl/wiki/Zorgverlener(NL)"/>
-        <name value="Zorginformatiebouwsteen Zorgverlener"/>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)"/>
+        <name value="HCIM HealthProfessional-v1.2.1(2015EN)"/>
     </mapping>
     <mapping>
-        <identity value="zib-nationaliteit"/>
-        <uri value="https://zibs.nl/wiki/Nationaliteit(NL)"/>
-        <name value="Zorginformatiebouwsteen Nationaliteit"/>
+        <identity value="hcim-nationality-v2.0-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Nationality-v2.0(2015EN)"/>
+        <name value="HCIM Nationality-v2.0(2015EN)"/>
     </mapping>
     <mapping>
-        <identity value="zib-betaler" />
-        <uri value="https://zibs.nl/wiki/Betaler(NL)" />
-        <name value="Zorginformatiebouwsteen Betaler" />
+        <identity value="hcim-payer-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Payer-v1.2(2015EN)"/>
+        <name value="HCIM Payer-v1.2(2015EN)"/>
     </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -66,7 +65,7 @@
             <short value="Patient"/>
             <alias value="Patiënt"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.1"/>
             </mapping>
         </element>
@@ -85,6 +84,7 @@
             <path value="Patient.extension"/>
             <sliceName value="preferredPharmacy"/>
             <short value="References a patient's preferered pharmacy"/>
+            <alias value="Verwijst naar de voorkeursapotheek van de patiënt"/>
             <max value="1"/>
             <type>
                 <code value="Extension"/>
@@ -96,6 +96,7 @@
             <sliceName value="nationality"/>
             <short value="Nationality"/>
             <definition value="The nationality of the patient."/>
+            <alias value="Nationaliteit"/>
             <min value="0"/>
             <max value="*"/>
             <type>
@@ -104,14 +105,14 @@
             </type>
             <binding>
                 <strength value="extensible"/>
-                <description value="Indicates the country of citizenship." />
+                <description value="Indicates the country of citizenship."/>
                 <valueSetReference>
                     <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20150401000000"/>
                     <display value="NationaliteitCodelijst"/>
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-nationaliteit"/>
+                <identity value="hcim-nationality-v2.0-2015EN"/>
                 <map value="NL-CM:7.6.3"/>
             </mapping>
         </element>
@@ -128,13 +129,14 @@
             <definition value="The Burgerservicenummer, as one of the possible patient identification numbers, should at least be sent unless there is a reason not to. Reasons for not sending include but are not limited to, research and apps without a contract for data processing (Dutch: bewerkingsovereenkomst)."/>
             <alias value="PatientIdentificatienummer"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.7"/>
             </mapping>
         </element>
         <element id="Patient.identifier:BSN">
             <path value="Patient.identifier"/>
             <sliceName value="BSN"/>
+            <short value="BSN"/>
             <alias value="BSN"/>
             <max value="1"/>
         </element>
@@ -158,7 +160,9 @@
         </element>
         <element id="Patient.active">
             <path value="Patient.active"/>
-            <definition value="This field determine the status of the 'patient' record in the context of the organization that owns the record. Note that the record is not the medical record, but rather the actual patient 'resource'. Obviously when the patient 'resource' is not active, then by extension his medical record might also be inactive. Patient.active='false' may be used discourage use of the record, but that it is kept beause there is (medical) data attached to it. Another use case is a patient moving to a different GP practice. Patient.active would be 'false' in the system of the previous GP." />
+            <definition
+                value="This field determine the status of the 'patient' record in the context of the organization that owns the record. Note that the record is not the medical record, but rather the actual patient 'resource'. Obviously when the patient 'resource' is not active, then by extension his medical record might also be inactive. Patient.active='false' may be used discourage use of the record, but that it is kept beause there is (medical) data attached to it. Another use case is a patient moving to a different GP practice. Patient.active would be 'false' in the system of the previous GP."
+            />
         </element>
         <element id="Patient.name">
             <path value="Patient.name"/>
@@ -169,52 +173,54 @@
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
             </type>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.6"/>
             </mapping>
             <mapping>
-                <identity value="zib-betaler" />
-                <map value="NL-CM:1.1.5" />
+                <identity value="hcim-payer-v1.2-2015EN"/>
+                <map value="NL-CM:1.1.5"/>
             </mapping>
         </element>
         <element id="Patient.telecom">
-            <path value="Patient.telecom" />
+            <path value="Patient.telecom"/>
             <short value="ContactInformation"/>
             <alias value="Contactgegevens"/>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.5" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.5"/>
             </mapping>
             <mapping>
-                <identity value="zib-betaler" />
-                <map value="NL-CM:1.1.12" />
+                <identity value="hcim-payer-v1.2-2015EN"/>
+                <map value="NL-CM:1.1.12"/>
             </mapping>
         </element>
         <element id="Patient.telecom.system">
-            <path value="Patient.telecom.system" />
-            <min value="1" />
+            <path value="Patient.telecom.system"/>
+            <min value="1"/>
         </element>
         <element id="Patient.telecom.value">
-            <path value="Patient.telecom.value" />
-            <alias value="Telefoonnummer" />
-            <alias value="EmailAdres" />
-            <min value="1" />
+            <path value="Patient.telecom.value"/>
+            <short value="TelephoneNumber / E-mailAddress"/>
+            <alias value="Telefoonnummer"/>
+            <alias value="EmailAdres"/>
+            <min value="1"/>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.23" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.23"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.20" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
         <element id="Patient.telecom.use">
-            <path value="Patient.telecom.use" />
-            <alias value="NummerSoort" />
-            <alias value="EmailSoort" />
+            <path value="Patient.telecom.use"/>
+            <short value="NumberType / E-mailAddressType"/>
+            <alias value="NummerSoort"/>
+            <alias value="EmailSoort"/>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.22" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.22"/>
             </mapping>
         </element>
         <element id="Patient.gender">
@@ -222,7 +228,7 @@
             <short value="Gender"/>
             <alias value="Geslacht"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.9"/>
             </mapping>
         </element>
@@ -231,7 +237,7 @@
             <short value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted."/>
             <alias value="Geboortedatum"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.10"/>
             </mapping>
         </element>
@@ -240,11 +246,11 @@
             <short value="DeathIndicator/DateOfDeath"/>
             <alias value="Overlijdensindicator/DatumOverlijden"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.32"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.33"/>
             </mapping>
         </element>
@@ -257,12 +263,12 @@
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
             </type>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.4"/>
             </mapping>
             <mapping>
-                <identity value="zib-betaler" />
-                <map value="NL-CM:1.1.17" />
+                <identity value="hcim-payer-v1.2-2015EN"/>
+                <map value="NL-CM:1.1.17"/>
             </mapping>
         </element>
         <element id="Patient.maritalStatus">
@@ -277,7 +283,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-burgerlijkestaat"/>
+                <identity value="hcim-maritalstatus-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.9.2"/>
             </mapping>
         </element>
@@ -286,7 +292,7 @@
             <short value="MultipleBirthIndicator"/>
             <alias value="Meerlingindicator"/>
             <mapping>
-                <identity value="zib-patient"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.31"/>
             </mapping>
         </element>
@@ -298,7 +304,7 @@
             <short value="ContactPerson"/>
             <alias value="Contactpersoon"/>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.1"/>
             </mapping>
         </element>
@@ -311,8 +317,6 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
-            <short value="Role or Relationship"/>
-            <alias value="Rol of relatie"/>
         </element>
         <element id="Patient.contact.relationship:relationship">
             <path value="Patient.contact.relationship"/>
@@ -327,7 +331,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.3"/>
             </mapping>
         </element>
@@ -344,7 +348,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.2"/>
             </mapping>
         </element>
@@ -357,50 +361,52 @@
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
             </type>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.4"/>
             </mapping>
         </element>
         <element id="Patient.contact.telecom">
-            <path value="Patient.contact.telecom" />
+            <path value="Patient.contact.telecom"/>
             <short value="ContactInformation"/>
             <alias value="Contactgegevens"/>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.5" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.5"/>
             </mapping>
         </element>
         <element id="Patient.contact.telecom.system">
-            <path value="Patient.contact.telecom.system" />
-            <min value="1" />
+            <path value="Patient.contact.telecom.system"/>
+            <min value="1"/>
         </element>
         <element id="Patient.contact.telecom.value">
-            <path value="Patient.contact.telecom.value" />
-            <alias value="Telefoonnummer" />
-            <alias value="EmailAdres" />
-            <min value="1" />
+            <path value="Patient.contact.telecom.value"/>
+            <short value="TelephoneNumber / E-mailAddress"/>
+            <alias value="Telefoonnummer"/>
+            <alias value="EmailAdres"/>
+            <min value="1"/>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.23" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.23"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.20" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
         <element id="Patient.contact.telecom.use">
-            <path value="Patient.contact.telecom.use" />
-            <alias value="NummerSoort" />
-            <alias value="EmailSoort" />
+            <path value="Patient.contact.telecom.use"/>
+            <short value="NumberType / E-mailAddressType"/>
+            <alias value="NummerSoort"/>
+            <alias value="EmailSoort"/>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.22" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.22"/>
             </mapping>
             <mapping>
-                <identity value="zib-patient" />
-                <map value="NL-CM:0.1.19" />
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.19"/>
             </mapping>
-        </element>  
+        </element>
         <element id="Patient.contact.address">
             <path value="Patient.contact.address"/>
             <short value="AddressInformation"/>
@@ -410,7 +416,7 @@
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
             </type>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.5"/>
             </mapping>
         </element>
@@ -428,7 +434,7 @@
                 <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
             </type>
             <mapping>
-                <identity value="zib-zorgverlener"/>
+                <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
                 <map value="NL-CM:17.1.1"/>
             </mapping>
         </element>
