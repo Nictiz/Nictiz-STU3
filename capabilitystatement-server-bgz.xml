@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../Users/Marten/OneDrive/FHIR/Schemas/STU3/capabilitystatement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://hl7.org/fhir file:/C:/Users/Marten/OneDrive/FHIR/Schemas/STU3/capabilitystatement.xsd">
   <url value="http://nictiz.nl/fhir/CapabilityStatement/bgz-servercapabilities"/>
+  <name value="DutchPatientSummaryServer"/>
   <status value="draft"/>
   <date value="2017-09-25"/>
   <publisher value="Nictiz" />
@@ -177,10 +179,7 @@
       </searchParam>
     </resource>
     <resource>
-      <type value="Observation"/>
-      <profile>
-        <reference value="TODO"/>
-      </profile>
+      <type value="Observation"/>     
       <interaction>
         <code value="search-type"/>
       </interaction>
@@ -236,10 +235,7 @@
       </searchParam>
     </resource>
     <resource>
-      <type value="AllergyIntolerance"/>
-      <profile>
-        <reference value="TODO"/>
-      </profile>
+      <type value="AllergyIntolerance"/>     
       <interaction>
         <code value="search-type"/>
       </interaction>
