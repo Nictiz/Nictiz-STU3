@@ -4,7 +4,7 @@
   <url value="http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity"/>
   <version value="1.0"/>
   <name value="ErnstCodelijst-to-AllergyIntoleranceSeverity"/>
-  <title value="ZIB ErnstCodelijst to AllergyIntoleranceSeverity"/>
+  <title value="HCIM ErnstCodelijst to AllergyIntoleranceSeverity"/>
   <status value="draft"/>
   <date value="2017-01-04T10:27:28.0292377+01:00"/>
   <publisher value="Nictiz"/>
