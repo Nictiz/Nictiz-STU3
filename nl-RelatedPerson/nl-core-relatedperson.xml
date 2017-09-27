@@ -19,24 +19,24 @@
             <use value="work" />
         </telecom>
     </contact>
-    <description
-        value="A RelatedPerson resource as defined by the Dutch Clinical Building Block or CBB (Dutch: Zorginformatiebouwsteen or ZIB) ContactPersoon version 1.2 (Release 2015)"/>
+    <description value="A RelatedPerson resource as defined by the Dutch Health and Care Information models or HCIM (Dutch: Zorginformatiebouwsteen or ZIB) ContactPersoon version 1.2 (Release 2015)"/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-contactpersoon"/>
-        <uri value="https://zibs.nl/wiki/Contactpersoon(NL)"/>
-        <name value="Zorginformatiebouwsteen Contactpersoon"/>
+        <identity value="hcim-contactperson-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/ContactPerson-v1.2(2015EN)"/>
+        <name value="HCIM ContactPerson-v1.2(2015EN)"/>
     </mapping>
     <mapping>
-        <identity value="zib-patient"/>
-        <uri value="https://zibs.nl/wiki/Patient(NL)"/>
-        <name value="Zorginformatiebouwsteen Patient"/>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)"/>
+        <name value="HCIM Patient-v2.0.1(2015EN)"/>
+        <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs"/>
     </mapping>
     <mapping>
-        <identity value="zib-betaler" />
-        <uri value="https://zibs.nl/wiki/Betaler(NL)" />
-        <name value="Zorginformatiebouwsteen Betaler" />
+        <identity value="hcim-payer-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/Payer-v1.2(2015EN)"/>
+        <name value="HCIM Payer-v1.2(2015EN)"/>
     </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -47,7 +47,7 @@
         <element id="RelatedPerson">
             <path value="RelatedPerson"/>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.1"/>
             </mapping>
         </element>
@@ -65,6 +65,7 @@
             <path value="RelatedPerson.extension"/>
             <sliceName value="role"/>
             <short value="Defines the role of the contact in relation to the patient." />
+            <alias value="Definieert de rol van het contact in relatie tot de patiënt."/>
             <min value="0"/>
             <type>
                 <code value="Extension"/>
@@ -79,13 +80,14 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.2"/>
             </mapping>
         </element>
         <element id="RelatedPerson.identifier">
             <path value="RelatedPerson.identifier"/>
             <short value="Identifier"/>
+            <alias value="Identifatienummer"/>
         </element>
         <element id="RelatedPerson.patient">
             <path value="RelatedPerson.patient"/>
@@ -97,8 +99,9 @@
         <element id="RelatedPerson.relationship">
             <path value="RelatedPerson.relationship"/>
             <short value="Relationship"/>
+            <alias value="Relatie"/>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.3"/>
             </mapping>
         </element>
@@ -111,11 +114,11 @@
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
             </type>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.4"/>
             </mapping>
             <mapping>
-                <identity value="zib-betaler" />
+                <identity value="hcim-payer-v1.2-2015EN"/>
                 <map value="NL-CM:1.1.5" />
             </mapping>
         </element>
@@ -124,15 +127,15 @@
             <short value="ContactInformation"/>
             <alias value="Contactgegevens"/>
             <mapping>
-                <identity value="zib-contactpersoon" />
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.6" />
             </mapping>
             <mapping>
-                <identity value="zib-patient" />
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.5" />
             </mapping>
             <mapping>
-                <identity value="zib-betaler" />
+                <identity value="hcim-payer-v1.2-2015EN"/>
                 <map value="NL-CM:1.1.12" />
             </mapping>
         </element>
@@ -142,28 +145,30 @@
         </element>
         <element id="RelatedPerson.telecom.value">
             <path value="RelatedPerson.telecom.value" />
+            <short value="TelephoneNumber / E-mailAddress"/>
             <alias value="Telefoonnummer" />
             <alias value="EmailAdres" />
             <min value="1" />
             <mapping>
-                <identity value="zib-patient" />
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.23" />
             </mapping>
             <mapping>
-                <identity value="zib-patient" />
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.20" />
             </mapping>
         </element>
         <element id="RelatedPerson.telecom.use">
             <path value="RelatedPerson.telecom.use" />
+            <short value="NumberType / E-mailAddressType"/>
             <alias value="NummerSoort" />
             <alias value="EmailSoort" />
             <mapping>
-                <identity value="zib-patient" />
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.22" />
             </mapping>
             <mapping>
-                <identity value="zib-patient" />
+                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.19" />
             </mapping>
         </element>
@@ -176,11 +181,11 @@
                 <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
             </type>
             <mapping>
-                <identity value="zib-contactpersoon"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.5"/>
             </mapping>
             <mapping>
-                <identity value="zib-betaler" />
+                <identity value="hcim-payer-v1.2-2015EN"/>
                 <map value="NL-CM:1.1.17" />
             </mapping>
         </element>
