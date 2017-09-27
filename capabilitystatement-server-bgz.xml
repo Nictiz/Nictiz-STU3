@@ -407,7 +407,7 @@
     <operation>
       <name value="Last N Observations Query"/>
       <definition>
-        <reference value=" http://hl7.org/fhir/OperationDefinition/Observation-lastn"/>
+        <reference value="http://hl7.org/fhir/OperationDefinition/Observation-lastn"/>
       </definition>
     </operation>
   </rest>
