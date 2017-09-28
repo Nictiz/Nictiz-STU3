@@ -6,9 +6,9 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
         <valueCode value="cbcc"/>
     </extension>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill"/>
-    <name value="ZIB-LivingWill"/>
-    <title value="HCIM LivingWill"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"/>
+    <name value="ZIB-AdvanceDirective"/>
+    <title value="HCIM AdvanceDirective"/>
     <status value="draft"/>
     <date value="2017-05-03T12:18:39.6788994+02:00"/>
     <publisher value="Nictiz"/>
@@ -20,14 +20,14 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="LivingWill as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;A living will is a verbal or written description of the patient’s wishes with regard to future medical action or end of their life. A living will is mainly used for situations in which the patient is no longer able to speak about these decisions with their healthcare provider."/>
+    <description value="AdvanceDirective (formerly know as LivingWill) as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;A living will is a verbal or written description of the patient’s wishes with regard to future medical action or end of their life. A living will is mainly used for situations in which the patient is no longer able to speak about these decisions with their healthcare provider."/>
     <purpose value="A good overview of the patient’s wishes is important. A healthcare provider can use the living will to discuss the existing wishes with the persons involved and to incorporate these wishes in their own policy. A concise, orderly list is of particular importance in acute care situations."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="hcim-lifestance-v1.2.1-2015EN"/>
-        <uri value="https://zibs.nl/wiki/LifeStance-v1.2.1(2015EN)"/>
-        <name value="HCIM LifeStance-v1.2.1(2015EN)"/>
+        <identity value="hcim-advancedirective-v1.0-2015EN"/>
+        <uri value="https://zibs.nl/wiki/AdvanceDirective-v1.0(2015EN)"/>
+        <name value="HCIM AdvanceDirective-v1.0(2015EN)"/>
     </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -40,7 +40,7 @@
             <short value="LivingWill"/>
             <alias value="Wilsverklaring"/>
             <mapping>
-                <identity value="hcim-lifestance-v1.2.1-2015EN"/>
+                <identity value="hcim-advancedirective-v1.0-2015EN"/>
                 <map value="NL-CM:7.15.1"/>
             </mapping>
         </element>
@@ -65,7 +65,7 @@
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill-Disorder"/>
             </type>
             <mapping>
-                <identity value="hcim-lifestance-v1.2.1-2015EN"/>
+                <identity value="hcim-advancedirective-v1.0-2015EN"/>
                 <map value="NL-CM:7.15.4"/>
             </mapping>
         </element>
@@ -80,7 +80,7 @@
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation"/>
             </type>
             <mapping>
-                <identity value="hcim-lifestance-v1.2.1-2015EN"/>
+                <identity value="hcim-advancedirective-v1.0-2015EN"/>
                 <map value="NL-CM:7.15.6"/>
             </mapping>
         </element>
@@ -138,7 +138,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="hcim-lifestance-v1.2.1-2015EN"/>
+                <identity value="hcim-advancedirective-v1.0-2015EN"/>
                 <map value="NL-CM:7.15.2"/>
             </mapping>
         </element>
@@ -156,7 +156,7 @@
             <alias value="WilsverklaringDatum"/>
             <min value="1"/>
             <mapping>
-                <identity value="hcim-lifestance-v1.2.1-2015EN"/>
+                <identity value="hcim-advancedirective-v1.0-2015EN"/>
                 <map value="NL-CM:7.15.7"/>
             </mapping>
         </element>
@@ -171,7 +171,7 @@
                 <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
             </type>
             <mapping>
-                <identity value="hcim-lifestance-v1.2.1-2015EN"/>
+                <identity value="hcim-advancedirective-v1.0-2015EN"/>
                 <map value="NL-CM:7.15.3"/>
             </mapping>
         </element>
@@ -218,7 +218,7 @@
             <short value="LivingWillDocument"/>
             <alias value="WilsverklaringDocument"/>
             <mapping>
-                <identity value="hcim-lifestance-v1.2.1-2015EN"/>
+                <identity value="hcim-advancedirective-v1.0-2015EN"/>
                 <map value="NL-CM:7.15.5"/>
             </mapping>
         </element>

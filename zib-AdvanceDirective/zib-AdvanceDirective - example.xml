@@ -3,9 +3,9 @@
 <Consent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/consent.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"/>
   </meta>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill-Disorder">
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective-Disorder">
     <valueReference>
       <reference value="Condition/example"/>
       <display value="ALS"/>
