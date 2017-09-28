@@ -8,7 +8,7 @@
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse"/>
     <version value="1.0"/>
     <name value="ZIB-TobaccoUse"/>
-    <title value="ZIB TobaccoUse"/>
+    <title value="HCIM TobaccoUse"/>
     <status value="draft"/>
     <date value="2017-01-06T10:06:48.2524311+01:00"/>
     <publisher value="Nictiz"/>
@@ -24,7 +24,7 @@
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
-        <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+        <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
         <uri value="https://zibs.nl/wiki/TobaccoUse-v1.2.1(2015EN)"/>
         <name value="HCIM TobaccoUse-v1.2.1(2015EN)"/>
     </mapping>
@@ -40,7 +40,7 @@
             <definition value="Root concept of the TobaccoUse information model. This concept contains all data elements of the TobaccoUse information model."/>
             <alias value="TabakGebruik"/>
             <mapping>
-                <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+                <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.2.1"/>
             </mapping>
         </element>
@@ -90,7 +90,7 @@
             <definition value="The date on which the patient started smoking."/>
             <alias value="StartDatum"/>
             <mapping>
-                <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+                <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.2.4"/>
             </mapping>
         </element>
@@ -104,7 +104,7 @@
                 <valueDateTime value="2012-02-28T00:00:00"/>
             </example>
             <mapping>
-                <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+                <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.2.5"/>
             </mapping>
         </element>
@@ -126,7 +126,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+                <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.2.10"/>
             </mapping>
         </element>
@@ -136,7 +136,7 @@
             <definition value="Relevant comment on the patient’s use of tobacco."/>
             <alias value="Toelichting"/>
             <mapping>
-                <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+                <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.2.3"/>
             </mapping>
         </element>
@@ -193,7 +193,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+                <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.2.9"/>
             </mapping>
         </element>
@@ -231,7 +231,7 @@
                 </valueRatio>
             </example>
             <mapping>
-                <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+                <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.2.6"/>
             </mapping>
         </element>
@@ -282,7 +282,7 @@
                 </valueQuantity>
             </example>
             <mapping>
-                <identity value="zib-tobaccouse-v1.2.1-2015EN"/>
+                <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.2.7"/>
             </mapping>
         </element>
