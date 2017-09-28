@@ -5,6 +5,7 @@
         <lastUpdated value="2017-09-04T17:02:23.423+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation"/>
+    <version value="1.0"/>
     <name value="ZIB-AdditionalInformation"/>
     <title value="HCIM AdditionalInformation"/>
     <status value="draft"/>

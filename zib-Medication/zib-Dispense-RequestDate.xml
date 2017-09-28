@@ -6,6 +6,7 @@
         <lastUpdated value="2017-09-12T15:25:17.365+00:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense-RequestDate"/>
+    <version value="1.0"/>
     <name value="ZIB-Dispense-RequestDate"/>
     <title value="HCIM Dispense RequestDate"/>
     <status value="draft"/>

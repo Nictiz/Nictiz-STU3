@@ -11,6 +11,7 @@
         />
     </extension>
     <url value="http://nictiz.nl/fhir/StructureDefinition/bp"/>
+    <version value="1.0"/>
     <name value="Vital Signs Profile"/>
     <title value="VitalSigns"/>
     <status value="draft"/>

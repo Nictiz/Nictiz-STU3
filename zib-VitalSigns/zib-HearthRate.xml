@@ -4,6 +4,7 @@
         <lastUpdated value="2017-09-11T09:35:57.691+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-HeartRate"/>
+    <version value="1.0"/>
     <name value="ZIB-HeartRate"/>
     <title value="HCIM HeartRate"/>
     <status value="draft"/>

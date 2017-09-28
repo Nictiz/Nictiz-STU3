@@ -7,6 +7,7 @@
         <lastUpdated value="2017-04-13T17:10:45.215+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"/>
+    <version value="1.0"/>
     <name value="ZIB-AllergyIntolerance"/>
     <title value="HCIM AllergyIntolerance"/>
     <status value="draft"/>

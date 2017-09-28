@@ -6,6 +6,7 @@
         <lastUpdated value="2017-08-29T11:47:30.832+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
+    <version value="1.0"/>
     <name value="ZIB-Contact"/>
     <title value="HCIM Contact"/>
     <status value="draft"/>

@@ -6,6 +6,7 @@
         <lastUpdated value="2017-08-10T11:26:30.216+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
+    <version value="1.0"/>
     <name value="ZIB-LaboratoryTestResult-DiagnosticReport"/>
     <title value="HCIM LaboratoryTestResult DiagnosticReport"/>
     <status value="draft"/>

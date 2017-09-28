@@ -7,6 +7,7 @@
         <valueCode value="pher"/>
     </extension>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-VaccinationRecommendation"/>
+    <version value="1.0"/>
     <name value="ZIB-VaccinationRecommendation"/>
     <title value="HCIM VaccinationRecommendation"/>
     <status value="draft"/>

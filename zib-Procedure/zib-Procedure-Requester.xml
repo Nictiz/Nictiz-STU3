@@ -5,6 +5,7 @@
     <lastUpdated value="2017-02-22T10:32:07.999+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-Requester" />
+  <version value="1.0"/>
   <name value="ZIB-Procedure-Requester" />
   <title value="HCIM Procedure Requester" />
   <status value="draft" />

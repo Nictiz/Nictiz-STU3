@@ -5,6 +5,7 @@
         <lastUpdated value="2017-08-21T15:37:14.109+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
+    <version value="1.0"/>
     <name value="ZIB-Concern"/>
     <title value="HCIM Concern"/>
     <status value="draft"/>

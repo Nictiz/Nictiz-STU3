@@ -4,6 +4,7 @@
         <lastUpdated value="2017-09-06T17:15:04.546+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyTemperature"/>
+    <version value="1.0"/>
     <name value="ZIB-BodyTemperature"/>
     <title value="HCIM BodyTemperature"/>
     <status value="draft"/>

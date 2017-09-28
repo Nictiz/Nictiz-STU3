@@ -5,6 +5,7 @@
         <lastUpdated value="2017-01-31T15:18:41.409+00:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/composition-nl"/>
+    <version value="1.0"/>
     <name value="nl-core-composition"/>
     <title value="nl-core-composition"/>
     <status value="draft"/>

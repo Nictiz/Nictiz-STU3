@@ -6,6 +6,7 @@
     <lastUpdated value="2016-11-11T12:25:34.473+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
+  <version value="1.0"/>
   <name value="ZIB-extension-code-specification" />
   <title value="HCIM extension code-specification" />
   <status value="draft" />

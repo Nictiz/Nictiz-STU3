@@ -6,6 +6,7 @@
     <lastUpdated value="2017-01-31T15:49:54.002+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Composition" />
+  <version value="1.0"/>
   <name value="Spirometer-Composition" />
   <title value="Spirometer Composition" />
   <status value="draft" />

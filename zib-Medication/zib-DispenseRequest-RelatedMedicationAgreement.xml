@@ -4,6 +4,7 @@
         <lastUpdated value="2017-06-12T14:43:57.829+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DispenseRequest-RelatedMedicationAgreement"/>
+    <version value="1.0"/>
     <name value="ZIB-Related-Medication-Agreement"/>
     <title value="HCIM Related Medication Agreement"/>
     <status value="draft"/>

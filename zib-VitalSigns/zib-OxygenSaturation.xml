@@ -4,6 +4,7 @@
         <lastUpdated value="2017-09-08T12:44:22.73+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-OxygenSaturation"/>
+    <version value="1.0"/>
     <name value="ZIB-OxygenSaturation"/>
     <title value="HCIM OxygenSaturation"/>
     <status value="draft"/>

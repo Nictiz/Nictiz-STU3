@@ -6,6 +6,7 @@
         <lastUpdated value="2017-04-26T14:45:08.702+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"/>
+    <version value="1.0"/>
     <name value="ZIB-Vaccination"/>
     <title value="HCIM Vaccination"/>
     <status value="draft"/>

@@ -4,6 +4,7 @@
         <lastUpdated value="2017-05-03T14:27:22.056+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective-Disorder"/>
+    <version value="1.0"/>
     <name value="ZIB-AdvanceDirective-Disorder"/>
     <title value="HCIM AdvanceDirective Disorder"/>
     <status value="draft"/>

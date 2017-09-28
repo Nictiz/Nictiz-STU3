@@ -4,6 +4,7 @@
         <lastUpdated value="2017-06-08T17:16:26.473+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DeviatingAdministration"/>
+    <version value="1.0"/>
     <name value="ZIB-Deviating-Administration"/>
     <title value="HCIM Deviating Administration"/>
     <status value="draft"/>

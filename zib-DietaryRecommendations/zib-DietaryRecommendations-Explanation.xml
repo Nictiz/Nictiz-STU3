@@ -6,6 +6,7 @@
         <lastUpdated value="2017-02-22T10:32:08.704+00:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations-Explanation"/>
+    <version value="1.0"/>
     <name value="ZIB-DietaryRecommendations-Explanation"/>
     <title value="HCIM DietaryRecommendations Explanation"/>
     <status value="draft"/>

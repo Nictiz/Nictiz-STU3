@@ -4,6 +4,7 @@
         <lastUpdated value="2017-05-22T14:47:50.767+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus"/>
+    <version value="1.0"/>
     <name value="ZIB-OrderStatus"/>
     <title value="HCIM OrderStatus"/>
     <status value="draft"/>

@@ -4,6 +4,7 @@
         <lastUpdated value="2017-05-22T15:23:35.595+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation"/>
+    <version value="1.0"/>
     <name value="ZIB-Explanation"/>
     <title value="HCIM Explanation"/>
     <status value="draft"/>

@@ -4,6 +4,7 @@
         <lastUpdated value="2017-09-07T12:35:53.053+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyHeight"/>
+    <version value="1.0"/>
     <name value="ZIB-BodyHeight"/>
     <title value="HCIM BodyHeight"/>
     <status value="draft"/>

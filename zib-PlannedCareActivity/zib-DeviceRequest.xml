@@ -7,6 +7,7 @@
         <valueCode value="oo"/>
     </extension>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidRequest"/>
+    <version value="1.0"/>
     <name value="ZIB-MedicalAid-Request"/>
     <title value="HCIM MedicalAid Request"/>
     <status value="draft"/>

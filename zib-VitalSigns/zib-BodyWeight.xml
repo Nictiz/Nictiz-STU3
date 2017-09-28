@@ -4,6 +4,7 @@
         <lastUpdated value="2017-09-08T12:47:03.193+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight"/>
+    <version value="1.0"/>
     <name value="ZIB-BodyWeight"/>
     <title value="HCIM BodyWeight"/>
     <status value="draft"/>

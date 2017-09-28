@@ -4,6 +4,7 @@
         <lastUpdated value="2017-06-08T17:19:04.007+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-AgreedDateTime"/>
+    <version value="1.0"/>
     <name value="ZIB-AgreedDateTime"/>
     <title value="HCIM AgreedDateTime"/>
     <status value="draft"/>

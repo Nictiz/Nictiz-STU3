@@ -6,6 +6,7 @@
         <lastUpdated value="2017-06-23T11:20:31.593+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"/>
+    <version value="1.0"/>
     <name value="ZIB-Medication-Period-Of-Use"/>
     <title value="HCIM Medication Period Of Use"/>
     <status value="draft"/>

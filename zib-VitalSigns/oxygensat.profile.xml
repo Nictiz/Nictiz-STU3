@@ -9,6 +9,7 @@
         <valueMarkdown value="&quot;####Complete Summary of the Mandatory Requirements&#xD;&#xD;1.  One code in `Observation.code` which must have&#xD;    -   a fixed `Observation.code.coding.system`=**&#39;http ://loinc.org&#39;**&#xD;    -   a fixed  `Observation.code.coding.code`= **&#39;59408-5&#39;**&#xD;    -   Other additional codes are allowed - e.g. more specific LOINC&#xD;        Codes, SNOMED CT concepts, system specific codes. All codes&#xD;        SHALL have an system value&#xD;2.  a fixed`Observation.valueQuantity.code` = **&#39;%&#39;**&#xD;&quot;"/>
     </extension>
     <url value="http://nictiz.nl/fhir/StructureDefinition/oxygensat"/>
+    <version value="1.0"/>
     <name value="Vital Signs Profile"/>
     <title value="VitalSigns"/>
     <status value="draft"/>

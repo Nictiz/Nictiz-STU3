@@ -6,6 +6,7 @@
         <lastUpdated value="2017-02-20T08:42:17.716+00:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement-AuthoredOn"/>
+    <version value="1.0"/>
     <name value="ZIB-Authored-On"/>
     <title value="HCIM Authored On"/>
     <status value="draft"/>

@@ -4,6 +4,7 @@
         <lastUpdated value="2017-06-19T14:05:41.935+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints"/>
+    <version value="1.0"/>
     <name value="ZIB-TreatmentInstruction-Constraints"/>
     <title value="HCIM TreatmentInstruction Constraints"/>
     <status value="draft"/>

@@ -7,6 +7,7 @@
     <lastUpdated value="2017-08-30T15:10:32.247+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-AsAgreedIndicator" />
+  <version value="1.0"/>
   <name value="ZIB-As-AgreedIndicator" />
   <title value="HCIM As AgreedIndicator" />
   <status value="draft" />

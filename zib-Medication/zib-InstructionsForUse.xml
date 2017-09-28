@@ -5,6 +5,7 @@
         <lastUpdated value="2017-09-12T17:19:49.655+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse"/>
+    <version value="1.0"/>
     <name value="ZIB-InstructionsForUse"/>
     <title value="HCIM InstructionsForUse"/>
     <status value="draft"/>

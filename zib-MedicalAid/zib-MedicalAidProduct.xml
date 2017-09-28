@@ -6,6 +6,7 @@
         <lastUpdated value="2017-02-22T10:32:08.345+00:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
+    <version value="1.0"/>
     <name value="ZIB-MedicalAid-Product"/>
     <title value="HCIM MedicalAid Product"/>
     <status value="draft"/>

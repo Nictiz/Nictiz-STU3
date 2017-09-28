@@ -5,6 +5,7 @@
         <lastUpdated value="2017-06-19T14:24:14.858+02:00"/>
     </meta>
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-TreatmentPermitted"/>
+    <version value="1.0"/>
     <name value="ZIB-TreatmentInstruction-TreatmentPermitted"/>
     <title value="HCIM TreatmentInstruction TreatmentPermitted"/>
     <status value="draft"/>

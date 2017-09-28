@@ -6,6 +6,7 @@
     <lastUpdated value="2017-01-31T15:52:38.235+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-PEF" />
+  <version value="1.0"/>
   <name value="Spirometer-Observation-PEF" />
   <title value="Spirometer Observation PEF" />
   <status value="draft" />
