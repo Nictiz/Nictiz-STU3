@@ -1,17 +1,17 @@
 <?xml-model href="http://hl7.org/fhir/STU3/searchparameter.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <SearchParameter xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/searchparameter.xsd">
-    <url value="http://nictiz.nl/fhir/SearchParameter/RelatedPerson-role"/>
+    <url value="http://fhir.nl/fhir/SearchParameter/nl-core-relatedperson-role"/>
     <version value="1.0"/>
     <name value="RelatedPerson-Role"/>
     <status value="draft"/>
     <date value="2017-09-14T14:26:13.365+00:00"/>
-    <publisher value="Nictiz"/>
+	<publisher value="HL7 Netherlands"/>
     <contact>
-        <name value="Nictiz"/>
+        <name value="Nictiz" />
         <telecom>
-            <system value="email"/>
-            <value value="info@nictiz.nl"/>
-            <use value="work"/>
+            <system value="email" />
+            <value value="info@nictiz.nl" />
+            <use value="work" />
         </telecom>
     </contact>
     <purpose value="To select the RelatedPerson instances based on the on the role of that related person, for example: primary contact"/>
