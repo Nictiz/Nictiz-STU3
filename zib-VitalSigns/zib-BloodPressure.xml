@@ -107,7 +107,7 @@
             <slicing>
                 <discriminator>
                     <type value="value"/>
-                    <path value="Observation.component.value.coding.code"/>
+                    <path value="code.coding.code"/>
                 </discriminator>
                 <ordered value="false"/>
                 <rules value="open"/>
