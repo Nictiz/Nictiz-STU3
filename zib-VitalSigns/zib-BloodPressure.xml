@@ -6,7 +6,7 @@
     <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure"/>
     <version value="1.0"/>
     <name value="ZIB-BloodPressure"/>
-    <title value="ZIB BloodPressure"/>
+    <title value="HCIM BloodPressure"/>
     <status value="draft"/>
     <date value="2017-09-06T12:02:17.702+02:00"/>
     <publisher value="Nictiz"/>
@@ -23,7 +23,7 @@
     <copyright value="CC0"/>
     <fhirVersion value="3.0.1"/>
     <mapping>
-        <identity value="zib-bloodpressure-v1.2-2015EN"/>
+        <identity value="hcim-bloodpressure-v1.2-2015EN"/>
         <uri value="https://zibs.nl/wiki/BloodPressure-v1.2(2015EN)"/>
         <name value="HCIM BloodPressure-v1.2(2015EN)"/>
     </mapping>
@@ -37,7 +37,7 @@
             <path value="Observation"/>
             <alias value="Bloeddruk"/>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.1"/>
             </mapping>
         </element>
@@ -46,7 +46,7 @@
             <short value="BloodPressureDateTime"/>
             <alias value="BloeddrukDatumTijd"/>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.5"/>
             </mapping>
         </element>
@@ -56,7 +56,7 @@
             <definition value="Comments on the measured blood pressure. Here, an explanation could be given, for example, of circumstances that may have influenced the patient’s blood pressure, such as pain, stress, exertion and sleep/wake cycles."/>
             <alias value="Toelichting"/>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.6"/>
             </mapping>
         </element>
@@ -77,7 +77,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.10"/>
             </mapping>
         </element>
@@ -98,7 +98,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.7"/>
             </mapping>
         </element>
@@ -107,7 +107,7 @@
             <slicing>
                 <discriminator>
                     <type value="value"/>
-                    <path value="Observation.component.value.coding.code"/>
+                    <path value="code.coding.code"/>
                 </discriminator>
                 <ordered value="false"/>
                 <rules value="open"/>
@@ -127,7 +127,7 @@
             <alias value="SystolischeBloeddruk"/>
             <min value="1"/>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.2"/>
             </mapping>
         </element>
@@ -145,7 +145,7 @@
             <alias value="DiastolischeBloeddruk"/>
             <min value="1"/>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.3"/>
             </mapping>
         </element>
@@ -190,7 +190,7 @@
                 <code value="Quantity"/>
             </type>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.4"/>
             </mapping>
         </element>
@@ -250,7 +250,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.8"/>
             </mapping>
         </element>
@@ -305,7 +305,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.9"/>
             </mapping>
         </element>
@@ -371,7 +371,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="zib-bloodpressure-v1.2-2015EN"/>
+                <identity value="hcim-bloodpressure-v1.2-2015EN"/>
                 <map value="NL-CM:12.4.11"/>
             </mapping>
         </element>

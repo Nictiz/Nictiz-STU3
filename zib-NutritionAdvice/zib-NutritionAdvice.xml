@@ -5,10 +5,10 @@
         <versionId value="1"/>
         <lastUpdated value="2017-05-31T16:09:30.195+02:00"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice"/>
     <version value="1.0"/>
-    <name value="ZIB-DietaryRecommendations"/>
-    <title value="HCIM DietaryRecommendations"/>
+    <name value="ZIB-NutritionAdvice"/>
+    <title value="HCIM NutritionAdvice"/>
     <status value="draft"/>
     <date value="2017-02-13T15:20:12.6745603+01:00"/>
     <publisher value="Nictiz"/>
@@ -20,7 +20,7 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="DietaryRecommendations as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie."/>
+    <description value="NutritionAdvice as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.0"/>
     <mapping>
@@ -67,7 +67,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations-Explanation"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation"/>
             </type>
             <mapping>
                 <identity value="hcim-nutritionadvice-v1.0-2015EN"/>

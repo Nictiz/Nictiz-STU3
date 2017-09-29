@@ -3,9 +3,9 @@
 <NutritionOrder xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/nutritionorder.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice"/>
   </meta>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations-Explanation">
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation">
     <valueString value="Since last week the dieet changed to a more protein rich dieet"/>
   </extension>
   <status value="completed"/>
