@@ -87,10 +87,6 @@
     </element>
     <element id="Consent.category">
       <path value="Consent.category" />
-      <min value="2" />
-    </element>
-    <element id="Consent.category.coding">
-      <path value="Consent.category.coding" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -98,9 +94,10 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="Consent.category.coding:livingWill">
-      <path value="Consent.category.coding" />
+      <min value="2" />
+    </element>    
+    <element id="Consent.category:livingWill">
+      <path value="Consent.category" />
       <sliceName value="livingWill" />
       <short value="Living will and advance directive record" />
       <definition value="Category snomed code used for indexing/retrieval of LivingWills" />
@@ -122,8 +119,8 @@
       <path value="Consent.category.coding.display" />
       <fixedString value="Living will and advance directive record (record artifact)" />
     </element>
-    <element id="Consent.category.coding:typeOfLivingWill">
-      <path value="Consent.category.coding" />
+    <element id="Consent.category:typeOfLivingWill">
+      <path value="Consent.category" />
       <sliceName value="typeOfLivingWill" />
       <short value="TypeOfLivingWill" />
       <definition value="List of the different types of living wills." />
