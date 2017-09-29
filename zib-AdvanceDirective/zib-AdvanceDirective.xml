@@ -1,7 +1,7 @@
-﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-29T17:03:42.628+02:00" />
+    <lastUpdated value="2017-09-29T17:16:18.619+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cbcc" />
@@ -90,12 +90,16 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="coding.code" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
         </discriminator>
         <rules value="open" />
       </slicing>
       <min value="2" />
-    </element>    
+    </element>
     <element id="Consent.category:livingWill">
       <path value="Consent.category" />
       <sliceName value="livingWill" />
