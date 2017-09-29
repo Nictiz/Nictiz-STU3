@@ -1,7 +1,5 @@
-                <description value="Defines the role of the contact in relation to the patient." />
-                    <display value="RolCodelijst" />
-﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
   <id value="003f809e-8e85-4953-aabb-c2f53ec1ac3f" />
   <meta>
     <versionId value="4" />
