@@ -55,7 +55,7 @@
         <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse"/>
     </profile>
     <profile>
-        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations"/>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice"/>
     </profile>
     <profile>
         <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Alert"/>

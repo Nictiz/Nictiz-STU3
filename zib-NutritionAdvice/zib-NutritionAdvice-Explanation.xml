@@ -5,10 +5,10 @@
         <versionId value="1"/>
         <lastUpdated value="2017-02-22T10:32:08.704+00:00"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations-Explanation"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation"/>
     <version value="1.0"/>
-    <name value="ZIB-DietaryRecommendations-Explanation"/>
-    <title value="HCIM DietaryRecommendations Explanation"/>
+    <name value="ZIB-NutritionAdvice-Explanation"/>
+    <title value="HCIM NutritionAdvice Explanation"/>
     <status value="draft"/>
     <date value="2017-02-13T17:00:03.7461492+01:00"/>
     <publisher value="Nictiz"/>
@@ -42,7 +42,7 @@
         </element>
         <element id="Extension.url">
             <path value="Extension.url"/>
-            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-DietaryRecommendations-Explanation"/>
+            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation"/>
         </element>
         <element id="Extension.valueString">
             <path value="Extension.valueString"/>
