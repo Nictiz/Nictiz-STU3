@@ -1,0 +1,64 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.2--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.2.2"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="BehandelingToegestaanCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:69dc8c92-833e-4202-93f9-7f65a3e7f8c6"/>
+        <timestamp value="2017-10-02T11:53:23.2+02:00"/>
+        <total value="3"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+            <code value="JA"/>
+            <display value="Ja"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Behandeling is toegestaan en/of wenselijk."/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+            <code value="JA_MAAR"/>
+            <display value="Ja, maar met beperkingen"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Behandeling toegestaan en/of wenselijk maar met beperkingen die dan ook vermeld moeten worden"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+            <code value="NEE"/>
+            <display value="Nee"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Behandeling niet toegestaan en/of wenselijk"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

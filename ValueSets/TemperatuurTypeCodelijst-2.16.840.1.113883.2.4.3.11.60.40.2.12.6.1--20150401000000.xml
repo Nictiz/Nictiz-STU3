@@ -1,0 +1,148 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.6.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.12.6.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="TemperatuurTypeCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:b000c062-3656-4dc3-b8fe-a4bdaab5961a"/>
+        <timestamp value="2017-10-02T11:53:24.634+02:00"/>
+        <total value="9"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="307047009"/>
+            <display value="Rectal temperature"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Rectale temperatuur"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="41594500"/>
+            <display value="Oral temperature"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Orale temperatuur (onder de tong)"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="415882003"/>
+            <display value="Axillary temperature"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Axillaire temperatuur (onder de oksel)"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="415929009"/>
+            <display value="Groin temperature"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Inguinale temperatuur (via de lies)"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="415974002"/>
+            <display value="Tympanic temperature"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Tympanische temperatuur"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="415922000"/>
+            <display value="Forehead temperature"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Temporale temperatuur"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="364246006"/>
+            <display value="Temperature of vagina"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Vaginale temperatuur"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="698832009"/>
+            <display value="Bladder temperature"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Blaastemperatuur"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="276885007"/>
+            <display value="Core body temperature"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Kern temperatuur (invasief gemeten)"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

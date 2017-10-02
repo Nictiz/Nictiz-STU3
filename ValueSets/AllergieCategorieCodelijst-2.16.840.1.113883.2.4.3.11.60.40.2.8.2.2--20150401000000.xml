@@ -1,0 +1,92 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.2--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.2"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="AllergieCategorieCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:535ea06e-e12e-414e-b49d-9bf5145fb21b"/>
+        <timestamp value="2017-10-02T11:53:23.905+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="418471000"/>
+            <display value="Propensity to adverse reactions to food"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Voeding"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="419511003"/>
+            <display value="Propensity to adverse reactions to drug"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Medicijn"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="426232007"/>
+            <display value="Environmental allergy"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Omgeving"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="419199007"/>
+            <display value="Allergy to substance"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Stof of product"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Other"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Anders"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

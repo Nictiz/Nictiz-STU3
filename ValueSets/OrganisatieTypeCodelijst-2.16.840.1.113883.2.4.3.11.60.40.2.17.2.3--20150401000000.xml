@@ -1,0 +1,344 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="OrganisatieTypeCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:8602e41b-c9d5-4359-a0ab-6d71f9a4d14e"/>
+        <timestamp value="2017-10-02T11:53:28.804+02:00"/>
+        <total value="23"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="V4"/>
+            <display value="Ziekenhuis"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Ziekenhuis"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="V5"/>
+            <display value="Universitair Medisch Centrum"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Universitair Medisch Centrum"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="V6"/>
+            <display value="Algemeen ziekenhuis"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Algemeen ziekenhuis"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="Z4"/>
+            <display value="Zelfstandig behandelcentrum"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Zelfstandig behandelcentrum"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="Z5"/>
+            <display value="Diagnostisch centrum"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Diagnostisch centrum"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="B2"/>
+            <display value="Echocentrum"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Echocentrum"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="X3"/>
+            <display value="Verplegings- of verzorgingsinstelling"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Verplegings- of verzorgingsinstelling"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="R5"/>
+            <display value="Verpleeghuis"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Verpleeghuis"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="M1"/>
+            <display value="Verzorgingstehuis"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Verzorgingstehuis"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="J8"/>
+            <display value="Openbare apotheek"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Openbare apotheek"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="K9"/>
+            <display value="Zelfstandig opererende ziekenhuisapotheek"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Zelfstandig opererende ziekenhuisapotheek"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="Z3"/>
+            <display value="Huisartspraktijk (zelfstandig of groepspraktijk)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Huisartspraktijk (zelfstandig of groepspraktijk)"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="K3"/>
+            <display value="Apotheekhoudende huisartspraktijk"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Apotheekhoudende huisartspraktijk"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="N6"/>
+            <display value="Huisartsenpost (t.b.v. dienstwaarneming)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Huisartsenpost (t.b.v. dienstwaarneming)"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="L1"/>
+            <display value="Laboratorium"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Laboratorium"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="P4"/>
+            <display value="Polikliniek (als onderdeel van een ziekenhuis)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Polikliniek (als onderdeel van een ziekenhuis)"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="R8"/>
+            <display value="Revalidatiecentrum"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Revalidatiecentrum"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="P6"/>
+            <display value="Preventieve gezondheidszorg"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Preventieve gezondheidszorg"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="G5"/>
+            <display value="Geestelijke Gezondheidszorg"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Geestelijke Gezondheidszorg"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="G6"/>
+            <display value="Verstandelijk gehandicaptenzorg"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Verstandelijk gehandicaptenzorg"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="T2"/>
+            <display value="Thuiszorg"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Thuiszorg"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="JGZ"/>
+            <display value="Jeugdgezondheidszorg"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Jeugdgezondheidszorg"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+            <code value="G3"/>
+            <display value="Verloskundigenpraktijk"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Verloskundigenpraktijk"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

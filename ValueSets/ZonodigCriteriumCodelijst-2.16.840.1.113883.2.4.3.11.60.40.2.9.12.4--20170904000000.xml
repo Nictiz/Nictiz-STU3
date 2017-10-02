@@ -1,0 +1,204 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20170904000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4"/>
+    </identifier>
+    <version value="2017-09-04T00:00:00"/>
+    <name value="ZonodigCriteriumCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:65622a79-b782-4c6d-beb9-37ccc1e168a7"/>
+        <timestamp value="2017-10-02T11:53:26.743+02:00"/>
+        <total value="13"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1022"/>
+            <display value="Bij een aanval"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij een aanval"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1023"/>
+            <display value="Bij benauwdheid"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij benauwdheid"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1024"/>
+            <display value="Bij diarree"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij diarree"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1028"/>
+            <display value="Bij pijn"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij pijn"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1121"/>
+            <display value="Bij jeuk"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij jeuk"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1137"/>
+            <display value="Zo nodig"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Zo nodig"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1144"/>
+            <display value="Bij hoofdpijn"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij hoofdpijn"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1145"/>
+            <display value="Bij koorts"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij koorts"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1146"/>
+            <display value="Bij hoge koorts"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij hoge koorts"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1147"/>
+            <display value="Bij koorts en/of pijn"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij koorts en/of pijn"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+            <code value="1387"/>
+            <display value="Bij hoest"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bij hoest"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Overig"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="NI"/>
+            <display value="Geen Informatie"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Geen Informatie"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

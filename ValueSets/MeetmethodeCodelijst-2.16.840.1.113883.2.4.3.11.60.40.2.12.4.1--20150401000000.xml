@@ -1,0 +1,50 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.12.4.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="MeetmethodeCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:e6e8cb2c-0134-4cac-bdf3-2e1bfd476877"/>
+        <timestamp value="2017-10-02T11:53:24.78+02:00"/>
+        <total value="2"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="22762002"/>
+            <display value="Non-invasive"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Niet-invasief"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="10179008"/>
+            <display value="Invasive"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Invasief"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

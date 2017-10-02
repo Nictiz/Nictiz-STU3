@@ -1,0 +1,246 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.11.2--20170904000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.9.11.2"/>
+    </identifier>
+    <version value="2017-09-04T00:00:00"/>
+    <name value="RedenWijzigenOfStoppenGebruikCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:a65284d8-e499-4541-88d7-6113f682d310"/>
+        <timestamp value="2017-10-02T11:53:27.637+02:00"/>
+        <total value="16"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="266709005"/>
+            <display value="Medication commenced (finding)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Starten medicamenteuze behandeling"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="438833006"/>
+            <display value="Administration of drug or medicament contraindicated (situation)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Contra-indicatie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="79899007"/>
+            <display value="Drug interaction (disorder)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Interactie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="473010000"/>
+            <display value="Hypersensitivity condition (disorder)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Overgevoeligheid"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="5"/>
+            <display value="Geen of onvoldoende effect"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Geen of onvoldoende effect"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="6"/>
+            <display value="Te sterk effect"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Te sterk effect"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="7"/>
+            <display value="(Mogelijke) bijwerking"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="(Mogelijke) bijwerking"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="8"/>
+            <display value="Toedieningsweg voldoet niet"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Toedieningsweg voldoet niet"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="9"/>
+            <display value="Indicatie vervallen"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Indicatie vervallen"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="10"/>
+            <display value="Beleidswijziging"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Beleidswijziging"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="305335007"/>
+            <display value="Admission to establishment (procedure)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Opname"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="12"/>
+            <display value="Wens patiënt"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Wens patiënt"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="13"/>
+            <display value="Volgens afspraak"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Volgens afspraak"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="14"/>
+            <display value="Hervatten beleid vorige voorschrijver"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Hervatten beleid vorige voorschrijver"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.2"/>
+            <code value="15"/>
+            <display value="Geplande procedure"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Procedure waaronder ingreep, interferentie met gepland labonderzoek, etc."/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Overig"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Overig"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

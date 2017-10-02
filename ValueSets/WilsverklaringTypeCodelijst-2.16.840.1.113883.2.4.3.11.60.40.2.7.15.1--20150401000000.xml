@@ -1,0 +1,162 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.15.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.7.15.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="WilsverklaringTypeCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:d95f3719-5954-4652-b390-c93afd9a2e0b"/>
+        <timestamp value="2017-10-02T11:53:23.267+02:00"/>
+        <total value="10"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="NR"/>
+            <display value="Niet reanimeren verklaring"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Niet reanimeren verklaring"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="VOL"/>
+            <display value="Volmacht"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Volmacht"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="VERB"/>
+            <display value="Behandelverbod"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Behandelverbod"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="VERBVL"/>
+            <display value="Behandelverbod met aanvulling Voltooid Leven"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Behandelverbod met aanvulling Voltooid Leven"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="MON"/>
+            <display value="Mondelinge afspraak"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Mondelinge afspraak"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="EU"/>
+            <display value="Euthanasieverzoek"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Euthanasieverzoek"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="EUD"/>
+            <display value="Euthanasieverzoek met aanvulling Dementie"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Euthanasieverzoek met aanvulling Dementie"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="LW"/>
+            <display value="Levenswensverklaring"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Levenswensverklaring"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
+            <code value="DO"/>
+            <display value="Verklaring donorschap"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Verklaring donorschap"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Other"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Anders"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

@@ -1,0 +1,92 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.2.3--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.7.2.3"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="SoortTabakGebruikCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:057028bb-6cdd-42c9-83c1-4402e3a33ad8"/>
+        <timestamp value="2017-10-02T11:53:23.769+02:00"/>
+        <total value="5"/>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="65568007"/>
+            <display value="Cigarette smoker (finding)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Rookt sigaretten"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="59978006"/>
+            <display value="Cigar smoker (finding)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Rookt sigaren"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="82302008"/>
+            <display value="Pipe smoker (finding)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Rookt pijp"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="160619003"/>
+            <display value="Rolls own cigarettes (finding)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Rookt shag"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+            <code value="OTH"/>
+            <display value="Other"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Anders"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

@@ -1,0 +1,106 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.1.1.1--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.1.1.1"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="VerzekeringssoortCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:2a099e3b-f968-478a-8247-6700486b23b5"/>
+        <timestamp value="2017-10-02T11:53:25.435+02:00"/>
+        <total value="6"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1"/>
+            <code value="B"/>
+            <display value="Basis"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Basis verzekerd"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1"/>
+            <code value="A"/>
+            <display value="Aanvullend verzekerd"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Aanvullend verzekerd"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1"/>
+            <code value="BZ"/>
+            <display value="Basisverzekering vanuit AWBZ"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Basisverzekering vanuit AWBZ"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1"/>
+            <code value="H"/>
+            <display value="Hoofdverzekering"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Een basisverzekering die geen onderdeel uitmaakt van de ZVW of AWBZ (bijvoorbeeld voor expats in het buitenland)."/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1"/>
+            <code value="T"/>
+            <display value="Tandverzekering (los)"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Tandverzekering"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1"/>
+            <code value="AT"/>
+            <display value="Aanvullend + tand"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Aanvullend + tand"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

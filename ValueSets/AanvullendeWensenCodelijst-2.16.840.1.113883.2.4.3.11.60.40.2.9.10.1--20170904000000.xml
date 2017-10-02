@@ -1,0 +1,64 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.10.1--20170904000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.9.10.1"/>
+    </identifier>
+    <version value="2017-09-04T00:00:00"/>
+    <name value="AanvullendeWensenCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="ART-DECOR Expert Group"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:ef891daa-21aa-48ec-8822-c3d4a786c361"/>
+        <timestamp value="2017-10-02T11:53:27.515+02:00"/>
+        <total value="3"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2051"/>
+            <code value="1"/>
+            <display value="Spoed"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Spoed"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2051"/>
+            <code value="2"/>
+            <display value="Niet in GDS"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Niet in GDS"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2051"/>
+            <code value="3"/>
+            <display value="Bezorgen"/>
+            <designation>
+                <language value="nl-NL"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Bezorgen"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>
