@@ -6,10 +6,10 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cbcc" />
   </extension>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective" />
   <version value="1.0" />
-  <name value="ZIB-TreatmentInstruction" />
-  <title value="HCIM TreatmentInstruction" />
+  <name value="ZIB-TreatmentDirective" />
+  <title value="HCIM TreatmentDirective" />
   <status value="draft" />
   <date value="2017-05-03T12:18:39.6788994+02:00" />
   <publisher value="Nictiz" />
@@ -21,7 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="TreatmentInstruction as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. A treatment instruction includes an agreed constraint in the treatment based on the oral or written living will of the patient." />
+  <description value="TreatmentDirective as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0. A treatment instruction includes an agreed constraint in the treatment based on the oral or written living will of the patient." />
   <purpose value="A good overview of the patient’s wishes is important. A healthcare provider can use the living will to discuss the existing wishes with the persons involved and to incorporate these wishes in their own policy. A concise, orderly list is of particular importance in acute care situations." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.0" />
@@ -38,7 +38,7 @@
   <differential>
     <element id="Consent">
       <path value="Consent" />
-      <short value="TreatmentInstruction" />
+      <short value="TreatmentDirective" />
       <alias value="BehandelAanwijzing" />
       <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN" />
@@ -60,7 +60,7 @@
       <sliceName value="verification" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification" />
       </type>
       <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN" />
@@ -113,7 +113,7 @@
     </element>
     <element id="Consent.extension:verification.url">
       <path value="Consent.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification" />
     </element>
     <element id="Consent.extension:explanation">
       <path value="Consent.extension" />
@@ -139,7 +139,7 @@
       <alias value="Behandeling" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Treatment" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment" />
       </type>
       <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN" />
@@ -175,7 +175,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-TreatmentPermitted" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted" />
       </type>
       <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN" />
@@ -369,7 +369,7 @@
       <alias value="Beperkingen" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Constraints" />
       </type>
       <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN" />

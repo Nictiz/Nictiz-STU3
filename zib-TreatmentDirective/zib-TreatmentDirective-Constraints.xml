@@ -3,10 +3,10 @@
     <meta>
         <lastUpdated value="2017-06-19T14:05:41.935+02:00"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Constraints"/>
     <version value="1.0"/>
-    <name value="ZIB-TreatmentInstruction-Constraints"/>
-    <title value="HCIM TreatmentInstruction Constraints"/>
+    <name value="ZIB-TreatmentDirective-Constraints"/>
+    <title value="HCIM TreatmentDirective Constraints"/>
     <status value="active"/>
     <date value="2017-05-22T15:44:24.235801+02:00"/>
     <publisher value="Nictiz"/>
@@ -18,7 +18,7 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="An extension to add the constraints or specific circumstances that apply to a certain treatment to the Concent Resourse. This concept is defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) TreatmentInstruction version 1.0."/>
+    <description value="An extension to add the constraints or specific circumstances that apply to a certain treatment to the Concent Resourse. This concept is defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) TreatmentDirective version 1.0."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.1"/>
     <kind value="complex-type"/>
@@ -31,7 +31,7 @@
     <differential>
         <element id="Extension.url">
             <path value="Extension.url"/>
-            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints"/>
+            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Constraints"/>
         </element>
         <element id="Extension.value[x]">
             <path value="Extension.valueString"/>

@@ -5,10 +5,10 @@
         <versionId value="1"/>
         <lastUpdated value="2017-05-03T18:10:49.287+02:00"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification"/>
     <version value="1.0"/>
-    <name value="ZIB-TreatmentInstruction-Verification"/>
-    <title value="HCIM TreatmentInstruction Verification"/>
+    <name value="ZIB-TreatmentDirective-Verification"/>
+    <title value="HCIM TreatmentDirective Verification"/>
     <status value="active"/>
     <date value="2017-02-17T16:43:55.3245828+01:00"/>
     <publisher value="Nictiz"/>
@@ -20,7 +20,7 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="Extension to the CarePlan, which is used for the 'TreatmentInstruction as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.  to provide information on the verification of the treatment instruction."/>
+    <description value="Extension to the CarePlan, which is used for the 'TreatmentDirective as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.  to provide information on the verification of the treatment instruction."/>
     <purpose value="Need to provide infromation on the possible verification of the treatment instruction given by the patient."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.1"/>

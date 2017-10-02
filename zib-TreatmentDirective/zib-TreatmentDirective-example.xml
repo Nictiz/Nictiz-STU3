@@ -3,7 +3,7 @@
 <Consent xmlns="http://hl7.org/fhir">
  <id value="consent-example-treatmentpermitted"/>
   <meta>
-    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"/>
   </meta>
   <text>
     <status value="additional"/>
@@ -11,7 +11,7 @@
       Example of a patient's treatment instruction.
     </div>
   </text>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Verification">
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification">
     <extension url="Verified">
       <valueBoolean value="true"/>
     </extension>
@@ -28,7 +28,7 @@
       <valueDateTime value="2015-01-05"/>
     </extension>
   </extension>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Treatment">
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment">
   <valueCodeableConcept>
     <coding>
       <system value="http://snomed.info/sct" />
@@ -37,7 +37,7 @@
     </coding>
   </valueCodeableConcept>
   </extension>
-  <modifierExtension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-TreatmentPermitted">
+  <modifierExtension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted">
     <valueCodeableConcept>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4" />
@@ -89,7 +89,7 @@
   <!-- Example of a policyRule -->
   <policyRule value="http://wetten.overheid.nl/BWBR0012410/2014-02-15"/>
   <except>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction-Constraints">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Constraints">
       <valueString value="First consult the partner of the patient"/>
     </extension>
     <type value="deny"/>
