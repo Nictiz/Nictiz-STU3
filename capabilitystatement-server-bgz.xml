@@ -31,7 +31,7 @@
         <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
     </profile>
     <profile>
-        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentInstruction"/>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"/>
     </profile>
     <profile>
         <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"/>
