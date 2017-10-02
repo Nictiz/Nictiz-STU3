@@ -113,7 +113,7 @@
                 <strength value="required"/>
                 <description value="ProductCodeZICodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.1--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.1--20170904000000"/>
                     <display value="ProductCodeZICodelijst"/>
                 </valueSetReference>
             </binding>
@@ -126,7 +126,7 @@
                 <strength value="required"/>
                 <description value="ProductCodeHPKCodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.5--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.5--20170904000000"/>
                     <display value="ProductCodeHPKCodelijst"/>
                 </valueSetReference>
             </binding>
@@ -139,7 +139,7 @@
                 <strength value="required"/>
                 <description value="ProductCodeGTINCodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.2--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.2--20170904000000"/>
                     <display value="ProductCodeGTINCodelijst"/>
                 </valueSetReference>
             </binding>
@@ -152,7 +152,7 @@
                 <strength value="required"/>
                 <description value="ProductCodeGPKCodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.6--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.6--20170904000000"/>
                     <display value="ProductCodeGPKCodelijst"/>
                 </valueSetReference>
             </binding>
@@ -165,7 +165,7 @@
                 <strength value="required"/>
                 <description value="ProductCodePRKCodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.3--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.3--20170904000000"/>
                     <display value="ProductCodePRKCodelijst"/>
                 </valueSetReference>
             </binding>
@@ -178,7 +178,7 @@
                 <strength value="required"/>
                 <description value="ProductCodeATCCodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.7--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.7--20170904000000"/>
                     <display value="ProductCodeATCCodelijst"/>
                 </valueSetReference>
             </binding>
@@ -220,7 +220,7 @@
                 <strength value="required"/>
                 <description value="FarmaceutischeVormCodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.8--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.8--20170904000000"/>
                     <display value="FarmaceutischeVormCodelijst"/>
                 </valueSetReference>
             </binding>
@@ -281,7 +281,7 @@
                 <strength value="required"/>
                 <description value="IngredientCodeZICodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.12--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.12--20170904000000"/>
                     <display value="IngredientCodeZICodelijst"/>
                 </valueSetReference>
             </binding>
@@ -293,7 +293,7 @@
                 <strength value="required"/>
                 <description value="IngredientCodeGTINCodeLijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.1--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.1--20170904000000"/>
                     <display value="IngredientCodeGTINCodeLijst"/>
                 </valueSetReference>
             </binding>
@@ -305,7 +305,7 @@
                 <strength value="required"/>
                 <description value="IngredientCodeATCCodelijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.13--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.13--20170904000000"/>
                     <display value="IngredientCodeATCCodelijst"/>
                 </valueSetReference>
             </binding>
@@ -317,7 +317,7 @@
                 <strength value="required"/>
                 <description value="IngredientCodeHPKLijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.10--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.10--20170904000000"/>
                     <display value="IngredientCodeHPKLijst"/>
                 </valueSetReference>
             </binding>
@@ -329,7 +329,7 @@
                 <strength value="required"/>
                 <description value="IngredientCodeGPKLijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.9--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.9--20170904000000"/>
                     <display value="IngredientCodeGPKLijst"/>
                 </valueSetReference>
             </binding>
@@ -341,7 +341,7 @@
                 <strength value="required"/>
                 <description value="IngredientCodeSNKLijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.14--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.14--20170904000000"/>
                     <display value="IngredientCodeSNKLijst"/>
                 </valueSetReference>
             </binding>
@@ -353,7 +353,7 @@
                 <strength value="required"/>
                 <description value="IngredientCodePRKLijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.11--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.11--20170904000000"/>
                     <display value="IngredientCodePRKLijst"/>
                 </valueSetReference>
             </binding>
@@ -365,7 +365,7 @@
                 <strength value="required"/>
                 <description value="IngredientCodeSSKLijst"/>
                 <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.15--20170824000000"/>
+                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.7.15--20170904000000"/>
                     <display value="IngredientCodeSSKLijst"/>
                 </valueSetReference>
             </binding>
