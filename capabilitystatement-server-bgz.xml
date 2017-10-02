@@ -3,7 +3,7 @@
     <url value="http://nictiz.nl/fhir/CapabilityStatement/bgz-servercapabilities"/>
     <version value="1.0"/>
     <name value="DutchPatientSummaryServer"/>
-    <status value="draft"/>
+    <status value="active"/>
     <date value="2017-09-25"/>
     <publisher value="Nictiz"/>
     <contact>

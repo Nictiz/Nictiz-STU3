@@ -7,7 +7,7 @@
     <version value="1.0"/>
     <name value="ZIB-OrderStatus"/>
     <title value="HCIM OrderStatus"/>
-    <status value="draft"/>
+    <status value="active"/>
     <date value="2017-05-17T16:33:21.6198582+02:00"/>
     <publisher value="Nictiz"/>
     <contact>

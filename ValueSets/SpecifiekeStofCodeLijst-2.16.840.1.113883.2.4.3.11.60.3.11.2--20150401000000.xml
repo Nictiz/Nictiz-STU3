@@ -11,7 +11,7 @@
     </identifier>
     <version value="2015-04-01T00:00:00"/>
     <name value="SpecifiekeStofCodeLijst"/>
-    <status value="draft"/>
+    <status value="active"/>
     <experimental value="false"/>
     <publisher value="ART-DECOR Expert Group"/>
     <description value="Verzameling van alle waardelijsten met codes voor SpecifiekeStof. Deze waardelijst bestaat voor plaatsen waar een meervoudige koppeling van context aan een waardelijst niet mogelijk of niet praktisch is. De FHIR StructureDefinition (DSTU2) is een voorbeeld waar een meervoudige koppeling niet mogelijk is."/>
