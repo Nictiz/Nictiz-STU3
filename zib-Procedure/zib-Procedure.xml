@@ -22,7 +22,7 @@
     </contact>
     <description value="Procedure as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#13;&#10;&#13;&#10;The concept Procedure indicates a therapeutic procedure undergone by the patient. If relevant, diagnostic procedures can be listed as well. &#13;&#10;A procedure can be a simple blood pressure measurement, but also a complex heart surgery."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-procedurefortransfer-v1.2-2015EN"/>
         <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v1.2(2015EN)"/>

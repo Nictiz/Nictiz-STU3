@@ -20,7 +20,7 @@
     </contact>
     <description value="An extension to add the constraints or specific circumstances that apply to a certain treatment to the Concent Resourse. This concept is defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) TreatmentInstruction version 1.0."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <kind value="complex-type"/>
     <abstract value="false"/>
     <contextType value="resource"/>

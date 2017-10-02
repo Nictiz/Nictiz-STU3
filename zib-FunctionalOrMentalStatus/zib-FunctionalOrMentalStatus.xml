@@ -22,7 +22,7 @@
     </contact>
     <description value="FunctionalOrMentalStatus as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#13;&#10;The functional or mental status provides insight into the patient’s functional and mental limitations."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-functionalormentalstatus-v1.0.1-2015EN"/>
         <uri value="https://zibs.nl/wiki/FunctionalOrMentalStatus-v1.0.1(2015EN)"/>

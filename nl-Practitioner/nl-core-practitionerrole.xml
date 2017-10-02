@@ -19,7 +19,7 @@
     </contact>
     <description value="Zorgverlener. Functional requirements taken from Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
         <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)"/>

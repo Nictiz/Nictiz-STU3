@@ -20,7 +20,7 @@
     </contact>
     <description value="The status of the order."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <kind value="complex-type"/>
     <abstract value="false"/>
     <contextType value="resource"/>

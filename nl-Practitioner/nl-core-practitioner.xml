@@ -20,7 +20,7 @@
     </contact>
     <description value="Zorgverlener. Functional requirements taken from Health and Care Information models (Zorginformatiebouwsteen) Zorgverlener v1.2 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
         <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)"/>

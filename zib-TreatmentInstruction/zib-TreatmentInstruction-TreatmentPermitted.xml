@@ -21,7 +21,7 @@
     </contact>
     <description value="An extension for Consent based on the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) TreatmentInstruction version 1.0. This extension provides information on the indication of permission for the treatment."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <kind value="primitive-type"/>
     <abstract value="false"/>
     <contextType value="resource"/>

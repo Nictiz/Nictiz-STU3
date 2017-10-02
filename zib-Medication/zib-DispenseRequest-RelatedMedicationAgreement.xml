@@ -21,7 +21,7 @@
     <description value="The medication agreement related to the current medication information"/>
     <purpose value="This is extension is needed to describe the context of the current medication information"/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <kind value="complex-type"/>
     <abstract value="false"/>
     <contextType value="resource"/>

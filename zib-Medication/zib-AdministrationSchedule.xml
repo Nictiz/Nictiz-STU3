@@ -23,7 +23,7 @@
     </contact>
     <description value="This profile is based the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB)  nl.zorg.part.GebruiksInstructie version 1.0, year 2017. In specific, the container concept Administrering Schedule. It covers the specifications of the times at which the medication is to be administered."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-instructionsforuse-v1.0-2017EN"/>
         <uri value="https://zibs.nl/wiki/InstructionsForUse-v1.0(2017EN)"/>

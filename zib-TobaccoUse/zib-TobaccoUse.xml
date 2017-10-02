@@ -22,7 +22,7 @@
     </contact>
     <description value="TabakGebruik as defined by the Dutch Clinical Building Block (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;&#xD;&#xA;Tobacco is a product that comes from the leaves of the tobacco plant, which is smoked as a drug. Smokable forms of tobacco include rolling tobacco, cigarettes, cigars and pipe tobacco. This information model describes the information asked of the patient about their use of tobacco."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-tobaccouse-v1.2.1-2015EN"/>
         <uri value="https://zibs.nl/wiki/TobaccoUse-v1.2.1(2015EN)"/>

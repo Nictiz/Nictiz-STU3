@@ -23,7 +23,7 @@
     <description value="This profile is based the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) nl.zorg.Verstrekking version 1.0, year 2017."/>
     <purpose value="The goal of the administration agreement is to provide insight into the concrete instructions for administration/use of medication."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-administrationagreement-v1.0-2017EN"/>
         <uri value="https://zibs.nl/wiki/AdministrationAgreement-v1.0(2017EN)"/>

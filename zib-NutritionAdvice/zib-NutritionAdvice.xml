@@ -22,7 +22,7 @@
     </contact>
     <description value="NutritionAdvice as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-nutritionadvice-v1.0-2015EN"/>
         <uri value="https://zibs.nl/wiki/NutritionAdvice-v1.0(2015EN)"/>

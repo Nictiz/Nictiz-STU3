@@ -22,7 +22,7 @@
     </contact>
     <description value="A LaboratoryTestResult as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.2"/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
         <uri value="https://zibs.nl/wiki/LaboratoryTestResultForTransfer-v1.2.2(2015EN)"/>

@@ -22,7 +22,7 @@
     </contact>
     <description value="LivingSituation as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#13;&#10;&#13;&#10;The living situation is the physical environment in which the patient normally lives, sleeps, keeps their clothing, etc."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-livingsituation-v1.2-2015EN"/>
         <uri value="https://zibs.nl/wiki/LivingSituation-v1.2(2015EN)"/>

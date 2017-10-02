@@ -22,7 +22,7 @@
     </contact>
     <description value="MedischHulpmiddel as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#13;&#10;&#13;&#10;Medical aids are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-medicaldevice-v1.2-2015EN"/>
         <uri value="https://zibs.nl/wiki/MedicalDevice-v1.2(2015EN)"/>

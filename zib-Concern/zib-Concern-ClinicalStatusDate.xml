@@ -23,7 +23,7 @@
     <description value="Date from when the current value of the ProblemStatus applies: since when is the problem current, under control or non-current as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) 'OverdrachtConcern' version 1.0."/>
     <purpose value="There is a need to provide a date from when the current value of ProblemStatus (ZIB) or ClinicalStatus (FHIR) applies. Currently, this date field is not provided in the Condition base Resource."/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <kind value="primitive-type"/>
     <abstract value="false"/>
     <contextType value="resource"/>

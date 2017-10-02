@@ -19,7 +19,7 @@
     </contact>
     <description value="A HealthcareService resource as defined for the Dutch realm"/>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
         <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)"/>

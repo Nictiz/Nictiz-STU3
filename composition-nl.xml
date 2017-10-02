@@ -20,7 +20,7 @@
         </telecom>
     </contact>
     <copyright value="CC0"/>
-    <fhirVersion value="3.0.0"/>
+    <fhirVersion value="3.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Composition"/>
