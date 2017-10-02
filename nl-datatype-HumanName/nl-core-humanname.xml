@@ -55,7 +55,7 @@
                             <valueString value="Jongeneel"/>
                         </extension>
                         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
-                            <valueString value="de"/>
+                            <valueString value="de "/>
                         </extension>
                         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
                             <valueString value="Haas"/>
@@ -144,8 +144,8 @@
             <path value="HumanName.family.extension"/>
             <sliceName value="humannameOwnPrefix"/>
             <short value="PrefixOwnName"/>
-            <definition value="The prefix portion (e.g. voorvoegsel) of the family name that is derived from the person&amp;#39;s own surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s partner or spouse."/>
-            <comment value="An example of a voorvoegsel is the &amp;quot;van&amp;quot; in &amp;quot;Ludwig van Beethoven&amp;quot;. Since the voorvoegsel doesn&amp;#39;t sort completely alphabetically, it is reasonable to specify it as a separate sub-component."/>
+            <definition value="The prefix portion (e.g. voorvoegsel) inclusive of the space between the prefix and the surname, if applicable, of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse."/>
+            <comment value="An example of a voorvoegsel is the &quot;van&quot; in &quot;Ludwig van Beethoven&quot;. Since the voorvoegsel doesn't sort completely alphabetically, it is reasonable to specify it as a separate sub-component."/>
             <alias value="VoorvoegselGeslachtsnaam"/>
             <max value="1"/>
             <type>
@@ -161,8 +161,8 @@
             <path value="HumanName.family.extension"/>
             <sliceName value="humannameOwnName"/>
             <short value="OwnName"/>
-            <definition value="The portion of the family name that is derived from the person&amp;#39;s own surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s partner or spouse."/>
-            <comment value="If the person&amp;#39;s surname has legally changed to become (or incorporate) the surname of the person&amp;#39;s partner or spouse, this is the person&amp;#39;s surname immediately prior to such change. Often this is the person&amp;#39;s &amp;quot;maiden name&amp;quot;."/>
+            <definition value="The portion of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse."/>
+            <comment value="If the person's surname has legally changed to become (or incorporate) the surname of the person's partner or spouse, this is the person's surname immediately prior to such change. Often this is the person's &quot;maiden name&quot;."/>
             <alias value="Geslachtsnaam"/>
             <max value="1"/>
             <type>
@@ -178,8 +178,8 @@
             <path value="HumanName.family.extension"/>
             <sliceName value="humannamePartnerPrefix"/>
             <short value="PrefixSurname"/>
-            <definition value="Voorvoegsel derived from person's partner's surname"/>
-            <comment value="An example of a voorvoegsel is the &amp;quot;van&amp;quot; in &amp;quot;Ludwig van Beethoven&amp;quot;. Since the voorvoegsel doesn&amp;#39;t sort completely alphabetically, it is reasonable to identify it as a separate sub-component."/>
+            <definition value="Voorvoegsel derived from person's partner's surname inclusive of the space between the prefix and the surname, if applicable."/>
+            <comment value="An example of a voorvoegsel is the &quot;van&quot; in &quot;Ludwig van Beethoven&quot;. Since the voorvoegsel doesn't sort completely alphabetically, it is reasonable to identify it as a separate sub-component."/>
             <alias value="VoorvoegselGeslachtsnaamPartner"/>
             <max value="1"/>
             <type>
@@ -195,8 +195,8 @@
             <path value="HumanName.family.extension"/>
             <sliceName value="humannamePartnerName"/>
             <short value="LastNamePartner"/>
-            <definition value="The portion of the family name that is derived from the person&amp;#39;s partner&amp;#39;s surname, as distinguished from any portion that is derived from the surname of the person&amp;#39;s own name."/>
-            <comment value="If the person&amp;#39;s surname has legally changed to become (or incorporate) the surname of the person&amp;#39;s partner or spouse, this is the person&amp;#39;s surname immediately prior to such change. Often this is the person&amp;#39;s &amp;quot;maiden name&amp;quot;."/>
+            <definition value="The portion of the family name that is derived from the person's partner's surname, as distinguished from any portion that is derived from the surname of the person's own name."/>
+            <comment value="If the person's surname has legally changed to become (or incorporate) the surname of the person's partner or spouse, this is the person's surname immediately prior to such change. Often this is the person's &quot;maiden name&quot;."/>
             <alias value="GeslachtsnaamPartner"/>
             <max value="1"/>
             <type>
