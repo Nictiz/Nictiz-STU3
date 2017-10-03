@@ -28,6 +28,9 @@
         <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer"/>
     </profile>
     <profile>
+      <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Concern"/>
+    </profile>
+    <profile>
         <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
     </profile>
     <profile>
