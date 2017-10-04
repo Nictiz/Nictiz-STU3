@@ -369,11 +369,11 @@
         <element id="Patient.contact.telecom">
             <path value="Patient.contact.telecom"/>
             <short value="ContactInformation"/>
+            <comment value="Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson"/>
             <alias value="Contactgegevens"/>
             <mapping>
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.6"/>
-                <comment value="NOTE: Telecommunication data is physically modeled in the HCIM Patient, which is why the following mappings appear to be coming from the patient"/>
             </mapping>
         </element>
         <element id="Patient.contact.telecom.system">
