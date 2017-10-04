@@ -102,31 +102,6 @@
             <lastModified value="1899-12-30T00:00:00Z"/>
         </response>
     </entry>
-    <!--<entry>
-        <resource>
-            <Bundle>
-                <id value="de369692-0914-4b2a-83fd-a38dbe9b4d"/>
-                <meta>
-                    <lastUpdated value="2017-10-04T09:37:34Z"/>
-                </meta>
-                <type value="searchset"/>
-                <total value="0"/>
-                <link>
-                    <relation value="self"/>
-                    <url value="http://test.fhir.org/r3/RelatedPerson?_format=application/fhir+xml&amp;search-id=0b64a14a-4ecb-4574-8a24-b65b55784b&amp;&amp;patient.identifier=%5Bpatient%2Did%5D&amp;role=urn%3Aoid%3A2.16.840.1.113883.2.4.3.11.22.472%7C1&amp;_sort=_id"/>
-                </link>
-            </Bundle>
-        </resource>
-        <request>
-            <method value="GET"/>
-            <url value="/RelatedPerson?patient.identifier=123456789&amp;role=urn:oid:2.16.840.1.113883.2.4.3.11.22.472|1"/>
-        </request>
-        <response>
-            <status value="200"/>
-            <etag value="W/"/>
-            <lastModified value="1899-12-30T00:00:00Z"/>
-        </response>
-    </entry>-->
     <entry>
         <resource>
             <OperationOutcome>
