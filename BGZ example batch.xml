@@ -35,7 +35,7 @@
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/Observation$lastn?patient.identifier=123456789&amp;category=http://snomed.info/sct|118228005,http://snomed.info/sct|364644000"/> 
+      <url value="/Observation/$lastn?patient.identifier=123456789&amp;category=http://snomed.info/sct|118228005,http://snomed.info/sct|364644000"/> 
     </request> 
   </entry>
   <entry> 
@@ -47,7 +47,7 @@
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/Observation$lastn?patient.identifier=123456789&amp;code=http://snomed.info/sct|365508006"/> 
+      <url value="/Observation/$lastn?patient.identifier=123456789&amp;code=http://snomed.info/sct|365508006"/> 
     </request> 
   </entry>
   <entry> 
@@ -113,33 +113,27 @@
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/Observation?patient.identifier=123456789&amp;code=http://loinc.org|85354-9"/> 
+      <url value="/Observation/$lastn?patient.identifier=123456789&amp;code=http://loinc.org|85354-9"/> 
     </request> 
   </entry>    
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/Observation?patient.identifier=123456789&amp;code=http://loinc.org|29463-7"/> 
+      <url value="/Observation/$lastn?patient.identifier=123456789&amp;code=http://loinc.org|29463-7"/> 
     </request> 
   </entry>    
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/Observation?patient.identifier=123456789&amp;code=http://loinc.org|8302-2,http://loinc.org|8306-3,http://loinc.org|8308-9"/> 
+      <url value="/Observation/$lastn?patient.identifier=123456789&amp;code=http://loinc.org|8302-2,http://loinc.org|8306-3,http://loinc.org|8308-9"/> 
     </request> 
   </entry>    
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/DiagnosticReport?patient.identifier=123456789&amp;category=http://snomed.info/sct|275711006&amp;_include=DiagnosticReport:result&amp;_include=DiagnosticReport:specimen"/> 
+      <url value="/Observation/$lastn?patient.identifier=123456789&amp;category=http://snomed.info/sct|275711006&amp;_include=Observation:related-target&amp;_include=Observation:specimen"/> 
     </request> 
-  </entry>    
-  <entry> 
-    <request> 
-      <method value="GET"/> 
-      <url value="/Observation?patient.identifier=123456789&amp;category=http://snomed.info/sct|275711006&amp;_include=Observation:related-target&amp;_include=Observation:specimen"/> 
-    </request> 
-  </entry>    
+  </entry>        
   <entry> 
     <request> 
       <method value="GET"/> 
