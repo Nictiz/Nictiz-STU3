@@ -43,9 +43,9 @@
   <profile>
     <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"/>
   </profile>
-  <profile>
+  <!--<profile>
     <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
-  </profile>
+  </profile>-->
   <profile>
     <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus"/>
   </profile>

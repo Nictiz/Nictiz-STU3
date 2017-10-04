@@ -26,12 +26,12 @@
       <url value="/Consent?patient.identifier=123456789&amp;category=http://snomed.info/sct|11291000146105"/> 
     </request> 
   </entry>
-  <entry> 
+  <!--<entry> 
     <request> 
       <method value="GET"/> 
       <url value="/RelatedPerson?patient.identifier=123456789&amp;role=urn:oid:2.16.840.1.113883.2.4.3.11.22.472|1"/> 
     </request> 
-  </entry>
+  </entry>-->
   <entry> 
     <request> 
       <method value="GET"/> 

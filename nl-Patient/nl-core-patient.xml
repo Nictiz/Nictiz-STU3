@@ -369,8 +369,8 @@
             <short value="ContactInformation"/>
             <alias value="Contactgegevens"/>
             <mapping>
-                <identity value="hcim-patient-v2.0.1-2015EN"/>
-                <map value="NL-CM:0.1.5"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
+                <map value="NL-CM:3.1.6"/>
             </mapping>
         </element>
         <element id="Patient.contact.telecom.system">
