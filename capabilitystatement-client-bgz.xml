@@ -43,9 +43,9 @@
   <profile>
     <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"/>
   </profile>
-  <!--<profile>
+  <profile>
     <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
-  </profile>-->
+  </profile>
   <profile>
     <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-FunctionalOrMentalStatus"/>
   </profile>
@@ -99,8 +99,7 @@
       value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
   </profile>
   <profile>
-    <reference
-      value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
+    <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
   </profile>
   <profile>
     <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen"/>
@@ -167,21 +166,6 @@
       </searchParam>
       <searchParam>
         <name value="category"/>
-        <type value="token"/>
-      </searchParam>
-    </resource>
-    <resource>
-      <type value="RelatedPerson"/>
-      <interaction>
-        <code value="search-type"/>
-      </interaction>
-      <searchParam>
-        <name value="patient"/>
-        <type value="reference"/>
-      </searchParam>
-      <searchParam>
-        <name value="role"/>
-        <definition value="	http://nictiz.nl/fhir/SearchParameter/RelatedPerson-role"/>
         <type value="token"/>
       </searchParam>
     </resource>
