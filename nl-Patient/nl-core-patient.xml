@@ -301,6 +301,7 @@
             </extension>
             <path value="Patient.contact"/>
             <short value="ContactPerson"/>
+            <definition value="Contacts are related persons in some way, but not all related persons are contacts. The HCIM ContactPerson is meant to deal with both related persons and contacts. An HCIM ContactPerson who is a contact, is expected to have an NL-CM:3.1.2 Role 'Eerste relatie/contactpersoon' or 'Tweede relatie/contactpersoon'. See Patient.contact.relationship in slice 'role'"/>
             <alias value="Contactpersoon"/>
             <mapping>
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
@@ -338,6 +339,7 @@
             <path value="Patient.contact.relationship"/>
             <sliceName value="role"/>
             <short value="Role"/>
+            <definition value="Expectation is to have at least one of 'Eerste relatie/contactpersoon' or 'Tweede relatie/contactpersoon'"/>
             <alias value="Rol"/>
             <binding>
                 <strength value="extensible"/>
@@ -371,6 +373,7 @@
             <mapping>
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.6"/>
+                <comment value="NOTE: Telecommunication data is physically modeled in the HCIM Patient, which is why the following mappings appear to be coming from the patient"/>
             </mapping>
         </element>
         <element id="Patient.contact.telecom.system">
