@@ -165,21 +165,6 @@
             </searchParam>
         </resource>
         <resource>
-            <type value="RelatedPerson"/>
-            <interaction>
-                <code value="search-type"/>
-            </interaction>
-            <searchParam>
-                <name value="patient"/>
-                <type value="reference"/>
-            </searchParam>
-            <searchParam>
-                <name value="role"/>
-                <definition value="	http://nictiz.nl/fhir/SearchParameter/RelatedPerson-role"/>
-                <type value="token"/>
-            </searchParam>
-        </resource>
-        <resource>
             <type value="Observation"/>
             <interaction>
                 <code value="search-type"/>

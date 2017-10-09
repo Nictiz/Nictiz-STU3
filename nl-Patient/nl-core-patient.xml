@@ -153,7 +153,7 @@
             <alias value="BSN"/>
             <min value="1"/>
             <example>
-                <label value="BSN voorbeeld"/>
+                <label value="Example of a burgerservicenummer"/>
                 <valueString value="123456782"/>
             </example>
         </element>
@@ -301,6 +301,7 @@
             </extension>
             <path value="Patient.contact"/>
             <short value="ContactPerson"/>
+            <definition value="Contacts are related persons in some way, but not all related persons are contacts. The HCIM ContactPerson is meant to deal with both related persons and contacts. An HCIM ContactPerson who is a contact, is expected to have an NL-CM:3.1.2 Role primary contact ('Eerste relatie/contactpersoon') or secondary contact ('Tweede relatie/contactpersoon'). See Patient.contact.relationship in slice 'role'."/>
             <alias value="Contactpersoon"/>
             <mapping>
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
@@ -338,6 +339,7 @@
             <path value="Patient.contact.relationship"/>
             <sliceName value="role"/>
             <short value="Role"/>
+            <definition value="Expectation is to have at least one of primary contact ('Eerste relatie/contactpersoon') or secondary contact ('Tweede relatie/contactpersoon')"/>
             <alias value="Rol"/>
             <binding>
                 <strength value="extensible"/>
@@ -367,10 +369,11 @@
         <element id="Patient.contact.telecom">
             <path value="Patient.contact.telecom"/>
             <short value="ContactInformation"/>
+            <comment value="Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson"/>
             <alias value="Contactgegevens"/>
             <mapping>
-                <identity value="hcim-patient-v2.0.1-2015EN"/>
-                <map value="NL-CM:0.1.5"/>
+                <identity value="hcim-contactperson-v1.2-2015EN"/>
+                <map value="NL-CM:3.1.6"/>
             </mapping>
         </element>
         <element id="Patient.contact.telecom.system">

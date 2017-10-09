@@ -252,6 +252,12 @@
                 <map value="NL-CM:13.1.3"/>
             </mapping>
         </element>
+        <element id="Observation.related.type">
+            <path value="Observation.related.type"/>
+            <min value="1"/>
+            <fixedCode value="has-member"/>
+            <mustSupport value="true"/>
+        </element>
         <element id="Observation.related.target">
             <path value="Observation.related.target"/>
             <type>
