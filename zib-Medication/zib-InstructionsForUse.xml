@@ -2,7 +2,7 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
   <meta>
-    <lastUpdated value="2017-10-16T15:46:10.557+02:00" />
+    <lastUpdated value="2017-10-16T16:05:10.557+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse" />
   <version value="1.0" />
