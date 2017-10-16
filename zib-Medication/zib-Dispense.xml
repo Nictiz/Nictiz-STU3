@@ -272,15 +272,6 @@
             <short value="DispensedAmount"/>
             <definition value="Number of units of the product (measured based on the relevant product code) supplied."/>
             <alias value="VerstrekteHoeveelheid"/>
-            <example>
-                <label value="Example of DispensedAmount"/>
-                <valueQuantity>
-                    <value value="100"/>
-                    <unit value="ml"/>
-                    <system value="http://unitsofmeasure.org"/>
-                    <code value="mL"/>
-                </valueQuantity>
-            </example>
             <mapping>
                 <identity value="hcim-dispense-v1.0-2017EN"/>
                 <map value="NL-CM:9.9.20923"/>
@@ -291,15 +282,6 @@
             <short value="DurationOfUse"/>
             <definition value="The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount."/>
             <alias value="VerbruiksDuur"/>
-            <example>
-                <label value="Example of DurationOfUse"/>
-                <valueQuantity>
-                    <value value="3"/>
-                    <unit value="week"/>
-                    <system value="http://unitsofmeasure.org"/>
-                    <code value="w"/>
-                </valueQuantity>
-            </example>
             <mapping>
                 <identity value="hcim-dispense-v1.0-2017EN"/>
                 <map value="NL-CM:9.9.20924"/>
