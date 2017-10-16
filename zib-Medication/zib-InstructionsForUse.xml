@@ -194,19 +194,6 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Dosage.dose[x]:DoseRange.low.unit">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Dosage.dose[x].low.unit" />
-      <binding>
-        <strength value="required" />
-        <description value="GstdTabel902" />
-        <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453" />
-        </valueSetReference>
-      </binding>
-    </element>
     <element id="Dosage.dose[x]:DoseRange.high">
       <path value="Dosage.dose[x].high" />
       <binding>
