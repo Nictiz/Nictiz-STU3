@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-    <meta>
-        <lastUpdated value="2017-09-12T17:19:49.655+02:00"/>
-    </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse"/>
-    <version value="1.0"/>
+  <meta>
+    <lastUpdated value="2017-10-16T15:46:10.557+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse" />
+  <version value="1.0" />
     <name value="ZIB-InstructionsForUse"/>
     <title value="HCIM InstructionsForUse"/>
     <status value="active"/>
@@ -147,43 +147,97 @@
         </element>
         <element id="Dosage.dose[x]">
             <path value="Dosage.dose[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
             <short value="Dose"/>
-            <definition
-                value="The dose indicates the dose amount per administration. &#xA; &#xA;The dosage is described in the unit accompanying the product; usually, this is just a number of units or doses. Liquids and other divisible products will usually include a unit of volume (preferably &quot;&quot;ml&quot;&quot;). &#xA; &#xA;In many cases, the prescriber will want to indicate the dose in units of weight of the active ingredient.  &#xA; &#xA;If only the ingredient is included and not the product, then the amount of that ingredient will be given. Paracetamol 1000mg is equivalent to 2 Paracetamol 500mg tablets or units. &#xA; &#xA;The dosage is sometimes given as a calculation, in which the patient’s body weight or body surface area is used as a parameter. The calculation is however no more than an aid in reaching a decision. &#xA; &#xA;In the event of constant administration, sometimes the dose is given in addition to the administration speed (infusion rate) (e.g. 20ml in a syringe or 500ml in a bag), but it is often also omitted. &#xA; &#xA;A general dosage recommendation such as ‘Use according to protocol’ or ‘See instructions’ can be sufficient. In that case, no dose is given."/>
+      <definition value="The dose indicates the dose amount per administration. &#xA; &#xA;The dosage is described in the unit accompanying the product; usually, this is just a number of units or doses. Liquids and other divisible products will usually include a unit of volume (preferably &quot;&quot;ml&quot;&quot;). &#xA; &#xA;In many cases, the prescriber will want to indicate the dose in units of weight of the active ingredient.  &#xA; &#xA;If only the ingredient is included and not the product, then the amount of that ingredient will be given. Paracetamol 1000mg is equivalent to 2 Paracetamol 500mg tablets or units. &#xA; &#xA;The dosage is sometimes given as a calculation, in which the patient’s body weight or body surface area is used as a parameter. The calculation is however no more than an aid in reaching a decision. &#xA; &#xA;In the event of constant administration, sometimes the dose is given in addition to the administration speed (infusion rate) (e.g. 20ml in a syringe or 500ml in a bag), but it is often also omitted. &#xA; &#xA;A general dosage recommendation such as ‘Use according to protocol’ or ‘See instructions’ can be sufficient. In that case, no dose is given." />
             <alias value="Keerdosis"/>
             <mapping>
                 <identity value="hcim-instructionsforuse-v1.0-2017EN"/>
                 <map value="NL-CM:9.12.19940"/>
             </mapping>
         </element>
+    <element id="Dosage.dose[x]:DoseQuantity">
+      <path value="Dosage.dose[x]" />
+      <sliceName value="DoseQuantity" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="GstdTabel902" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Dosage.dose[x]:DoseRange">
+      <path value="Dosage.dose[x]" />
+      <sliceName value="DoseRange" />
+      <type>
+        <code value="Range" />
+      </type>
+    </element>
+    <element id="Dosage.dose[x]:DoseRange.low">
+      <path value="Dosage.dose[x].low" />
+      <binding>
+        <strength value="required" />
+        <description value="GstdTabel902" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Dosage.dose[x]:DoseRange.low.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Dosage.dose[x].low.unit" />
+      <binding>
+        <strength value="required" />
+        <description value="GstdTabel902" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Dosage.dose[x]:DoseRange.high">
+      <path value="Dosage.dose[x].high" />
+      <binding>
+        <strength value="required" />
+        <description value="GstdTabel902" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453" />
+        </valueSetReference>
+      </binding>
+    </element>
         <element id="Dosage.maxDosePerPeriod">
             <path value="Dosage.maxDosePerPeriod"/>
             <short value="MaximumDose"/>
             <definition value="A maximum dose indicates the maximum duration a product can be used with an ‘as needed’ prescription.&#xD;&#xA;&#xD;&#xA;For example:&#xD;&#xA;- Max 6 units per day&#xD;&#xA;- Max 200ml per week"/>
             <alias value="Maximale dosering"/>
             <alias value="Maximale dosis (per dag enz.)"/>
-            <example>
-                <label value="Example of MaxiumDose"/>
-                <valueRatio>
-                    <numerator>
-                        <value value="200"/>
-                        <unit value="ml"/>
-                        <system value="http://unitsofmeasure.org"/>
-                        <code value="mL"/>
-                    </numerator>
-                    <denominator>
-                        <value value="1"/>
-                        <unit value="week"/>
-                        <system value="http://unitsofmeasure.org"/>
-                        <code value="wk"/>
-                    </denominator>
-                </valueRatio>
-            </example>
             <mapping>
                 <identity value="hcim-instructionsforuse-v1.0-2017EN"/>
                 <map value="NL-CM:9.12.19946"/>
             </mapping>
         </element>
+    <element id="Dosage.maxDosePerPeriod.numerator">
+      <path value="Dosage.maxDosePerPeriod.numerator" />
+      <binding>
+        <strength value="required" />
+        <description value="GstdTabel902" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453" />
+        </valueSetReference>
+      </binding>
+    </element>
         <element id="Dosage.rate[x]">
             <path value="Dosage.rate[x]"/>
             <short value="AdministeringSpeed"/>

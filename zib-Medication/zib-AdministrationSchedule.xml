@@ -4,7 +4,7 @@
   <id value="77dc0559-023b-4c4d-92e1-781f16acd33e" />
   <meta>
     <versionId value="5" />
-    <lastUpdated value="2017-10-09T14:47:03.996+02:00" />
+    <lastUpdated value="2017-10-16T13:53:36.4+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule" />
   <version value="1.0" />
@@ -141,7 +141,7 @@
       <comment value="Time of day: morning, afternoon, evening, night." />
       <alias value="Dagdeel" />
       <binding>
-        <strength value="extensible"/>
+        <strength value="required" />
         <description value="DagdeelCodelijst"/>
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.3--20170904000000"/>

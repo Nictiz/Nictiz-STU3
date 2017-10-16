@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-    <id value="3dace244-e5bf-4dd9-8ee4-12df8dd69a58"/>
-    <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2017-09-26T17:03:37.156+02:00"/>
-    </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense"/>
-    <version value="1.0"/>
+  <id value="3dace244-e5bf-4dd9-8ee4-12df8dd69a58" />
+  <meta>
+    <versionId value="7" />
+    <lastUpdated value="2017-10-16T15:48:18.788+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Dispense" />
+  <version value="1.0" />
     <name value="ZIB-Dispense"/>
     <title value="HCIM Dispense"/>
     <status value="draft"/>
