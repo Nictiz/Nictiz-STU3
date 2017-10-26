@@ -66,6 +66,6 @@
         <reference value="Patient/example"/>
         <display value="Jongeneel-de Haas"/>
     </subject>
-    <effectiveDateTime value="2014-12-05T17:00:00"/>
+    <effectiveDateTime value="2014-12-05T17:00:00+01:00"/>
     <conclusion value="Klinische gegevens: Opname van het respiratoire insufficiëntie bij pneumonie.&#10;Vraagstelling: Afname infiltraat?&#10;Verslag: Liggende opname vergeleken met onderzoek van 31/10/2012. Hoogliggende positie van de trachea tube 7 cm boven de carina, idealiter 4-6 cm. Onveranderd goede positie van jugularislijn over rechts met tip in vena cava superior. Twee lijnstructuren te volgen over de oesophagus tot subdiafragmaal. Hoogstand van het rechter hemidiafragma conform. Pleuravocht rechts. Goede afgrensbaarheid linker diafragma en enige afname stuwingsbeeld. Iets afname van diffuse consolidatie rechter thoraxhelft. Verdichting in de fissura minor, passend bij plaatatelectase.&#10;Conclusie: Hoge ligging trachea tube. Iets afname van diffuse consolidaties rechter thoraxhelft. Afname stuwingsbeeld."></conclusion>
 </DiagnosticReport>
