@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/procedure.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Procedure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/procedure.xsd" xmlns="http://hl7.org/fhir">
+    <id value="example-overdrachtverrichting"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient with id example</caption>
+                <thead>
+                    <tr>
+                        <th>VerrichtingType</th>
+                        <th>Verrichting Anatomische Locatie</th>
+                        <th>Verrichting Start Datum</th>
+                        <th>ProductType</th>
+                        <th>ProductID</th>
+                        <th>ProbleemNaam</th>
+                        <th>Uitvoerder</th>
+                        <th>Locatie</th>
+                        <th>Aanvrager</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CR THORAX BED (085002BED)</td>
+                        <td></td>
+                        <td>2014-12-05 17:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>H. de Vries</td>
+                        <td>Radiologie</td>
+                        <td>Onbekende arts</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-Requester">
+        <valueReference>
+            <reference value="Practitioner/example"/>
+        </valueReference>
+    </extension>
+       <status value="completed"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="363680008"/>
+            <display value="Radiographic imaging procedure"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.120.5.2"/>
+            <code value="085002BED"/>
+            <display value="CR THORAX BED"/>
+        </coding>
+    </code> 
+    <subject>
+        <reference value="Patient/example"/>
+        <display value="Jongeneel-de Haas"/>
+    </subject>
+     <performedPeriod>
+        <start value="2014-12-05T17:00:00"/>
+    </performedPeriod>
+    <performer>
+        <actor>
+            <reference value="Practitioner/example"/>
+            <display value="H. de Vries"/>
+        </actor>
+    </performer>
+    <performer>
+        <actor>
+            <reference value="Organization/example"/>
+            <display value="UMCG"/>
+        </actor>
+    </performer>
+    <report>
+        <reference value="DiagnosticReport/d65bcf1c-37ff-4a5a-a91e-dd788a3809696"/>
+        <display value="zib-TextResult"/>
+    </report>
+</Procedure>
