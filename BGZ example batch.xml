@@ -11,7 +11,7 @@
   <entry> 
     <request> 
       <method value="GET"/> 
-      <url value="/Coverage?subscriber:Patient.identifier=123456789&amp;_include=Coverage:payor:Patient,Organization"/> 
+      <url value="/Coverage?subscriber:Patient.identifier=123456789&amp;_include=Coverage:payor:Patient&amp;_include=Coverage:payor:Organization"/> 
     </request> 
   </entry>
   <entry> 
