@@ -4,7 +4,7 @@
   <id value="77dc0559-023b-4c4d-92e1-781f16acd33e" />
   <meta>
     <versionId value="5" />
-    <lastUpdated value="2017-10-16T13:53:36.4+02:00" />
+    <lastUpdated value="2017-10-26T14:37:16.524+02:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule" />
   <version value="1.0" />
@@ -79,6 +79,16 @@
       <mapping>
         <identity value="hcim-instructionsforuse-v1.0-2017EN" />
         <map value="NL-CM:9.12.22506" />
+      </mapping>
+    </element>
+    <element id="Timing.repeat.duration">
+      <path value="Timing.repeat.duration" />
+      <short value="Duration of administration" />
+      <definition value="Defines the amount of time during which medication is being administered. This is used especially in the context of administering liquids.  " />
+      <alias value="toedieninsgduur" />
+      <mapping>
+        <identity value="hcim-instructionsforuse-v1.0-2017EN" />
+        <map value="NL-CM:9.12.23141" />
       </mapping>
     </element>
     <element id="Timing.repeat.frequency">
