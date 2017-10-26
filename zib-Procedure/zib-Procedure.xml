@@ -28,6 +28,11 @@
         <uri value="https://zibs.nl/wiki/ProcedureForTransfer-v1.2(2015EN)"/>
         <name value="HCIM ProcedureForTransfer-v1.2(2015EN)"/>
     </mapping>
+    <mapping>
+        <identity value="hcim-textresultfortransfer-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/TextResultForTransfer-v1.2.2(2015EN)"/>
+        <name value="HCIM TextResultForTransfer-v1.2.2(2015EN)"/>
+    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Procedure"/>
@@ -245,6 +250,19 @@
         <element id="Procedure.bodySite.coding.code">
             <path value="Procedure.bodySite.coding.code"/>
             <min value="1"/>
+        </element>
+        <element id="Procedure.report">
+            <path value="Procedure.report"/>
+            <definition value="Any report resulting from the procedure."/>
+            <comment value="Note that the HCIM TextResultForTransfer-v1.2 has this relationship reversed, so the relationship goes from report to procedure."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TextResult-DiagnosticReport"/>
+            </type>
+            <mapping>
+                <identity value="hcim-textresultfortransfer-v1.2-2015EN"/>
+                <map value="NL-CM:13.2.1"/>
+            </mapping>
         </element>
         <element id="Procedure.focalDevice">
             <path value="Procedure.focalDevice"/>
