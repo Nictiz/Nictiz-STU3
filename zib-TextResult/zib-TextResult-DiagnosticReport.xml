@@ -127,7 +127,7 @@
             </mapping>
         </element>
         <element id="DiagnosticReport.effective[x]">
-            <path value="DiagnosticReport.subject"/>
+            <path value="DiagnosticReport.effective[x]"/>
             <mapping>
                 <identity value="hcim-textresultfortransfer-v1.2-2015EN"/>
                 <map value="NL-CM:13.2.3"/>
