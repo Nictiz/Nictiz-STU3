@@ -24,7 +24,7 @@
     <copyright value="CC0"/>
     <fhirVersion value="3.0.1"/>
     <mapping>
-        <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <uri value="https://zibs.nl/wiki/LaboratoryTestResultForTransfer-v1.2.2(2015EN)"/>
         <name value="HCIM LaboratoryTestResultForTransfer-v1.2.2(2015EN)"/>
     </mapping>
@@ -45,7 +45,7 @@
             <definition value="A sample to be used for analysis. The HCIM LaboratoryTestResult only contains Specimen details at container and collection level. It is not prohibited, rather expected that other details will be present too."/>
             <alias value="Monster"/>
             <mapping>
-                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
                 <map value="NL-CM:13.1.2"/>
             </mapping>
         </element>
@@ -61,7 +61,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
                 <map value="NL-CM:13.1.16"/>
             </mapping>
         </element>
@@ -98,7 +98,7 @@
             <short value="DrawingDateTime"/>
             <alias value="AfnameDatumTijd"/>
             <mapping>
-                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
                 <map value="NL-CM:13.1.17"/>
             </mapping>
         </element>
@@ -114,7 +114,7 @@
                 </valueSetReference>
             </binding>
             <mapping>
-                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
                 <map value="NL-CM:13.1.18"/>
             </mapping>
         </element>
@@ -128,7 +128,7 @@
             <short value="SpecimenNumber"/>
             <alias value="Monsternummer"/>
             <mapping>
-                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
                 <map value="NL-CM:13.1.15"/>
             </mapping>
         </element>
@@ -137,7 +137,7 @@
             <short value="Explanation"/>
             <alias value="Toelichting"/>
             <mapping>
-                <identity value="hcim-laboratorytestresultrortransfer-v1.2.2-2015EN"/>
+                <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
                 <map value="NL-CM:13.1.19"/>
             </mapping>
         </element>
