@@ -11,27 +11,21 @@
   </identifier>
   <active value="true"/>
   <name>
-    <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
-      <valueCode value="NL4"/>
-    </extension>
     <use value="official"/>
-    <family value="Jongeneel-de Haas">
+    <family value="van Beek">
       <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-        <valueString value="Jongeneel"/>
+        <valueString value="Beek"/>
       </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
-        <valueString value="de "/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
-        <valueString value="Haas"/>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="van"/>
       </extension>
     </family>
-    <given value="Irma">
+    <given value="Thomas">
       <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
         <valueCode value="CL"/>
       </extension>
     </given>
-    <given value="I.">
+    <given value="T.">
       <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
         <valueCode value="IN"/>
       </extension>
@@ -75,8 +69,8 @@
   <maritalStatus>
     <coding>
       <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
-      <code value="M"/>
-      <display value="Married"/>
+      <code value="S"/>
+      <display value="Never Married"/>
     </coding>
   </maritalStatus>
   <multipleBirthBoolean value="false"/>
@@ -91,14 +85,14 @@
     <relationship>
       <coding>
         <system value="http://hl7.org/fhir/v3/RoleCode"/>
-        <code value="HUSB"/>
-        <display value="Husband"/>
+        <code value="SIS"/>
+        <display value="sister"/>
       </coding>
     </relationship>
     <name>
       <use value="official"/>
-      <family value="Eckdom"/>
-      <given value="Gerard"/>
+      <family value="Heeres"/>
+      <given value="Sabine"/>
     </name>
     <telecom>
       <system value="phone"/>
