@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/observation.xsd" xmlns="http://hl7.org/fhir">
+  <id value="medmij-bgz-laboratorytestresult-observation-02"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"/>
+  </meta>
+  <identifier>
+    <use value="official"/>
+    <system value="http://www.bmc.nl/zorgportal/identifiers/observations"/>
+    <value value="6324"/>
+  </identifier>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11555-0"/>
+      <display value="Base excess in Blood by calculation"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/medmij-bgz-patient-01"/>
+    <display value="T. van Beek"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2017-05-15T10:30:10+01:00"/>
+    <end value="2017-05-15T10:30:10+01:00"/>
+  </effectivePeriod>
+  <issued value="2017-05-15T15:30:10+01:00"/>
+  <performer>
+    <reference value="Organization/medmij-bgz-healthcareprovider-01"/>
+    <display value="Burgers University Medical Centre"/>
+  </performer>
+  <valueQuantity>
+    <value value="12.6"/>
+    <unit value="mmol/l"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mmol/L"/>
+  </valueQuantity>
+  <interpretation>
+    <coding>
+      <system value="http://hl7.org/fhir/v2/0078"/>
+      <code value="H"/>
+      <display value="High"/>
+    </coding>
+  </interpretation>
+  <referenceRange>
+    <low>
+      <value value="7.1"/>
+      <unit value="mmol/l"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mmol/L"/>
+    </low>
+    <high>
+      <value value="11.2"/>
+      <unit value="mmol/l"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mmol/L"/>
+    </high>
+  </referenceRange>
+</Observation>

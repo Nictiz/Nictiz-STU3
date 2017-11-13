@@ -1,0 +1,61 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Organization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/organization.xsd" xmlns="http://hl7.org/fhir">
+  <id value="medmij-bgz-healthcareprovider-01"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+  </meta>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+    <value value="79835704"/>
+  </identifier>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/ura"/>
+    <value value="43214321"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://nictiz.nl/fhir/NamingSystem/organization-type"/>
+      <code value="L1"/>
+      <display value="Laboratorium"/>
+    </coding>
+  </type>
+  <name value="Burgers University Medical Centre - Laboratorium"/>
+  <alias value="BUMC"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="030-4738974"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+        <use value="work"/>
+        <line value="Ventweg 12">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Ventweg"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="12"/>
+            </extension>
+        </line>
+        <city value="Utrecht"/>
+        <postalCode value="1000 AA"/>
+        <country value="NLD"/>
+  </address>
+  <contact>
+    <purpose>
+      <coding>
+        <system value="http://hl7.org/fhir/contactentity-type"/>
+        <code value="ADMIN"/>
+        <display value="Administrative"/>
+      </coding>
+    </purpose>
+    <name>
+      <text value="Mevrouw Pietersen"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="030-1234567"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+</Organization>
