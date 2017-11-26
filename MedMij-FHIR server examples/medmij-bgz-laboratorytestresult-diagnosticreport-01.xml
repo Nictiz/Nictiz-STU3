@@ -1,0 +1,59 @@
+<DiagnosticReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/diagnosticreport.xsd" xmlns="http://hl7.org/fhir">
+  <!--  ISO 8601  -->
+  <!--  OID: 2.16.840.1.113883.4.642.1.7  -->
+  <id value="medmij-bgz-laboratorytestresult-diagnosticreport-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-DiagnosticReport"/>
+  </meta>
+  <identifier>
+    <use value="official"/>
+    <system value="http://www.bmc.nl/zorgportal/identifiers/reports"/>
+    <value value="nr1239044"/>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="252275004"/>
+      <display value="Hematology test (procedure)"/>
+    </coding>
+    <coding>
+      <system value="http://hl7.org/fhir/v2/0074"/>
+      <code value="HM"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="58410-2"/>
+      <display value="Complete blood count (hemogram) panel - Blood by Automated count"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/medmij-bgz-patient-01"/>
+    <display value="T. van Beek"/>
+  </subject>
+  <issued value="2017-05-15T19:32:52+01:00"/>
+  <performer>
+    <actor>
+      <reference value="Organization/medmij-bgz-healthcareprovider-01"/>
+      <display value="Burgers University Medical Centre"/>
+    </actor>
+  </performer>
+  <result>
+    <reference value="Observation/medmij-bgz-laboratorytestresult-observation-01"/>
+  </result>
+  <result>
+    <reference value="Observation/medmij-bgz-laboratorytestresult-observation-02"/>
+  </result>
+  <result>
+    <reference value="Observation/medmij-bgz-laboratorytestresult-observation-03"/>
+  </result>
+  <result>
+    <reference value="Observation/medmij-bgz-laboratorytestresult-observation-04"/>
+  </result>
+  <result>
+    <reference value="Observation/medmij-bgz-laboratorytestresult-observation-05"/>
+  </result>
+  <conclusion value="Core lab"/>
+</DiagnosticReport>

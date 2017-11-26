@@ -223,8 +223,7 @@
             <alias value="Referentie"/>
         </element>
         <element id="Observation.referenceRange.low:SimpleQuantity">
-            <path value="Observation.referenceRange.low"/>
-            <sliceName value="SimpleQuantity"/>
+            <path value="Observation.referenceRange.low"/>           
             <short value="LowerReferenceLimit"/>
             <alias value="ReferentieOndergrens"/>
             <mapping>
@@ -233,8 +232,7 @@
             </mapping>
         </element>
         <element id="Observation.referenceRange.high:SimpleQuantity">
-            <path value="Observation.referenceRange.high"/>
-            <sliceName value="SimpleQuantity"/>
+            <path value="Observation.referenceRange.high"/>            
             <short value="UpperReferenceLimit"/>
             <alias value="ReferentieBovengrens"/>
             <mapping>

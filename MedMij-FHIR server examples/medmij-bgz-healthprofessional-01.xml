@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/practitioner.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Practitioner  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/practitioner.xsd">
+  <id value="medmij-bgz-healthprofessional-01"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+  </meta>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers"/>
+    <value value="129854656"/>
+  </identifier>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+    <value value="01069857"/>
+  </identifier>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/big"/>
+    <value value="12345678912"/>
+  </identifier>
+  <name>
+    <family value="van der Wateren">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="van der"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Wateren"/>
+      </extension>
+    </family>
+    <given value="Walter"/>
+    <prefix value="Dr."/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+316157853490"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="vanderwateren@work.com"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+        <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official">
+            <valueBoolean value="true"/>
+        </extension>
+        <use value="work"/>
+        <type value="both"/>
+        <line value="Hoodstraat 12 zwart">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Hoofdstraat"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="34"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                <valueString value="Zwart"/>
+            </extension>
+        </line>
+        <city value="Haarlem"/>
+        <postalCode value="2200 AX"/>
+        <country value="NLD"/>
+        <period>
+            <start value="2015-04"/>
+        </period>
+    </address>
+</Practitioner>

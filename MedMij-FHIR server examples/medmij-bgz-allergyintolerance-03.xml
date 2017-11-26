@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/allergyintolerance.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<AllergyIntolerance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/allergyintolerance.xsd">
+  <id value="medmij-bgz-allergyintolerance-01" />
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
+  </meta>
+  <verificationStatus value="entered-in-error"/>
+  <category value="medication" />
+  <criticality value="high" />
+  <code> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="227037002"/> 
+      <display value="Fish - dietary (substance)"/> 
+    </coding> 
+  </code>  
+  <patient>
+    <reference value="Patient/medmij-bgz-patient-01" />
+  </patient>
+  <onsetDateTime value="1991"/>
+  <recorder>
+    <reference value="Practitioner/medmij-bgz-healthprofessional-01" />
+  </recorder>
+  <lastOccurrence value="1992-04-08"/>
+  <note>
+    <text value="Allergic to fresh fish. Tolerates canned fish"/> 
+  </note>
+  <reaction>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance-Reaction-Certainty">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="17162000"/>
+          <display value="Certain"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <substance>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="230027004" />
+        <display value="Salmon - dietary (substance)" />
+      </coding>
+    </substance>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="267036007" />
+        <display value="Dyspnea" />
+      </coding>
+    </manifestation>
+    <onset value="1992-04-08" />
+    <severity value="severe" />
+    <exposureRoute>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="26643006" />
+        <display value="Oral route (qualifier value)" />
+      </coding>
+    </exposureRoute>
+  </reaction>
+</AllergyIntolerance>

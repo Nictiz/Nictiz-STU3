@@ -1,0 +1,73 @@
+<?xml-model href="http://hl7.org/fhir/STU3/allergyintolerance.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<AllergyIntolerance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/allergyintolerance.xsd">
+  <id value="medmij-bgz-allergyintolerance-02" />
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
+  </meta>
+  <clinicalStatus value="active"/>
+  <verificationStatus value="confirmed"/>
+  <category value="food" />
+  <criticality value="high"/>
+  <code> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="227493005"/> 
+      <display value="Cashew nuts"/> 
+    </coding> 
+  </code> 
+  <patient>
+    <reference value="Patient/medmij-bgz-patient-01" />
+  </patient>
+  <onsetDateTime value="1998"/>
+  <assertedDate value="1999-04-08T14:58:00+11:00"/>
+  <recorder>
+    <reference value="Practitioner/medmij-bgz-healthprofessional-01" />
+  </recorder>
+  <lastOccurrence value="1999-04-08"/>
+  <note> 
+    <text value="The criticality is high becasue of the observed anaphylactic reaction when challenged with cashew extract."/> 
+  </note>   
+  <reaction>
+    <extension url="http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration">
+      <valueDuration>
+        <value value="20" />
+        <unit value="min" />
+        <system value="http://unitsofmeasure.org" />
+        <code value="min" />
+      </valueDuration>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance-Reaction-Certainty">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="17162000"/>
+          <display value="Certain"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <substance>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="227493005" />
+        <display value="Cashew nut (substance)" />
+      </coding>
+    </substance>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/> 
+        <code value="64305001"/> 
+        <display value="Urticaria"/> 
+      </coding>
+    </manifestation>
+    <description value="Challenge Protocol. Severe reaction to subcutaneous cashew extract. Epinephrine administered"/> 
+    <onset value="1998-04-08" />
+    <severity value="severe" />
+    <exposureRoute>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="26643006" />
+        <display value="Oral route (qualifier value)" />
+      </coding>
+    </exposureRoute>
+  </reaction>
+</AllergyIntolerance>
