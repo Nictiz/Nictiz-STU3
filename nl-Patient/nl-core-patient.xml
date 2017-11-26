@@ -19,8 +19,8 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="A Patient resource as defined by the Dutch Health and Care Information models or HCIM (Dutch: Zorginformatiebouwsteen or ZIB) Patient version 1.0, with additions from the HCIM ContactPerson, HealthProfessional and HealthProvider"/>
-    <purpose value="Patient. Tracking a patient is the center of the healthcare process. Functional requirements taken from Health and Care Information models (Zorginformatiebouwsteen) Patient v2.0.1 (release 2015). Names and addresses are also in compliance with HL7 V3 Basic Components."/>
+    <description value="A Patient resource as defined by the Dutch Health and Care Information models or HCIM (Dutch: Zorginformatiebouwsteen or ZIB) Patient, with additions from the HCIMs Nationality, MaritalStatus, ContactPerson, HealthProfessional and HealthcareProvider (HCIM releases 2015, 2016 and 2017)"/>
+    <purpose value="Patient. Tracking a patient is the center of the healthcare process. Names and addresses are also in compliance with HL7 V3 Basic Components."/>
     <copyright value="CC0"/>
     <fhirVersion value="3.0.1"/>
     <mapping>
@@ -39,6 +39,11 @@
         <name value="HCIM ContactPerson-v1.2(2015EN)"/>
     </mapping>
     <mapping>
+        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
+        <uri value="https://zibs.nl/wiki/HealthcareProvider-v1.2(2015EN)"/>
+        <name value="HCIM HealthcareProvider-v1.2(2015EN)"/>
+    </mapping>
+    <mapping>
         <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
         <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)"/>
         <name value="HCIM HealthProfessional-v1.2.1(2015EN)"/>
@@ -53,6 +58,76 @@
         <uri value="https://zibs.nl/wiki/Payer-v1.2(2015EN)"/>
         <name value="HCIM Payer-v1.2(2015EN)"/>
     </mapping>
+    <mapping>
+        <identity value="hcim-patient-v3.0-2016EN"/>
+        <uri value="https://zibs.nl/wiki/Patient-v3.0(2016EN)"/>
+        <name value="HCIM Patient-v3.0(2016EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-maritalstatus-v3.0-2016EN"/>
+        <uri value="https://zibs.nl/wiki/MaritalStatus-v3.0(2016EN)"/>
+        <name value="HCIM MaritalStatus-v3.0(2016EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-contactperson-v3.0-2016EN"/>
+        <uri value="https://zibs.nl/wiki/ContactPerson-v3.0(2016EN)"/>
+        <name value="HCIM ContactPerson-v3.0(2016EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
+        <uri value="https://zibs.nl/wiki/HealthcareProvider-v3.0(2016EN)"/>
+        <name value="HCIM HealthcareProvider-v3.0(2016EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+        <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)"/>
+        <name value="HCIM HealthProfessional-v3.0(2016EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-nationality-v3.0-2016EN"/>
+        <uri value="https://zibs.nl/wiki/Nationality-v3.0(2016EN)"/>
+        <name value="HCIM Nationality-v3.0(2016EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-payer-v3.0-2016EN"/>
+        <uri value="https://zibs.nl/wiki/Payer-v3.0(2016EN)"/>
+        <name value="HCIM Payer-v3.0(2016EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-patient-v3.1-2017EN"/>
+        <uri value="https://zibs.nl/wiki/Patient-v3.1(2017EN)"/>
+        <name value="HCIM Patient-v3.1(2016EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-maritalstatus-v3.0-2017EN"/>
+        <uri value="https://zibs.nl/wiki/MaritalStatus-v3.0(2017EN)"/>
+        <name value="HCIM MaritalStatus-v3.0(2017EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-contactperson-v3.1-2017EN"/>
+        <uri value="https://zibs.nl/wiki/ContactPerson-v3.1(2017EN)"/>
+        <name value="HCIM ContactPerson-v3.1(2017EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-healthcareprovider-v3.1-2017EN"/>
+        <uri value="https://zibs.nl/wiki/HealthcareProvider-v3.1(2017EN)"/>
+        <name value="HCIM HealthcareProvider-v3.1(2017EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-healthprofessional-v3.1-2017EN"/>
+        <uri value="https://zibs.nl/wiki/HealthProfessional-v3.1(2017EN)"/>
+        <name value="HCIM HealthProfessional-v3.1(2017EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-nationality-v3.0-2017EN"/>
+        <uri value="https://zibs.nl/wiki/Nationality-v3.0(2017EN)"/>
+        <name value="HCIM Nationality-v3.0(2017EN)"/>
+    </mapping>
+    <mapping>
+        <identity value="hcim-payer-v3.1-2017EN"/>
+        <uri value="https://zibs.nl/wiki/Payer-v3.1(2017EN)"/>
+        <name value="HCIM Payer-v3.1(2017EN)"/>
+    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Patient"/>
@@ -65,6 +140,14 @@
             <alias value="Patiënt"/>
             <mapping>
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.1"/>
             </mapping>
         </element>
@@ -114,6 +197,14 @@
                 <identity value="hcim-nationality-v2.0-2015EN"/>
                 <map value="NL-CM:7.6.3"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-nationality-v3.0-2016EN"/>
+                <map value="NL-CM:7.6.3"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-nationality-v3.0-2017EN"/>
+                <map value="NL-CM:7.6.3"/>
+            </mapping>
         </element>
         <element id="Patient.identifier">
             <path value="Patient.identifier"/>
@@ -129,6 +220,14 @@
             <alias value="PatientIdentificatienummer"/>
             <mapping>
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.7"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.7"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.7"/>
             </mapping>
         </element>
@@ -160,7 +259,7 @@
         <element id="Patient.active">
             <path value="Patient.active"/>
             <definition
-                value="This field determine the status of the 'patient' record in the context of the organization that owns the record. Note that the record is not the medical record, but rather the actual patient 'resource'. Obviously when the patient 'resource' is not active, then by extension his medical record might also be inactive. Patient.active='false' may be used discourage use of the record, but that it is kept beause there is (medical) data attached to it. Another use case is a patient moving to a different GP practice. Patient.active would be 'false' in the system of the previous GP."
+                value="This field determines the status of the 'patient' record in the context of the organization that owns the record. Note that the record is not the medical record, but rather the actual patient 'resource'. Obviously when the patient 'resource' is not active, then by extension his medical record might also be inactive. Patient.active='false' may be used discourage use of the record, but that it is kept beause there is (medical) data attached to it. Another use case is a patient moving to a different GP practice. Patient.active would be 'false' in the system of the previous GP."
             />
         </element>
         <element id="Patient.name">
@@ -176,7 +275,23 @@
                 <map value="NL-CM:0.1.6"/>
             </mapping>
             <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.6"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.6"/>
+            </mapping>
+            <mapping>
                 <identity value="hcim-payer-v1.2-2015EN"/>
+                <map value="NL-CM:1.1.5"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-payer-v3.0-2016EN"/>
+                <map value="NL-CM:1.1.5"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-payer-v3.1-2017EN"/>
                 <map value="NL-CM:1.1.5"/>
             </mapping>
         </element>
@@ -189,7 +304,23 @@
                 <map value="NL-CM:0.1.5"/>
             </mapping>
             <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.5"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.5"/>
+            </mapping>
+            <mapping>
                 <identity value="hcim-payer-v1.2-2015EN"/>
+                <map value="NL-CM:1.1.12"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-payer-v3.0-2016EN"/>
+                <map value="NL-CM:1.1.12"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-payer-v3.1-2017EN"/>
                 <map value="NL-CM:1.1.12"/>
             </mapping>
         </element>
@@ -208,7 +339,23 @@
                 <map value="NL-CM:0.1.23"/>
             </mapping>
             <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.23"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.23"/>
+            </mapping>
+            <mapping>
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.20"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.20"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
@@ -230,13 +377,29 @@
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.9"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.9"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.9"/>
+            </mapping>
         </element>
         <element id="Patient.birthDate">
             <path value="Patient.birthDate"/>
-            <short value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted."/>
+            <short value="Patients date of birth. The date of birth is mandatory for a patient. An incomplete date, e.g. only year or only year + month, is permitted."/>
             <alias value="Geboortedatum"/>
             <mapping>
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.10"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.10"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.10"/>
             </mapping>
         </element>
@@ -249,7 +412,23 @@
                 <map value="NL-CM:0.1.32"/>
             </mapping>
             <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.32"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.32"/>
+            </mapping>
+            <mapping>
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.33"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.33"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.33"/>
             </mapping>
         </element>
@@ -266,8 +445,24 @@
                 <map value="NL-CM:0.1.4"/>
             </mapping>
             <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.4"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.4"/>
+            </mapping>
+            <mapping>
                 <identity value="hcim-payer-v1.2-2015EN"/>
                 <map value="NL-CM:1.1.17"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.17"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.17"/>
             </mapping>
         </element>
         <element id="Patient.maritalStatus">
@@ -285,6 +480,14 @@
                 <identity value="hcim-maritalstatus-v1.2.1-2015EN"/>
                 <map value="NL-CM:7.9.2"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-maritalstatus-v3.0-2016EN"/>
+                <map value="NL-CM:7.9.2"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-maritalstatus-v3.0-2017EN"/>
+                <map value="NL-CM:7.9.2"/>
+            </mapping>
         </element>
         <element id="Patient.multipleBirth[x]">
             <path value="Patient.multipleBirth[x]"/>
@@ -294,6 +497,14 @@
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
                 <map value="NL-CM:0.1.31"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.31"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.31"/>
+            </mapping>
         </element>
         <element id="Patient.contact">
             <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -301,10 +512,18 @@
             </extension>
             <path value="Patient.contact"/>
             <short value="ContactPerson"/>
-            <definition value="Contacts are related persons in some way, but not all related persons are contacts. The HCIM ContactPerson is meant to deal with both related persons and contacts. An HCIM ContactPerson who is a contact, is expected to have an NL-CM:3.1.2 Role primary contact ('Eerste relatie/contactpersoon') or secondary contact ('Tweede relatie/contactpersoon'). See Patient.contact.relationship in slice 'role'."/>
+            <definition value="Contacts are related persons in some way, but not all related persons are contacts. The HCIM ContactPerson is designed to deal with both related persons and contacts. An HCIM ContactPerson who is a contact, is expected to have an NL-CM:3.1.2 Role primary contact ('Eerste relatie/contactpersoon') or secondary contact ('Tweede relatie/contactpersoon'). See Patient.contact.relationship in slice 'role'."/>
             <alias value="Contactpersoon"/>
             <mapping>
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
+                <map value="NL-CM:3.1.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.0-2016EN"/>
+                <map value="NL-CM:3.1.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.1-2017EN"/>
                 <map value="NL-CM:3.1.1"/>
             </mapping>
         </element>
@@ -334,6 +553,14 @@
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.3"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.0-2016EN"/>
+                <map value="NL-CM:3.1.3"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.1-2017EN"/>
+                <map value="NL-CM:3.1.3"/>
+            </mapping>
         </element>
         <element id="Patient.contact.relationship:role">
             <path value="Patient.contact.relationship"/>
@@ -352,6 +579,14 @@
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.2"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.0-2016EN"/>
+                <map value="NL-CM:3.1.2"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.1-2017EN"/>
+                <map value="NL-CM:3.1.2"/>
+            </mapping>
         </element>
         <element id="Patient.contact.name">
             <path value="Patient.contact.name"/>
@@ -365,6 +600,14 @@
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
                 <map value="NL-CM:3.1.4"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.0-2016EN"/>
+                <map value="NL-CM:3.1.4"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.1-2017EN"/>
+                <map value="NL-CM:3.1.4"/>
+            </mapping>
         </element>
         <element id="Patient.contact.telecom">
             <path value="Patient.contact.telecom"/>
@@ -373,6 +616,14 @@
             <alias value="Contactgegevens"/>
             <mapping>
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
+                <map value="NL-CM:3.1.6"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.0-2016EN"/>
+                <map value="NL-CM:3.1.6"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.1-2017EN"/>
                 <map value="NL-CM:3.1.6"/>
             </mapping>
         </element>
@@ -391,7 +642,23 @@
                 <map value="NL-CM:0.1.23"/>
             </mapping>
             <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.23"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.23"/>
+            </mapping>
+            <mapping>
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.20"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.20"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.20"/>
             </mapping>
         </element>
@@ -405,7 +672,23 @@
                 <map value="NL-CM:0.1.22"/>
             </mapping>
             <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.22"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
+                <map value="NL-CM:0.1.22"/>
+            </mapping>
+            <mapping>
                 <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.19"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
+                <map value="NL-CM:0.1.19"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.19"/>
             </mapping>
         </element>
@@ -419,6 +702,14 @@
             </type>
             <mapping>
                 <identity value="hcim-contactperson-v1.2-2015EN"/>
+                <map value="NL-CM:3.1.5"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.0-2016EN"/>
+                <map value="NL-CM:3.1.5"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactperson-v3.1-2017EN"/>
                 <map value="NL-CM:3.1.5"/>
             </mapping>
         </element>
@@ -436,7 +727,27 @@
                 <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
             </type>
             <mapping>
+                <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
+                <map value="NL-CM:17.2.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
+                <map value="NL-CM:17.2.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-healthcareprovider-v3.1-2017EN"/>
+                <map value="NL-CM:17.2.1"/>
+            </mapping>
+            <mapping>
                 <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+                <map value="NL-CM:17.1.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+                <map value="NL-CM:17.1.1"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-healthprofessional-v3.1-2017EN"/>
                 <map value="NL-CM:17.1.1"/>
             </mapping>
         </element>
