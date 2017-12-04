@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-12-04T17:31:45.379+01:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/Medication-Overview" />
+  <name value="Medication Overview" />
+  <status value="draft" />
+  <date value="2017-12-04T17:07:30.44+01:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Bundle" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Bundle.type">
+      <path value="Bundle.type" />
+      <fixedCode value="collection" />
+    </element>
+    <element id="Bundle.entry">
+      <path value="Bundle.entry" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="resource.meta.profile" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="Bundle.entry:List">
+      <path value="Bundle.entry" />
+      <sliceName value="List" />
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry:List.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="List" />
+      </type>
+    </element>
+    <element id="resource.code">
+      <path value="Bundle.entry.resource.code" />
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry:Patient">
+      <path value="Bundle.entry" />
+      <sliceName value="Patient" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Bundle.entry:Patient.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="Patient" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element id="Bundle.entry:MedicationUsage">
+      <path value="Bundle.entry" />
+      <sliceName value="MedicationUsage" />
+    </element>
+    <element id="Bundle.entry:MedicationUsage.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="MedicationStatement" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse" />
+      </type>
+    </element>
+    <element id="resource.dosage.dose[x]">
+      <path value="Bundle.entry.resource.dosage.dose[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Bundle.entry:AdministrationAgreement">
+      <path value="Bundle.entry" />
+      <sliceName value="AdministrationAgreement" />
+    </element>
+    <element id="Bundle.entry:AdministrationAgreement.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="MedicationDispense" />
+        <profile value=" http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement" />
+      </type>
+    </element>
+    <element id="Bundle.entry:MedicationAgreement">
+      <path value="Bundle.entry" />
+      <sliceName value="MedicationAgreement" />
+    </element>
+    <element id="Bundle.entry:MedicationAgreement.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="MedicationRequest" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
+      </type>
+    </element>
+    <element id="resource.dosageInstruction.dose[x]">
+      <path value="Bundle.entry.resource.dosageInstruction.dose[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Bundle.entry:Medication">
+      <path value="Bundle.entry" />
+      <sliceName value="Medication" />
+    </element>
+    <element id="Bundle.entry:Medication.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="Medication" />
+        <profile value=" http://nictiz.nl/fhir/StructureDefinition/zib-Product" />
+      </type>
+    </element>
+    <element id="Bundle.entry:Supporting-Information">
+      <path value="Bundle.entry" />
+      <sliceName value="Supporting-Information" />
+    </element>
+    <element id="Bundle.entry:Supporting-Information.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="Resource" />
+      </type>
+      <type>
+        <code value="Practitioner" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Organization" />
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
