@@ -1,13 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-12-04T17:31:45.379+01:00" />
+    <lastUpdated value="2017-12-05T17:42:36.701+01:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/Medication-Overview" />
-  <name value="Medication Overview" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/Bundle-MedicationOverview" />
+  <name value="Medication Overview response structure" />
   <status value="draft" />
   <date value="2017-12-04T17:07:30.44+01:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Profile on the Bundle resource which represents the structure of the retrieve medication overview response transaction. The output of the ['$medication-overiew'](https://simplifier.net/NictizSTU3/Medication-Overview) operation SHALL conform to this profile." />
+  <purpose value="To define the body of the retrieve medication overview response transaction. This profile provide guidance for XIS by enableling validation of the operation outcome." />
+  <copyright value="CC0" />
   <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="Medication-Overview" />
+    <uri value="https://decor.nictiz.nl/medicatieproces/mp-html-20170829T141253/tr-2.16.840.1.113883.2.4.3.11.60.20.77.4.148-2016-11-08T103441.html" />
+    <name value="Medication Process V09: Medication Overview" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Bundle" />
@@ -33,23 +50,29 @@
       <path value="Bundle.entry" />
       <sliceName value="List" />
       <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="Medication-Overview" />
+        <map value="mp-dataelement900-22968" />
+      </mapping>
     </element>
     <element id="Bundle.entry:List.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
       <type>
         <code value="List" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/List-MedicationOverview" />
       </type>
-    </element>
-    <element id="resource.code">
-      <path value="Bundle.entry.resource.code" />
-      <min value="1" />
     </element>
     <element id="Bundle.entry:Patient">
       <path value="Bundle.entry" />
       <sliceName value="Patient" />
       <min value="1" />
       <max value="1" />
+      <mapping>
+        <identity value="Medication-Overview" />
+        <map value="mp-dataelement900-19798" />
+      </mapping>
     </element>
     <element id="Bundle.entry:Patient.resource">
       <path value="Bundle.entry.resource" />
@@ -62,28 +85,44 @@
     <element id="Bundle.entry:MedicationUsage">
       <path value="Bundle.entry" />
       <sliceName value="MedicationUsage" />
+      <mapping>
+        <identity value="Medication-Overview" />
+        <map value="mp-dataelement900-21338" />
+      </mapping>
     </element>
     <element id="Bundle.entry:MedicationUsage.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
+      <max value="1" />
       <type>
         <code value="MedicationStatement" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse" />
       </type>
     </element>
-    <element id="resource.dosage.dose[x]">
-      <path value="Bundle.entry.resource.dosage.dose[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+    <element id="Bundle.entry:MedicationAgreement">
+      <path value="Bundle.entry" />
+      <sliceName value="MedicationAgreement" />
+      <mapping>
+        <identity value="Medication-Overview" />
+        <map value="mp-dataelement900-9580" />
+      </mapping>
+    </element>
+    <element id="Bundle.entry:MedicationAgreement.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="MedicationRequest" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
+      </type>
     </element>
     <element id="Bundle.entry:AdministrationAgreement">
       <path value="Bundle.entry" />
       <sliceName value="AdministrationAgreement" />
+      <mapping>
+        <identity value="Medication-Overview" />
+        <map value="mp-dataelement900-20132" />
+      </mapping>
     </element>
     <element id="Bundle.entry:AdministrationAgreement.resource">
       <path value="Bundle.entry.resource" />
@@ -92,28 +131,6 @@
         <code value="MedicationDispense" />
         <profile value=" http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement" />
       </type>
-    </element>
-    <element id="Bundle.entry:MedicationAgreement">
-      <path value="Bundle.entry" />
-      <sliceName value="MedicationAgreement" />
-    </element>
-    <element id="Bundle.entry:MedicationAgreement.resource">
-      <path value="Bundle.entry.resource" />
-      <min value="1" />
-      <type>
-        <code value="MedicationRequest" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
-      </type>
-    </element>
-    <element id="resource.dosageInstruction.dose[x]">
-      <path value="Bundle.entry.resource.dosageInstruction.dose[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="Bundle.entry:Medication">
       <path value="Bundle.entry" />
@@ -127,11 +144,11 @@
         <profile value=" http://nictiz.nl/fhir/StructureDefinition/zib-Product" />
       </type>
     </element>
-    <element id="Bundle.entry:Supporting-Information">
+    <element id="Bundle.entry:SupportingInformation">
       <path value="Bundle.entry" />
-      <sliceName value="Supporting-Information" />
+      <sliceName value="SupportingInformation" />
     </element>
-    <element id="Bundle.entry:Supporting-Information.resource">
+    <element id="Bundle.entry:SupportingInformation.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
       <type>

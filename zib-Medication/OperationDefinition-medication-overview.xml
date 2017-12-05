@@ -49,7 +49,7 @@
       The Bundle shall be compliant with the Medication-Overview profile. "/>
     <type value="Bundle"/>
     <profile>
-      <reference value="http://nictiz.nl/fhir/StructureDefinition/Medication-Overview"/>
+      <reference value="http://nictiz.nl/fhir/StructureDefinition/Bundle-MedicationOverview"/>
       <display value="Profile on Bundle resource, that defines a medication overview collection."/>
     </profile>
   </parameter>
