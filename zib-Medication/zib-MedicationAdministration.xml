@@ -30,6 +30,12 @@
     <uri value="https://zibs.nl/wiki/MedicationAdministration2-v1.0(2017EN)" />
     <name value="HCIM MedicationAdministration2-v1.0(2017EN)" />
   </mapping>
+  <mapping>
+    <identity value="Medication-Process-v09" />
+    <uri value="https://decor.nictiz.nl/medicatieproces/mp-html-20170829T141253/ds-2.16.840.1.113883.2.4.3.11.60.20.77.1.3-2016-06-01T000000.html" />
+    <name value="Medication Process v09" />
+    <comment value="Language of Medication Process is Dutch." />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="MedicationAdministration" />
@@ -136,11 +142,38 @@
         <map value="NL-CM:9.13.23168" />
       </mapping>
     </element>
+    <element id="MedicationAdministration.identifier">
+      <path value="MedicationAdministration.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationAdministration.identifier:MedicationTreatmentGrouper">
+      <path value="MedicationAdministration.identifier" />
+      <sliceName value="MedicationTreatmentGrouper" />
+      <short value="MedicationTreatmentGrouper" />
+      <definition value="The MedicationTreatmentGrouper identifier is a technical concept used to describe the coherence between a group of medication building blocks. For more information visit the functional design of the Medication Process standard." />
+      <comment value="No HCIM concept is available for this element. Therefore a mapping is provided to the relevant Medication Process data element." />
+      <requirements value="Needed for grouping of related medication resources in one medication treatment." />
+      <max value="1" />
+      <mapping>
+        <identity value="Medication-Process-v09" />
+        <map value="mp-dataelement900-22092" />
+      </mapping>
+    </element>
+    <element id="MedicationAdministration.identifier:MedicationAdministrationIdentifier">
+      <path value="MedicationAdministration.identifier" />
+      <sliceName value="MedicationAdministrationIdentifier" />
+      <max value="1" />
+    </element>
     <element id="MedicationAdministration.status">
       <path value="MedicationAdministration.status" />
       <short value="MedicationAdministrationStatus" />
-            <definition
-                value="The status of the administration, as a description of the stage within the administering process. Only the status codes ‘completed’ and ‘cancelled’ apply to indivisible products (such as tablets or suppositories). For divisible products (such as infusions), doses can also be ‘suspended’ or ‘aborted’. &#xD;&#xA;&#xD;&#xA;When documenting this, the following interpretations are used: &#xD;&#xA;Active: The product is administered.&#xD;&#xA;Interrupted: Use has (temporarily) been interrupted, because of a side effect, for example. Later, the patient and/or doctor can decide whether or not to resume or discontinue use.&#xD;&#xA;Discontinued: Administration has stopped.&#xD;&#xA;Completed: Administration has been completed.&#xD;&#xA;&#xD;&#xA;Not started: The product was never administered."/>
+      <definition value="The status of the administration, as a description of the stage within the administering process. Only the status codes ‘completed’ and ‘cancelled’ apply to indivisible products (such as tablets or suppositories). For divisible products (such as infusions), doses can also be ‘suspended’ or ‘aborted’. &#xD;&#xA;&#xD;&#xA;When documenting this, the following interpretations are used: &#xD;&#xA;Active: The product is administered.&#xD;&#xA;Interrupted: Use has (temporarily) been interrupted, because of a side effect, for example. Later, the patient and/or doctor can decide whether or not to resume or discontinue use.&#xD;&#xA;Discontinued: Administration has stopped.&#xD;&#xA;Completed: Administration has been completed.&#xD;&#xA;&#xD;&#xA;Not started: The product was never administered."/>
       <alias value="MedicatieToedieningStatus" />
       <mapping>
         <identity value="hcim-MedicationAdministration2-v1.0-2017EN" />
