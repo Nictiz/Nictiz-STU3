@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-12-05T17:49:40.388+01:00" />
+    <lastUpdated value="2017-12-06T10:59:11.199+01:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/List-MedicationOverview" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/MedicationOverview" />
   <name value="Medication Overview" />
   <status value="draft" />
   <date value="2017-12-04T17:07:30.44+01:00" />
@@ -86,6 +86,7 @@
     </element>
     <element id="List.source">
       <path value="List.source" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
@@ -97,6 +98,41 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <mapping>
+        <identity value="Medication-Overview" />
+        <map value="mp-dataelement900-23381" />
+      </mapping>
+    </element>
+    <element id="List.source.extension">
+      <path value="List.source.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="List.source.extension:Organization">
+      <path value="List.source.extension" />
+      <sliceName value="Organization" />
+      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/SourceOrganization" />
+      </type>
+      <mapping>
+        <identity value="Medication-Overview" />
+        <map value="mp-dataelement900-23383" />
+      </mapping>
+    </element>
+    <element id="List.source.extension:Organization.value[x]:valueReference">
+      <path value="List.source.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
     </element>
     <element id="List.entry">
@@ -120,6 +156,14 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
       </type>
+    </element>
+    <element id="List.entry:MedicationUsage.item.extension:prescriber">
+      <path value="List.entry.item.extension" />
+      <sliceName value="prescriber" />
+    </element>
+    <element id="List.entry:MedicationUsage.item.extension:prescriber.url">
+      <path value="List.entry.item.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/medicationstatement-Prescriber" />
     </element>
     <element id="List.entry:MedicationAgreement">
       <path value="List.entry" />

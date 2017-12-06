@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-12-05T17:42:36.701+01:00" />
+    <lastUpdated value="2017-12-06T10:16:06.021+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Bundle-MedicationOverview" />
   <name value="Medication Overview response structure" />
@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="Profile on the Bundle resource which represents the structure of the retrieve medication overview response transaction. The output of the ['$medication-overiew'](https://simplifier.net/NictizSTU3/Medication-Overview) operation SHALL conform to this profile." />
-  <purpose value="To define the body of the retrieve medication overview response transaction. This profile provide guidance for XIS by enableling validation of the operation outcome." />
+  <purpose value="To define the body of the retrieve medication overview response transaction. This profile should provide guidance for servers in constructing the medication-overview operation outcome and enableling validation against it. For clients this profile should be helpfull in expecting the response format of the medication-overview outcome." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.1" />
   <mapping>
@@ -39,8 +39,8 @@
       <path value="Bundle.entry" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="resource.meta.profile" />
+          <type value="profile" />
+          <path value="resource.reference.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -49,6 +49,9 @@
     <element id="Bundle.entry:List">
       <path value="Bundle.entry" />
       <sliceName value="List" />
+      <short value="MedicationOveriew" />
+      <alias value="Medicatie Overzicht" />
+      <alias value="Documentgegevens" />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -59,14 +62,17 @@
     <element id="Bundle.entry:List.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
+      <max value="1" />
       <type>
         <code value="List" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/List-MedicationOverview" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/MedicationOverview" />
       </type>
     </element>
     <element id="Bundle.entry:Patient">
       <path value="Bundle.entry" />
       <sliceName value="Patient" />
+      <short value="Patient" />
+      <alias value="Patient" />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -82,26 +88,11 @@
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
-    <element id="Bundle.entry:MedicationUsage">
-      <path value="Bundle.entry" />
-      <sliceName value="MedicationUsage" />
-      <mapping>
-        <identity value="Medication-Overview" />
-        <map value="mp-dataelement900-21338" />
-      </mapping>
-    </element>
-    <element id="Bundle.entry:MedicationUsage.resource">
-      <path value="Bundle.entry.resource" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="MedicationStatement" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse" />
-      </type>
-    </element>
     <element id="Bundle.entry:MedicationAgreement">
       <path value="Bundle.entry" />
       <sliceName value="MedicationAgreement" />
+      <short value="MedicationAgreement" />
+      <alias value="Medicatieafspraak" />
       <mapping>
         <identity value="Medication-Overview" />
         <map value="mp-dataelement900-9580" />
@@ -119,6 +110,8 @@
     <element id="Bundle.entry:AdministrationAgreement">
       <path value="Bundle.entry" />
       <sliceName value="AdministrationAgreement" />
+      <short value="AdministrationAgreement" />
+      <alias value="Toedieningsafspraak" />
       <mapping>
         <identity value="Medication-Overview" />
         <map value="mp-dataelement900-20132" />
@@ -132,21 +125,30 @@
         <profile value=" http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement" />
       </type>
     </element>
-    <element id="Bundle.entry:Medication">
+    <element id="Bundle.entry:MedicationUsage">
       <path value="Bundle.entry" />
-      <sliceName value="Medication" />
+      <sliceName value="MedicationUsage" />
+      <short value="MedicationUsage" />
+      <alias value="MedicatieGebruik" />
+      <mapping>
+        <identity value="Medication-Overview" />
+        <map value="mp-dataelement900-21338" />
+      </mapping>
     </element>
-    <element id="Bundle.entry:Medication.resource">
+    <element id="Bundle.entry:MedicationUsage.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
+      <max value="1" />
       <type>
-        <code value="Medication" />
-        <profile value=" http://nictiz.nl/fhir/StructureDefinition/zib-Product" />
+        <code value="MedicationStatement" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse" />
       </type>
     </element>
     <element id="Bundle.entry:SupportingInformation">
       <path value="Bundle.entry" />
       <sliceName value="SupportingInformation" />
+      <short value="SupportingInformation" />
+      <definition value="All additional infromation not covered in other specifed slices can be placed here. For example, referenced medications or prescribers from the resources in the Medication Overview." />
     </element>
     <element id="Bundle.entry:SupportingInformation.resource">
       <path value="Bundle.entry.resource" />
@@ -161,6 +163,10 @@
       <type>
         <code value="Organization" />
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <type>
+        <code value="Medication" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Product" />
       </type>
     </element>
   </differential>
