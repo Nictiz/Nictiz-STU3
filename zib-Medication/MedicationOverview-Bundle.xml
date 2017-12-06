@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-12-06T10:16:06.021+01:00" />
+    <lastUpdated value="2017-12-06T11:16:20.198+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Bundle-MedicationOverview" />
   <name value="Medication Overview response structure" />
@@ -24,6 +24,7 @@
     <identity value="Medication-Overview" />
     <uri value="https://decor.nictiz.nl/medicatieproces/mp-html-20170829T141253/tr-2.16.840.1.113883.2.4.3.11.60.20.77.4.148-2016-11-08T103441.html" />
     <name value="Medication Process V09: Medication Overview" />
+    <comment value="Source language is in Dutch." />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
