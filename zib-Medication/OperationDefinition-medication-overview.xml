@@ -35,17 +35,17 @@
     <min value="0"/>
     <max value="1"/>
     <documentation value="The id of a patient resource located on the server on which this operation is executed. 
-      This paramater is not be nescessary for use in MedMij beceause all RESTfull actions are perfomed in the context of a specific authenticated patient, for which an OAuth2 token has been retrieved using the Authentication mechanisms described in the 'Afsprakenstelsel'. 
+      This paramater is not be necessary for use in MedMij because all RESTfull actions are perfomed in the context of a specific authenticated patient, for which an OAuth2 token has been retrieved using the authentication mechanisms described in the 'Afsprakenstelsel'. 
       Each XIS Gateway is required to perform filtering based on the patient associated with the OAuth2 token received for the request, so that only the records associated with the authenticated patient are returned. 
       Therefore, no parameters should be passed for patient identification."/>
-    <type value="id"/>
+    <type value="Identifier"/>
   </parameter>
   <parameter>
     <name value="bundle"/>
     <use value="out"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="The patient's current medication overview based on the information standard ['Medication Proces'](https://www.nictiz.nl/Paginas/Informatiestandaard-Medicatieprocess.aspx). 
+    <documentation value="The patient's current medication overview based on the information standard ['Medication Proces'](https://www.nictiz.nl/Paginas/Informatiestandaard-Medicatieproces.aspx). 
       The Bundle shall be compliant with the Medication-Overview profile. "/>
     <type value="Bundle"/>
     <profile>

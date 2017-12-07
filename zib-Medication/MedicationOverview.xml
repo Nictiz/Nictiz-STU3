@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-12-07T15:10:49.719+01:00" />
+    <lastUpdated value="2017-12-07T15:29:13.334+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/MedicationOverview" />
   <name value="Medication Overview" />
@@ -207,6 +207,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
+        <aggregation value="bundled" />
       </type>
     </element>
     <element id="List.entry:AdministrationAgreement">
@@ -222,6 +223,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement" />
+        <aggregation value="bundled" />
       </type>
     </element>
     <element id="List.entry:MedicationUsage">
@@ -237,6 +239,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse" />
+        <aggregation value="bundled" />
       </type>
     </element>
   </differential>
