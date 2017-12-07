@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="8c6e8ba5-9637-477a-8bd7-340a3a99b342" />
   <meta>
     <versionId value="4" />
-        <lastUpdated value="2017-10-16T16:05:00.599+02:00"/>
+    <lastUpdated value="2017-12-07T16:33:49.467+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration" />
   <version value="1.0" />
@@ -142,6 +141,24 @@
         <map value="NL-CM:9.13.23168" />
       </mapping>
     </element>
+    <element id="MedicationAdministration.extension:medicationTreatment">
+      <path value="MedicationAdministration.extension" />
+      <sliceName value="medicationTreatment" />
+      <short value="Medicational Treatment" />
+      <definition value="This extension is to describe which overarching medication treatment this information is part of. This is done by the use of an identifier of that medication treatment." />
+      <comment value="No HCIM concept is available for this element. Therefore a mapping to the relevant element Medication Process data element is provided." />
+      <alias value="Medicamenteuze behandeling" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-MedicationTreatment" />
+      </type>
+      <mapping>
+        <identity value="Medication-Process-v09" />
+        <map value="mp-dataelement900-22092" />
+      </mapping>
+    </element>
     <element id="MedicationAdministration.identifier">
       <path value="MedicationAdministration.identifier" />
       <slicing>
@@ -151,19 +168,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="MedicationAdministration.identifier:MedicationTreatmentGrouper">
-      <path value="MedicationAdministration.identifier" />
-      <sliceName value="MedicationTreatmentGrouper" />
-      <short value="MedicationTreatmentGrouper" />
-      <definition value="The MedicationTreatmentGrouper identifier is a technical concept used to describe the coherence between a group of medication building blocks. For more information visit the functional design of the Medication Process standard." />
-      <comment value="No HCIM concept is available for this element. Therefore a mapping is provided to the relevant Medication Process data element." />
-      <requirements value="Needed for grouping of related medication resources in one medication treatment." />
-      <max value="1" />
-      <mapping>
-        <identity value="Medication-Process-v09" />
-        <map value="mp-dataelement900-22092" />
-      </mapping>
     </element>
     <element id="MedicationAdministration.identifier:MedicationAdministrationIdentifier">
       <path value="MedicationAdministration.identifier" />
