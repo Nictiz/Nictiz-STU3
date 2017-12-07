@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-12-06T14:11:45.798+01:00" />
+    <lastUpdated value="2017-12-07T15:10:49.719+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/MedicationOverview" />
   <name value="Medication Overview" />
@@ -238,14 +238,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse" />
       </type>
-    </element>
-    <element id="List.entry:MedicationUsage.item.extension:prescriber">
-      <path value="List.entry.item.extension" />
-      <sliceName value="prescriber" />
-    </element>
-    <element id="List.entry:MedicationUsage.item.extension:prescriber.url">
-      <path value="List.entry.item.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/StructureDefinition/medicationstatement-Prescriber" />
     </element>
   </differential>
 </StructureDefinition>
