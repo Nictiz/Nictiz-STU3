@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-12-11T13:43:26.982+01:00" />
+    <lastUpdated value="2017-12-11T15:30:33.29+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/eAfspraken-Appointment-OnlineEditable" />
-  <name value="eAspraakAppointmentOnlineEditable" />
+  <name value="eAfsprakenAppointmentOnlineEditable" />
   <title value="eAfspraken Appointment OnlineEditable" />
   <status value="draft" />
   <date value="2017-12-11T13:18:15.238+01:00" />
