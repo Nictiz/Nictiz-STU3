@@ -179,6 +179,37 @@
         <map value="mp-dataelement900-22092" />
       </mapping>
     </element>
+    <element id="MedicationDispense.modifierExtension">
+      <path value="MedicationDispense.modifierExtension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.modifierExtension:stopType">
+      <path value="MedicationDispense.modifierExtension" />
+      <sliceName value="stopType" />
+      <short value="AdministrationAgreementStopType" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType" />
+      </type>
+      <mapping>
+        <identity value="hcim-administrationagreement-v1.0-2017EN" />
+        <map value="NL-CM:9.8.22498" />
+      </mapping>
+    </element>
+    <element id="MedicationDispense.modifierExtension:stopType.value[x]:valueCodeableConcept">
+      <path value="MedicationDispense.modifierExtension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="required" />
+      </binding>
+    </element>
     <element id="MedicationDispense.identifier">
       <path value="MedicationDispense.identifier" />
       <slicing>
@@ -196,16 +227,12 @@
     </element>
     <element id="MedicationDispense.status">
       <path value="MedicationDispense.status" />
-      <short value="AdministrationAgreementStopType" />
-      <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive)" />
-      <alias value="ToediengingsafspraakStopType" />
+      <short value="CanceledIndicator" />
+      <definition value="In the event of an error correction, this indicator is to be put on for the incorrect agreement. " />
+      <alias value="GeannuleerdIndicator" />
       <mapping>
         <identity value="hcim-administrationagreement-v1.0-2017EN" />
         <map value="NL-CM:9.8.23034" />
-      </mapping>
-      <mapping>
-        <identity value="hcim-administrationagreement-v1.0-2017EN" />
-        <map value="NL-CM:9.8.22498" />
       </mapping>
     </element>
     <element id="MedicationDispense.category">

@@ -3,7 +3,7 @@
   <id value="e445eae5-56dd-4b2f-85c1-39fc585f0d35" />
   <meta>
     <versionId value="6" />
-    <lastUpdated value="2017-12-07T16:33:38.076+01:00" />
+    <lastUpdated value="2017-12-14T13:51:40.78+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement" />
   <version value="1.0" />
@@ -147,6 +147,37 @@
         <map value="mp-dataelement900-22092" />
       </mapping>
     </element>
+    <element id="MedicationRequest.modifierExtension">
+      <path value="MedicationRequest.modifierExtension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationRequest.modifierExtension:stopType">
+      <path value="MedicationRequest.modifierExtension" />
+      <sliceName value="stopType" />
+      <definition value="The manner in which (and indicator that) this medication is discontinued (temporarily or permanently)." />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType" />
+      </type>
+      <mapping>
+        <identity value="hcim-medicationagreement-v1.0-2017EN" />
+        <map value=" NL-CM:9.6.19954" />
+      </mapping>
+    </element>
+    <element id="MedicationRequest.modifierExtension:stopType.value[x]:valueCodeableConcept">
+      <path value="MedicationRequest.modifierExtension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="required" />
+      </binding>
+    </element>
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier" />
       <slicing>
@@ -164,17 +195,12 @@
     </element>
     <element id="MedicationRequest.status">
       <path value="MedicationRequest.status" />
-      <short value="CanceledIndicator / MedicationAgreementStopType" />
+      <short value="CanceledIndicator " />
       <definition value="A code specifying the current state of the order. Generally this will be active or completed state." />
       <alias value="GeannuleerdIndicator" />
-      <alias value="StopType" />
       <mapping>
         <identity value="hcim-medicationagreement-v1.0-2017EN" />
         <map value="NL-CM:9.6.23033" />
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationagreement-v1.0-2017EN" />
-        <map value="NL-CM:9.6.19954" />
       </mapping>
     </element>
     <element id="MedicationRequest.category">

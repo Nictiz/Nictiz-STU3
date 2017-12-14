@@ -1,0 +1,32 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.19--20160617101300"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.20.77.11.19"/>
+    </identifier>
+    <version value="2016-06-17T10:13:00"/>
+    <name value="Stoptype"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:db34cd3d-441b-4d59-bec2-56f569b9a93b"/>
+        <timestamp value="2017-12-14T13:09:19.149+01:00"/>
+        <total value="2"/>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.1"/>
+            <code value="1"/>
+            <display value="Tijdelijk"/>
+        </contains>
+        <contains>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.1"/>
+            <code value="2"/>
+            <display value="Definitief"/>
+        </contains>
+    </expansion>
+</ValueSet>
