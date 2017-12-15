@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Appointment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/appointment.xsd" xmlns="http://hl7.org/fhir">
   <id value="nl-core-patient"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/eAfspraken-Appointment"/>
+  </meta>  
   <extension url="http://nictiz.nl/fhir/StructureDefinition/eAfspraken-Appointment-PatientInstructions">
     <valueString value="Please park in P2; P1 is under construction"/>
   </extension>
