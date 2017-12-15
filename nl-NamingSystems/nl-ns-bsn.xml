@@ -7,7 +7,7 @@
     </meta>
     <name value="Burgerservicenummer (BSN)"/>
     <status value="active"/>
-    <kind value="root"/>
+    <kind value="identifier"/>
     <date value="2016-10-31T19:05:06.568+01:00"/>
     <publisher value="Nictiz"/>
     <contact>

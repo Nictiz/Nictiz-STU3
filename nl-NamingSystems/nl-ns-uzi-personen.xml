@@ -7,7 +7,7 @@
     </meta>
     <name value="UZI nummer natuurlijke personen; zorgverlener of medewerker met UZI pas"/>
     <status value="active"/>
-    <kind value="root"/>
+    <kind value="identifier"/>
     <date value="2016-10-31T19:12:07.569+01:00"/>
     <publisher value="HL7 Netherlands"/>
     <contact>

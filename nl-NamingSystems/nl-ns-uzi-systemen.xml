@@ -7,7 +7,7 @@
     </meta>
     <name value="UZI nummer systemen, gekoppeld aan UZI services certificaat"/>
     <status value="active"/>
-    <kind value="root"/>
+    <kind value="identifier"/>
     <date value="2016-10-31T19:12:38.137+01:00"/>
     <publisher value="Nictiz"/>
     <contact>

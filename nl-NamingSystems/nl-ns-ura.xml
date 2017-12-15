@@ -7,7 +7,7 @@
     </meta>
     <name value="UZI register abonneenummer (URA); zorgaanbieder die UZI passen aanvraagt"/>
     <status value="active"/>
-    <kind value="root"/>
+    <kind value="identifier"/>
     <date value="2016-10-31T19:14:57.478+01:00"/>
     <publisher value="Nictiz"/>
     <contact>
