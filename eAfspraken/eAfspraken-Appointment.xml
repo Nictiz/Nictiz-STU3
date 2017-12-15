@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-12-11T15:50:28.518+01:00" />
+    <lastUpdated value="2017-12-15T14:04:09.633+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/eAfspraken-Appointment" />
   <name value="eAfsprakenAppointment" />
@@ -134,11 +134,46 @@
     </element>
     <element id="Appointment.specialty">
       <path value="Appointment.specialty" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <alias value="Specialisme" />
       <mapping>
         <identity value="art-decor" />
         <map value="eafspraken-dataelement-26" />
       </mapping>
+    </element>
+    <element id="Appointment.specialty:specialtyAGB">
+      <path value="Appointment.specialty" />
+      <sliceName value="specialtyAGB" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="specialty" />
+        </extension>
+        <strength value="extensible" />
+        <description value="Specific specialty associated with the agency" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.7--20150401000000" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Appointment.specialty:specialtyUZI">
+      <path value="Appointment.specialty" />
+      <sliceName value="specialtyUZI" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="specialty" />
+        </extension>
+        <strength value="extensible" />
+        <description value="Specific specialty associated with the agency" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.6--20150401000000" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Appointment.appointmentType">
       <path value="Appointment.appointmentType" />
