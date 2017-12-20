@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This CapabilityStatement describes the minimal requirements for a server to fulfill the laboratory results use cases described for MedMij. The MedMij use cases can be found here:https://informatiestandaarden.nictiz.nl/wiki/MedMij:Vcurrent_FHIR_IG" />
+  <description value="This CapabilityStatement describes the minimal requirements for a server to fulfill the laboratory results use cases described for MedMij. The MedMij use cases can be found here: https://informatiestandaarden.nictiz.nl/wiki/MedMij:Vcurrent_FHIR_IG" />
   <copyright value="CC0" />
   <kind value="requirements" />
   <fhirVersion value="3.0.1" />
