@@ -41,7 +41,7 @@
     <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-OxygenSaturation" />
   </profile>
   <profile>
-    <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-HeartFrequency" />
+    <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-HeartRate" />
   </profile>
   <profile>
     <reference value="http://nictiz.nl/fhir/StructureDefinition/bp"/>
