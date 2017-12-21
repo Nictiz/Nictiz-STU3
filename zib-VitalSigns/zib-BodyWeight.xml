@@ -112,7 +112,6 @@
         </element>
         <element id="Observation.component:clothing.value[x]:valueCodeableConcept">
             <path value="Observation.component.valueCodeableConcept"/>
-            <sliceName value="valueCodeableConcept"/>
             <short value="Clothing"/>
             <definition value="The clothes the patient was wearing at the time of the measurement."/>
             <alias value="Kleding"/>
