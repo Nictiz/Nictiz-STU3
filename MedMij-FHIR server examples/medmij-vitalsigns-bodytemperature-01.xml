@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+      <id value="medmij-vitalsigns-bodytemperature-01"/>
+      <meta>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyTemperature"/>
+      </meta>
+      <status value="final"/>
+      <category>
+            <coding>
+                  <system value="http://hl7.org/fhir/observation-category"/>
+                  <code value="vital-signs"/>
+            </coding>
+      </category>
+      <code>
+            <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8310-5"/>
+            </coding>
+      </code>
+      <subject>
+            <reference value="Patient/medmij-bgz-patient-01"/>
+            <display value="T. van Beek"/>
+      </subject>
+      <effectiveDateTime value="2017-12-12T14:55:00+01:00"/>
+      <performer>
+            <reference value="Practitioner/medmij-vitalsigns-healthprofessional-01"/>
+            <display value="Dr. L. van der Spegel"/>
+      </performer>
+      <valueQuantity>
+            <value value="38.6"/>
+            <unit value="Cel"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="Cel"/>
+      </valueQuantity>
+      <comment value="Feets feel very cold"/>
+      <bodySite>
+            <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="415974002"/>
+                  <display value="Tympanic temperature"/>
+            </coding>
+      </bodySite>
+</Observation>
+

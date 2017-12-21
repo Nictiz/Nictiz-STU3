@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+      <id value="medmij-vitalsigns-hearthrate-01"/>
+      <meta>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-HeartRate"/>
+      </meta>
+      <status value="final"/>
+      <category>
+            <coding>
+                  <system value="http://hl7.org/fhir/observation-category"/>
+                  <code value="vital-signs"/>
+            </coding>
+      </category>
+      <code>
+            <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8867-4"/>
+            </coding>
+      </code>
+      <subject>
+            <reference value="Patient/medmij-bgz-patient-01"/>
+            <display value="T. van Beek"/>
+      </subject>
+      <effectiveDateTime value="2017-12-12T14:51:00+01:00"/>
+      <performer>
+            <reference value="Practitioner/medmij-vitalsigns-healthprofessional-01"/>
+            <display value="Dr. L. van der Spegel"/>
+      </performer>
+      <valueQuantity>
+            <value value="126"/>
+            <unit value="/min"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="/min"/>
+      </valueQuantity>
+      <interpretation>
+            <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="248650006"/>
+                  <display value="Heart irregular"/>
+            </coding>
+      </interpretation>
+      <method>
+            <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="37931006"/>
+                  <display value="Auscultation"/>
+            </coding>
+      </method>
+</Observation>

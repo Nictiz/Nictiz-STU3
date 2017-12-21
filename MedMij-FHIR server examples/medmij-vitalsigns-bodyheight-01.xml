@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+      <id value="medmij-vitalsigns-bodyheight-01"/>
+      <meta>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyHeight"/>
+      </meta>
+      <status value="final"/>
+      <category>
+            <coding>
+                  <system value="http://hl7.org/fhir/observation-category"/>
+                  <code value="vital-signs"/>
+            </coding>
+      </category>
+      <code>
+            <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8302-2"/>
+            </coding>
+            <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8308-9"/>
+                  <display value="Body height --standing"/>
+            </coding>
+      </code>
+      <subject>
+            <reference value="Patient/medmij-bgz-patient-01"/>
+            <display value="T. van Beek"/>
+      </subject>
+      <effectiveDateTime value="2017-12-12T14:58:00+01:00"/>
+      <performer>
+            <reference value="Practitioner/medmij-vitalsigns-healthprofessional-01"/>
+            <display value="Dr. L. van der Spegel"/>
+      </performer>
+      <valueQuantity>
+            <value value="176"/>
+            <unit value="cm"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="cm"/>
+      </valueQuantity>
+      <comment value="Measured with shoes on."/>
+</Observation>
+
+

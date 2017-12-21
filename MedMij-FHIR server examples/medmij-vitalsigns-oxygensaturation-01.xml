@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+      <id value="medmij-vitalsigns-oxygensaturation-01"/>
+      <meta>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-OxygenSaturation"/>
+      </meta>
+      <status value="final"/>
+      <category>
+            <coding>
+                  <system value="http://hl7.org/fhir/observation-category"/>
+                  <code value="vital-signs"/>
+            </coding>
+      </category>
+      <code>
+            <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="59408-5"/>
+            </coding>
+      </code>
+      <subject>
+            <reference value="Patient/medmij-bgz-patient-01"/>
+            <display value="T. van Beek"/>
+      </subject>
+      <effectiveDateTime value="2017-12-12T14:51:00+01:00"/>
+      <performer>
+            <reference value="Practitioner/medmij-vitalsigns-healthprofessional-01"/>
+            <display value="Dr. L. van der Spegel"/>
+      </performer>
+      <valueQuantity>
+            <value value="92"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+      </valueQuantity>
+      <comment value="O2 rises quickly when patient's speaks"/>
+      <component>
+            <code>
+                  <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="74206-4"/>
+                  </coding>
+            </code>
+            <valueCodeableConcept>
+                  <coding>
+                        <system value="http://hl7.org/fhir/v2/0136"/>
+                        <code value="Y"/>
+                        <display value="Yes"/>
+                  </coding>
+            </valueCodeableConcept>
+      </component>
+</Observation>
+
