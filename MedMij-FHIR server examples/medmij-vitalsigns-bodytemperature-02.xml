@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+      <id value="medmij-vitalsigns-bodytemperature-02"/>
+      <meta>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyTemperature"/>
+      </meta>
+      <status value="final"/>
+      <category>
+            <coding>
+                  <system value="http://hl7.org/fhir/observation-category"/>
+                  <code value="vital-signs"/>
+            </coding>
+      </category>
+      <code>
+            <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8310-5"/>
+            </coding>
+      </code>
+      <subject>
+            <reference value="Patient/medmij-bgz-patient-01"/>
+            <display value="T. van Beek"/>
+      </subject>
+      <effectiveDateTime value="2017-12-12T14:55:00+01:00"/>
+      <performer>
+            <reference value="Patient/medmij-bgz-patient-01"/>
+            <display value="T. van Beek"/>
+      </performer>
+      <valueQuantity>
+            <value value="37.6"/>
+            <unit value="Cel"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="Cel"/>
+      </valueQuantity>
+</Observation>
+
