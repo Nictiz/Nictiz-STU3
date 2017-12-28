@@ -3,7 +3,7 @@
   <id value="0f01e7ed-99b5-4781-8e06-0b92fef40c71" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2017-09-29T14:09:07.623+02:00" />
+    <lastUpdated value="2017-12-28T14:48:48.837+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
   <version value="1.0" />
@@ -115,10 +115,35 @@
         <map value="NL-CM:8.2.4" />
       </mapping>
     </element>
-    <element id="AllergyIntolerance.criticality">
-      <path value="AllergyIntolerance.criticality" />
+    <element id="AllergyIntolerance.criticality.extension">
+      <path value="AllergyIntolerance.criticality.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="AllergyIntolerance.criticality.extension:CriticalExtentCodelist">
+      <path value="AllergyIntolerance.criticality.extension" />
+      <sliceName value="CriticalExtentCodelist" />
       <short value="CriticalExtent" />
+      <definition value="Defines a more specific value to a code. Especially useful for FHIR's required ValueSets. These extensions are primarily used on codes bound to a required value set, where you would like to use a more specific code than the codes in the bounded value set." />
       <alias value="MateVanKritiekZijn" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="CriticalExtentCodelist" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.4--20150401000000" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN" />
         <map value="NL-CM:8.2.7" />
@@ -162,6 +187,14 @@
       <path value="AllergyIntolerance.recorder" />
       <short value="Recorder" />
       <alias value="Auteur" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
     </element>
     <element id="AllergyIntolerance.asserter">
       <path value="AllergyIntolerance.asserter" />
