@@ -26,7 +26,7 @@
             <reference value="Patient/medmij-bgz-patient-01"/>
             <display value="T. van Beek"/>
       </subject>
-      <effectiveDateTime value="2017-12-12T14:58:00+01:00"/>
+      <effectiveDateTime value="2017-12-13T14:58:00+01:00"/>
       <performer>
             <reference value="Practitioner/medmij-vitalsigns-healthprofessional-01"/>
             <display value="Dr. L. van der Spegel"/>
