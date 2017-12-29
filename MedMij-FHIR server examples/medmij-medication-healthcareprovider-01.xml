@@ -1,0 +1,61 @@
+<?xml-model href="http://hl7.org/fhir/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Organization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/organization.xsd" xmlns="http://hl7.org/fhir">
+  <id value="medmij-medication-healthcareprovider-01"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+  </meta>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+    <value value="78945654"/>
+  </identifier>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/ura"/>
+    <value value="65432112"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://nictiz.nl/fhir/NamingSystem/organization-type"/>
+      <code value="J8"/>
+      <display value="Openbare apotheek"/>
+    </coding>
+  </type>
+  <name value="Apotheek De Gulle Gaper"/>
+  <alias value="GG"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="070-3655424"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+        <use value="work"/>
+        <line value="Straat 5">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Straat"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="5"/>
+            </extension>
+        </line>
+        <city value="Utrecht"/>
+        <postalCode value="1598FG"/>
+        <country value="NLD"/>
+  </address>
+  <contact>
+    <purpose>
+      <coding>
+        <system value="http://hl7.org/fhir/contactentity-type"/>
+        <code value="ADMIN"/>
+        <display value="Administrative"/>
+      </coding>
+    </purpose>
+    <name>
+      <text value="Mevrouw Pietersen"/>
+    </name>
+    <telecom>
+      <system value="email"/>
+      <value value="info@apotheekgullegaper.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+</Organization>

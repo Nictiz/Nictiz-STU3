@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/practitioner.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Practitioner  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/practitioner.xsd">
+  <id value="medmij-medication-healthprofessional-03"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+  </meta>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+    <value value="45454565"/>
+  </identifier>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/big"/>
+    <value value="32321232"/>
+  </identifier>
+  <name>
+    <family value="C. Ard">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Ard"/>
+      </extension>
+    </family>
+    <given value="Car"/>
+    <prefix value="Dr."/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+3161596684474"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="c.ard@work.com"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+        <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official">
+            <valueBoolean value="true"/>
+        </extension>
+        <use value="work"/>
+        <type value="both"/>
+        <line value="Rivierstraat 34 B">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Rivierstraat"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="34"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                <valueString value="B"/>
+            </extension>
+        </line>
+        <city value="Amersfoort"/>
+        <postalCode value="3818DD"/>
+        <country value="NLD"/>
+    </address>
+  <gender value="female"/>
+  <birthDate value="1964-08-05"/>
+</Practitioner>
