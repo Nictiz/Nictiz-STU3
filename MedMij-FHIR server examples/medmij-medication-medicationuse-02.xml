@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/medicationstatement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <MedicationStatement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/medicationstatement.xsd">
-  <id value="medmij-medication-medicationuse-01"/>
+  <id value="medmij-medication-medicationuse-02"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse"/>
   </meta>
   <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-MedicationTreatment">
     <valueIdentifier>
-      <system value="http://example.pgo.com/medicationuse"/>
-      <value value="1245121212"/>
+      <system value="http://example.com/medicationtreatment-ID"/>
+      <value value="999888777"/>
     </valueIdentifier>
   </extension>   
   <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Author">
@@ -19,7 +19,7 @@
   </extension>    
   <identifier>
     <system value="http://example-implementer.com/fhir/MedicationUseID"/>
-    <value value="123456654321"/>
+    <value value="54545448122"/>
   </identifier>
   <status value="active"/>
   <category>
@@ -29,22 +29,22 @@
     </coding>
   </category>
   <medicationReference>
-    <reference value="Medication/medmij-medication-medication-01"/>
-    <display value="Ibuprofen"/>
+    <reference value="Medication/medmij-medication-medication-05"/>
+    <display value="Glimepride"/>
   </medicationReference>
   <effectivePeriod>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration">
       <valueDuration>
-        <value value="3"/>
+        <value value="10"/>
         <unit value="day"/>
         <system value="http://unitsofmeasure.org"/>
         <code value="d"/>
       </valueDuration>
     </extension>
-    <start value="2016-06-27"/>
-    <end value="2016-06-30"/>
+    <start value="2016-06-20"/>
+    <end value="2016-07-01"/>
   </effectivePeriod>
-  <dateAsserted value="2016-07-01"/>
+  <dateAsserted value="2016-06-25"/>
   <informationSource>
     <reference value="Patient/medmij-medication-patient-01"/>
     <display value="dhr. P. Jansen"/>
@@ -55,33 +55,20 @@
   </subject>
   <taken value="y"/>
   <reasonCode>
-    <text value="Pijn"/>
+    <text value="Diabetus Mellitus"/>
   </reasonCode>
   <dosage>
-    <text value="4x per dag 1 tablet"/>
-    <timing>
-      <repeat>
-        <boundsDuration>
-          <value value="3"/>
-          <unit value="day"/>
-          <system value="http://unitsofmeasure.org" />
-          <code value="d"/>
-        </boundsDuration>
-        <frequency value="4"/>
-        <period value="1"/>
-        <periodUnit value="d"/>
-      </repeat>
-    </timing>
-    <route>
-      <coding>
-        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-        <code value="oraal"/>
-        <display value="Oraal"/>
-      </coding>
-    </route>
-    <doseQuantity>
-      <value value="1"/>
-      <unit value="tablet"/>
-    </doseQuantity>
+      <text value="1 maal per dag 1 tablet"/>
+      <timing>
+        <repeat>
+          <frequency value="1"/>
+          <period value="1"/>
+          <periodUnit value="d"/>
+        </repeat>
+      </timing>
+      <doseQuantity>
+        <value value="1"/>
+        <unit value="tablet"/>
+      </doseQuantity>
   </dosage>
 </MedicationStatement>
