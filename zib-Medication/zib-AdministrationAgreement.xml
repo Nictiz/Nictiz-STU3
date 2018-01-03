@@ -228,7 +228,7 @@
     <element id="MedicationDispense.status">
       <path value="MedicationDispense.status" />
       <short value="CanceledIndicator" />
-      <definition value="In the event of an error correction, this indicator is to be put on for the incorrect agreement. " />
+      <definition value="In the event of an error correction, the value of this element shall be 'entered-in-error'." />
       <alias value="GeannuleerdIndicator" />
       <mapping>
         <identity value="hcim-administrationagreement-v1.0-2017EN" />
