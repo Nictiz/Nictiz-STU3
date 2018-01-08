@@ -330,7 +330,7 @@
             </type>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingWill"/>
+              <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"/>
             </type>
             <type>
                 <code value="Reference"/>
