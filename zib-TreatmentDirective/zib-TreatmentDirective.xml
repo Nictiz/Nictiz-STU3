@@ -194,6 +194,10 @@
                 </valueSetReference>
             </binding>
         </element>
+        <element id="Consent.status">
+            <path value="Consent.status"/>
+            <comment value="The HCIM treatmentDirective is not explicit on its intention. The expectation however is that any instantation of a TreatmentDirective is &quot;active&quot; unless stated otherwise."/>
+        </element>
         <element id="Consent.category">
             <path value="Consent.category"/>
             <min value="1"/>
