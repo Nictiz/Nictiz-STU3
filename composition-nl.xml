@@ -30,6 +30,13 @@
         <element id="Composition">
             <path value="Composition"/>
         </element>
+        <element id="Composition.encounter">
+            <path value="Composition.encounter"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
+            </type>
+        </element>
         <element id="Composition.author">
             <path value="Composition.author"/>
             <type>
@@ -69,13 +76,6 @@
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-            </type>
-        </element>
-        <element id="Composition.encounter">
-            <path value="Composition.encounter"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
             </type>
         </element>
     </differential>
