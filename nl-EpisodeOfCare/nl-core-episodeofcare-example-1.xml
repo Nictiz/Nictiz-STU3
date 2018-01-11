@@ -1,0 +1,23 @@
+﻿<?xml-model href="http://hl7.org/fhir/STU3/episodeofcare.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<EpisodeOfCare xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/episodeofcare.xsd">
+    <id value="nl-code-episodeofcare-example-1"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">problemen met familie</div>
+    </text>
+    <status value="active"/>
+    <diagnosis>
+        <condition>
+            <reference value="Condition/example-overdrachtconcern3"/>
+            <display value="RELATIEPROBLEMEN OUDERS/FAMILIE"/>
+        </condition>
+    </diagnosis>
+    <patient>
+        <reference value="Patient/nl-core-patient-example-1"/>
+        <display value="Irma Jongeneel-de Haas"/>
+    </patient>
+    <managingOrganization>
+        <reference value="Organization/Organization-example-1"/>
+        <display value="Huisartsenpraktijk Jansen"/>
+    </managingOrganization>
+</EpisodeOfCare>
