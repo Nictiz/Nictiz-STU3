@@ -1,0 +1,42 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.103.11.2--20111012000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.103.11.2"/>
+    </identifier>
+    <version value="2011-10-12T00:00:00"/>
+    <name value="JournaalregelType"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:2897b7b0-e6c5-4ed1-95a9-59188d1c8707"/>
+        <timestamp value="2018-01-11T16:15:15.058+01:00"/>
+        <total value="4"/>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+            <code value="S"/>
+            <display value="Subjectief"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+            <code value="O"/>
+            <display value="Objectief"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+            <code value="E"/>
+            <display value="Evaluatie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+            <code value="P"/>
+            <display value="Plan"/>
+        </contains>
+    </expansion>
+</ValueSet>
