@@ -13,30 +13,67 @@
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="Nictiz"/>
+    <description value="Type van de SOEP-gecodeerde journaalregel"/>
     <immutable value="false"/>
     <expansion>
-        <identifier value="urn:uuid:2897b7b0-e6c5-4ed1-95a9-59188d1c8707"/>
-        <timestamp value="2018-01-11T16:15:15.058+01:00"/>
+        <identifier value="urn:uuid:c1f2d8fd-2f87-46a0-b3f4-c0023a97b79a"/>
+        <timestamp value="2018-01-12T11:00:08.586+01:00"/>
         <total value="4"/>
         <contains>
             <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
             <code value="S"/>
             <display value="Subjectief"/>
+            <designation>
+                <language value="en-US"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Subjective"/>
+            </designation>
         </contains>
         <contains>
             <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
             <code value="O"/>
             <display value="Objectief"/>
+            <designation>
+                <language value="en-US"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Objective"/>
+            </designation>
         </contains>
         <contains>
             <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
             <code value="E"/>
             <display value="Evaluatie"/>
+            <designation>
+                <language value="en-US"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Assessment"/>
+            </designation>
         </contains>
         <contains>
             <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
             <code value="P"/>
             <display value="Plan"/>
+            <designation>
+                <language value="en-US"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Plan"/>
+            </designation>
         </contains>
     </expansion>
 </ValueSet>
