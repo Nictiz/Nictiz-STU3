@@ -13,11 +13,11 @@
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="Nictiz"/>
-    <description value="Type van de SOEP-gecodeerde journaalregel"/>
+    <description value="Type of the SOAP encoded journal entry"/>
     <immutable value="false"/>
     <expansion>
-        <identifier value="urn:uuid:c1f2d8fd-2f87-46a0-b3f4-c0023a97b79a"/>
-        <timestamp value="2018-01-12T11:00:08.586+01:00"/>
+        <identifier value="urn:uuid:af256f9f-8e3b-4c41-a396-5f248cc6ae39"/>
+        <timestamp value="2018-01-12T11:08:52.431+01:00"/>
         <total value="4"/>
         <contains>
             <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
