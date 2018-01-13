@@ -22,7 +22,7 @@
                     <tr>
                         <td>1744</td>
                         <td>systolische bloeddruk</td>
-                        <td>140 mm[Hg]</td>
+                        <td><b style="color: red;">140 mm[Hg]</b></td>
                         <td><b style="color: red;">H</b></td>
                         <td>A. Langeveld</td>
                     </tr>
