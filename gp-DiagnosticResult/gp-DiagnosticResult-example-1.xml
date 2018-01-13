@@ -4,6 +4,32 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult"/>
     </meta>
+    <text>
+        <status value="generated"></status>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Patient P. van de Heuvel</caption>
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Display</th>
+                        <th>Value</th>
+                        <th>Interpretation</th>
+                        <th>Author</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1744</td>
+                        <td>systolische bloeddruk</td>
+                        <td>140 mm[Hg]</td>
+                        <td><b style="color: red;">H</b></td>
+                        <td>A. Langeveld</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
     <identifier>
         <use value="official"/>
         <system value="http://www.bmc.nl/zorgportal/identifiers/observations"/>
