@@ -8,7 +8,7 @@
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">Contactverslag dd. 2018-01-11 met patiënte Roos Dalstra door huisarts Henk de Vries in relatie tot episode RELATIEPROBLEMEN OUDERS/FAMILIE
-        <table>
+        <table cellpadding="10">
             <thead>
                 <tr>
                     <th>SOEP</th>
@@ -29,7 +29,7 @@
             <tr>
                 <th>E</th>
                 <td>slapen gaat redelijk, regelmatig angstaanvallen, is dan erg onrustig, dat geeft weer benauwdheid "met hart"</td>
-                <td>Z20 - RELATIEPROBLEMEN OUDERS/FAMILIE</td>
+                <td><span title="RELATIEPROBLEMEN OUDERS/FAMILIE">Z20</span></td>
             </tr>
             <tr>
                 <th>P</th>
