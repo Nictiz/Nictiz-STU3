@@ -21,7 +21,7 @@
         <timestamp value="2018-01-12T11:08:52.431+01:00"/>
         <total value="4"/>
         <contains>
-            <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+            <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
             <code value="S"/>
             <display value="Subjectief"/>
             <designation>
@@ -35,7 +35,7 @@
             </designation>
         </contains>
         <contains>
-            <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+            <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
             <code value="O"/>
             <display value="Objectief"/>
             <designation>
@@ -49,7 +49,7 @@
             </designation>
         </contains>
         <contains>
-            <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+            <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
             <code value="E"/>
             <display value="Evaluatie"/>
             <designation>
@@ -63,7 +63,7 @@
             </designation>
         </contains>
         <contains>
-            <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+            <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
             <code value="P"/>
             <display value="Plan"/>
             <designation>

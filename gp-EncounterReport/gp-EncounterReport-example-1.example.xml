@@ -70,7 +70,7 @@
         </extension>
         <code>
             <coding>
-                <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+                <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
                 <code value="E"/>
                 <display value="Evaluatie"/>
             </coding>
@@ -86,7 +86,7 @@
     <section>
         <code>
             <coding>
-                <system value="http://fhir.nl/fhir/NamingSystem/soepcodes"/>
+                <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
                 <code value="P"/>
                 <display value="Plan"/>
             </coding>
