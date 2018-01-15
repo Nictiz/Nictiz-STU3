@@ -1,0 +1,80 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="JournaalregelType"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.103.11.2--20111012000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.103.11.2"/>
+    </identifier>
+    <version value="2011-10-12T00:00:00"/>
+    <name value="JournaalregelType"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <description value="Type of the SOAP encoded journal entry"/>
+    <immutable value="false"/>
+    <expansion>
+        <identifier value="urn:uuid:af256f9f-8e3b-4c41-a396-5f248cc6ae39"/>
+        <timestamp value="2018-01-12T11:08:52.431+01:00"/>
+        <total value="4"/>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
+            <code value="S"/>
+            <display value="Subjectief"/>
+            <designation>
+                <language value="en-US"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Subjective"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
+            <code value="O"/>
+            <display value="Objectief"/>
+            <designation>
+                <language value="en-US"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Objective"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
+            <code value="E"/>
+            <display value="Evaluatie"/>
+            <designation>
+                <language value="en-US"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Assessment"/>
+            </designation>
+        </contains>
+        <contains>
+            <system value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
+            <code value="P"/>
+            <display value="Plan"/>
+            <designation>
+                <language value="en-US"/>
+                <use>
+                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                    <code value="preferred"/>
+                    <display value="preferred"/>
+                </use>
+                <value value="Plan"/>
+            </designation>
+        </contains>
+    </expansion>
+</ValueSet>

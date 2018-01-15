@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/searchparameter.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<SearchParameter xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/searchparameter.xsd">
+    <url value="http://nictiz.nl/fhir/SearchParameter/Flag-detail"/>
+    <version value="1.0"/>
+    <name value="Flag-detail"/>
+    <status value="draft"/>
+    <date value="2018-01-13T14:26:13.365+00:00"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <purpose value="To select Flag resources based on having a certain Flag.extension[flag-detail]"/>
+    <code value="detail"/>
+    <base value="Flag"/>
+    <type value="token"/>
+    <description value="The Flag.extension may be used to convey what the Flag is about. This is normally done using the core extension flag-detail. This query parameter allows you to query for Flags that have a certain flag-detail. Other uses of Flag.extension are NOT supported using this search parameter."/>
+    <expression value="Flag.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/flag-detail')"/>
+    <xpath value="f:Flag/f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/flag-detail']"/>
+    <xpathUsage value="normal"/>
+</SearchParameter>

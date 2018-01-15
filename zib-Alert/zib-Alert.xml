@@ -161,6 +161,9 @@
                 <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
             </type>
         </element>
+        <element id="Flag.period">
+            <path value="Flag.period"/>
+        </element>
         <element id="Flag.period.start">
             <path value="Flag.period.start"/>
             <short value="StartDateTime"/>
@@ -188,21 +191,6 @@
                 <code value="Reference"/>
                 <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
             </type>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-            </type>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-            </type>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-            </type>
-        </element>
-        <element id="Flag.subject">
-            <path value="Flag.subject"/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
