@@ -5,23 +5,14 @@
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"/>
   </meta>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration">
-    <valueDuration>
-      <value value="4"/>
-      <unit value="week"/>
-      <system value="http://unitsofmeasure.org" />
-      <code value="wk"/>
-    </valueDuration>
-  </extension>
-  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse">
     <valuePeriod>
-      <start value="2016-06-15"/>
-      <end value="2016-07-13"/>
+      <start value="2016-05-01"/>
     </valuePeriod>
   </extension>
   <identifier>
     <system value="http://example-implementer.com/fhir/MedicationRequest-ID"/>
-    <value value="875452574"/>
+    <value value="57489374375"/>
   </identifier>
   <status value="active"/>
   <intent value="order"/>
@@ -34,35 +25,23 @@
   </category>
   <medicationReference>
     <reference value="Medication/example"/>
-    <display value="Glimepiride tablet 3mg"/>
+    <display value="Insuline glargine 100e/ml injvist"/>
   </medicationReference>
   <subject>
     <reference value="Patient/example"/>
     <display value="dhr. P. Jansen"/>
   </subject>
-  <authoredOn value="2016-06-15"/>
+  <authoredOn value="2016-05-01"/>
   <requester>
     <agent>
       <reference value="Practitioner/example"/>
-      <display value="H.Huis"/>
+      <display value="I. Ternist"/>
     </agent>
   </requester>
-  <reasonCode>
-    <text value="Diabetus Mellitus"/>
-  </reasonCode>
-  <note>
-    <text value="Exact 4 weken"/>
-  </note>
   <dosageInstruction>
-    <text value="1 maal per dag 2 tabletten voor 4 weken"/>
+    <text value="1 maal per dag 10 IE Subcutaan"/>
     <timing>
       <repeat>
-        <boundsDuration>
-          <value value="4"/>
-          <unit value="week"/>
-          <system value="http://unitsofmeasure.org" />
-          <code value="wk"/>
-        </boundsDuration>
         <frequency value="1"/>
         <period value="1"/>
         <periodUnit value="d"/>
@@ -70,16 +49,16 @@
     </timing>
     <route>
       <coding>
-        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-        <code value="oraal"/>
-        <display value="Oraal"/>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.9" />
+        <code value="5" />
+        <display value="INTRAVENEUS"/>
       </coding>
     </route>
     <doseQuantity>
-      <value value="2"/>
-      <unit value="STUK"/>
-      <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
-      <code value="245"/>
-    </doseQuantity>    
+      <value value="10"/>
+      <unit value="IE"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="IU "/>
+    </doseQuantity>
   </dosageInstruction>
 </MedicationRequest>  

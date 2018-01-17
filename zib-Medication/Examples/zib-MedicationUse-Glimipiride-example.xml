@@ -18,7 +18,7 @@
     <system value="http://example-implementer.com/fhir/MedicationUseID"/>
     <value value="123456654321"/>
   </identifier>
-  <status value="stopped"/>
+  <status value="active"/>
   <category>
     <coding>
       <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3"/>
@@ -27,21 +27,13 @@
   </category>
   <medicationReference>
     <reference value="Medication/example"/>
-    <display value="Ibuprofen"/>
+    <display value="Glimepiride tablet 3mg"/>
   </medicationReference>
   <effectivePeriod>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration">
-      <valueDuration>
-        <value value="3"/>
-        <unit value="day"/>
-        <system value="http://unitsofmeasure.org"/>
-        <code value="d"/>
-      </valueDuration>
-    </extension>
-    <start value="2016-06-27"/>
-    <end value="2016-06-30"/>
+    <start value="2016-06-20"/>
+    <end value="2016-07-01"/>
   </effectivePeriod>
-  <dateAsserted value="2016-07-01"/>
+  <dateAsserted value="2016-06-30"/>
   <informationSource>
     <reference value="Patient/exmaple"/>
     <display value="dhr. P. Jansen"/>
@@ -50,21 +42,12 @@
     <reference value="Patient/example"/>
     <display value="dhr. P. Jansen"/>
   </subject>
-  <taken value="y"/>
-  <reasonCode>
-    <text value="Pijn"/>
-  </reasonCode>
+  <taken value="y"/>  
   <dosage>
-    <text value="4x per dag 1 tablet"/>
+    <text value="1 maar per dag 1 tablet"/>
     <timing>
-      <repeat>
-        <boundsDuration>
-          <value value="3"/>
-          <unit value="day"/>
-          <system value="http://unitsofmeasure.org" />
-          <code value="d"/>
-        </boundsDuration>
-        <frequency value="4"/>
+      <repeat>        
+        <frequency value="3"/>
         <period value="1"/>
         <periodUnit value="d"/>
       </repeat>
@@ -81,6 +64,6 @@
       <unit value="STUK"/>
       <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
       <code value="245"/>
-    </doseQuantity> 
+    </doseQuantity>    
   </dosage>
 </MedicationStatement>
