@@ -37,7 +37,7 @@
   <performer>
     <actor>
       <reference value="Practitioner/example"/>
-      <display value="Prarmacist J. Dekter"/>
+      <display value="Pharmacist J. Dekter"/>
     </actor>
     <onBehalfOf>
       <reference value="Organization/example"/>

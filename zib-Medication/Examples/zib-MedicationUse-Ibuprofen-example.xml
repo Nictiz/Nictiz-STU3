@@ -78,7 +78,9 @@
     </route>
     <doseQuantity>
       <value value="1"/>
-      <unit value="tablet"/>
-    </doseQuantity>
+      <unit value="STUK"/>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
+      <code value="245"/>
+    </doseQuantity> 
   </dosage>
 </MedicationStatement>
