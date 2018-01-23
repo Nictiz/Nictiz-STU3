@@ -40,7 +40,7 @@
             <short value="Encounter"/>
             <alias value="Contact"/>
             <constraint>
-                <key value="cbb-contact-1"/>
+                <key value="hcim-contact-1"/>
                 <severity value="warning"/>
                 <human value="There is either a textual representation of the encounter reason or reference to a condition or procedure that indicated the encounter"/>
                 <expression value="reason.text.empty().not() or indication.empty().not()"/>
