@@ -1,0 +1,59 @@
+<?xml-model href="http://hl7.org/fhir/STU3/bundle.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/bundle.xsd">
+    <id value="GP-Patient-Summary-batch-request-example-01"/>
+    <type value="batch"/>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/Patient?identifier=123456789&amp;_include=Patient:general-practitioner"/>
+        </request>
+    </entry>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/EpisodeOfCare?_revinclude=Flag:detail"/>
+        </request>
+    </entry>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/Procedure?category=http://snomed.info/sct|365508006"/>
+        </request>
+    </entry>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/Observation?code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-56-profylaxe-en-voorzorg|"/>
+        </request>
+    </entry>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/MedicationRequest?status=active&amp;category=http://snomed.info/sct|16076005&amp;_include:MedicationRequest:medication"/>
+        </request>
+    </entry>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/AllergyIntolerance"/>
+        </request>
+    </entry>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/DocumentReference"/>
+        </request>
+    </entry>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/Observation?code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|&amp;_include=Observation:related-target&amp;_include=Observation:specimen&amp;date=ge2017-01-01"/>
+        </request>
+    </entry>
+    <entry>
+        <request>
+            <method value="GET"/>
+            <url value="/Composition?type=http://loinc.org|67781-5"/>
+        </request>
+    </entry>
+</Bundle>
