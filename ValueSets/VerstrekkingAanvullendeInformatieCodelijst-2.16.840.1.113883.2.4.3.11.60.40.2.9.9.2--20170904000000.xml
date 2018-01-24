@@ -1,4 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.9.9.2--20170904000000"/>
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
     </meta>
@@ -12,53 +13,62 @@
     <name value="VerstrekkingAanvullendeInformatieCodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
-    <publisher value="ART-DECOR Expert Group"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.zibs.nl"/>
+        </telecom>
+    </contact>
+    <description value="VerstrekkingAanvullendeInformatieCodelijst"/>
     <immutable value="false"/>
-    <expansion>
-        <identifier value="urn:uuid:eb9ac886-9f5a-45b8-8976-f633b8f05969"/>
-        <timestamp value="2017-10-02T11:53:26.698+02:00"/>
-        <total value="3"/>
-        <contains>
+    <compose>
+        <include>
             <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2052"/>
-            <code value="1"/>
-            <display value="Aantal bewust gewijzigd"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Aantal bewust gewijzigd"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2052"/>
-            <code value="2"/>
-            <display value="Recall"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Recall"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2052"/>
-            <code value="3"/>
-            <display value="Retour"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Retour"/>
-            </designation>
-        </contains>
-    </expansion>
+            <concept>
+                <code value="1"/>
+                <display value="Aantal bewust gewijzigd"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Aantal bewust gewijzigd"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="Recall"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Recall"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="Retour"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Retour"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
 </ValueSet>

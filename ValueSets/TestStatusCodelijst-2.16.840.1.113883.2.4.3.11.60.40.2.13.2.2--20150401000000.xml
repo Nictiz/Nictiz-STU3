@@ -1,4 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.13.2.2--20150401000000"/>
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
     </meta>
@@ -12,81 +13,88 @@
     <name value="TestStatusCodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
-    <publisher value="ART-DECOR Expert Group"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.zibs.nl"/>
+        </telecom>
+    </contact>
+    <description value="TestStatusCodelijst"/>
     <immutable value="false"/>
-    <expansion>
-        <identifier value="urn:uuid:ed561051-1ce9-4446-82d9-95d915d3eb85"/>
-        <timestamp value="2017-10-26T15:21:13.529+02:00"/>
-        <total value="5"/>
-        <contains>
+    <compose>
+        <include>
             <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
-            <code value="pending"/>
-            <display value="Pending"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Uitslag volgt"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
-            <code value="preliminary"/>
-            <display value="Preliminary"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Voorlopig"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
-            <code value="final"/>
-            <display value="Final"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Definitief"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
-            <code value="appended"/>
-            <display value="Appended"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Aanvullend"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1"/>
-            <code value="corrected"/>
-            <display value="Corrected"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Gecorrigeerd"/>
-            </designation>
-        </contains>
-    </expansion>
+            <concept>
+                <code value="pending"/>
+                <display value="Pending"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Uitslag volgt"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="preliminary"/>
+                <display value="Preliminary"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Voorlopig"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="final"/>
+                <display value="Final"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Definitief"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="appended"/>
+                <display value="Appended"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Aanvullend"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="corrected"/>
+                <display value="Corrected"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Gecorrigeerd"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
 </ValueSet>

@@ -11,26 +11,37 @@
     </identifier>
     <version value="2015-04-01T00:00:00"/>
     <name value="SpecifiekeStofCodeLijst"/>
-    <status value="active"/>
+    <status value="draft"/>
     <experimental value="false"/>
-    <publisher value="ART-DECOR Expert Group"/>
-    <description value="Verzameling van alle waardelijsten met codes voor SpecifiekeStof. Deze waardelijst bestaat voor plaatsen waar een meervoudige koppeling van context aan een waardelijst niet mogelijk of niet praktisch is. De FHIR StructureDefinition (DSTU2) is een voorbeeld waar een meervoudige koppeling niet mogelijk is."/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.zibs.nl"/>
+        </telecom>
+    </contact>
+    <description value="Collection of all value sets with codes for SpecificSubstance. This value sets exists for contexts where multiple bindings to a value set are not possible or practical. The FHIR StructureDefinition (DSTU2) is an example of where this is not possible."/>
     <immutable value="false"/>
     <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.1.750"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.10--20150401000000"/>
         </include>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.1.902.122"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.11--20150401000000"/>
         </include>
         <include>
-            <system value="http://snomed.info/sct"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.16--20150401000000"/>
         </include>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.18--20150401000000"/>
         </include>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.1.725"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.9--20150401000000"/>
         </include>
     </compose>
 </ValueSet>

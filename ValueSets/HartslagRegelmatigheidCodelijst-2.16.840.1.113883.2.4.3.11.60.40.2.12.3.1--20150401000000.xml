@@ -1,4 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.12.3.1--20150401000000"/>
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
     </meta>
@@ -12,39 +13,50 @@
     <name value="HartslagRegelmatigheidCodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
-    <publisher value="ART-DECOR Expert Group"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.zibs.nl"/>
+        </telecom>
+    </contact>
+    <description value="HartslagRegelmatigheidCodelijst"/>
     <immutable value="false"/>
-    <expansion>
-        <identifier value="urn:uuid:559e0ec8-aece-4289-87b3-2ce85216e264"/>
-        <timestamp value="2017-10-02T11:53:25.115+02:00"/>
-        <total value="2"/>
-        <contains>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
             <system value="http://snomed.info/sct"/>
-            <code value="271636001"/>
-            <display value="Heart regular"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Hartslag regelmatig"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="248650006"/>
-            <display value="Heart irregular"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Hartslag onregelmatig"/>
-            </designation>
-        </contains>
-    </expansion>
+            <concept>
+                <code value="271636001"/>
+                <display value="Heart regular"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Hartslag regelmatig"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="248650006"/>
+                <display value="Heart irregular"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Hartslag onregelmatig"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
 </ValueSet>

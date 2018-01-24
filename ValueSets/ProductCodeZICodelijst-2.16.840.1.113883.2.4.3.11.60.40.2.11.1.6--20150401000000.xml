@@ -13,7 +13,18 @@
     <name value="ProductCodeZICodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
-    <publisher value="ART-DECOR Expert Group"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.zibs.nl"/>
+        </telecom>
+    </contact>
     <description value="G-Standaard Artikelen (ook KNMP-nummer, ATKODE) (2.16.840.1.113883.2.4.4.8): Alle waarden"/>
     <immutable value="false"/>
     <compose>

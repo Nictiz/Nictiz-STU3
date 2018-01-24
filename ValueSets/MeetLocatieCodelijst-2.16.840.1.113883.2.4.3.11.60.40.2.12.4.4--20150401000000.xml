@@ -1,4 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20150401000000"/>
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
     </meta>
@@ -12,193 +13,193 @@
     <name value="MeetLocatieCodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
-    <publisher value="ART-DECOR Expert Group"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.zibs.nl"/>
+        </telecom>
+    </contact>
+    <description value="MeetLocatieCodelijst"/>
     <immutable value="false"/>
-    <expansion>
-        <identifier value="urn:uuid:7872e46b-e19c-4b57-9faa-9b69999b0bce"/>
-        <timestamp value="2017-10-02T11:53:24.705+02:00"/>
-        <total value="13"/>
-        <contains>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
             <system value="http://snomed.info/sct"/>
-            <code value="40983000"/>
-            <display value="Upper arm structure"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Bovenarm"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="368209003"/>
-            <display value="Right upper arm structure"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Rechter bovenarm"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="368208006"/>
-            <display value="Left upper arm structure"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Linker bovenarm"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="68367000"/>
-            <display value="Thigh structure"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Bovenbeen"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="11207009"/>
-            <display value="Structure of right thigh"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Rechter bovenbeen"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="61396006"/>
-            <display value="Structure of left thigh"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Linker bovenbeen"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="8205005"/>
-            <display value="Wrist region structure"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Pols"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="9736006"/>
-            <display value="Structure of right wrist"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Rechterpols"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="5951000"/>
-            <display value="Structure of left wrist"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Linkerpols"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="7569003"/>
-            <display value="Finger structure"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Vinger"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="344001"/>
-            <display value="Ankle region structure"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Enkel"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="6685009"/>
-            <display value="Structure of right ankle"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Rechterenkel"/>
-            </designation>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="51636004"/>
-            <display value="Structure of left ankle"/>
-            <designation>
-                <language value="nl-NL"/>
-                <use>
-                    <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
-                    <code value="preferred"/>
-                    <display value="preferred"/>
-                </use>
-                <value value="Linkerenkel"/>
-            </designation>
-        </contains>
-    </expansion>
+            <concept>
+                <code value="40983000"/>
+                <display value="Upper arm structure"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Bovenarm"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="368209003"/>
+                <display value="Right upper arm structure"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Rechter bovenarm"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="368208006"/>
+                <display value="Left upper arm structure"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Linker bovenarm"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="68367000"/>
+                <display value="Thigh structure"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Bovenbeen"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="11207009"/>
+                <display value="Structure of right thigh"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Rechter bovenbeen"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="61396006"/>
+                <display value="Structure of left thigh"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Linker bovenbeen"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="8205005"/>
+                <display value="Wrist region structure"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Pols"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="9736006"/>
+                <display value="Structure of right wrist"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Rechterpols"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="5951000"/>
+                <display value="Structure of left wrist"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Linkerpols"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="7569003"/>
+                <display value="Finger structure"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Vinger"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="344001"/>
+                <display value="Ankle region structure"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Enkel"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="6685009"/>
+                <display value="Structure of right ankle"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Rechterenkel"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="51636004"/>
+                <display value="Structure of left ankle"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Linkerenkel"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
 </ValueSet>
