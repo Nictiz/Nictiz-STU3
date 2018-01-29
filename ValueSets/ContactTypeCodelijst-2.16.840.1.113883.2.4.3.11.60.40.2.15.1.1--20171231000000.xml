@@ -1,16 +1,16 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="2.16.840.1.113883.2.4.3.11.60.40.2.7.2.2--20150401000000" />
+  <id value="2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1--20171231000000" />
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
   </meta>
-  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.2.2--20150401000000" />
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1--20171231000000" />
   <identifier>
     <use value="official" />
     <system value="http://art-decor.org/ns/oids/vs" />
-    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.7.2.2" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1" />
   </identifier>
-  <version value="2015-04-01T00:00:00" />
-  <name value="TabakGebruikStatusCodelijst" />
+  <version value="2017-12-31T00:00:00" />
+  <name value="ContactTypeCodelijst" />
   <status value="active" />
   <experimental value="false" />
   <publisher value="Registratie aan de bron" />
@@ -25,91 +25,9 @@
       <value value="https://www.zibs.nl" />
     </telecom>
   </contact>
-  <description value="TabakGebruikStatusCodelijst" />
+  <description value="ContactTypeCodelijst" />
   <immutable value="false" />
-  <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org." />
   <compose>
-    <include>
-      <system value="http://snomed.info/sct" />
-      <concept>
-        <code value="449868002" />
-        <display value="Smokes tobacco daily (finding)" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Rookt dagelijks" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="230059006" />
-        <display value="Occasional cigarette smoker (finding)" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Rookt soms" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="43381005" />
-        <display value="Passive smoker (finding)" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Rookt passief" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="8517006" />
-        <display value="Ex-smoker (finding)" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Ex-roker" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="405746006" />
-        <display value="Current non smoker but past smoking history unknown (finding)" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Niet-roker, maar rookgedrag in verleden onbekend" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="266919005" />
-        <display value="Never smoked tobacco (finding)" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Nooit gerookt" />
-        </designation>
-      </concept>
-    </include>
     <include>
       <system value="http://hl7.org/fhir/v3/NullFlavor" />
       <concept>
@@ -123,6 +41,100 @@
             <display value="preferred" />
           </use>
           <value value="Anders" />
+        </designation>
+      </concept>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/v3/ActCode" />
+      <concept>
+        <code value="AMB" />
+        <display value="Ambulatory" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Poliklinisch" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="EMER" />
+        <display value="Emergency" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="SEH" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="FLD" />
+        <display value="Field" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Op lokatie" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="HH" />
+        <display value="Home" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Thuis" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="IMP" />
+        <display value="Inpatient" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Klinisch" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="SS" />
+        <display value="Short Stay" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Dagopname" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="VR" />
+        <display value="Virtual" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Virtueel" />
         </designation>
       </concept>
     </include>
