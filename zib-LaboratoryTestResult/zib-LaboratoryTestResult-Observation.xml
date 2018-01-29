@@ -2,8 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
   <id value="a04df0e3-cd49-4cb2-84e8-ac147f692e93" />
   <meta>
-    <versionId value="7" />
-    <lastUpdated value="2017-12-20T12:57:44.183+01:00" />
+    <versionId value="8" />
+    <lastUpdated value="2018-01-29T13:28:44.183+01:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation" />
   <version value="1.0" />
