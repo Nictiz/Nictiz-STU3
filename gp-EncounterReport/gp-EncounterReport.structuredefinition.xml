@@ -15,6 +15,7 @@
     <abstract value="false"/>
     <type value="Composition"/>
     <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/composition-nl"/>
+    <derivation value="constraint"/>
     <differential>
         <element id="Composition">
             <path value="Composition"/>
@@ -53,11 +54,12 @@
         </element>
         <element id="Composition.section.extension:code_icpc_1_nl">
             <path value="Composition.section.extension"/>
-            <sliceName value="code-icpc-1-nl"/>
+            <sliceName value="code_icpc_1_nl"/>
             <min value="0"/>
             <max value="1"/>
             <type>
                 <code value="Extension"/>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/code-icpc-1-nl"/>
             </type>
         </element>
         <element id="Composition.section.code">
