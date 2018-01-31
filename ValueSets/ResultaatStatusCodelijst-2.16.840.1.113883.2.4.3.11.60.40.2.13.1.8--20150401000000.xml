@@ -25,7 +25,7 @@
       <value value="https://www.zibs.nl" />
     </telecom>
   </contact>
-  <description value="ResultaatStatusCodelijst" />
+  <description value="ResultaatStatusCodelijst " />
   <immutable value="false" />
   <compose>
     <include>
