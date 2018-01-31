@@ -14,7 +14,7 @@
   <status value="draft" />
   <experimental value="false" />
   <publisher value="Nictiz" />
-  <description value="Stoptype " />
+  <description value="Stoptype" />
   <immutable value="false" />
   <compose>
     <include>
