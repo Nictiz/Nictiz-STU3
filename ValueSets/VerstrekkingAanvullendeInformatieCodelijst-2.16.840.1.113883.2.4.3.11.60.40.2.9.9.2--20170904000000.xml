@@ -25,7 +25,7 @@
       <value value="https://www.zibs.nl" />
     </telecom>
   </contact>
-  <description value="VerstrekkingAanvullendeInformatieCodelijst" />
+  <description value="VerstrekkingAanvullendeInformatieCodelijst " />
   <immutable value="false" />
   <compose>
     <include>
