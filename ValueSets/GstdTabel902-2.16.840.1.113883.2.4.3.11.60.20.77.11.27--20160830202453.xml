@@ -14,7 +14,7 @@
   <status value="draft" />
   <experimental value="false" />
   <publisher value="Nictiz" />
-  <description value="G-Standaard Eenhedentabel" />
+  <description value="G-Standaard Eenhedentabel " />
   <immutable value="false" />
   <compose>
     <include>
