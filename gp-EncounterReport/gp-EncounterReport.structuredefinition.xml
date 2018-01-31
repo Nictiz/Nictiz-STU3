@@ -82,7 +82,7 @@
         </element>
         <element id="Composition.section.entry">
             <path value="Composition.section.entry"/>
-            <definition value="A reference to the actual resource from which the narrative in the section is derived. Examples of references could be a diagnostic result on the &quot;O&quot; entry, or a medication agreement or a care plan on the &quot;P&quot; entry"/>
+            <definition value="A reference to data that supports this section. Examples of references could be a diagnostic result on the &quot;O&quot; entry, or a medication agreement or a care plan on the &quot;P&quot; entry."/>
         </element>
     </differential>
 </StructureDefinition>
