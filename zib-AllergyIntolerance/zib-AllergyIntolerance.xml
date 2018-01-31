@@ -142,6 +142,7 @@
                 <description value="CriticalExtentCodelist"/>
                 <valueSetReference>
                     <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.4--20150401000000"/>
+                    <display value="MateVanKritiekZijnCodelijst"/>
                 </valueSetReference>
             </binding>
             <mapping>
@@ -308,6 +309,7 @@
                 <description value="Indication of the probability that the substance described in the ‘SpecificSubstance' concept caused the reaction."/>
                 <valueSetReference>
                     <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8--20150401000000"/>
+                    <display value="WaarschijnlijkheidCodelijst"/>
                 </valueSetReference>
             </binding>
         </element>
