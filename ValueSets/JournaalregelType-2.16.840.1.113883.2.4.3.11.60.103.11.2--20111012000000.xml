@@ -25,7 +25,7 @@
       <value value="F 070 320 74 37" />
     </telecom>
   </contact>
-  <description value="Type of the SOAP encoded journal entry" />
+  <description value="Type of the SOAP encoded journal entry " />
   <immutable value="false" />
   <compose>
     <include>

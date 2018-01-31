@@ -25,7 +25,7 @@
       <value value="https://www.zibs.nl" />
     </telecom>
   </contact>
-  <description value="G-Standaard Artikelen (ook KNMP-nummer, ATKODE) - Alle waarden" />
+  <description value="G-Standaard Artikelen (ook KNMP-nummer, ATKODE) - Alle waarden " />
   <immutable value="false" />
   <compose>
     <include>
