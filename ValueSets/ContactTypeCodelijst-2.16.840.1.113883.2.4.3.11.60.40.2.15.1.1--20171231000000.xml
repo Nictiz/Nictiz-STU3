@@ -1,16 +1,16 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3--20150401000000" />
+  <id value="2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1--20171231000000" />
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
   </meta>
-  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3--20150401000000" />
+  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1--20171231000000" />
   <identifier>
     <use value="official" />
     <system value="http://art-decor.org/ns/oids/vs" />
-    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3" />
+    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1" />
   </identifier>
-  <version value="2015-04-01T00:00:00" />
-  <name value="ToedieningswegCodelijst" />
+  <version value="2017-12-31T00:00:00" />
+  <name value="ContactTypeCodelijst" />
   <status value="active" />
   <experimental value="false" />
   <publisher value="Registratie aan de bron" />
@@ -25,7 +25,7 @@
       <value value="https://www.zibs.nl" />
     </telecom>
   </contact>
-  <description value="ToedieningswegCodelijst " />
+  <description value="ContactTypeCodelijst " />
   <immutable value="false" />
   <compose>
     <include>
@@ -45,10 +45,10 @@
       </concept>
     </include>
     <include>
-      <system value="urn:oid:2.16.840.1.113883.2.4.4.9" />
+      <system value="http://hl7.org/fhir/v3/ActCode" />
       <concept>
-        <code value="9" />
-        <display value="ORAAL" />
+        <code value="AMB" />
+        <display value="Ambulatory" />
         <designation>
           <language value="nl-NL" />
           <use>
@@ -56,12 +56,12 @@
             <code value="preferred" />
             <display value="preferred" />
           </use>
-          <value value="oraal" />
+          <value value="Poliklinisch" />
         </designation>
       </concept>
       <concept>
-        <code value="6" />
-        <display value="NASAAL" />
+        <code value="EMER" />
+        <display value="Emergency" />
         <designation>
           <language value="nl-NL" />
           <use>
@@ -69,12 +69,12 @@
             <code value="preferred" />
             <display value="preferred" />
           </use>
-          <value value="nasaal (snuiven)" />
+          <value value="SEH" />
         </designation>
       </concept>
       <concept>
-        <code value="62" />
-        <display value="INHALATIE" />
+        <code value="FLD" />
+        <display value="Field" />
         <designation>
           <language value="nl-NL" />
           <use>
@@ -82,12 +82,12 @@
             <code value="preferred" />
             <display value="preferred" />
           </use>
-          <value value="Inhalatie (roken)" />
+          <value value="Op lokatie" />
         </designation>
       </concept>
       <concept>
-        <code value="5" />
-        <display value="INTRAVENEUS" />
+        <code value="HH" />
+        <display value="Home" />
         <designation>
           <language value="nl-NL" />
           <use>
@@ -95,7 +95,46 @@
             <code value="preferred" />
             <display value="preferred" />
           </use>
-          <value value="Intraveneus (spuiten)" />
+          <value value="Thuis" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="IMP" />
+        <display value="Inpatient" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Klinisch" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="SS" />
+        <display value="Short Stay" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Dagopname" />
+        </designation>
+      </concept>
+      <concept>
+        <code value="VR" />
+        <display value="Virtual" />
+        <designation>
+          <language value="nl-NL" />
+          <use>
+            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
+            <code value="preferred" />
+            <display value="preferred" />
+          </use>
+          <value value="Virtueel" />
         </designation>
       </concept>
     </include>
