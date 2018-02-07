@@ -1,114 +1,114 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8--20150401000000" />
-  <meta>
-    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
-  </meta>
-  <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8--20150401000000" />
-  <identifier>
-    <use value="official" />
-    <system value="http://art-decor.org/ns/oids/vs" />
-    <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8" />
-  </identifier>
-  <version value="2015-04-01T00:00:00" />
-  <name value="WaarschijnlijkheidCodelijst" />
-  <status value="active" />
-  <experimental value="false" />
-  <publisher value="Registratie aan de bron" />
-  <contact>
-    <name value="Registratie aan de bron" />
-    <telecom>
-      <system value="url" />
-      <value value="https://www.registratieaandebron.nl" />
-    </telecom>
-    <telecom>
-      <system value="url" />
-      <value value="https://www.zibs.nl" />
-    </telecom>
-  </contact>
-  <description value="WaarschijnlijkheidCodelijst " />
-  <immutable value="false" />
-  <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org." />
-  <compose>
-    <include>
-      <system value="http://snomed.info/sct" />
-      <concept>
-        <code value="17162000" />
-        <display value="Certain" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Zeker" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="2931005" />
-        <display value="Probable" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Waarschijnlijk" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="60022001" />
-        <display value="Possible" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Mogelijk" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="385434005" />
-        <display value="Unlikely" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Onwaarschijnlijk" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="260385009" />
-        <display value="Ruled Out" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Zeker niet" />
-        </designation>
-      </concept>
-      <concept>
-        <code value="261665006" />
-        <display value="Unknown" />
-        <designation>
-          <language value="nl-NL" />
-          <use>
-            <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType" />
-            <code value="preferred" />
-            <display value="preferred" />
-          </use>
-          <value value="Onbekend" />
-        </designation>
-      </concept>
-    </include>
-  </compose>
+    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8--20150401000000"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8--20150401000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.8.2.8"/>
+    </identifier>
+    <version value="2015-04-01T00:00:00"/>
+    <name value="WaarschijnlijkheidCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.zibs.nl"/>
+        </telecom>
+    </contact>
+    <description value="WaarschijnlijkheidCodelijst"/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="17162000"/>
+                <display value="Certain"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Zeker"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="2931005"/>
+                <display value="Probable"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Waarschijnlijk"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="60022001"/>
+                <display value="Possible"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Mogelijk"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="385434005"/>
+                <display value="Unlikely"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Onwaarschijnlijk"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="260385009"/>
+                <display value="Ruled Out"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Zeker niet"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="261665006"/>
+                <display value="Unknown"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://art-decor.org/ADAR/rv/DECOR.xsd#DesignationType"/>
+                        <code value="preferred"/>
+                        <display value="preferred"/>
+                    </use>
+                    <value value="Onbekend"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
 </ValueSet>
