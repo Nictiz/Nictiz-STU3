@@ -120,7 +120,7 @@
         <strength value="extensible" />
         <description value="MedicatieToedieningRedenVanAfwijkenCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.3--20170904000000" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.3--20171231000000" />
           <display value="MedicatieToedieningRedenVanAfwijkenCodelijst" />
         </valueSetReference>
       </binding>
@@ -366,7 +366,7 @@
         <strength value="extensible" />
         <description value="MedicatieToedieningToedieningswegCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.2--20170904000000" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.2--20171231000000" />
           <display value="MedicatieToedieningToedieningswegCodelijst" />
         </valueSetReference>
       </binding>

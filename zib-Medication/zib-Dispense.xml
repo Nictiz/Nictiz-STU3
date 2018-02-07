@@ -84,8 +84,8 @@
         <strength value="extensible" />
         <description value="VerstrekkingDistributievormCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.9.1--20170904000000" />
-          <display value="VerstrekkingDistributievormCodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.9.1--20171231000000" />
+          <display value="MedicatieverstrekkingDistributievormCodelijst" />
         </valueSetReference>
       </binding>
     </element>
@@ -138,8 +138,8 @@
         <strength value="extensible" />
         <description value="VerstrekkingAanvullendeInformatieCodelijst" />
         <valueSetReference>
-          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.9.2--20170904000000" />
-          <display value="VerstrekkingAanvullendeInformatieCodelijst" />
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.9.2--20171231000000" />
+          <display value="MedicatieverstrekkingAanvullendeInformatieCodelijst" />
         </valueSetReference>
       </binding>
     </element>
