@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/medicationdispense.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<MedicationDispense xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/medicationdispense.xsd">
+      <id value="medmij-medication-administrationagreement-04"/>
+      <meta>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement"/>
+      </meta>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-MedicationTreatment">
+            <valueIdentifier>
+                  <system value="http://example.com/medicationtreatment-ID"/>
+                  <value value="111222111"/>
+            </valueIdentifier>
+      </extension>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse">
+            <valuePeriod>
+                  <start value="2016-05-01"/>
+            </valuePeriod>
+      </extension>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration">
+            <valueDuration>
+                  <value value="90"/>
+                  <unit value="day"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="d"/>
+            </valueDuration>
+      </extension>
+      <status value="completed"/>
+      <category>
+            <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="422037009"/>
+                  <display value="Provider medication administration instructions (procedure)"/>
+            </coding>
+      </category>
+      <medicationReference>
+            <reference value="Medication/medmij-medication-medication-07" />
+            <display value="Perindopril tert-butylamine glenmark tablet 8 mg"/>
+      </medicationReference>
+      <subject>
+            <reference value="Patient/medmij-medication-patient-01"/>
+            <display value="dhr. P. Jansen"/>
+      </subject>
+      <performer>
+            <actor>
+                  <reference value="Organization/medmij-medication-healthcareprovider-02"/>
+                  <display value="Poliapotheek Antonius"/>
+            </actor>
+      </performer>
+      <dosageInstruction>
+            <text value="1 maal per dag 1 tabet"/>
+            <timing>
+                  <repeat>
+                        <frequency value="1"/>
+                        <period value="1"/>
+                        <periodUnit value="d"/>
+                  </repeat>
+            </timing>
+            <route>
+                  <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.9" />
+                        <code value="9" />
+                        <display value="ORAAL"/>
+                  </coding>
+            </route>
+            <doseQuantity>
+                  <value value="1"/>
+                  <unit value="STUK"/>
+                  <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
+                  <code value="245"/>
+            </doseQuantity>
+      </dosageInstruction>
+</MedicationDispense>
+
+
+

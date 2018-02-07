@@ -39,8 +39,8 @@
   <category>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="373784005"/>
-      <display value="Dispensing medication (procedure)"/>
+      <code value="422037009"/>
+      <display value="Provider medication administration instructions (procedure)"/>
     </coding>
   </category>
   <medicationReference>
@@ -76,8 +76,8 @@
     <route>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-        <code value="cutaan"/>
-        <display value="Cutaan"/>
+        <code value="53"/>
+        <display value="CUTAAN"/>
       </coding>
     </route>
     <doseQuantity>
@@ -104,8 +104,8 @@
     <route>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-        <code value="cutaan"/>
-        <display value="Cutaan"/>
+        <code value="53"/>
+        <display value="CUTAAN"/>
       </coding>
     </route>
     <doseQuantity>
@@ -132,13 +132,15 @@
     <route>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-        <code value="cutaan"/>
-        <display value="Cutaan"/>
+        <code value="53"/>
+        <display value="CUTAAN"/>
       </coding>
     </route>
     <doseQuantity>
       <value value="1"/>
-      <unit value="zalf"/>
+      <unit value="EENHEID"/>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
+      <code value="211"/>
     </doseQuantity>
   </dosageInstruction>
 </MedicationDispense>
