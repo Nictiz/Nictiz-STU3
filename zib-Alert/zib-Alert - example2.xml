@@ -1,0 +1,63 @@
+<?xml-model href="http://hl7.org/fhir/STU3/flag.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Flag xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/flag.xsd">
+      <id value="HCIM-Alert-example-2"/>
+      <meta>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Alert"/>
+      </meta>
+      <text>
+            <status value="additional"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                  <table>
+                        <caption>Patient with id example</caption>
+                        <thead>
+                              <tr>
+                                    <th>AlertType</th>
+                                    <th>StartDateTime</th>
+                                    <th>AlertName</th>
+                                    <th>Condition reference</th>
+                              </tr>
+                        </thead>
+                        <tbody>
+                              <tr>
+                                    <td>Condition</td>
+                                    <td>2012-09-15</td>
+                                    <td>Patient currently pregnant</td>
+                                    <td>Reference to Condition resource</td>
+                              </tr>
+                        </tbody>
+                  </table>
+            </div>
+      </text>
+      <extension url="http://hl7.org/fhir/StructureDefinition/flag-detail">
+            <valueReference>
+                  <reference value="Condition/example"/>
+                  <display value="Pregnant"/>
+            </valueReference>
+      </extension>
+      <status value="active"/>
+      <category>
+            <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="75323-6"/>
+                  <display value="condition"/>
+            </coding>
+      </category>
+      <code>
+            <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="77386006"/>
+                  <display value="Pregnant (finding)"/>
+            </coding>
+            <text value="Patient currently pregnant"/>
+      </code>
+      <subject>
+            <reference value="Patient/example"/>
+      </subject>
+      <period>
+            <start value="2012-09-15T00:00:00+01:00"/>
+      </period>
+      <author>
+            <reference value="Practitioner/example"/>
+            <display value="Dr. H. Huis"/>
+      </author>
+</Flag>
