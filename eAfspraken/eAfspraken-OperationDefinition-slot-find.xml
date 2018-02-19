@@ -14,7 +14,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This operation fetches available free slots with optional parameters, such as date/time range, location, specialty.  The server determines which open slots to expose to the application for use in creating new appointments.  If neither a start or end date is given then the maximum period as defined by local business rules and starting from when the operation was transacted will be used.   The actors practitioner, organization and location further refine the search.   If more than one actor type is present, the response will contain slots with *all* of these actors (i.e, this is a logical &#39;AND&#39;).  if an actor type is repeated, the response will contain slots with *any* of these actors (i.e. this is a logical  &#39;OR&#39; and  does not drive a joint appointment with multiple practitioners. locations or organizations).  &#xA;&#xA; Note that all input parameters are simple types allowing either the &#39;GET&#39;  or the &#39;POST&#39; syntax to be used to initiate the interaction.  Examples of both are shown below. This operation is heavily influenced by the operation defined in the [US Argonaut project](https://argonautproject.github.io/scheduling/OperationDefinition-slot-prefetch.html)"/>
+  <description value="This operation fetches available free slots with optional parameters, such as date/time range, location, specialty.  The server determines which open slots to expose to the application for use in creating new appointments.  If neither a start or end date is given then the maximum period as defined by local business rules and starting from when the operation was transacted will be used.   The actors practitioner, organization and location further refine the search.   If more than one actor type is present, the response will contain slots with *all* of these actors (i.e, this is a logical &#39;AND&#39;).  if an actor type is repeated, the response will contain slots with *any* of these actors (i.e. this is a logical  &#39;OR&#39; and  does not drive a joint appointment with multiple practitioners. locations or organizations).  &#xA;&#xA; Note that all input parameters are simple types allowing either the &#39;GET&#39;  or the &#39;POST&#39; syntax to be used to initiate the interaction.  Examples of both are shown below. &#xA;&#xA; **This operation is heavily influenced by the operation defined in the [US Argonaut project](https://argonautproject.github.io/scheduling/OperationDefinition-slot-prefetch.html)**"/>
   <code value="find"/>
   <resource value="Slot"/>
   <system value="false"/>
@@ -23,7 +23,7 @@
   <parameter>
     <name value="start"/>
     <use value="in"/>
-    <min value="1"/>
+    <min value="0"/>
     <max value="1"/>
     <documentation value="The period of time that should be checked for free slots. If no start date is provided,  all available slots prior to the end date are in scope (subject to limits imposed by local business rules)."/>
     <type value="dateTime"/>
@@ -31,7 +31,7 @@
   <parameter>
     <name value="end"/>
     <use value="in"/>
-    <min value="1"/>
+    <min value="0"/>
     <max value="1"/>
     <documentation value="The period of time that should be checked for appointment availability. If no end date is provided, all available slots after the start date are in scope (subject to limits imposed by local business rules)."/>
     <type value="dateTime"/>
