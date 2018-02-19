@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<OperationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://hl7.org/fhir ../OneDrive%20-%20Firely/FHIR/Schemas/STU3/operationdefinition.xsd"
- xmlns="http://hl7.org/fhir"> 
-  <url value="http://nictiz.nl/fhir/OperationDefinition/eafspraken-slot-prefetch"/>
+<?xml-model href="http://hl7.org/fhir/STU3/operationdefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/operationdefinition.xsd">
+  <url value="http://nictiz.nl/fhir/OperationDefinition/eafspraken-slot-find"/>
   <name value="Slot Availability Operation"/>
   <status value="draft"/>
   <kind value="operation"/>
   <date value="2018-02-19"/>
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="This operation fetches available free slots with optional parameters, such as date/time range, location, specialty.  The server determines which open slots to expose to the application for use in creating new appointments.  If neither a start or end date is given then the maximum period as defined by local business rules and starting from when the operation was transacted will be used.   The actors practitioner, organization and location further refine the search.   If more than one actor type is present, the response will contain slots with *all* of these actors (i.e, this is a logical &#39;AND&#39;).  if an actor type is repeated, the response will contain slots with *any* of these actors (i.e. this is a logical  &#39;OR&#39; and  does not drive a joint appointment with multiple practitioners. locations or organizations).  &#xA;&#xA; Note that all input parameters are simple types allowing either the &#39;GET&#39;  or the &#39;POST&#39; syntax to be used to initiate the interaction.  Examples of both are shown below. This operation is heavily influenced by the operation defined in the [US Argonaut project](https://argonautproject.github.io/scheduling/OperationDefinition-slot-prefetch.html)"/>
   <code value="find"/>
   <resource value="Slot"/>
