@@ -4,7 +4,7 @@
     <url value="http://nictiz.nl/fhir/CapabilityStatement/gp-patientdata-servercapabilities"/>
     <version value="1.0"/>
     <name value="DutchGeneralPractitionerPatientDataServer"/>
-    <status value="active"/>
+    <status value="draft"/>
     <date value="2017-09-25"/>
     <publisher value="Nictiz"/>
     <contact>
