@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/capabilitystatement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/capabilitystatement.xsd">
-    <url value="http://nictiz.nl/fhir/CapabilityStatement/gp-patientsummary-servercapabilities"/>
+    <url value="http://nictiz.nl/fhir/CapabilityStatement/gp-patientdata-clientcapabilities"/>
     <version value="1.0"/>
-    <name value="DutchGeneralPractitionerPatientSummaryServer"/>
-    <status value="active"/>
+    <name value="DutchGeneralPractitionerPatientDataClient"/>
+    <status value="draft"/>
     <date value="2017-09-25"/>
     <publisher value="Nictiz"/>
     <contact>
@@ -68,7 +68,7 @@
         <reference value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
     </profile>
     <rest>
-        <mode value="server"/>
+        <mode value="client"/>
         <resource>
             <type value="Patient"/>
             <interaction>
