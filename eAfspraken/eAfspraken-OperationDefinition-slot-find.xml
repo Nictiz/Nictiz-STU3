@@ -41,32 +41,52 @@
     <use value="in"/>
     <min value="0"/>
     <max value="*"/>
-    <documentation value="Code for one or more practitioners"/>
-    <type value="CodeableConcept"/>
+    <documentation value="Identifier for one or more practitioners"/>
+    <type value="Identifier"/>
   </parameter>
   <parameter>
-    <name value="specialty"/>
+    <name value="specialty-agb"/>
     <use value="in"/>
     <min value="0"/>
     <max value="*"/>
-    <documentation value="Code for a certain specialty"/>
+    <documentation value="Code for a certain specialty defined by AGB"/>
     <type value="CodeableConcept"/>
+    <binding>
+      <strength value="extensible" />
+      <valueSetReference>
+        <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.7--20150401000000" />
+      </valueSetReference>
+    </binding>
+  </parameter>
+  <parameter>
+    <name value="specialty-uzi"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="Code for a certain specialty defined by UZI"/>
+    <type value="CodeableConcept"/>
+    <binding>     
+      <strength value="extensible" />
+      <valueSetReference>
+        <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.6--20150401000000" />
+      </valueSetReference>
+    </binding>    
   </parameter>
   <parameter>
     <name value="organization"/>
     <use value="in"/>
     <min value="0"/>
-    <max value="*"/>
-    <documentation value="The code for a specific organization"/>
-    <type value="CodeableConcept"/>
+    <max value="1"/>
+    <documentation value="Identifier for a specific organization"/>
+    <type value="Identifier"/>
   </parameter>
   <parameter>
     <name value="location"/>
     <use value="in"/>
     <min value="0"/>
     <max value="*"/>
-    <documentation value="The location code of specific health care provider"/>
-    <type value="CodeableConcept"/>
+    <documentation value="The location indentifier of a specific health care provider location"/>
+    <type value="Identifier"/>
   </parameter>
   <parameter>
     <name value="return"/>
