@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Slot xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:/C:/Users/Marten/OneDrive%20-%20Firely/FHIR/Schemas/STU3/slot.xsd">
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/eAfspraken-Slot"/>
+  </meta>
  <specialty>
    <coding>
      <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
