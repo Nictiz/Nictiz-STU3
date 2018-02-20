@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Slot xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:/C:/Users/Marten/OneDrive%20-%20Firely/FHIR/Schemas/STU3/slot.xsd">
+ <specialty>
+   <coding>
+     <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+     <code value="0320"/>
+     <display value="Medisch specialisten, cardiologie"></display>
+   </coding>
+ </specialty>
+  <appointmentType>
+    <coding>
+      <system value="http://hl7.org/fhir/v3/ActCode"/>
+      <code value="AMB"></code>
+      <display value="Ambulatory"/>
+    </coding>
+  </appointmentType>
+  <schedule>
+    <identifier>
+      <system value="http//somehospital.org/fhir/schedules"/>
+      <value value="4789473982"/>
+    </identifier>
+  </schedule>
+  <status value="free"/>
+  <start value="2018-02-21T12:00:00+01:00"/>
+  <end value="2018-02-21T12:30:00+01:00"/>
+</Slot>
