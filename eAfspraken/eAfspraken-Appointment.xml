@@ -33,7 +33,10 @@
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment"/>
     <derivation value="constraint"/>
     <differential>
-        <element id="Appointment.extension">
+      <element id="Appointment">
+        <path value="Appointment"/>
+      </element>
+      <element id="Appointment.extension">
             <path value="Appointment.extension"/>
             <slicing>
                 <discriminator>
@@ -182,6 +185,13 @@
             <short value=" ContactType"/>
             <definition value="The type of contact."/>
             <alias value="ContactType"/>
+            <binding>
+              <strength value="extensible" />
+              <description value="ContactTypeCodelijst" />
+              <valueSetReference>
+                <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1--20171231000000" />
+              </valueSetReference>
+            </binding>
             <mapping>
                 <identity value="art-decor-eafspraken"/>
                 <map value=" eafspraken-dataelement-24"/>
