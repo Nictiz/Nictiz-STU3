@@ -111,6 +111,13 @@
                 <map value="NL-CM:10.1.11"/>
             </mapping>
         </element>
+        <element id="DeviceUseStatement.device">
+          <path value="DeviceUseStatement.device"/>
+          <type>
+            <code value="Reference"/>
+            <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
+          </type>
+        </element>
         <element id="DeviceUseStatement.indication">
             <path value="DeviceUseStatement.indication"/>
             <short value="Concept - reference to a terminology or just text"/>
@@ -173,14 +180,7 @@
         <element id="DeviceUseStatement.bodySite.coding.code">
             <path value="DeviceUseStatement.bodySite.coding.code"/>
             <min value="1"/>
-        </element>
-        <element id="DeviceUseStatement.device">
-            <path value="DeviceUseStatement.device"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct"/>
-            </type>
-        </element>
+        </element>        
         <element id="DeviceUseStatement.note">
             <path value="DeviceUseStatement.note"/>
             <short value="Explanation"/>
