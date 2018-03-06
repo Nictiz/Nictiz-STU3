@@ -144,6 +144,13 @@
                 </valueSetReference>
             </binding>
         </element>
+        <element id="Immunization.encounter">
+            <path value="Immunization.encounter" />
+            <type>
+                <code value="Reference" />
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+            </type>
+        </element>
         <element id="Immunization.date">
             <path value="Immunization.date"/>
             <short value="VaccinationDate"/>
@@ -173,6 +180,20 @@
                 <map value="NL-CM:11.1.4"/>
             </mapping>
         </element>
+        <element id="Immunization.practitioner.actor">
+            <path value="Immunization.practitioner.actor" />
+            <short value="Administrator" />
+            <definition value="The healthcare provider and/or organization where or by whom the immunization was done." />
+            <alias value="Toediener" />
+            <type>
+                <code value="Reference" />
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+            </type>
+            <mapping>
+                <identity value="hcim-vaccination-v1.2-2015EN" />
+                <map value="NL-CM:11.1.6" />
+            </mapping>
+        </element>
         <element id="Immunization.note">
             <path value="Immunization.note"/>
             <short value="Explanation"/>
@@ -182,34 +203,6 @@
                 <identity value="hcim-vaccination-v1.2-2015EN"/>
                 <map value="NL-CM:11.1.7"/>
             </mapping>
-        </element>
-        <element id="Immunization.performer">
-            <path value="Immunization.performer"/>
-            <short value="Administrator"/>
-            <definition value="The healthcare provider and/or organization where or by whom the immunization was done."/>
-            <alias value="Toediener"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-            </type>
-            <mapping>
-                <identity value="hcim-vaccination-v1.2-2015EN"/>
-                <map value="NL-CM:11.1.6"/>
-            </mapping>
-        </element>
-        <element id="Immunization.requester">
-            <path value="Immunization.requester"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-            </type>
-        </element>
-        <element id="Immunization.encounter">
-            <path value="Immunization.encounter"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
-            </type>
         </element>
     </differential>
 </StructureDefinition>
