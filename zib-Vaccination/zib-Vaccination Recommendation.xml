@@ -192,18 +192,14 @@
             <path value="ImmunizationRecommendation.recommendation.supportingImmunization"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"/>
             </type>
         </element>
         <element id="ImmunizationRecommendation.recommendation.supportingPatientInformation">
             <path value="ImmunizationRecommendation.recommendation.supportingPatientInformation"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-            </type>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"/>
             </type>
         </element>
     </differential>
