@@ -189,6 +189,7 @@
         </element>
         <element id="Immunization.practitioner">
             <path value="Immunization.practitioner" />
+            <min value="0"/>
         </element>
         <element id="Immunization.practitioner.actor">
             <path value="Immunization.practitioner.actor" />
