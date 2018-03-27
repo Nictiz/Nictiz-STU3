@@ -144,6 +144,13 @@
                 </valueSetReference>
             </binding>
         </element>
+        <element id="Immunization.patient">
+            <path value="Immunization.patient" />
+            <type>
+                <code value="Reference" />
+                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+            </type>
+        </element>
         <element id="Immunization.encounter">
             <path value="Immunization.encounter" />
             <type>
@@ -179,6 +186,9 @@
                 <identity value="hcim-vaccination-v1.2-2015EN"/>
                 <map value="NL-CM:11.1.4"/>
             </mapping>
+        </element>
+        <element id="Immunization.practitioner">
+            <path value="Immunization.practitioner" />
         </element>
         <element id="Immunization.practitioner.actor">
             <path value="Immunization.practitioner.actor" />
