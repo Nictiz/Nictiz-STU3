@@ -177,7 +177,7 @@
             </slicing>
         </element>
         <element id="Address.use.extension:AD_use">
-            <path value="Address.extension"/>
+            <path value="Address.use.extension"/>
             <sliceName value="AD_use"/>
             <short value="Further define the address use with the exact HCIM code. "/>
             <definition value="Further define the address use with the exact HCIM code. Mostly relevant to distinguish between different types of temporasry addresses."/>
