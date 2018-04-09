@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://nictiz.nl/fhir/StructureDefinition/bloodGlucose" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/bloodGlucoseSelfMeasurement" />
   <version value="1.0" />
   <name value="BloodGlucose" />
   <title value="Blood Glucose" />
@@ -14,7 +14,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profiles represents a single blood glucose measurement. This includes a general measurements, as well as the individual measurements of the seven-point scale that is used for self-measuring blood glucose (SMBG). " />
+  <description value="This profiles represents a single blood glucose self measurement based on the seven-point scale (SMBG)." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -122,7 +122,7 @@
       <path value="Observation.code.coding.display" />
       <fixedString value="Glucose [moles/volume] in capillary blood by Glucometer -- 2 hours post meal" />
     </element>
-    <element id="Observation.value[x]:valueQuantity">
+    <element id="Observation.valueQuantity:valueQuantity">
       <path value="Observation.valueQuantity" />
       <sliceName value="valueQuantity" />
       <type>
