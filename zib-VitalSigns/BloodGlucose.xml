@@ -2,8 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://nictiz.nl/fhir/StructureDefinition/bloodGlucoseSelfMeasurement" />
   <version value="1.0" />
-  <name value="BloodGlucose" />
-  <title value="Blood Glucose" />
+  <name value="BloodGlucoseSelfMeasurement" />
+  <title value="Blood Glucose Self Measurement" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
