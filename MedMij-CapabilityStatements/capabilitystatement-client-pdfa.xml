@@ -35,7 +35,10 @@
     <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest" />
   </profile>
   <profile>
-    <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentReference" />
+    <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference" />
+  </profile>
+  <profile>
+    <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference" />
   </profile>
   <profile>
     <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List" />
