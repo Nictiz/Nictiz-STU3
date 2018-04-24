@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2017-12-06T10:52:06.326+01:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/SourceOrganization" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/MedicationOverview-SourceOrganization" />
   <name value="Source Organization" />
   <title value="List Source Organization" />
   <status value="draft" />
