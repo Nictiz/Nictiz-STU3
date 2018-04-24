@@ -1,342 +1,342 @@
-﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-    <id value="e82adf20-9b15-455a-9f13-1a0bb2d20b8b"/>
-    <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2017-05-31T16:09:30.195+02:00"/>
-    </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice"/>
-    <version value="1.0"/>
-    <name value="ZIB-NutritionAdvice"/>
-    <title value="HCIM NutritionAdvice"/>
-    <status value="active"/>
-    <date value="2017-02-13T15:20:12.6745603+01:00"/>
-    <publisher value="Nictiz"/>
-    <contact>
-        <name value="Nictiz"/>
-        <telecom>
-            <system value="email"/>
-            <value value="info@nictiz.nl"/>
-            <use value="work"/>
-        </telecom>
-    </contact>
-    <description value="NutritionAdvice as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie."/>
-    <copyright value="CC0"/>
-    <fhirVersion value="3.0.1"/>
-    <mapping>
-        <identity value="hcim-nutritionadvice-v1.0-2015EN"/>
-        <uri value="https://zibs.nl/wiki/NutritionAdvice-v1.0(2015EN)"/>
-        <name value="HCIM NutritionAdvice-v1.0(2015EN)"/>
-    </mapping>
-    <mapping>
-        <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-        <uri value="https://zibs.nl/wiki/NursingIntervention-v1.0(2015EN)"/>
-        <name value="HCIM NursingIntervention-v1.0(2015EN)"/>
-    </mapping>
-    <kind value="resource"/>
-    <abstract value="false"/>
-    <type value="NutritionOrder"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/NutritionOrder"/>
-    <derivation value="constraint"/>
-    <differential>
-        <element id="NutritionOrder">
-            <path value="NutritionOrder"/>
-            <short value="NutritionOrder"/>
-            <alias value="Voedingsadvies"/>
-            <mapping>
-                <identity value="hcim-nutritionadvice-v1.0-2015EN"/>
-                <map value="NL-CM:7.11.1"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.extension">
-            <path value="NutritionOrder.extension"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="url"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-        </element>
-        <element id="NutritionOrder.extension:Explanation">
-            <path value="NutritionOrder.extension"/>
-            <sliceName value="Explanation"/>
-            <short value="Explanation"/>
-            <definition value="An explanation of the dietary recommendations."/>
-            <alias value="Toelichting"/>
-            <max value="1"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation"/>
-            </type>
-            <mapping>
-                <identity value="hcim-nutritionadvice-v1.0-2015EN"/>
-                <map value="NL-CM:7.11.4"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.patient">
-            <path value="NutritionOrder.patient"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-            </type>
-        </element>
-        <element id="NutritionOrder.encounter">
-            <path value="NutritionOrder.encounter"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact"/>
-            </type>
-        </element>
-        <element id="NutritionOrder.orderer">
-            <path value="NutritionOrder.orderer"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
-            </type>
-        </element>
-        <element id="NutritionOrder.allergyIntolerance">
-            <path value="NutritionOrder.allergyIntolerance"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"/>
-            </type>
-        </element>
-        <element id="NutritionOrder.oralDiet.type.text">
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-                <valueBoolean value="true"/>
-            </extension>
-            <path value="NutritionOrder.oralDiet.type.text"/>
-            <short value="DietType"/>
-            <definition value="Description of the type of diet."/>
-            <alias value="DieetType"/>
-            <mapping>
-                <identity value="hcim-nutritionadvice-v1.0-2015EN"/>
-                <map value="NL-CM:7.11.2"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.oralDiet.schedule">
-            <path value="NutritionOrder.oralDiet.schedule"/>
-            <definition value="The time period and frequency at which the diet should be given."/>
-        </element>
-        <element id="NutritionOrder.oralDiet.schedule.repeat">
-            <path value="NutritionOrder.oralDiet.schedule.repeat"/>
-            <definition value="A set of rules that describe when the event should occur."/>
-        </element>
-        <element id="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod">
-            <path value="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod"/>
-            <type>
-                <code value="Period"/>
-            </type>
-        </element>
-        <element id="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod.start">
-            <path value="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod.start"/>
-            <short value="ProcedureStartDateTime"/>
-            <definition value="The start date (and if possible start time) of the procedure. The concept offers the option to indicate the start of the period of a series of repeating procedures."/>
-            <alias value="ActieStartDatumTijd"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.11"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod.end">
-            <path value="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod.end"/>
-            <short value="ProcedureEndDateTime"/>
-            <definition value="The end date (and if possible end time) of the procedure. The concept offers the option to indicate the end of the period of a series of repeating procedures"/>
-            <alias value="ActieEindDatumTijd"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.12"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.oralDiet.schedule.repeat.frequency">
-            <path value="NutritionOrder.oralDiet.schedule.repeat.frequency"/>
-            <short value="Frequency"/>
-            <definition value="The frequency describes how often and in which period certain procedures are carried out, e.g. 3x a day."/>
-            <alias value="Frequentie"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.4"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.oralDiet.schedule.repeat.period">
-            <path value="NutritionOrder.oralDiet.schedule.repeat.period"/>
-            <short value="Interval"/>
-            <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &quot;3 times per day&quot;, 3 would be the frequency and &quot;1 day&quot; would be the period.&#xD;&#xA;&#xD;&#xA;Interval indicates the time between planned procedures.&#xD;&#xA;When entering an interval, the focus is on the time between the consecutive procedures, such as in the treatment of a wound, for example. The exact times are of lesser importance."/>
-            <alias value="Activiteit"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.10"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.oralDiet.texture.modifier.text">
-            <path value="NutritionOrder.oralDiet.texture.modifier.text"/>
-            <short value="Consistency"/>
-            <comment value="Because of a granularity difference between the ZIB DieataryRecommendations and NutritionOrder, the ZIB concept Consistency is mapped to the elements .oralDiet.texture.modifier.text, .oralDiet.texture.foodType.text  and .oralDiet.fluidConsistencyType.text."/>
-            <alias value="Consistentie"/>
-            <mapping>
-                <identity value="hcim-nutritionadvice-v1.0-2015EN"/>
-                <map value="NL-CM:7.11.3"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.oralDiet.texture.foodType.text">
-            <path value="NutritionOrder.oralDiet.texture.foodType.text"/>
-            <short value="Consistency"/>
-            <comment value="Because of a granularity difference between the ZIB DieataryRecommendations and NutritionOrder, the ZIB concept Consistency is mapped to the elements .oralDiet.texture.modifier.text, .oralDiet.texture.foodType.text  and .oralDiet.fluidConsistencyType.text."/>
-            <alias value="Consistentie"/>
-            <mapping>
-                <identity value="hcim-nutritionadvice-v1.0-2015EN"/>
-                <map value="NL-CM:7.11.3"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.oralDiet.fluidConsistencyType.text">
-            <path value="NutritionOrder.oralDiet.fluidConsistencyType.text"/>
-            <short value="Consistency"/>
-            <definition value="A description of the consistency of the food."/>
-            <comment value="Because of a granularity difference between the ZIB DieataryRecommendations and NutritionOrder, the ZIB concept Consistency is mapped to the elements .oralDiet.texture.modifier.text, .oralDiet.texture.foodType.text  and .oralDiet.fluidConsistencyType.text."/>
-            <alias value="Consistentie"/>
-            <mapping>
-                <identity value="hcim-nutritionadvice-v1.0-2015EN"/>
-                <map value="NL-CM:7.11.3"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.oralDiet.instruction">
-            <path value="NutritionOrder.oralDiet.instruction"/>
-            <short value="Activity"/>
-            <definition value="The description of nursing procedures carried out in the care for a patient. A nursing intervention consists of a set of patient-related nursing procedures."/>
-            <alias value="Activiteit"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.10"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.supplement.schedule">
-            <path value="NutritionOrder.supplement.schedule"/>
-            <definition value="The time period and frequency at which the diet should be given."/>
-        </element>
-        <element id="NutritionOrder.supplement.schedule.repeat">
-            <path value="NutritionOrder.supplement.schedule.repeat"/>
-            <definition value="A set of rules that describe when the event should occur."/>
-        </element>
-        <element id="NutritionOrder.supplement.schedule.repeat.boundsPeriod">
-            <path value="NutritionOrder.supplement.schedule.repeat.boundsPeriod"/>
-            <type>
-                <code value="Period"/>
-            </type>
-        </element>
-        <element id="NutritionOrder.supplement.schedule.repeat.boundsPeriod.start">
-            <path value="NutritionOrder.supplement.schedule.repeat.boundsPeriod.start"/>
-            <short value="ProcedureStartDateTime"/>
-            <definition value="The start date (and if possible start time) of the procedure. The concept offers the option to indicate the start of the period of a series of repeating procedures."/>
-            <alias value="ActieStartDatumTijd"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.11"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.supplement.schedule.repeat.boundsPeriod.end">
-            <path value="NutritionOrder.supplement.schedule.repeat.boundsPeriod.end"/>
-            <short value="ProcedureEndDateTime"/>
-            <definition value="The end date (and if possible end time) of the procedure. The concept offers the option to indicate the end of the period of a series of repeating procedures"/>
-            <alias value="ActieEindDatumTijd"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.12"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.supplement.schedule.repeat.frequency">
-            <path value="NutritionOrder.supplement.schedule.repeat.frequency"/>
-            <short value="Frequency"/>
-            <definition value="The frequency describes how often and in which period certain procedures are carried out, e.g. 3x a day."/>
-            <alias value="Frequentie"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.4"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.supplement.schedule.repeat.period">
-            <path value="NutritionOrder.supplement.schedule.repeat.period"/>
-            <short value="Interval"/>
-            <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &quot;3 times per day&quot;, 3 would be the frequency and &quot;1 day&quot; would be the period.&#xD;&#xA;&#xD;&#xA;Interval indicates the time between planned procedures.&#xD;&#xA;When entering an interval, the focus is on the time between the consecutive procedures, such as in the treatment of a wound, for example. The exact times are of lesser importance."/>
-            <alias value="Activiteit"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.10"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.supplement.instruction">
-            <path value="NutritionOrder.supplement.instruction"/>
-            <short value="Activity"/>
-            <definition value="The description of nursing procedures carried out in the care for a patient. A nursing intervention consists of a set of patient-related nursing procedures."/>
-            <alias value="Activiteit"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.10"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.enteralFormula.administration.schedule">
-            <path value="NutritionOrder.enteralFormula.administration.schedule"/>
-            <definition value="The time period and frequency at which the diet should be given."/>
-        </element>
-        <element id="NutritionOrder.enteralFormula.administration.schedule.repeat">
-            <path value="NutritionOrder.enteralFormula.administration.schedule.repeat"/>
-            <definition value="A set of rules that describe when the event should occur."/>
-        </element>
-        <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod">
-            <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod"/>
-            <type>
-                <code value="Period"/>
-            </type>
-        </element>
-        <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod.start">
-            <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod.start"/>
-            <short value="ProcedureStartDateTime"/>
-            <definition value="The start date (and if possible start time) of the procedure. The concept offers the option to indicate the start of the period of a series of repeating procedures."/>
-            <alias value="ActieStartDatumTijd"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.11"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod.end">
-            <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod.end"/>
-            <short value="ProcedureEndDateTime"/>
-            <definition value="The end date (and if possible end time) of the procedure. The concept offers the option to indicate the end of the period of a series of repeating procedures"/>
-            <alias value="ActieEindDatumTijd"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.12"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.frequency">
-            <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.frequency"/>
-            <short value="Frequency"/>
-            <definition value="The frequency describes how often and in which period certain procedures are carried out, e.g. 3x a day."/>
-            <alias value="Frequentie"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.4"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.period">
-            <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.period"/>
-            <short value="Interval"/>
-            <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &quot;3 times per day&quot;, 3 would be the frequency and &quot;1 day&quot; would be the period.&#xD;&#xA;&#xD;&#xA;Interval indicates the time between planned procedures.&#xD;&#xA;When entering an interval, the focus is on the time between the consecutive procedures, such as in the treatment of a wound, for example. The exact times are of lesser importance."/>
-            <alias value="Activiteit"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.10"/>
-            </mapping>
-        </element>
-        <element id="NutritionOrder.enteralFormula.administrationInstruction">
-            <path value="NutritionOrder.enteralFormula.administrationInstruction"/>
-            <short value="Activity"/>
-            <definition value="The description of nursing procedures carried out in the care for a patient. A nursing intervention consists of a set of patient-related nursing procedures."/>
-            <alias value="Activiteit"/>
-            <mapping>
-                <identity value="hcim-nursingintervention-v1.0-2015EN"/>
-                <map value="NL-CM:14.2.10"/>
-            </mapping>
-        </element>
-    </differential>
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="zib-NutritionAdvice" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2017-05-31T16:09:30.195+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
+  <version value="1.0" />
+  <name value="ZIB-NutritionAdvice" />
+  <title value="HCIM NutritionAdvice" />
+  <status value="active" />
+  <date value="2017-02-13T15:20:12.6745603+01:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="NutritionAdvice as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 1.0.&#xD;&#xA;The ZIB Voedingsadvies references to another ZIB named VerpleegkundigeInterventie. This profile on NutritionOrder also contains concenpts of the ZIB VerpleegkundigeInterventie." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="hcim-nutritionadvice-v1.0-2015EN" />
+    <uri value="https://zibs.nl/wiki/NutritionAdvice-v1.0(2015EN)" />
+    <name value="HCIM NutritionAdvice-v1.0(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-nursingintervention-v1.0-2015EN" />
+    <uri value="https://zibs.nl/wiki/NursingIntervention-v1.0(2015EN)" />
+    <name value="HCIM NursingIntervention-v1.0(2015EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="NutritionOrder" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="NutritionOrder">
+      <path value="NutritionOrder" />
+      <short value="NutritionOrder" />
+      <alias value="Voedingsadvies" />
+      <mapping>
+        <identity value="hcim-nutritionadvice-v1.0-2015EN" />
+        <map value="NL-CM:7.11.1" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.extension">
+      <path value="NutritionOrder.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="NutritionOrder.extension:Explanation">
+      <path value="NutritionOrder.extension" />
+      <sliceName value="Explanation" />
+      <short value="Explanation" />
+      <definition value="An explanation of the dietary recommendations." />
+      <alias value="Toelichting" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation" />
+      </type>
+      <mapping>
+        <identity value="hcim-nutritionadvice-v1.0-2015EN" />
+        <map value="NL-CM:7.11.4" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.patient">
+      <path value="NutritionOrder.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element id="NutritionOrder.encounter">
+      <path value="NutritionOrder.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Contact" />
+      </type>
+    </element>
+    <element id="NutritionOrder.orderer">
+      <path value="NutritionOrder.orderer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+    </element>
+    <element id="NutritionOrder.allergyIntolerance">
+      <path value="NutritionOrder.allergyIntolerance" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
+      </type>
+    </element>
+    <element id="NutritionOrder.oralDiet.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="NutritionOrder.oralDiet.type.text" />
+      <short value="DietType" />
+      <definition value="Description of the type of diet." />
+      <alias value="DieetType" />
+      <mapping>
+        <identity value="hcim-nutritionadvice-v1.0-2015EN" />
+        <map value="NL-CM:7.11.2" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.oralDiet.schedule">
+      <path value="NutritionOrder.oralDiet.schedule" />
+      <definition value="The time period and frequency at which the diet should be given." />
+    </element>
+    <element id="NutritionOrder.oralDiet.schedule.repeat">
+      <path value="NutritionOrder.oralDiet.schedule.repeat" />
+      <definition value="A set of rules that describe when the event should occur." />
+    </element>
+    <element id="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod">
+      <path value="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod.start">
+      <path value="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod.start" />
+      <short value="ProcedureStartDateTime" />
+      <definition value="The start date (and if possible start time) of the procedure. The concept offers the option to indicate the start of the period of a series of repeating procedures." />
+      <alias value="ActieStartDatumTijd" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.11" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod.end">
+      <path value="NutritionOrder.oralDiet.schedule.repeat.boundsPeriod.end" />
+      <short value="ProcedureEndDateTime" />
+      <definition value="The end date (and if possible end time) of the procedure. The concept offers the option to indicate the end of the period of a series of repeating procedures" />
+      <alias value="ActieEindDatumTijd" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.12" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.oralDiet.schedule.repeat.frequency">
+      <path value="NutritionOrder.oralDiet.schedule.repeat.frequency" />
+      <short value="Frequency" />
+      <definition value="The frequency describes how often and in which period certain procedures are carried out, e.g. 3x a day." />
+      <alias value="Frequentie" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.4" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.oralDiet.schedule.repeat.period">
+      <path value="NutritionOrder.oralDiet.schedule.repeat.period" />
+      <short value="Interval" />
+      <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &quot;3 times per day&quot;, 3 would be the frequency and &quot;1 day&quot; would be the period.&#xD;&#xA;&#xD;&#xA;Interval indicates the time between planned procedures.&#xD;&#xA;When entering an interval, the focus is on the time between the consecutive procedures, such as in the treatment of a wound, for example. The exact times are of lesser importance." />
+      <alias value="Activiteit" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.10" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.oralDiet.texture.modifier.text">
+      <path value="NutritionOrder.oralDiet.texture.modifier.text" />
+      <short value="Consistency" />
+      <comment value="Because of a granularity difference between the ZIB DieataryRecommendations and NutritionOrder, the ZIB concept Consistency is mapped to the elements .oralDiet.texture.modifier.text, .oralDiet.texture.foodType.text  and .oralDiet.fluidConsistencyType.text." />
+      <alias value="Consistentie" />
+      <mapping>
+        <identity value="hcim-nutritionadvice-v1.0-2015EN" />
+        <map value="NL-CM:7.11.3" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.oralDiet.texture.foodType.text">
+      <path value="NutritionOrder.oralDiet.texture.foodType.text" />
+      <short value="Consistency" />
+      <comment value="Because of a granularity difference between the ZIB DieataryRecommendations and NutritionOrder, the ZIB concept Consistency is mapped to the elements .oralDiet.texture.modifier.text, .oralDiet.texture.foodType.text  and .oralDiet.fluidConsistencyType.text." />
+      <alias value="Consistentie" />
+      <mapping>
+        <identity value="hcim-nutritionadvice-v1.0-2015EN" />
+        <map value="NL-CM:7.11.3" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.oralDiet.fluidConsistencyType.text">
+      <path value="NutritionOrder.oralDiet.fluidConsistencyType.text" />
+      <short value="Consistency" />
+      <definition value="A description of the consistency of the food." />
+      <comment value="Because of a granularity difference between the ZIB DieataryRecommendations and NutritionOrder, the ZIB concept Consistency is mapped to the elements .oralDiet.texture.modifier.text, .oralDiet.texture.foodType.text  and .oralDiet.fluidConsistencyType.text." />
+      <alias value="Consistentie" />
+      <mapping>
+        <identity value="hcim-nutritionadvice-v1.0-2015EN" />
+        <map value="NL-CM:7.11.3" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.oralDiet.instruction">
+      <path value="NutritionOrder.oralDiet.instruction" />
+      <short value="Activity" />
+      <definition value="The description of nursing procedures carried out in the care for a patient. A nursing intervention consists of a set of patient-related nursing procedures." />
+      <alias value="Activiteit" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.10" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.supplement.schedule">
+      <path value="NutritionOrder.supplement.schedule" />
+      <definition value="The time period and frequency at which the diet should be given." />
+    </element>
+    <element id="NutritionOrder.supplement.schedule.repeat">
+      <path value="NutritionOrder.supplement.schedule.repeat" />
+      <definition value="A set of rules that describe when the event should occur." />
+    </element>
+    <element id="NutritionOrder.supplement.schedule.repeat.boundsPeriod">
+      <path value="NutritionOrder.supplement.schedule.repeat.boundsPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="NutritionOrder.supplement.schedule.repeat.boundsPeriod.start">
+      <path value="NutritionOrder.supplement.schedule.repeat.boundsPeriod.start" />
+      <short value="ProcedureStartDateTime" />
+      <definition value="The start date (and if possible start time) of the procedure. The concept offers the option to indicate the start of the period of a series of repeating procedures." />
+      <alias value="ActieStartDatumTijd" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.11" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.supplement.schedule.repeat.boundsPeriod.end">
+      <path value="NutritionOrder.supplement.schedule.repeat.boundsPeriod.end" />
+      <short value="ProcedureEndDateTime" />
+      <definition value="The end date (and if possible end time) of the procedure. The concept offers the option to indicate the end of the period of a series of repeating procedures" />
+      <alias value="ActieEindDatumTijd" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.12" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.supplement.schedule.repeat.frequency">
+      <path value="NutritionOrder.supplement.schedule.repeat.frequency" />
+      <short value="Frequency" />
+      <definition value="The frequency describes how often and in which period certain procedures are carried out, e.g. 3x a day." />
+      <alias value="Frequentie" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.4" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.supplement.schedule.repeat.period">
+      <path value="NutritionOrder.supplement.schedule.repeat.period" />
+      <short value="Interval" />
+      <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &quot;3 times per day&quot;, 3 would be the frequency and &quot;1 day&quot; would be the period.&#xD;&#xA;&#xD;&#xA;Interval indicates the time between planned procedures.&#xD;&#xA;When entering an interval, the focus is on the time between the consecutive procedures, such as in the treatment of a wound, for example. The exact times are of lesser importance." />
+      <alias value="Activiteit" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.10" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.supplement.instruction">
+      <path value="NutritionOrder.supplement.instruction" />
+      <short value="Activity" />
+      <definition value="The description of nursing procedures carried out in the care for a patient. A nursing intervention consists of a set of patient-related nursing procedures." />
+      <alias value="Activiteit" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.10" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.enteralFormula.administration.schedule">
+      <path value="NutritionOrder.enteralFormula.administration.schedule" />
+      <definition value="The time period and frequency at which the diet should be given." />
+    </element>
+    <element id="NutritionOrder.enteralFormula.administration.schedule.repeat">
+      <path value="NutritionOrder.enteralFormula.administration.schedule.repeat" />
+      <definition value="A set of rules that describe when the event should occur." />
+    </element>
+    <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod">
+      <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod.start">
+      <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod.start" />
+      <short value="ProcedureStartDateTime" />
+      <definition value="The start date (and if possible start time) of the procedure. The concept offers the option to indicate the start of the period of a series of repeating procedures." />
+      <alias value="ActieStartDatumTijd" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.11" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod.end">
+      <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.boundsPeriod.end" />
+      <short value="ProcedureEndDateTime" />
+      <definition value="The end date (and if possible end time) of the procedure. The concept offers the option to indicate the end of the period of a series of repeating procedures" />
+      <alias value="ActieEindDatumTijd" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.12" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.frequency">
+      <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.frequency" />
+      <short value="Frequency" />
+      <definition value="The frequency describes how often and in which period certain procedures are carried out, e.g. 3x a day." />
+      <alias value="Frequentie" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.4" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.enteralFormula.administration.schedule.repeat.period">
+      <path value="NutritionOrder.enteralFormula.administration.schedule.repeat.period" />
+      <short value="Interval" />
+      <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &quot;3 times per day&quot;, 3 would be the frequency and &quot;1 day&quot; would be the period.&#xD;&#xA;&#xD;&#xA;Interval indicates the time between planned procedures.&#xD;&#xA;When entering an interval, the focus is on the time between the consecutive procedures, such as in the treatment of a wound, for example. The exact times are of lesser importance." />
+      <alias value="Activiteit" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.10" />
+      </mapping>
+    </element>
+    <element id="NutritionOrder.enteralFormula.administrationInstruction">
+      <path value="NutritionOrder.enteralFormula.administrationInstruction" />
+      <short value="Activity" />
+      <definition value="The description of nursing procedures carried out in the care for a patient. A nursing intervention consists of a set of patient-related nursing procedures." />
+      <alias value="Activiteit" />
+      <mapping>
+        <identity value="hcim-nursingintervention-v1.0-2015EN" />
+        <map value="NL-CM:14.2.10" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>

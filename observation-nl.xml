@@ -1,12 +1,12 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-  <id value="741beab0-4411-45f9-ba43-ee8998a4be78" />
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="observation-nl" />
   <meta>
     <versionId value="2" />
     <lastUpdated value="2017-02-20T14:57:12.35+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/observation-nl" />
-  <version value="1.0"/>
+  <version value="1.0" />
   <name value="observation-nl" />
   <title value="observation-nl" />
   <status value="draft" />
@@ -26,7 +26,7 @@
   <abstract value="false" />
   <type value="Observation" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="Observation">
       <path value="Observation" />
@@ -47,7 +47,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
     </element>
     <element id="Observation.context">

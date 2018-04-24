@@ -1,12 +1,12 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-  <id value="774323d0-7263-4d72-85cd-feeb4ff92937" />
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="Spirometer-Observation-PEF" />
   <meta>
     <versionId value="2" />
     <lastUpdated value="2017-01-31T15:52:38.235+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Observation-PEF" />
-  <version value="1.0"/>
+  <version value="1.0" />
   <name value="Spirometer-Observation-PEF" />
   <title value="Spirometer Observation PEF" />
   <status value="draft" />
@@ -26,7 +26,7 @@
   <abstract value="false" />
   <type value="Observation" />
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/observation-nl" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="Observation">
       <path value="Observation" />

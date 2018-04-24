@@ -1,5 +1,6 @@
-﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="zib-Appointment" />
   <meta>
     <lastUpdated value="2017-09-29T15:57:39.464+02:00" />
   </meta>
@@ -42,7 +43,7 @@
   <derivation value="constraint" />
   <differential>
     <element id="Appointment">
-      <path value="Appointment"/>
+      <path value="Appointment" />
     </element>
     <element id="Appointment.status.extension">
       <path value="Appointment.status.extension" />
@@ -78,7 +79,7 @@
         <description value="The status of the order." />
         <valueSetReference>
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.16.1.2--20150401000000" />
-          <display value="OrderStatusCodelijst"/> 
+          <display value="OrderStatusCodelijst" />
         </valueSetReference>
       </binding>
     </element>
@@ -118,7 +119,7 @@
     <element id="Appointment.start">
       <path value="Appointment.start" />
       <short value="StartDate" />
-      <definition value="Date/Time that the appointment is to take place."/> 
+      <definition value="Date/Time that the appointment is to take place." />
       <alias value="BeginDatum" />
       <mapping>
         <identity value="hcim-plannedcareactivityfortransfer-v1.2.1-2015EN" />
@@ -127,7 +128,7 @@
     </element>
     <element id="Appointment.end">
       <path value="Appointment.end" />
-      <short value="EndDate" />      
+      <short value="EndDate" />
       <alias value="EindDatum" />
       <mapping>
         <identity value="hcim-plannedcareactivityfortransfer-v1.2.1-2015EN" />

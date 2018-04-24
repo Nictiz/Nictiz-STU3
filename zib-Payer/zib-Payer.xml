@@ -1,234 +1,233 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-    <id value="3ccd3af5-98cd-4e9d-806e-7dde33f64cbb"/>
-    <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2017-02-22T10:32:09.079+00:00"/>
-    </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer"/>
-    <version value="1.0"/>
-    <name value="ZIB-Payer"/>
-    <title value="HCIM Payer"/>
-    <status value="active"/>
-    <date value="2017-01-16T17:02:59.6109232+01:00"/>
-    <publisher value="Nictiz"/>
-    <contact>
-        <name value="Nictiz"/>
-        <telecom>
-            <system value="email"/>
-            <value value="info@nictiz.nl"/>
-            <use value="work"/>
-        </telecom>
-    </contact>
-    <description value="This profile is based the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) nl.zorg.Payer"/>
-    <copyright value="CC0"/>
-    <fhirVersion value="3.0.1"/>
-    <mapping>
-        <identity value="hcim-payer-v1.2-2015EN"/>
-        <uri value="https://zibs.nl/wiki/Payer-v1.2(2015EN)"/>
-        <name value="HCIM Payer-v1.2(2015EN)"/>
-    </mapping>
-    <kind value="resource"/>
-    <abstract value="false"/>
-    <type value="Coverage"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
-    <derivation value="constraint"/>
-    <differential>
-        <element id="Coverage">
-            <path value="Coverage"/>
-            <short value="Coverage"/>
-            <alias value="Verzekering"/>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.8"/>
-            </mapping>
-        </element>
-        <element id="Coverage.identifier">
-            <path value="Coverage.identifier"/>
-            <short value="InsurantNumber"/>
-            <definition value="Number under which the insured person is registered at the insurance company&#13;&#10;This item maps the ‘Identification number of the card’ on EHIC field 8"/>
-            <alias value="VerzekerdeNummer"/>
-            <min value="0"/>
-            <max value="1"/>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.6"/>
-            </mapping>
-        </element>
-        <element id="Coverage.type">
-            <path value="Coverage.type"/>
-            <short value="InsuranceType"/>
-            <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance"/>
-            <alias value="VerzekeringsSoort"/>
-            <min value="1"/>
-            <binding>
-                <strength value="extensible"/>
-                <description value="Type of insurance policy. Codes as returned in the Check for Right to Insurance."/>
-                <valueSetReference>
-                    <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.1.1.1--20150401000000"/>
-                    <display value="VerzekeringssoortCodelijst"/>
-                </valueSetReference>
-            </binding>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.15"/>
-            </mapping>
-        </element>
-        <element id="Coverage.period">
-            <path value="Coverage.period"/>
-            <definition value="Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in force."/>
-        </element>
-        <element id="Coverage.period.start">
-            <path value="Coverage.period.start"/>
-            <short value="StartDateTime"/>
-            <definition value="Date from which the insurance policy coverage applies."/>
-            <alias value="BeginDatumTijd"/>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.13"/>
-            </mapping>
-        </element>
-        <element id="Coverage.period.end">
-            <path value="Coverage.period.end"/>
-            <short value="EndDateTime"/>
-            <definition value="Date until which the insurance policy coverage applies.&#13;&#10;This item maps the ‘Expiry date’ on EHIC field 9."/>
-            <alias value="EindDatumTijd"/>
-            <min value="1"/>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.14"/>
-            </mapping>
-        </element>
-        <element id="Coverage.payor">
-            <path value="Coverage.payor"/>
-            <short value="InsuranceCompany / PayerPerson"/>
-            <alias value="Verzekeraar"/>
-            <alias value="BetalerPersoon"/>
-            <min value="1"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
-            </type>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
-            </type>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
-            </type>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.2"/>
-                <comment value="PayerPerson is Patient or RelatedPerson"/>
-            </mapping>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.3"/>
-                <comment value="InsuranceCompany"/>
-            </mapping>
-        </element>
-        <element id="Coverage.payor.extension">
-            <path value="Coverage.payor.extension"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="url"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-        </element>
-        <element id="Coverage.payor.extension.BankInformation">
-            <path value="Coverage.payor.extension"/>
-            <sliceName value="BankInformation"/>
-            <short value="BankInformation"/>
-            <alias value="Bankgegevens"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation"/>
-            </type>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.4"/>
-            </mapping>
-        </element>
-        <element id="Coverage.payor.extension.extension">
-            <path value="Coverage.payor.extension.extension"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="url"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-        </element>
-        <element id="Coverage.payor.extension.extension.BankName">
-            <path value="Coverage.payor.extension.extension"/>
-            <sliceName value="BankName"/>
-            <short value="BankName"/>
-            <definition value="Name of the financial organization."/>
-            <alias value="BankNaam"/>
-            <min value="0"/>
-            <max value="1"/>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.9"/>
-            </mapping>
-        </element>
-        <element id="Coverage.payor.extension.extension.BankName.url">
-            <path value="Coverage.payor.extension.extension.url"/>
-            <fixedUri value="BankName"/>
-        </element>
-        <element id="Coverage.payor.extension.extension.BankName.valueString">
-            <path value="Coverage.payor.extension.extension.valueString"/>
-            <type>
-                <code value="string"/>
-            </type>
-        </element>
-        <element id="Coverage.payor.extension.extension.AccountNumber">
-            <path value="Coverage.payor.extension.extension"/>
-            <sliceName value="AccountNumber"/>
-            <short value="AccountNumber"/>
-            <definition value="The payer’s bank account number at the listed organization. For European countries, this is the IBAN."/>
-            <alias value="Rekeningnummer"/>
-            <min value="1"/>
-            <max value="1"/>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.11"/>
-            </mapping>
-        </element>
-        <element id="Coverage.payor.extension.extension.AccountNumber.url">
-            <path value="Coverage.payor.extension.extension.url"/>
-            <fixedUri value="AccountNumber"/>
-        </element>
-        <element id="Coverage.payor.extension.extension.AccountNumber.valueString">
-            <path value="Coverage.payor.extension.extension.valueString"/>
-            <type>
-                <code value="string"/>
-            </type>
-        </element>
-        <element id="Coverage.payor.extension.extension.Bankcode">
-            <path value="Coverage.payor.extension.extension"/>
-            <sliceName value="Bankcode"/>
-            <short value="Bankcode"/>
-            <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code."/>
-            <alias value="Bankcode"/>
-            <mapping>
-                <identity value="hcim-payer-v1.2-2015EN"/>
-                <map value="NL-CM:1.1.10"/>
-            </mapping>
-        </element>
-        <element id="Coverage.payor.extension.extension.Bankcode.url">
-            <path value="Coverage.payor.extension.extension.url"/>
-            <fixedUri value="Bankcode"/>
-        </element>
-        <element id="Coverage.payor.extension.extension.Bankcode.valueString">
-            <path value="Coverage.payor.extension.extension.valueString"/>
-            <type>
-                <code value="string"/>
-            </type>
-        </element>
-    </differential>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="zib-Payer" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2017-02-22T10:32:09.079+00:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer" />
+  <version value="1.0" />
+  <name value="ZIB-Payer" />
+  <title value="HCIM Payer" />
+  <status value="active" />
+  <date value="2017-01-16T17:02:59.6109232+01:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile is based the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) nl.zorg.Payer" />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="hcim-payer-v1.2-2015EN" />
+    <uri value="https://zibs.nl/wiki/Payer-v1.2(2015EN)" />
+    <name value="HCIM Payer-v1.2(2015EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Coverage" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Coverage" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Coverage">
+      <path value="Coverage" />
+      <short value="Coverage" />
+      <alias value="Verzekering" />
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.8" />
+      </mapping>
+    </element>
+    <element id="Coverage.identifier">
+      <path value="Coverage.identifier" />
+      <short value="InsurantNumber" />
+      <definition value="Number under which the insured person is registered at the insurance company&#xD;&#xA;This item maps the ‘Identification number of the card’ on EHIC field 8" />
+      <alias value="VerzekerdeNummer" />
+      <min value="0" />
+      <max value="1" />
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.6" />
+      </mapping>
+    </element>
+    <element id="Coverage.type">
+      <path value="Coverage.type" />
+      <short value="InsuranceType" />
+      <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance" />
+      <alias value="VerzekeringsSoort" />
+      <min value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Type of insurance policy. Codes as returned in the Check for Right to Insurance." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.1.1.1--20150401000000" />
+          <display value="VerzekeringssoortCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.15" />
+      </mapping>
+    </element>
+    <element id="Coverage.period">
+      <path value="Coverage.period" />
+      <definition value="Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in force." />
+    </element>
+    <element id="Coverage.period.start">
+      <path value="Coverage.period.start" />
+      <short value="StartDateTime" />
+      <definition value="Date from which the insurance policy coverage applies." />
+      <alias value="BeginDatumTijd" />
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.13" />
+      </mapping>
+    </element>
+    <element id="Coverage.period.end">
+      <path value="Coverage.period.end" />
+      <short value="EndDateTime" />
+      <definition value="Date until which the insurance policy coverage applies.&#xD;&#xA;This item maps the ‘Expiry date’ on EHIC field 9." />
+      <alias value="EindDatumTijd" />
+      <min value="1" />
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.14" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor">
+      <path value="Coverage.payor" />
+      <short value="InsuranceCompany / PayerPerson" />
+      <alias value="Verzekeraar" />
+      <alias value="BetalerPersoon" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+      </type>
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.2" />
+        <comment value="PayerPerson is Patient or RelatedPerson" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.3" />
+        <comment value="InsuranceCompany" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor.extension">
+      <path value="Coverage.payor.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Coverage.payor.extension.BankInformation">
+      <path value="Coverage.payor.extension" />
+      <sliceName value="BankInformation" />
+      <short value="BankInformation" />
+      <alias value="Bankgegevens" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-BankInformation" />
+      </type>
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.4" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor.extension.extension">
+      <path value="Coverage.payor.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Coverage.payor.extension.extension.BankName">
+      <path value="Coverage.payor.extension.extension" />
+      <sliceName value="BankName" />
+      <short value="BankName" />
+      <definition value="Name of the financial organization." />
+      <alias value="BankNaam" />
+      <min value="0" />
+      <max value="1" />
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.9" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor.extension.extension.BankName.url">
+      <path value="Coverage.payor.extension.extension.url" />
+      <fixedUri value="BankName" />
+    </element>
+    <element id="Coverage.payor.extension.extension.BankName.valueString">
+      <path value="Coverage.payor.extension.extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Coverage.payor.extension.extension.AccountNumber">
+      <path value="Coverage.payor.extension.extension" />
+      <sliceName value="AccountNumber" />
+      <short value="AccountNumber" />
+      <definition value="The payer’s bank account number at the listed organization. For European countries, this is the IBAN." />
+      <alias value="Rekeningnummer" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.11" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor.extension.extension.AccountNumber.url">
+      <path value="Coverage.payor.extension.extension.url" />
+      <fixedUri value="AccountNumber" />
+    </element>
+    <element id="Coverage.payor.extension.extension.AccountNumber.valueString">
+      <path value="Coverage.payor.extension.extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Coverage.payor.extension.extension.Bankcode">
+      <path value="Coverage.payor.extension.extension" />
+      <sliceName value="Bankcode" />
+      <short value="Bankcode" />
+      <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code." />
+      <alias value="Bankcode" />
+      <mapping>
+        <identity value="hcim-payer-v1.2-2015EN" />
+        <map value="NL-CM:1.1.10" />
+      </mapping>
+    </element>
+    <element id="Coverage.payor.extension.extension.Bankcode.url">
+      <path value="Coverage.payor.extension.extension.url" />
+      <fixedUri value="Bankcode" />
+    </element>
+    <element id="Coverage.payor.extension.extension.Bankcode.valueString">
+      <path value="Coverage.payor.extension.extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

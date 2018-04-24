@@ -1,12 +1,12 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-  <id value="e7abf192-457d-4410-9533-38caf709cbf6" />
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="zib-MedicalAid-Organization" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:08.189+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAid-Organization" />
-  <version value="1.0"/>
+  <version value="1.0" />
   <name value="ZIB-MedicalAid-Organization" />
   <title value="HCIM MedicalAid Organization" />
   <status value="draft" />
@@ -30,7 +30,7 @@
   <context value="DeviceUseStatement" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="Extension">
       <path value="Extension" />

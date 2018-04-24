@@ -1,56 +1,57 @@
-﻿<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-    <meta>
-        <lastUpdated value="2017-05-22T15:23:35.595+02:00"/>
-    </meta>
-    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation"/>
-    <version value="1.0"/>
-    <name value="ZIB-Explanation"/>
-    <title value="HCIM Explanation"/>
-    <status value="active"/>
-    <date value="2017-05-03T14:29:29.7864578+02:00"/>
-    <publisher value="Nictiz"/>
-    <contact>
-        <name value="Nictiz"/>
-        <telecom>
-            <system value="email"/>
-            <value value="info@nictiz.nl"/>
-            <use value="work"/>
-        </telecom>
-    </contact>
-    <description value="An extension to add a explanation information element to the Concent Resourse as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) AdvanceDirective and TreatmentInstruction version 1.0."/>
-    <copyright value="CC0"/>
-    <fhirVersion value="3.0.1"/>
-    <mapping>
-        <identity value="hcim-advancedirective-v1.0-2015EN"/>
-        <uri value="https://zibs.nl/wiki/AdvanceDirective-v1.0(2015EN)"/>
-        <name value="HCIM AdvanceDirective-v1.0(2015EN)"/>
-    </mapping>
-    <mapping>
-        <identity value="hcim-treatmentdirective-v1.0.1-2015EN"/>
-        <uri value="https://zibs.nl/wiki/TreatmentDirective-v1.0.1(2015EN)"/>
-        <name value="HCIM TreatmentDirective-v1.0.1(2015EN)"/>
-    </mapping>
-    <kind value="complex-type"/>
-    <abstract value="false"/>
-    <contextType value="resource"/>
-    <context value="Consent"/>
-    <type value="Extension"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-    <derivation value="constraint"/>
-    <differential>
-        <element id="Extension">
-            <path value="Extension"/>
-        </element>
-        <element id="Extension.url">
-            <path value="Extension.url"/>
-            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation"/>
-        </element>
-        <element id="Extension.valueString">
-            <path value="Extension.valueString"/>
-            <type>
-                <code value="string"/>
-            </type>
-        </element>
-    </differential>
+<?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="zib-Explanation" />
+  <meta>
+    <lastUpdated value="2017-05-22T15:23:35.595+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation" />
+  <version value="1.0" />
+  <name value="ZIB-Explanation" />
+  <title value="HCIM Explanation" />
+  <status value="active" />
+  <date value="2017-05-03T14:29:29.7864578+02:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An extension to add a explanation information element to the Concent Resourse as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) AdvanceDirective and TreatmentInstruction version 1.0." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="hcim-advancedirective-v1.0-2015EN" />
+    <uri value="https://zibs.nl/wiki/AdvanceDirective-v1.0(2015EN)" />
+    <name value="HCIM AdvanceDirective-v1.0(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-treatmentdirective-v1.0.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/TreatmentDirective-v1.0.1(2015EN)" />
+    <name value="HCIM TreatmentDirective-v1.0.1(2015EN)" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Consent" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-Explanation" />
+    </element>
+    <element id="Extension.valueString">
+      <path value="Extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

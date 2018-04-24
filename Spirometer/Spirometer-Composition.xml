@@ -1,12 +1,12 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
-  <id value="e5afe7db-ddd1-4385-9045-325da7a7be12" />
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="Spirometer-Composition" />
   <meta>
     <versionId value="2" />
     <lastUpdated value="2017-01-31T15:49:54.002+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/Spirometer-Composition" />
-  <version value="1.0"/>
+  <version value="1.0" />
   <name value="Spirometer-Composition" />
   <title value="Spirometer Composition" />
   <status value="draft" />
@@ -26,7 +26,7 @@
   <abstract value="false" />
   <type value="Composition" />
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/composition-nl" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="Composition">
       <path value="Composition" />
@@ -122,8 +122,8 @@
       <path value="Composition.section" />
       <slicing>
         <discriminator>
-            <type value="profile"/>
-            <path value="profile"/>
+          <type value="profile" />
+          <path value="profile" />
         </discriminator>
         <rules value="open" />
       </slicing>

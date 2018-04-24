@@ -1,11 +1,12 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd">
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
+  <id value="zib-Procedure-Requester" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2017-02-22T10:32:07.999+00:00" />
   </meta>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-Requester" />
-  <version value="1.0"/>
+  <version value="1.0" />
   <name value="ZIB-Procedure-Requester" />
   <title value="HCIM Procedure Requester" />
   <status value="draft" />
@@ -29,7 +30,7 @@
   <context value="Procedure.request" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="Extension">
       <path value="Extension" />
