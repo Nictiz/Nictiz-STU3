@@ -4,7 +4,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2018-06-06T14:07:59.978+00:00"/>
-        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-person"/>
     </meta>
     <text>
         <status value="generated"/>
