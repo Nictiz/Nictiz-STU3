@@ -98,6 +98,11 @@
         <uri value="https://zibs.nl/wiki/Payer-v3.1(2017EN)"/>
         <name value="HCIM Payer-v3.1(2017EN)"/>
     </mapping>
+    <mapping>
+        <identity value="hcim-contactinformation-v3.1-2017EN"/>
+        <uri value="https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)"/>
+        <name value="HCIM ContactInformation-v3.1(2017EN)"/>
+    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Person"/>
@@ -143,6 +148,7 @@
                 <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.7"/>
             </mapping>
+            
         </element>
         <element id="Person.identifier:BSN">
             <path value="Person.identifier"/>
@@ -278,10 +284,22 @@
                 <identity value="hcim-payer-v3.1-2017EN"/>
                 <map value="NL-CM:1.1.12"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-contactinformation-v3.1-2017EN"/>
+                <map value="NL-CM:20.6.2"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactinformation-v3.1-2017EN"/>
+                <map value="NL-CM:20.6.3"/>
+            </mapping>
         </element>
         <element id="Person.telecom.system">
             <path value="Person.telecom.system"/>
             <min value="1"/>
+            <mapping>
+                <identity value="hcim-contactinformation-v3.1-2017EN"/>
+                <map value="NL-CM:20.6.6"/>
+            </mapping>
         </element>
         <element id="Person.telecom.value">
             <path value="Person.telecom.value"/>
@@ -313,6 +331,14 @@
                 <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.20"/>
             </mapping>
+            <mapping>
+                <identity value="hcim-contactinformation-v3.1-2017EN"/>
+                <map value="NL-CM:20.6.4"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactinformation-v3.1-2017EN"/>
+                <map value="NL-CM:20.6.7"/>
+            </mapping>
         </element>
         <element id="Person.telecom.use">
             <path value="Person.telecom.use"/>
@@ -324,12 +350,24 @@
                 <map value="NL-CM:0.1.22"/>
             </mapping>
             <mapping>
-                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
+                <identity value="hcim-patient-v2.0.1-2015EN"/>
+                <map value="NL-CM:0.1.19"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-patient-v3.0-2016EN"/>
                 <map value="NL-CM:0.1.22"/>
             </mapping>
             <mapping>
-                <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
+                <identity value="hcim-patient-v3.1-2017EN"/>
                 <map value="NL-CM:0.1.19"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactinformation-v3.1-2017EN"/>
+                <map value="NL-CM:20.6.5"/>
+            </mapping>
+            <mapping>
+                <identity value="hcim-contactinformation-v3.1-2017EN"/>
+                <map value="NL-CM:20.6.8"/>
             </mapping>
         </element>
         <element id="Person.gender">
