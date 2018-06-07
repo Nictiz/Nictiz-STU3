@@ -54,7 +54,7 @@
         <map value="NL-CM:12.6.4" />
       </mapping>
     </element>
-    <element id="Observation.value[x]">
+    <element id="Observation.valueQuantity:valueQuantity">
       <path value="Observation.valueQuantity" />
       <sliceName value="valueQuantity" />
       <short value="TemperatureValue recorded with UCUM" />

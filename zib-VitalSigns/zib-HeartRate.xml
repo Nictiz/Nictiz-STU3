@@ -36,7 +36,7 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="HeartFrequency" />
+      <short value="HeartRate" />
       <definition value="This profile defines how to represent heart rate observations in FHIR using a standard LOINC code and UCUM units of measure.&#xD;&#xA;The heart frequency is the number of heartbeats per minute." />
       <alias value="Hartfrequentie" />
       <mapping>
@@ -46,7 +46,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <short value="HeartFrequencyDateTime" />
+      <short value="HeartRateDateTime" />
       <definition value="Date and time of the heart frequency measurement." />
       <alias value="HartfrequentieDatumTijd" />
       <mapping>
@@ -54,10 +54,10 @@
         <map value="NL-CM:12.3.4" />
       </mapping>
     </element>
-    <element id="Observation.value[x]">
+    <element id="Observation.valueQuantity:valueQuantity">
       <path value="Observation.valueQuantity" />
       <sliceName value="valueQuantity" />
-      <short value="HeartFrequencyValue" />
+      <short value="HeartRateValue" />
       <definition value="The heart frequency measured as the number of heartbeats per minute." />
       <alias value="HartfrequentieWaarde" />
       <min value="1" />
@@ -71,9 +71,6 @@
       <short value="HeartbeatRegularity" />
       <definition value="Regularity of the heartbeat." />
       <alias value="HartslagRegelmatigheid" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
       <binding>
         <strength value="extensible" />
         <description value="HartslagRegelmatigheidCodelijst" />
@@ -99,7 +96,7 @@
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
-      <short value="HeartbeatMeasurementMethod" />
+      <short value="HeartRateMeasurementMethod" />
       <definition value="The method used to count and observe the heartbeat." />
       <alias value="HartslagMeetMethode" />
       <binding>

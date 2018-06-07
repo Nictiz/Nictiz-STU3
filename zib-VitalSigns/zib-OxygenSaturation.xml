@@ -54,7 +54,7 @@
         <map value="NL-CM:12.10.3" />
       </mapping>
     </element>
-    <element id="Observation.value[x]">
+    <element id="Observation.valueQuantity:valueQuantity">
       <path value="Observation.valueQuantity" />
       <sliceName value="valueQuantity" />
       <short value="SpO2Value recorded with UCUM" />
@@ -102,6 +102,7 @@
     <element id="Observation.component:extraOxygenAdministration.code.coding:ExtraOxygenAdministrationCode">
       <path value="Observation.component.code.coding" />
       <sliceName value="ExtraOxygenAdministrationCode" />
+      <max value="1"/>
     </element>
     <element id="Observation.component:extraOxygenAdministration.code.coding:ExtraOxygenAdministrationCode.system">
       <path value="Observation.component.code.coding.system" />
@@ -111,7 +112,7 @@
       <path value="Observation.component.code.coding.code" />
       <fixedCode value="74206-4" />
     </element>
-    <element id="Observation.component:extraOxygenAdministration.value[x]:valueCodeableConcept">
+    <element id="Observation.component:extraOxygenAdministration.valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.component.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="ExtraOxygenAdministration" />

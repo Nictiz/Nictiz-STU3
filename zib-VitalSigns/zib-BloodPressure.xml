@@ -120,6 +120,12 @@
             <min value="1"/>
             <max value="1"/>
         </element>
+        <element id="Observation.component:SystolicBP.code.coding:SBPCode">
+            <path value="Observation.component.code.coding" />
+            <sliceName value="SBPCode" />
+            <min value="1"/>
+            <max value="1"/>
+        </element>
         <element id="Observation.component:SystolicBP.valueQuantity:valueQuantity">
             <path value="Observation.component.valueQuantity"/>
             <sliceName value="valueQuantity"/>
@@ -135,6 +141,12 @@
         <element id="Observation.component:DiastolicBP">
             <path value="Observation.component"/>
             <sliceName value="DiastolicBP"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.component:DiastolicBP.code.coding:DBPCode">
+            <path value="Observation.component.code.coding" />
+            <sliceName value="DBPCode" />
             <min value="1"/>
             <max value="1"/>
         </element>
@@ -173,6 +185,8 @@
         <element id="Observation.component:AverageBloodPressure.code.coding:ABPCodeLOINC">
             <path value="Observation.component.code.coding"/>
             <sliceName value="ABPCodeLOINC" />
+            <min value="1"/>
+            <max value="1"/>
         </element>
         <element id="Observation.component:AverageBloodPressure.code.coding:ABPCodeLOINC.system">
             <path value="Observation.component.code.coding.system"/>
@@ -225,6 +239,8 @@
         <element id="Observation.component:diastolicEndpoint.code.coding:DiastolicEndpointCode">
             <path value="Observation.component.code.coding"/>
             <sliceName value="DiastolicEndpointCode"/>
+            <min value="1"/>
+            <max value="1"/>
         </element>
         <element id="Observation.component:diastolicEndpoint.code.coding:DiastolicEndpointCode.system">
             <path value="Observation.component.code.coding.system"/>
@@ -280,6 +296,8 @@
         <element id="Observation.component:cuffType.code.coding:CuffTypeCodeLOINC">
             <path value="Observation.component.code.coding"/>
             <sliceName value="CuffTypeCodeLOINC" />
+            <min value="1"/>
+            <max value="1"/>
         </element>
         <element id="Observation.component:cuffType.code.coding:CuffTypeCodeLOINC.system">
             <path value="Observation.component.code.coding.system"/>
@@ -334,6 +352,7 @@
             <sliceName value="BodyPositionSNOMED" />
             <short value="Body position"/>
             <definition value="Body position for blood pressure measurement"/>
+            <max value="1"/>
         </element>
         <element id="Observation.component:position.code.coding:bodyPositionSNOMED.system">
             <path value="Observation.component.code.coding.system"/>
@@ -346,6 +365,7 @@
         <element id="Observation.component:position.code.coding:BodyPositionLOINC">
             <path value="Observation.component.code.coding"/>
             <sliceName value="BodyPositionLOINC" />
+            <max value="1"/>
         </element>
         <element id="Observation.component:position.code.coding:BodyPositionLOINC.system">
             <path value="Observation.component.code.coding.system"/>
