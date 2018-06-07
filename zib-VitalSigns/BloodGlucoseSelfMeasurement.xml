@@ -64,17 +64,38 @@
       <path value="Observation.code" />
       <sliceName value="fastingGlucose" />
     </element>
-    <element id="Observation.code:fastingGlucose.coding.system">
+    <element id="Observation.code:fastingGlucose.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+        <profile value=" " />
+      </type>
+    </element>
+    <element id="Observation.code:fastingGlucose.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.code:fastingGlucose.coding:loinc.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://loinc.org" />
     </element>
-    <element id="Observation.code:fastingGlucose.coding.code">
+    <element id="Observation.code:fastingGlucose.coding:loinc.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
       <fixedCode value="41604-0" />
     </element>
-    <element id="Observation.code:fastingGlucose.coding.display">
+    <element id="Observation.code:fastingGlucose.coding:loinc.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -85,17 +106,34 @@
       <path value="Observation.code" />
       <sliceName value="generalGlucose" />
     </element>
-    <element id="Observation.code:generalGlucose.coding.system">
+    <element id="Observation.code:generalGlucose.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.code:generalGlucose.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.code:generalGlucose.coding:loinc.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://loinc.org" />
     </element>
-    <element id="Observation.code:generalGlucose.coding.code">
+    <element id="Observation.code:generalGlucose.coding:loinc.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
       <fixedCode value="14743-9" />
     </element>
-    <element id="Observation.code:generalGlucose.coding.display">
+    <element id="Observation.code:generalGlucose.coding:loinc.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -106,24 +144,41 @@
       <path value="Observation.code" />
       <sliceName value="postMealGlucose" />
     </element>
-    <element id="Observation.code:postMealGlucose.coding.system">
+    <element id="Observation.code:postMealGlucose.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.code:postMealGlucose.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.code:postMealGlucose.coding:loinc.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://loinc.org" />
     </element>
-    <element id="Observation.code:postMealGlucose.coding.code">
+    <element id="Observation.code:postMealGlucose.coding:loinc.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
       <fixedCode value="14760-3" />
     </element>
-    <element id="Observation.code:postMealGlucose.coding.display">
+    <element id="Observation.code:postMealGlucose.coding:loinc.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
       <fixedString value="Glucose [moles/volume] in capillary blood by Glucometer -- 2 hours post meal" />
     </element>
-    <element id="Observation.valueQuantity:valueQuantity">
+    <element id="Observation.value[x]:valueQuantity">
       <path value="Observation.valueQuantity" />
       <sliceName value="valueQuantity" />
       <type>
