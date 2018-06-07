@@ -74,10 +74,6 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
-      <type>
-        <code value="Coding" />
-        <profile value=" " />
-      </type>
     </element>
     <element id="Observation.code:fastingGlucose.coding:loinc">
       <path value="Observation.code.coding" />
