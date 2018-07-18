@@ -9,7 +9,7 @@
   <version value="1.0" />
   <name value="ZIB-LaboratoryTestResult-Observation" />
   <title value="HCIM LaboratoryTestResult Observation" />
-  <status value="active" />
+  <status value="retired" />
   <date value="2017-08-11T12:22:55.327+00:00" />
   <publisher value="Nictiz" />
   <contact>

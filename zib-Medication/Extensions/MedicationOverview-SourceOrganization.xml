@@ -7,7 +7,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/MedicationOverview-SourceOrganization" />
   <name value="Source Organization" />
   <title value="List Source Organization" />
-  <status value="draft" />
+  <status value="retired" />
   <date value="2017-12-06T10:26:56.649+01:00" />
   <publisher value="Nictiz" />
   <contact>

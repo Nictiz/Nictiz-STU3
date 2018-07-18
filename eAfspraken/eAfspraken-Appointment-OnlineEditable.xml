@@ -7,7 +7,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/eAfspraken-Appointment-OnlineEditable" />
   <name value="eAfsprakenAppointmentOnlineEditable" />
   <title value="eAfspraken Appointment OnlineEditable" />
-  <status value="draft" />
+  <status value="retired" />
   <date value="2017-12-11T13:18:15.238+01:00" />
   <publisher value="Nictiz" />
   <contact>

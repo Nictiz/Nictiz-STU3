@@ -9,7 +9,7 @@
   <version value="1.0" />
   <name value="ZIB-TextResult-DiagnosticReport" />
   <title value="HCIM TextResult DiagnosticReport" />
-  <status value="draft" />
+  <status value="retired" />
   <date value="2016-11-11T12:24:22.445+00:00" />
   <publisher value="Nictiz" />
   <contact>

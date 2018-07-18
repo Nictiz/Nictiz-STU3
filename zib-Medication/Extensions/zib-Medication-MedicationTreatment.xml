@@ -7,7 +7,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-MedicationTreatment" />
   <name value="ZIB-MedicationTreatment" />
   <title value="ZIB Medication Treatment" />
-  <status value="draft" />
+  <status value="retired" />
   <date value="2017-12-07T15:59:50.998+01:00" />
   <publisher value="Nictiz" />
   <contact>

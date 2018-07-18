@@ -9,7 +9,7 @@
   <version value="1.0" />
   <name value="ZIB-AllergyIntolerance-Reaction-Probability" />
   <title value="HCIM AllergyIntolerance Reaction Probability" />
-  <status value="active" />
+  <status value="retired" />
   <date value="2017-04-13T17:08:52.748+02:00" />
   <publisher value="Nictiz" />
   <contact>

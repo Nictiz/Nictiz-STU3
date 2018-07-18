@@ -8,7 +8,7 @@
   <version value="1.0" />
   <name value="ZIB-OxygenSaturation" />
   <title value="HCIM OxygenSaturation" />
-  <status value="active" />
+  <status value="retired" />
   <date value="2017-09-06T12:02:17.702+02:00" />
   <publisher value="Nictiz" />
   <contact>
@@ -102,7 +102,7 @@
     <element id="Observation.component:extraOxygenAdministration.code.coding:ExtraOxygenAdministrationCode">
       <path value="Observation.component.code.coding" />
       <sliceName value="ExtraOxygenAdministrationCode" />
-      <max value="1"/>
+      <max value="1" />
     </element>
     <element id="Observation.component:extraOxygenAdministration.code.coding:ExtraOxygenAdministrationCode.system">
       <path value="Observation.component.code.coding.system" />

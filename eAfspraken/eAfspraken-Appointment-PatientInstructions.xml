@@ -7,7 +7,7 @@
   <url value="http://nictiz.nl/fhir/StructureDefinition/eAfspraken-Appointment-PatientInstructions" />
   <name value="eAfsprakenAppointmentPatientInstruction" />
   <title value="eAfspraken Appointment Patient Instructions" />
-  <status value="draft" />
+  <status value="retired" />
   <date value="2017-12-11T11:20:30.314+01:00" />
   <publisher value="Nictiz" />
   <contact>
