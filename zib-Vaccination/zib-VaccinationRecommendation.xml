@@ -11,7 +11,7 @@
   <version value="1.0" />
   <name value="ZIB-VaccinationRecommendation" />
   <title value="HCIM VaccinationRecommendation" />
-  <status value="active" />
+  <status value="retired" />
   <date value="2017-04-26T14:46:25.6166784+02:00" />
   <publisher value="Nictiz" />
   <contact>

@@ -8,7 +8,7 @@
   <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
   <name value="nl-core-organization" />
   <title value="nl-core-organization" />
-  <status value="active" />
+  <status value="retired" />
   <publisher value="HL7 Netherlands" />
   <contact>
     <name value="Nictiz" />

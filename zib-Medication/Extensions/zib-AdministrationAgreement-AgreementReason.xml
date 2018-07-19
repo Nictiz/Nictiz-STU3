@@ -1,15 +1,16 @@
 <?xml-model href="http://hl7.org/fhir/STU3/structuredefinition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/structuredefinition.xsd" xmlns="http://hl7.org/fhir">
-  <id value="zib-MedicationAdministration-DoubleCheckPerformed" />
+  <id value="zib-AdministrationAgreement-AgreementReason" />
   <meta>
-    <lastUpdated value="2017-06-08T17:19:04.007+02:00" />
+    <versionId value="2" />
+    <lastUpdated value="2017-06-08T17:16:42.187+02:00" />
   </meta>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DoubleCheckPerformed" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement-AgreementReason" />
   <version value="1.0" />
-  <name value="ZIB-Double-Check-Performed" />
-  <title value="HCIM Double Check Performed" />
+  <name value="ZIB-AgreementReason" />
+  <title value="HCIM Reason For Dispense" />
   <status value="retired" />
-  <date value="2017-09-08T15:28:47.0782827+02:00" />
+  <date value="2016-12-12T16:26:52.019+00:00" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -19,29 +20,26 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Was a double check performed prior to the administration? This is only legally required for certain medication" />
-  <purpose value="Indicates if a double check was performed prior to the administration." />
+  <description value="The reason a medication is (to be) dispended." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.1" />
-  <kind value="complex-type" />
+  <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="MedicationAdministration" />
+  <context value="MedicationDispense" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension">
-      <path value="Extension" />
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration-DoubleCheckPerformed" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement-AgreementReason" />
     </element>
-    <element id="Extension.valueBoolean">
-      <path value="Extension.valueBoolean" />
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
       <type>
-        <code value="boolean" />
+        <code value="string" />
       </type>
     </element>
   </differential>

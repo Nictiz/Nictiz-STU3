@@ -5,7 +5,7 @@
   <version value="1.0" />
   <name value="BloodGlucoseSelfMeasurement" />
   <title value="Blood Glucose Self Measurement" />
-  <status value="draft" />
+  <status value="retired" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />

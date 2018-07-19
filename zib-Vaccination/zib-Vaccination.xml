@@ -9,7 +9,7 @@
   <version value="1.0" />
   <name value="ZIB-Vaccination" />
   <title value="HCIM Vaccination" />
-  <status value="active" />
+  <status value="retired" />
   <date value="2017-01-16T11:38:25.218701+01:00" />
   <publisher value="Nictiz" />
   <contact>
