@@ -36,7 +36,9 @@
             <code value="255508009"/>
             <display value="Medium"/>
             <target>
-                <equivalence value="unmatched"/>
+                <code value="high"/>
+                <display value="High"/>
+                <equivalence value="narrower"/>
             </target>
         </element>
         <element>
@@ -52,7 +54,9 @@
             <code value="399166001"/>
             <display value="Fatal"/>
             <target>
-                <equivalence value="unmatched"/>
+                <code value="high"/>
+                <display value="High"/>
+                <equivalence value="wider"/>
             </target>
         </element>
     </group>
